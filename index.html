@@ -28,6 +28,7 @@
   </div>
 
   <script>
+    const EVENTS_DATA_URL = 'public/events/data/events.json';
     const WEEKDAYS = ['SO', 'MO', 'DI', 'MI', 'DO', 'FR', 'SA'];
 
     function esc(value) {
@@ -101,8 +102,8 @@
 
     async function boot() {
       try {
-        const response = await fetch('events.json', { cache: 'no-store' });
-        if (!response.ok) throw new Error(`events.json konnte nicht geladen werden (${response.status})`);
+        const response = await fetch(EVENTS_DATA_URL, { cache: 'no-store' });
+        if (!response.ok) throw new Error(`${EVENTS_DATA_URL} konnte nicht geladen werden (${response.status})`);
         const data = await response.json();
         const events = data.events || [];
         const meta = data.meta || {};
