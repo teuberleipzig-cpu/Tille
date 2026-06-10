@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Distillery – Events</title>
   <style>
-    :root{--orange:#e49a78;--olive:#8d8969;--yellow:#f0ed40;--grey:#d9d9d9}*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#000;color:#000;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:1.12}a{color:inherit;text-decoration:none}.page{width:800px;min-height:100vh;display:grid;grid-template-columns:606px 194px;background:#fff}.main{padding:18px 58px 14px 30px;background:#fff}.sidebar{background:#000;color:#fff;padding:93px 14px 14px 24px;min-height:100vh}.logo{width:280px;height:78px;position:relative;margin:0 0 18px 0;border-bottom:0}.logo img{display:block;width:280px;height:78px;object-fit:contain}.nav{width:378px;margin-bottom:30px;font-size:13px;font-weight:900;text-transform:uppercase;line-height:1.13}.nav a{display:inline-block;padding:0 2px;margin:0 1px 3px 0;background:var(--grey);color:#000}.nav a.active{color:#fff;background:#000}.event{margin:0 0 18px 0;max-width:518px}.event-title{display:inline;padding:0 4px 0 0;font-size:18px;font-weight:900;line-height:1.02;letter-spacing:.2px;text-transform:uppercase}.event-title.olive{background:var(--olive)}.event-title.orange{background:var(--orange)}.event-title.yellow{background:var(--yellow)}.label{margin-top:3px}.line strong{font-size:16px;font-weight:900;letter-spacing:.2px}.more{display:inline-block;background:var(--grey);padding:0 3px;margin-top:1px;font-weight:700}.footer{margin-top:92px;font-size:11px;font-weight:900;text-transform:uppercase}.footer small{display:block;margin-top:4px;font-size:10px;font-weight:400;text-transform:none}.calendar-head{width:154px;display:grid;grid-template-columns:20px 1fr 20px;align-items:center;margin-bottom:4px;font-size:12px;font-weight:900;text-align:center}.calendar-head span{background:#4b4b4b;height:15px;line-height:15px}.calendar-head .month{margin:0 4px}.calendar{width:154px;border-collapse:collapse;margin-bottom:18px;color:#fff;font-size:13px;line-height:1}.calendar th,.calendar td{width:22px;height:18px;text-align:center;padding:0}.calendar th{font-size:11px;color:#fff}.calendar .day-orange{background:#b38368;color:#000}.calendar .day-olive{background:#8d8969;color:#000}.calendar .day-yellow{background:#d7d43d;color:#000}.side-block{margin-bottom:16px}.side-title{display:inline-block;background:var(--orange);color:#000;padding:1px 2px;font-size:13px;font-weight:900;text-transform:uppercase}.side-link{display:block;width:max-content;max-width:155px;background:#c6c6b1;color:#000;padding:1px 2px;font-size:13px;font-weight:900;text-transform:uppercase;margin-top:2px}.newsletter{margin-top:10px;margin-bottom:18px;font-size:13px;font-weight:900;text-transform:uppercase}.newsletter label{display:inline-block;margin-top:9px}.newsletter input{width:106px;height:22px;border:0;margin-left:6px;vertical-align:middle;background:#fff}.newsletter button{display:block;margin:5px 0 0 91px;border:0;background:#000;color:#fff;font-size:13px;font-weight:900;text-decoration:underline;cursor:pointer;padding:0;font-family:Arial,Helvetica,sans-serif}.poster{width:154px;height:218px;margin:0 0 7px 0;background:linear-gradient(135deg,rgba(0,0,0,.28),rgba(255,255,255,.18)),repeating-linear-gradient(90deg,#6d8a5e 0 31px,#d4b28d 31px 62px,#73886d 62px 93px,#c49374 93px 124px),repeating-linear-gradient(0deg,transparent 0 52px,rgba(255,255,255,.25) 52px 54px);position:relative;overflow:hidden}.poster:before{content:"M\A A\A R\A Z";white-space:pre;position:absolute;left:58px;top:24px;background:rgba(255,255,255,.85);color:#000;font-size:26px;line-height:1.45;font-weight:900;letter-spacing:2px;padding:1px 8px;text-align:center;transform:rotate(-2deg)}.poster:after{content:"MRZ 16\A DISTILLERY";white-space:pre;position:absolute;right:8px;top:8px;color:#fff;background:#000;font-size:9px;line-height:1.1;padding:3px 4px;text-align:center}.download-pdf,.calendar-download{display:block;width:max-content;background:#c6c6b1;color:#000;padding:1px 2px;font-size:13px;font-weight:900;text-transform:uppercase;margin-bottom:36px}.device-row{width:154px;display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:9px}.computer{width:69px;height:87px;border:3px solid #888;background:#c9c9c9;position:relative}.screen{position:absolute;left:6px;top:6px;width:51px;height:42px;border:3px solid #000;background:#fff}.face{position:absolute;left:13px;top:7px;font-size:28px;line-height:1;transform:rotate(90deg)}.slot{position:absolute;width:39px;height:4px;left:22px;bottom:16px;background:#333}.green-dot{position:absolute;width:8px;height:8px;left:5px;bottom:6px;background:#2fff00;border:1px solid #000}.phone{width:29px;height:74px;border:3px solid #888;background:#d3d3d3;position:relative;margin-right:4px}.phone:before{content:"";position:absolute;left:9px;top:-13px;width:3px;height:11px;background:#d3d3d3}.phone-screen{position:absolute;left:4px;top:8px;width:15px;height:19px;background:#fff;border:2px solid #000}.phone-face{position:absolute;left:7px;top:9px;font-size:13px;transform:rotate(90deg)}.phone-keys{position:absolute;left:5px;bottom:6px;display:grid;grid-template-columns:repeat(2,8px);gap:2px}.phone-keys i{display:block;width:8px;height:8px;background:#000}.phone-keys i:nth-child(3){background:red}.loading,.error{font-size:14px;font-weight:900}@media(max-width:820px){.page{width:100%;grid-template-columns:minmax(0,1fr)}.main{padding-right:24px}.sidebar{padding-top:24px;min-height:0}}
+    :root{--orange:#e49a78;--olive:#8d8969;--yellow:#f0ed40;--grey:#d9d9d9}*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#000;color:#000;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:1.12}a{color:inherit;text-decoration:none}.page{width:800px;min-height:100vh;display:grid;grid-template-columns:606px 194px;background:#fff}.main{padding:18px 58px 14px 30px;background:#fff}.sidebar{background:#000;color:#fff;padding:93px 14px 14px 24px;min-height:100vh}.logo{width:280px;height:78px;position:relative;margin:0 0 8px -35px;border-bottom:0;overflow:visible}.logo img{display:block;width:280px;height:78px;object-fit:contain}.nav{width:378px;margin-bottom:30px;font-size:13px;font-weight:900;text-transform:uppercase;line-height:1.13}.nav a{display:inline-block;padding:0 2px;margin:0 1px 3px 0;background:var(--grey);color:#000}.nav a.active{color:#fff;background:#000}.event{margin:0 0 18px 0;max-width:518px}.event-title{display:inline;padding:0 4px 0 0;font-size:18px;font-weight:900;line-height:1.02;letter-spacing:.2px;text-transform:uppercase}.event-title.olive{background:var(--olive)}.event-title.orange{background:var(--orange)}.event-title.yellow{background:var(--yellow)}.label{margin-top:3px}.line strong{font-size:16px;font-weight:900;letter-spacing:.2px}.more{display:inline-block;background:var(--grey);padding:0 3px;margin-top:1px;font-weight:700}.footer{margin-top:92px;font-size:11px;font-weight:900;text-transform:uppercase}.footer small{display:block;margin-top:4px;font-size:10px;font-weight:400;text-transform:none}.calendar-head{width:154px;display:grid;grid-template-columns:20px 1fr 20px;align-items:center;margin-bottom:4px;font-size:12px;font-weight:900;text-align:center}.calendar-head .cal-nav,.calendar-head .month{background:#4b4b4b;height:15px;line-height:15px;color:#fff}.calendar-head .cal-nav{border:0;padding:0;font:inherit;font-weight:900;cursor:pointer}.calendar-head .month{margin:0 4px;text-transform:uppercase}.calendar{width:154px;border-collapse:collapse;margin-bottom:18px;color:#fff;font-size:13px;line-height:1}.calendar th,.calendar td{width:22px;height:18px;text-align:center;padding:0}.calendar th{font-size:11px;color:#fff}.calendar td.event-day{cursor:pointer;font-weight:900}.calendar .day-orange{background:#b38368;color:#000}.calendar .day-olive{background:#8d8969;color:#000}.calendar .day-yellow{background:#d7d43d;color:#000}.no-events{font-size:14px;font-weight:900;margin:0 0 18px}.side-block{margin-bottom:16px}.side-title{display:inline-block;background:var(--orange);color:#000;padding:1px 2px;font-size:13px;font-weight:900;text-transform:uppercase}.side-link{display:block;width:max-content;max-width:155px;background:#c6c6b1;color:#000;padding:1px 2px;font-size:13px;font-weight:900;text-transform:uppercase;margin-top:2px}.newsletter{margin-top:10px;margin-bottom:18px;font-size:13px;font-weight:900;text-transform:uppercase}.newsletter label{display:inline-block;margin-top:9px}.newsletter input{width:106px;height:22px;border:0;margin-left:6px;vertical-align:middle;background:#fff}.newsletter button{display:block;margin:5px 0 0 91px;border:0;background:#000;color:#fff;font-size:13px;font-weight:900;text-decoration:underline;cursor:pointer;padding:0;font-family:Arial,Helvetica,sans-serif}.poster{width:154px;height:218px;margin:0 0 7px 0;background:linear-gradient(135deg,rgba(0,0,0,.28),rgba(255,255,255,.18)),repeating-linear-gradient(90deg,#6d8a5e 0 31px,#d4b28d 31px 62px,#73886d 62px 93px,#c49374 93px 124px),repeating-linear-gradient(0deg,transparent 0 52px,rgba(255,255,255,.25) 52px 54px);position:relative;overflow:hidden}.poster:before{content:"M\A A\A R\A Z";white-space:pre;position:absolute;left:58px;top:24px;background:rgba(255,255,255,.85);color:#000;font-size:26px;line-height:1.45;font-weight:900;letter-spacing:2px;padding:1px 8px;text-align:center;transform:rotate(-2deg)}.poster:after{content:"MRZ 16\A DISTILLERY";white-space:pre;position:absolute;right:8px;top:8px;color:#fff;background:#000;font-size:9px;line-height:1.1;padding:3px 4px;text-align:center}.download-pdf,.calendar-download{display:block;width:max-content;background:#c6c6b1;color:#000;padding:1px 2px;font-size:13px;font-weight:900;text-transform:uppercase;margin-bottom:36px}.device-row{width:154px;display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:9px}.computer{width:69px;height:87px;border:3px solid #888;background:#c9c9c9;position:relative}.screen{position:absolute;left:6px;top:6px;width:51px;height:42px;border:3px solid #000;background:#fff}.face{position:absolute;left:13px;top:7px;font-size:28px;line-height:1;transform:rotate(90deg)}.slot{position:absolute;width:39px;height:4px;left:22px;bottom:16px;background:#333}.green-dot{position:absolute;width:8px;height:8px;left:5px;bottom:6px;background:#2fff00;border:1px solid #000}.phone{width:29px;height:74px;border:3px solid #888;background:#d3d3d3;position:relative;margin-right:4px}.phone:before{content:"";position:absolute;left:9px;top:-13px;width:3px;height:11px;background:#d3d3d3}.phone-screen{position:absolute;left:4px;top:8px;width:15px;height:19px;background:#fff;border:2px solid #000}.phone-face{position:absolute;left:7px;top:9px;font-size:13px;transform:rotate(90deg)}.phone-keys{position:absolute;left:5px;bottom:6px;display:grid;grid-template-columns:repeat(2,8px);gap:2px}.phone-keys i{display:block;width:8px;height:8px;background:#000}.phone-keys i:nth-child(3){background:red}.loading,.error{font-size:14px;font-weight:900}@media(max-width:820px){.page{width:100%;grid-template-columns:minmax(0,1fr)}.main{padding-right:24px}.sidebar{padding-top:24px;min-height:0}}
   </style>
 </head>
 <body>
@@ -17,7 +17,7 @@
       <footer class="footer">DISTILLERY | KURT-EISNER-STR. 108 A | 04275 LEIPZIG | TEL.: 0341/35597400<small>2001-2010 Distillery | <a href="#">LINKS</a> | <a href="#">Impressum</a> | <a href="#">Disclaimer</a></small></footer>
     </main>
     <aside class="sidebar">
-      <div class="calendar-head"><span>&lt;</span><span class="month" id="month-label">MÄRZ 2016</span><span>&gt;</span></div>
+      <div class="calendar-head"><button class="cal-nav" id="prev-month" type="button">&lt;</button><span class="month" id="month-label">...</span><button class="cal-nav" id="next-month" type="button">&gt;</button></div>
       <table class="calendar" aria-label="Kalender"><thead><tr><th>MO</th><th>DI</th><th>MI</th><th>DO</th><th>FR</th><th>SA</th><th>SO</th></tr></thead><tbody id="calendar-body"></tbody></table>
       <div class="side-block"><span class="side-title" id="highlight-title">Saturday Rave</span><div id="highlight-links"></div></div>
       <form class="newsletter"><div>Newsletter:</div><label>Email:<input type="email" aria-label="Email"></label><button type="submit">SIGN UP!</button></form>
@@ -30,14 +30,57 @@
   <script>
     const EVENTS_DATA_URL = 'public/events/data/events.json';
     const WEEKDAYS = ['SO', 'MO', 'DI', 'MI', 'DO', 'FR', 'SA'];
+    const MONTHS = ['JANUAR', 'FEBRUAR', 'MÄRZ', 'APRIL', 'MAI', 'JUNI', 'JULI', 'AUGUST', 'SEPTEMBER', 'OKTOBER', 'NOVEMBER', 'DEZEMBER'];
+    let allEvents = [];
+    let activeYear = new Date().getFullYear();
+    let activeMonth = new Date().getMonth() + 1;
 
     function esc(value) {
       return String(value ?? '').replace(/[&<>"]/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[char]));
     }
 
-    function formatEventDate(isoDate) {
+    function parseEventDate(isoDate) {
+      if (!isoDate) return null;
       const date = new Date(`${isoDate}T12:00:00`);
+      return Number.isNaN(date.getTime()) ? null : date;
+    }
+
+    function formatEventDate(isoDate) {
+      const date = parseEventDate(isoDate);
+      if (!date) return '';
       return `${WEEKDAYS[date.getDay()]}. ${String(date.getDate()).padStart(2, '0')}.${String(date.getMonth() + 1).padStart(2, '0')}.${String(date.getFullYear()).slice(-2)}`;
+    }
+
+    function getMonthEvents(events, year, month) {
+      return events.filter(event => {
+        const date = parseEventDate(event.date);
+        return date && date.getFullYear() === year && date.getMonth() + 1 === month;
+      });
+    }
+
+    function pickInitialMonth(events, meta) {
+      const validDates = events.map(event => parseEventDate(event.date)).filter(Boolean).sort((a, b) => a - b);
+      const today = new Date();
+      const thisMonthStart = new Date(today.getFullYear(), today.getMonth(), 1);
+      const nextEventDate = validDates.find(date => date >= thisMonthStart) || validDates[0];
+
+      if (nextEventDate) {
+        activeYear = nextEventDate.getFullYear();
+        activeMonth = nextEventDate.getMonth() + 1;
+        return;
+      }
+
+      if (meta.calendarYear && meta.calendarMonth) {
+        activeYear = Number(meta.calendarYear);
+        activeMonth = Number(meta.calendarMonth);
+      }
+    }
+
+    function changeMonth(direction) {
+      const next = new Date(activeYear, activeMonth - 1 + direction, 1);
+      activeYear = next.getFullYear();
+      activeMonth = next.getMonth() + 1;
+      renderCurrentMonth();
     }
 
     function renderItem(item) {
@@ -55,21 +98,25 @@
     }
 
     function renderEvents(events) {
+      if (!events.length) {
+        document.getElementById('events').innerHTML = `<p class="no-events">Keine Veranstaltungen in ${MONTHS[activeMonth - 1]} ${activeYear}.</p>`;
+        return;
+      }
       document.getElementById('events').innerHTML = events.map(renderEvent).join('');
     }
 
-    function renderCalendar(meta, events) {
-      const year = Number(meta.calendarYear);
-      const month = Number(meta.calendarMonth);
-      const first = new Date(year, month - 1, 1);
-      const lastDay = new Date(year, month, 0).getDate();
+    function renderCalendar(events) {
+      const first = new Date(activeYear, activeMonth - 1, 1);
+      const lastDay = new Date(activeYear, activeMonth, 0).getDate();
       const offset = (first.getDay() + 6) % 7;
       const highlightMap = new Map();
 
       events.forEach(event => {
-        const date = new Date(`${event.date}T12:00:00`);
-        if (date.getFullYear() === year && date.getMonth() + 1 === month) {
-          highlightMap.set(date.getDate(), event.color || 'orange');
+        const date = parseEventDate(event.date);
+        if (date && date.getFullYear() === activeYear && date.getMonth() + 1 === activeMonth) {
+          const day = date.getDate();
+          if (!highlightMap.has(day)) highlightMap.set(day, []);
+          highlightMap.get(day).push(event);
         }
       });
 
@@ -81,9 +128,11 @@
           if ((week === 0 && weekday < offset) || day > lastDay) {
             cells.push('<td></td>');
           } else {
-            const color = highlightMap.get(day);
-            const cls = color ? ` class="day-${esc(color)}"` : '';
-            cells.push(`<td${cls}>${String(day).padStart(2, '0')}</td>`);
+            const dayEvents = highlightMap.get(day) || [];
+            const color = dayEvents[0]?.color || '';
+            const cls = color ? ` class="event-day day-${esc(color)}"` : '';
+            const title = dayEvents.length ? ` title="${esc(dayEvents.map(event => event.title).join(' / '))}"` : '';
+            cells.push(`<td${cls}${title}>${String(day).padStart(2, '0')}</td>`);
             day++;
           }
         }
@@ -92,7 +141,13 @@
       }
 
       document.getElementById('calendar-body').innerHTML = rows.join('');
-      document.getElementById('month-label').textContent = meta.monthLabel || '';
+      document.getElementById('month-label').textContent = `${MONTHS[activeMonth - 1]} ${activeYear}`;
+    }
+
+    function renderCurrentMonth() {
+      const monthEvents = getMonthEvents(allEvents, activeYear, activeMonth).sort((a, b) => String(a.date).localeCompare(String(b.date)));
+      renderCalendar(allEvents);
+      renderEvents(monthEvents);
     }
 
     function renderSidebar(meta) {
@@ -105,11 +160,13 @@
         const response = await fetch(EVENTS_DATA_URL, { cache: 'no-store' });
         if (!response.ok) throw new Error(`${EVENTS_DATA_URL} konnte nicht geladen werden (${response.status})`);
         const data = await response.json();
-        const events = data.events || [];
         const meta = data.meta || {};
-        renderEvents(events);
-        renderCalendar(meta, events);
+        allEvents = (data.events || []).filter(event => event.status !== 'archived').sort((a, b) => String(a.date).localeCompare(String(b.date)));
+        pickInitialMonth(allEvents, meta);
+        renderCurrentMonth();
         renderSidebar(meta);
+        document.getElementById('prev-month').addEventListener('click', () => changeMonth(-1));
+        document.getElementById('next-month').addEventListener('click', () => changeMonth(1));
       } catch (error) {
         document.getElementById('events').innerHTML = `<p class="error">Fehler: ${esc(error.message)}</p>`;
       }
