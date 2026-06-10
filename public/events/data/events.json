@@ -21,15 +21,18 @@
           "items": [
             {
               "name": "0-DIMENSIONAL",
-              "info": "Distillery, Leipzig"
+              "info": "Distillery, Leipzig",
+              "link": "https://soundcloud.com/0_dimensional"
             },
             {
               "name": "BIGALKE",
-              "info": "Distillery, Leipzig"
+              "info": "Distillery, Leipzig",
+              "link": "https://soundcloud.com/bigalke"
             },
             {
               "name": "MONA:MI B2B HANDGEMAENGE",
-              "info": "Leipzig"
+              "info": "Leipzig",
+              "link": "https://soundcloud.com/monami1/eli-set-ff"
             }
           ],
           "genre": ""
@@ -39,7 +42,8 @@
           "items": [
             {
               "name": "ANDREAS ECKHARDT",
-              "info": "Distillery, Leipzig"
+              "info": "Distillery, Leipzig",
+              "link": "https://soundcloud.com/thomas-heinrich/andreas-eckhardt-thomas-heinrich-echo-sanctum-festival-2025"
             }
           ],
           "genre": ""
@@ -49,11 +53,13 @@
           "items": [
             {
               "name": "ROBAG WRUHME",
-              "info": "Extended Set"
+              "info": "Extended Set",
+              "link": "https://soundcloud.com/robag_fm/robag-wruhme-dj-set-kater-berlin-1-dezember-2025"
             },
             {
               "name": "ZISCHKO & ZACHARIAS",
-              "info": "Leipzig"
+              "info": "Leipzig",
+              "link": ""
             }
           ],
           "genre": ""
