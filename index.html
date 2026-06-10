@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Distillery – März 2016</title>
+  <style>
+    :root {
+      --orange: #e49a78;
+      --olive: #8d8969;
+      --yellow: #f0ed40;
+      --grey: #d9d9d9;
+      --black: #000;
+      --white: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background: #000;
+      color: #000;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      line-height: 1.12;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      width: 800px;
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 606px 194px;
+      background: #fff;
+    }
+
+    .main {
+      padding: 18px 58px 14px 30px;
+      background: #fff;
+    }
+
+    .sidebar {
+      background: #000;
+      color: #fff;
+      padding: 93px 14px 14px 24px;
+      min-height: 100vh;
+    }
+
+    .logo {
+      width: 244px;
+      height: 53px;
+      position: relative;
+      margin: 0 0 21px -6px;
+      border-bottom: 3px solid #000;
+    }
+
+    .logo-mark {
+      position: absolute;
+      left: 0;
+      top: 4px;
+      width: 56px;
+      height: 39px;
+      transform: skew(-13deg);
+      border-radius: 7px 0 7px 0;
+      background: #000;
+    }
+
+    .logo-mark::after {
+      content: "";
+      position: absolute;
+      left: 12px;
+      top: 10px;
+      width: 32px;
+      height: 16px;
+      background: #fff;
+      border-radius: 3px 0 3px 0;
+    }
+
+    .logo-word {
+      position: absolute;
+      left: 55px;
+      top: 12px;
+      font-size: 31px;
+      font-weight: 900;
+      font-style: italic;
+      letter-spacing: -2px;
+      transform: skew(-8deg);
+      line-height: 1;
+    }
+
+    .tm {
+      font-size: 8px;
+      vertical-align: top;
+      margin-left: 3px;
+      font-style: normal;
+      letter-spacing: 0;
+    }
+
+    .nav {
+      width: 378px;
+      margin-bottom: 30px;
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 1.13;
+    }
+
+    .nav a,
+    .button-link {
+      display: inline-block;
+      padding: 0 2px;
+      margin: 0 1px 3px 0;
+      background: var(--grey);
+      color: #000;
+    }
+
+    .nav a.active {
+      color: #fff;
+      background: #000;
+    }
+
+    .event {
+      margin: 0 0 18px 0;
+      max-width: 518px;
+    }
+
+    .event-title {
+      display: inline;
+      padding: 0 4px 0 0;
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 1.02;
+      letter-spacing: .2px;
+      text-transform: uppercase;
+    }
+
+    .event-title.olive {
+      background: var(--olive);
+    }
+
+    .event-title.orange {
+      background: var(--orange);
+    }
+
+    .event-title.yellow {
+      background: var(--yellow);
+    }
+
+    .label {
+      margin-top: 3px;
+    }
+
+    .line strong {
+      font-size: 16px;
+      font-weight: 900;
+      letter-spacing: .2px;
+    }
+
+    .line.small-strong strong {
+      font-size: 14px;
+    }
+
+    .more {
+      display: inline-block;
+      background: var(--grey);
+      padding: 0 3px;
+      margin-top: 1px;
+      font-weight: 700;
+    }
+
+    .footer {
+      margin-top: 92px;
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .footer small {
+      display: block;
+      margin-top: 4px;
+      font-size: 10px;
+      font-weight: 400;
+      text-transform: none;
+    }
+
+    .calendar-head {
+      width: 154px;
+      display: grid;
+      grid-template-columns: 20px 1fr 20px;
+      align-items: center;
+      margin-bottom: 4px;
+      font-size: 12px;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .calendar-head span {
+      background: #4b4b4b;
+      height: 15px;
+      line-height: 15px;
+    }
+
+    .calendar-head .month {
+      margin: 0 4px;
+    }
+
+    .calendar {
+      width: 154px;
+      border-collapse: collapse;
+      margin-bottom: 18px;
+      color: #fff;
+      font-size: 13px;
+      line-height: 1;
+    }
+
+    .calendar th,
+    .calendar td {
+      width: 22px;
+      height: 18px;
+      text-align: center;
+      padding: 0;
+    }
+
+    .calendar th {
+      font-size: 11px;
+      color: #fff;
+    }
+
+    .calendar .day-orange {
+      background: #b38368;
+      color: #000;
+    }
+
+    .calendar .day-yellow {
+      background: #d7d43d;
+      color: #000;
+    }
+
+    .side-block {
+      margin-bottom: 16px;
+    }
+
+    .side-title {
+      display: inline-block;
+      background: var(--orange);
+      color: #000;
+      padding: 1px 2px;
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .side-link {
+      display: block;
+      width: max-content;
+      max-width: 155px;
+      background: #c6c6b1;
+      color: #000;
+      padding: 1px 2px;
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .newsletter {
+      margin-top: 10px;
+      margin-bottom: 18px;
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .newsletter label {
+      display: inline-block;
+      margin-top: 9px;
+    }
+
+    .newsletter input {
+      width: 106px;
+      height: 22px;
+      border: 0;
+      margin-left: 6px;
+      vertical-align: middle;
+      background: #fff;
+    }
+
+    .newsletter button {
+      display: block;
+      margin: 5px 0 0 91px;
+      border: 0;
+      background: #000;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 900;
+      text-decoration: underline;
+      cursor: pointer;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .poster {
+      width: 154px;
+      height: 218px;
+      margin: 0 0 7px 0;
+      background:
+        linear-gradient(135deg, rgba(0,0,0,.28), rgba(255,255,255,.18)),
+        repeating-linear-gradient(90deg, #6d8a5e 0 31px, #d4b28d 31px 62px, #73886d 62px 93px, #c49374 93px 124px),
+        repeating-linear-gradient(0deg, transparent 0 52px, rgba(255,255,255,.25) 52px 54px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .poster::before {
+      content: "M\A A\A R\A Z";
+      white-space: pre;
+      position: absolute;
+      left: 58px;
+      top: 24px;
+      color: #fff;
+      background: rgba(255,255,255,.85);
+      color: #000;
+      font-size: 26px;
+      line-height: 1.45;
+      font-weight: 900;
+      letter-spacing: 2px;
+      padding: 1px 8px;
+      text-align: center;
+      transform: rotate(-2deg);
+    }
+
+    .poster::after {
+      content: "MRZ 16\A DISTILLERY";
+      white-space: pre;
+      position: absolute;
+      right: 8px;
+      top: 8px;
+      color: #fff;
+      background: #000;
+      font-size: 9px;
+      line-height: 1.1;
+      padding: 3px 4px;
+      text-align: center;
+    }
+
+    .download-pdf,
+    .calendar-download {
+      display: block;
+      width: max-content;
+      background: #c6c6b1;
+      color: #000;
+      padding: 1px 2px;
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 36px;
+    }
+
+    .device-row {
+      width: 154px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 9px;
+    }
+
+    .computer {
+      width: 69px;
+      height: 87px;
+      border: 3px solid #888;
+      background: #c9c9c9;
+      position: relative;
+    }
+
+    .screen {
+      position: absolute;
+      left: 6px;
+      top: 6px;
+      width: 51px;
+      height: 42px;
+      border: 3px solid #000;
+      background: #fff;
+    }
+
+    .face {
+      position: absolute;
+      left: 13px;
+      top: 7px;
+      font-size: 28px;
+      line-height: 1;
+      transform: rotate(90deg);
+    }
+
+    .slot {
+      position: absolute;
+      width: 39px;
+      height: 4px;
+      left: 22px;
+      bottom: 16px;
+      background: #333;
+    }
+
+    .green-dot {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      left: 5px;
+      bottom: 6px;
+      background: #2fff00;
+      border: 1px solid #000;
+    }
+
+    .phone {
+      width: 29px;
+      height: 74px;
+      border: 3px solid #888;
+      background: #d3d3d3;
+      position: relative;
+      margin-right: 4px;
+    }
+
+    .phone::before {
+      content: "";
+      position: absolute;
+      left: 9px;
+      top: -13px;
+      width: 3px;
+      height: 11px;
+      background: #d3d3d3;
+    }
+
+    .phone-screen {
+      position: absolute;
+      left: 4px;
+      top: 8px;
+      width: 15px;
+      height: 19px;
+      background: #fff;
+      border: 2px solid #000;
+    }
+
+    .phone-face {
+      position: absolute;
+      left: 7px;
+      top: 9px;
+      font-size: 13px;
+      transform: rotate(90deg);
+    }
+
+    .phone-keys {
+      position: absolute;
+      left: 5px;
+      bottom: 6px;
+      display: grid;
+      grid-template-columns: repeat(2, 8px);
+      gap: 2px;
+    }
+
+    .phone-keys i {
+      display: block;
+      width: 8px;
+      height: 8px;
+      background: #000;
+    }
+
+    .phone-keys i:nth-child(3) {
+      background: #f00;
+    }
+
+    @media (max-width: 820px) {
+      .page {
+        width: 100%;
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .main {
+        padding-right: 24px;
+      }
+
+      .sidebar {
+        padding-top: 24px;
+        min-height: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <main class="main">
+      <header class="logo" aria-label="Distillery">
+        <div class="logo-mark"></div>
+        <div class="logo-word">Distillery<span class="tm">TM</span></div>
+      </header>
+
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a class="active" href="#">Dates</a><a href="#">News</a><a href="#">Downloads</a><a href="#">About</a><a href="#">Contact</a><a href="#">Booking</a><br>
+        <a class="active" href="#">Next Dates</a>
+      </nav>
+
+      <section class="event">
+        <h2 class="event-title olive">FR. 11.03.16 STYLE WILD WEEKENDER PT. 1</h2>
+        <div class="label">up:</div>
+        <div class="line"><strong>AB 20:30 UHR: STYLE WILD STREETDANCE BATTLES</strong> (Hip Hop/Popping/ Experimental)</div>
+        <div class="label">down:</div>
+        <div class="line"><strong>ROBOT ORCHESTRA - LIVE</strong> (Hobo Truffles, Köln)</div>
+        <div class="line"><strong>OVERDUBCLUB - LIVE</strong> Beatmaking Jam Session - join if you like to</div>
+        <a class="more" href="#">more...</a>
+      </section>
+
+      <section class="event">
+        <h2 class="event-title orange">SA. 12.03.16 O*RS 5TH ANNIVERSARY &amp; 20 YEARS OF DJ</h2>
+        <div class="label">up:</div>
+        <div class="line"><strong>FILBURT</strong> (Distillery, O*RS, Permanent Vacation, Riotvan, Leipzig)</div>
+        <div class="line"><strong>FOUTEUR DE MERDE</strong> (O*RS)</div>
+        <div class="line"><strong>RON DEACON</strong> (Distillery, RDF Music, workshop, Leipzig)</div>
+        <div class="line"><strong>THOMAS LEGLER</strong> (Nachtwache Leipzig, phono -tone )</div>
+        <div class="line"><strong>DISCO MøRETTI</strong> (Muan!, Prag / CZ) <strong>BRAUNBECK</strong> (O*RS)</div>
+        <div class="line"><strong>JAN KETEL</strong> (Ourselves, O*RS, Tieffrequent)</div>
+        <div class="line"><strong>MIAMI MÜLLER</strong> (Doumen, Electronic Resistance, Leipzig)</div>
+        <div class="line"><strong>PNM</strong> (mzin, the music people) <strong>FREUND DER FAMILIE</strong> (FDF)</div>
+        <div class="line"><strong>TEMPLETON</strong> (Mod.Civil, Pneuma Dor, Ortloff, Leipzig)</div>
+        <div class="line"><strong>UPSYLER</strong> (UP Home, Where the Buffalo Roam, Leipzig) <strong>BENDER</strong> (KANN, Leipzig)</div>
+        <div class="line"><strong>PETER INVASION</strong> (Distillery, Riotvan, Leipzig)</div>
+        <div class="line"><strong>M.ONO &amp; LUVLESS</strong> (Rose Records, Manana Records, Leipzig)</div>
+        <div class="line"><strong>PANTHERA KRAUSE - LIVE</strong> (Lobster Theremin, Riotvan, O*RS)</div>
+        <div class="line"><strong>ANDREAS TECHER - LIVE</strong> (O*RS, elektro-konsumenten, Leipzig)</div>
+        <div class="line"><strong>RANKO</strong> (O*RS, OverDubClub, Leipzig) <strong>YANNICK LABBÉ</strong> (hafendisko, SUOL, O*RS)</div>
+        <div class="line"><strong>OLIVER GOLDT</strong> (Freude am Tanzen, Jena)</div>
+        <a class="more" href="#">more...</a>
+      </section>
+
+      <section class="event">
+        <h2 class="event-title olive">FR. 18.03.16 1 YR PURPLE TEA VS. DEFROSTATICA</h2>
+        <div class="label">up: hip hop 2.0, grime, hustle-trap, uk, baltimore</div>
+        <div class="line"><strong>SIR SPYRO</strong> (Rinse FM, London) <strong>HOSTED BY:</strong></div>
+        <div class="line"><strong>RIKO DAN</strong> (Tectonic Recordings, London) <strong>KITKUT</strong> (Beyond07, Leipzig)</div>
+        <div class="line"><strong>DRBYSTRR93</strong> (raptation[.de], Leipzig) <strong>PASSERI</strong> (wasrap.de, Leipzig)</div>
+        <div class="label">down: juke, footwork, breakz, slowfast</div>
+        <div class="line"><strong>NEELE</strong> (G-Edit, Leipzig) <strong>CHARLOTTE</strong> (bassmybass, G-Edit, Leipzig)</div>
+        <div class="line"><strong>MADERA</strong> (VariFocus, Leipzig) <strong>BOOGA</strong> (Defrostatica, Leipzig)</div>
+        <a class="more" href="#">more...</a>
+      </section>
+
+      <section class="event">
+        <h2 class="event-title orange">SA. 19.03.16 DIFFERENT AND BEAUTIFUL</h2>
+        <div class="label">up:</div>
+        <div class="line"><strong>ELEKFANTZ - LIVE</strong> (D.O.C. Records) <strong>GUNJAH</strong> (Showboxx, Funkwelt, Dresden)</div>
+        <div class="line"><strong>PETER INVASION</strong> (Distillery, Riotvan, Leipzig)</div>
+        <div class="label">down:</div>
+        <div class="line"><strong>YOUANDME</strong> (Cocoon, Desolat, Rotary Cocktail, Pokerflat, Berlin)</div>
+        <div class="line"><strong>DAN DRASTIC</strong> (Moon Harbour, Leipzig)</div>
+        <div class="line"><strong>ANDREAS ECKHARDT</strong> (rrygular, Distillery)</div>
+        <a class="more" href="#">more...</a>
+      </section>
+
+      <section class="event">
+        <h2 class="event-title yellow">SA. 26.03.16 24 H WOHNZIMMER - PLUS X</h2>
+        <div class="label">up:</div>
+        <div class="line"><strong>SUPER FLU</strong> (Monaberry, Sunset Handjob) <strong>MONKEY SAFARI</strong> (Hommage)</div>
+        <div class="line"><strong>SVEN DOHSE</strong> (Heinz Music, Katermukke, Berlin)</div>
+        <div class="line"><strong>HERR FUCHS &amp; FRAU ELSTER</strong> (FABelhaft, Leipzig)</div>
+        <div class="line"><strong>CHRIS MANURA</strong> (Lebensfreude Berlin, Zwischenwelten, Distillery)</div>
+        <div class="line"><strong>RUKEY</strong> (Distillery, esoulate, Leipzig)</div>
+        <div class="line"><strong>LARS-CHRISTIAN MÜLLER</strong> (mindcookies, Distillery)</div>
+        <div class="line"><strong>FäNCY BOYS</strong> (Vorne Links, Stage Diving fetzt nur am Mittag, Leipzig)</div>
+        <div class="label">down:</div>
+        <div class="line"><strong>ALEX BAU</strong> (Credo, CLR, München)</div>
+        <div class="line"><strong>VINCENT NEUMANN</strong> (Distillery, Krill Music, Oblique, Leipzig)</div>
+        <div class="line"><strong>JANEIN</strong> (Station Endlos, Leipzig)</div>
+        <div class="line"><strong>DANIEL SAILER</strong> (Distillery, Where the Buffalo Roam, kompl3x, Leipzig)</div>
+        <div class="line"><strong>ALBI BAEK</strong> (Station Endlos, Leipzig) <strong>SUBTRAK</strong> (Where the Buffalo Roam, Leipzig)</div>
+        <div class="line"><strong>VON STATTEN</strong> (Station Endlos, Halle) <strong>DEGWIN</strong> (Luftroboter Inc., Leipzig)</div>
+        <div class="line"><strong>WELLENGENERATOR</strong> (free.quenz, Leipzig)</div>
+        <a class="more" href="#">more...</a>
+      </section>
+
+      <section class="event">
+        <h2 class="event-title orange">SA. 02.04.16 OSTGUT TON</h2>
+        <div class="label">up:</div>
+        <div class="line"><strong>TAMA SUMO</strong> (Ostgut Ton, Panorama Bar / Berghain, Berlin)</div>
+        <div class="line"><strong>MASSIMILIANO PAGLIARA</strong> (Live At Robert Johnson, Berlin)</div>
+        <div class="label">down:</div>
+        <div class="line"><strong>ETAPP KYLE</strong> (Klockworks, Ostgut Ton, Berlin)</div>
+        <div class="line"><strong>BORIS</strong> (Ostgut Ton, Panorama Bar / Berghain, Berlin)</div>
+        <a class="more" href="#">more...</a>
+      </section>
+
+      <footer class="footer">
+        DISTILLERY | KURT-EISNER-STR. 108 A | 04275 LEIPZIG | TEL.: 0341/35597400
+        <small>2001-2010 Distillery | <a href="#">LINKS</a> | <a href="#">Impressum</a> | <a href="#">Disclaimer</a></small>
+      </footer>
+    </main>
+
+    <aside class="sidebar">
+      <div class="calendar-head">
+        <span>&lt;</span><span class="month">MÄRZ 2016</span><span>&gt;</span>
+      </div>
+      <table class="calendar" aria-label="Kalender März 2016">
+        <thead>
+          <tr><th>MO</th><th>DI</th><th>MI</th><th>DO</th><th>FR</th><th>SA</th><th>SO</th></tr>
+        </thead>
+        <tbody>
+          <tr><td></td><td>01</td><td>02</td><td>03</td><td>04</td><td class="day-orange">05</td><td>06</td></tr>
+          <tr><td>07</td><td>08</td><td>09</td><td>10</td><td>11</td><td class="day-orange">12</td><td>13</td></tr>
+          <tr><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td class="day-orange">19</td><td>20</td></tr>
+          <tr><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td class="day-yellow">26</td><td>27</td></tr>
+          <tr><td>28</td><td>29</td><td>30</td><td>31</td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+
+      <div class="side-block">
+        <span class="side-title">Saturday Rave</span>
+        <a class="side-link" href="#">Fenster zum Hof</a>
+        <a class="side-link" href="#">Specials</a>
+      </div>
+
+      <form class="newsletter">
+        <div>Newsletter:</div>
+        <label>Email:<input type="email" aria-label="Email" /></label>
+        <button type="submit">SIGN UP!</button>
+      </form>
+
+      <div class="poster" aria-label="März Poster"></div>
+      <a class="download-pdf" href="#">Download PDF</a>
+
+      <div class="device-row" aria-hidden="true">
+        <div class="computer">
+          <div class="screen"><div class="face">:)</div></div>
+          <div class="slot"></div>
+          <div class="green-dot"></div>
+        </div>
+        <div class="phone">
+          <div class="phone-screen"><div class="phone-face">:)</div></div>
+          <div class="phone-keys"><i></i><i></i><i></i><i></i></div>
+        </div>
+      </div>
+      <a class="calendar-download" href="#">Kalender<br>Download</a>
+    </aside>
+  </div>
+</body>
+</html>
