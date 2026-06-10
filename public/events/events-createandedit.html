@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Events erstellen & bearbeiten</title>
+  <style>
+    :root{--bg:#111;--panel:#fff;--muted:#666;--line:#ddd;--accent:#111;--soft:#f3f3f3;--danger:#a50000;--ok:#0d6b2f}*{box-sizing:border-box}body{margin:0;background:#111;color:#111;font-family:Arial,Helvetica,sans-serif;font-size:14px}.wrap{max-width:1180px;margin:0 auto;padding:24px}.shell{background:#fff;min-height:calc(100vh - 48px);padding:22px;border:4px solid #000}h1{margin:0 0 6px;font-size:28px;text-transform:uppercase;letter-spacing:-1px}.hint{margin:0 0 18px;color:#555;line-height:1.35}.tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}.tab{border:2px solid #000;background:#ddd;padding:8px 12px;font-weight:900;text-transform:uppercase;cursor:pointer}.tab.active{background:#000;color:#fff}.grid{display:grid;grid-template-columns:360px 1fr;gap:20px}.panel{border:2px solid #000;padding:14px;background:#fff}.panel h2{margin:0 0 12px;font-size:18px;text-transform:uppercase}.event-list{display:grid;gap:8px}.event-button{display:block;width:100%;text-align:left;border:2px solid #000;background:#eee;padding:9px;cursor:pointer}.event-button.active{background:#000;color:#fff}.event-button strong{display:block;font-size:14px}.event-button span{display:block;font-size:12px;margin-top:3px}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.field{margin-bottom:12px}label{display:block;margin-bottom:4px;font-weight:900;text-transform:uppercase;font-size:12px}input,select,textarea{width:100%;border:2px solid #000;padding:8px;font:inherit;background:#fff}textarea{min-height:84px;resize:vertical}.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}button{border:2px solid #000;background:#ddd;padding:8px 10px;font-weight:900;text-transform:uppercase;cursor:pointer}button.primary{background:#000;color:#fff}button.danger{background:#fff;color:var(--danger);border-color:var(--danger)}button.ok{background:#fff;color:var(--ok);border-color:var(--ok)}.section-card{border:2px solid #000;padding:10px;margin-bottom:10px;background:#f8f8f8}.artist-row{display:grid;grid-template-columns:1fr 1.3fr auto;gap:8px;margin-top:8px}.preview{font-size:12px;line-height:1.15}.preview .event{margin:0 0 18px}.preview .event-title{display:inline;padding:0 4px 0 0;font-size:18px;font-weight:900;text-transform:uppercase}.preview .orange{background:#e49a78}.preview .olive{background:#8d8969}.preview .yellow{background:#f0ed40}.preview strong{font-size:16px}.jsonbox{font-family:Consolas,Monaco,monospace;font-size:12px;min-height:420px}.notice{padding:10px;background:#f3f3f3;border:2px solid #000;margin-bottom:14px;line-height:1.35}.notice b{font-weight:900}.status{margin-top:10px;font-weight:900}.status.ok{color:var(--ok)}.status.err{color:var(--danger)}.small{font-size:12px;color:#555}.hidden{display:none}@media(max-width:900px){.grid{grid-template-columns:1fr}.wrap{padding:10px}.shell{min-height:calc(100vh - 20px)}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="shell">
+      <h1>Events erstellen & bearbeiten</h1>
+      <p class="hint">Demo-Admin für GitHub Pages. Ohne Token speichert diese Seite nur lokal im Browser und kann JSON exportieren. Mit GitHub Fine-grained Token kann sie die Datei <b>public/events/data/events.json</b> direkt im Repo aktualisieren.</p>
+
+      <div class="tabs">
+        <button class="tab active" data-tab="edit">Events</button>
+        <button class="tab" data-tab="meta">Meta / Kalender</button>
+        <button class="tab" data-tab="json">JSON Export</button>
+        <button class="tab" data-tab="github">GitHub Sync</button>
+      </div>
+
+      <section id="tab-edit" class="tabpage">
+        <div class="grid">
+          <aside class="panel">
+            <h2>Eventliste</h2>
+            <div class="actions" style="margin:0 0 12px">
+              <button class="primary" id="newEventBtn">Neues Event</button>
+              <button id="duplicateEventBtn">Duplizieren</button>
+            </div>
+            <div id="eventList" class="event-list"></div>
+          </aside>
+
+          <main class="panel">
+            <h2>Event bearbeiten</h2>
+            <div class="row">
+              <div class="field"><label>Datum</label><input id="date" type="date"></div>
+              <div class="field"><label>Farbe</label><select id="color"><option value="orange">orange</option><option value="olive">olive</option><option value="yellow">yellow</option></select></div>
+            </div>
+            <div class="field"><label>Titel</label><input id="title" placeholder="z.B. Saturday Rave"></div>
+            <div class="field"><label>More-/RA-Link</label><input id="moreUrl" placeholder="https://ra.co/events/... oder #"></div>
+            <div id="sections"></div>
+            <div class="actions">
+              <button id="addSectionBtn">Floor / Abschnitt hinzufügen</button>
+              <button class="primary" id="saveEventBtn">Event speichern</button>
+              <button class="danger" id="deleteEventBtn">Event entfernen</button>
+            </div>
+            <p id="editStatus" class="status"></p>
+            <hr>
+            <h2>Vorschau</h2>
+            <div id="preview" class="preview"></div>
+          </main>
+        </div>
+      </section>
+
+      <section id="tab-meta" class="tabpage hidden">
+        <div class="panel">
+          <h2>Meta / Kalender</h2>
+          <div class="row">
+            <div class="field"><label>Monatslabel</label><input id="monthLabel" placeholder="JUNI 2026"></div>
+            <div class="field"><label>Highlight-Titel</label><input id="highlightTitle" placeholder="Saturday Rave"></div>
+          </div>
+          <div class="row">
+            <div class="field"><label>Kalender-Jahr</label><input id="calendarYear" type="number" placeholder="2026"></div>
+            <div class="field"><label>Kalender-Monat</label><input id="calendarMonth" type="number" min="1" max="12" placeholder="6"></div>
+          </div>
+          <div class="field"><label>Highlight-Links, eine Zeile pro Link</label><textarea id="highlightLinks"></textarea></div>
+          <button class="primary" id="saveMetaBtn">Meta speichern</button>
+          <p id="metaStatus" class="status"></p>
+        </div>
+      </section>
+
+      <section id="tab-json" class="tabpage hidden">
+        <div class="panel">
+          <h2>JSON Export</h2>
+          <div class="notice"><b>Wichtig:</b> Dieser Export ist die Datei, aus der die Website später liest. Du kannst sie kopieren oder als Datei herunterladen.</div>
+          <textarea id="jsonOutput" class="jsonbox"></textarea>
+          <div class="actions">
+            <button id="refreshJsonBtn">JSON aktualisieren</button>
+            <button id="copyJsonBtn">JSON kopieren</button>
+            <button id="downloadJsonBtn">events.json herunterladen</button>
+          </div>
+          <p id="jsonStatus" class="status"></p>
+        </div>
+      </section>
+
+      <section id="tab-github" class="tabpage hidden">
+        <div class="panel">
+          <h2>GitHub Sync</h2>
+          <div class="notice">
+            <b>Demo ohne Passwort:</b> Damit eine statische HTML-Seite ins Repo schreiben kann, brauchst du lokal einen GitHub Fine-grained Token mit Schreibrecht auf dieses Repo. Der Token wird nur in deinem Browser benutzt und nicht in die Datei geschrieben. Für später ersetzen wir das durch ein richtiges Backend/Login.
+          </div>
+          <div class="row">
+            <div class="field"><label>Owner</label><input id="ghOwner" value="teuberleipzig-cpu"></div>
+            <div class="field"><label>Repo</label><input id="ghRepo" value="Tille"></div>
+          </div>
+          <div class="field"><label>Dateipfad</label><input id="ghPath" value="public/events/data/events.json"></div>
+          <div class="field"><label>Branch</label><input id="ghBranch" value="main"></div>
+          <div class="field"><label>GitHub Token</label><input id="ghToken" type="password" placeholder="github_pat_..."></div>
+          <div class="actions">
+            <button id="loadFromGithubBtn">Aus GitHub laden</button>
+            <button class="ok" id="saveToGithubBtn">In GitHub speichern</button>
+          </div>
+          <p class="small">Commit-Message: Update events data from browser editor</p>
+          <p id="githubStatus" class="status"></p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+<script>
+const DATA_PATH = 'data/events.json';
+let data = { meta:{ monthLabel:'', calendarYear:new Date().getFullYear(), calendarMonth:new Date().getMonth()+1, highlightTitle:'', highlightLinks:[] }, events:[] };
+let selectedIndex = -1;
+
+const $ = id => document.getElementById(id);
+const esc = v => String(v ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const slug = text => String(text || 'event').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'') || 'event';
+
+function setStatus(id, text, type='ok'){ const el=$(id); el.textContent=text; el.className='status '+type; }
+function normalized(){ return { meta: data.meta, events: data.events }; }
+function jsonString(){ return JSON.stringify(normalized(), null, 2); }
+function saveLocal(){ localStorage.setItem('tille-events-demo', jsonString()); }
+
+async function boot(){
+  const local = localStorage.getItem('tille-events-demo');
+  if(local){ try{ data = JSON.parse(local); }catch(e){} }
+  else{
+    try{ const res = await fetch(DATA_PATH, {cache:'no-store'}); if(res.ok) data = await res.json(); }catch(e){}
+  }
+  ensureShape();
+  selectedIndex = data.events.length ? 0 : -1;
+  bind(); renderAll();
+}
+function ensureShape(){ data.meta ||= {}; data.meta.highlightLinks ||= []; data.events ||= []; data.events.forEach(e=>{ e.sections ||= []; e.moreUrl ||= '#'; e.color ||= 'orange'; }); }
+function bind(){
+  document.querySelectorAll('.tab').forEach(btn=>btn.addEventListener('click',()=>showTab(btn.dataset.tab)));
+  $('newEventBtn').onclick = newEvent; $('duplicateEventBtn').onclick = duplicateEvent; $('addSectionBtn').onclick = addSection; $('saveEventBtn').onclick = saveEventFromForm; $('deleteEventBtn').onclick = deleteEvent;
+  $('saveMetaBtn').onclick = saveMeta; $('refreshJsonBtn').onclick = renderJson; $('copyJsonBtn').onclick = copyJson; $('downloadJsonBtn').onclick = downloadJson; $('loadFromGithubBtn').onclick = loadFromGithub; $('saveToGithubBtn').onclick = saveToGithub;
+}
+function showTab(name){ document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active', b.dataset.tab===name)); document.querySelectorAll('.tabpage').forEach(p=>p.classList.add('hidden')); $('tab-'+name).classList.remove('hidden'); if(name==='json') renderJson(); }
+function renderAll(){ renderList(); renderForm(); renderMeta(); renderJson(); }
+function renderList(){
+  $('eventList').innerHTML = data.events.map((event,i)=>`<button class="event-button ${i===selectedIndex?'active':''}" data-i="${i}"><strong>${esc(event.date || 'ohne datum')} – ${esc(event.title || 'Ohne Titel')}</strong><span>${esc(event.sections?.length || 0)} Abschnitte · ${esc(event.color || '')}</span></button>`).join('') || '<p class="small">Noch keine Events.</p>';
+  document.querySelectorAll('.event-button').forEach(btn=>btn.onclick=()=>{ selectedIndex=Number(btn.dataset.i); renderAll(); });
+}
+function current(){ return data.events[selectedIndex]; }
+function renderForm(){
+  const event = current();
+  if(!event){ $('date').value=''; $('title').value=''; $('moreUrl').value='#'; $('sections').innerHTML=''; $('preview').innerHTML='<p class="small">Kein Event ausgewählt.</p>'; return; }
+  $('date').value = event.date || ''; $('title').value = event.title || ''; $('color').value = event.color || 'orange'; $('moreUrl').value = event.moreUrl || '#';
+  $('sections').innerHTML = (event.sections || []).map((section, si)=>sectionHtml(section, si)).join('');
+  document.querySelectorAll('[data-remove-section]').forEach(btn=>btn.onclick=()=>{ event.sections.splice(Number(btn.dataset.removeSection),1); saveLocal(); renderAll(); });
+  document.querySelectorAll('[data-add-artist]').forEach(btn=>btn.onclick=()=>{ event.sections[Number(btn.dataset.addArtist)].items.push({name:'',info:''}); renderForm(); });
+  document.querySelectorAll('[data-remove-artist]').forEach(btn=>btn.onclick=()=>{ const [si,ai]=btn.dataset.removeArtist.split(':').map(Number); event.sections[si].items.splice(ai,1); saveLocal(); renderAll(); });
+  renderPreview();
+}
+function sectionHtml(section, si){
+  section.items ||= [];
+  return `<div class="section-card"><div class="row"><div class="field"><label>Abschnitt / Floor</label><input data-section-label="${si}" value="${esc(section.label || '')}" placeholder="up:"></div><div class="field"><label>Genre / Notiz</label><input data-section-genre="${si}" value="${esc(section.genre || '')}" placeholder="optional"></div></div><label>Lineup</label>${section.items.map((item,ai)=>`<div class="artist-row"><input data-artist-name="${si}:${ai}" value="${esc(item.name || '')}" placeholder="Artist"><input data-artist-info="${si}:${ai}" value="${esc(item.info || '')}" placeholder="Info / Label / Stadt"><button class="danger" data-remove-artist="${si}:${ai}">×</button></div>`).join('')}<div class="actions"><button data-add-artist="${si}">Artist hinzufügen</button><button class="danger" data-remove-section="${si}">Abschnitt entfernen</button></div></div>`;
+}
+function readFormIntoEvent(){
+  const event = current(); if(!event) return;
+  event.date = $('date').value; event.title = $('title').value.trim(); event.color = $('color').value; event.moreUrl = $('moreUrl').value.trim() || '#';
+  document.querySelectorAll('[data-section-label]').forEach(input=>{ event.sections[Number(input.dataset.sectionLabel)].label = input.value; });
+  document.querySelectorAll('[data-section-genre]').forEach(input=>{ event.sections[Number(input.dataset.sectionGenre)].genre = input.value; });
+  document.querySelectorAll('[data-artist-name]').forEach(input=>{ const [si,ai]=input.dataset.artistName.split(':').map(Number); event.sections[si].items[ai].name = input.value; });
+  document.querySelectorAll('[data-artist-info]').forEach(input=>{ const [si,ai]=input.dataset.artistInfo.split(':').map(Number); event.sections[si].items[ai].info = input.value; });
+}
+function saveEventFromForm(){ readFormIntoEvent(); data.events.sort((a,b)=>String(a.date).localeCompare(String(b.date))); selectedIndex = Math.max(0, data.events.findIndex(e=>e.title===$('title').value.trim() && e.date===$('date').value)); saveLocal(); renderAll(); setStatus('editStatus','Event lokal gespeichert. Für GitHub: Tab „GitHub Sync“ → In GitHub speichern.'); }
+function newEvent(){ const today = new Date().toISOString().slice(0,10); data.events.push({ id: slug(today+' neues-event'), date: today, title:'Neues Event', color:'orange', moreUrl:'#', sections:[{label:'up:',items:[{name:'',info:''}]}] }); selectedIndex=data.events.length-1; saveLocal(); renderAll(); }
+function duplicateEvent(){ const event=current(); if(!event) return; const clone=JSON.parse(JSON.stringify(event)); clone.title = clone.title + ' KOPIE'; clone.id = slug((clone.date || '')+' '+clone.title); data.events.push(clone); selectedIndex=data.events.length-1; saveLocal(); renderAll(); }
+function addSection(){ const event=current(); if(!event) return; event.sections.push({label:'down:',items:[{name:'',info:''}]}); saveLocal(); renderAll(); }
+function deleteEvent(){ if(selectedIndex<0) return; if(!confirm('Event wirklich aus dieser Demo entfernen?')) return; data.events.splice(selectedIndex,1); selectedIndex=Math.min(selectedIndex,data.events.length-1); saveLocal(); renderAll(); }
+function renderPreview(){ const event=current(); if(!event) return; const sections = event.sections.map(s=>`<div class="label">${esc(s.label||'')}</div><div>${s.items.map(i=>`<strong>${esc(i.name)}</strong>${i.info?' ('+esc(i.info)+')':''}`).join(' ')}</div>`).join(''); $('preview').innerHTML = `<section class="event"><h2 class="event-title ${esc(event.color)}">${esc(event.date)} ${esc(event.title)}</h2>${sections}<br><a class="more" href="${esc(event.moreUrl||'#')}">more...</a></section>`; }
+function renderMeta(){ $('monthLabel').value=data.meta.monthLabel||''; $('calendarYear').value=data.meta.calendarYear||''; $('calendarMonth').value=data.meta.calendarMonth||''; $('highlightTitle').value=data.meta.highlightTitle||''; $('highlightLinks').value=(data.meta.highlightLinks||[]).join('\n'); }
+function saveMeta(){ data.meta.monthLabel=$('monthLabel').value; data.meta.calendarYear=Number($('calendarYear').value); data.meta.calendarMonth=Number($('calendarMonth').value); data.meta.highlightTitle=$('highlightTitle').value; data.meta.highlightLinks=$('highlightLinks').value.split('\n').map(x=>x.trim()).filter(Boolean); saveLocal(); renderAll(); setStatus('metaStatus','Meta lokal gespeichert.'); }
+function renderJson(){ $('jsonOutput').value = jsonString(); }
+async function copyJson(){ renderJson(); await navigator.clipboard.writeText($('jsonOutput').value); setStatus('jsonStatus','JSON kopiert.'); }
+function downloadJson(){ renderJson(); const blob=new Blob([$('jsonOutput').value],{type:'application/json'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='events.json'; a.click(); URL.revokeObjectURL(a.href); }
+function b64Unicode(str){ return btoa(unescape(encodeURIComponent(str))); }
+function fromB64Unicode(str){ return decodeURIComponent(escape(atob(str.replace(/\n/g,'')))); }
+async function ghRequest(url, options={}){ const token=$('ghToken').value.trim(); if(!token) throw new Error('GitHub Token fehlt.'); const res=await fetch(url,{...options,headers:{'Accept':'application/vnd.github+json','Authorization':'Bearer '+token,'X-GitHub-Api-Version':'2022-11-28',...(options.headers||{})}}); const json=await res.json().catch(()=>({})); if(!res.ok) throw new Error(json.message || ('GitHub API Fehler '+res.status)); return json; }
+function ghBase(){ return `https://api.github.com/repos/${$('ghOwner').value.trim()}/${$('ghRepo').value.trim()}/contents/${$('ghPath').value.trim()}`; }
+async function loadFromGithub(){ try{ setStatus('githubStatus','Lade aus GitHub...',''); const json=await ghRequest(`${ghBase()}?ref=${encodeURIComponent($('ghBranch').value.trim())}`); data=JSON.parse(fromB64Unicode(json.content)); ensureShape(); selectedIndex=data.events.length?0:-1; saveLocal(); renderAll(); setStatus('githubStatus','Aus GitHub geladen.','ok'); }catch(e){ setStatus('githubStatus',e.message,'err'); } }
+async function saveToGithub(){ try{ readFormIntoEvent(); renderJson(); setStatus('githubStatus','Speichere in GitHub...',''); const branch=$('ghBranch').value.trim(); const currentFile=await ghRequest(`${ghBase()}?ref=${encodeURIComponent(branch)}`); await ghRequest(ghBase(),{method:'PUT',body:JSON.stringify({message:'Update events data from browser editor',content:b64Unicode(jsonString()),sha:currentFile.sha,branch})}); saveLocal(); setStatus('githubStatus','In GitHub gespeichert. GitHub Pages braucht danach kurz zum Aktualisieren.','ok'); }catch(e){ setStatus('githubStatus',e.message,'err'); } }
+boot();
+</script>
+</body>
+</html>
