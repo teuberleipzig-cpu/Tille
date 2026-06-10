@@ -1,0 +1,186 @@
+{
+  "meta": {
+    "monthLabel": "MÄRZ 2016",
+    "calendarYear": 2016,
+    "calendarMonth": 3,
+    "highlightTitle": "Saturday Rave",
+    "highlightLinks": [
+      "Fenster zum Hof",
+      "Specials"
+    ]
+  },
+  "events": [
+    {
+      "date": "2016-03-11",
+      "title": "STYLE WILD WEEKENDER PT. 1",
+      "color": "olive",
+      "moreUrl": "#",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "AB 20:30 UHR: STYLE WILD STREETDANCE BATTLES",
+              "info": "Hip Hop/Popping/Experimental"
+            }
+          ]
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "ROBOT ORCHESTRA - LIVE",
+              "info": "Hobo Truffles, Köln"
+            },
+            {
+              "name": "OVERDUBCLUB - LIVE",
+              "info": "Beatmaking Jam Session - join if you like to"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2016-03-12",
+      "title": "O*RS 5TH ANNIVERSARY & 20 YEARS OF DJ",
+      "color": "orange",
+      "moreUrl": "#",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            { "name": "FILBURT", "info": "Distillery, O*RS, Permanent Vacation, Riotvan, Leipzig" },
+            { "name": "FOUTEUR DE MERDE", "info": "O*RS" },
+            { "name": "RON DEACON", "info": "Distillery, RDF Music, workshop, Leipzig" },
+            { "name": "THOMAS LEGLER", "info": "Nachtwache Leipzig, phono -tone" },
+            { "name": "DISCO MøRETTI", "info": "Muan!, Prag / CZ" },
+            { "name": "BRAUNBECK", "info": "O*RS" },
+            { "name": "JAN KETEL", "info": "Ourselves, O*RS, Tieffrequent" },
+            { "name": "MIAMI MÜLLER", "info": "Doumen, Electronic Resistance, Leipzig" },
+            { "name": "PNM", "info": "mzin, the music people" },
+            { "name": "FREUND DER FAMILIE", "info": "FDF" },
+            { "name": "TEMPLETON", "info": "Mod.Civil, Pneuma Dor, Ortloff, Leipzig" },
+            { "name": "UPSYLER", "info": "UP Home, Where the Buffalo Roam, Leipzig" },
+            { "name": "BENDER", "info": "KANN, Leipzig" },
+            { "name": "PETER INVASION", "info": "Distillery, Riotvan, Leipzig" },
+            { "name": "M.ONO & LUVLESS", "info": "Rose Records, Manana Records, Leipzig" },
+            { "name": "PANTHERA KRAUSE - LIVE", "info": "Lobster Theremin, Riotvan, O*RS" },
+            { "name": "ANDREAS TECHER - LIVE", "info": "O*RS, elektro-konsumenten, Leipzig" },
+            { "name": "RANKO", "info": "O*RS, OverDubClub, Leipzig" },
+            { "name": "YANNICK LABBÉ", "info": "hafendisko, SUOL, O*RS" },
+            { "name": "OLIVER GOLDT", "info": "Freude am Tanzen, Jena" }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2016-03-18",
+      "title": "1 YR PURPLE TEA VS. DEFROSTATICA",
+      "color": "olive",
+      "moreUrl": "#",
+      "sections": [
+        {
+          "label": "up: hip hop 2.0, grime, hustle-trap, uk, baltimore",
+          "items": [
+            { "name": "SIR SPYRO", "info": "Rinse FM, London" },
+            { "name": "HOSTED BY:", "info": "" },
+            { "name": "RIKO DAN", "info": "Tectonic Recordings, London" },
+            { "name": "KITKUT", "info": "Beyond07, Leipzig" },
+            { "name": "DRBYSTRR93", "info": "raptation[.de], Leipzig" },
+            { "name": "PASSERI", "info": "wasrap.de, Leipzig" }
+          ]
+        },
+        {
+          "label": "down: juke, footwork, breakz, slowfast",
+          "items": [
+            { "name": "NEELE", "info": "G-Edit, Leipzig" },
+            { "name": "CHARLOTTE", "info": "bassmybass, G-Edit, Leipzig" },
+            { "name": "MADERA", "info": "VariFocus, Leipzig" },
+            { "name": "BOOGA", "info": "Defrostatica, Leipzig" }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2016-03-19",
+      "title": "DIFFERENT AND BEAUTIFUL",
+      "color": "orange",
+      "moreUrl": "#",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            { "name": "ELEKFANTZ - LIVE", "info": "D.O.C. Records" },
+            { "name": "GUNJAH", "info": "Showboxx, Funkwelt, Dresden" },
+            { "name": "PETER INVASION", "info": "Distillery, Riotvan, Leipzig" }
+          ]
+        },
+        {
+          "label": "down:",
+          "items": [
+            { "name": "YOUANDME", "info": "Cocoon, Desolat, Rotary Cocktail, Pokerflat, Berlin" },
+            { "name": "DAN DRASTIC", "info": "Moon Harbour, Leipzig" },
+            { "name": "ANDREAS ECKHARDT", "info": "rrygular, Distillery" }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2016-03-26",
+      "title": "24 H WOHNZIMMER - PLUS X",
+      "color": "yellow",
+      "moreUrl": "#",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            { "name": "SUPER FLU", "info": "Monaberry, Sunset Handjob" },
+            { "name": "MONKEY SAFARI", "info": "Hommage" },
+            { "name": "SVEN DOHSE", "info": "Heinz Music, Katermukke, Berlin" },
+            { "name": "HERR FUCHS & FRAU ELSTER", "info": "FABelhaft, Leipzig" },
+            { "name": "CHRIS MANURA", "info": "Lebensfreude Berlin, Zwischenwelten, Distillery" },
+            { "name": "RUKEY", "info": "Distillery, esoulate, Leipzig" },
+            { "name": "LARS-CHRISTIAN MÜLLER", "info": "mindcookies, Distillery" },
+            { "name": "FäNCY BOYS", "info": "Vorne Links, Stage Diving fetzt nur am Mittag, Leipzig" }
+          ]
+        },
+        {
+          "label": "down:",
+          "items": [
+            { "name": "ALEX BAU", "info": "Credo, CLR, München" },
+            { "name": "VINCENT NEUMANN", "info": "Distillery, Krill Music, Oblique, Leipzig" },
+            { "name": "JANEIN", "info": "Station Endlos, Leipzig" },
+            { "name": "DANIEL SAILER", "info": "Distillery, Where the Buffalo Roam, kompl3x, Leipzig" },
+            { "name": "ALBI BAEK", "info": "Station Endlos, Leipzig" },
+            { "name": "SUBTRAK", "info": "Where the Buffalo Roam, Leipzig" },
+            { "name": "VON STATTEN", "info": "Station Endlos, Halle" },
+            { "name": "DEGWIN", "info": "Luftroboter Inc., Leipzig" },
+            { "name": "WELLENGENERATOR", "info": "free.quenz, Leipzig" }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2016-04-02",
+      "title": "OSTGUT TON",
+      "color": "orange",
+      "moreUrl": "#",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            { "name": "TAMA SUMO", "info": "Ostgut Ton, Panorama Bar / Berghain, Berlin" },
+            { "name": "MASSIMILIANO PAGLIARA", "info": "Live At Robert Johnson, Berlin" }
+          ]
+        },
+        {
+          "label": "down:",
+          "items": [
+            { "name": "ETAPP KYLE", "info": "Klockworks, Ostgut Ton, Berlin" },
+            { "name": "BORIS", "info": "Ostgut Ton, Panorama Bar / Berghain, Berlin" }
+          ]
+        }
+      ]
+    }
+  ]
+}
