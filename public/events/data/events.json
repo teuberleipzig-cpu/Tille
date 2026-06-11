@@ -20,7 +20,7 @@
       "description": "Please show a valid ID card at the entry.\nNo bags larger than 20x30x20cm allowed.\nNo liquids, no weapons, no pyros, no photos, no videos, no national flags. No -ISMS. Be nice!",
       "sections": [
         {
-          "label": "pavillon",
+          "label": "pavillon:",
           "items": [
             {
               "name": "DJ HDGDL B2B NIOK",
