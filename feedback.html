@@ -22,7 +22,8 @@
         <p>All messages will be treated with care and respect.</p>
 
         <form class="feedback-form" action="https://formsubmit.co/teuber1995@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="New Distillery website feedback">
+          <input id="feedback-subject" type="hidden" name="_subject" value="New Distillery website feedback">
+          <input id="submitted-at" type="hidden" name="submitted_at" value="">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_next" value="https://teuberleipzig-cpu.github.io/Tille/feedback-thanks.html">
           <input class="honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off">
@@ -71,5 +72,12 @@
       <a class="calendar-download" href="#">Kalender<br>Download</a>
     </aside>
   </div>
+  <script>
+    document.querySelector('.feedback-form').addEventListener('submit', function(){
+      var now = new Date().toISOString();
+      document.getElementById('submitted-at').value = now;
+      document.getElementById('feedback-subject').value = 'New Distillery website feedback – ' + now;
+    });
+  </script>
 </body>
 </html>
