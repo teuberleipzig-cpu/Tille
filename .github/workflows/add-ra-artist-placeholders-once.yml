@@ -24,7 +24,7 @@ jobs:
           python-version: "3.12"
 
       - name: Update supplied artist info
-        run: python scripts/update_supplied_artist_info_once.py
+        run: python scripts/run_fixed_artist_info_migration.py
 
       - name: Commit updated events and report to pull request branch
         run: |
