@@ -1,10 +1,36 @@
-name: Archived artist info mapping migration
+name: List placeholder artists once
 
 on:
-  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/list_placeholder_artists_once.py"
+
+permissions:
+  contents: write
 
 jobs:
-  archived:
+  list-placeholder-artists:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "The artist info mapping migration has already been completed."
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate placeholder artist report
+        run: python scripts/list_placeholder_artists_once.py
+
+      - name: Commit report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/artists_with_placeholder.txt
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Generate placeholder artist report [skip ci]"
+            git push
+          fi
