@@ -1,10 +1,36 @@
-name: Archived Submod artist info migration
+name: Update artist info mappings once
 
 on:
-  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/update_artist_info_mappings_once.py"
+
+permissions:
+  contents: write
 
 jobs:
-  archived:
+  update-artist-info:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "The Submod artist info migration has already been completed."
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Update artist info mappings
+        run: python scripts/update_artist_info_mappings_once.py
+
+      - name: Commit updated events
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/events/data/events.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Update artist info mappings in events data [skip ci]"
+            git push
+          fi
