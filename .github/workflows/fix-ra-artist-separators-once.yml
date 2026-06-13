@@ -1,36 +1,10 @@
-name: Fix RA artist separators once
+name: Archived one-time RA artist separator task
 
 on:
-  push:
-    paths:
-      - "scripts/fix_ra_artist_separators_once.py"
-
-permissions:
-  contents: write
+  workflow_dispatch:
 
 jobs:
-  fix-separators:
+  archived:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Fix RA artist separators
-        run: python scripts/fix_ra_artist_separators_once.py
-
-      - name: Commit updated index
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
-          else
-            git commit -m "Separate Resident Advisor artists with pipes [skip ci]"
-            git push
-          fi
+      - run: echo "The RA artist separator migration has already been completed."
