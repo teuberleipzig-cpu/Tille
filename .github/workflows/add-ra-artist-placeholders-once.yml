@@ -3,7 +3,7 @@ name: Build updated placeholder artist list once
 on:
   push:
     paths:
-      - "scripts/build_updated_placeholder_artist_list_once.py"
+      - ".github/build-updated-placeholder-list-trigger.txt"
 
 permissions:
   contents: write
