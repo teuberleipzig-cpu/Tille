@@ -1,36 +1,10 @@
-name: Add admin event filters once
+name: Archived admin event filter migration
 
 on:
-  push:
-    paths:
-      - "scripts/add_admin_event_filters_once.py"
-
-permissions:
-  contents: write
+  workflow_dispatch:
 
 jobs:
-  update-admin:
+  archived:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Add event list filters
-        run: python scripts/add_admin_event_filters_once.py
-
-      - name: Commit updated admin page
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/events/events-createandedit.html
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
-          else
-            git commit -m "Add search date filters and sorting to event admin [skip ci]"
-            git push
-          fi
+      - run: echo "The admin event filter migration has already been completed."
