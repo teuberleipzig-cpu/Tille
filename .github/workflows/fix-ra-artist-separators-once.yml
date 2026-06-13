@@ -3,7 +3,7 @@ name: Fix RA artist separators once
 on:
   push:
     paths:
-      - ".github/fix-ra-artist-separators-trigger.txt"
+      - "scripts/fix_ra_artist_separators_once.py"
 
 permissions:
   contents: write
