@@ -1,0 +1,1 @@
+Run supplied artist info update through pull request.

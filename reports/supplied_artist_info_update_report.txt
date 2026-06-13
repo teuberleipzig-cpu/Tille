@@ -1,0 +1,147 @@
+TARGET_ARTISTS=137
+MATCHED_ARTISTS=137
+UNMATCHED_ARTISTS=0
+MATCHED_EVENT_ENTRIES=935
+CHANGED_EVENT_ENTRIES=732
+ALREADY_CORRECT_ENTRIES=203
+
+=== MATCHED ===
+0-Dimensional (Distillery, Leipzig) | entries=10 | changed=9 | variants=0 DIMENSIONAL, 0-DIMENSIONAL, 0-Dimensional
+A.B.U. (Hamburg) | entries=1 | changed=1 | variants=A.B.U.
+ACE (Fat Bemme) | entries=4 | changed=2 | variants=ACE
+Adriana Lopez (Grey Report, Modularz, Semantica, Pole Group, Barcelona) | entries=2 | changed=1 | variants=Adriana Lopez, ADRIANA LóPEZ
+Afem Syko (R Label Group) | entries=2 | changed=1 | variants=AFEM SYKO, Afem Syko
+Ama (UK) | entries=1 | changed=1 | variants=Ama (UK)
+Amotik (47, Amotik, Berlin) | entries=3 | changed=1 | variants=AMOTIK, Amotik
+Andreas Eckhardt (Distillery, Leipzig) | entries=53 | changed=39 | variants=ANDREAS ECKHARDT, Andreas Eckhardt
+Anja Schneider (Mobilee, Berlin) | entries=3 | changed=2 | variants=Anja Schneider, ANJA SCHNEIDER
+Anka (Italo Fundamentalo) | entries=2 | changed=1 | variants=Anka, ANKA
+audite (Boundless Beatz, Leipzig) | entries=39 | changed=22 | variants=AUDITE, audite
+Barbara Preisinger (Slice of Life, Berlin) | entries=1 | changed=1 | variants=Barbara Preisinger
+Bennet (DE) | entries=1 | changed=1 | variants=Bennet (DE)
+BIGALKE (Distillery, Leipzig) | entries=10 | changed=9 | variants=BIGALKE
+Boris & Davy (Creme Club, Leipzig) | entries=1 | changed=1 | variants=Boris & Davy
+Britta Arnold (KaterMukke, Dantze, Berlin) | entries=7 | changed=2 | variants=BRITTA ARNOLD, Britta Arnold
+Bunny Tsukino (Hotshot, Leipzig) | entries=1 | changed=1 | variants=Bunny Tsukino
+Butschi (Leipzig) | entries=1 | changed=1 | variants=Butschi
+BZZHOUND (Madrid) | entries=1 | changed=1 | variants=BZZHOUND
+Cafgar (Leipzig) | entries=2 | changed=2 | variants=Cafgar
+CAIVA (Femme Frequency) | entries=1 | changed=1 | variants=CAIVA
+CAMPA (Leider9, Leipzig) | entries=1 | changed=1 | variants=CAMPA
+CARGO (Berlin) | entries=1 | changed=1 | variants=CARGO (DE)
+Carina Posse (Muna, Leipzig) | entries=2 | changed=2 | variants=Carina Posse
+Carlo Bonanza (AROMA+, Leipzig) | entries=2 | changed=2 | variants=Carlo Bonanza
+Carlotta Jacobi (Leipzig) | entries=5 | changed=5 | variants=Carlotta Jacobi
+Carotin (Dresden) | entries=3 | changed=3 | variants=Carotin
+catjes (Hypress, Leipzig) | entries=1 | changed=1 | variants=catjes
+ch4r20tte (propperpullposse, Leipzig) | entries=1 | changed=1 | variants=ch4r20tte
+Chami (Berlin) | entries=1 | changed=1 | variants=Chami
+Charleen Herzig (Berlin) | entries=1 | changed=1 | variants=Charleen Herzig
+Chloé (Paris) | entries=1 | changed=1 | variants=Chloé
+Chris Liebing (clr.net, FFM) | entries=6 | changed=2 | variants=Chris Liebing, CHRIS LIEBING
+Chris Manura (Distillery, Leipzig) | entries=70 | changed=70 | variants=CHRIS MANURA, Chris Manura
+Chris Schwarzwälder (Katermukke, Laut & Luise, Heinz Music, URSL) | entries=3 | changed=1 | variants=CHRIS SCHWARZWALDER, Chris Schwarzwälder
+Cinthie (Beste Modus, Watergate, Berlin) | entries=9 | changed=5 | variants=Cinthie, CINTHIE
+Cuepric (Bass Focu) | entries=3 | changed=3 | variants=CUEPRIC, Cuepric
+Cyan85 (Curtis Electronix) | entries=2 | changed=1 | variants=Cyan85, CYAN85
+Cynthia Matisse (Weimar) | entries=2 | changed=2 | variants=Cynthia Matisse
+Damon Jee (Dischi Autunno, Correspondant, Critical Monday) | entries=3 | changed=1 | variants=DAMON JEE, Damon Jee
+Daniel Stefanik (Distillery, Leipzig) | entries=76 | changed=76 | variants=DANIEL STEFANIK, Daniel Stefanik
+Denise Rabe (Stroboscopic Artefacts) | entries=3 | changed=2 | variants=Denise Rabe, DENISE RABE
+DJ Dustin (Giegling) | entries=2 | changed=1 | variants=DJ DUSTIN, DJ Dustin
+DJ HDGDL (Stolen Money, Leipzig) | entries=1 | changed=1 | variants=DJ HDGDL
+DJ Hell (International Deejay Gigolos) | entries=4 | changed=1 | variants=DJ HELL, DJ Hell
+DJ STIMULA (Leipzig) | entries=3 | changed=3 | variants=DJ STIMULA
+DjBadshape (Leipzig) | entries=2 | changed=1 | variants=DJ BADSHAPE, DjBadshape
+Dominik Eulberg (k7!) | entries=8 | changed=7 | variants=Dominik Eulberg, DOMINIK EULBERG
+Dubbalot (Boundless Beatz, Leipzig) | entries=44 | changed=29 | variants=DUBBALOT, Dubbalot
+Efdemin (Dial, Records, Ostgut, Berlin) | entries=7 | changed=6 | variants=Efdemin, EFDEMIN
+Ellen Allien (BPitch, Berlin) | entries=8 | changed=7 | variants=ELLEN ALLIEN, Ellen Allien
+Fadi Mohem (Werk-Music) | entries=3 | changed=1 | variants=Fadi Mohem, FADI MOHEM
+Fiedel (Berghain, Ostgut Ton, Berlin) | entries=3 | changed=1 | variants=FIEDEL, Fiedel
+Filburt (Leipzig) | entries=49 | changed=49 | variants=FILBURT, Filburt
+fr. JPLA (Rillendisco, IfZ) | entries=6 | changed=5 | variants=FR. JPLA, fr. JPLA, FR.JPLA
+Frankey & Sandrino (Innervisions, Drumpoet Community, Mood Music) | entries=3 | changed=1 | variants=Frankey & Sandrino, FRANKEY & SANDRINO
+Franz! (Kalif Storch, Muna Musik, Paracou) | entries=8 | changed=6 | variants=FRANZ!, Franz!
+Franziska Berns (Robert Johnson) | entries=2 | changed=1 | variants=FRANZISKA BERNS, Franziska Berns
+Gourski (Nibirii) | entries=2 | changed=1 | variants=GOURSKI, Gourski
+grandmalheur (Leipzig) | entries=1 | changed=1 | variants=grandmalheur
+Gunjah (Showboxx, Funkwelt, Dresden) | entries=15 | changed=3 | variants=Gunjah, GUNJAH
+Hannie Phi (Berlin) | entries=2 | changed=1 | variants=HANNIE PHI, Hannie Phi
+Henning Baer (Grounded Theory) | entries=3 | changed=2 | variants=HENNING BAER, Henning Baer
+HOCK (DE) | entries=1 | changed=1 | variants=HOCK (DE)
+I$A (Leipzig) | entries=2 | changed=2 | variants=I$A
+In Verruf (R Label Group) | entries=2 | changed=1 | variants=IN VERRUF, In Verruf
+Johannes Albert (Frank Music) | entries=2 | changed=1 | variants=Johannes Albert, JOHANNES ALBERT
+Jonathan Kaspar (Pets Recordings, Objektivity, KX) | entries=2 | changed=1 | variants=Jonathan Kaspar, JONATHAN KASPAR
+JONATHOM (Leipzig) | entries=2 | changed=1 | variants=JONATHOM
+karete bu (DRIVE, G-Edit) | entries=6 | changed=4 | variants=KARETE BU, karete bu
+kichererbsenstampf (Leipzig) | entries=1 | changed=1 | variants=kichererbsenstampf
+Kleinschmager Audio (Leipzig) | entries=21 | changed=21 | variants=Kleinschmager Audio, KLEINSCHMAGER AUDIO
+LAURIX (DE) | entries=1 | changed=1 | variants=LAURIX (DE)
+Len Faki (Len Series, Ostgut Ton, Podium, Figure, Berghain, Berlin) | entries=4 | changed=1 | variants=LEN FAKI, Len Faki
+lena xx (Leipzig) | entries=4 | changed=4 | variants=lena xx
+LIA (Berlin) | entries=1 | changed=1 | variants=LIA
+Lucinee (Voxnox Records, EXHALE, Space Trax, RAW) | entries=2 | changed=1 | variants=LUCINEE, Lucinee
+Lulu & Nell (Creme Club, Leipzig) | entries=1 | changed=1 | variants=Lulu & Nell
+LUVLESS (Tsuba, Rose Records Leipzig) | entries=3 | changed=1 | variants=LUVLESS
+LXC (Alphacut, 45Seven, Leipzig) | entries=8 | changed=6 | variants=LXC
+Lydia Eisenblätter (Leipzig) | entries=19 | changed=19 | variants=LYDIA EISENBLäTTER, Lydia Eisenblätter
+Mac-Kee (Dirtydrivesounds, Sparte 13) | entries=5 | changed=4 | variants=Mac-Kee, MAC-KEE
+Malena (Konnektivmusik, Dresden) | entries=4 | changed=2 | variants=MALENA, Malena (2)
+Manon (Robert Johnson, Offenbach) | entries=1 | changed=1 | variants=Manon (3)
+Massimiliano Pagliara (LARJ, Ostgut Ton) | entries=6 | changed=5 | variants=Massimiliano Pagliara, MASSIMILIANO PAGLIARA
+Mathias Ache (Leipzig) | entries=1 | changed=1 | variants=Mathias Ache
+Mathias Kaden (Paracou) | entries=13 | changed=13 | variants=Mathias Kaden, MATHIAS KADEN
+Matrixxman (Dekmantel, Ghostly International) | entries=3 | changed=2 | variants=MATRIXXMAN, Matrixxman
+Medha (Leipzig) | entries=7 | changed=7 | variants=Medha
+Michael Mayer (Kompakt, Köln) | entries=5 | changed=1 | variants=MICHAEL MAYER, Michael Mayer
+Mila Stern (Station Endlos) | entries=5 | changed=1 | variants=MILA STERN, Mila Stern
+Mira (Kater Blau, URSL, Berlin) | entries=7 | changed=5 | variants=MIRA, Mira
+mp.ulle (METRO, Leipzig) | entries=3 | changed=3 | variants=mp.ulle, MP.ULLE
+muLe (Leipzig) | entries=1 | changed=1 | variants=muLe
+Möbelnder Pop (Italo Fundamentalo) | entries=4 | changed=2 | variants=Möbelnder Pop, MöBELNDER POP
+Nadine Talakovics (Distillery) | entries=8 | changed=6 | variants=Nadine Talakovics, NADINE TALAKOVICS
+Naomi (Berlin) | entries=1 | changed=1 | variants=Naomi (Berlin)
+Napoleon Dynamite (Fäncy, Leipzig) | entries=12 | changed=12 | variants=NAPOLEON DYNAMITE, Napoleon Dynamite
+nd_baumecker (Ostgut Ton, Freeride Millenium) | entries=4 | changed=3 | variants=ND_BAUMECKER, nd_baumecker
+Neele (Leipzig) | entries=4 | changed=4 | variants=Neele, NEELE
+Neonlight (Lifted Music, BSE, Trust in Music, Leipzig) | entries=8 | changed=5 | variants=Neonlight, NEONLIGHT
+NICI PALM (Distillery, Leipzig) | entries=6 | changed=6 | variants=NICI PALM
+Ninette (Distillery, LÄRM) | entries=15 | changed=14 | variants=NINETTE, Ninette
+noxsonos (Leipzig) | entries=6 | changed=5 | variants=NOXSONOS, noxsonos
+O.B.I. (DE) | entries=1 | changed=1 | variants=O.B.I. (DE)
+OLIV (Leipzig) | entries=2 | changed=2 | variants=OLIV
+Oliver Rosemann (Recorded Things, Mindtrip, Mord) | entries=10 | changed=6 | variants=Oliver Rosemann, OLIVER ROSEMANN
+Perel (O*RS, Berlin) | entries=3 | changed=2 | variants=PEREL, Perel
+Peter Invasion (Riotvan, Leipzig) | entries=39 | changed=29 | variants=PETER INVASION, Peter Invasion
+RIKHTER (R Label Group) | entries=2 | changed=1 | variants=RIKHTER
+Robag Wruhme (Pampa, Hart & Tief, Kompakt, Weimar Innenstadt) | entries=16 | changed=11 | variants=Robag Wruhme, ROBAG WRUHME
+Ron Deacon (Distillery) | entries=8 | changed=7 | variants=RON DEACON, Ron Deacon
+Ruede Hagelstein (Upon You, Watergate, Berlin) | entries=5 | changed=1 | variants=RUEDE HAGELSTEIN, Ruede Hagelstein
+Ryan Elliott (Ghostly, Spectral Sound) | entries=5 | changed=4 | variants=RYAN ELLIOTT, Ryan Elliott
+Rødhåd (Dystopian) | entries=9 | changed=7 | variants=Rødhåd, RØDHÅD
+SAM (Leipzig) | entries=1 | changed=1 | variants=SAM (9)
+Sarah Wild (Tal der Verwirrung, Gutzeit, Berlin) | entries=2 | changed=1 | variants=SARAH WILD, Sarah Wild
+Schlepp Geist (URSL) | entries=11 | changed=7 | variants=Schlepp Geist, SCHLEPP GEIST
+Shaleen (SEELEN., BPitch) | entries=5 | changed=1 | variants=Shaleen, SHALEEN
+Shinedoe (Intacto, MTM Records) | entries=2 | changed=1 | variants=Shinedoe, SHINEDOE
+Subtrak (Where the Buffalo Roam, Leipzig) | entries=12 | changed=6 | variants=SUBTRAK, Subtrak
+Sue Lèwig (SEELEN.) | entries=3 | changed=1 | variants=Sue Lèwig, SUE LèWIG
+Sugar D. (exLEpäng!) | entries=2 | changed=1 | variants=SUGAR D, Sugar D.
+Sven Tasnadi (Leipzig) | entries=19 | changed=19 | variants=SVEN TASNADI, Sven Tasnadi
+Templeton (Hypress, Leipzig) | entries=9 | changed=9 | variants=TEMPLETON, Templeton
+Theus Mago (Turbo, Correspondant) | entries=2 | changed=1 | variants=THEUS MAGO, Theus Mago
+Tijana T (Abe Duque Records, Belgrad) | entries=2 | changed=1 | variants=Tijana T, TIJANA T
+Timstagram (Keinkollektiv, Leipzig) | entries=2 | changed=2 | variants=Timstagram
+Tommy Four Seven (47, Berlin) | entries=2 | changed=1 | variants=TOMMY FOUR SEVEN, Tommy Four Seven
+Tsorn (No Show) | entries=3 | changed=2 | variants=T S O R N, TSORN, Tsorn
+Vanaenae (G-Edit, Music Of Color) | entries=3 | changed=2 | variants=VANAENAE, Vanaenae
+Vanta (DE) | entries=1 | changed=1 | variants=Vanta (DE)
+VRUM (Boundless Beatz) | entries=10 | changed=8 | variants=VRUM
+Wintermute (Blackout / Boundless Beatz) | entries=10 | changed=9 | variants=Wintermute, WINTERMUTE
+Zacharias (Leipzig) | entries=2 | changed=2 | variants=Zacharias, ZACHARIAS
+Zischko (Leipzig) | entries=2 | changed=2 | variants=Zischko
+Zisko (Leipzig) | entries=1 | changed=1 | variants=Zisko
+
+=== UNMATCHED ===
