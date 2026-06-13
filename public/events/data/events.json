@@ -37,11 +37,13 @@
               "info": "Whizzkids, Leipzig",
               "link": ""
             }
-          ]
+          ],
+          "genre": ""
         },
         {
           "label": "down: Drum&Bass:",
-          "items": []
+          "items": [],
+          "genre": ""
         }
       ]
     },
@@ -57203,10 +57205,11 @@
           "items": [
             {
               "name": "Erobique",
-              "info": "...",
+              "info": "",
               "link": ""
             }
-          ]
+          ],
+          "genre": ""
         }
       ]
     },
@@ -57224,15 +57227,16 @@
           "items": [
             {
               "name": "Paraçek",
-              "info": "...",
+              "info": "(TRANCEKRAFT 4000)",
               "link": ""
             },
             {
               "name": "SPEEDBOYS",
-              "info": "...",
+              "info": "(Heidelberg)",
               "link": ""
             }
-          ]
+          ],
+          "genre": ""
         }
       ]
     }
