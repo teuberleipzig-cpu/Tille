@@ -1,36 +1,10 @@
-name: Restore individual artist rendering once
+name: Archived individual artist rendering migration
 
 on:
-  push:
-    paths:
-      - "scripts/restore_individual_artist_rendering_once.py"
-
-permissions:
-  contents: write
+  workflow_dispatch:
 
 jobs:
-  restore-rendering:
+  archived:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Restore standard artist rendering
-        run: python scripts/restore_individual_artist_rendering_once.py
-
-      - name: Commit updated index
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
-          else
-            git commit -m "Render RA artists as individual event artists [skip ci]"
-            git push
-          fi
+      - run: echo "The individual artist rendering migration has already been completed."
