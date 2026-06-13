@@ -3,7 +3,7 @@ name: Update supplied artist info once
 on:
   push:
     paths:
-      - "scripts/update_supplied_artist_info_once.py"
+      - ".github/update-supplied-artist-info-trigger.txt"
 
 permissions:
   contents: write
