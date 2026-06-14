@@ -1,0 +1,39 @@
+name: Update final artist placeholders once
+
+on:
+  pull_request:
+    paths:
+      - ".github/update-final-artist-placeholders-trigger.txt"
+
+permissions:
+  contents: write
+
+jobs:
+  update-artist-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out pull request branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Update artist info and remove remaining placeholders
+        run: python scripts/update_final_artist_placeholders_once.py
+
+      - name: Commit updated events and report to pull request branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/events/data/events.json reports/final_artist_placeholder_update_report.txt
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Update final artist info and remove placeholders [skip ci]"
+            git push origin "HEAD:${{ github.head_ref }}"
+          fi
