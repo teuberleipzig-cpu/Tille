@@ -1,0 +1,212 @@
+SUPPLIED_ARTISTS=42
+MATCHED_ARTISTS=42
+UNMATCHED_ARTISTS=0
+MATCHED_EVENT_ENTRIES=49
+CHANGED_EVENT_ENTRIES=49
+ALREADY_CORRECT_ENTRIES=0
+REMOVED_PLACEHOLDER_ENTRIES=194
+REMOVED_PLACEHOLDER_ARTISTS=158
+
+=== UPDATED VALUES ===
+2D1G (Metro, Leipzig) | entries=1 | changed=1 | variants=2D1G
+50PHIE (G-Edit, remoto rec.) | entries=1 | changed=1 | variants=50PHIE
+a:technuk (Leipzig) | entries=1 | changed=1 | variants=a:technuk
+abs8lute (Vénus Club) | entries=1 | changed=1 | variants=abs8lute
+Adrija (apostrophé, Leipzig) | entries=1 | changed=1 | variants=Adrija
+Aender (KOSMOS, Leipzig) | entries=1 | changed=1 | variants=Aender
+AgainstMe (Berlin) | entries=1 | changed=1 | variants=AgainstMe
+AGY3NA (Leipzig) | entries=1 | changed=1 | variants=AGY3NA
+Aio (Stil vor Talent) | entries=1 | changed=1 | variants=Aio
+Aivee (Leipzig) | entries=2 | changed=2 | variants=Aivee
+Akua (Brooklyn / Berlin) | entries=1 | changed=1 | variants=Akua
+Alexa Fluor (Another Records) | entries=2 | changed=2 | variants=Alexa Fluor
+Anna Hjalmarsson (Frankfurt) | entries=1 | changed=1 | variants=Anna Hjalmarsson
+Annie O (KitKatClub, Berlin) | entries=1 | changed=1 | variants=Annie O
+apøllo (apostrophé, Leipzig) | entries=1 | changed=1 | variants=apøllo
+ASEC (Berlin) | entries=1 | changed=1 | variants=ASEC
+Axoon (quartal, Sektor Evolution) | entries=1 | changed=1 | variants=Axoon
+BAUGRUPPE90 (Berlin) | entries=1 | changed=1 | variants=BAUGRUPPE90
+beccslyn (Leipzig) | entries=1 | changed=1 | variants=beccslyn
+Ben Derris (Berlin) | entries=1 | changed=1 | variants=Ben Derris
+Bephål (Leipzig) | entries=3 | changed=3 | variants=Bephål
+Berny (In Dark We Trust, geisha prive) | entries=1 | changed=1 | variants=Berny
+Biesmans (Berlin) | entries=1 | changed=1 | variants=Biesmans
+Bonjour Ben (Rostock) | entries=1 | changed=1 | variants=Bonjour Ben
+Budino (Berlin) | entries=1 | changed=1 | variants=Budino
+Claudio PRC (Berlin) | entries=1 | changed=1 | variants=Claudio PRC
+Colin Benders (Utrecht) | entries=1 | changed=1 | variants=Colin Benders
+CRAVO (HAYES, KLOCKWORKS, SK11, ANAØH, Lisboa) | entries=1 | changed=1 | variants=CRAVO
+DELIKAT (alsob sounds , Leipzig) | entries=1 | changed=1 | variants=DELIKAT
+Delirante (Leipzig) | entries=1 | changed=1 | variants=Delirante
+DiscoDaisy (Berlin) | entries=1 | changed=1 | variants=DiscoDaisy
+DJ Annita (Leipzig) | entries=1 | changed=1 | variants=DJ Annita
+DJ Balduin (Leipzig) | entries=1 | changed=1 | variants=DJ Balduin
+DJ Fairytail (Leipzig) | entries=1 | changed=1 | variants=DJ Fairytail
+DJ Ferrari (Leipzig) | entries=1 | changed=1 | variants=DJ Ferrari (2)
+DJ G1NA R. (Leipzig) | entries=1 | changed=1 | variants=DJ G1NA R.
+DJ IBON (Copenhagen) | entries=1 | changed=1 | variants=DJ IBON
+Multifun (Berlin) | entries=1 | changed=1 | variants=Multifun
+Nat Wendell (Depth Of My Soul, Berlin) | entries=1 | changed=1 | variants=Nat Wendell
+Nicolas Lutz (My Own Jupiter) | entries=1 | changed=1 | variants=Nicolas Lutz
+V:SONNTAG (focus, Leipzig) | entries=4 | changed=4 | variants=V:SONNTAG
+XDB (Göttingen) | entries=1 | changed=1 | variants=XDB
+
+=== REMOVED REMAINING PLACEHOLDERS ===
+aykanakdag | entries=1
+Azaleh | entries=2
+Big Honey | entries=1
+Bonnie Spacey | entries=1
+Boris | entries=1
+Brauer | entries=1
+BRAVA | entries=1
+Commissar Lag | entries=1
+DJ Flight | entries=1
+DJ Philou | entries=1
+DJ ritalino | entries=1
+DJ Schnellena | entries=1
+DJ Schnürschuh | entries=1
+DJ SeXex | entries=1
+DJ Skonti | entries=1
+DJ WASSERFALL | entries=1
+DJ Würlpool | entries=1
+Dorsch | entries=2
+Dreimal T | entries=1
+DYROFF | entries=1
+Elli Altenberger | entries=2
+ELOISA | entries=1
+Emeveka | entries=3
+Enzio Etchaberri | entries=1
+eves120 | entries=1
+Fennek | entries=1
+Fuega | entries=1
+genelle | entries=1
+Gianni | entries=1
+Gladee | entries=1
+Goth-Trad | entries=1
+Grace Dahl | entries=1
+Grawinkel | entries=1
+Hanna Baertig | entries=1
+Hardenberg | entries=1
+Harmon | entries=1
+Horkheimer | entries=1
+Hypnosta | entries=2
+Ignez | entries=1
+illousion | entries=1
+ILOVDADDYZ | entries=2
+IRA DELTA | entries=1
+Isabel Soto | entries=1
+J Nuggetz | entries=2
+Jamie K | entries=1
+Jepe | entries=1
+Joyce Muniz | entries=1
+Junction | entries=1
+Juri Heidemann | entries=1
+Just Jane | entries=1
+kaep | entries=1
+Kalitos | entries=1
+Kalpea | entries=1
+Kaspar Oberon | entries=1
+Katta Lana | entries=1
+Keepsakes | entries=1
+Kikimike | entries=3
+Kleo Tremsch | entries=1
+knete | entries=1
+Krackk | entries=1
+Krash Cora | entries=1
+Krista Bourgeois | entries=1
+KRTM | entries=1
+KRUE | entries=1
+Kønnë | entries=2
+Langnikel | entries=1
+Lars Huismann | entries=1
+Laviena | entries=1
+Lay.Dee Strange | entries=1
+Lea Jessen | entries=3
+Linapary | entries=1
+lisa luka | entries=1
+Local Suicide | entries=1
+LOLSNAKE | entries=1
+LUNA.le | entries=1
+LUZI (2) | entries=3
+MAGDALENA MAY | entries=1
+Mareena | entries=1
+Marsch | entries=1
+Maze DK | entries=1
+Melanchromie | entries=1
+Metaraph | entries=1
+Mhan Solo | entries=1
+Millie Forsberg | entries=2
+Mira Vána | entries=1
+Moto Moto | entries=3
+mʊdʌki | entries=1
+Nathalie Seres | entries=1
+nea.cuajo | entries=4
+Neffa-T | entries=1
+Niktech | entries=1
+nohlim | entries=1
+nøvae | entries=1
+Obscure Shape | entries=1
+OCD | entries=1
+Old Man Crane | entries=1
+Olivia Mendez | entries=1
+Padsingers | entries=1
+Paige Julia | entries=1
+Parallx | entries=1
+Paraçek | entries=1
+Paul Weck | entries=1
+Pauli Pocket | entries=1
+Peryl | entries=1
+Phunkadelica | entries=1
+pokka | entries=4
+Ponygirl | entries=1
+Poppy | entries=1
+Quelza | entries=1
+R-SOHR | entries=1
+Raev (2) | entries=1
+RARRI | entries=2
+Richard Brook | entries=1
+Robin Tasi | entries=1
+Rocko Garoni | entries=1
+Rodèk | entries=1
+Rolex3k | entries=1
+Rorganic | entries=1
+rufus.dv | entries=1
+s-ray | entries=2
+SALIMATA | entries=1
+Samurai Breaks | entries=1
+Sebastian Strootmann | entries=1
+Sept | entries=1
+SHDW | entries=1
+SHOKI287 | entries=1
+shroederin | entries=1
+Siggi Petrol | entries=3
+Simon Phil.ter | entries=1
+Sinamin | entries=1
+Skoria | entries=3
+SLANY | entries=3
+slin | entries=1
+snackbites | entries=1
+Sony2k | entries=1
+Stenella | entries=1
+stinia3000 | entries=1
+Stiwahn | entries=1
+Stojche | entries=1
+Stomp | entries=1
+STRUMM. | entries=1
+SubkoØne | entries=4
+Supergloss | entries=1
+SVERRA | entries=2
+Svreca | entries=1
+Sweetpea | entries=1
+Takt & Taumel | entries=1
+The Chord Memory Club | entries=1
+Theo Gramal | entries=1
+Tobias Winkler | entries=1
+Uferkind | entries=1
+UVB | entries=1
+Valerie Ace | entries=1
+vinyldependents | entries=1
+Vivienna | entries=1
+VLUNA | entries=1
+voivittu | entries=1
+Vy Tran | entries=1
