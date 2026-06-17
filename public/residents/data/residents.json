@@ -32,7 +32,7 @@
       "labels": "Vaertism",
       "relatedProjects": "B-Sides, Tosuwashu",
       "pressText": "submod — that’s Felix and Basti — are a Leipzig-based duo operating in the space between House and Minimal since 2010. As part of Distillery Leipzig and the Kulturlounge, they’ve become a staple of the local club scene, known in particular for their extended closing sets.\n\nEarly influences from CDV and the Hoppetosse shaped their sound from the start — groovy and stripped to the essentials. That approach still defines them today.\n\nTheir catalog includes releases on Ethernal, Daydream, and Covered, among others. In 2023, they released their joint EP “Pellegrin” with Shuray&Walle. Featuring a remix by Traumer, the record has since found its way into the sets of Sven Väth, Dan Ghenacia, and XDB on a regular basis.",
-      "news": "25.07.26 - Distillery, Leipzig",
+      "news": "",
       "instagram": "https://www.instagram.com/submod__/",
       "residentadvisor": "https://de.ra.co/dj/submod",
       "discogs": "https://www.discogs.com/de/artist/10314952-Submod?srsltid=AfmBOorEYorbM4IrTp86EX98YssKrDXNyIVE2VZ88SgZZYGzYncaSUsW",
@@ -50,7 +50,123 @@
       ],
       "city": "Leipzig",
       "genre": "House, Minimal",
-      "newsItems": [],
+      "newsItems": [
+        {
+          "id": "2025-08-30-submod-1781726297013-0",
+          "date": "2025-08-30",
+          "text": "Distillery, Leipzig"
+        },
+        {
+          "id": "2025-09-05-submod-1781726297013-1",
+          "date": "2025-09-05",
+          "text": "Kulturlounge, Leipzig"
+        },
+        {
+          "id": "2025-09-13-submod-1781726297013-2",
+          "date": "2025-09-13",
+          "text": "DUQO, Leipzig"
+        },
+        {
+          "id": "2025-09-13-submod-1781726297013-3",
+          "date": "2025-09-13",
+          "text": "Pittlerwerke, Leipzig"
+        },
+        {
+          "id": "2025-09-17-submod-1781726297013-4",
+          "date": "2025-09-17",
+          "text": "Eisengießerei, Leipzig"
+        },
+        {
+          "id": "2025-10-02-submod-1781726297013-5",
+          "date": "2025-10-02",
+          "text": "DUQO, Leipzig"
+        },
+        {
+          "id": "2025-10-04-submod-1781726297013-6",
+          "date": "2025-10-04",
+          "text": "[sic]nal Radio, Hamburg"
+        },
+        {
+          "id": "2025-10-05-submod-1781726297013-7",
+          "date": "2025-10-05",
+          "text": "Hafenklang, Hamburg"
+        },
+        {
+          "id": "2025-10-30-submod-1781726297013-8",
+          "date": "2025-10-30",
+          "text": "Distillery, Leipzig"
+        },
+        {
+          "id": "2025-11-09-submod-1781726297013-9",
+          "date": "2025-11-09",
+          "text": "Distillery, Leipzig"
+        },
+        {
+          "id": "2025-11-26-submod-1781726297013-10",
+          "date": "2025-11-26",
+          "text": "Kulturlounge, Leipzig"
+        },
+        {
+          "id": "2025-12-04-submod-1781726297013-11",
+          "date": "2025-12-04",
+          "text": "Radio Blau, Leipzig"
+        },
+        {
+          "id": "2025-12-12-submod-1781726297013-12",
+          "date": "2025-12-12",
+          "text": "Kulturlounge, Leipzig"
+        },
+        {
+          "id": "2025-12-26-submod-1781726297013-13",
+          "date": "2025-12-26",
+          "text": "Distillery, Leipzig"
+        },
+        {
+          "id": "2025-12-31-submod-1781726297013-14",
+          "date": "2025-12-31",
+          "text": "Südpol, Hamburg"
+        },
+        {
+          "id": "2026-01-15-submod-1781726297013-15",
+          "date": "2026-01-15",
+          "text": "Golden Gate, Berlin"
+        },
+        {
+          "id": "2026-01-17-submod-1781726297013-16",
+          "date": "2026-01-17",
+          "text": "Distillery, Leipzig"
+        },
+        {
+          "id": "2026-02-28-submod-1781726297013-17",
+          "date": "2026-02-28",
+          "text": "Distillery, Leipzig"
+        },
+        {
+          "id": "2026-03-21-submod-1781726297013-18",
+          "date": "2026-03-21",
+          "text": "Distillery, Leipzig"
+        },
+        {
+          "id": "2026-05-02-submod-1781726297013-19",
+          "date": "2026-05-02",
+          "text": "Distillery, Leipzig"
+        },
+        {
+          "id": "2026-05-15-submod-1781726297013-20",
+          "date": "2026-05-15",
+          "text": "MSNT - Wendland"
+        },
+        {
+          "id": "2026-05-30-submod-1781726297013-21",
+          "date": "2026-05-30",
+          "text": "Distillery, Leipzig"
+        },
+        {
+          "id": "2026-07-18-submod-1781726297013-22",
+          "date": "2026-07-18",
+          "text": "Distillery, Leipzig"
+        }
+      ],
       "releases": [
         {
           "id": "2023-01-29-pellegrin-ep",
