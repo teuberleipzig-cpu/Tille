@@ -31,11 +31,17 @@
       "name": "SHURAY & WALLE",
       "city": "Leipzig",
       "genre": "House / Minimal",
-      "labels": "",
+      "labels": "Ethernal, O'rs, Different Heads",
       "relatedProjects": "",
-      "pressText": "",
+      "pressText": "Shuray & Walle – on friendship, one passion !\n\nBased in Leipzig, they radiate an atmosphere and community, an aspect that is often disregarded these days. Those were the days, everything was about House Music. It was this feeling that we shared while listening, what  connected us. Making a difference in what they do while deciding what kind of difference to make.\n\nSome groovy and Deep pumping Tunes for a great Afterhour.",
       "news": "",
-      "newsItems": [],
+      "newsItems": [
+        {
+          "id": "2026-06-19-shuray-walle-1781867876955",
+          "date": "2026-07-25",
+          "text": "Distillery, Leipzig"
+        }
+      ],
       "instagram": "",
       "residentadvisor": "",
       "discogs": "",
