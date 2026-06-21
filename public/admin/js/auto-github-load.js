@@ -26,6 +26,24 @@
     try{return{json:await fetchJsonUrl(rawUrl(path)),sha:''};}catch(e){}
     return{json:await fetchJsonUrl(localUrl(path)),sha:''};
   }
+  async function putJsonFile(path,jsonText,message){
+    async function attempt(sha){
+      const body={message,content:b64EncodeUtf8(jsonText),sha,branch:val('ghBranch')};
+      const res=await fetch(apiPutUrl(path),{method:'PUT',headers:writeHeaders(),body:JSON.stringify(body)});
+      const out=await res.json().catch(()=>({}));
+      return{res,out};
+    }
+    let meta=await fetchMeta(path);
+    let first=await attempt(meta.sha);
+    if(first.res.ok) return{out:first.out,sha:first.out.content?.sha||meta.sha,retried:false};
+    if(first.res.status===409){
+      meta=await fetchMeta(path);
+      const second=await attempt(meta.sha);
+      if(second.res.ok) return{out:second.out,sha:second.out.content?.sha||meta.sha,retried:true};
+      throw new Error(second.out.message||('Speichern nach SHA-Retry fehlgeschlagen '+second.res.status));
+    }
+    throw new Error(first.out.message||('Speichern fehlgeschlagen '+first.res.status));
+  }
   function afterLoad(currentView){
     state.syncState='loaded';
     state.dirty=false;
@@ -118,20 +136,15 @@
       setStatus('eventEditStatus','Speichere Events / Artists...','warn');
       safeReadEvents();
       if(!events().events?.length) throw new Error('Events: events[] ist leer. Speichern abgebrochen.');
-      const remote=await fetchMeta(val('eventsPath'));
-      if(state.eventsSha && remote.sha!==state.eventsSha) throw new Error('Events: GitHub-Datei wurde seit dem Laden verändert. Bitte neu laden.');
-      const body={message:'Update events data from admin v2',content:b64EncodeUtf8(eventsJson()),sha:remote.sha,branch:val('ghBranch')};
-      const res=await fetch(apiPutUrl(val('eventsPath')),{method:'PUT',headers:writeHeaders(),body:JSON.stringify(body)});
-      const out=await res.json().catch(()=>({}));
-      if(!res.ok) throw new Error(out.message||('Events speichern fehlgeschlagen '+res.status));
-      state.eventsSha=out.content?.sha||remote.sha;
+      const saved=await putJsonFile(val('eventsPath'),eventsJson(),'Update events data from admin v2');
+      state.eventsSha=saved.sha;
       state.loadedEventCount=events().events.length;
       state.dirty=false;
       state.syncState='loaded';
       updateSaveStatus();
       setView(currentView||'events');
       renderAll();
-      setStatus('eventEditStatus','Events / Artists gespeichert.','ok');
+      setStatus('eventEditStatus',saved.retried?'Events / Artists nach SHA-Retry gespeichert.':'Events / Artists gespeichert.','ok');
     }catch(e){state.syncState='conflict';updateSaveStatus();setView(currentView||'events');setStatus('eventEditStatus',e.message,'err')}
   }
   async function saveResidentsStay(){
@@ -141,20 +154,15 @@
       setStatus('residentStatus','Speichere Residents...','warn');
       safeReadResidents();
       if(!residents().residents?.length) throw new Error('Residents: residents[] ist leer. Speichern abgebrochen.');
-      const remote=await fetchMeta(val('residentsPath'));
-      if(state.residentsSha && remote.sha!==state.residentsSha) throw new Error('Residents: GitHub-Datei wurde seit dem Laden verändert. Bitte neu laden.');
-      const body={message:'Update residents data from admin v2',content:b64EncodeUtf8(residentsJson()),sha:remote.sha,branch:val('ghBranch')};
-      const res=await fetch(apiPutUrl(val('residentsPath')),{method:'PUT',headers:writeHeaders(),body:JSON.stringify(body)});
-      const out=await res.json().catch(()=>({}));
-      if(!res.ok) throw new Error(out.message||('Residents speichern fehlgeschlagen '+res.status));
-      state.residentsSha=out.content?.sha||remote.sha;
+      const saved=await putJsonFile(val('residentsPath'),residentsJson(),'Update residents data from admin v2');
+      state.residentsSha=saved.sha;
       state.loadedResidentCount=residents().residents.length;
       state.dirty=false;
       state.syncState='loaded';
       updateSaveStatus();
       setView(currentView||'residents');
       renderAll();
-      setStatus('residentStatus','Residents gespeichert.','ok');
+      setStatus('residentStatus',saved.retried?'Residents nach SHA-Retry gespeichert.':'Residents gespeichert.','ok');
     }catch(e){state.syncState='conflict';updateSaveStatus();setView(currentView||'residents');setStatus('residentStatus',e.message,'err')}
   }
   function rebindButtons(){
