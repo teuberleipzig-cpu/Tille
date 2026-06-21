@@ -1,8 +1,9 @@
 /* Resident ordering controls for Admin v2.
-   Shows residents in JSON order and lets editors move them up/down. */
+   Shows residents in JSON order in the hidden legacy panel, but sidebar subnav is alphabetical. */
 (function(){
   function onReady(fn){document.readyState==='loading'?document.addEventListener('DOMContentLoaded',fn):fn()}
   function allResidents(){return residents().residents||[]}
+  function alphaResidents(){return allResidents().map((r,i)=>({r,i})).sort((a,b)=>String(a.r.name||'').localeCompare(String(b.r.name||''),'de',{sensitivity:'base'}))}
   function moveResident(from,to){
     const list=allResidents();
     if(from<0||from>=list.length||to<0||to>=list.length)return;
@@ -55,10 +56,6 @@
     renderResidentForm();
     renderStats();
   }
-  function newResidentFromSidebar(){
-    if(typeof newResident==='function')newResident();
-    renderResidentsSidebarList();
-  }
   function renderResidentsSidebarList(){
     const box=ensureSidebarBox();
     const view=$('view-residents');
@@ -67,12 +64,9 @@
     box.classList.toggle('hidden',!isActive);
     if(view)view.classList.toggle('residents-sidebar-mode',isActive);
     if(!isActive)return;
-    const list=allResidents();
-    box.innerHTML='<div class="residents-sidebar-title">Residents</div><div class="residents-sidebar-tools"><button class="tool" id="sidebarNewResidentBtn">+ Resident</button></div>'+list.map((r,i)=>'<div class="residents-sidebar-item"><button class="residents-sidebar-main '+(i===state.selectedResident?'active':'')+'" data-sidebar-resident="'+i+'"><strong>'+esc(r.name||'Ohne Name')+'</strong><span>'+esc(r.city||'')+(r.genre?' · '+esc(r.genre):'')+'</span></button><div class="residents-sidebar-actions"><button class="tool" data-sidebar-resident-move="'+i+':-1" title="Nach oben">↑</button><button class="tool" data-sidebar-resident-move="'+i+':1" title="Nach unten">↓</button></div></div>').join('')||'<p class="muted">Keine Residents.</p>';
-    const add=$('sidebarNewResidentBtn');
-    if(add)add.onclick=newResidentFromSidebar;
+    const list=alphaResidents();
+    box.innerHTML=list.map(({r,i})=>'<button class="residents-sidebar-main '+(i===state.selectedResident?'active':'')+'" data-sidebar-resident="'+i+'">'+esc(r.name||'Ohne Name')+'</button>').join('')||'<p class="muted">Keine Residents.</p>';
     document.querySelectorAll('[data-sidebar-resident]').forEach(b=>b.onclick=()=>selectResident(Number(b.dataset.sidebarResident)));
-    document.querySelectorAll('[data-sidebar-resident-move]').forEach(b=>b.onclick=e=>{e.stopPropagation();const parts=b.dataset.sidebarResidentMove.split(':').map(Number);moveResident(parts[0],parts[0]+parts[1])});
   }
   onReady(()=>{
     window.renderResidentList=renderResidentList=renderOrderedResidentList;
