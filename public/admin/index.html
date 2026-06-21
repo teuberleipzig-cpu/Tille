@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Distillery Admin v2</title>
 <link rel="stylesheet" href="./css/admin.css">
+<link rel="stylesheet" href="./css/events-meta.css">
 </head>
 <body>
 <div class="app">
@@ -19,4 +20,5 @@
 <section id="view-settings" class="hidden"><div class="card"><div class="head"><div class="title"><span class="icon">S</span><h2>GitHub Einstellungen</h2></div></div><div class="notice warn">Workflow: erst GitHub laden, dann bearbeiten, dann speichern. Bei SHA-Konflikt wird blockiert. Große JSON-Dateien werden automatisch über Raw-Fallback geladen.</div><div class="sync-grid" style="margin-top:16px"><div class="field"><label class="label">Owner</label><input class="input" id="ghOwner" value="teuberleipzig-cpu"></div><div class="field"><label class="label">Repo</label><input class="input" id="ghRepo" value="Tille"></div><div class="field"><label class="label">Branch</label><input class="input" id="ghBranch" value="main"></div><div class="field"><label class="label">GitHub Token</label><input class="input" id="ghToken" type="password" autocomplete="off" placeholder="Token"></div><div class="field full"><label class="label">Events-Dateipfad</label><input class="input" id="eventsPath" value="public/events/data/events.json"></div><div class="field full"><label class="label">Residents-Dateipfad</label><input class="input" id="residentsPath" value="public/residents/data/residents.json"></div><label class="checkline field full"><input id="allowEventLoss" type="checkbox"><span>Ich bestätige bewusst, dass weniger Events gespeichert werden dürfen.</span></label><label class="checkline field full"><input id="allowResidentLoss" type="checkbox"><span>Ich bestätige bewusst, dass weniger Residents gespeichert werden dürfen.</span></label></div><div class="tools" style="margin-top:16px"><button class="btn" id="loadEventsGitBtn">Events laden</button><button class="btn primary" id="saveEventsGitBtn">Events speichern</button><button class="btn" id="loadResidentsGitBtn">Residents laden</button><button class="btn primary" id="saveResidentsGitBtn2">Residents speichern</button></div><p id="syncStatus" class="status muted">Noch nicht geladen.</p></div><div class="card"><div class="head"><div class="title"><span class="icon">↗</span><h2>Legacy Admins</h2></div></div><div class="legacy-links"><a class="btn" href="../events/events-createandedit.html">Events Legacy</a><a class="btn" href="../residents/residents-createandedit.html">Residents Legacy</a><a class="btn" href="../residents/releases-createandedit.html">Releases Legacy</a></div></div></section>
 </main></div>
 <script src="./github-sync.js"></script>
-<script src="./js/admin-app.js"></script></body></html>
+<script src="./js/admin-app.js"></script>
+<script src="./js/events-meta.js"></script></body></html>
