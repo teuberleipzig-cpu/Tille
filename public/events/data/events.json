@@ -15,9 +15,14 @@
         "link": "https://soundcloud.com/submod"
       },
       {
-        "name": "dd123",
+        "name": "abc",
         "info": "abab",
         "link": "ababab"
+      },
+      {
+        "name": "Neuer Artist",
+        "info": "",
+        "link": ""
       }
     ]
   },
