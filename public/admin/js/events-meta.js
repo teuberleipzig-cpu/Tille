@@ -198,6 +198,7 @@
     injectMetaUi();
     installJsonTools();
     installStrictArtistOffer();
+    loadExtraExtension(null,'./js/save-status-ux.js?v=status-ux-1');
     loadExtraExtension('./css/residents-news.css','./js/residents-news.js');
 
     const originalEnsureEvents=ensureEvents;
