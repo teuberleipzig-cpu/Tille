@@ -1,3 +1,4 @@
 @import url('./admin-brutalism-test.css?v=ux2');
+@import url('./admin-ux-fixes.css?v=ux1');
 .small-textarea{min-height:48px;resize:vertical}.meta-textarea{min-height:120px;resize:vertical}
 .brand{display:block!important;width:190px!important;height:56px!important;background:url('../../../assets/tille%20black.jpg') left center/contain no-repeat!important;margin:0!important}.brand-mark,.brand-title{display:none!important}
