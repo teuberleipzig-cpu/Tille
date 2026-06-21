@@ -1,0 +1,18 @@
+/* Equal side spacing for the event list filter controls. */
+#view-events .panel .filter-grid{
+  width:calc(100% - 20px)!important;
+  margin-left:10px!important;
+  margin-right:10px!important;
+  padding:0!important;
+  box-sizing:border-box!important;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+}
+#view-events .panel .filter-grid .field{min-width:0!important}
+#view-events .panel .filter-grid .field.full{grid-column:1 / -1!important}
+#view-events .panel .filter-grid .input,
+#view-events .panel .filter-grid .select{
+  width:100%!important;
+  min-width:0!important;
+  max-width:100%!important;
+  box-sizing:border-box!important;
+}
