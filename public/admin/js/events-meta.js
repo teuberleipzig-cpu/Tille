@@ -160,10 +160,44 @@
     }
   }
 
+  function installStrictArtistOffer(){
+    window.offerArtistSave=offerArtistSave=function(input){
+      readEventForm();
+      const key=input?.dataset?.artistName||input?.dataset?.artistInfo||input?.dataset?.artistLink;
+      if(!key||!currentEvent()) return;
+      const parts=key.split(':').map(Number);
+      const item=currentEvent().sections?.[parts[0]]?.items?.[parts[1]];
+      if(!item) return;
+      const name=String(item.name||'').trim();
+      const info=String(item.info||'').trim();
+      const link=String(item.link||'').trim();
+      if(!name||!info||!link) return;
+
+      const existing=artists().find(a=>norm(a.name)===norm(name));
+      if(existing && String(existing.info||'').trim()===info && String(existing.link||'').trim()===link) return;
+
+      if(existing){
+        if(!confirm('Artist "'+name+'" existiert schon, aber Info/Link unterscheiden sich. Artistliste aktualisieren?')) return;
+        existing.info=info;
+        existing.link=link;
+        setStatus('eventEditStatus','Artistliste für '+name+' aktualisiert.','ok');
+      }else{
+        if(!confirm('Artist "'+name+'" mit Info und Link in die Artistliste aufnehmen?')) return;
+        artists().push({name,info,link});
+        state.selectedArtist=artists().length-1;
+        setStatus('eventEditStatus','Artist '+name+' in die Artistliste aufgenommen.','ok');
+      }
+      markDirty();
+      renderArtists();
+      renderEventsJson();
+    };
+  }
+
   onReady(()=>{
     installEventSortDefault();
     injectMetaUi();
     installJsonTools();
+    installStrictArtistOffer();
     loadExtraExtension('./css/residents-news.css','./js/residents-news.js');
 
     const originalEnsureEvents=ensureEvents;
@@ -177,6 +211,7 @@
       injectMetaUi();
       originalRenderEventForm();
       renderEventMeta();
+      installStrictArtistOffer();
     };
 
     const originalReadEventForm=readEventForm;
