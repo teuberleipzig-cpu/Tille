@@ -1,5 +1,6 @@
 /* Small UX fixes on top of the temporary brutalism style. CSS only. */
 .page-title{gap:16px!important;column-gap:16px!important;align-items:center!important}
 #saveStatus{margin-left:10px!important;transform:translateY(-1px)!important}
-.sidebar .nav-btn[data-view="events"]{font-size:0!important}
-.sidebar .nav-btn[data-view="events"]::after{content:"Basisdaten";font-size:16px!important;line-height:1.2!important;font-weight:900!important;color:inherit!important}
+.sidebar .nav-btn[data-view="events"]{display:block!important;grid-template-columns:1fr!important;font-size:0!important;text-align:left!important;padding-left:10px!important;margin-left:0!important}
+.sidebar .nav-btn[data-view="events"]>*{display:none!important}
+.sidebar .nav-btn[data-view="events"]::after{content:"Basisdaten";display:block!important;font-size:16px!important;line-height:1.2!important;font-weight:900!important;color:inherit!important;margin:0!important;padding:0!important}
