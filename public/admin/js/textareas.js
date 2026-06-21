@@ -22,6 +22,35 @@
       to.setAttribute(attr.name,attr.value);
     });
   }
+  function bindConvertedTextarea(textarea){
+    if(!textarea || textarea.dataset.autoTextareaBound==='1') return;
+    textarea.dataset.autoTextareaBound='1';
+    textarea.addEventListener('input',()=>{
+      try{
+        if(textarea.closest('#view-events')){
+          readEventForm();
+          markDirty();
+          updateEditorHeader();
+          renderEventList();
+          renderPreview();
+          renderEventsJson();
+        }else if(textarea.closest('#view-artists')){
+          readArtistForm();
+          markDirty();
+          renderArtists();
+        }else if(textarea.closest('#view-residents')){
+          readResidentForm();
+          markDirty();
+          renderResidentList();
+          renderStats();
+        }else{
+          markDirty();
+        }
+      }catch(e){
+        console.warn('Textarea update failed',e);
+      }
+    });
+  }
   function convertInput(input){
     if(!shouldConvert(input)) return null;
     const textarea=document.createElement('textarea');
@@ -31,11 +60,15 @@
     textarea.className=(input.className||'input')+' auto-textarea';
     if(input.id && /bio|description|embeds|presskit|image|url|link/i.test(input.id)) textarea.classList.add('medium');
     input.replaceWith(textarea);
-    textarea.dispatchEvent(new Event('input',{bubbles:true}));
+    bindConvertedTextarea(textarea);
     return textarea;
+  }
+  function bindExistingTextareas(){
+    document.querySelectorAll('textarea.auto-textarea').forEach(bindConvertedTextarea);
   }
   function convertAllTextInputs(){
     document.querySelectorAll('input.input').forEach(convertInput);
+    bindExistingTextareas();
   }
   onReady(()=>{
     convertAllTextInputs();
