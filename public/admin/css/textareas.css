@@ -1,1 +1,1 @@
-.auto-textarea{min-height:48px;resize:vertical;white-space:pre-wrap}.auto-textarea.medium{min-height:88px}.auto-textarea.large{min-height:140px}
+.auto-textarea,.editor textarea,#view-events textarea,#view-artists textarea,#view-residents textarea,#view-releases textarea{min-height:44px;height:44px;resize:none;overflow:hidden;white-space:pre-wrap}.auto-textarea.medium,.auto-textarea.large,.textarea,.large-textarea,.resident-embeds-textarea,.meta-textarea{min-height:44px;height:44px}
