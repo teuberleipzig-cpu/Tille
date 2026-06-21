@@ -105,7 +105,7 @@
     loadExtraExtension('./css/releases-admin.css','./js/releases-core.js');
     loadExtraExtension(null,'./js/releases-extra.js');
     loadExtraExtension('./css/github-media.css','./js/github-media.js');
-    loadExtraExtension(null,'./js/auto-github-load.js?v=debug-save-1');
+    loadExtraExtension(null,'./js/auto-github-load.js?v=debug-save-2');
     loadExtraExtension('./css/residents-order.css','./js/residents-order.js');
     loadExtraExtension('./css/releases-workflow.css','./js/releases-workflow.js');
     const originalEnsureResidents=ensureResidents;
