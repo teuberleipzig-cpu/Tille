@@ -135,9 +135,25 @@
     download.before(refresh,copy);
   }
 
+  function loadExtraExtension(cssPath,jsPath){
+    if(cssPath && !document.querySelector('link[href="'+cssPath+'"]')){
+      const link=document.createElement('link');
+      link.rel='stylesheet';
+      link.href=cssPath;
+      document.head.appendChild(link);
+    }
+    if(jsPath && !document.querySelector('script[src="'+jsPath+'"]')){
+      const script=document.createElement('script');
+      script.src=jsPath;
+      script.defer=true;
+      document.body.appendChild(script);
+    }
+  }
+
   onReady(()=>{
     injectMetaUi();
     installJsonTools();
+    loadExtraExtension('./css/residents-news.css','./js/residents-news.js');
 
     const originalEnsureEvents=ensureEvents;
     window.ensureEvents=ensureEvents=function(){
