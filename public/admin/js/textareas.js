@@ -1,4 +1,4 @@
-/* Converts normal text inputs in editor areas to textareas so line breaks and blank lines work consistently. */
+/* Converts normal text inputs in editor areas to textareas and auto-resizes all textareas from one line. */
 (function(){
   function onReady(fn){
     if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',fn);
@@ -14,7 +14,12 @@
     if(input.closest('.topbar')) return false;
     if(input.id==='globalSearch') return false;
     if(input.id==='ghToken') return false;
-    return !!input.closest('.editor') || !!input.closest('.section-card') || !!input.closest('#view-artists') || !!input.closest('#view-residents');
+    return !!input.closest('.editor') || !!input.closest('.section-card') || !!input.closest('#view-artists') || !!input.closest('#view-residents') || !!input.closest('#view-releases');
+  }
+  function autoResize(el){
+    if(!el || el.classList.contains('media-hidden-url')) return;
+    el.style.height='44px';
+    el.style.height=Math.max(44,el.scrollHeight)+'px';
   }
   function cloneAttrs(from,to){
     Array.from(from.attributes).forEach(attr=>{
@@ -23,33 +28,27 @@
     });
   }
   function bindConvertedTextarea(textarea){
-    if(!textarea || textarea.dataset.autoTextareaBound==='1') return;
-    textarea.dataset.autoTextareaBound='1';
-    textarea.addEventListener('input',()=>{
-      try{
-        if(textarea.closest('#view-events')){
-          readEventForm();
-          markDirty();
-          updateEditorHeader();
-          renderEventList();
-          renderPreview();
-          renderEventsJson();
-        }else if(textarea.closest('#view-artists')){
-          readArtistForm();
-          markDirty();
-          renderArtists();
-        }else if(textarea.closest('#view-residents')){
-          readResidentForm();
-          markDirty();
-          renderResidentList();
-          renderStats();
-        }else{
-          markDirty();
-        }
-      }catch(e){
-        console.warn('Textarea update failed',e);
-      }
-    });
+    if(!textarea) return;
+    if(textarea.dataset.autoTextareaBound!=='1'){
+      textarea.dataset.autoTextareaBound='1';
+      textarea.addEventListener('input',()=>{
+        autoResize(textarea);
+        try{
+          if(textarea.closest('#view-events')){
+            readEventForm();markDirty();updateEditorHeader();renderEventList();renderPreview();renderEventsJson();
+          }else if(textarea.closest('#view-artists')){
+            readArtistForm();markDirty();renderArtists();
+          }else if(textarea.closest('#view-residents')){
+            readResidentForm();markDirty();renderResidentList();renderStats();
+          }else if(textarea.closest('#view-releases')){
+            markDirty();
+          }else{
+            markDirty();
+          }
+        }catch(e){console.warn('Textarea update failed',e);}
+      });
+    }
+    requestAnimationFrame(()=>autoResize(textarea));
   }
   function convertInput(input){
     if(!shouldConvert(input)) return null;
@@ -58,13 +57,12 @@
     textarea.value=input.value||'';
     textarea.dataset.textareaConverted='1';
     textarea.className=(input.className||'input')+' auto-textarea';
-    if(input.id && /bio|description|embeds|presskit|image|url|link/i.test(input.id)) textarea.classList.add('medium');
     input.replaceWith(textarea);
     bindConvertedTextarea(textarea);
     return textarea;
   }
   function bindExistingTextareas(){
-    document.querySelectorAll('textarea.auto-textarea').forEach(bindConvertedTextarea);
+    document.querySelectorAll('#view-events textarea,#view-artists textarea,#view-residents textarea,#view-releases textarea,.editor textarea').forEach(bindConvertedTextarea);
   }
   function convertAllTextInputs(){
     document.querySelectorAll('input.input').forEach(convertInput);
@@ -73,24 +71,13 @@
   onReady(()=>{
     convertAllTextInputs();
     const originalRenderAll=renderAll;
-    window.renderAll=renderAll=function(){
-      originalRenderAll();
-      convertAllTextInputs();
-    };
+    window.renderAll=renderAll=function(){originalRenderAll();convertAllTextInputs();};
     const originalRenderEventForm=renderEventForm;
-    window.renderEventForm=renderEventForm=function(){
-      originalRenderEventForm();
-      convertAllTextInputs();
-    };
+    window.renderEventForm=renderEventForm=function(){originalRenderEventForm();convertAllTextInputs();};
     const originalRenderResidentForm=renderResidentForm;
-    window.renderResidentForm=renderResidentForm=function(){
-      originalRenderResidentForm();
-      convertAllTextInputs();
-    };
+    window.renderResidentForm=renderResidentForm=function(){originalRenderResidentForm();convertAllTextInputs();};
     const originalRenderArtists=renderArtists;
-    window.renderArtists=renderArtists=function(){
-      originalRenderArtists();
-      convertAllTextInputs();
-    };
+    window.renderArtists=renderArtists=function(){originalRenderArtists();convertAllTextInputs();};
+    setInterval(bindExistingTextareas,1000);
   });
 })();
