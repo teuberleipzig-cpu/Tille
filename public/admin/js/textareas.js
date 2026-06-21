@@ -4,6 +4,10 @@
     if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',fn);
     else fn();
   }
+  function isLinkField(el){
+    const id=String(el?.id||''),name=String(el?.name||''),ph=String(el?.placeholder||'');
+    return /url|link|instagram|soundcloud|bandcamp|discogs|booking|residentadvisor|ra/i.test(id+' '+name+' '+ph);
+  }
   function shouldConvert(input){
     if(!input || input.tagName!=='INPUT') return false;
     if(input.dataset.keepInput==='1' || input.dataset.textareaConverted==='1') return false;
@@ -18,6 +22,11 @@
   }
   function autoResize(el){
     if(!el || el.classList.contains('media-hidden-url')) return;
+    if(isLinkField(el) || el.classList.contains('link-textarea')){
+      el.classList.add('link-textarea');
+      el.style.height='44px';
+      return;
+    }
     el.style.height='44px';
     el.style.height=Math.max(44,el.scrollHeight)+'px';
   }
@@ -29,8 +38,12 @@
   }
   function bindConvertedTextarea(textarea){
     if(!textarea) return;
+    if(isLinkField(textarea)) textarea.classList.add('link-textarea');
     if(textarea.dataset.autoTextareaBound!=='1'){
       textarea.dataset.autoTextareaBound='1';
+      textarea.addEventListener('keydown',e=>{
+        if(e.key===' ' || e.key==='Enter') e.stopPropagation();
+      });
       textarea.addEventListener('input',()=>{
         autoResize(textarea);
         try{
@@ -57,6 +70,7 @@
     textarea.value=input.value||'';
     textarea.dataset.textareaConverted='1';
     textarea.className=(input.className||'input')+' auto-textarea';
+    if(isLinkField(input)) textarea.classList.add('link-textarea');
     input.replaceWith(textarea);
     bindConvertedTextarea(textarea);
     return textarea;
