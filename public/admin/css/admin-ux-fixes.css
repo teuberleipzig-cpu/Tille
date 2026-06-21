@@ -4,3 +4,8 @@
 .sidebar .nav-btn[data-view="events"]{display:block!important;grid-template-columns:1fr!important;font-size:0!important;text-align:left!important;padding-left:10px!important;margin-left:0!important}
 .sidebar .nav-btn[data-view="events"]>*{display:none!important}
 .sidebar .nav-btn[data-view="events"]::after{content:"Basisdaten";display:block!important;font-size:16px!important;line-height:1.2!important;font-weight:900!important;color:inherit!important;margin:0!important;padding:0!important}
+#view-events .section-card,#view-events .section-body,#view-events .artist-row,#view-events .suggest-box{overflow:visible!important}
+#view-events .section-card{position:relative!important;z-index:1!important}
+#view-events .artist-row:focus-within{position:relative!important;z-index:1000!important}
+#view-events .suggest-box{position:relative!important;z-index:1001!important}
+#view-events .suggestions{position:absolute!important;z-index:9999!important;top:calc(100% + 2px)!important;left:0!important;right:0!important;background:#fff!important;border:1px solid #0B0704!important;box-shadow:6px 6px 0 rgba(11,7,4,.18)!important;max-height:260px!important;overflow:auto!important}
