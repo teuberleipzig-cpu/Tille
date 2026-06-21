@@ -4,6 +4,20 @@
     if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',fn);
     else fn();
   }
+  function loadExtraExtension(cssPath,jsPath){
+    if(cssPath && !document.querySelector('link[href="'+cssPath+'"]')){
+      const link=document.createElement('link');
+      link.rel='stylesheet';
+      link.href=cssPath;
+      document.head.appendChild(link);
+    }
+    if(jsPath && !document.querySelector('script[src="'+jsPath+'"]')){
+      const script=document.createElement('script');
+      script.src=jsPath;
+      script.defer=true;
+      document.body.appendChild(script);
+    }
+  }
   function today(){return new Date().toISOString().slice(0,10)}
   function normalizeNews(r){
     if(!r) return [];
@@ -86,6 +100,7 @@
   }
   onReady(()=>{
     injectResidentsNewsUi();
+    loadExtraExtension('./css/residents-media.css','./js/residents-media.js');
     const originalEnsureResidents=ensureResidents;
     window.ensureResidents=ensureResidents=function(){originalEnsureResidents();(residents().residents||[]).forEach(normalizeNews);};
     const originalRenderResidentForm=renderResidentForm;
