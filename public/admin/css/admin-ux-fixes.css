@@ -9,3 +9,5 @@
 #view-events .artist-row:focus-within{position:relative!important;z-index:1000!important}
 #view-events .suggest-box{position:relative!important;z-index:1001!important}
 #view-events .suggestions{position:absolute!important;z-index:9999!important;top:calc(100% + 2px)!important;left:0!important;right:0!important;background:#fff!important;border:1px solid #0B0704!important;box-shadow:6px 6px 0 rgba(11,7,4,.18)!important;max-height:260px!important;overflow:auto!important}
+#view-events .panel .filter-grid{padding-right:10px!important;box-sizing:border-box!important}
+#view-events .panel .filter-grid .input,#view-events .panel .filter-grid .select{box-sizing:border-box!important;max-width:100%!important}
