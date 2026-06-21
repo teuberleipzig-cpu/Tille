@@ -102,6 +102,7 @@
     injectResidentsNewsUi();
     loadExtraExtension('./css/residents-media.css','./js/residents-media.js');
     loadExtraExtension('./css/textareas.css','./js/textareas.js');
+    loadExtraExtension('./css/releases-admin.css','./js/releases-core.js');
     const originalEnsureResidents=ensureResidents;
     window.ensureResidents=ensureResidents=function(){originalEnsureResidents();(residents().residents||[]).forEach(normalizeNews);};
     const originalRenderResidentForm=renderResidentForm;
