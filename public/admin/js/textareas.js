@@ -5,8 +5,16 @@
     else fn();
   }
   function isLinkField(el){
-    const id=String(el?.id||''),name=String(el?.name||''),ph=String(el?.placeholder||'');
-    return /url|link|instagram|soundcloud|bandcamp|discogs|booking|residentadvisor|ra/i.test(id+' '+name+' '+ph);
+    if(!el) return false;
+    const id=String(el.id||'');
+    if(el.dataset && Object.prototype.hasOwnProperty.call(el.dataset,'artistLink')) return true;
+    const exactIds=new Set([
+      'evMoreUrl','evImageUrl','artistLink',
+      'resInstagram','resSoundcloud','resRA','resDiscogs','resBandcamp','resBooking','resPresskit',
+      'rCover','rDiscogs','rBeatport','rBandcamp','rLabelUrl'
+    ]);
+    if(exactIds.has(id)) return true;
+    return /Url$|URL$|Link$/.test(id);
   }
   function raw(id){return $(id)?.value??''}
   function url(id){return String($(id)?.value??'').trim()}
@@ -25,10 +33,11 @@
   function autoResize(el){
     if(!el || el.classList.contains('media-hidden-url')) return;
     if(isLinkField(el) || el.classList.contains('link-textarea')){
-      el.classList.add('link-textarea');
+      if(isLinkField(el)) el.classList.add('link-textarea');
       el.style.height='44px';
       return;
     }
+    el.classList.remove('link-textarea');
     el.style.height='44px';
     el.style.height=Math.max(44,el.scrollHeight)+'px';
   }
@@ -84,6 +93,7 @@
   function bindConvertedTextarea(textarea){
     if(!textarea) return;
     if(isLinkField(textarea)) textarea.classList.add('link-textarea');
+    else textarea.classList.remove('link-textarea');
     if(textarea.dataset.autoTextareaBound!=='1'){
       textarea.dataset.autoTextareaBound='1';
       textarea.addEventListener('keydown',e=>{
