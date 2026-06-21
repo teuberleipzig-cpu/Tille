@@ -3,6 +3,7 @@
 (function(){
   function onReady(fn){document.readyState==='loading'?document.addEventListener('DOMContentLoaded',fn):fn()}
   function allResidents(){return residents().residents||[]}
+  function alphaResidents(){return allResidents().map((r,i)=>({r,i})).sort((a,b)=>String(a.r.name||'').localeCompare(String(b.r.name||''),'de',{sensitivity:'base'}))}
   function selectedResident(){return allResidents()[state.releaseResidentIndex||0]||null}
   function releaseList(r){if(!r)return[];if(!Array.isArray(r.releases))r.releases=[];return r.releases}
   function selectedRelease(){return releaseList(selectedResident())[state.releaseIndex||0]||null}
@@ -76,7 +77,7 @@
     if(!box){box=document.createElement('div');box.id='releaseSidebarArtists';box.className='release-sidebar-artists';btn.insertAdjacentElement('afterend',box)}
     box.classList.toggle('hidden',state.view!=='releases');
     if(state.view!=='releases')return;
-    box.innerHTML='<div class="release-sidebar-title">Artists</div>'+allResidents().map((r,i)=>'<button class="release-sidebar-artist '+(i===(state.releaseResidentIndex||0)?'active':'')+'" data-release-sidebar-artist="'+i+'"><strong>'+esc(r.name||'Ohne Name')+'</strong><span>'+releaseList(r).length+' Releases</span></button>').join('');
+    box.innerHTML=alphaResidents().map(({r,i})=>'<button class="release-sidebar-artist '+(i===(state.releaseResidentIndex||0)?'active':'')+'" data-release-sidebar-artist="'+i+'">'+esc(r.name||'Ohne Name')+'</button>').join('');
     document.querySelectorAll('[data-release-sidebar-artist]').forEach(b=>b.onclick=()=>{state.releaseResidentIndex=Number(b.dataset.releaseSidebarArtist);state.releaseIndex=0;setView('releases');renderWorkflow()});
   }
   function inject(){
