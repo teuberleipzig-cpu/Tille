@@ -84,20 +84,14 @@
       try{status(st,'Lade Eventbild nach GitHub...','warn');readEventForm();const e=currentEvent();if(!e)throw new Error('Kein Event ausgewählt.');const folder=slugText((e.date||'event')+'-'+(e.title||e.id||'event'));const path='public/events/media/'+folder+'/'+uniqueName('event');const url=await uploadImage(file,path,16/9,1600,900);setFieldValue('evImageUrl',url);readEventForm();markDirty();renderPreview();if($('eventImagePreview'))$('eventImagePreview').src=url;status(st,'Hochgeladen: '+url,'ok')}catch(err){status(st,err.message,'err')}},'image/*');
     panel.prepend(zone);
   }
-  function enhanceResidentPortrait(){
-    const panel=$('resident-tab-media');if(!panel||$('residentPortraitGithubDrop'))return;
-    hideFieldFor('resImage');
-    const zone=makeDropzone('residentPortraitGithubDrop','Portraitbild hier ablegen','Wird nach GitHub hochgeladen und als Portrait-Pfad gespeichert.',async(file,st)=>{
-      try{status(st,'Lade Portrait nach GitHub...','warn');readResidentForm();const r=currentResident();if(!r)throw new Error('Kein Resident ausgewählt.');const path='public/residents/media/'+residentFolder(r)+'/portrait/'+uniqueName('portrait');const url=await uploadImage(file,path,1,1000,1000);setFieldValue('resImage',url);readResidentForm();markDirty();renderResidentList();status(st,'Hochgeladen: '+url,'ok')}catch(err){status(st,err.message,'err')}},'image/*');
-    panel.prepend(zone);
-  }
+  function hideResidentPortrait(){hideFieldFor('resImage');const old=$('residentPortraitGithubDrop');if(old)old.remove()}
   function enhanceResidentPresskit(){
     const panel=$('resident-tab-media');if(!panel||$('residentPresskitGithubDrop'))return;
     hideFieldFor('resPresskit');
     const zone=makeDropzone('residentPresskitGithubDrop','Presskit hier ablegen','PDF oder ZIP wird nach GitHub hochgeladen und als Pfad gespeichert.',async(file,st)=>{
       try{status(st,'Lade Presskit nach GitHub...','warn');readResidentForm();const r=currentResident();if(!r)throw new Error('Kein Resident ausgewählt.');const ext=fileExt(file,'zip');const path='public/residents/media/'+residentFolder(r)+'/presskit/'+uniqueName('presskit',ext);const url=await uploadRawFile(file,path);setFieldValue('resPresskit',url);readResidentForm();markDirty();status(st,'Hochgeladen: '+url,'ok')}catch(err){status(st,err.message,'err')}},'.pdf,.zip,application/pdf,application/zip,application/x-zip-compressed');
-    const photos=$('residentPhotosGithubDrop');
-    if(photos)photos.before(zone);else panel.appendChild(zone);
+    const slot=$('residentPresskitSlot');
+    if(slot)slot.appendChild(zone);else panel.appendChild(zone);
   }
   function enhanceResidentPhotos(){
     const panel=$('resident-tab-media');if(!panel)return;
@@ -105,10 +99,10 @@
     const oldUpload=$('uploadResidentPhotoBtn');if(oldUpload)oldUpload.classList.add('media-hidden-url');
     document.querySelectorAll('[data-photo-url]').forEach(el=>el.classList.add('media-hidden-url'));
     if($('residentPhotosGithubDrop'))return;
-    const list=$('residentPhotosList');
-    const zone=makeDropzone('residentPhotosGithubDrop','Resident-Foto hier ablegen','Wird nach GitHub hochgeladen und der Fotoliste hinzugefügt.',async(file,st)=>{
+    const slot=$('residentPhotosDropSlot'),list=$('residentPhotosList');
+    const zone=makeDropzone('residentPhotosGithubDrop','Bild hier ablegen','Wird nach GitHub hochgeladen und der Fotoliste hinzugefügt.',async(file,st)=>{
       try{status(st,'Lade Foto nach GitHub...','warn');readResidentForm();const r=currentResident();if(!r)throw new Error('Kein Resident ausgewählt.');const path='public/residents/media/'+residentFolder(r)+'/photos/'+uniqueName('photo');const url=await uploadImage(file,path,16/9,1600,900);photosFor(r).push({url});markDirty();renderResidentForm();status(st,'Hochgeladen: '+url,'ok')}catch(err){status(st,err.message,'err')}},'image/*');
-    if(list)list.before(zone);else panel.appendChild(zone);
+    if(slot)slot.appendChild(zone);else if(list)list.before(zone);else panel.appendChild(zone);
   }
   function enhanceReleaseCover(){
     const field=$('rCover');if(!field)return;
@@ -121,6 +115,6 @@
     }
     const oldUpload=$('relCoverUploadBtn');if(oldUpload)oldUpload.classList.add('media-hidden-url');
   }
-  function enhanceAllMediaUploads(){enhanceEventImage();enhanceResidentPortrait();enhanceResidentPresskit();enhanceResidentPhotos();enhanceReleaseCover()}
+  function enhanceAllMediaUploads(){enhanceEventImage();hideResidentPortrait();enhanceResidentPresskit();enhanceResidentPhotos();enhanceReleaseCover()}
   onReady(()=>{setInterval(enhanceAllMediaUploads,700);enhanceAllMediaUploads()});
 })();
