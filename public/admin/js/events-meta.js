@@ -6,6 +6,16 @@
     else fn();
   }
 
+  function installEventSortDefault(){
+    const sort=$('eventSort');
+    if(!sort) return;
+    if(sort.dataset.eventSortDefaultBound!=='1'){
+      sort.dataset.eventSortDefaultBound='1';
+      sort.addEventListener('change',()=>{sort.dataset.userTouched='1';});
+    }
+    if(sort.dataset.userTouched!=='1') sort.value='desc';
+  }
+
   function ensureMetaShape(){
     const d=events();
     d.meta ||= {};
@@ -151,6 +161,7 @@
   }
 
   onReady(()=>{
+    installEventSortDefault();
     injectMetaUi();
     installJsonTools();
     loadExtraExtension('./css/residents-news.css','./js/residents-news.js');
