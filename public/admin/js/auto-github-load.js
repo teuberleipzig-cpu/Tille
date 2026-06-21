@@ -6,21 +6,22 @@
   function apiPath(path){return String(path||'').split('/').map(encodeURIComponent).join('/')}
   function rawPath(path){return String(path||'').split('/').map(encodeURIComponent).join('/')}
   function apiUrl(path){return 'https://api.github.com/repos/'+encodeURIComponent(val('ghOwner'))+'/'+encodeURIComponent(val('ghRepo'))+'/contents/'+apiPath(path)+'?ref='+encodeURIComponent(val('ghBranch'))+'&t='+Date.now()}
+  function apiPutUrl(path){return 'https://api.github.com/repos/'+encodeURIComponent(val('ghOwner'))+'/'+encodeURIComponent(val('ghRepo'))+'/contents/'+apiPath(path)}
   function rawUrl(path){return 'https://raw.githubusercontent.com/'+encodeURIComponent(val('ghOwner'))+'/'+encodeURIComponent(val('ghRepo'))+'/'+encodeURIComponent(val('ghBranch'))+'/'+rawPath(path)+'?t='+Date.now()}
   function localUrl(path){return '../../'+String(path||'').replace(/^public\//,'')+'?t='+Date.now()}
   function publicHeaders(){const h={Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'};const token=val('ghToken');if(token){h.Authorization='Bearer '+token}return h}
+  function writeHeaders(){return {...publicHeaders(),'Content-Type':'application/json'}}
   function b64DecodeUtf8(str){const bin=atob(String(str||'').replace(/\n/g,''));return new TextDecoder().decode(Uint8Array.from(bin,ch=>ch.charCodeAt(0)))}
+  function b64EncodeUtf8(str){const bytes=new TextEncoder().encode(str);let bin='';for(let i=0;i<bytes.length;i+=32768)bin+=String.fromCharCode.apply(null,bytes.subarray(i,i+32768));return btoa(bin)}
   async function fetchJsonUrl(url){const res=await fetch(url,{cache:'no-store'});const text=await res.text();if(!res.ok)throw new Error('Download fehlgeschlagen: '+res.status);if(!text.trim())throw new Error('JSON-Datei ist leer.');return JSON.parse(text)}
+  async function fetchMeta(path){const res=await fetch(apiUrl(path),{headers:publicHeaders(),cache:'no-store'});const meta=await res.json().catch(()=>({}));if(!res.ok)throw new Error(meta.message||('GitHub Fehler '+res.status));return meta}
   async function loadFile(path){
     try{
-      const res=await fetch(apiUrl(path),{headers:publicHeaders(),cache:'no-store'});
-      const meta=await res.json().catch(()=>({}));
-      if(res.ok){
-        let json;
-        if(meta.content&&meta.content.trim()) json=JSON.parse(b64DecodeUtf8(meta.content));
-        else json=await fetchJsonUrl(meta.download_url||rawUrl(path));
-        return{json,sha:meta.sha||''};
-      }
+      const meta=await fetchMeta(path);
+      let json;
+      if(meta.content&&meta.content.trim()) json=JSON.parse(b64DecodeUtf8(meta.content));
+      else json=await fetchJsonUrl(meta.download_url||rawUrl(path));
+      return{json,sha:meta.sha||''};
     }catch(e){}
     try{return{json:await fetchJsonUrl(rawUrl(path)),sha:''};}catch(e){}
     return{json:await fetchJsonUrl(localUrl(path)),sha:''};
@@ -101,25 +102,79 @@
     if(!val('ghToken')){setStatus(statusId,'Speichern braucht einen GitHub Token. Laden/Bearbeiten geht ohne Token.','err');return true}
     return false;
   }
+  function safeReadEvents(){
+    try{readEventForm()}catch(e){}
+    try{readArtistForm()}catch(e){}
+    ensureEvents();
+  }
+  function safeReadResidents(){
+    try{readResidentForm()}catch(e){}
+    ensureResidents();
+  }
+  async function saveEventsStay(){
+    const currentView=state.view;
+    if(warnSaveNeedsToken('events')) return;
+    try{
+      setStatus('eventEditStatus','Speichere Events / Artists...','warn');
+      safeReadEvents();
+      if(!events().events?.length) throw new Error('Events: events[] ist leer. Speichern abgebrochen.');
+      const remote=await fetchMeta(val('eventsPath'));
+      if(state.eventsSha && remote.sha!==state.eventsSha) throw new Error('Events: GitHub-Datei wurde seit dem Laden verändert. Bitte neu laden.');
+      const body={message:'Update events data from admin v2',content:b64EncodeUtf8(eventsJson()),sha:remote.sha,branch:val('ghBranch')};
+      const res=await fetch(apiPutUrl(val('eventsPath')),{method:'PUT',headers:writeHeaders(),body:JSON.stringify(body)});
+      const out=await res.json().catch(()=>({}));
+      if(!res.ok) throw new Error(out.message||('Events speichern fehlgeschlagen '+res.status));
+      state.eventsSha=out.content?.sha||remote.sha;
+      state.loadedEventCount=events().events.length;
+      state.dirty=false;
+      state.syncState='loaded';
+      updateSaveStatus();
+      setView(currentView||'events');
+      renderAll();
+      setStatus('eventEditStatus','Events / Artists gespeichert.','ok');
+    }catch(e){state.syncState='conflict';updateSaveStatus();setView(currentView||'events');setStatus('eventEditStatus',e.message,'err')}
+  }
+  async function saveResidentsStay(){
+    const currentView=state.view;
+    if(warnSaveNeedsToken('residents')) return;
+    try{
+      setStatus('residentStatus','Speichere Residents...','warn');
+      safeReadResidents();
+      if(!residents().residents?.length) throw new Error('Residents: residents[] ist leer. Speichern abgebrochen.');
+      const remote=await fetchMeta(val('residentsPath'));
+      if(state.residentsSha && remote.sha!==state.residentsSha) throw new Error('Residents: GitHub-Datei wurde seit dem Laden verändert. Bitte neu laden.');
+      const body={message:'Update residents data from admin v2',content:b64EncodeUtf8(residentsJson()),sha:remote.sha,branch:val('ghBranch')};
+      const res=await fetch(apiPutUrl(val('residentsPath')),{method:'PUT',headers:writeHeaders(),body:JSON.stringify(body)});
+      const out=await res.json().catch(()=>({}));
+      if(!res.ok) throw new Error(out.message||('Residents speichern fehlgeschlagen '+res.status));
+      state.residentsSha=out.content?.sha||remote.sha;
+      state.loadedResidentCount=residents().residents.length;
+      state.dirty=false;
+      state.syncState='loaded';
+      updateSaveStatus();
+      setView(currentView||'residents');
+      renderAll();
+      setStatus('residentStatus','Residents gespeichert.','ok');
+    }catch(e){state.syncState='conflict';updateSaveStatus();setView(currentView||'residents');setStatus('residentStatus',e.message,'err')}
+  }
   function rebindButtons(){
     window.loadEventsFromGithub=loadEventsPublic;
     window.loadResidentsFromGithub=loadResidentsPublic;
+    window.saveEventsToGithub=saveEventsStay;
+    window.saveResidentsToGithub=saveResidentsStay;
     const topLoad=$('topLoadBtn');if(topLoad)topLoad.onclick=()=>state.view==='residents'||state.view==='releases'?loadResidentsPublic():loadEventsPublic();
     const loadEv=$('loadEventsGitBtn');if(loadEv)loadEv.onclick=loadEventsPublic;
     const loadRes=$('loadResidentsGitBtn');if(loadRes)loadRes.onclick=loadResidentsPublic;
-    const originalSaveEvents=window.saveEventsToGithub;
-    const originalSaveResidents=window.saveResidentsToGithub;
-    if(originalSaveEvents){window.saveEventsToGithub=async()=>{if(warnSaveNeedsToken('events'))return;return originalSaveEvents()}}
-    if(originalSaveResidents){window.saveResidentsToGithub=async()=>{if(warnSaveNeedsToken('residents'))return;return originalSaveResidents()}}
-    const evSave=$('eventSaveBtn');if(evSave)evSave.onclick=window.saveEventsToGithub;
-    const artistSave=$('saveArtistsGitBtn');if(artistSave)artistSave.onclick=window.saveEventsToGithub;
-    const topSave=$('topSaveBtn');if(topSave)topSave.onclick=()=>state.view==='residents'||state.view==='releases'?window.saveResidentsToGithub():window.saveEventsToGithub();
-    const evSettingsSave=$('saveEventsGitBtn');if(evSettingsSave)evSettingsSave.onclick=window.saveEventsToGithub;
-    const resSettingsSave=$('saveResidentsGitBtn2');if(resSettingsSave)resSettingsSave.onclick=window.saveResidentsToGithub;
-    const resSave=$('saveResidentsGitBtn');if(resSave)resSave.onclick=window.saveResidentsToGithub;
+    const evSave=$('eventSaveBtn');if(evSave)evSave.onclick=saveEventsStay;
+    const artistSave=$('saveArtistsGitBtn');if(artistSave)artistSave.onclick=saveEventsStay;
+    const topSave=$('topSaveBtn');if(topSave)topSave.onclick=()=>state.view==='residents'||state.view==='releases'?saveResidentsStay():saveEventsStay();
+    const evSettingsSave=$('saveEventsGitBtn');if(evSettingsSave)evSettingsSave.onclick=saveEventsStay;
+    const resSettingsSave=$('saveResidentsGitBtn2');if(resSettingsSave)resSettingsSave.onclick=saveResidentsStay;
+    const resSave=$('saveResidentsGitBtn');if(resSave)resSave.onclick=saveResidentsStay;
   }
   onReady(()=>{
     rebindButtons();
     setTimeout(()=>{rebindButtons();autoLoadGithubData()},500);
+    setTimeout(rebindButtons,1500);
   });
 })();
