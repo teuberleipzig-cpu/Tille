@@ -12,8 +12,10 @@
   function val(id){return $(id)?.value?.trim()||''}
   function apiPath(path){return String(path||'').split('/').map(encodeURIComponent).join('/')}
   function rawPath(path){return String(path||'').split('/').map(encodeURIComponent).join('/')}
-  function apiUrl(path){return 'https://api.github.com/repos/'+encodeURIComponent(val('ghOwner'))+'/'+encodeURIComponent(val('ghRepo'))+'/contents/'+apiPath(path)+'?ref='+encodeURIComponent(val('ghBranch'))+'&t='+Date.now()}
-  function apiPutUrl(path){return 'https://api.github.com/repos/'+encodeURIComponent(val('ghOwner'))+'/'+encodeURIComponent(val('ghRepo'))+'/contents/'+apiPath(path)}
+  function repoApiBase(){return 'https://api.github.com/repos/'+encodeURIComponent(val('ghOwner'))+'/'+encodeURIComponent(val('ghRepo'))}
+  function apiUrl(path){return repoApiBase()+'/contents/'+apiPath(path)+'?ref='+encodeURIComponent(val('ghBranch'))+'&t='+Date.now()}
+  function apiPutUrl(path){return repoApiBase()+'/contents/'+apiPath(path)}
+  function blobUrl(sha){return repoApiBase()+'/git/blobs/'+encodeURIComponent(sha)+'?t='+Date.now()}
   function rawUrl(path){return 'https://raw.githubusercontent.com/'+encodeURIComponent(val('ghOwner'))+'/'+encodeURIComponent(val('ghRepo'))+'/'+encodeURIComponent(val('ghBranch'))+'/'+rawPath(path)+'?t='+Date.now()}
   function localUrl(path){return '../../'+String(path||'').replace(/^public\//,'')+'?t='+Date.now()}
   function publicHeaders(){const h={Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'};const token=val('ghToken');if(token){h.Authorization='Bearer '+token}return h}
@@ -21,15 +23,32 @@
   function b64DecodeUtf8(str){const bin=atob(String(str||'').replace(/\n/g,''));return new TextDecoder().decode(Uint8Array.from(bin,ch=>ch.charCodeAt(0)))}
   function b64EncodeUtf8(str){const bytes=new TextEncoder().encode(str);let bin='';for(let i=0;i<bytes.length;i+=32768)bin+=String.fromCharCode.apply(null,bytes.subarray(i,i+32768));return btoa(bin)}
   async function fetchJsonUrl(url){log('fetchJsonUrl:start',{url:url.replace(/\?.*$/,'?...')});const res=await fetch(url,{cache:'no-store'});const text=await res.text();log('fetchJsonUrl:response',{status:res.status,ok:res.ok,textLength:text.length});if(!res.ok)throw new Error('Download fehlgeschlagen: '+res.status);if(!text.trim())throw new Error('JSON-Datei ist leer.');return JSON.parse(text)}
-  async function fetchMeta(path){log('fetchMeta:start',{path,owner:val('ghOwner'),repo:val('ghRepo'),branch:val('ghBranch'),tokenPresent:!!val('ghToken')});const res=await fetch(apiUrl(path),{headers:publicHeaders(),cache:'no-store'});const meta=await res.json().catch(()=>({}));log('fetchMeta:response',{path,status:res.status,ok:res.ok,sha:meta.sha||'',message:meta.message||''});if(!res.ok)throw new Error(meta.message||('GitHub Fehler '+res.status));return meta}
+  async function fetchBlobJson(sha,path){
+    log('fetchBlobJson:start',{path,sha,tokenPresent:!!val('ghToken')});
+    const res=await fetch(blobUrl(sha),{headers:publicHeaders(),cache:'no-store'});
+    const blob=await res.json().catch(()=>({}));
+    log('fetchBlobJson:response',{path,status:res.status,ok:res.ok,sha,encoding:blob.encoding||'',size:blob.size||0,message:blob.message||''});
+    if(!res.ok) throw new Error(blob.message||('Git blob laden fehlgeschlagen '+res.status));
+    if(blob.encoding!=='base64'||!blob.content) throw new Error('Git blob enthält keinen base64-Inhalt.');
+    return JSON.parse(b64DecodeUtf8(blob.content));
+  }
+  async function fetchMeta(path){log('fetchMeta:start',{path,owner:val('ghOwner'),repo:val('ghRepo'),branch:val('ghBranch'),tokenPresent:!!val('ghToken')});const res=await fetch(apiUrl(path),{headers:publicHeaders(),cache:'no-store'});const meta=await res.json().catch(()=>({}));log('fetchMeta:response',{path,status:res.status,ok:res.ok,sha:meta.sha||'',message:meta.message||'',contentLength:meta.content?meta.content.length:0});if(!res.ok)throw new Error(meta.message||('GitHub Fehler '+res.status));return meta}
   async function loadFile(path){
     try{
       log('loadFile:api:start',{path});
       const meta=await fetchMeta(path);
       let json;
-      if(meta.content&&meta.content.trim()) json=JSON.parse(b64DecodeUtf8(meta.content));
-      else json=await fetchJsonUrl(meta.download_url||rawUrl(path));
-      log('loadFile:api:success',{path,sha:meta.sha||'',keys:Object.keys(json||{})});
+      if(meta.content&&meta.content.trim()){
+        log('loadFile:api:contentInline',{path,sha:meta.sha||'',contentLength:meta.content.length});
+        json=JSON.parse(b64DecodeUtf8(meta.content));
+      }else if(meta.sha){
+        log('loadFile:api:contentEmptyUseBlob',{path,sha:meta.sha||''});
+        json=await fetchBlobJson(meta.sha,path);
+      }else{
+        warn('loadFile:api:noShaUseDownloadUrl',{path});
+        json=await fetchJsonUrl(meta.download_url||rawUrl(path));
+      }
+      log('loadFile:api:success',{path,sha:meta.sha||'',keys:Object.keys(json||{}),eventsCount:json?.events?.length,residentsCount:json?.residents?.length,artistsCount:json?.meta?.artists?.length});
       return{json,sha:meta.sha||''};
     }catch(e){warn('loadFile:api:failed',{path,message:e.message})}
     try{log('loadFile:raw:start',{path});return{json:await fetchJsonUrl(rawUrl(path)),sha:''};}catch(e){warn('loadFile:raw:failed',{path,message:e.message})}
@@ -219,7 +238,7 @@
     log('rebindButtons:done',{topLoad:!!topLoad,eventSave:!!evSave,artistSave:!!artistSave,topSave:!!topSave,saveEventsFn:window.saveEventsToGithub?.name||'anonymous'});
   }
   onReady(()=>{
-    log('autoGithubLoad:init',{script:'auto-github-load.js',debugVersion:'debug-save-1',href:location.href});
+    log('autoGithubLoad:init',{script:'auto-github-load.js',debugVersion:'debug-save-2-blob-load',href:location.href});
     rebindButtons();
     setTimeout(()=>{rebindButtons();autoLoadGithubData()},500);
     setTimeout(rebindButtons,1500);
