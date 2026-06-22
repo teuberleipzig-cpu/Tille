@@ -3,6 +3,16 @@ import { markDirty, requireResident, state } from '../core/state.js';
 import { imageToJpeg } from '../core/image-processing.js';
 import { slug, uploadBlob } from '../core/upload.js';
 
+function assetUrl(value) {
+  const url = String(value || '');
+  if (!url || /^(https?:|data:|blob:)/.test(url)) return url;
+  if (url.startsWith('/residents/') && location.pathname.includes('/public/')) {
+    const prefix = location.pathname.slice(0, location.pathname.indexOf('/public/')) + '/public';
+    return prefix + url;
+  }
+  return url;
+}
+
 function releases() {
   const resident = requireResident();
   if (!Array.isArray(resident.releases)) resident.releases = [];
@@ -90,7 +100,7 @@ function renderDetail() {
       </div>
     </section>
     <section class="release-detail-section"><h3>Thumbnail / Cover</h3>
-      <img id="releaseCoverPreview" class="release-cover-preview" src="${escapeHtml(release.coverUrl || '')}" alt="">
+      <img id="releaseCoverPreview" class="release-cover-preview" src="${escapeHtml(assetUrl(release.coverUrl))}" alt="">
       <div class="media-dropzone release-cover-drop" id="releaseCoverDrop"><strong>Release-Cover hier ablegen</strong><span>Wird nach GitHub hochgeladen und diesem Release zugeordnet.</span><div class="media-upload-status"></div></div>
       <div class="field media-hidden-url"><label class="label">Cover URL</label><input class="input" id="releaseCover" value="${escapeHtml(release.coverUrl || '')}"></div>
     </section>
@@ -126,6 +136,9 @@ function readDetail() {
 }
 
 async function uploadCover(file, statusEl) {
+  const preview = $('releaseCoverPreview');
+  const localPreview = URL.createObjectURL(file);
+  if (preview) preview.src = localPreview;
   statusEl.textContent = 'Lade Cover nach GitHub...';
   const release = selectedRelease();
   const blob = await imageToJpeg(file, { ratio: 1, width: 1000, height: 1000 });
@@ -134,7 +147,6 @@ async function uploadCover(file, statusEl) {
   release.coverUrl = url;
   release.coverImage = url;
   $('releaseCover').value = url;
-  $('releaseCoverPreview').src = url;
   markDirty();
   statusEl.textContent = 'Hochgeladen: ' + url;
 }
