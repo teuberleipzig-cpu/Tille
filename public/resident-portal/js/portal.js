@@ -12,27 +12,13 @@
   const set=(r,ks,v)=>{r[ks.find(k=>Object.hasOwn(r,k))||ks[0]]=v};
   function b64(s){return btoa(unescape(encodeURIComponent(s)))}
   function unb64(s){return decodeURIComponent(escape(atob(String(s||'').replace(/\s/g,''))))}
-  function status(t,c=''){const el=$('portalStatus');el.textContent=t;el.className='status '+c}
+  function status(t,c=''){const el=$('portalStatus');if(el){el.textContent=t;el.className='status '+c}}
   function headers(token){return{Accept:'application/vnd.github+json',Authorization:'Bearer '+token,'X-GitHub-Api-Version':'2022-11-28'}}
   function api(path){return`https://api.github.com/repos/${CFG.owner}/${CFG.repo}/${path}`}
   function show(id){document.querySelectorAll('[data-screen]').forEach(x=>x.classList.add('hidden'));$(id).classList.remove('hidden')}
-  function matchResident(list){
-    if(invite){const byInvite=list.findIndex(x=>String(x.portal?.inviteId||'')===invite);if(byInvite>=0)return byInvite}
-    if(rid){const byId=list.findIndex(x=>String(x.id||'')===rid);if(byId>=0)return byId}
-    return -1;
-  }
-  async function loadPublic(){
-    const r=await fetch('../residents/data/residents.json',{cache:'no-store'});if(!r.ok)throw Error('Residents-Daten konnten nicht geladen werden.');
-    st.data=await r.json();const list=Array.isArray(st.data.residents)?st.data.residents:[];
-    st.index=matchResident(list);
-    if(st.index<0)throw Error('Resident-Link ungültig oder noch nicht veröffentlicht. Bitte im Admin „Zugang erstellen“ klicken, automatische Speicherung abwarten und danach den Link neu kopieren.');
-    st.resident=list[st.index];if(!st.resident.portal?.enabled)throw Error('Resident-Zugang ist deaktiviert.');
-    $('loginResidentName').textContent=st.resident.name||st.resident.id||'Resident';
-  }
-  function codeOk(){
-    const a=String(st.resident?.portal?.code||'').replace(/[\s-]/g,'').toUpperCase();
-    const b=String($('accessCode').value||'').replace(/[\s-]/g,'').toUpperCase();return a&&a===b;
-  }
+  function matchResident(list){if(invite){const byInvite=list.findIndex(x=>String(x.portal?.inviteId||'')===invite);if(byInvite>=0)return byInvite}if(rid){const byId=list.findIndex(x=>String(x.id||'')===rid);if(byId>=0)return byId}return -1}
+  async function loadPublic(){const r=await fetch('../residents/data/residents.json',{cache:'no-store'});if(!r.ok)throw Error('Residents-Daten konnten nicht geladen werden.');st.data=await r.json();const list=Array.isArray(st.data.residents)?st.data.residents:[];st.index=matchResident(list);if(st.index<0)throw Error('Resident-Link ungültig oder noch nicht veröffentlicht. Bitte im Admin „Zugang erstellen“ klicken, automatische Speicherung abwarten und danach den Link neu kopieren.');st.resident=list[st.index];if(!st.resident.portal?.enabled)throw Error('Resident-Zugang ist deaktiviert.');$('loginResidentName').textContent=st.resident.name||st.resident.id||'Resident'}
+  function codeOk(){const a=String(st.resident?.portal?.code||'').replace(/[\s-]/g,'').toUpperCase();const b=String($('accessCode').value||'').replace(/[\s-]/g,'').toUpperCase();return a&&a===b}
   function photos(r){return(Array.isArray(r.photoList)&&r.photoList.length?r.photoList:(Array.isArray(r.photos)?r.photos:[])).map(x=>typeof x==='string'?x:(x?.url||x?.src||'')).filter(Boolean)}
   function news(){const r=st.resident;r.newsItems=Array.isArray(r.newsItems)?r.newsItems:(Array.isArray(r.news)?r.news:[]);r.newsItems=r.newsItems.map(n=>typeof n==='string'?{date:'',text:n}:{date:n.date||'',text:n.text||''});return r.newsItems}
   function releases(){const r=st.resident;r.releases=Array.isArray(r.releases)?r.releases:[];return r.releases}
@@ -44,7 +30,8 @@
   async function ghSave(token,data,sha){const body={message:`Update resident profile from portal: ${st.resident?.id||rid||'resident'}`,content:b64(JSON.stringify(data,null,2)),sha,branch:CFG.branch};const r=await fetch(api(`contents/${CFG.path}`),{method:'PUT',headers:{...headers(token),'Content-Type':'application/json'},body:JSON.stringify(body)});if(!r.ok){const e=Error('GitHub Speichern fehlgeschlagen.');e.status=r.status;throw e}}
   function apply(data,next){const list=Array.isArray(data.residents)?data.residents:[];if(!list.length)throw Error('Sicherheitsabbruch: residents[] ist leer.');let i=-1;if(invite)i=list.findIndex(x=>String(x.portal?.inviteId||'')===invite);if(i<0)i=list.findIndex(x=>String(x.id||'')===String(st.resident?.id||rid));if(i<0)throw Error('Resident in GitHub nicht gefunden.');if(invite&&String(list[i].portal?.inviteId||'')!==invite)throw Error('Invite-ID passt nicht mehr.');next.id=list[i].id;next.portal=list[i].portal;list[i]=next;return data}
   async function save(){const token=($('githubToken').value||sessionStorage.getItem('residentPortalToken')||'').trim();if(!token)return status('Bitte GitHub-Token eintragen.','warn');if(!codeOk())return status('Code stimmt nicht mehr.','danger');sessionStorage.setItem('residentPortalToken',token);status('Speichere nach GitHub...','warn');try{const next=patch();let f=await ghLoad(token);try{await ghSave(token,apply(f.data,next),f.sha)}catch(e){if(e.status!==409)throw e;f=await ghLoad(token);await ghSave(token,apply(f.data,next),f.sha)}st.resident=next;render();status('Gespeichert.','ok')}catch(e){console.error(e);status(e.message||'Speichern fehlgeschlagen.','danger')}}
-  function bind(){document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('[data-panel]').forEach(x=>x.classList.add('hidden'));$(`panel-${b.dataset.tab}`).classList.remove('hidden')});$('loginBtn').onclick=()=>{if(!codeOk())return status('Code falsch.','danger');const t=$('githubToken').value.trim();if(!t)return status('Bitte GitHub-Token eintragen.','warn');sessionStorage.setItem('residentPortalToken',t);render();show('editorScreen');status('Eingeloggt.','ok')};$('saveBtn').onclick=save;$('addNewsBtn').onclick=()=>{news().push({date:new Date().toISOString().slice(0,10),text:''});renderNews()};$('addReleaseBtn').onclick=()=>{releases().push({published:true,title:'',releaseDate:'',label:'',coverUrl:'',coverImage:'',description:''});renderReleases();window.dispatchEvent(new Event('portalResidentRendered'))};}
+  function login(){status('Login wird geprüft...','warn');try{if(!st.resident)throw new Error('Resident ist noch nicht geladen. Seite neu laden.');if(!codeOk())return status('Code falsch. Erwartet wird der aktuelle Code aus dem Admin.','danger');const t=String($('githubToken')?.value||'').trim();if(!t)return status('GitHub-Token-Feld ist leer.','warn');sessionStorage.setItem('residentPortalToken',t);show('editorScreen');try{render()}catch(renderError){console.error(renderError);status('Login ok, aber Editor konnte nicht vollständig gerendert werden: '+(renderError.message||renderError),'danger');return}status('Eingeloggt.','ok')}catch(e){console.error(e);status(e.message||'Login fehlgeschlagen.','danger')}}
+  function bind(){document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('[data-panel]').forEach(x=>x.classList.add('hidden'));$(`panel-${b.dataset.tab}`).classList.remove('hidden')});const loginBtn=$('loginBtn');if(loginBtn){loginBtn.onclick=login;loginBtn.addEventListener('click',login)}$('saveBtn').onclick=save;$('addNewsBtn').onclick=()=>{news().push({date:new Date().toISOString().slice(0,10),text:''});renderNews()};$('addReleaseBtn').onclick=()=>{releases().push({published:true,title:'',releaseDate:'',label:'',coverUrl:'',coverImage:'',description:''});renderReleases();window.dispatchEvent(new Event('portalResidentRendered'))}}
   async function init(){bind();const t=sessionStorage.getItem('residentPortalToken');if(t)$('githubToken').value=t;try{await loadPublic();show('loginScreen');status('Bitte Code und GitHub-Token eingeben.')}catch(e){show('loginScreen');$('loginBtn').disabled=true;status(e.message,'danger')}}
   document.readyState==='loading'?document.addEventListener('DOMContentLoaded',init):init();
 })();
