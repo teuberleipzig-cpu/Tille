@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Resident Portal · Distillery</title>
+  <link rel="stylesheet" href="./css/portal.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>Resident Portal</h1>
+      <p>Bearbeite nur deine eigenen Resident-Daten.</p>
+      <button id="saveBtn" class="primary" type="button">Speichern</button>
+    </header>
+
+    <section id="loginScreen" data-screen class="card hidden">
+      <h2>Zugang für <span id="loginResidentName">Resident</span></h2>
+      <p>Gib den 15-Zeichen-Code und den GitHub-Token ein, den du erhalten hast.</p>
+      <label>Code<input id="accessCode" autocomplete="one-time-code" placeholder="ABCDE-FGHIJ-KLMNO"></label>
+      <label>GitHub Token<input id="githubToken" type="password" autocomplete="off" placeholder="github_pat_..."></label>
+      <button id="loginBtn" class="primary" type="button">Weiter</button>
+    </section>
+
+    <section id="editorScreen" data-screen class="hidden">
+      <h2 id="editorTitle">Resident</h2>
+      <div class="tabs">
+        <button class="active" data-tab="profile" type="button">Profil</button>
+        <button data-tab="links" type="button">Links</button>
+        <button data-tab="media" type="button">Medien</button>
+        <button data-tab="news" type="button">News</button>
+        <button data-tab="releases" type="button">Releases</button>
+      </div>
+      <div id="panel-profile" data-panel class="card">
+        <div class="grid two">
+          <label>Name<input id="resName"></label><label>Stadt<input id="resCity"></label>
+          <label>Genre<input id="resGenre"></label><label>Labels, kommagetrennt<input id="resLabels"></label>
+          <label class="full">Related Projects, kommagetrennt<input id="resRelated"></label>
+          <label class="full">Bio / Infotext<textarea id="resBio" rows="8"></textarea></label>
+        </div>
+      </div>
+      <div id="panel-links" data-panel class="card hidden">
+        <div class="grid two">
+          <label>Instagram<input id="resInstagram"></label><label>SoundCloud<input id="resSoundcloud"></label>
+          <label>Resident Advisor<input id="resRA"></label><label>Discogs<input id="resDiscogs"></label>
+          <label>Bandcamp<input id="resBandcamp"></label><label>Booking E-Mail<input id="resBooking"></label>
+        </div>
+      </div>
+      <div id="panel-media" data-panel class="card hidden">
+        <label>Profilbild URL<input id="resImage"></label>
+        <label>Presskit URL<input id="resPresskit"></label>
+        <label>Fotos, eine URL pro Zeile<textarea id="resPhotos" rows="6"></textarea></label>
+        <label>Embeds, eine URL pro Zeile<textarea id="resEmbeds" rows="6"></textarea></label>
+      </div>
+      <div id="panel-news" data-panel class="card hidden">
+        <h3>News <button id="addNewsBtn" type="button">+ News</button></h3>
+        <div id="newsList"></div>
+      </div>
+      <div id="panel-releases" data-panel class="card hidden">
+        <h3>Releases <button id="addReleaseBtn" type="button">+ Release</button></h3>
+        <div id="releaseList"></div>
+      </div>
+    </section>
+    <div id="portalStatus" class="status"></div>
+  </main>
+  <script src="./js/portal.js"></script>
+</body>
+</html>
