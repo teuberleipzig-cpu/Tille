@@ -5,7 +5,7 @@
   const code=()=>{const x=rnd(15,chars);return x.slice(0,5)+'-'+x.slice(5,10)+'-'+x.slice(10)};
   const invite=()=>rnd(20,ichars);
   function p(r){if(!r.portal||typeof r.portal!=='object')r.portal={};r.portal.enabled=r.portal.enabled===true;r.portal.inviteId=String(r.portal.inviteId||'');r.portal.code=String(r.portal.code||'');r.portal.version=r.portal.version||'resident-access-v1';return r.portal}
-  function url(r){const u=new URL('../resident-portal/index.html',location.href);u.searchParams.set('resident',r.id||'');u.searchParams.set('invite',p(r).inviteId||'');return u.toString()}
+  function url(r){const u=new URL('../resident-portal/index.html',location.href);u.searchParams.set('resident',r.id||'');u.searchParams.set('invite',p(r).inviteId||'');u.searchParams.set('v','portal-2');return u.toString()}
   function create(r){const x=p(r);x.enabled=true;x.inviteId=x.inviteId||invite();x.code=x.code||code();x.updatedAt=new Date().toISOString()}
   function mark(msg){if(typeof markDirty==='function')markDirty();render();if(typeof setStatus==='function')setStatus('residentStatus',msg,'ok')}
   function autoSaveResidents(){if(typeof window.saveResidentsToGithub==='function'){if(typeof setStatus==='function')setStatus('residentStatus','Resident-Zugang erstellt. Speichere Residents...','warn');window.saveResidentsToGithub();return}if(typeof saveResidentsToGithub==='function'){if(typeof setStatus==='function')setStatus('residentStatus','Resident-Zugang erstellt. Speichere Residents...','warn');saveResidentsToGithub();return}if(typeof setStatus==='function')setStatus('residentStatus','Resident-Zugang erstellt. Residents bitte manuell speichern.','warn')}
