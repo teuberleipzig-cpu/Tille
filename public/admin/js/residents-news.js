@@ -108,6 +108,7 @@
     loadExtraExtension(null,'./js/auto-github-load.js?v=debug-save-2');
     loadExtraExtension('./css/residents-order.css','./js/residents-order.js');
     loadExtraExtension('./css/releases-workflow.css','./js/releases-workflow.js');
+    loadExtraExtension('./css/resident-access.css','./extensions/resident-access.js?v=resident-access-1');
     const originalEnsureResidents=ensureResidents;
     window.ensureResidents=ensureResidents=function(){originalEnsureResidents();(residents().residents||[]).forEach(normalizeNews);};
     const originalRenderResidentForm=renderResidentForm;
