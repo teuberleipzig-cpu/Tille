@@ -3,6 +3,16 @@ import { markDirty, requireResident, state } from '../core/state.js';
 import { imageToJpeg } from '../core/image-processing.js';
 import { slug, uploadBlob } from '../core/upload.js';
 
+function assetUrl(value) {
+  const url = String(value || '');
+  if (!url || /^(https?:|data:|blob:)/.test(url)) return url;
+  if (url.startsWith('/residents/') && location.pathname.includes('/public/')) {
+    const prefix = location.pathname.slice(0, location.pathname.indexOf('/public/')) + '/public';
+    return prefix + url;
+  }
+  return url;
+}
+
 function residentFolder() {
   const resident = requireResident();
   return slug(resident.id || resident.name || 'resident', 'resident');
@@ -28,7 +38,7 @@ function renderPhotos() {
   const urls = photoUrls(requireResident());
   box.innerHTML = urls.length ? urls.map((url, index) => `
     <div class="resident-photo-card" data-photo-index="${index}">
-      <img src="${escapeHtml(url)}" alt="">
+      <img src="${escapeHtml(assetUrl(url))}" alt="">
       <div class="tools" style="margin-top:10px"><button class="tool" type="button" data-photo-left>←</button><button class="tool" type="button" data-photo-right>→</button></div>
       <div class="tools" style="margin-top:10px"><button class="tool danger" type="button" data-photo-delete>Löschen</button></div>
     </div>`).join('') : '<p class="muted">Noch keine Fotos.</p>';
@@ -61,6 +71,7 @@ async function uploadPresskit(file, statusEl) {
 }
 
 async function uploadPhoto(file, statusEl) {
+  const localPreview = URL.createObjectURL(file);
   statusEl.textContent = 'Lade Foto nach GitHub...';
   const blob = await imageToJpeg(file, { ratio: 16 / 9, width: 1600, height: 900 });
   const path = `public/residents/media/${residentFolder()}/photos/photo-${Date.now()}.jpg`;
@@ -69,6 +80,9 @@ async function uploadPhoto(file, statusEl) {
   urls.push(url);
   setPhotoUrls(urls);
   renderPhotos();
+  const cards = $('residentPhotosList')?.querySelectorAll('.resident-photo-card img');
+  const last = cards?.[cards.length - 1];
+  if (last) last.src = localPreview;
   statusEl.textContent = 'Hochgeladen: ' + url;
 }
 
