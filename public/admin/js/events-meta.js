@@ -199,7 +199,7 @@
     installJsonTools();
     installStrictArtistOffer();
     loadExtraExtension(null,'./js/save-status-ux.js?v=status-ux-1');
-    loadExtraExtension('./css/residents-news.css','./js/residents-news.js');
+    loadExtraExtension('./css/residents-news.css','./js/residents-news.js?v=residents-news-2');
 
     const originalEnsureEvents=ensureEvents;
     window.ensureEvents=ensureEvents=function(){
