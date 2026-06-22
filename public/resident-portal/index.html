@@ -4,66 +4,79 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Resident Portal · Distillery</title>
-  <link rel="stylesheet" href="./css/portal.css">
+  <link rel="stylesheet" href="../admin/css/admin.css">
+  <link rel="stylesheet" href="../admin/css/events-meta.css">
+  <link rel="stylesheet" href="../admin/css/residents-media.css">
+  <link rel="stylesheet" href="../admin/css/github-media.css">
+  <link rel="stylesheet" href="./css/portal.css?v=portal-admin-v2-1">
 </head>
 <body>
-  <main class="app">
-    <header>
-      <h1>Resident Portal</h1>
-      <p>Bearbeite nur deine eigenen Resident-Daten.</p>
-      <button id="saveBtn" class="primary" type="button">Speichern</button>
-    </header>
-
-    <section id="loginScreen" data-screen class="card hidden">
+  <main class="portal-main">
+    <section id="loginScreen" data-screen class="card portal-login hidden">
       <h2>Zugang für <span id="loginResidentName">Resident</span></h2>
-      <p>Gib den 15-Zeichen-Code und den GitHub-Token ein, den du erhalten hast.</p>
-      <label>Code<input id="accessCode" autocomplete="one-time-code" placeholder="ABCDE-FGHIJ-KLMNO"></label>
-      <label>GitHub Token<input id="githubToken" type="password" autocomplete="off" placeholder="github_pat_..."></label>
-      <button id="loginBtn" class="primary" type="button">Weiter</button>
+      <p class="muted">Gib den 15-Zeichen-Code und den GitHub-Token ein, den du erhalten hast.</p>
+      <div class="form-grid">
+        <div class="field full"><label class="label">Code</label><input class="input" id="accessCode" autocomplete="one-time-code" placeholder="ABCDE-FGHIJ-KLMNO"></div>
+        <div class="field full"><label class="label">GitHub Token</label><input class="input" id="githubToken" type="password" autocomplete="off" placeholder="github_pat_..."></div>
+      </div>
+      <div class="tools" style="margin-top:16px"><button id="loginBtn" class="btn primary" type="button">Weiter</button></div>
     </section>
 
-    <section id="editorScreen" data-screen class="hidden">
-      <h2 id="editorTitle">Resident</h2>
+    <section id="editorScreen" data-screen class="portal-editor editor hidden">
+      <div class="editor-head">
+        <div class="editor-title"><div><h2 id="editorTitle">Resident</h2><div class="editor-meta" id="editorMeta">Resident bearbeiten.</div></div></div>
+      </div>
       <div class="tabs">
-        <button class="active" data-tab="profile" type="button">Profil</button>
-        <button data-tab="links" type="button">Links</button>
-        <button data-tab="media" type="button">Medien</button>
-        <button data-tab="news" type="button">News</button>
-        <button data-tab="releases" type="button">Releases</button>
+        <button class="tab active" data-tab="profile" type="button">Profil</button>
+        <button class="tab" data-tab="links" type="button">Links</button>
+        <button class="tab" data-tab="news" type="button">News</button>
+        <button class="tab" data-tab="media" type="button">Medien</button>
+        <button class="tab" data-tab="releases" type="button">Releases</button>
       </div>
-      <div id="panel-profile" data-panel class="card">
-        <div class="grid two">
-          <label>Name<input id="resName"></label><label>Stadt<input id="resCity"></label>
-          <label>Genre<input id="resGenre"></label><label>Labels, kommagetrennt<input id="resLabels"></label>
-          <label class="full">Related Projects, kommagetrennt<input id="resRelated"></label>
-          <label class="full">Bio / Infotext<textarea id="resBio" rows="8"></textarea></label>
+      <div class="editor-body">
+        <div id="panel-profile" data-panel class="resident-tab-panel">
+          <div class="form-grid">
+            <div class="field"><label class="label">Name</label><input class="input" id="resName"></div>
+            <div class="field"><label class="label">Stadt</label><input class="input" id="resCity"></div>
+            <div class="field"><label class="label">Genre</label><input class="input" id="resGenre"></div>
+            <div class="field"><label class="label">Labels</label><input class="input" id="resLabels"></div>
+            <div class="field full"><label class="label">Related Projects</label><input class="input" id="resRelated"></div>
+            <div class="field full"><label class="label">Beschreibung / Bio</label><textarea class="textarea" id="resBio"></textarea></div>
+          </div>
+        </div>
+        <div id="panel-links" data-panel class="resident-tab-panel hidden">
+          <div class="form-grid">
+            <div class="field"><label class="label">Instagram</label><input class="input" id="resInstagram"></div>
+            <div class="field"><label class="label">SoundCloud</label><input class="input" id="resSoundcloud"></div>
+            <div class="field"><label class="label">Resident Advisor</label><input class="input" id="resRA"></div>
+            <div class="field"><label class="label">Discogs</label><input class="input" id="resDiscogs"></div>
+            <div class="field"><label class="label">Bandcamp</label><input class="input" id="resBandcamp"></div>
+            <div class="field"><label class="label">Booking Email</label><input class="input" id="resBooking"></div>
+          </div>
+        </div>
+        <div id="panel-news" data-panel class="resident-tab-panel hidden">
+          <div class="head"><div><b>News</b><div class="muted">News-Einträge pro Resident.</div></div><div class="tools"><button class="tool" id="addNewsBtn" type="button">+ News</button><button class="tool" id="sortPortalNewsBtn" type="button">Nach Datum sortieren</button></div></div>
+          <div id="newsList" class="section-list"></div>
+        </div>
+        <div id="panel-media" data-panel class="resident-tab-panel hidden">
+          <div class="notice portal-hidden-original">News, Fotos, Embeds und Releases bleiben erhalten, werden hier aber noch nicht bearbeitet.</div>
+          <label class="portal-hidden-original">Bild / Portrait URL oder Data-URL<input id="resImage"></label>
+          <label class="portal-hidden-original">Presskit URL<input id="resPresskit"></label>
+          <label class="portal-hidden-original">Fotos<textarea id="resPhotos" rows="6"></textarea></label>
+          <section class="media-section" id="residentPresskitBlock"><h3 class="media-section-title">Presskit</h3><p class="media-section-note">PDF oder ZIP per Drag & Drop hochladen. Im JSON steht nur der Pfad.</p><div id="residentPresskitSlot"></div></section>
+          <section class="media-section" id="residentPhotosBlock"><h3 class="media-section-title">Slide-Bilder</h3><p class="media-section-note">Mehrere 16:9-Bilder für die Resident-Seite.</p><div id="residentPhotosDropSlot"></div><div id="residentPhotosList" class="resident-photo-grid"></div></section>
+          <section class="media-section" id="residentEmbedsBlock"><h3 class="media-section-title">Media Embeds</h3><p class="media-section-note">Ein Embed oder Link pro Zeile.</p><div class="field full"><textarea class="input resident-embeds-textarea" id="resEmbeds" placeholder="SoundCloud / YouTube / Bandcamp Embed oder URL"></textarea></div></section>
+        </div>
+        <div id="panel-releases" data-panel class="resident-tab-panel hidden">
+          <div class="head"><div><b>Releases</b><div class="muted">Releases dieses Residents.</div></div><div class="tools"><button class="tool" id="addReleaseBtn" type="button">+ Release</button></div></div>
+          <div id="releaseList" class="section-list"></div>
         </div>
       </div>
-      <div id="panel-links" data-panel class="card hidden">
-        <div class="grid two">
-          <label>Instagram<input id="resInstagram"></label><label>SoundCloud<input id="resSoundcloud"></label>
-          <label>Resident Advisor<input id="resRA"></label><label>Discogs<input id="resDiscogs"></label>
-          <label>Bandcamp<input id="resBandcamp"></label><label>Booking E-Mail<input id="resBooking"></label>
-        </div>
-      </div>
-      <div id="panel-media" data-panel class="card hidden">
-        <label>Profilbild URL<input id="resImage"></label>
-        <label>Presskit URL<input id="resPresskit"></label>
-        <label>Fotos, eine URL pro Zeile<textarea id="resPhotos" rows="6"></textarea></label>
-        <label>Embeds, eine URL pro Zeile<textarea id="resEmbeds" rows="6"></textarea></label>
-      </div>
-      <div id="panel-news" data-panel class="card hidden">
-        <h3>News <button id="addNewsBtn" type="button">+ News</button></h3>
-        <div id="newsList"></div>
-      </div>
-      <div id="panel-releases" data-panel class="card hidden">
-        <h3>Releases <button id="addReleaseBtn" type="button">+ Release</button></h3>
-        <div id="releaseList"></div>
-      </div>
+      <div class="footer portal-footer"><div id="portalStatus" class="status muted portal-save-status">Bereit.</div><div class="tools"><button class="btn ok" id="draftBtn" type="button">Entwurf speichern</button><button id="saveBtn" class="btn primary" type="button">Speichern</button></div></div>
     </section>
-    <div id="portalStatus" class="status"></div>
   </main>
   <script src="./js/portal.js?v=portal-2"></script>
-  <script src="./js/portal-media.js?v=portal-media-1"></script>
+  <script src="./js/portal-admin-v2.js?v=portal-admin-v2-1"></script>
+  <script src="./js/portal-media.js?v=portal-media-2"></script>
 </body>
 </html>
