@@ -3,6 +3,8 @@ import { markDirty, requireResident, state } from '../core/state.js';
 import { imageToJpeg } from '../core/image-processing.js';
 import { slug, uploadBlob, deleteRepoFile } from '../core/upload.js';
 
+const localPhotoPreviews = new Map();
+
 function assetUrl(value) {
   const url = String(value || '');
   if (!url || /^(https?:|data:|blob:)/.test(url)) return url;
@@ -11,6 +13,11 @@ function assetUrl(value) {
     return prefix + url;
   }
   return url;
+}
+
+function previewUrl(value) {
+  const url = String(value || '');
+  return localPhotoPreviews.get(url) || assetUrl(url);
 }
 
 function residentFolder() {
@@ -38,7 +45,7 @@ function renderPhotos() {
   const urls = photoUrls(requireResident());
   box.innerHTML = urls.length ? urls.map((url, index) => `
     <div class="resident-photo-card" data-photo-index="${index}">
-      <img src="${escapeHtml(assetUrl(url))}" alt="">
+      <img src="${escapeHtml(previewUrl(url))}" alt="">
       <div class="tools" style="margin-top:10px"><button class="tool" type="button" data-photo-left>←</button><button class="tool" type="button" data-photo-right>→</button></div>
       <div class="tools" style="margin-top:10px"><button class="tool danger" type="button" data-photo-delete>Löschen</button></div>
     </div>`).join('') : '<p class="muted">Noch keine Fotos.</p>';
@@ -76,13 +83,11 @@ async function uploadPhoto(file, statusEl) {
   const blob = await imageToJpeg(file, { ratio: 16 / 9, width: 1600, height: 900 });
   const path = `public/residents/media/${residentFolder()}/photos/photo-${Date.now()}.jpg`;
   const url = await uploadBlob(path, blob, state.token);
+  localPhotoPreviews.set(url, localPreview);
   const urls = photoUrls(requireResident());
   urls.push(url);
   setPhotoUrls(urls);
   renderPhotos();
-  const cards = $('residentPhotosList')?.querySelectorAll('.resident-photo-card img');
-  const last = cards?.[cards.length - 1];
-  if (last) last.src = localPreview;
   statusEl.textContent = 'Hochgeladen: ' + url;
 }
 
@@ -92,6 +97,10 @@ async function deletePhotoAt(index) {
   if (!url) return;
   setStatus('Lösche Foto aus GitHub...', 'warn');
   await deleteRepoFile(url, state.token);
+  if (localPhotoPreviews.has(url)) {
+    URL.revokeObjectURL(localPhotoPreviews.get(url));
+    localPhotoPreviews.delete(url);
+  }
   urls.splice(index, 1);
   setPhotoUrls(urls);
   renderPhotos();
