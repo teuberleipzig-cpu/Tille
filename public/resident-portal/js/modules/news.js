@@ -13,6 +13,12 @@ function items() {
   return resident.newsItems;
 }
 
+export function sortByDate() {
+  const list = items();
+  list.sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')));
+  return list;
+}
+
 function card(item, index) {
   return `
     <div class="section-card resident-news-card" data-news-index="${index}">
@@ -56,6 +62,11 @@ export function read() {
   return items();
 }
 
+export function readSorted() {
+  read();
+  return sortByDate();
+}
+
 export function init() {
   const panel = $('panel-news');
   if (!panel || panel.dataset.newsBound === '1') return;
@@ -63,14 +74,13 @@ export function init() {
 
   $('addNewsBtn')?.addEventListener('click', () => {
     read();
-    items().push({ date: new Date().toISOString().slice(0, 10), text: '' });
+    items().unshift({ date: new Date().toISOString().slice(0, 10), text: '' });
     markDirty();
     render();
   });
 
   $('sortPortalNewsBtn')?.addEventListener('click', () => {
-    read();
-    items().sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')));
+    readSorted();
     markDirty();
     render();
     setStatus('News nach Datum sortiert. Noch nicht gespeichert.', 'ok');
