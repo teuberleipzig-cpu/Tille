@@ -1,7 +1,7 @@
 import { $, escapeHtml, setStatus } from '../core/dom.js';
 import { markDirty, requireResident, state } from '../core/state.js';
 import { imageToJpeg } from '../core/image-processing.js';
-import { slug, uploadBlob } from '../core/upload.js';
+import { slug, uploadBlob, deleteRepoFile } from '../core/upload.js';
 
 function assetUrl(value) {
   const url = String(value || '');
@@ -86,6 +86,18 @@ async function uploadPhoto(file, statusEl) {
   statusEl.textContent = 'Hochgeladen: ' + url;
 }
 
+async function deletePhotoAt(index) {
+  const urls = photoUrls(requireResident());
+  const url = urls[index];
+  if (!url) return;
+  setStatus('Lösche Foto aus GitHub...', 'warn');
+  await deleteRepoFile(url, state.token);
+  urls.splice(index, 1);
+  setPhotoUrls(urls);
+  renderPhotos();
+  setStatus('Foto gelöscht. Noch speichern, damit die JSON-Liste aktualisiert wird.', 'ok');
+}
+
 function handleFileDrop(zone, uploadFn) {
   const input = document.createElement('input');
   input.type = 'file';
@@ -142,7 +154,7 @@ export function init() {
 
   $('resEmbeds')?.addEventListener('input', () => { read(); markDirty(); });
 
-  $('residentPhotosList')?.addEventListener('click', event => {
+  $('residentPhotosList')?.addEventListener('click', async event => {
     const card = event.target.closest('[data-photo-index]');
     if (!card) return;
     const index = Number(card.dataset.photoIndex);
@@ -150,13 +162,19 @@ export function init() {
     if (event.target.matches('[data-photo-left]') && index > 0) {
       const item = urls.splice(index, 1)[0];
       urls.splice(index - 1, 0, item);
+      setPhotoUrls(urls);
+      renderPhotos();
     }
     if (event.target.matches('[data-photo-right]') && index < urls.length - 1) {
       const item = urls.splice(index, 1)[0];
       urls.splice(index + 1, 0, item);
+      setPhotoUrls(urls);
+      renderPhotos();
     }
-    if (event.target.matches('[data-photo-delete]')) urls.splice(index, 1);
-    setPhotoUrls(urls);
-    renderPhotos();
+    if (event.target.matches('[data-photo-delete]')) {
+      if (!confirm('Foto wirklich aus GitHub löschen?')) return;
+      try { await deletePhotoAt(index); }
+      catch (error) { setStatus(error.message || 'Foto konnte nicht gelöscht werden.', 'danger'); }
+    }
   });
 }
