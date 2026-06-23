@@ -10,7 +10,7 @@ import * as releases from './releases.js';
 export function readAll() {
   profile.read();
   links.read();
-  news.read();
+  news.readSorted();
   media.read();
   releases.read();
   return requireResident();
@@ -26,7 +26,8 @@ export function initSave() {
       setStatus('Speichere nach GitHub...', 'warn');
       const resident = readAll();
       await saveResident(state.token, resident);
-      setStatus('Gespeichert.', 'ok');
+      news.render();
+      setStatus('Gespeichert. News wurden nach Datum sortiert.', 'ok');
     } catch (error) {
       setStatus(error.message || 'Speichern fehlgeschlagen.', 'danger');
     }
@@ -38,6 +39,7 @@ export function initSave() {
       timestamp: new Date().toISOString(),
       resident
     }));
-    setStatus('Entwurf lokal gespeichert.', 'ok');
+    news.render();
+    setStatus('Entwurf lokal gespeichert. News wurden nach Datum sortiert.', 'ok');
   });
 }
