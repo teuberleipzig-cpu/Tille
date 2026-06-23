@@ -28,6 +28,9 @@
     r.newsItems=r.newsItems.map(n=>typeof n==='string'?{date:'',text:n}:{date:n.date||'',text:n.text||''});
     return r.newsItems;
   }
+  function sortNews(r){
+    return normalizeNews(r).sort((a,b)=>String(b.date||'').localeCompare(String(a.date||''))||String(a.text||'').localeCompare(String(b.text||''),'de'));
+  }
   function injectResidentsNewsUi(){
     const tabs=document.querySelector('#view-residents .tabs');
     const linksPanel=$('resident-tab-links');
@@ -55,7 +58,7 @@
         readResidentForm();
         const r=currentResident();
         if(!r) return;
-        normalizeNews(r).push({date:today(),text:''});
+        normalizeNews(r).unshift({date:today(),text:''});
         markDirty();
         renderResidentForm();
         setResidentTab('news');
@@ -67,7 +70,7 @@
       sort.onclick=()=>{
         const r=currentResident();
         if(!r) return;
-        normalizeNews(r).sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')));
+        sortNews(r);
         markDirty();
         renderResidentNews();
         setStatus('residentStatus','News nach Datum sortiert. Noch nicht veröffentlicht.','ok');
@@ -97,18 +100,20 @@
     const list=normalizeNews(r);
     document.querySelectorAll('[data-news-date]').forEach(el=>{if(list[Number(el.dataset.newsDate)]) list[Number(el.dataset.newsDate)].date=el.value;});
     document.querySelectorAll('[data-news-text]').forEach(el=>{if(list[Number(el.dataset.newsText)]) list[Number(el.dataset.newsText)].text=el.value;});
+    sortNews(r);
   }
   onReady(()=>{
     injectResidentsNewsUi();
-    loadExtraExtension('./css/residents-media.css','./js/residents-media.js');
+    loadExtraExtension('./css/residents-media.css','./js/residents-media.js?v=resident-media-delete-2');
     loadExtraExtension('./css/textareas.css','./js/textareas.js');
     loadExtraExtension('./css/releases-admin.css','./js/releases-core.js');
     loadExtraExtension(null,'./js/releases-extra.js');
-    loadExtraExtension('./css/github-media.css','./js/github-media.js');
+    loadExtraExtension('./css/github-media.css','./js/github-media.js?v=admin-upload-paths-1');
     loadExtraExtension(null,'./js/auto-github-load.js?v=debug-save-2');
     loadExtraExtension('./css/residents-order.css','./js/residents-order.js');
     loadExtraExtension('./css/releases-workflow.css','./js/releases-workflow.js');
     loadExtraExtension('./css/resident-access.css','./extensions/resident-access.js?v=resident-access-2');
+    loadExtraExtension(null,'./js/admin-v2-current-fixes.js?v=admin-v2-fixes-1');
     const originalEnsureResidents=ensureResidents;
     window.ensureResidents=ensureResidents=function(){originalEnsureResidents();(residents().residents||[]).forEach(normalizeNews);};
     const originalRenderResidentForm=renderResidentForm;
