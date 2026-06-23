@@ -59209,15 +59209,15 @@
     },
     {
       "id": "2026-06-23-neues-event",
-      "date": "2026-06-26",
+      "date": "2026-06-23",
       "title": "Test",
-      "color": "olive",
-      "moreUrl": "#https://teuberleipzig-cpu.github.io/Tille/public/admin/index.html?v=admin-cache-test-2",
-      "imageUrl": "/events/media/2026-06-26-test/event-1782220717610.jpg",
-      "description": "abc",
+      "color": "orange",
+      "moreUrl": "https://ra.co/dj/submod/tour-dates",
+      "imageUrl": "",
+      "description": "",
       "sections": [
         {
-          "label": "up:",
+          "label": "down:",
           "genre": "",
           "items": [
             {
@@ -59226,14 +59226,14 @@
               "link": "https://soundcloud.com/submod"
             },
             {
-              "name": "submod",
+              "name": "submod2",
               "info": "Distillery, Leipzig",
               "link": "https://soundcloud.com/submod"
             }
           ]
         },
         {
-          "label": "down:",
+          "label": "up:",
           "genre": "",
           "items": [
             {
