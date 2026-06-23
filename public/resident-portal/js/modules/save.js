@@ -3,9 +3,9 @@ import { state, requireResident } from '../core/state.js';
 import { saveResident } from '../core/github.js';
 import * as profile from './profile.js';
 import * as links from './links.js';
-import * as news from './news.js';
-import * as media from './media.js';
-import * as releases from './releases.js';
+import * as news from './news.js?v=news-top-save-2';
+import * as media from './media.js?v=media-preview-map-1';
+import * as releases from './releases.js?v=cover-preview-1';
 
 export function readAll() {
   profile.read();
