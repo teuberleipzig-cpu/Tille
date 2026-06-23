@@ -3,10 +3,10 @@ import { bindTabs, setStatus, showScreen } from './core/dom.js';
 import { loadResidentForLogin, initAuth } from './modules/auth.js';
 import * as profile from './modules/profile.js';
 import * as links from './modules/links.js';
-import * as news from './modules/news.js';
-import * as media from './modules/media.js';
+import * as news from './modules/news.js?v=news-top-save-2';
+import * as media from './modules/media.js?v=media-preview-map-1';
 import * as releases from './modules/releases.js?v=cover-preview-1';
-import { initSave } from './modules/save.js';
+import { initSave } from './modules/save.js?v=news-save-sort-2';
 
 function renderAll() {
   profile.render();
@@ -28,12 +28,12 @@ function initModules() {
 }
 
 async function boot() {
-  console.info('[ResidentPortal]', PORTAL_VERSION, 'cover-preview-1');
+  console.info('[ResidentPortal]', PORTAL_VERSION, 'news-media-fix-2');
   initModules();
   try {
     await loadResidentForLogin();
     showScreen('loginScreen');
-    setStatus(`${PORTAL_VERSION} cover-preview-1 geladen. Bitte Code und GitHub-Token eingeben.`, 'ok');
+    setStatus(`${PORTAL_VERSION} news-media-fix-2 geladen. Bitte Code und GitHub-Token eingeben.`, 'ok');
   } catch (error) {
     showScreen('loginScreen');
     const loginButton = document.getElementById('loginBtn');
