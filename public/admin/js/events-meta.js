@@ -200,6 +200,8 @@
     installStrictArtistOffer();
     loadExtraExtension(null,'./js/save-status-ux.js?v=status-ux-1');
     loadExtraExtension('./css/residents-news.css','./js/residents-news.js?v=residents-news-2');
+    loadExtraExtension('./css/github-media.css','./js/github-media.js?v=admin-upload-previews-2');
+    loadExtraExtension(null,'./js/admin-v2-media-layout-fix.js?v=media-layout-1');
 
     const originalEnsureEvents=ensureEvents;
     window.ensureEvents=ensureEvents=function(){
