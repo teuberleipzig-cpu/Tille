@@ -21,7 +21,7 @@ function releases() {
 }
 
 function normalizeRelease(release) {
-  release.published = !!release.published;
+  release.published = release.published !== false;
   release.autoNews = release.autoNews !== false;
   release.featured = !!release.featured;
   release.releaseDate = release.releaseDate || release.date || '';
@@ -222,7 +222,7 @@ export function init() {
 
   $('releaseNewBtn').addEventListener('click', () => {
     readDetail();
-    releases().push(normalizeRelease({ published: false, autoNews: true, title: 'Neues Release', releaseType: 'EP', format: 'Digital', artists: [requireResident().name || ''], tracks: ['Neuer Track'] }));
+    releases().push(normalizeRelease({ published: true, autoNews: true, title: 'Neues Release', releaseType: 'EP', format: 'Digital', artists: [requireResident().name || ''], tracks: ['Neuer Track'] }));
     state.selectedReleaseIndex = releases().length - 1;
     markDirty();
     render();
