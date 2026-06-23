@@ -59206,6 +59206,49 @@
           "genre": ""
         }
       ]
+    },
+    {
+      "id": "2026-06-23-neues-event",
+      "date": "2026-06-26",
+      "title": "Test",
+      "color": "olive",
+      "moreUrl": "#https://teuberleipzig-cpu.github.io/Tille/public/admin/index.html?v=admin-cache-test-2",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "genre": "",
+          "items": [
+            {
+              "name": "submod",
+              "info": "Distillery, Leipzig",
+              "link": "https://soundcloud.com/submod"
+            },
+            {
+              "name": "submod",
+              "info": "Distillery, Leipzig",
+              "link": "https://soundcloud.com/submod"
+            }
+          ]
+        },
+        {
+          "label": "down:",
+          "genre": "",
+          "items": [
+            {
+              "name": "submod",
+              "info": "Distillery, Leipzig",
+              "link": "https://soundcloud.com/submod"
+            },
+            {
+              "name": "submod",
+              "info": "Distillery, Leipzig",
+              "link": "https://soundcloud.com/submod"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
