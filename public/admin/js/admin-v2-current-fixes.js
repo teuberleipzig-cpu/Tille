@@ -1,8 +1,28 @@
 /* Current Admin v2 fixes: stable previews, hidden meta tab, event list refresh after save, resident news stability, event list stability. */
 (function(){
   function onReady(fn){document.readyState==='loading'?document.addEventListener('DOMContentLoaded',fn):fn()}
+  function previewFor(value){
+    const raw=String(value||'').trim();
+    const map=window.__adminLocalMediaPreviews;
+    if(!raw||!map)return'';
+    const keys=[raw];
+    if(raw.startsWith('/Tille/public/'))keys.push('public/'+raw.split('/Tille/public/')[1]);
+    if(raw.startsWith('../events/')||raw.startsWith('../residents/'))keys.push('public/'+raw.replace(/^\.\.\//,''));
+    if(raw.startsWith('/events/')||raw.startsWith('/residents/'))keys.push('public'+raw);
+    if(raw.startsWith('events/')||raw.startsWith('residents/'))keys.push('public/'+raw);
+    if(raw.startsWith('public/')){
+      keys.push('../'+raw.replace(/^public\//,''));
+      if(raw.startsWith('public/events/'))keys.push('/events/'+raw.split('public/events/')[1]);
+      if(raw.startsWith('public/residents/'))keys.push('/residents/'+raw.split('public/residents/')[1]);
+      if(location.pathname.includes('/public/'))keys.push(location.pathname.slice(0,location.pathname.indexOf('/public/'))+'/public/'+raw.replace(/^public\//,''));
+    }
+    for(const key of keys){if(map.has(key))return map.get(key)}
+    return'';
+  }
   function adminAssetUrl(value){
     const raw=String(value||'').trim();
+    const preview=previewFor(raw);
+    if(preview)return preview;
     if(!raw||/^(https?:|data:|blob:)/.test(raw))return raw;
     if(raw.startsWith('/Tille/public/'))return raw;
     if(raw.startsWith('/events/')||raw.startsWith('/residents/'))return '..'+raw;
@@ -104,7 +124,7 @@
       let html=shown.map(({event,index})=>`<button class="item event-item ${index===state.selectedEvent?'active':''}" data-event-index="${index}"><strong>${esc(event.date||'ohne Datum')} – ${esc(event.title||'Ohne Titel')}</strong><span>${index===pinned&&state.dirty?'Neu im Entwurf · ':''}${(event.sections||[]).length} Abschnitte · ${esc(event.color||'')}</span></button>`).join('');
       if(visible.length>10)html+=`<button class="list-toggle" id="eventListToggle">${state.eventListExpanded?'Weniger anzeigen':'Mehr anzeigen ('+(visible.length-10)+')'}</button>`;
       $('eventList').innerHTML=html||'<p class="muted">Keine Events gefunden.</p>';
-      document.querySelectorAll('[data-event-index]').forEach(b=>b.onclick=()=>{readEventForm();state.selectedEvent=Number(b.dataset.eventIndex);renderAll()});
+      document.querySelectorAll('[data-event-index]').forEach(b=>b.onclick=()=>{readEventForm();state.selectedEvent=Number(b.datasetEventIndex||b.dataset.eventIndex);renderAll()});
       const t=$('eventListToggle');
       if(t)t.onclick=()=>{state.eventListExpanded=!state.eventListExpanded;renderEventList()};
     };
@@ -112,7 +132,8 @@
   function fixAllAdminImages(){
     document.querySelectorAll('img').forEach(img=>{
       const src=img.getAttribute('src')||'';
-      if(src&&!/^(https?:|data:|blob:)/.test(src))img.src=adminAssetUrl(src);
+      const fixed=adminAssetUrl(src);
+      if(src&&fixed&&src!==fixed)img.src=fixed;
     });
   }
   function fixEventPreviewImages(){
@@ -228,7 +249,7 @@
       b.style.position='fixed';b.style.left='8px';b.style.bottom='26px';b.style.zIndex='99999';b.style.padding='4px 6px';b.style.border='1px solid #111';b.style.background='#fff';b.style.color='#111';b.style.font='11px/1.2 monospace';b.style.pointerEvents='none';
       document.body.appendChild(b);
     }
-    b.textContent='admin-v2-fixes-3 geladen';
+    b.textContent='admin-v2-fixes-4 geladen';
   }
   onReady(()=>{installWrappers();hideMetaTab();installEventFilterReset();installResidentNewsFixes();fixEventPreviewImages();fixResidentPreviewImages();showBadge();clearEventFilters();state.eventListExpanded=false;renderEventList();});
 })();
