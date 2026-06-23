@@ -59209,7 +59209,7 @@
     },
     {
       "id": "2026-06-23-neues-event",
-      "date": "2026-06-23",
+      "date": "2026-11-01",
       "title": "Test",
       "color": "orange",
       "moreUrl": "https://ra.co/dj/submod/tour-dates",
@@ -59217,7 +59217,7 @@
       "description": "",
       "sections": [
         {
-          "label": "down:",
+          "label": "up:",
           "genre": "",
           "items": [
             {
@@ -59226,14 +59226,14 @@
               "link": "https://soundcloud.com/submod"
             },
             {
-              "name": "submod2",
+              "name": "submod",
               "info": "Distillery, Leipzig",
               "link": "https://soundcloud.com/submod"
             }
           ]
         },
         {
-          "label": "up:",
+          "label": "down:",
           "genre": "",
           "items": [
             {
