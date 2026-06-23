@@ -13,7 +13,7 @@
   function arrayBufferToBase64(buffer){let bin='',bytes=new Uint8Array(buffer);for(let i=0;i<bytes.length;i+=32768)bin+=String.fromCharCode.apply(null,bytes.subarray(i,i+32768));return btoa(bin)}
   function blobToBase64(blob){return blob.arrayBuffer().then(arrayBufferToBase64)}
   function headers(){return {...ghHeaders(),'Content-Type':'application/json'}}
-  function publicPathFromRepoPath(path){return '/'+path.replace(/^public\//,'')}
+  function publicPathFromRepoPath(path){return path}
   function uniqueName(prefix,ext){return slugText(prefix)+'-'+Date.now()+'.'+(ext||'jpg')}
   function fileExt(file,fallback){const name=String(file?.name||'');const m=name.match(/\.([a-z0-9]+)$/i);return (m?m[1].toLowerCase():fallback||'bin').replace(/[^a-z0-9]/g,'')||fallback||'bin'}
   function canvasToBlob(canvas){return new Promise(resolve=>canvas.toBlob(resolve,'image/jpeg',0.86))}
