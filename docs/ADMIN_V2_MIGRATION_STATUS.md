@@ -54,6 +54,13 @@ Damit gilt aktuell:
 | `public/admin/js/features/residents/residents-media-module.js` | vorbereitet, nicht geladen | Resident-Medienliste normalisieren und sortieren |
 | `public/admin/js/features/residents/residents-news-module.js` | vorbereitet, nicht geladen | Resident-News normalisieren, sortieren und bearbeiten |
 
+## Bereits vorbereitete Releases-Module
+
+| Datei | Status | Zweck |
+| --- | --- | --- |
+| `public/admin/js/features/releases/releases-list.js` | vorbereitet, nicht geladen | Release-Liste, Normalisierung, Filter, Sortierung |
+| `public/admin/js/features/releases/releases-form.js` | vorbereitet, nicht geladen | Release-Basisdaten, Draft, Validierung |
+
 ## Aktive Legacy-/Hotfix-Dateien
 
 Diese Dateien steuern weiterhin die echte Admin-V2-Oberfläche:
