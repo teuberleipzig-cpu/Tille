@@ -1,6 +1,11 @@
 /* Releases workflow for Admin v2.
    Sidebar: artists/residents. Main: releases list + release details. */
 (function(){
+  if(window.__adminReleasesWorkflowLoaded){
+    if(typeof window.renderReleasesWorkflow==='function')window.renderReleasesWorkflow();
+    return;
+  }
+  window.__adminReleasesWorkflowLoaded=true;
   function onReady(fn){document.readyState==='loading'?document.addEventListener('DOMContentLoaded',fn):fn()}
   function allResidents(){return residents().residents||[]}
   function alphaResidents(){return allResidents().map((r,i)=>({r,i})).sort((a,b)=>String(a.r.name||'').localeCompare(String(b.r.name||''),'de',{sensitivity:'base'}))}
@@ -12,9 +17,8 @@
   function raw(id){return $(id)?.value??''}
   function clean(id){return String($(id)?.value??'').trim()}
   function bool(id){return !!$(id)?.checked}
-  function slugText(value){return String(value||'media').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')||'media'}
+  function slugText(value){const h=window.AdminGithubMedia;return h&&h.slugText?h.slugText(value):String(value||'media').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')||'media'}
   function residentFolder(r){return slugText(r?.id||r?.name||'resident')}
-  function uniqueName(prefix){return slugText(prefix)+'-'+Date.now()+'.jpg'}
   function trackTitle(t){return typeof t==='string'?t:(t?.title||t?.name||'')}
   function normalizeTracks(rel){
     const fromTracks=Array.isArray(rel.tracks)?rel.tracks.map(trackTitle).filter(Boolean):splitLines(rel.tracks);
@@ -112,14 +116,41 @@
   function downloadSampleCsv(){const r=selectedResident();const row=[r?.id||'resident-id',r?.name||'Artist Name','true','false','false',new Date().toISOString().slice(0,10),new Date().getFullYear(),'Release Titel','Label','EP','Digital','DE','Artist 1|Artist 2','Track 1|Track 2','','','','','','Beschreibung'].map(csvEscape).join(',');const csv='residentId,residentName,published,autoNews,featured,releaseDate,year,title,label,releaseType,format,country,artists,tracks,discogsUrl,beatportUrl,bandcampUrl,labelUrl,autoNewsText,description\n'+row+'\n';const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));a.download='releases-import.csv';a.click();URL.revokeObjectURL(a.href)}
   function handleCsvImport(e){setStatus('wfStatus','CSV-Import ist im alten Modul noch vorhanden; ich passe ihn im nächsten Schritt an diese Ansicht an.','warn');e.target.value=''}
   function downloadResidents(){readDetail();const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([residentsJson()],{type:'application/json'}));a.download='residents.json';a.click();URL.revokeObjectURL(a.href)}
-  function cfg(){const owner=$('ghOwner')?.value?.trim(),repo=$('ghRepo')?.value?.trim(),branch=$('ghBranch')?.value?.trim(),token=$('ghToken')?.value?.trim();if(!owner||!repo||!branch)throw new Error('GitHub Owner/Repo/Branch fehlen.');if(!token)throw new Error('GitHub Token fehlt.');return{owner,repo,branch,token}}
-  function headers(){return {...ghHeaders(),'Content-Type':'application/json'}}
-  function bufferToBase64(buffer){let bin='',bytes=new Uint8Array(buffer);for(let i=0;i<bytes.length;i+=32768)bin+=String.fromCharCode.apply(null,bytes.subarray(i,i+32768));return btoa(bin)}
-  function canvasBlob(canvas){return new Promise(resolve=>canvas.toBlob(resolve,'image/jpeg',0.86))}
-  async function imageBlob(file,ratio){return new Promise((resolve,reject)=>{const img=new Image(),url=URL.createObjectURL(file);img.onload=async()=>{const s=1000,c=document.createElement('canvas'),ctx=c.getContext('2d'),sourceRatio=img.width/img.height;let sx=0,sy=0,sw=img.width,sh=img.height;if(ratio){if(sourceRatio>ratio){sw=img.height*ratio;sx=(img.width-sw)/2}else{sh=img.width/ratio;sy=(img.height-sh)/2}}else{const side=Math.min(img.width,img.height);sx=(img.width-side)/2;sy=(img.height-side)/2;sw=side;sh=side}c.width=s;c.height=ratio?Math.round(s/ratio):s;ctx.drawImage(img,sx,sy,sw,sh,0,0,c.width,c.height);URL.revokeObjectURL(url);resolve(await canvasBlob(c))};img.onerror=()=>reject(new Error('Bild konnte nicht gelesen werden.'));img.src=url})}
-  async function uploadImage(file,repoPath,ratio){const c=cfg(),blob=await imageBlob(file,ratio),content=bufferToBase64(await blob.arrayBuffer()),api=repoPath.split('/').map(encodeURIComponent).join('/'),url='https://api.github.com/repos/'+encodeURIComponent(c.owner)+'/'+encodeURIComponent(c.repo)+'/contents/'+api;const res=await fetch(url,{method:'PUT',headers:headers(),body:JSON.stringify({message:'Upload release media '+repoPath,content,branch:c.branch})});const out=await res.json().catch(()=>({}));if(!res.ok)throw new Error(out.message||('Upload fehlgeschlagen '+res.status));return '/'+repoPath.replace(/^public\//,'')}
-  function dropzone(id,title,subtitle,onFile){const z=document.createElement('div');z.id=id;z.className='media-dropzone';z.innerHTML='<strong>'+title+'</strong><span>'+subtitle+'</span><div class="media-upload-status"></div><input class="hidden" type="file" accept="image/*">';const input=z.querySelector('input'),st=z.querySelector('.media-upload-status');z.onclick=()=>input.click();input.onchange=e=>{const f=e.target.files&&e.target.files[0];if(f)onFile(f,st);e.target.value=''};['dragenter','dragover'].forEach(evt=>z.addEventListener(evt,e=>{e.preventDefault();z.classList.add('dragover')}));['dragleave','drop'].forEach(evt=>z.addEventListener(evt,e=>{e.preventDefault();z.classList.remove('dragover')}));z.addEventListener('drop',e=>{const f=e.dataTransfer.files&&e.dataTransfer.files[0];if(f)onFile(f,st)});return z}
-  function mediaStatus(el,msg,type){if(!el)return;el.textContent=msg;el.className='media-upload-status '+(type||'warn')}
-  function installReleaseCoverDrop(){const slot=$('wfCoverDrop');if(!slot)return;slot.innerHTML='';slot.appendChild(dropzone('wfCoverDropzone','Release-Cover hier ablegen','Wird nach GitHub hochgeladen und diesem Release zugeordnet.',async(file,st)=>{try{mediaStatus(st,'Lade Cover nach GitHub...','warn');readDetail();const r=selectedResident(),rel=selectedRelease();const path='public/residents/media/'+residentFolder(r)+'/releases/'+uniqueName((rel.title||'release')+'-cover');const url=await uploadImage(file,path,1);rel.coverUrl=url;if($('wfCoverPreview'))$('wfCoverPreview').src=url;markDirty();mediaStatus(st,'Hochgeladen: '+url,'ok')}catch(err){mediaStatus(st,err.message,'err')}}))}
-  onReady(()=>{const oldSetView=setView;window.setView=setView=function(v){oldSetView(v);renderSidebarArtists();if(v==='releases')setTimeout(renderWorkflow,0)};window.renderReleases=renderReleases=renderWorkflow;renderSidebarArtists();renderWorkflow()})
+  function installReleaseCoverDrop(){
+    const slot=$('wfCoverDrop');
+    const helper=window.AdminGithubMedia;
+    if(!slot||!helper)return;
+    if($('wfCoverDropzone'))return;
+    const zone=helper.makeDropzone('wfCoverDropzone','Release-Cover hier ablegen','Wird nach GitHub hochgeladen und diesem Release zugeordnet.',async(file,st)=>{
+      const local=helper.localFilePreview(file);
+      try{
+        helper.status(st,'Lade Cover nach GitHub...','warn');
+        readDetail();
+        const r=selectedResident(),rel=selectedRelease();
+        if(!r||!rel)throw new Error('Kein Release ausgewählt.');
+        const path='public/residents/media/'+residentFolder(r)+'/releases/'+helper.uniqueName((rel.title||'release')+'-cover');
+        const url=await helper.uploadImage(file,path,1,1000,1000);
+        helper.rememberPreview(url,local);
+        rel.coverUrl=url;
+        if($('wfCoverPreview'))$('wfCoverPreview').src=local;
+        markDirty();
+        helper.status(st,'Hochgeladen: '+url+' · lokale Vorschau aktiv','ok');
+      }catch(err){helper.status(st,err.message,'err')}
+    },'image/*');
+    slot.innerHTML='';
+    slot.appendChild(zone);
+  }
+  window.renderReleasesWorkflow=renderWorkflow;
+  window.renderReleases=renderWorkflow;
+  window.installReleaseWorkflowCoverDrop=installReleaseCoverDrop;
+  onReady(()=>{
+    document.addEventListener('admin-github-media-ready',installReleaseCoverDrop);
+    if(!window.__adminReleasesWorkflowSetViewWrapped){
+      window.__adminReleasesWorkflowSetViewWrapped=true;
+      const oldSetView=setView;
+      window.setView=setView=function(v){oldSetView(v);renderSidebarArtists();if(v==='releases')setTimeout(renderWorkflow,0)};
+    }
+    renderSidebarArtists();
+    renderWorkflow();
+  });
 })();
