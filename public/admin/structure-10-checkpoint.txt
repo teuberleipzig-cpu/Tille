@@ -1,0 +1,19 @@
+Admin v2 structure checkpoint after events-meta transition loader hardening.
+
+Expected visible badge:
+admin-v2-structure-10 geladen
+
+Structural state:
+- events-meta.js is duplicate-load guarded.
+- events-meta.js exports loadControlledAdminModules, installEventImageUpload, renderEventMeta and readEventMeta.
+- events-meta.js wrapper layers are individually guarded.
+- events-meta.js uses canonical asset detection so query-string changes do not create duplicate script/style tags.
+- Controlled loader cache keys now point to the current guarded modules.
+- Badge shim is still badge-only and now uses structure 10.
+
+Still open:
+- index.html still contains old direct script loads.
+- events-meta.js is still both transition loader and event meta module, although now guarded.
+- A full end-to-end test matrix is still pending before calling the admin 100% stable.
+
+No data JSON files are part of this checkpoint.
