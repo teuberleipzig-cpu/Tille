@@ -89,6 +89,10 @@
     const photosSlot=$('residentPhotosDropSlot');
     if(photos&&photosSlot&&photos.parentElement!==photosSlot)photosSlot.appendChild(photos);
   }
+  function refreshUploadDropzones(){
+    if(window.AdminGithubMedia&&typeof window.AdminGithubMedia.enhanceResidentMedia==='function')window.AdminGithubMedia.enhanceResidentMedia();
+    placeExistingDropzones();
+  }
   function injectMediaUi(){
     const panel=$('resident-tab-media');
     if(!panel) return;
@@ -106,7 +110,7 @@
       if(file)file.onchange=handleResidentPhotoUpload;
       $('residentEmbedsTextarea').addEventListener('input',()=>{readResidentMedia();markDirty();});
     }
-    placeExistingDropzones();
+    refreshUploadDropzones();
   }
   function renderResidentMedia(){
     injectMediaUi();
@@ -119,7 +123,7 @@
     embedsEl.value=getEmbeds(r).join('\n');
     listEl.innerHTML=photos.map((p,i)=>'<div class="resident-photo-card"><img src="'+esc(assetUrl(p.url||''))+'" alt=""><textarea class="input media-hidden-url" data-photo-url="'+i+'">'+esc(p.url||'')+'</textarea><div class="tools" style="margin-top:10px"><button class="tool" data-photo-move="'+i+':-1">←</button><button class="tool" data-photo-move="'+i+':1">→</button><button class="tool danger" data-photo-remove="'+i+'">Löschen</button></div></div>').join('')||'<p class="muted">Noch keine Fotos.</p>';
     wirePhotos();
-    placeExistingDropzones();
+    refreshUploadDropzones();
   }
   function wirePhotos(){
     document.querySelectorAll('[data-photo-url]').forEach(el=>{el.oninput=()=>{const r=currentResident();if(!r)return;normalizePhotos(r)[Number(el.dataset.photoUrl)].url=el.value;markDirty();};});
