@@ -1,0 +1,29 @@
+Admin v2 structure checkpoint after adding the read-only walkthrough test.
+
+Expected visible badge:
+admin-v2-structure-15 geladen
+
+New read-only tool:
+AdminV2WalkthroughTest.run()
+
+Purpose:
+- Exercises Admin view switching through setView.
+- Exercises Event tabs through setEventTab.
+- Exercises Resident tabs through setResidentTab.
+- Exercises release workflow rendering.
+- Restores the previous app state after the test.
+- Does not call save functions.
+- Does not write events.json.
+- Does not write residents.json.
+
+Health check now also reports:
+- walkthroughTestLoaded
+- walkthroughOk
+- walkthroughFailedNames
+
+Expected after hard reload:
+- AdminV2HealthCheck.run().ok is true.
+- AdminV2SmokeTest.run().ok is true.
+- AdminV2WalkthroughTest.run().ok is true.
+
+No data JSON files are part of this checkpoint.
