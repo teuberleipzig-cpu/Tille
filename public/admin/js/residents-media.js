@@ -70,6 +70,11 @@
     else r.embeds=[];
     return r.embeds;
   }
+  function residentFolder(r){
+    const helper=window.AdminGithubMedia;
+    const source=r?.id||r?.name||'resident';
+    return helper&&helper.slugText?helper.slugText(source):String(source).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')||'resident';
+  }
   function hideLegacyMediaShell(){
     const panel=$('resident-tab-media');
     if(!panel)return;
@@ -89,8 +94,69 @@
     const photosSlot=$('residentPhotosDropSlot');
     if(photos&&photosSlot&&photos.parentElement!==photosSlot)photosSlot.appendChild(photos);
   }
+  function installUploadDropzones(){
+    const helper=window.AdminGithubMedia;
+    const panel=$('resident-tab-media');
+    if(!helper||!panel)return;
+    helper.hideFieldFor?.('resImage');
+    helper.hideFieldFor?.('resPresskit');
+    const oldPortrait=$('residentPortraitGithubDrop');
+    if(oldPortrait)oldPortrait.remove();
+
+    if(!$('residentPresskitGithubDrop')){
+      const zone=helper.makeDropzone('residentPresskitGithubDrop','Presskit hier ablegen','PDF oder ZIP wird nach GitHub hochgeladen und als Pfad gespeichert.',async(file,st)=>{
+        try{
+          helper.status(st,'Lade Presskit nach GitHub...','warn');
+          readResidentForm();
+          const r=currentResident();
+          if(!r)throw new Error('Kein Resident ausgewählt.');
+          const ext=helper.fileExt(file,'zip');
+          const path='public/residents/media/'+residentFolder(r)+'/presskit/'+helper.uniqueName('presskit',ext);
+          const url=await helper.uploadRawFile(file,path);
+          helper.setFieldValue('resPresskit',url);
+          readResidentForm();
+          markDirty();
+          helper.status(st,'Hochgeladen: '+url,'ok');
+        }catch(err){helper.status(st,err.message,'err')}
+      },'.pdf,.zip,application/pdf,application/zip,application/x-zip-compressed');
+      const slot=$('residentPresskitSlot');
+      if(slot)slot.appendChild(zone);
+      else panel.appendChild(zone);
+    }
+
+    if(!$('residentPhotosGithubDrop')){
+      const zone=helper.makeDropzone('residentPhotosGithubDrop','Bild hier ablegen','Wird nach GitHub hochgeladen und der Fotoliste hinzugefügt.',async(file,st)=>{
+        const local=helper.localFilePreview(file);
+        try{
+          helper.status(st,'Lade Foto nach GitHub...','warn');
+          readResidentForm();
+          const r=currentResident();
+          if(!r)throw new Error('Kein Resident ausgewählt.');
+          const path='public/residents/media/'+residentFolder(r)+'/photos/'+helper.uniqueName('photo');
+          const url=await helper.uploadImage(file,path,16/9,1600,900);
+          helper.rememberPreview(url,local);
+          normalizePhotos(r).push({url});
+          markDirty();
+          renderResidentMedia();
+          const imgs=document.querySelectorAll('#residentPhotosList img,.resident-photo-card img');
+          if(imgs.length)imgs[imgs.length-1].src=local;
+          helper.status(st,'Hochgeladen: '+url+' · lokale Vorschau aktiv','ok');
+        }catch(err){helper.status(st,err.message,'err')}
+      },'image/*');
+      const slot=$('residentPhotosDropSlot'),list=$('residentPhotosList');
+      if(slot)slot.appendChild(zone);
+      else if(list)list.before(zone);
+      else panel.appendChild(zone);
+    }
+    const add=$('addResidentPhotoUrlBtn');
+    if(add)add.classList.add('media-hidden-url');
+    const upload=$('uploadResidentPhotoBtn');
+    if(upload)upload.classList.add('media-hidden-url');
+    document.querySelectorAll('[data-photo-url]').forEach(el=>el.classList.add('media-hidden-url'));
+    placeExistingDropzones();
+  }
   function refreshUploadDropzones(){
-    if(window.AdminGithubMedia&&typeof window.AdminGithubMedia.enhanceResidentMedia==='function')window.AdminGithubMedia.enhanceResidentMedia();
+    installUploadDropzones();
     placeExistingDropzones();
   }
   function injectMediaUi(){
@@ -158,6 +224,7 @@
   }
   onReady(()=>{
     injectMediaUi();
+    document.addEventListener('admin-github-media-ready',refreshUploadDropzones);
     const originalEnsureResidents=ensureResidents;
     window.ensureResidents=ensureResidents=function(){originalEnsureResidents();(residents().residents||[]).forEach(r=>{normalizePhotos(r);getEmbeds(r);});};
     const originalRenderResidentForm=renderResidentForm;
