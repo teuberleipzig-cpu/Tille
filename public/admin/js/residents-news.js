@@ -104,12 +104,12 @@
   }
   onReady(()=>{
     injectResidentsNewsUi();
-    loadExtraExtension('./css/residents-media.css','./js/residents-media.js?v=resident-media-preview-map-1');
+    loadExtraExtension('./css/residents-media.css','./js/residents-media.js?v=resident-media-public-path-1');
     loadExtraExtension('./css/textareas.css','./js/textareas.js');
     loadExtraExtension('./css/releases-admin.css','./js/releases-core.js');
     loadExtraExtension(null,'./js/releases-extra.js');
     loadExtraExtension('./css/github-media.css','./js/github-media.js?v=admin-upload-paths-1');
-    loadExtraExtension(null,'./js/auto-github-load.js?v=debug-save-2');
+    loadExtraExtension(null,'./js/auto-github-load.js?v=debug-save-3-sanitize-residents');
     loadExtraExtension('./css/residents-order.css','./js/residents-order.js');
     loadExtraExtension('./css/releases-workflow.css','./js/releases-workflow.js');
     loadExtraExtension('./css/resident-access.css','./extensions/resident-access.js?v=resident-access-2');
