@@ -187,7 +187,7 @@
   function sanitizeResidentsBeforeSave(){
     let removed=0;
     const residentMediaKeys=['imageUrl','image','photo','portrait','presskitUrl','presskit','pressKitUrl'];
-    const releaseMediaKeys=['coverUrl','cover','imageUrl','image','thumbnail','thumbnailUrl'];
+    const releaseMediaKeys=['coverUrl','cover','coverImage','imageUrl','image','thumbnail','thumbnailUrl'];
     (residents().residents||[]).forEach(r=>{
       if(Array.isArray(r.photoList)){const out=sanitizeResidentMediaList(r.photoList);r.photoList=out.items;removed+=out.removed;}
       if(Array.isArray(r.photos)){const out=sanitizeResidentMediaList(r.photos);r.photos=out.items;removed+=out.removed;}
@@ -287,7 +287,7 @@
     log('rebindButtons:done',{topLoad:!!topLoad,eventSave:!!evSave,artistSave:!!artistSave,topSave:!!topSave,saveEventsFn:window.saveEventsToGithub?.name||'anonymous'});
   }
   onReady(()=>{
-    log('autoGithubLoad:init',{script:'auto-github-load.js',debugVersion:'debug-save-4-strict-media-sanitize',href:location.href});
+    log('autoGithubLoad:init',{script:'auto-github-load.js',debugVersion:'debug-save-5-coverimage-sanitize',href:location.href});
     rebindButtons();
     setTimeout(()=>{rebindButtons();autoLoadGithubData()},500);
     setTimeout(rebindButtons,1500);
