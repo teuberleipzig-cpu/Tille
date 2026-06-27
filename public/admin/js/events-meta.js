@@ -1,7 +1,7 @@
 /* Event meta/calendar, JSON tools and controlled Admin v2 module loading.
    Loaded after admin-app.js. */
 (function(){
-  const ADMIN_BUILD_TEXT='admin-v2-structure-1 geladen';
+  const ADMIN_BUILD_TEXT='admin-v2-structure-2 geladen';
   function onReady(fn){
     if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',fn);
     else fn();
@@ -195,8 +195,9 @@
 
   function loadControlledAdminModules(){
     loadExtraExtension(null,'./js/save-status-ux.js?v=status-ux-1');
+    loadExtraExtension('./css/github-media.css','./js/github-media.js?v=github-media-no-interval-1');
     loadExtraExtension('./css/residents-news.css','./js/residents-news.js?v=residents-news-only-news-1');
-    loadExtraExtension('./css/residents-media.css','./js/residents-media.js?v=resident-media-structure-restore-2');
+    loadExtraExtension('./css/residents-media.css','./js/residents-media.js?v=resident-media-upload-helper-bind-1');
     loadExtraExtension('./css/textareas.css','./js/textareas.js');
     loadExtraExtension('./css/releases-admin.css','./js/releases-core.js');
     loadExtraExtension(null,'./js/releases-extra.js');
