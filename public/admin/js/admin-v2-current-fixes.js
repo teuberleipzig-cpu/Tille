@@ -1,7 +1,7 @@
 /* Retired Admin v2 current-fixes compatibility shim.
    Scope: visible build marker, read-only health/smoke/walkthrough/write-readiness/snapshot/baseline/preflight checks, and safe display-only asset loading. No observers, no save/load patches. */
 (function(){
-  const TEXT='admin-v2-structure-18 geladen';
+  const TEXT='admin-v2-structure-19 geladen';
   function setBadge(){
     let b=document.getElementById('adminBuildBadge');
     if(!b){
@@ -22,9 +22,9 @@
     b.textContent=TEXT;
   }
   function installBadgeWrapper(){
-    if(window.__adminV2Structure18BadgeWrapped)return;
+    if(window.__adminV2Structure19BadgeWrapped)return;
     if(typeof window.renderAll!=='function')return;
-    window.__adminV2Structure18BadgeWrapped=true;
+    window.__adminV2Structure19BadgeWrapped=true;
     const originalRenderAll=window.renderAll;
     window.renderAll=function(){
       const result=originalRenderAll.apply(this,arguments);
@@ -41,13 +41,13 @@
     if(Array.from(document.querySelectorAll('script[src]')).some(script=>canonical(script.getAttribute('src'))===wanted))return;
     const script=document.createElement('script');
     script.src=src;
-    script.defer=true;
+    script.async=false;
     document.body.appendChild(script);
   }
   function loadEventAssets(){loadScriptOnce('./js/event-assets.js?v=event-assets-admin-paths-1')}
   function loadSmokeTest(){loadScriptOnce('./js/admin-smoke-test.js?v=admin-smoke-test-state-1')}
   function loadWalkthroughTest(){loadScriptOnce('./js/admin-walkthrough-test.js?v=admin-walkthrough-test-1')}
-  function loadWriteReadiness(){loadScriptOnce('./js/admin-write-readiness.js?v=admin-write-readiness-1')}
+  function loadWriteReadiness(){loadScriptOnce('./js/admin-write-readiness.js?v=admin-write-readiness-quiet-1')}
   function loadSnapshotReport(){loadScriptOnce('./js/admin-snapshot-report.js?v=admin-snapshot-report-1')}
   function loadWriteBaseline(){loadScriptOnce('./js/admin-write-baseline.js?v=admin-write-baseline-1')}
   function loadSavePreflight(){loadScriptOnce('./js/admin-save-preflight.js?v=admin-save-preflight-1')}
@@ -58,7 +58,7 @@
     const styleDuplicates=duplicates(countBy(styles,s=>canonical(s.getAttribute('href'))));
     const smoke=window.AdminV2SmokeTest&&typeof window.AdminV2SmokeTest.run==='function'?window.AdminV2SmokeTest.run():null;
     const walkthrough=window.AdminV2WalkthroughTest&&typeof window.AdminV2WalkthroughTest.run==='function'?window.AdminV2WalkthroughTest.run():null;
-    const writeReadiness=window.AdminV2WriteReadiness&&typeof window.AdminV2WriteReadiness.run==='function'?window.AdminV2WriteReadiness.run():null;
+    const writeReadiness=window.AdminV2WriteReadiness&&typeof window.AdminV2WriteReadiness.run==='function'?window.AdminV2WriteReadiness.run({quiet:true}):null;
     const snapshot=window.AdminV2SnapshotReport&&typeof window.AdminV2SnapshotReport.run==='function'?window.AdminV2SnapshotReport.run():null;
     const checks={
       badgeText:document.getElementById('adminBuildBadge')?.textContent||'',
@@ -106,7 +106,7 @@
     loadSnapshotReport();
     loadWriteBaseline();
     loadSavePreflight();
-    setTimeout(runHealthCheck,0);
+    setTimeout(runHealthCheck,600);
   }
   window.AdminBuildMarker={text:TEXT,set:setBadge};
   window.AdminV2HealthCheck={run:runHealthCheck};
