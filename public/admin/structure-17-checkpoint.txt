@@ -1,0 +1,30 @@
+Admin v2 structure checkpoint after write-test preparation.
+
+Expected visible badge:
+admin-v2-structure-17 geladen
+
+New read-only tools:
+- AdminV2WriteReadiness.run()
+- AdminV2SnapshotReport.run()
+
+Purpose:
+- Verify that controlled browser write tests can be started safely.
+- Verify save/load functions exist without calling them.
+- Verify JSON serialization before writing.
+- Verify GitHub SHAs are present before writing.
+- Verify dirty/conflict state before writing.
+- Verify upload helper functions exist.
+- Produce a pre-write snapshot report with counts, SHAs, selected records and JSON hashes.
+
+Important:
+- No save function is called by these tools.
+- No GitHub write API is called by these tools.
+- events.json is not modified by this checkpoint.
+- residents.json is not modified by this checkpoint.
+
+Added runbook:
+- public/admin/WRITE_TEST_RUNBOOK.md
+
+Next phase:
+- Run all read-only checks in the browser.
+- If green, begin explicit controlled browser write tests in the runbook order.
