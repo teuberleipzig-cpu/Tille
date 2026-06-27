@@ -1,22 +1,61 @@
 /* Residents news editor extension for Admin v2. */
 (function(){
+  const ADMIN_BUILD_BADGE_TEXT='admin-v2-fixes-5 geladen';
   function onReady(fn){
     if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',fn);
     else fn();
   }
+  function setAdminBuildBadgeText(){
+    let b=$('adminBuildBadge');
+    if(!b){
+      b=document.createElement('div');
+      b.id='adminBuildBadge';
+      b.style.position='fixed';
+      b.style.left='8px';
+      b.style.bottom='26px';
+      b.style.zIndex='99999';
+      b.style.padding='4px 6px';
+      b.style.border='1px solid #111';
+      b.style.background='#fff';
+      b.style.color='#111';
+      b.style.font='11px/1.2 monospace';
+      b.style.pointerEvents='none';
+      document.body.appendChild(b);
+    }
+    b.textContent=ADMIN_BUILD_BADGE_TEXT;
+  }
+  function installAdminBuildBadgeOverride(){
+    setAdminBuildBadgeText();
+    if(window.__adminBuildBadgeOverrideInstalled)return;
+    if(typeof window.renderAll!=='function')return;
+    window.__adminBuildBadgeOverrideInstalled=true;
+    const originalRenderAll=window.renderAll;
+    window.renderAll=function(){
+      const out=originalRenderAll.apply(this,arguments);
+      setAdminBuildBadgeText();
+      return out;
+    };
+  }
   function loadExtraExtension(cssPath,jsPath){
-    if(cssPath && !document.querySelector('link[href="'+cssPath+'"]')){
+    if(cssPath){
+      const existingLink=document.querySelector('link[href="'+cssPath+'"]');
+      if(existingLink)return existingLink;
       const link=document.createElement('link');
       link.rel='stylesheet';
       link.href=cssPath;
       document.head.appendChild(link);
+      return link;
     }
-    if(jsPath && !document.querySelector('script[src="'+jsPath+'"]')){
+    if(jsPath){
+      const existingScript=document.querySelector('script[src="'+jsPath+'"]');
+      if(existingScript)return existingScript;
       const script=document.createElement('script');
       script.src=jsPath;
       script.defer=true;
       document.body.appendChild(script);
+      return script;
     }
+    return null;
   }
   function today(){return new Date().toISOString().slice(0,10)}
   function normalizeNews(r){
@@ -104,23 +143,27 @@
   }
   onReady(()=>{
     injectResidentsNewsUi();
-    loadExtraExtension('./css/residents-media.css','./js/residents-media.js?v=resident-media-public-path-1');
+    loadExtraExtension('./css/residents-media.css','./js/residents-media.js?v=resident-media-delete-404-safe-1');
     loadExtraExtension('./css/textareas.css','./js/textareas.js');
     loadExtraExtension('./css/releases-admin.css','./js/releases-core.js');
     loadExtraExtension(null,'./js/releases-extra.js');
     loadExtraExtension('./css/github-media.css','./js/github-media.js?v=admin-upload-paths-1');
-    loadExtraExtension(null,'./js/auto-github-load.js?v=debug-save-safe-restore-1');
+    const fixesScript=loadExtraExtension(null,'./js/auto-github-load.js?v=debug-save-safe-restore-1');
     loadExtraExtension('./css/residents-order.css','./js/residents-order.js');
     loadExtraExtension('./css/releases-workflow.css','./js/releases-workflow.js');
     loadExtraExtension('./css/resident-access.css','./extensions/resident-access.js?v=resident-access-2');
-    loadExtraExtension(null,'./js/admin-v2-current-fixes.js?v=admin-v2-fixes-1');
+    const currentFixesScript=loadExtraExtension(null,'./js/admin-v2-current-fixes.js?v=admin-v2-fixes-5');
+    if(fixesScript)fixesScript.addEventListener('load',installAdminBuildBadgeOverride,{once:true});
+    if(currentFixesScript)currentFixesScript.addEventListener('load',installAdminBuildBadgeOverride,{once:true});
+    installAdminBuildBadgeOverride();
     const originalEnsureResidents=ensureResidents;
     window.ensureResidents=ensureResidents=function(){originalEnsureResidents();(residents().residents||[]).forEach(normalizeNews);};
     const originalRenderResidentForm=renderResidentForm;
-    window.renderResidentForm=renderResidentForm=function(){injectResidentsNewsUi();originalRenderResidentForm();renderResidentNews();};
+    window.renderResidentForm=renderResidentForm=function(){injectResidentsNewsUi();originalRenderResidentForm();renderResidentNews();setAdminBuildBadgeText();};
     const originalReadResidentForm=readResidentForm;
     window.readResidentForm=readResidentForm=function(){originalReadResidentForm();readResidentNews();};
     ensureResidents();
     renderResidentNews();
+    setAdminBuildBadgeText();
   });
 })();
