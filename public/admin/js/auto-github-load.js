@@ -168,6 +168,27 @@
     if(!ok){setStatus(statusId,'Speichern braucht einen GitHub Token. Laden/Bearbeiten geht ohne Token.','err');return true}
     return false;
   }
+  function isInlineMediaValue(value){return /^(data:|blob:)/.test(String(value||''))}
+  function sanitizeResidentMediaList(list){
+    let removed=0;
+    const source=Array.isArray(list)?list:[];
+    const items=[];
+    source.forEach(item=>{
+      const url=typeof item==='string'?item:(item?.url||item?.src||item?.imageUrl||'');
+      if(!url||isInlineMediaValue(url)){removed++;return;}
+      items.push(typeof item==='string'?{url}:{...item,url});
+    });
+    return{items,removed};
+  }
+  function sanitizeResidentsBeforeSave(){
+    let removed=0;
+    (residents().residents||[]).forEach(r=>{
+      if(Array.isArray(r.photoList)){const out=sanitizeResidentMediaList(r.photoList);r.photoList=out.items;removed+=out.removed;}
+      if(Array.isArray(r.photos)){const out=sanitizeResidentMediaList(r.photos);r.photos=out.items;removed+=out.removed;}
+    });
+    log('sanitizeResidentsBeforeSave:done',{removedInlineMedia:removed,residentsCount:residents().residents?.length||0});
+    return removed;
+  }
   function safeReadEvents(){
     log('safeReadEvents:before',eventSnapshot());
     try{readEventForm();log('safeReadEvents:readEventForm:ok')}catch(e){warn('safeReadEvents:readEventForm:error',{message:e.message})}
@@ -208,8 +229,12 @@
     try{
       setStatus('residentStatus','Speichere Residents...','warn');
       safeReadResidents();
+      const removedInlineMedia=sanitizeResidentsBeforeSave();
       if(!residents().residents?.length) throw new Error('Residents: residents[] ist leer. Speichern abgebrochen.');
-      const saved=await putJsonFile(val('residentsPath'),residentsJson(),'Update residents data from admin v2');
+      const jsonText=residentsJson();
+      log('saveResidentsStay:jsonReady',{residentsCount:residents().residents?.length||0,jsonLength:jsonText.length,removedInlineMedia,hasDataUrl:jsonText.includes('data:'),hasBlobUrl:jsonText.includes('blob:')});
+      if(jsonText.includes('data:')||jsonText.includes('blob:')) throw new Error('Residents enthalten noch lokale data/blob-Medien. Bitte neu laden und nur GitHub-Upload verwenden.');
+      const saved=await putJsonFile(val('residentsPath'),jsonText,'Update residents data from admin v2');
       state.residentsSha=saved.sha;
       state.loadedResidentCount=residents().residents.length;
       state.dirty=false;
@@ -238,7 +263,7 @@
     log('rebindButtons:done',{topLoad:!!topLoad,eventSave:!!evSave,artistSave:!!artistSave,topSave:!!topSave,saveEventsFn:window.saveEventsToGithub?.name||'anonymous'});
   }
   onReady(()=>{
-    log('autoGithubLoad:init',{script:'auto-github-load.js',debugVersion:'debug-save-2-blob-load',href:location.href});
+    log('autoGithubLoad:init',{script:'auto-github-load.js',debugVersion:'debug-save-3-sanitize-residents',href:location.href});
     rebindButtons();
     setTimeout(()=>{rebindButtons();autoLoadGithubData()},500);
     setTimeout(rebindButtons,1500);
