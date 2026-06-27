@@ -14,11 +14,27 @@
     try{const text=typeof fn==='function'?fn():'';JSON.parse(text);return check(label+' JSON parseable',true,'bytes='+text.length)}
     catch(e){return check(label+' JSON parseable',false,e.message)}
   }
+  function expectedView(target){
+    if(target==='events')return 'events';
+    if(target==='artists')return 'artists';
+    if(target==='residents'||target==='resident-media')return 'residents';
+    if(target==='releases'||target==='release-cover')return 'releases';
+    return '';
+  }
+  function storedBaseline(){
+    try{return JSON.parse(sessionStorage.getItem('adminV2WriteBaseline')||'null')}
+    catch(e){return null}
+  }
   function run(target){
     const s=appState();
+    const baseline=storedBaseline();
+    const wantedView=expectedView(target);
     const checks=[
       check('Target provided',!!target,'target='+(target||'')),
       check('Target is known',['events','artists','residents','resident-media','releases','release-cover'].includes(target||''),'target='+(target||'')),
+      check('Current view matches target',!wantedView||s?.view===wantedView,'view='+(s?.view||'')+' target='+wantedView),
+      check('Clean baseline exists',!!baseline),
+      check('Baseline was clean',baseline?baseline.dirty===false:false,'baselineDirty='+(baseline?baseline.dirty:'missing')),
       check('Token present',tokenPresent()),
       check('App state reachable',!!s),
       check('Sync state loaded',s?.syncState==='loaded','syncState='+(s?.syncState||'')),
