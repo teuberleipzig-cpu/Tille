@@ -6,10 +6,15 @@
   }
   function assetUrl(value){
     const url=String(value||'');
-    if(!url||/^(https?:|data:|blob:)/.test(url))return url;
+    if(!url)return url;
+    const previews=window.__adminLocalMediaPreviews;
+    if(previews&&previews.has(url))return previews.get(url);
+    if(/^(https?:|data:|blob:)/.test(url))return url;
     if(url.startsWith('/residents/')&&location.pathname.includes('/public/')){
       const prefix=location.pathname.slice(0,location.pathname.indexOf('/public/'))+'/public';
-      return prefix+url;
+      const resolved=prefix+url;
+      if(previews&&previews.has(resolved))return previews.get(resolved);
+      return resolved;
     }
     return url;
   }
