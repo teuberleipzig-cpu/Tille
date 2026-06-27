@@ -1,6 +1,11 @@
 /* GitHub-backed media helper functions for Admin v2.
    Scope: generic upload/dropzone utilities only. No feature-specific rendering. */
 (function(){
+  if(window.__adminGithubMediaGenericLoaded){
+    document.dispatchEvent(new Event('admin-github-media-ready'));
+    return;
+  }
+  window.__adminGithubMediaGenericLoaded=true;
   window.__adminLocalMediaPreviews = window.__adminLocalMediaPreviews || new Map();
 
   function slugText(value){
