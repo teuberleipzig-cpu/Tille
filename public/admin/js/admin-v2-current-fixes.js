@@ -1,7 +1,7 @@
 /* Retired Admin v2 current-fixes compatibility shim.
    Scope: visible build marker only. No observers, no save/load patches. */
 (function(){
-  const TEXT='admin-v2-structure-9 geladen';
+  const TEXT='admin-v2-structure-10 geladen';
   function setBadge(){
     let b=document.getElementById('adminBuildBadge');
     if(!b){
@@ -22,13 +22,13 @@
     b.textContent=TEXT;
   }
   function installBadgeWrapper(){
-    if(window.__adminV2Structure9BadgeWrapped)return;
+    if(window.__adminV2Structure10BadgeWrapped)return;
     if(typeof window.renderAll!=='function')return;
-    window.__adminV2Structure9BadgeWrapped=true;
+    window.__adminV2Structure10BadgeWrapped=true;
     const originalRenderAll=window.renderAll;
     window.renderAll=function(){
       const result=originalRenderAll.apply(this,arguments);
-      setTimeout(setBadge,0);
+      setBadge();
       return result;
     };
   }
