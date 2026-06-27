@@ -9,10 +9,7 @@
 
   function exists(selector){return !!document.querySelector(selector)}
   function count(selector){return document.querySelectorAll(selector).length}
-  function visible(id){
-    const el=document.getElementById(id);
-    return !!el && !el.classList.contains('hidden');
-  }
+  function appState(){try{return typeof state!=='undefined'?state:null}catch(e){return null}}
   function check(name,pass,detail){return{name,pass:!!pass,detail:detail||''}}
   function scriptDuplicates(){
     const seen=new Map();
@@ -66,11 +63,13 @@
     ];
   }
   function dataChecks(){
-    const eventCount=window.state?.eventsData?.events?.length||0;
-    const residentCount=window.state?.residentsData?.residents?.length||0;
+    const s=appState();
+    const eventCount=s?.eventsData?.events?.length||0;
+    const residentCount=s?.residentsData?.residents?.length||0;
     return [
-      check('Events data shape present',!!window.state?.eventsData),
-      check('Residents data shape present',!!window.state?.residentsData),
+      check('App state reachable',!!s),
+      check('Events data shape present',!!s?.eventsData),
+      check('Residents data shape present',!!s?.residentsData),
       check('Events count available',eventCount>0,'events='+eventCount),
       check('Residents count available',residentCount>0,'residents='+residentCount)
     ];
@@ -92,10 +91,12 @@
       total:checks.length,
       passed:checks.length-failed.length,
       failed:failed.length,
+      failedNames:failed.map(item=>item.name),
       failedChecks:failed,
       checks
     };
     console.info('[AdminSmokeTest]',result);
+    if(failed.length)console.table(failed);
     return result;
   }
   window.AdminV2SmokeTest={run};
