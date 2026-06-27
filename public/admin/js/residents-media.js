@@ -10,6 +10,15 @@
     const previews=window.__adminLocalMediaPreviews;
     if(previews&&previews.has(url))return previews.get(url);
     if(/^(https?:|data:|blob:)/.test(url))return url;
+    if(url.startsWith('public/residents/')){
+      const publicUrl='/residents/'+url.split('public/residents/')[1];
+      if(previews&&previews.has(publicUrl))return previews.get(publicUrl);
+      if(location.pathname.includes('/public/')){
+        const prefix=location.pathname.slice(0,location.pathname.indexOf('/public/'))+'/public';
+        return prefix+publicUrl;
+      }
+      return '../'+url.replace(/^public\//,'');
+    }
     if(url.startsWith('/residents/')&&location.pathname.includes('/public/')){
       const prefix=location.pathname.slice(0,location.pathname.indexOf('/public/'))+'/public';
       const resolved=prefix+url;
