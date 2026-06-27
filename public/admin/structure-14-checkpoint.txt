@@ -1,0 +1,20 @@
+Admin v2 structure checkpoint after fixing smoke-test state detection.
+
+Expected visible badge:
+admin-v2-structure-14 geladen
+
+Issue fixed:
+- AdminV2SmokeTest used window.state, but admin-app.js declares state as a top-level const.
+- Top-level const state is not guaranteed to exist as window.state.
+- The smoke test now reads state via a safe global lexical lookup.
+
+Additional diagnostics:
+- AdminV2SmokeTest.run() now returns failedNames.
+- Failed smoke checks are also displayed via console.table.
+- AdminV2HealthCheck.run() now includes smokeFailedNames.
+
+Expected after hard reload:
+- AdminV2HealthCheck.run().ok should be true if the remaining five failures were only state-read false negatives.
+- AdminV2SmokeTest.run().ok should be true, or failedNames should identify the real remaining UI issue.
+
+No data JSON files are part of this checkpoint.
