@@ -1,5 +1,10 @@
 /* Converts normal text inputs in editor areas to textareas, auto-resizes them, and preserves spaces. */
 (function(){
+  if(window.__adminTextareasModuleLoaded){
+    if(typeof window.convertAllAdminTextInputs==='function')window.convertAllAdminTextInputs();
+    return;
+  }
+  window.__adminTextareasModuleLoaded=true;
   function onReady(fn){
     if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',fn);
     else fn();
@@ -138,17 +143,30 @@
     document.querySelectorAll('input.input').forEach(convertInput);
     bindExistingTextareas();
   }
+  window.convertAllAdminTextInputs=convertAllTextInputs;
+  window.bindExistingAdminTextareas=bindExistingTextareas;
   onReady(()=>{
     installSafeReaders();
     convertAllTextInputs();
-    const originalRenderAll=renderAll;
-    window.renderAll=renderAll=function(){installSafeReaders();originalRenderAll();convertAllTextInputs();};
-    const originalRenderEventForm=renderEventForm;
-    window.renderEventForm=renderEventForm=function(){installSafeReaders();originalRenderEventForm();convertAllTextInputs();};
-    const originalRenderResidentForm=renderResidentForm;
-    window.renderResidentForm=renderResidentForm=function(){installSafeReaders();originalRenderResidentForm();convertAllTextInputs();};
-    const originalRenderArtists=renderArtists;
-    window.renderArtists=renderArtists=function(){installSafeReaders();originalRenderArtists();convertAllTextInputs();};
-    setInterval(()=>{installSafeReaders();bindExistingTextareas();},1000);
+    if(!window.__adminTextareasRenderAllWrapped){
+      window.__adminTextareasRenderAllWrapped=true;
+      const originalRenderAll=renderAll;
+      window.renderAll=renderAll=function(){installSafeReaders();originalRenderAll();convertAllTextInputs();};
+    }
+    if(!window.__adminTextareasEventWrapped){
+      window.__adminTextareasEventWrapped=true;
+      const originalRenderEventForm=renderEventForm;
+      window.renderEventForm=renderEventForm=function(){installSafeReaders();originalRenderEventForm();convertAllTextInputs();};
+    }
+    if(!window.__adminTextareasResidentWrapped){
+      window.__adminTextareasResidentWrapped=true;
+      const originalRenderResidentForm=renderResidentForm;
+      window.renderResidentForm=renderResidentForm=function(){installSafeReaders();originalRenderResidentForm();convertAllTextInputs();};
+    }
+    if(!window.__adminTextareasArtistsWrapped){
+      window.__adminTextareasArtistsWrapped=true;
+      const originalRenderArtists=renderArtists;
+      window.renderArtists=renderArtists=function(){installSafeReaders();originalRenderArtists();convertAllTextInputs();};
+    }
   });
 })();
