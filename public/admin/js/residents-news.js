@@ -1,5 +1,10 @@
 /* Residents news editor extension for Admin v2. Scope: Resident News tab only. */
 (function(){
+  if(window.__adminResidentsNewsModuleLoaded){
+    if(typeof window.renderResidentNews==='function')window.renderResidentNews();
+    return;
+  }
+  window.__adminResidentsNewsModuleLoaded=true;
   function onReady(fn){
     if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',fn);
     else fn();
@@ -88,14 +93,25 @@
     document.querySelectorAll('[data-news-text]').forEach(el=>{if(list[Number(el.dataset.newsText)]) list[Number(el.dataset.newsText)].text=el.value;});
     sortNews(r);
   }
+  window.renderResidentNews=renderResidentNews;
+  window.readResidentNews=readResidentNews;
   onReady(()=>{
     injectResidentsNewsUi();
-    const originalEnsureResidents=ensureResidents;
-    window.ensureResidents=ensureResidents=function(){originalEnsureResidents();(residents().residents||[]).forEach(normalizeNews);};
-    const originalRenderResidentForm=renderResidentForm;
-    window.renderResidentForm=renderResidentForm=function(){injectResidentsNewsUi();originalRenderResidentForm();renderResidentNews();};
-    const originalReadResidentForm=readResidentForm;
-    window.readResidentForm=readResidentForm=function(){originalReadResidentForm();readResidentNews();};
+    if(!window.__adminResidentsNewsEnsureWrapped){
+      window.__adminResidentsNewsEnsureWrapped=true;
+      const originalEnsureResidents=ensureResidents;
+      window.ensureResidents=ensureResidents=function(){originalEnsureResidents();(residents().residents||[]).forEach(normalizeNews);};
+    }
+    if(!window.__adminResidentsNewsRenderWrapped){
+      window.__adminResidentsNewsRenderWrapped=true;
+      const originalRenderResidentForm=renderResidentForm;
+      window.renderResidentForm=renderResidentForm=function(){injectResidentsNewsUi();originalRenderResidentForm();renderResidentNews();};
+    }
+    if(!window.__adminResidentsNewsReadWrapped){
+      window.__adminResidentsNewsReadWrapped=true;
+      const originalReadResidentForm=readResidentForm;
+      window.readResidentForm=readResidentForm=function(){originalReadResidentForm();readResidentNews();};
+    }
     ensureResidents();
     renderResidentNews();
   });
