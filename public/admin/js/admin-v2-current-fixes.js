@@ -1,7 +1,7 @@
 /* Retired Admin v2 current-fixes compatibility shim.
-   Scope: visible build marker, read-only health/smoke checks, and safe display-only asset loading. No observers, no save/load patches. */
+   Scope: visible build marker, read-only health/smoke/walkthrough checks, and safe display-only asset loading. No observers, no save/load patches. */
 (function(){
-  const TEXT='admin-v2-structure-14 geladen';
+  const TEXT='admin-v2-structure-15 geladen';
   function setBadge(){
     let b=document.getElementById('adminBuildBadge');
     if(!b){
@@ -22,9 +22,9 @@
     b.textContent=TEXT;
   }
   function installBadgeWrapper(){
-    if(window.__adminV2Structure14BadgeWrapped)return;
+    if(window.__adminV2Structure15BadgeWrapped)return;
     if(typeof window.renderAll!=='function')return;
-    window.__adminV2Structure14BadgeWrapped=true;
+    window.__adminV2Structure15BadgeWrapped=true;
     const originalRenderAll=window.renderAll;
     window.renderAll=function(){
       const result=originalRenderAll.apply(this,arguments);
@@ -46,12 +46,14 @@
   }
   function loadEventAssets(){loadScriptOnce('./js/event-assets.js?v=event-assets-admin-paths-1')}
   function loadSmokeTest(){loadScriptOnce('./js/admin-smoke-test.js?v=admin-smoke-test-state-1')}
+  function loadWalkthroughTest(){loadScriptOnce('./js/admin-walkthrough-test.js?v=admin-walkthrough-test-1')}
   function runHealthCheck(){
     const scripts=Array.from(document.querySelectorAll('script[src]'));
     const styles=Array.from(document.querySelectorAll('link[rel="stylesheet"]'));
     const scriptDuplicates=duplicates(countBy(scripts,s=>canonical(s.getAttribute('src'))));
     const styleDuplicates=duplicates(countBy(styles,s=>canonical(s.getAttribute('href'))));
     const smoke=window.AdminV2SmokeTest&&typeof window.AdminV2SmokeTest.run==='function'?window.AdminV2SmokeTest.run():null;
+    const walkthrough=window.AdminV2WalkthroughTest&&typeof window.AdminV2WalkthroughTest.run==='function'?window.AdminV2WalkthroughTest.run():null;
     const checks={
       badgeText:document.getElementById('adminBuildBadge')?.textContent||'',
       duplicateScripts:scriptDuplicates,
@@ -65,6 +67,9 @@
       smokeTestLoaded:!!window.__adminSmokeTestLoaded,
       smokeOk:smoke?!!smoke.ok:null,
       smokeFailedNames:smoke?smoke.failedNames:[],
+      walkthroughTestLoaded:!!window.__adminWalkthroughTestLoaded,
+      walkthroughOk:walkthrough?!!walkthrough.ok:null,
+      walkthroughFailedNames:walkthrough?walkthrough.failedNames:[],
       residentsNewsLoaded:!!window.__adminResidentsNewsModuleLoaded,
       residentsMediaLoaded:!!window.__adminResidentsMediaModuleLoaded,
       residentsOrderLoaded:!!window.__adminResidentsOrderModuleLoaded,
@@ -73,7 +78,7 @@
       textareasLoaded:!!window.__adminTextareasModuleLoaded,
       saveStatusUxLoaded:!!window.__adminSaveStatusUxLoaded
     };
-    checks.ok=scriptDuplicates.length===0&&styleDuplicates.length===0&&checks.eventsVisible&&checks.residentsVisible&&checks.releasesVisible&&(smoke?!!smoke.ok:true);
+    checks.ok=scriptDuplicates.length===0&&styleDuplicates.length===0&&checks.eventsVisible&&checks.residentsVisible&&checks.releasesVisible&&(smoke?!!smoke.ok:true)&&(walkthrough?!!walkthrough.ok:true);
     console.info('[AdminHealthCheck]',checks);
     return checks;
   }
@@ -82,12 +87,14 @@
     installBadgeWrapper();
     loadEventAssets();
     loadSmokeTest();
+    loadWalkthroughTest();
     setTimeout(runHealthCheck,0);
   }
   window.AdminBuildMarker={text:TEXT,set:setBadge};
   window.AdminV2HealthCheck={run:runHealthCheck};
   window.loadAdminEventAssets=loadEventAssets;
   window.loadAdminSmokeTest=loadSmokeTest;
+  window.loadAdminWalkthroughTest=loadWalkthroughTest;
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install);
   else install();
 })();
