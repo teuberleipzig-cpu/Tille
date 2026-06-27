@@ -1,7 +1,7 @@
 /* Retired Admin v2 current-fixes compatibility shim.
-   Scope: visible build marker and read-only health checks. No observers, no save/load patches. */
+   Scope: visible build marker, read-only health checks, and safe display-only asset loading. No observers, no save/load patches. */
 (function(){
-  const TEXT='admin-v2-structure-11 geladen';
+  const TEXT='admin-v2-structure-12 geladen';
   function setBadge(){
     let b=document.getElementById('adminBuildBadge');
     if(!b){
@@ -22,13 +22,14 @@
     b.textContent=TEXT;
   }
   function installBadgeWrapper(){
-    if(window.__adminV2Structure11BadgeWrapped)return;
+    if(window.__adminV2Structure12BadgeWrapped)return;
     if(typeof window.renderAll!=='function')return;
-    window.__adminV2Structure11BadgeWrapped=true;
+    window.__adminV2Structure12BadgeWrapped=true;
     const originalRenderAll=window.renderAll;
     window.renderAll=function(){
       const result=originalRenderAll.apply(this,arguments);
       setBadge();
+      if(window.fixAdminEventImagePaths)window.fixAdminEventImagePaths();
       return result;
     };
   }
@@ -37,6 +38,15 @@
     return items.reduce((acc,item)=>{const key=keyFn(item);acc[key]=(acc[key]||0)+1;return acc;},{});
   }
   function duplicates(map){return Object.entries(map).filter(([,count])=>count>1).map(([key,count])=>({key,count}));}
+  function loadEventAssets(){
+    const src='./js/event-assets.js?v=event-assets-admin-paths-1';
+    const wanted=canonical(src);
+    if(Array.from(document.querySelectorAll('script[src]')).some(script=>canonical(script.getAttribute('src'))===wanted))return;
+    const script=document.createElement('script');
+    script.src=src;
+    script.defer=true;
+    document.body.appendChild(script);
+  }
   function runHealthCheck(){
     const scripts=Array.from(document.querySelectorAll('script[src]'));
     const styles=Array.from(document.querySelectorAll('link[rel="stylesheet"]'));
@@ -51,6 +61,7 @@
       releasesVisible:!!document.getElementById('view-releases'),
       githubMediaLoaded:!!window.AdminGithubMedia,
       eventsMetaLoaded:!!window.__adminEventsMetaModuleLoaded,
+      eventAssetsLoaded:!!window.__adminEventAssetsLoaded,
       residentsNewsLoaded:!!window.__adminResidentsNewsModuleLoaded,
       residentsMediaLoaded:!!window.__adminResidentsMediaModuleLoaded,
       residentsOrderLoaded:!!window.__adminResidentsOrderModuleLoaded,
@@ -63,13 +74,15 @@
     console.info('[AdminHealthCheck]',checks);
     return checks;
   }
-  window.AdminBuildMarker={text:TEXT,set:setBadge};
-  window.AdminV2HealthCheck={run:runHealthCheck};
-  if(document.readyState==='loading'){
-    document.addEventListener('DOMContentLoaded',()=>{setBadge();installBadgeWrapper();setTimeout(runHealthCheck,0);});
-  }else{
+  function install(){
     setBadge();
     installBadgeWrapper();
+    loadEventAssets();
     setTimeout(runHealthCheck,0);
   }
+  window.AdminBuildMarker={text:TEXT,set:setBadge};
+  window.AdminV2HealthCheck={run:runHealthCheck};
+  window.loadAdminEventAssets=loadEventAssets;
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install);
+  else install();
 })();
