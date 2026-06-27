@@ -1,7 +1,14 @@
 /* Event meta/calendar, JSON tools and controlled Admin v2 module loading.
    Loaded after admin-app.js. */
 (function(){
-  const ADMIN_BUILD_TEXT='admin-v2-structure-3 geladen';
+  if(window.__adminEventsMetaModuleLoaded){
+    if(typeof window.loadControlledAdminModules==='function')window.loadControlledAdminModules();
+    if(typeof window.installEventImageUpload==='function')window.installEventImageUpload();
+    if(window.AdminBuildMarker&&typeof window.AdminBuildMarker.set==='function')window.AdminBuildMarker.set();
+    return;
+  }
+  window.__adminEventsMetaModuleLoaded=true;
+  const ADMIN_BUILD_TEXT='admin-v2-structure-10 geladen';
   function onReady(fn){
     if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',fn);
     else fn();
@@ -27,14 +34,13 @@
   }
   function installAdminBuildBadge(){
     setAdminBuildBadge();
-    setTimeout(setAdminBuildBadge,0);
-    if(window.__adminV2StructureBadgeWrapped)return;
+    if(window.__adminEventsMetaBadgeWrapped)return;
     if(typeof window.renderAll!=='function')return;
-    window.__adminV2StructureBadgeWrapped=true;
+    window.__adminEventsMetaBadgeWrapped=true;
     const originalRenderAll=window.renderAll;
     window.renderAll=function(){
       const result=originalRenderAll.apply(this,arguments);
-      setTimeout(setAdminBuildBadge,0);
+      setAdminBuildBadge();
       return result;
     };
   }
@@ -178,14 +184,23 @@
     download.before(refresh,copy);
   }
 
+  function canonicalAsset(src){return String(src||'').split('?')[0]}
+  function hasCss(href){
+    const wanted=canonicalAsset(href);
+    return Array.from(document.querySelectorAll('link[rel="stylesheet"]')).some(link=>canonicalAsset(link.getAttribute('href'))===wanted);
+  }
+  function hasJs(src){
+    const wanted=canonicalAsset(src);
+    return Array.from(document.querySelectorAll('script[src]')).some(script=>canonicalAsset(script.getAttribute('src'))===wanted);
+  }
   function loadExtraExtension(cssPath,jsPath){
-    if(cssPath && !document.querySelector('link[href="'+cssPath+'"]')){
+    if(cssPath && !hasCss(cssPath)){
       const link=document.createElement('link');
       link.rel='stylesheet';
       link.href=cssPath;
       document.head.appendChild(link);
     }
-    if(jsPath && !document.querySelector('script[src="'+jsPath+'"]')){
+    if(jsPath && !hasJs(jsPath)){
       const script=document.createElement('script');
       script.src=jsPath;
       script.defer=true;
@@ -194,16 +209,16 @@
   }
 
   function loadControlledAdminModules(){
-    loadExtraExtension(null,'./js/save-status-ux.js?v=status-ux-1');
-    loadExtraExtension('./css/github-media.css','./js/github-media.js?v=github-media-generic-1');
-    loadExtraExtension('./css/residents-news.css','./js/residents-news.js?v=residents-news-only-news-1');
-    loadExtraExtension('./css/residents-media.css','./js/residents-media.js?v=resident-media-own-upload-1');
-    loadExtraExtension('./css/textareas.css','./js/textareas.js');
-    loadExtraExtension('./css/releases-admin.css','./js/releases-core.js?v=releases-own-upload-1');
+    loadExtraExtension(null,'./js/save-status-ux.js?v=status-ux-render-bound-1');
+    loadExtraExtension('./css/github-media.css','./js/github-media.js?v=github-media-generic-guard-1');
+    loadExtraExtension('./css/residents-news.css','./js/residents-news.js?v=residents-news-guard-1');
+    loadExtraExtension('./css/residents-media.css','./js/residents-media.js?v=resident-media-guard-1');
+    loadExtraExtension('./css/textareas.css','./js/textareas.js?v=textareas-no-interval-1');
+    loadExtraExtension('./css/releases-admin.css','./js/releases-core.js?v=releases-core-guard-1');
     loadExtraExtension(null,'./js/releases-extra.js');
     loadExtraExtension(null,'./js/auto-github-load.js?v=debug-save-safe-restore-1');
-    loadExtraExtension('./css/residents-order.css','./js/residents-order.js');
-    loadExtraExtension('./css/releases-workflow.css','./js/releases-workflow.js');
+    loadExtraExtension('./css/residents-order.css','./js/residents-order.js?v=residents-order-guard-1');
+    loadExtraExtension('./css/releases-workflow.css','./js/releases-workflow.js?v=releases-workflow-helper-1');
     loadExtraExtension('./css/resident-access.css','./extensions/resident-access.js?v=resident-access-2');
   }
 
@@ -273,6 +288,11 @@
     };
   }
 
+  window.loadControlledAdminModules=loadControlledAdminModules;
+  window.installEventImageUpload=installEventImageUpload;
+  window.renderEventMeta=renderEventMeta;
+  window.readEventMeta=readEventMeta;
+
   onReady(()=>{
     installEventSortDefault();
     injectMetaUi();
@@ -282,31 +302,43 @@
     document.addEventListener('admin-github-media-ready',installEventImageUpload);
     installAdminBuildBadge();
 
-    const originalEnsureEvents=ensureEvents;
-    window.ensureEvents=ensureEvents=function(){
-      originalEnsureEvents();
-      ensureMetaShape();
-    };
+    if(!window.__adminEventsMetaEnsureWrapped){
+      window.__adminEventsMetaEnsureWrapped=true;
+      const originalEnsureEvents=ensureEvents;
+      window.ensureEvents=ensureEvents=function(){
+        originalEnsureEvents();
+        ensureMetaShape();
+      };
+    }
 
-    const originalRenderEventForm=renderEventForm;
-    window.renderEventForm=renderEventForm=function(){
-      injectMetaUi();
-      originalRenderEventForm();
-      renderEventMeta();
-      installStrictArtistOffer();
-      installEventImageUpload();
-    };
+    if(!window.__adminEventsMetaRenderWrapped){
+      window.__adminEventsMetaRenderWrapped=true;
+      const originalRenderEventForm=renderEventForm;
+      window.renderEventForm=renderEventForm=function(){
+        injectMetaUi();
+        originalRenderEventForm();
+        renderEventMeta();
+        installStrictArtistOffer();
+        installEventImageUpload();
+      };
+    }
 
-    const originalReadEventForm=readEventForm;
-    window.readEventForm=readEventForm=function(){
-      readEventMeta();
-      originalReadEventForm();
-    };
+    if(!window.__adminEventsMetaReadWrapped){
+      window.__adminEventsMetaReadWrapped=true;
+      const originalReadEventForm=readEventForm;
+      window.readEventForm=readEventForm=function(){
+        readEventMeta();
+        originalReadEventForm();
+      };
+    }
 
-    const originalSectionHtml=sectionHtml;
-    window.sectionHtml=sectionHtml=function(s,si){
-      return convertGeneratedInputs(originalSectionHtml(s,si));
-    };
+    if(!window.__adminEventsMetaSectionHtmlWrapped){
+      window.__adminEventsMetaSectionHtmlWrapped=true;
+      const originalSectionHtml=sectionHtml;
+      window.sectionHtml=sectionHtml=function(s,si){
+        return convertGeneratedInputs(originalSectionHtml(s,si));
+      };
+    }
 
     ensureMetaShape();
     renderAll();
