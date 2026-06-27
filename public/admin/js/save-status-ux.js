@@ -1,6 +1,11 @@
 /* Shows Events/Artists save feedback directly in the visible Artists footer.
    Artists are stored in events.json, but feedback must appear in #artistStatus. */
 (function(){
+  if(window.__adminSaveStatusUxLoaded){
+    if(typeof window.bindAdminSaveStatusUx==='function')window.bindAdminSaveStatusUx();
+    return;
+  }
+  window.__adminSaveStatusUxLoaded=true;
   const DBG='[AdminSaveDebug]';
   function onReady(fn){document.readyState==='loading'?document.addEventListener('DOMContentLoaded',fn):fn()}
   function tokenPresent(){return !!document.getElementById('ghToken')?.value?.trim()}
@@ -56,21 +61,29 @@
   function bindArtistButtons(){
     installSetStatusMirror();
     const artistSave=document.getElementById('saveArtistsGitBtn');
-    if(artistSave){
+    if(artistSave&&artistSave.dataset.artistStatusFeedbackBound!=='1'){
       artistSave.onclick=artistSaveClick;
       artistSave.dataset.artistStatusFeedbackBound='1';
     }
     const topSave=document.getElementById('topSaveBtn');
-    if(topSave){
+    if(topSave&&topSave.dataset.adminSaveStatusUxBound!=='1'){
       topSave.onclick=()=>visibleArtistTab()?artistSaveClick():(currentView()==='residents'||currentView()==='releases'?window.saveResidentsToGithub?.():window.saveEventsToGithub?.());
+      topSave.dataset.adminSaveStatusUxBound='1';
     }
     console.log(DBG,'artistStatusFeedback:bound',{artistSave:!!artistSave,topSave:!!topSave,view:currentView(),visibleArtistTab:visibleArtistTab()});
   }
+  window.bindAdminSaveStatusUx=bindArtistButtons;
   onReady(()=>{
     bindArtistButtons();
-    setTimeout(bindArtistButtons,500);
-    setTimeout(bindArtistButtons,1500);
-    setTimeout(bindArtistButtons,3000);
-    setTimeout(bindArtistButtons,6000);
+    if(!window.__adminSaveStatusUxRenderAllWrapped&&typeof window.renderAll==='function'){
+      window.__adminSaveStatusUxRenderAllWrapped=true;
+      const originalRenderAll=window.renderAll;
+      window.renderAll=function(){const out=originalRenderAll.apply(this,arguments);bindArtistButtons();return out;};
+    }
+    if(!window.__adminSaveStatusUxSetViewWrapped&&typeof window.setView==='function'){
+      window.__adminSaveStatusUxSetViewWrapped=true;
+      const originalSetView=window.setView;
+      window.setView=function(v){const out=originalSetView.apply(this,arguments);bindArtistButtons();return out;};
+    }
   });
 })();
