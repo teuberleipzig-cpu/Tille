@@ -1,7 +1,7 @@
 /* Retired Admin v2 current-fixes compatibility shim.
    Scope: visible build marker, read-only health/smoke/walkthrough/write-readiness/snapshot/baseline/preflight checks, and safe display-only asset loading. No observers, no save/load patches. */
 (function(){
-  const TEXT='admin-v2-structure-19 geladen';
+  const TEXT='admin-v2-structure-20 geladen';
   function setBadge(){
     let b=document.getElementById('adminBuildBadge');
     if(!b){
@@ -22,9 +22,9 @@
     b.textContent=TEXT;
   }
   function installBadgeWrapper(){
-    if(window.__adminV2Structure19BadgeWrapped)return;
+    if(window.__adminV2Structure20BadgeWrapped)return;
     if(typeof window.renderAll!=='function')return;
-    window.__adminV2Structure19BadgeWrapped=true;
+    window.__adminV2Structure20BadgeWrapped=true;
     const originalRenderAll=window.renderAll;
     window.renderAll=function(){
       const result=originalRenderAll.apply(this,arguments);
@@ -49,7 +49,7 @@
   function loadWalkthroughTest(){loadScriptOnce('./js/admin-walkthrough-test.js?v=admin-walkthrough-test-1')}
   function loadWriteReadiness(){loadScriptOnce('./js/admin-write-readiness.js?v=admin-write-readiness-quiet-1')}
   function loadSnapshotReport(){loadScriptOnce('./js/admin-snapshot-report.js?v=admin-snapshot-report-1')}
-  function loadWriteBaseline(){loadScriptOnce('./js/admin-write-baseline.js?v=admin-write-baseline-1')}
+  function loadWriteBaseline(){loadScriptOnce('./js/admin-write-baseline.js?v=admin-write-baseline-persist-1')}
   function loadSavePreflight(){loadScriptOnce('./js/admin-save-preflight.js?v=admin-save-preflight-1')}
   function runHealthCheck(){
     const scripts=Array.from(document.querySelectorAll('script[src]'));
@@ -60,6 +60,7 @@
     const walkthrough=window.AdminV2WalkthroughTest&&typeof window.AdminV2WalkthroughTest.run==='function'?window.AdminV2WalkthroughTest.run():null;
     const writeReadiness=window.AdminV2WriteReadiness&&typeof window.AdminV2WriteReadiness.run==='function'?window.AdminV2WriteReadiness.run({quiet:true}):null;
     const snapshot=window.AdminV2SnapshotReport&&typeof window.AdminV2SnapshotReport.run==='function'?window.AdminV2SnapshotReport.run():null;
+    const baselineStatus=window.AdminV2WriteBaseline&&typeof window.AdminV2WriteBaseline.status==='function'?window.AdminV2WriteBaseline.status():null;
     const checks={
       badgeText:document.getElementById('adminBuildBadge')?.textContent||'',
       duplicateScripts:scriptDuplicates,
@@ -83,6 +84,7 @@
       snapshotReady:!!snapshot?.readyForWriteReport,
       snapshotCounts:snapshot?{events:snapshot.eventsCount,residents:snapshot.residentsCount,artists:snapshot.artistsCount}:null,
       writeBaselineLoaded:!!window.__adminWriteBaselineLoaded,
+      writeBaselinePersisted:baselineStatus?!!baselineStatus.persisted:null,
       savePreflightLoaded:!!window.__adminSavePreflightLoaded,
       residentsNewsLoaded:!!window.__adminResidentsNewsModuleLoaded,
       residentsMediaLoaded:!!window.__adminResidentsMediaModuleLoaded,
