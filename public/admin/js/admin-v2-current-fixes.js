@@ -1,7 +1,7 @@
 /* Retired Admin v2 current-fixes compatibility shim.
    Scope: visible build marker, read-only health/smoke checks, and safe display-only asset loading. No observers, no save/load patches. */
 (function(){
-  const TEXT='admin-v2-structure-13 geladen';
+  const TEXT='admin-v2-structure-14 geladen';
   function setBadge(){
     let b=document.getElementById('adminBuildBadge');
     if(!b){
@@ -22,9 +22,9 @@
     b.textContent=TEXT;
   }
   function installBadgeWrapper(){
-    if(window.__adminV2Structure13BadgeWrapped)return;
+    if(window.__adminV2Structure14BadgeWrapped)return;
     if(typeof window.renderAll!=='function')return;
-    window.__adminV2Structure13BadgeWrapped=true;
+    window.__adminV2Structure14BadgeWrapped=true;
     const originalRenderAll=window.renderAll;
     window.renderAll=function(){
       const result=originalRenderAll.apply(this,arguments);
@@ -45,7 +45,7 @@
     document.body.appendChild(script);
   }
   function loadEventAssets(){loadScriptOnce('./js/event-assets.js?v=event-assets-admin-paths-1')}
-  function loadSmokeTest(){loadScriptOnce('./js/admin-smoke-test.js?v=admin-smoke-test-1')}
+  function loadSmokeTest(){loadScriptOnce('./js/admin-smoke-test.js?v=admin-smoke-test-state-1')}
   function runHealthCheck(){
     const scripts=Array.from(document.querySelectorAll('script[src]'));
     const styles=Array.from(document.querySelectorAll('link[rel="stylesheet"]'));
@@ -64,6 +64,7 @@
       eventAssetsLoaded:!!window.__adminEventAssetsLoaded,
       smokeTestLoaded:!!window.__adminSmokeTestLoaded,
       smokeOk:smoke?!!smoke.ok:null,
+      smokeFailedNames:smoke?smoke.failedNames:[],
       residentsNewsLoaded:!!window.__adminResidentsNewsModuleLoaded,
       residentsMediaLoaded:!!window.__adminResidentsMediaModuleLoaded,
       residentsOrderLoaded:!!window.__adminResidentsOrderModuleLoaded,
