@@ -1,7 +1,7 @@
 /* Retired Admin v2 current-fixes compatibility shim.
-   Scope: visible build marker, read-only health/smoke/walkthrough/write-readiness/snapshot/baseline/preflight checks, and safe display-only asset loading. No observers, no save/load patches. */
+   Scope: visible build marker, read-only health/smoke/walkthrough/write-readiness/snapshot/baseline/preflight/post-reload checks, and safe display-only asset loading. No observers, no save/load patches. */
 (function(){
-  const TEXT='admin-v2-structure-20 geladen';
+  const TEXT='admin-v2-structure-21 geladen';
   function setBadge(){
     let b=document.getElementById('adminBuildBadge');
     if(!b){
@@ -22,9 +22,9 @@
     b.textContent=TEXT;
   }
   function installBadgeWrapper(){
-    if(window.__adminV2Structure20BadgeWrapped)return;
+    if(window.__adminV2Structure21BadgeWrapped)return;
     if(typeof window.renderAll!=='function')return;
-    window.__adminV2Structure20BadgeWrapped=true;
+    window.__adminV2Structure21BadgeWrapped=true;
     const originalRenderAll=window.renderAll;
     window.renderAll=function(){
       const result=originalRenderAll.apply(this,arguments);
@@ -51,6 +51,7 @@
   function loadSnapshotReport(){loadScriptOnce('./js/admin-snapshot-report.js?v=admin-snapshot-report-1')}
   function loadWriteBaseline(){loadScriptOnce('./js/admin-write-baseline.js?v=admin-write-baseline-persist-1')}
   function loadSavePreflight(){loadScriptOnce('./js/admin-save-preflight.js?v=admin-save-preflight-1')}
+  function loadPostReloadCheck(){loadScriptOnce('./js/admin-post-reload-check.js?v=admin-post-reload-check-1')}
   function runHealthCheck(){
     const scripts=Array.from(document.querySelectorAll('script[src]'));
     const styles=Array.from(document.querySelectorAll('link[rel="stylesheet"]'));
@@ -86,6 +87,7 @@
       writeBaselineLoaded:!!window.__adminWriteBaselineLoaded,
       writeBaselinePersisted:baselineStatus?!!baselineStatus.persisted:null,
       savePreflightLoaded:!!window.__adminSavePreflightLoaded,
+      postReloadCheckLoaded:!!window.__adminPostReloadCheckLoaded,
       residentsNewsLoaded:!!window.__adminResidentsNewsModuleLoaded,
       residentsMediaLoaded:!!window.__adminResidentsMediaModuleLoaded,
       residentsOrderLoaded:!!window.__adminResidentsOrderModuleLoaded,
@@ -108,6 +110,7 @@
     loadSnapshotReport();
     loadWriteBaseline();
     loadSavePreflight();
+    loadPostReloadCheck();
     setTimeout(runHealthCheck,600);
   }
   window.AdminBuildMarker={text:TEXT,set:setBadge};
@@ -119,6 +122,7 @@
   window.loadAdminSnapshotReport=loadSnapshotReport;
   window.loadAdminWriteBaseline=loadWriteBaseline;
   window.loadAdminSavePreflight=loadSavePreflight;
+  window.loadAdminPostReloadCheck=loadPostReloadCheck;
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install);
   else install();
 })();
