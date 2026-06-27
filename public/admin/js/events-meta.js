@@ -1,9 +1,42 @@
-/* Event meta/calendar and JSON tools extension for Admin v2.
-   Loaded after admin-app.js. Keeps the current monolith untouched while we split modules safely. */
+/* Event meta/calendar, JSON tools and controlled Admin v2 module loading.
+   Loaded after admin-app.js. */
 (function(){
+  const ADMIN_BUILD_TEXT='admin-v2-structure-1 geladen';
   function onReady(fn){
     if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',fn);
     else fn();
+  }
+  function setAdminBuildBadge(){
+    let b=$('adminBuildBadge');
+    if(!b){
+      b=document.createElement('div');
+      b.id='adminBuildBadge';
+      b.style.position='fixed';
+      b.style.left='8px';
+      b.style.bottom='26px';
+      b.style.zIndex='99999';
+      b.style.padding='4px 6px';
+      b.style.border='1px solid #111';
+      b.style.background='#fff';
+      b.style.color='#111';
+      b.style.font='11px/1.2 monospace';
+      b.style.pointerEvents='none';
+      document.body.appendChild(b);
+    }
+    b.textContent=ADMIN_BUILD_TEXT;
+  }
+  function installAdminBuildBadge(){
+    setAdminBuildBadge();
+    setTimeout(setAdminBuildBadge,0);
+    if(window.__adminV2StructureBadgeWrapped)return;
+    if(typeof window.renderAll!=='function')return;
+    window.__adminV2StructureBadgeWrapped=true;
+    const originalRenderAll=window.renderAll;
+    window.renderAll=function(){
+      const result=originalRenderAll.apply(this,arguments);
+      setTimeout(setAdminBuildBadge,0);
+      return result;
+    };
   }
 
   function installEventSortDefault(){
@@ -160,6 +193,19 @@
     }
   }
 
+  function loadControlledAdminModules(){
+    loadExtraExtension(null,'./js/save-status-ux.js?v=status-ux-1');
+    loadExtraExtension('./css/residents-news.css','./js/residents-news.js?v=residents-news-only-news-1');
+    loadExtraExtension('./css/residents-media.css','./js/residents-media.js?v=resident-media-structure-restore-2');
+    loadExtraExtension('./css/textareas.css','./js/textareas.js');
+    loadExtraExtension('./css/releases-admin.css','./js/releases-core.js');
+    loadExtraExtension(null,'./js/releases-extra.js');
+    loadExtraExtension(null,'./js/auto-github-load.js?v=debug-save-safe-restore-1');
+    loadExtraExtension('./css/residents-order.css','./js/residents-order.js');
+    loadExtraExtension('./css/releases-workflow.css','./js/releases-workflow.js');
+    loadExtraExtension('./css/resident-access.css','./extensions/resident-access.js?v=resident-access-2');
+  }
+
   function installStrictArtistOffer(){
     window.offerArtistSave=offerArtistSave=function(input){
       readEventForm();
@@ -198,9 +244,8 @@
     injectMetaUi();
     installJsonTools();
     installStrictArtistOffer();
-    loadExtraExtension(null,'./js/save-status-ux.js?v=status-ux-1');
-    loadExtraExtension('./css/residents-news.css','./js/residents-news.js?v=residents-news-loader-fix-1');
-    loadExtraExtension('./css/github-media.css','./js/github-media.js?v=admin-upload-previews-2');
+    loadControlledAdminModules();
+    installAdminBuildBadge();
 
     const originalEnsureEvents=ensureEvents;
     window.ensureEvents=ensureEvents=function(){
@@ -229,5 +274,6 @@
 
     ensureMetaShape();
     renderAll();
+    installAdminBuildBadge();
   });
 })();
