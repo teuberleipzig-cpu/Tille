@@ -1,0 +1,20 @@
+Admin v2 structure checkpoint after releases workflow cleanup.
+
+Expected visible badge:
+admin-v2-structure-9 geladen
+
+Structural state:
+- releases-workflow.js is duplicate-load guarded.
+- releases-workflow.js now uses AdminGithubMedia for cover uploads.
+- duplicate release workflow upload helpers were removed.
+- residents-order.js is duplicate-load guarded.
+- textareas.js has no interval repair layer.
+- save-status-ux.js has no delayed retry binding layer.
+- No setInterval or MutationObserver usage remains in the admin JS search results.
+
+Still open:
+- index.html still contains old direct script loads.
+- events-meta.js is still both transition loader and event meta module.
+- A full end-to-end test matrix is still pending before calling the admin 100% stable.
+
+No data JSON files are part of this checkpoint.
