@@ -174,20 +174,43 @@
     const source=Array.isArray(list)?list:[];
     const items=[];
     source.forEach(item=>{
-      const url=typeof item==='string'?item:(item?.url||item?.src||item?.imageUrl||'');
+      const url=typeof item==='string'?item:(item?.url||item?.path||'');
       if(!url||isInlineMediaValue(url)){removed++;return;}
-      items.push(typeof item==='string'?{url}:{...item,url});
+      items.push({url});
     });
     return{items,removed};
   }
+  function sanitizeStringMediaField(obj,key){
+    if(obj&&typeof obj[key]==='string'&&isInlineMediaValue(obj[key])){obj[key]='';return 1}
+    return 0;
+  }
   function sanitizeResidentsBeforeSave(){
     let removed=0;
+    const residentMediaKeys=['imageUrl','image','photo','portrait','presskitUrl','presskit','pressKitUrl'];
+    const releaseMediaKeys=['coverUrl','cover','imageUrl','image','thumbnail','thumbnailUrl'];
     (residents().residents||[]).forEach(r=>{
       if(Array.isArray(r.photoList)){const out=sanitizeResidentMediaList(r.photoList);r.photoList=out.items;removed+=out.removed;}
       if(Array.isArray(r.photos)){const out=sanitizeResidentMediaList(r.photos);r.photos=out.items;removed+=out.removed;}
+      residentMediaKeys.forEach(key=>{removed+=sanitizeStringMediaField(r,key)});
+      (r.releases||[]).forEach(rel=>releaseMediaKeys.forEach(key=>{removed+=sanitizeStringMediaField(rel,key)}));
     });
     log('sanitizeResidentsBeforeSave:done',{removedInlineMedia:removed,residentsCount:residents().residents?.length||0});
     return removed;
+  }
+  function findInlineMediaPaths(value,path='root',out=[]){
+    if(out.length>=20)return out;
+    if(typeof value==='string'){
+      if(isInlineMediaValue(value))out.push(path);
+      return out;
+    }
+    if(Array.isArray(value)){
+      value.forEach((item,index)=>findInlineMediaPaths(item,path+'['+index+']',out));
+      return out;
+    }
+    if(value&&typeof value==='object'){
+      Object.keys(value).forEach(key=>findInlineMediaPaths(value[key],path+'.'+key,out));
+    }
+    return out;
   }
   function safeReadEvents(){
     log('safeReadEvents:before',eventSnapshot());
@@ -231,9 +254,10 @@
       safeReadResidents();
       const removedInlineMedia=sanitizeResidentsBeforeSave();
       if(!residents().residents?.length) throw new Error('Residents: residents[] ist leer. Speichern abgebrochen.');
+      const inlinePaths=findInlineMediaPaths(residents());
       const jsonText=residentsJson();
-      log('saveResidentsStay:jsonReady',{residentsCount:residents().residents?.length||0,jsonLength:jsonText.length,removedInlineMedia,hasDataUrl:jsonText.includes('data:'),hasBlobUrl:jsonText.includes('blob:')});
-      if(jsonText.includes('data:')||jsonText.includes('blob:')) throw new Error('Residents enthalten noch lokale data/blob-Medien. Bitte neu laden und nur GitHub-Upload verwenden.');
+      log('saveResidentsStay:jsonReady',{residentsCount:residents().residents?.length||0,jsonLength:jsonText.length,removedInlineMedia,inlinePaths,hasDataUrl:jsonText.includes('data:'),hasBlobUrl:jsonText.includes('blob:')});
+      if(inlinePaths.length) throw new Error('Residents enthalten noch lokale data/blob-Medien: '+inlinePaths.slice(0,5).join(', '));
       const saved=await putJsonFile(val('residentsPath'),jsonText,'Update residents data from admin v2');
       state.residentsSha=saved.sha;
       state.loadedResidentCount=residents().residents.length;
@@ -263,7 +287,7 @@
     log('rebindButtons:done',{topLoad:!!topLoad,eventSave:!!evSave,artistSave:!!artistSave,topSave:!!topSave,saveEventsFn:window.saveEventsToGithub?.name||'anonymous'});
   }
   onReady(()=>{
-    log('autoGithubLoad:init',{script:'auto-github-load.js',debugVersion:'debug-save-3-sanitize-residents',href:location.href});
+    log('autoGithubLoad:init',{script:'auto-github-load.js',debugVersion:'debug-save-4-strict-media-sanitize',href:location.href});
     rebindButtons();
     setTimeout(()=>{rebindButtons();autoLoadGithubData()},500);
     setTimeout(rebindButtons,1500);
