@@ -109,7 +109,7 @@
     loadExtraExtension('./css/releases-admin.css','./js/releases-core.js');
     loadExtraExtension(null,'./js/releases-extra.js');
     loadExtraExtension('./css/github-media.css','./js/github-media.js?v=admin-upload-paths-1');
-    loadExtraExtension(null,'./js/auto-github-load.js?v=debug-save-5-coverimage-sanitize');
+    loadExtraExtension(null,'./js/auto-github-load.js?v=debug-save-safe-restore-1');
     loadExtraExtension('./css/residents-order.css','./js/residents-order.js');
     loadExtraExtension('./css/releases-workflow.css','./js/releases-workflow.js');
     loadExtraExtension('./css/resident-access.css','./extensions/resident-access.js?v=resident-access-2');
