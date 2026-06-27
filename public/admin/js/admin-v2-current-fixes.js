@@ -1,7 +1,7 @@
 /* Retired Admin v2 current-fixes compatibility shim.
-   Scope: visible build marker only. No observers, no save/load patches. */
+   Scope: visible build marker and read-only health checks. No observers, no save/load patches. */
 (function(){
-  const TEXT='admin-v2-structure-10 geladen';
+  const TEXT='admin-v2-structure-11 geladen';
   function setBadge(){
     let b=document.getElementById('adminBuildBadge');
     if(!b){
@@ -22,9 +22,9 @@
     b.textContent=TEXT;
   }
   function installBadgeWrapper(){
-    if(window.__adminV2Structure10BadgeWrapped)return;
+    if(window.__adminV2Structure11BadgeWrapped)return;
     if(typeof window.renderAll!=='function')return;
-    window.__adminV2Structure10BadgeWrapped=true;
+    window.__adminV2Structure11BadgeWrapped=true;
     const originalRenderAll=window.renderAll;
     window.renderAll=function(){
       const result=originalRenderAll.apply(this,arguments);
@@ -32,11 +32,44 @@
       return result;
     };
   }
+  function canonical(src){return String(src||'').split('?')[0]}
+  function countBy(items,keyFn){
+    return items.reduce((acc,item)=>{const key=keyFn(item);acc[key]=(acc[key]||0)+1;return acc;},{});
+  }
+  function duplicates(map){return Object.entries(map).filter(([,count])=>count>1).map(([key,count])=>({key,count}));}
+  function runHealthCheck(){
+    const scripts=Array.from(document.querySelectorAll('script[src]'));
+    const styles=Array.from(document.querySelectorAll('link[rel="stylesheet"]'));
+    const scriptDuplicates=duplicates(countBy(scripts,s=>canonical(s.getAttribute('src'))));
+    const styleDuplicates=duplicates(countBy(styles,s=>canonical(s.getAttribute('href'))));
+    const checks={
+      badgeText:document.getElementById('adminBuildBadge')?.textContent||'',
+      duplicateScripts:scriptDuplicates,
+      duplicateStyles:styleDuplicates,
+      eventsVisible:!!document.getElementById('view-events'),
+      residentsVisible:!!document.getElementById('view-residents'),
+      releasesVisible:!!document.getElementById('view-releases'),
+      githubMediaLoaded:!!window.AdminGithubMedia,
+      eventsMetaLoaded:!!window.__adminEventsMetaModuleLoaded,
+      residentsNewsLoaded:!!window.__adminResidentsNewsModuleLoaded,
+      residentsMediaLoaded:!!window.__adminResidentsMediaModuleLoaded,
+      residentsOrderLoaded:!!window.__adminResidentsOrderModuleLoaded,
+      releasesCoreLoaded:!!window.__adminReleasesCoreLoaded,
+      releasesWorkflowLoaded:!!window.__adminReleasesWorkflowLoaded,
+      textareasLoaded:!!window.__adminTextareasModuleLoaded,
+      saveStatusUxLoaded:!!window.__adminSaveStatusUxLoaded
+    };
+    checks.ok=scriptDuplicates.length===0&&styleDuplicates.length===0&&checks.eventsVisible&&checks.residentsVisible&&checks.releasesVisible;
+    console.info('[AdminHealthCheck]',checks);
+    return checks;
+  }
   window.AdminBuildMarker={text:TEXT,set:setBadge};
+  window.AdminV2HealthCheck={run:runHealthCheck};
   if(document.readyState==='loading'){
-    document.addEventListener('DOMContentLoaded',()=>{setBadge();installBadgeWrapper();});
+    document.addEventListener('DOMContentLoaded',()=>{setBadge();installBadgeWrapper();setTimeout(runHealthCheck,0);});
   }else{
     setBadge();
     installBadgeWrapper();
+    setTimeout(runHealthCheck,0);
   }
 })();
