@@ -1,5 +1,10 @@
 /* Releases core editor for Admin v2. */
 (function(){
+  if(window.__adminReleasesCoreLoaded){
+    if(typeof window.renderReleases==='function')window.renderReleases();
+    return;
+  }
+  window.__adminReleasesCoreLoaded=true;
   function onReady(fn){document.readyState==='loading'?document.addEventListener('DOMContentLoaded',fn):fn()}
   function rs(){return residents().residents||[]}
   function rr(){return rs()[state.releaseResidentIndex||0]||null}
@@ -51,5 +56,7 @@
   function delRelease(){const r=rr();if(!r||state.releaseIndex<0)return;if(!confirm('Release wirklich löschen?'))return;list(r).splice(state.releaseIndex,1);state.releaseIndex=Math.max(0,state.releaseIndex-1);markDirty();render()}
   function sortRelease(){const r=rr();if(!r)return;readForm();list(r).sort((a,b)=>String(b.releaseDate||b.year||'').localeCompare(String(a.releaseDate||a.year||'')));state.releaseIndex=0;markDirty();render()}
   function downloadJson(){readForm();const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([residentsJson()],{type:'application/json'}));a.download='residents.json';a.click();URL.revokeObjectURL(a.href)}
-  onReady(()=>{window.renderReleases=render;document.addEventListener('admin-github-media-ready',installReleaseCoverUpload);render()})
+  window.renderReleases=render;
+  window.installReleaseCoverUpload=installReleaseCoverUpload;
+  onReady(()=>{document.addEventListener('admin-github-media-ready',installReleaseCoverUpload);render()})
 })();
