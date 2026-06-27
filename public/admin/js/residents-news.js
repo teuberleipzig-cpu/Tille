@@ -104,7 +104,7 @@
   }
   onReady(()=>{
     injectResidentsNewsUi();
-    loadExtraExtension('./css/residents-media.css','./js/residents-media.js?v=resident-media-delete-2');
+    loadExtraExtension('./css/residents-media.css','./js/residents-media.js?v=resident-media-preview-map-1');
     loadExtraExtension('./css/textareas.css','./js/textareas.js');
     loadExtraExtension('./css/releases-admin.css','./js/releases-core.js');
     loadExtraExtension(null,'./js/releases-extra.js');
