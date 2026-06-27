@@ -1,7 +1,7 @@
 /* Retired Admin v2 current-fixes compatibility shim.
-   Scope: visible build marker, read-only health/smoke/walkthrough/write-readiness/snapshot/baseline/preflight/post-reload checks, and safe display-only asset loading. No observers, no save/load patches. */
+   Scope: visible build marker, read-only health/smoke/walkthrough/write-readiness/snapshot/baseline/preflight/post-reload/media-path checks, and safe display-only asset loading. No observers, no save/load patches. */
 (function(){
-  const TEXT='admin-v2-structure-21 geladen';
+  const TEXT='admin-v2-structure-22 geladen';
   function setBadge(){
     let b=document.getElementById('adminBuildBadge');
     if(!b){
@@ -22,9 +22,9 @@
     b.textContent=TEXT;
   }
   function installBadgeWrapper(){
-    if(window.__adminV2Structure21BadgeWrapped)return;
+    if(window.__adminV2Structure22BadgeWrapped)return;
     if(typeof window.renderAll!=='function')return;
-    window.__adminV2Structure21BadgeWrapped=true;
+    window.__adminV2Structure22BadgeWrapped=true;
     const originalRenderAll=window.renderAll;
     window.renderAll=function(){
       const result=originalRenderAll.apply(this,arguments);
@@ -49,9 +49,10 @@
   function loadWalkthroughTest(){loadScriptOnce('./js/admin-walkthrough-test.js?v=admin-walkthrough-test-1')}
   function loadWriteReadiness(){loadScriptOnce('./js/admin-write-readiness.js?v=admin-write-readiness-quiet-1')}
   function loadSnapshotReport(){loadScriptOnce('./js/admin-snapshot-report.js?v=admin-snapshot-report-1')}
-  function loadWriteBaseline(){loadScriptOnce('./js/admin-write-baseline.js?v=admin-write-baseline-persist-1')}
-  function loadSavePreflight(){loadScriptOnce('./js/admin-save-preflight.js?v=admin-save-preflight-1')}
+  function loadWriteBaseline(){loadScriptOnce('./js/admin-write-baseline.js?v=admin-write-baseline-dirty-guard-1')}
+  function loadSavePreflight(){loadScriptOnce('./js/admin-save-preflight.js?v=admin-save-preflight-target-1')}
   function loadPostReloadCheck(){loadScriptOnce('./js/admin-post-reload-check.js?v=admin-post-reload-check-1')}
+  function loadMediaPathCheck(){loadScriptOnce('./js/admin-media-path-check.js?v=admin-media-path-check-1')}
   function runHealthCheck(){
     const scripts=Array.from(document.querySelectorAll('script[src]'));
     const styles=Array.from(document.querySelectorAll('link[rel="stylesheet"]'));
@@ -88,6 +89,7 @@
       writeBaselinePersisted:baselineStatus?!!baselineStatus.persisted:null,
       savePreflightLoaded:!!window.__adminSavePreflightLoaded,
       postReloadCheckLoaded:!!window.__adminPostReloadCheckLoaded,
+      mediaPathCheckLoaded:!!window.__adminMediaPathCheckLoaded,
       residentsNewsLoaded:!!window.__adminResidentsNewsModuleLoaded,
       residentsMediaLoaded:!!window.__adminResidentsMediaModuleLoaded,
       residentsOrderLoaded:!!window.__adminResidentsOrderModuleLoaded,
@@ -111,6 +113,7 @@
     loadWriteBaseline();
     loadSavePreflight();
     loadPostReloadCheck();
+    loadMediaPathCheck();
     setTimeout(runHealthCheck,600);
   }
   window.AdminBuildMarker={text:TEXT,set:setBadge};
@@ -123,6 +126,7 @@
   window.loadAdminWriteBaseline=loadWriteBaseline;
   window.loadAdminSavePreflight=loadSavePreflight;
   window.loadAdminPostReloadCheck=loadPostReloadCheck;
+  window.loadAdminMediaPathCheck=loadMediaPathCheck;
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install);
   else install();
 })();
