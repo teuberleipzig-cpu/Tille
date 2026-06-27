@@ -1,5 +1,10 @@
 /* Residents photos and embeds editor extension for Admin v2. */
 (function(){
+  if(window.__adminResidentsMediaModuleLoaded){
+    if(typeof window.renderResidentMedia==='function')window.renderResidentMedia();
+    return;
+  }
+  window.__adminResidentsMediaModuleLoaded=true;
   function onReady(fn){
     if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',fn);
     else fn();
@@ -102,7 +107,6 @@
     helper.hideFieldFor?.('resPresskit');
     const oldPortrait=$('residentPortraitGithubDrop');
     if(oldPortrait)oldPortrait.remove();
-
     if(!$('residentPresskitGithubDrop')){
       const zone=helper.makeDropzone('residentPresskitGithubDrop','Presskit hier ablegen','PDF oder ZIP wird nach GitHub hochgeladen und als Pfad gespeichert.',async(file,st)=>{
         try{
@@ -123,7 +127,6 @@
       if(slot)slot.appendChild(zone);
       else panel.appendChild(zone);
     }
-
     if(!$('residentPhotosGithubDrop')){
       const zone=helper.makeDropzone('residentPhotosGithubDrop','Bild hier ablegen','Wird nach GitHub hochgeladen und der Fotoliste hinzugefügt.',async(file,st)=>{
         const local=helper.localFilePreview(file);
@@ -155,10 +158,7 @@
     document.querySelectorAll('[data-photo-url]').forEach(el=>el.classList.add('media-hidden-url'));
     placeExistingDropzones();
   }
-  function refreshUploadDropzones(){
-    installUploadDropzones();
-    placeExistingDropzones();
-  }
+  function refreshUploadDropzones(){installUploadDropzones();placeExistingDropzones();}
   function injectMediaUi(){
     const panel=$('resident-tab-media');
     if(!panel) return;
@@ -222,15 +222,27 @@
       img.src=url;
     });
   }
+  window.renderResidentMedia=renderResidentMedia;
+  window.readResidentMedia=readResidentMedia;
+  window.refreshResidentMediaUploads=refreshUploadDropzones;
   onReady(()=>{
     injectMediaUi();
     document.addEventListener('admin-github-media-ready',refreshUploadDropzones);
-    const originalEnsureResidents=ensureResidents;
-    window.ensureResidents=ensureResidents=function(){originalEnsureResidents();(residents().residents||[]).forEach(r=>{normalizePhotos(r);getEmbeds(r);});};
-    const originalRenderResidentForm=renderResidentForm;
-    window.renderResidentForm=renderResidentForm=function(){originalRenderResidentForm();renderResidentMedia();};
-    const originalReadResidentForm=readResidentForm;
-    window.readResidentForm=readResidentForm=function(){originalReadResidentForm();readResidentMedia();};
+    if(!window.__adminResidentsMediaEnsureWrapped){
+      window.__adminResidentsMediaEnsureWrapped=true;
+      const originalEnsureResidents=ensureResidents;
+      window.ensureResidents=ensureResidents=function(){originalEnsureResidents();(residents().residents||[]).forEach(r=>{normalizePhotos(r);getEmbeds(r);});};
+    }
+    if(!window.__adminResidentsMediaRenderWrapped){
+      window.__adminResidentsMediaRenderWrapped=true;
+      const originalRenderResidentForm=renderResidentForm;
+      window.renderResidentForm=renderResidentForm=function(){originalRenderResidentForm();renderResidentMedia();};
+    }
+    if(!window.__adminResidentsMediaReadWrapped){
+      window.__adminResidentsMediaReadWrapped=true;
+      const originalReadResidentForm=readResidentForm;
+      window.readResidentForm=readResidentForm=function(){originalReadResidentForm();readResidentMedia();};
+    }
     ensureResidents();
     renderResidentMedia();
   });
