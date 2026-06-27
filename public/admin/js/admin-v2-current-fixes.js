@@ -1,7 +1,7 @@
 /* Retired Admin v2 current-fixes compatibility shim.
-   Scope: visible build marker, read-only health/smoke/walkthrough/write-readiness/snapshot checks, and safe display-only asset loading. No observers, no save/load patches. */
+   Scope: visible build marker, read-only health/smoke/walkthrough/write-readiness/snapshot/baseline/preflight checks, and safe display-only asset loading. No observers, no save/load patches. */
 (function(){
-  const TEXT='admin-v2-structure-17 geladen';
+  const TEXT='admin-v2-structure-18 geladen';
   function setBadge(){
     let b=document.getElementById('adminBuildBadge');
     if(!b){
@@ -22,9 +22,9 @@
     b.textContent=TEXT;
   }
   function installBadgeWrapper(){
-    if(window.__adminV2Structure17BadgeWrapped)return;
+    if(window.__adminV2Structure18BadgeWrapped)return;
     if(typeof window.renderAll!=='function')return;
-    window.__adminV2Structure17BadgeWrapped=true;
+    window.__adminV2Structure18BadgeWrapped=true;
     const originalRenderAll=window.renderAll;
     window.renderAll=function(){
       const result=originalRenderAll.apply(this,arguments);
@@ -49,6 +49,8 @@
   function loadWalkthroughTest(){loadScriptOnce('./js/admin-walkthrough-test.js?v=admin-walkthrough-test-1')}
   function loadWriteReadiness(){loadScriptOnce('./js/admin-write-readiness.js?v=admin-write-readiness-1')}
   function loadSnapshotReport(){loadScriptOnce('./js/admin-snapshot-report.js?v=admin-snapshot-report-1')}
+  function loadWriteBaseline(){loadScriptOnce('./js/admin-write-baseline.js?v=admin-write-baseline-1')}
+  function loadSavePreflight(){loadScriptOnce('./js/admin-save-preflight.js?v=admin-save-preflight-1')}
   function runHealthCheck(){
     const scripts=Array.from(document.querySelectorAll('script[src]'));
     const styles=Array.from(document.querySelectorAll('link[rel="stylesheet"]'));
@@ -80,6 +82,8 @@
       snapshotReportLoaded:!!window.__adminSnapshotReportLoaded,
       snapshotReady:!!snapshot?.readyForWriteReport,
       snapshotCounts:snapshot?{events:snapshot.eventsCount,residents:snapshot.residentsCount,artists:snapshot.artistsCount}:null,
+      writeBaselineLoaded:!!window.__adminWriteBaselineLoaded,
+      savePreflightLoaded:!!window.__adminSavePreflightLoaded,
       residentsNewsLoaded:!!window.__adminResidentsNewsModuleLoaded,
       residentsMediaLoaded:!!window.__adminResidentsMediaModuleLoaded,
       residentsOrderLoaded:!!window.__adminResidentsOrderModuleLoaded,
@@ -100,6 +104,8 @@
     loadWalkthroughTest();
     loadWriteReadiness();
     loadSnapshotReport();
+    loadWriteBaseline();
+    loadSavePreflight();
     setTimeout(runHealthCheck,0);
   }
   window.AdminBuildMarker={text:TEXT,set:setBadge};
@@ -109,6 +115,8 @@
   window.loadAdminWalkthroughTest=loadWalkthroughTest;
   window.loadAdminWriteReadiness=loadWriteReadiness;
   window.loadAdminSnapshotReport=loadSnapshotReport;
+  window.loadAdminWriteBaseline=loadWriteBaseline;
+  window.loadAdminSavePreflight=loadSavePreflight;
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install);
   else install();
 })();
