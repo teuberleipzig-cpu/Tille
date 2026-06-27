@@ -2,7 +2,7 @@
    Scope: DOM/module presence checks only. No data writes and no GitHub save/load calls. */
 (function(){
   if(window.__adminSmokeTestLoaded){
-    if(window.AdminV2SmokeTest&&typeof window.AdminV2SmokeTest.run==='function')window.AdminV2SmokeTest.run();
+    if(window.AdminV2SmokeTest&&typeof window.AdminV2SmokeTest.run==='function')window.AdminV2SmokeTest.run({allowLoading:true});
     return;
   }
   window.__adminSmokeTestLoaded=true;
@@ -62,10 +62,18 @@
       check('No duplicate styles',styleDuplicates().length===0,JSON.stringify(styleDuplicates()))
     ];
   }
-  function dataChecks(){
+  function dataReady(){
+    const s=appState();
+    return !!(s?.eventsData?.events?.length&&s?.residentsData?.residents?.length);
+  }
+  function dataChecks(options){
+    const opts=options||{};
     const s=appState();
     const eventCount=s?.eventsData?.events?.length||0;
     const residentCount=s?.residentsData?.residents?.length||0;
+    if(opts.allowLoading&&!dataReady()){
+      return [check('Data load may still be pending',true,'events='+eventCount+' residents='+residentCount+' syncState='+(s?.syncState||''))];
+    }
     return [
       check('App state reachable',!!s),
       check('Events data shape present',!!s?.eventsData),
@@ -82,12 +90,15 @@
       check('Event image path fixer available',typeof window.fixAdminEventImagePaths==='function')
     ];
   }
-  function run(){
+  function run(options){
+    const opts=options||{};
     if(window.fixAdminEventImagePaths)window.fixAdminEventImagePaths();
-    const checks=[...moduleChecks(),...domChecks(),...dataChecks(),...mediaChecks()];
+    const checks=[...moduleChecks(),...domChecks(),...dataChecks(opts),...mediaChecks()];
     const failed=checks.filter(item=>!item.pass);
     const result={
       ok:failed.length===0,
+      dataReady:dataReady(),
+      dataDeferred:!!opts.allowLoading&&!dataReady(),
       total:checks.length,
       passed:checks.length-failed.length,
       failed:failed.length,
