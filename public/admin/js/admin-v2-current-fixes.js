@@ -1,7 +1,7 @@
 /* Retired Admin v2 current-fixes compatibility shim.
-   Scope: visible build marker, read-only health/smoke/walkthrough/write-readiness checks, and safe display-only asset loading. No observers, no save/load patches. */
+   Scope: visible build marker, read-only health/smoke/walkthrough/write-readiness/snapshot checks, and safe display-only asset loading. No observers, no save/load patches. */
 (function(){
-  const TEXT='admin-v2-structure-16 geladen';
+  const TEXT='admin-v2-structure-17 geladen';
   function setBadge(){
     let b=document.getElementById('adminBuildBadge');
     if(!b){
@@ -22,9 +22,9 @@
     b.textContent=TEXT;
   }
   function installBadgeWrapper(){
-    if(window.__adminV2Structure16BadgeWrapped)return;
+    if(window.__adminV2Structure17BadgeWrapped)return;
     if(typeof window.renderAll!=='function')return;
-    window.__adminV2Structure16BadgeWrapped=true;
+    window.__adminV2Structure17BadgeWrapped=true;
     const originalRenderAll=window.renderAll;
     window.renderAll=function(){
       const result=originalRenderAll.apply(this,arguments);
@@ -48,6 +48,7 @@
   function loadSmokeTest(){loadScriptOnce('./js/admin-smoke-test.js?v=admin-smoke-test-state-1')}
   function loadWalkthroughTest(){loadScriptOnce('./js/admin-walkthrough-test.js?v=admin-walkthrough-test-1')}
   function loadWriteReadiness(){loadScriptOnce('./js/admin-write-readiness.js?v=admin-write-readiness-1')}
+  function loadSnapshotReport(){loadScriptOnce('./js/admin-snapshot-report.js?v=admin-snapshot-report-1')}
   function runHealthCheck(){
     const scripts=Array.from(document.querySelectorAll('script[src]'));
     const styles=Array.from(document.querySelectorAll('link[rel="stylesheet"]'));
@@ -56,6 +57,7 @@
     const smoke=window.AdminV2SmokeTest&&typeof window.AdminV2SmokeTest.run==='function'?window.AdminV2SmokeTest.run():null;
     const walkthrough=window.AdminV2WalkthroughTest&&typeof window.AdminV2WalkthroughTest.run==='function'?window.AdminV2WalkthroughTest.run():null;
     const writeReadiness=window.AdminV2WriteReadiness&&typeof window.AdminV2WriteReadiness.run==='function'?window.AdminV2WriteReadiness.run():null;
+    const snapshot=window.AdminV2SnapshotReport&&typeof window.AdminV2SnapshotReport.run==='function'?window.AdminV2SnapshotReport.run():null;
     const checks={
       badgeText:document.getElementById('adminBuildBadge')?.textContent||'',
       duplicateScripts:scriptDuplicates,
@@ -75,6 +77,9 @@
       writeReadinessLoaded:!!window.__adminWriteReadinessLoaded,
       writeReady:writeReadiness?!!writeReadiness.ok:null,
       writeFailedNames:writeReadiness?writeReadiness.failedNames:[],
+      snapshotReportLoaded:!!window.__adminSnapshotReportLoaded,
+      snapshotReady:!!snapshot?.readyForWriteReport,
+      snapshotCounts:snapshot?{events:snapshot.eventsCount,residents:snapshot.residentsCount,artists:snapshot.artistsCount}:null,
       residentsNewsLoaded:!!window.__adminResidentsNewsModuleLoaded,
       residentsMediaLoaded:!!window.__adminResidentsMediaModuleLoaded,
       residentsOrderLoaded:!!window.__adminResidentsOrderModuleLoaded,
@@ -94,6 +99,7 @@
     loadSmokeTest();
     loadWalkthroughTest();
     loadWriteReadiness();
+    loadSnapshotReport();
     setTimeout(runHealthCheck,0);
   }
   window.AdminBuildMarker={text:TEXT,set:setBadge};
@@ -102,6 +108,7 @@
   window.loadAdminSmokeTest=loadSmokeTest;
   window.loadAdminWalkthroughTest=loadWalkthroughTest;
   window.loadAdminWriteReadiness=loadWriteReadiness;
+  window.loadAdminSnapshotReport=loadSnapshotReport;
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install);
   else install();
 })();
