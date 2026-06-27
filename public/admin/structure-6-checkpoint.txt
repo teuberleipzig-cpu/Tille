@@ -1,0 +1,22 @@
+Admin v2 structure checkpoint after module guard hardening.
+
+Expected visible badge:
+admin-v2-structure-8 geladen
+
+Structural state:
+- Current fixes shim is retired and badge-only.
+- github-media.js is generic helper-only and duplicate-load guarded.
+- residents-news.js is guarded and news-only.
+- residents-media.js is guarded and media-only.
+- residents-order.js is guarded.
+- releases-core.js is guarded.
+- textareas.js no longer uses interval-based repair.
+- save-status-ux.js no longer uses delayed retry binding.
+
+Still open:
+- index.html still contains old direct script loads.
+- events-meta.js is still both transition loader and event meta module.
+- releases-workflow.js still needs a dedicated guard/cleanup pass.
+- End-to-end save/load tests are still pending.
+
+No data JSON files are part of this checkpoint.
