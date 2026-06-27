@@ -1,6 +1,11 @@
 /* Resident ordering controls for Admin v2.
    Shows residents in JSON order in the hidden legacy panel, but sidebar subnav is alphabetical. */
 (function(){
+  if(window.__adminResidentsOrderModuleLoaded){
+    if(typeof window.renderResidentsSidebarList==='function')window.renderResidentsSidebarList();
+    return;
+  }
+  window.__adminResidentsOrderModuleLoaded=true;
   function onReady(fn){document.readyState==='loading'?document.addEventListener('DOMContentLoaded',fn):fn()}
   function allResidents(){return residents().residents||[]}
   function alphaResidents(){return allResidents().map((r,i)=>({r,i})).sort((a,b)=>String(a.r.name||'').localeCompare(String(b.r.name||''),'de',{sensitivity:'base'}))}
@@ -68,10 +73,17 @@
     box.innerHTML=list.map(({r,i})=>'<button class="residents-sidebar-main '+(i===state.selectedResident?'active':'')+'" data-sidebar-resident="'+i+'">'+esc(r.name||'Ohne Name')+'</button>').join('')||'<p class="muted">Keine Residents.</p>';
     document.querySelectorAll('[data-sidebar-resident]').forEach(b=>b.onclick=()=>selectResident(Number(b.dataset.sidebarResident)));
   }
+  window.renderResidentsSidebarList=renderResidentsSidebarList;
   onReady(()=>{
-    window.renderResidentList=renderResidentList=renderOrderedResidentList;
-    const oldSetView=setView;
-    window.setView=setView=function(v){oldSetView(v);renderResidentsSidebarList()};
+    if(!window.__adminResidentsOrderListWrapped){
+      window.__adminResidentsOrderListWrapped=true;
+      window.renderResidentList=renderResidentList=renderOrderedResidentList;
+    }
+    if(!window.__adminResidentsOrderSetViewWrapped){
+      window.__adminResidentsOrderSetViewWrapped=true;
+      const oldSetView=setView;
+      window.setView=setView=function(v){oldSetView(v);renderResidentsSidebarList()};
+    }
     if($('residentList'))renderResidentList();
     renderResidentsSidebarList();
   });
