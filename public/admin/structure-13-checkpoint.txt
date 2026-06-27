@@ -1,0 +1,32 @@
+Admin v2 structure checkpoint after adding the read-only smoke test runner.
+
+Expected visible badge:
+admin-v2-structure-13 geladen
+
+New read-only tool:
+AdminV2SmokeTest.run()
+
+Purpose:
+- Checks module guard presence.
+- Checks main Admin views exist.
+- Checks event/resident/release UI anchors exist.
+- Checks no duplicate scripts/styles are present.
+- Checks event image paths are not resolved through /public/admin/public/events/.
+- Does not call save functions.
+- Does not write events.json.
+- Does not write residents.json.
+
+Health check now also reports:
+- smokeTestLoaded
+- smokeOk
+
+Expected after hard reload:
+- AdminV2HealthCheck.run().ok is true.
+- AdminV2SmokeTest.run().ok is true.
+
+Still open:
+- Manual read-only click-through of Events, Artists, Residents, News, Media and Releases.
+- Explicit write tests only after approval.
+- index.html can later be reduced to a single transition loader when full non-truncated file access is available.
+
+No data JSON files are part of this checkpoint.
