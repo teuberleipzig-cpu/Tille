@@ -1,7 +1,7 @@
 /* Event meta/calendar, JSON tools and controlled Admin v2 module loading.
    Loaded after admin-app.js. */
 (function(){
-  const ADMIN_BUILD_TEXT='admin-v2-structure-2 geladen';
+  const ADMIN_BUILD_TEXT='admin-v2-structure-3 geladen';
   function onReady(fn){
     if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',fn);
     else fn();
@@ -195,16 +195,49 @@
 
   function loadControlledAdminModules(){
     loadExtraExtension(null,'./js/save-status-ux.js?v=status-ux-1');
-    loadExtraExtension('./css/github-media.css','./js/github-media.js?v=github-media-no-interval-1');
+    loadExtraExtension('./css/github-media.css','./js/github-media.js?v=github-media-generic-1');
     loadExtraExtension('./css/residents-news.css','./js/residents-news.js?v=residents-news-only-news-1');
-    loadExtraExtension('./css/residents-media.css','./js/residents-media.js?v=resident-media-upload-helper-bind-1');
+    loadExtraExtension('./css/residents-media.css','./js/residents-media.js?v=resident-media-own-upload-1');
     loadExtraExtension('./css/textareas.css','./js/textareas.js');
-    loadExtraExtension('./css/releases-admin.css','./js/releases-core.js');
+    loadExtraExtension('./css/releases-admin.css','./js/releases-core.js?v=releases-own-upload-1');
     loadExtraExtension(null,'./js/releases-extra.js');
     loadExtraExtension(null,'./js/auto-github-load.js?v=debug-save-safe-restore-1');
     loadExtraExtension('./css/residents-order.css','./js/residents-order.js');
     loadExtraExtension('./css/releases-workflow.css','./js/releases-workflow.js');
     loadExtraExtension('./css/resident-access.css','./extensions/resident-access.js?v=resident-access-2');
+  }
+
+  function installEventImageUpload(){
+    const helper=window.AdminGithubMedia;
+    const panel=$('event-tab-image');
+    if(!helper||!panel||$('eventImageGithubDrop'))return;
+    helper.hideFieldFor('evImageUrl');
+    helper.hideFieldFor('evImageFile');
+    const zone=helper.makeDropzone('eventImageGithubDrop','Eventbild hier ablegen','Wird nach GitHub hochgeladen und als Pfad gespeichert.',async(file,st)=>{
+      const local=helper.localFilePreview(file);
+      try{
+        helper.status(st,'Lade Eventbild nach GitHub...','warn');
+        if($('eventImagePreview'))$('eventImagePreview').src=local;
+        const previewImg=$('eventPreview')?.querySelector('img');
+        if(previewImg)previewImg.src=local;
+        readEventForm();
+        const e=currentEvent();
+        if(!e)throw new Error('Kein Event ausgewählt.');
+        const folder=helper.slugText((e.date||'event')+'-'+(e.title||e.id||'event'));
+        const path='public/events/media/'+folder+'/'+helper.uniqueName('event');
+        const url=await helper.uploadImage(file,path,16/9,1600,900);
+        helper.rememberPreview(url,local);
+        helper.setFieldValue('evImageUrl',url);
+        readEventForm();
+        markDirty();
+        renderPreview();
+        if($('eventImagePreview'))$('eventImagePreview').src=local;
+        const nextPreviewImg=$('eventPreview')?.querySelector('img');
+        if(nextPreviewImg)nextPreviewImg.src=local;
+        helper.status(st,'Hochgeladen: '+url+' · lokale Vorschau aktiv','ok');
+      }catch(err){helper.status(st,err.message,'err')}
+    },'image/*');
+    panel.prepend(zone);
   }
 
   function installStrictArtistOffer(){
@@ -246,6 +279,7 @@
     installJsonTools();
     installStrictArtistOffer();
     loadControlledAdminModules();
+    document.addEventListener('admin-github-media-ready',installEventImageUpload);
     installAdminBuildBadge();
 
     const originalEnsureEvents=ensureEvents;
@@ -260,6 +294,7 @@
       originalRenderEventForm();
       renderEventMeta();
       installStrictArtistOffer();
+      installEventImageUpload();
     };
 
     const originalReadEventForm=readEventForm;
@@ -275,6 +310,7 @@
 
     ensureMetaShape();
     renderAll();
+    installEventImageUpload();
     installAdminBuildBadge();
   });
 })();
