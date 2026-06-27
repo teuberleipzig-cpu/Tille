@@ -1,0 +1,21 @@
+Admin v2 structure checkpoint after index migration assessment and health check addition.
+
+Expected visible badge:
+admin-v2-structure-11 geladen
+
+Structural state:
+- index.html direct script loads were inspected.
+- index.html still directly loads github-media.js and admin-v2-current-fixes.js with old cache keys.
+- Direct index rewrite was not performed because the long inline HTML content cannot be fetched/written safely without truncation through the connector.
+- Runtime is protected by module guards and canonical loader checks.
+- admin-v2-current-fixes.js is still non-invasive: badge plus read-only AdminV2HealthCheck only.
+- AdminV2HealthCheck.run() reports duplicate scripts/styles and module guard status.
+- Function test matrix has been added.
+- Index migration plan has been added.
+
+Still open:
+- Rewrite index.html when full non-truncated file access is available.
+- Run full read-only smoke test.
+- Run write test phase only after explicit approval.
+
+No data JSON files are part of this checkpoint.
