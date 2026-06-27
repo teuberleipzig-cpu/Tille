@@ -48,8 +48,15 @@
       residentsHash:smallHash(residentsText)
     };
   }
-  function begin(label){
+  function begin(label,options){
+    const opts=options||{};
     const next=capture(label||'before-write-test');
+    if(next.dirty&&!opts.allowDirty){
+      const result={ok:false,reason:'dirty-before-baseline',current:next,persisted:!!readStoredBaseline()};
+      console.warn('[AdminWriteBaseline] baseline not captured',result);
+      return result;
+    }
+    next.ok=true;
     writeStoredBaseline(next);
     console.info('[AdminWriteBaseline] begin',next);
     return next;
@@ -83,6 +90,7 @@
     const expected=expect||{};
     const failures=[];
     if(!baseline)failures.push('No baseline captured');
+    if(baseline&&baseline.dirty)failures.push('Baseline was captured while dirty');
     if(current.dirty)failures.push('Dirty flag is true');
     if(current.syncState!=='loaded')failures.push('Sync state is '+current.syncState);
     if(d&&d.eventsCountChanged)failures.push('Events count changed');
