@@ -1,0 +1,22 @@
+Admin v2 structure checkpoint.
+
+Expected visible badge:
+admin-v2-structure-18 geladen
+
+New console helpers:
+- AdminV2WriteBaseline.begin(label)
+- AdminV2WriteBaseline.status()
+- AdminV2WriteBaseline.verifyAfterReload(expect)
+- AdminV2WriteBaseline.reset()
+- AdminV2SavePreflight.run(target)
+
+Purpose:
+- Capture a browser baseline before controlled verification.
+- Compare counts, SHAs, byte sizes and JSON hashes after reload.
+- Check preconditions before a human action.
+- Keep code changes separate from data files.
+
+Updated guide:
+- public/admin/WRITE_TEST_RUNBOOK.md
+
+Data files are not part of this checkpoint.
