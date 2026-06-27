@@ -70,19 +70,43 @@
     else r.embeds=[];
     return r.embeds;
   }
+  function hideLegacyMediaShell(){
+    const panel=$('resident-tab-media');
+    if(!panel)return;
+    panel.querySelectorAll('.notice').forEach(el=>{
+      if(String(el.textContent||'').includes('werden hier aber noch nicht bearbeitet'))el.style.display='none';
+    });
+    ['resImage','resPresskit'].forEach(id=>{
+      const field=$(id)?.closest('.field');
+      if(field)field.classList.add('media-hidden-url');
+    });
+  }
+  function placeExistingDropzones(){
+    const presskit=$('residentPresskitGithubDrop');
+    const presskitSlot=$('residentPresskitSlot');
+    if(presskit&&presskitSlot&&presskit.parentElement!==presskitSlot)presskitSlot.appendChild(presskit);
+    const photos=$('residentPhotosGithubDrop');
+    const photosSlot=$('residentPhotosDropSlot');
+    if(photos&&photosSlot&&photos.parentElement!==photosSlot)photosSlot.appendChild(photos);
+  }
   function injectMediaUi(){
     const panel=$('resident-tab-media');
-    if(!panel || $('residentPhotosList')) return;
-    const wrap=document.createElement('div');
-    wrap.innerHTML='<section class="media-section" id="residentPresskitBlock"><h3 class="media-section-title">Presskit</h3><p class="media-section-note">PDF oder ZIP per Drag & Drop hochladen. Im JSON steht nur der Pfad.</p><div id="residentPresskitSlot"></div></section><section class="media-section" id="residentPhotosBlock"><h3 class="media-section-title">Slide-Bilder</h3><p class="media-section-note">Mehrere 16:9-Bilder für die Resident-Seite.</p><div class="tools media-hidden-url"><button class="tool" id="addResidentPhotoUrlBtn">+ Foto-URL</button><button class="tool" id="uploadResidentPhotoBtn">Foto hochladen</button><input id="residentPhotoFile" type="file" accept="image/*" class="hidden"></div><div id="residentPhotosDropSlot"></div><div id="residentPhotosList" class="resident-photo-grid"></div></section><section class="media-section" id="residentEmbedsBlock"><h3 class="media-section-title">Media Embeds</h3><p class="media-section-note">Ein Embed oder Link pro Zeile.</p><div class="field full"><textarea class="input resident-embeds-textarea" id="residentEmbedsTextarea" placeholder="SoundCloud / YouTube / Bandcamp Embed oder URL"></textarea></div></section>';
-    panel.appendChild(wrap);
-    const add=$('addResidentPhotoUrlBtn');
-    if(add)add.onclick=()=>{const r=currentResident();if(!r)return;normalizePhotos(r).push({url:''});markDirty();renderResidentMedia();};
-    const upload=$('uploadResidentPhotoBtn');
-    if(upload)upload.onclick=()=>$('residentPhotoFile').click();
-    const file=$('residentPhotoFile');
-    if(file)file.onchange=handleResidentPhotoUpload;
-    $('residentEmbedsTextarea').addEventListener('input',()=>{readResidentMedia();markDirty();});
+    if(!panel) return;
+    hideLegacyMediaShell();
+    if(!$('residentPhotosList')){
+      const wrap=document.createElement('div');
+      wrap.id='residentMediaEditor';
+      wrap.innerHTML='<section class="media-section" id="residentPresskitBlock"><h3 class="media-section-title">Presskit</h3><p class="media-section-note">PDF oder ZIP per Drag & Drop hochladen. Im JSON steht nur der Pfad.</p><div id="residentPresskitSlot"></div></section><section class="media-section" id="residentPhotosBlock"><h3 class="media-section-title">Slide-Bilder</h3><p class="media-section-note">Mehrere 16:9-Bilder für die Resident-Seite.</p><div class="tools media-hidden-url"><button class="tool" id="addResidentPhotoUrlBtn">+ Foto-URL</button><button class="tool" id="uploadResidentPhotoBtn">Foto hochladen</button><input id="residentPhotoFile" type="file" accept="image/*" class="hidden"></div><div id="residentPhotosDropSlot"></div><div id="residentPhotosList" class="resident-photo-grid"></div></section><section class="media-section" id="residentEmbedsBlock"><h3 class="media-section-title">Media Embeds</h3><p class="media-section-note">Ein Embed oder Link pro Zeile.</p><div class="field full"><textarea class="input resident-embeds-textarea" id="residentEmbedsTextarea" placeholder="SoundCloud / YouTube / Bandcamp Embed oder URL"></textarea></div></section>';
+      panel.appendChild(wrap);
+      const add=$('addResidentPhotoUrlBtn');
+      if(add)add.onclick=()=>{const r=currentResident();if(!r)return;normalizePhotos(r).push({url:''});markDirty();renderResidentMedia();};
+      const upload=$('uploadResidentPhotoBtn');
+      if(upload)upload.onclick=()=>$('residentPhotoFile').click();
+      const file=$('residentPhotoFile');
+      if(file)file.onchange=handleResidentPhotoUpload;
+      $('residentEmbedsTextarea').addEventListener('input',()=>{readResidentMedia();markDirty();});
+    }
+    placeExistingDropzones();
   }
   function renderResidentMedia(){
     injectMediaUi();
@@ -95,6 +119,7 @@
     embedsEl.value=getEmbeds(r).join('\n');
     listEl.innerHTML=photos.map((p,i)=>'<div class="resident-photo-card"><img src="'+esc(assetUrl(p.url||''))+'" alt=""><textarea class="input media-hidden-url" data-photo-url="'+i+'">'+esc(p.url||'')+'</textarea><div class="tools" style="margin-top:10px"><button class="tool" data-photo-move="'+i+':-1">←</button><button class="tool" data-photo-move="'+i+':1">→</button><button class="tool danger" data-photo-remove="'+i+'">Löschen</button></div></div>').join('')||'<p class="muted">Noch keine Fotos.</p>';
     wirePhotos();
+    placeExistingDropzones();
   }
   function wirePhotos(){
     document.querySelectorAll('[data-photo-url]').forEach(el=>{el.oninput=()=>{const r=currentResident();if(!r)return;normalizePhotos(r)[Number(el.dataset.photoUrl)].url=el.value;markDirty();};});
