@@ -1,12 +1,13 @@
 /* Admin v2 write baseline.
-   Scope: in-memory baseline and diff checks before/after browser write tests. No save calls and no GitHub writes. */
+   Scope: persisted hash/count baseline for browser write tests. No save calls and no GitHub writes. */
 (function(){
   if(window.__adminWriteBaselineLoaded){
     if(window.AdminV2WriteBaseline&&typeof window.AdminV2WriteBaseline.status==='function')window.AdminV2WriteBaseline.status();
     return;
   }
   window.__adminWriteBaselineLoaded=true;
-  let baseline=null;
+  const STORAGE_KEY='adminV2WriteBaseline';
+  let baseline=readStoredBaseline();
 
   function appState(){try{return typeof state!=='undefined'?state:null}catch(e){return null}}
   function smallHash(text){
@@ -15,6 +16,16 @@
     return (h>>>0).toString(16).padStart(8,'0');
   }
   function jsonText(fn){return typeof fn==='function'?fn():''}
+  function safeParse(text){try{return JSON.parse(text)}catch(e){return null}}
+  function readStoredBaseline(){
+    try{return safeParse(sessionStorage.getItem(STORAGE_KEY)||'')}
+    catch(e){return null}
+  }
+  function writeStoredBaseline(value){
+    baseline=value;
+    if(value)sessionStorage.setItem(STORAGE_KEY,JSON.stringify(value));
+    else sessionStorage.removeItem(STORAGE_KEY);
+  }
   function capture(label){
     const s=appState();
     const eventsText=jsonText(typeof eventsJson==='function'?eventsJson:null);
@@ -37,8 +48,19 @@
       residentsHash:smallHash(residentsText)
     };
   }
-  function begin(label){baseline=capture(label||'before-write-test');console.info('[AdminWriteBaseline] begin',baseline);return baseline}
-  function status(){const current=capture('current');const result={hasBaseline:!!baseline,baseline,current,diff:baseline?diff(current,baseline):null};console.info('[AdminWriteBaseline] status',result);return result}
+  function begin(label){
+    const next=capture(label||'before-write-test');
+    writeStoredBaseline(next);
+    console.info('[AdminWriteBaseline] begin',next);
+    return next;
+  }
+  function status(){
+    baseline=baseline||readStoredBaseline();
+    const current=capture('current');
+    const result={hasBaseline:!!baseline,baseline,current,diff:baseline?diff(current,baseline):null,persisted:!!readStoredBaseline()};
+    console.info('[AdminWriteBaseline] status',result);
+    return result;
+  }
   function diff(current,base){
     return{
       dirtyChanged:current.dirty!==base.dirty,
@@ -55,6 +77,7 @@
     };
   }
   function verifyAfterReload(expect){
+    baseline=baseline||readStoredBaseline();
     const current=capture('after-reload');
     const d=baseline?diff(current,baseline):null;
     const expected=expect||{};
@@ -66,11 +89,13 @@
     if(d&&d.residentsCountChanged)failures.push('Residents count changed');
     if(d&&expected.eventsChanged===false&&d.eventsHashChanged)failures.push('Events hash changed unexpectedly');
     if(d&&expected.residentsChanged===false&&d.residentsHashChanged)failures.push('Residents hash changed unexpectedly');
-    const result={ok:failures.length===0,failures,baseline,current,diff:d,expect:expected};
+    if(d&&expected.eventsChanged===true&&!d.eventsHashChanged)failures.push('Events hash did not change');
+    if(d&&expected.residentsChanged===true&&!d.residentsHashChanged)failures.push('Residents hash did not change');
+    const result={ok:failures.length===0,failures,baseline,current,diff:d,expect:expected,persisted:!!readStoredBaseline()};
     console.info('[AdminWriteBaseline] verifyAfterReload',result);
     if(failures.length)console.table(failures.map(name=>({name})));
     return result;
   }
-  function reset(){baseline=null;console.info('[AdminWriteBaseline] reset');return{ok:true}}
+  function reset(){writeStoredBaseline(null);console.info('[AdminWriteBaseline] reset');return{ok:true,persisted:false}}
   window.AdminV2WriteBaseline={begin,status,verifyAfterReload,reset};
 })();
