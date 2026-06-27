@@ -1,0 +1,9 @@
+Admin v2 structure checkpoint after retiring current fixes.
+
+Expected visible badge before next step:
+admin-v2-structure-4 geladen
+
+Reference purpose:
+Return point before module idempotency guards.
+
+No data JSON files are part of this checkpoint.
