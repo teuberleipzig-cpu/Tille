@@ -38,17 +38,18 @@
   }
   async function deleteMediaFileFromGithub(publicUrl){
     const path=repoPathFromPublicUrl(publicUrl);
-    if(!path||!path.startsWith('public/residents/media/'))return{skipped:true};
+    if(!path||!path.startsWith('public/residents/media/'))return{skipped:true,path};
     const owner=$('ghOwner')?.value?.trim(),repo=$('ghRepo')?.value?.trim(),branch=$('ghBranch')?.value?.trim();
     if(!owner||!repo||!branch)throw new Error('GitHub Owner/Repo/Branch fehlen in Einstellungen.');
     const apiPath=path.split('/').map(encodeURIComponent).join('/');
     const base='https://api.github.com/repos/'+encodeURIComponent(owner)+'/'+encodeURIComponent(repo)+'/contents/'+apiPath;
     const metaRes=await fetch(base+'?ref='+encodeURIComponent(branch)+'&t='+Date.now(),{headers:ghHeaders(),cache:'no-store'});
-    if(metaRes.status===404)return{missing:true};
+    if(metaRes.status===404)return{missing:true,path};
     const meta=await metaRes.json().catch(()=>({}));
     if(!metaRes.ok)throw new Error(meta.message||'GitHub-Datei konnte nicht geprüft werden.');
     const delRes=await fetch(base,{method:'DELETE',headers:{...ghHeaders(),'Content-Type':'application/json'},body:JSON.stringify({message:'Delete resident media '+path,sha:meta.sha,branch})});
     const out=await delRes.json().catch(()=>({}));
+    if(delRes.status===404)return{missing:true,path};
     if(!delRes.ok)throw new Error(out.message||'GitHub-Datei konnte nicht gelöscht werden.');
     return{deleted:true,path};
   }
@@ -97,7 +98,7 @@
   }
   function wirePhotos(){
     document.querySelectorAll('[data-photo-url]').forEach(el=>{el.oninput=()=>{const r=currentResident();if(!r)return;normalizePhotos(r)[Number(el.dataset.photoUrl)].url=el.value;markDirty();};});
-    document.querySelectorAll('[data-photo-remove]').forEach(btn=>{btn.onclick=async()=>{const r=currentResident();if(!r)return;const index=Number(btn.dataset.photoRemove);const list=normalizePhotos(r);const url=list[index]?.url||'';if(!confirm('Foto wirklich aus GitHub löschen?'))return;setStatus('residentStatus','Lösche Foto aus GitHub...','warn');try{await deleteMediaFileFromGithub(url);list.splice(index,1);markDirty();renderResidentMedia();setStatus('residentStatus','Foto gelöscht. Residents speichern, damit die JSON-Liste aktualisiert wird.','ok')}catch(err){setStatus('residentStatus',err.message,'err')}};});
+    document.querySelectorAll('[data-photo-remove]').forEach(btn=>{btn.onclick=async()=>{const r=currentResident();if(!r)return;const index=Number(btn.dataset.photoRemove);const list=normalizePhotos(r);const url=list[index]?.url||'';if(!confirm('Foto aus der Liste entfernen? Falls eine Repo-Datei existiert, wird sie zusätzlich gelöscht.'))return;setStatus('residentStatus','Entferne Foto...','warn');try{const result=await deleteMediaFileFromGithub(url);list.splice(index,1);markDirty();renderResidentMedia();const detail=result.deleted?'Datei aus GitHub gelöscht.':result.missing?'Repo-Datei fehlte bereits.':result.skipped?'Kein löschbarer Repo-Pfad erkannt.':'';setStatus('residentStatus','Foto aus der Liste entfernt. '+detail+' Residents speichern, damit die JSON-Liste aktualisiert wird.','ok')}catch(err){setStatus('residentStatus',err.message,'err')}};});
     document.querySelectorAll('[data-photo-move]').forEach(btn=>{btn.onclick=()=>{const r=currentResident();if(!r)return;const parts=btn.dataset.photoMove.split(':').map(Number);const from=parts[0],to=from+parts[1],list=normalizePhotos(r);if(to<0||to>=list.length)return;const item=list.splice(from,1)[0];list.splice(to,0,item);markDirty();renderResidentMedia();};});
   }
   function readResidentMedia(){
