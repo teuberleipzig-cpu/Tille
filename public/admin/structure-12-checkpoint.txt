@@ -1,0 +1,19 @@
+Admin v2 structure checkpoint after event image admin path fix.
+
+Expected visible badge:
+admin-v2-structure-12 geladen
+
+Issue fixed:
+- Event images stored as `public/events/media/...` were displayed by the Admin as relative URLs below `/public/admin/`, causing `/public/admin/public/events/...` 404s.
+
+Implementation:
+- Added `public/admin/js/event-assets.js`.
+- This module normalizes event asset display paths for the Admin UI only.
+- JSON values are not rewritten.
+- `admin-v2-current-fixes.js` loads `event-assets.js` safely and exposes `loadAdminEventAssets()`.
+- `AdminV2HealthCheck.run()` now reports `eventAssetsLoaded`.
+
+Still harmless:
+- `/favicon.ico` 404 is unrelated to Admin data and only means no favicon exists.
+
+No data JSON files are part of this checkpoint.
