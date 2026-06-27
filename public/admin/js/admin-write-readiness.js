@@ -2,7 +2,7 @@
    Scope: validates whether controlled write tests can be started. It never calls save functions and never writes data. */
 (function(){
   if(window.__adminWriteReadinessLoaded){
-    if(window.AdminV2WriteReadiness&&typeof window.AdminV2WriteReadiness.run==='function')window.AdminV2WriteReadiness.run();
+    if(window.AdminV2WriteReadiness&&typeof window.AdminV2WriteReadiness.run==='function')window.AdminV2WriteReadiness.run({quiet:true});
     return;
   }
   window.__adminWriteReadinessLoaded=true;
@@ -19,7 +19,7 @@
   }
   function tokenState(){
     const token=document.getElementById('ghToken')?.value?.trim()||'';
-    return{present:!!token,length:token.length};
+    return{present:!!token,length:token.length,sessionStored:!!sessionStorage.getItem('adminV2GhTokenSession')};
   }
   function functionChecks(){
     return[
@@ -54,7 +54,7 @@
   function uiWriteChecks(){
     const token=tokenState();
     return[
-      check('GitHub token present for write phase',token.present,'length='+token.length),
+      check('GitHub token present for write phase',token.present,'length='+token.length+(token.sessionStored?' · session token stored':'')),
       check('Top save button exists',!!document.getElementById('topSaveBtn')),
       check('Event save button exists',!!document.getElementById('eventSaveBtn')),
       check('Resident save button exists',!!document.getElementById('saveResidentsGitBtn')),
@@ -83,12 +83,13 @@
       check('No conflict state before write test',s?.syncState!=='conflict','syncState='+(s?.syncState||''))
     ];
   }
-  function run(){
+  function run(options){
+    const opts=options||{};
     const checks=[...functionChecks(),...dataChecks(),...jsonChecks(),...uiWriteChecks(),...mediaWriteChecks(),...dirtyChecks()];
     const failed=checks.filter(item=>!item.pass);
     const result={ok:failed.length===0,total:checks.length,passed:checks.length-failed.length,failed:failed.length,failedNames:failed.map(item=>item.name),failedChecks:failed,checks};
-    console.info('[AdminWriteReadiness]',result);
-    if(failed.length)console.table(failed);
+    if(!opts.quiet)console.info('[AdminWriteReadiness]',result);
+    if(failed.length&&!opts.quiet)console.table(failed);
     return result;
   }
   window.AdminV2WriteReadiness={run};
