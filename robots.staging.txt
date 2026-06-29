@@ -1,0 +1,7 @@
+# Distillery Leipzig robots template for STAGING.
+# Deploy/copy this file as /robots.txt only on the staging domain.
+# Target staging domain: https://teuberstaging.distillery.de/
+# Note: robots.txt is not access control. Use noindex headers and/or Basic Auth on staging when server access is available.
+
+User-agent: *
+Disallow: /
