@@ -41,6 +41,7 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 - [x] `feedback.html` hat Favicon/Manifest/Theme-Color und wurde nach Deployment direkt geprüft.
 - [x] `404.html` als noindex-Fehlerseite mit Social-/Favicon-Meta vorbereitet.
 - [x] `.well-known/security.txt` mit Kontaktadresse angelegt.
+- [x] `PUBLIC_AUDIT_INDEX_2026-06-29.md` als zentrale Audit-Übersicht angelegt.
 - [x] `PUBLIC_INTERNAL_LINK_AUDIT_2026-06-29.md` als repo-basierter interner Link-Audit angelegt.
 - [x] `PUBLIC_HEAD_META_AUDIT_2026-06-29.md` als repo-basierter Head-/Meta-Audit angelegt.
 - [x] `PUBLIC_ASSET_AUDIT_2026-06-29.md` als repo-basierter Asset-Audit angelegt.
