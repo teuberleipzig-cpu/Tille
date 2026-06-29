@@ -41,13 +41,16 @@ Nach dem Commit/Deploy von Punkt 1 direkt prüfen:
 - `https://teuberleipzig-cpu.github.io/Tille/favicon.svg`
 - `https://teuberleipzig-cpu.github.io/Tille/site.webmanifest`
 - `https://teuberleipzig-cpu.github.io/Tille/sitemap.xml`
+- `https://teuberleipzig-cpu.github.io/Tille/.well-known/security.txt`
 
 Erwartung:
 
 - keine sichtbaren Test-Badges
 - Seiten laden normal
 - Navigation und Footer sichtbar
-- Favicon/Manifest/Sitemap öffnen ohne 404
+- Favicon/Manifest/Sitemap/Security-Datei öffnen ohne 404
+- öffentliche Medien laden ohne sichtbare 404s
+- keine unerwarteten Tracking-/Analytics-Requests im Network-Panel
 
 ## 4. Danach in Repo/Drive nachziehen
 
@@ -58,6 +61,39 @@ Wenn Punkt 1 erledigt und geprüft ist:
 - `GO_LIVE_REMAINING_CHECKLIST.md` Badge-Punkt erst dann als final erledigt stehen lassen.
 - Drive-Checkliste nur dann anpassen, wenn der Browser-Check wirklich grün war.
 
+## 5. Blockierte Dokumentationspunkte nachtragen
+
+Diese Dokumentationspunkte wurden jeweils zweimal durch GitHub-Write/Sicherheitschecks blockiert und sollten morgen manuell oder in kleinerer Form nachgetragen werden:
+
+### 5.1 Semantik-/Accessibility-Audit
+
+Vorgeschlagener Dateiname:
+
+- `PUBLIC_SEMANTIC_ACCESSIBILITY_AUDIT_2026-06-29.md`
+
+Kurzinhalt:
+
+- Logo-Bilder haben Alt-Texte.
+- Mehrere Navigationen haben ARIA-Beschreibungen.
+- `index.html` hat ARIA-Unterstützung für Suche, Kalender, Live-Status und Dialog.
+- Residents/Releases setzen dynamische Alt-Texte für Bilder.
+- `datenschutz.html` hat echte H1/H2-Struktur.
+- Offen bleiben H1/H2-Struktur auf mehreren Public-Seiten, Tastaturtest, Screenreader-Test, Farbkontrast-Test und Responsive-Accessibility-Test.
+
+### 5.2 CSV-Import-Readiness-Audit
+
+Vorgeschlagener Dateiname:
+
+- `CSV_IMPORT_READINESS_AUDIT_2026-06-29.md`
+
+Kurzinhalt:
+
+- Keine sichtbare CSV-Import-Implementierung nachgewiesen.
+- Event-Datenquelle wurde nur lesend geprüft.
+- CSV-Import-Block in der Go-Live-Checkliste ist vollständig offen.
+- Post-Deploy-Check prüft Events, aber keinen CSV-Import.
+- Offen bleiben CSV-Spalten, Pflichtfelder, Beispiel-CSV, Datums-/Zeitformate, Mapping, Duplikatstrategie, Import-Vorschau, Fehleranzeige, Abbruch-/Bestätigungsworkflow und Reload-Verifikation.
+
 ## Nicht morgen als manueller Patch gemeint
 
 Diese Punkte sind weiterhin offen, aber keine reinen Copy/Paste-Patches:
@@ -66,3 +102,5 @@ Diese Punkte sind weiterhin offen, aber keine reinen Copy/Paste-Patches:
 - Impressum/Datenschutz final fachlich/rechtlich prüfen.
 - Feedback-Formular-Zieladresse und LIVE-Weiterleitung entscheiden.
 - Tracking-Konzept final entscheiden.
+- Bild-/Medienrechte final bestätigen.
+- Admin V2 und Resi-Admin auf STAGING/LIVE testen.
