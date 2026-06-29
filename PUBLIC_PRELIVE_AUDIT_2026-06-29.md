@@ -1,6 +1,6 @@
 # Public Pre-Live Audit – 2026-06-29
 
-Status: Repo-Prüfung nach Public-Meta-Patches, Root-/Utility-Dateiprüfung, Link-/Head-/Asset-/Noindex-/External-Services-/Deployment-Readiness-/Media-Rights-/Tracking-Audits und manueller Warteschlange.
+Status: Repo-Prüfung nach Public-Meta-Patches, Root-/Utility-Dateiprüfung, Link-/Head-/Asset-/Noindex-/External-Services-/Deployment-Readiness-/Media-Rights-/Tracking-Audits, Audit-Index und manueller Warteschlange.
 
 ## Geprüfte Dateien
 
@@ -19,6 +19,7 @@ Status: Repo-Prüfung nach Public-Meta-Patches, Root-/Utility-Dateiprüfung, Lin
 - `.well-known/security.txt`
 - `MANUAL_TOMORROW_QUEUE.md`
 - `INDEX_TEST_BADGE_MANUAL_PATCH.md`
+- `PUBLIC_AUDIT_INDEX_2026-06-29.md`
 - `PUBLIC_INTERNAL_LINK_AUDIT_2026-06-29.md`
 - `PUBLIC_HEAD_META_AUDIT_2026-06-29.md`
 - `PUBLIC_ASSET_AUDIT_2026-06-29.md`
@@ -44,6 +45,7 @@ Status: Repo-Prüfung nach Public-Meta-Patches, Root-/Utility-Dateiprüfung, Lin
 - [x] `favicon.svg` ist vorhanden und valide als SVG-Favicon vorbereitet.
 - [x] `site.webmanifest` ist vorhanden und verweist auf `favicon.svg`.
 - [x] `.well-known/security.txt` ist vorhanden und verweist auf `club@distillery.de`.
+- [x] Repo-basierter Audit-Index ist dokumentiert.
 - [x] Repo-basierter interner Public-Link-Audit ist dokumentiert.
 - [x] Repo-basierter Head-/Meta-Audit ist dokumentiert.
 - [x] Repo-basierter Asset-Audit ist dokumentiert.
