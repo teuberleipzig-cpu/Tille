@@ -35,16 +35,20 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 - [x] `residents.html` sicher gelesen und SEO-/Footer-Basics ergänzt.
 - [x] Öffentliche Media-Pfade auf Startseite und Residents-Seite für GitHub Pages normalisiert.
 - [x] Public-Site-Smoke-Test auf GitHub Pages bestanden und in `PUBLIC_SITE_SMOKE_TEST.md` dokumentiert.
+- [x] Root-`favicon.svg` und `site.webmanifest` angelegt.
+- [x] Favicon/Manifest/Theme-Color auf statischen Public-Seiten vereinheitlicht.
+- [x] `404.html` als noindex-Fehlerseite mit Social-/Favicon-Meta vorbereitet.
+- [x] `.well-known/security.txt` mit Kontaktadresse angelegt.
 - [ ] Sichtbarer Test-Badge `TEST BUILD / public-media-fix-4` vor LIVE wieder entfernen.
 
-### SEO / Indexierung – Vorlagen
+### SEO / Indexierung – Vorlagen und aktive Dateien
 
 - [x] `robots.live.txt` als inaktive LIVE-Vorlage angelegt.
 - [x] `robots.staging.txt` als inaktive STAGING-Vorlage angelegt.
 - [x] `sitemap.live.xml` als inaktive LIVE-Vorlage angelegt.
 - [x] `DEPLOYMENT_STAGING_LIVE_NOTES.md` angelegt.
-- [ ] Keine aktive Root-`robots.txt` angelegt.
-- [ ] Keine aktive Root-`sitemap.xml` angelegt.
+- [x] Aktive Root-`robots.txt` angelegt.
+- [x] Aktive Root-`sitemap.xml` angelegt und mit `lastmod` versehen.
 
 ---
 
@@ -68,6 +72,7 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 - [x] Keine relevante Event-/Dates-Logik-Beschädigung im Browser-Smoke-Test gemeldet.
 - [x] Resident-Slideshow-Media-Pfade für GitHub Pages korrigiert.
 - [x] Public-Site-Smoke-Test für Startseite bestanden.
+- [ ] Favicon/Manifest/Theme-Color auf `index.html` ergänzen.
 - [ ] Sichtbaren Test-Badge vor LIVE entfernen.
 
 ### P0-B Öffentliche Residents-Seite / `residents.html`
@@ -85,6 +90,7 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 - [x] Resident- und Release-Medienpfade für GitHub Pages normalisiert.
 - [x] Keine Residents-Daten direkt geändert.
 - [x] Public-Site-Smoke-Test für Residents-Seite bestanden.
+- [ ] Favicon/Manifest/Theme-Color auf `residents.html` ergänzen.
 - [ ] Sichtbaren Test-Badge vor LIVE entfernen.
 
 ### P0-C Legal / Pflichtangaben
@@ -123,8 +129,8 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 - [ ] HTTPS für LIVE aktiv.
 - [ ] Redirect-Strategie final entschieden.
 - [ ] Test-Badge vor LIVE entfernen.
-- [ ] `robots.live.txt` als LIVE-`/robots.txt` deployen.
-- [ ] `sitemap.live.xml` als LIVE-`/sitemap.xml` deployen.
+- [ ] `robots.txt` auf LIVE prüfen.
+- [ ] `sitemap.xml` auf LIVE prüfen.
 - [ ] LIVE Mainpage Smoke-Test.
 - [ ] LIVE Admin V2 Smoke-Test.
 - [ ] LIVE Resi-Admin Smoke-Test.
@@ -160,9 +166,9 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 - [ ] Startseiten-H1/H2-Struktur prüfen.
 - [ ] Unterseiten-H1/H2-Struktur prüfen.
 - [ ] Alt-Texte prüfen.
-- [ ] Social Preview Bild / `og:image` entscheiden.
-- [ ] `og:image` technisch einbinden.
-- [ ] Sitemap finalisieren.
+- [ ] Social Preview Bild final entscheiden: SVG ist eingebunden, PNG/JPG-Fallback bleibt offen.
+- [x] `og:image` technisch einbinden.
+- [x] Sitemap als aktive Root-`sitemap.xml` vorbereiten.
 - [ ] Canonicals final prüfen.
 - [ ] STAGING-Noindex final prüfen.
 - [ ] 404-/Redirect-Konzept prüfen.
@@ -218,71 +224,3 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 - [ ] News-Seite final prüfen.
 - [ ] Residents-Seite final prüfen.
 - [ ] About-Seite final prüfen.
-- [ ] Contact-Seite final prüfen.
-- [ ] History-Seite final prüfen.
-- [ ] Feedback-Seite final prüfen.
-- [ ] Impressum/Datenschutz final optisch prüfen.
-- [ ] Admin V2 optisch prüfen.
-- [ ] Resi-Admin optisch prüfen.
-- [ ] Mobile Navigation prüfen.
-- [ ] Typografie prüfen.
-- [ ] Abstände prüfen.
-- [ ] Hoverstates prüfen.
-- [ ] CTA-Texte prüfen.
-- [ ] Gesamteindruck: wirkt wie Distillery, nicht generisch.
-
----
-
-## P2 – Sehr wichtig, aber notfalls nach Launch
-
-### P2-A Performance
-
-- [ ] Lighthouse-Test auf STAGING.
-- [ ] Lighthouse-Test auf LIVE.
-- [ ] Bildgrößen prüfen.
-- [ ] WebP/AVIF-Strategie prüfen.
-- [ ] Lazy Loading prüfen.
-- [ ] Font Loading prüfen.
-- [ ] CSS-/JS-Größe prüfen.
-- [ ] Cache-Header prüfen.
-
-### P2-B Accessibility
-
-- [ ] Tastaturbedienung prüfen.
-- [ ] Fokuszustände prüfen.
-- [ ] Kontraste prüfen.
-- [ ] Formularlabels prüfen.
-- [ ] Alt-Texte prüfen.
-- [ ] Reduced-Motion prüfen.
-- [ ] Screenreader-Basischeck durchführen.
-
-### P2-C Betrieb / Monitoring
-
-- [ ] Backup-Strategie definieren.
-- [ ] Deployment-Log führen.
-- [ ] Uptime-Monitoring prüfen.
-- [ ] Error-Logging prüfen.
-- [ ] Notfallkontakt definieren.
-- [ ] Rollback-Ablauf testen.
-
----
-
-## P3 – Später / Nice-to-have
-
-- [ ] Automatischer Linkchecker.
-- [ ] Automatisierte Lighthouse-Reports.
-- [ ] Tracking-Charts im Admin.
-- [ ] SEO-Content-Erweiterungen.
-- [ ] automatische Sitemap-Generierung.
-- [ ] bessere 404-Seite.
-- [ ] Pressekits mit Ablaufdatum.
-- [ ] Artist-spezifische Analytics.
-
----
-
-## Aktueller nächster sinnvoller Schritt
-
-1. Sichtbaren Test-Badge während weiterer GitHub-Pages-Tests drin lassen.
-2. Server-/Hosting-Zugriff für STAGING und LIVE klären.
-3. Danach echte STAGING/LIVE-Deployment-Strategie aus `DEPLOYMENT_STAGING_LIVE_NOTES.md` ableiten.
-4. Erst nach Serverklärung aktive Root-`robots.txt` und Root-`sitemap.xml` für die jeweilige Umgebung vorbereiten.
