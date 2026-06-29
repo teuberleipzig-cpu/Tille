@@ -1,0 +1,8 @@
+# Distillery Leipzig robots template for LIVE.
+# Deploy/copy this file as /robots.txt only on the public live domain after final Go-Live approval.
+# Target live domain: https://www.distillery.de/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.distillery.de/sitemap.xml
