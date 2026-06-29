@@ -132,43 +132,32 @@
 
   function readEventMeta(){
     ensureMetaShape();
-    const meta=events().meta;
-    if($('metaMonthLabel')) meta.monthLabel=$('metaMonthLabel').value||'';
+    const meta=events().meta||{};
+    if($('metaMonthLabel')) meta.monthLabel=$('metaMonthLabel').value.trim();
     if($('metaCalendarYear')) meta.calendarYear=Number($('metaCalendarYear').value)||new Date().getFullYear();
     if($('metaCalendarMonth')) meta.calendarMonth=Number($('metaCalendarMonth').value)||new Date().getMonth()+1;
-    if($('metaHighlightTitle')) meta.highlightTitle=$('metaHighlightTitle').value||'';
-    if($('metaHighlightLinks')) meta.highlightLinks=String($('metaHighlightLinks').value||'').split(/\n/).map(x=>x.trim()).filter(Boolean);
+    if($('metaHighlightTitle')) meta.highlightTitle=$('metaHighlightTitle').value.trim();
+    if($('metaHighlightLinks')) meta.highlightLinks=String($('metaHighlightLinks').value||'').split('\n').map(x=>x.trim()).filter(Boolean);
   }
 
-  function convertGeneratedInputs(html){
-    const convert=(source,attr)=>source.replace(new RegExp('<input class="input" ('+attr+'="[^"]+") value="([^"]*)" placeholder="([^"]*)">','g'),'<textarea class="input small-textarea" $1 placeholder="$3">$2</textarea>');
-    let out=html;
-    ['data-section-label','data-section-genre','data-artist-name','data-artist-info','data-artist-link'].forEach(attr=>{out=convert(out,attr);});
-    return out;
+  function renderEventsJson(){
+    const out=$('eventsJsonOutput');
+    if(out) out.value=eventsJson();
   }
 
-  function installJsonTools(){
-    const download=$('downloadEventsJsonBtn');
-    if(!download || $('copyEventsJsonBtn')) return;
-    download.textContent='JSON herunterladen';
-
-    const refresh=document.createElement('button');
-    refresh.className='btn';
-    refresh.id='refreshEventsJsonBtn';
-    refresh.textContent='JSON aktualisieren';
-    refresh.onclick=()=>{
+  function installEventsJsonTools(){
+    if($('eventsJsonOutput')) return;
+    const panel=$('event-tab-preview');
+    if(!panel) return;
+    const box=document.createElement('div');
+    box.className='field full';
+    box.style.marginTop='18px';
+    box.innerHTML='<label class="label">Events JSON Export</label><textarea class="input" id="eventsJsonOutput" style="min-height:160px;font-family:monospace" readonly></textarea><div class="tools" style="margin-top:10px"><button class="tool" id="refreshEventsJson">JSON aktualisieren</button><button class="tool" id="copyEventsJson">JSON kopieren</button></div>';
+    panel.appendChild(box);
+    $('refreshEventsJson').onclick=()=>{readEventForm();readEventMeta();readArtistForm();renderEventsJson();setStatus('eventEditStatus','Events JSON aktualisiert.','ok')};
+    $('copyEventsJson').onclick=async()=>{
       readEventForm();
-      readArtistForm();
-      renderEventsJson();
-      setStatus('eventEditStatus','Events JSON aktualisiert.','ok');
-    };
-
-    const copy=document.createElement('button');
-    copy.className='btn';
-    copy.id='copyEventsJsonBtn';
-    copy.textContent='JSON kopieren';
-    copy.onclick=async()=>{
-      readEventForm();
+      readEventMeta();
       readArtistForm();
       const text=eventsJson();
       try{
@@ -180,8 +169,6 @@
         setStatus('eventEditStatus','JSON ist markiert. Bitte manuell kopieren.','warn');
       }
     };
-
-    download.before(refresh,copy);
   }
 
   function canonicalAsset(src){return String(src||'').split('?')[0]}
@@ -218,7 +205,7 @@
     loadExtraExtension(null,'./js/releases-extra.js');
     loadExtraExtension(null,'./js/auto-github-load.js?v=debug-save-safe-restore-1');
     loadExtraExtension('./css/residents-order.css','./js/residents-order.js?v=residents-order-guard-1');
-    loadExtraExtension('./css/releases-workflow.css','./js/releases-workflow.js?v=releases-workflow-helper-1');
+    loadExtraExtension('./css/releases-workflow.css','./js/releases-workflow.js?v=releases-workflow-shell-guard-1');
     loadExtraExtension('./css/resident-access.css','./extensions/resident-access.js?v=resident-access-2');
   }
 
@@ -259,90 +246,56 @@
     window.offerArtistSave=offerArtistSave=function(input){
       readEventForm();
       const key=input?.dataset?.artistName||input?.dataset?.artistInfo||input?.dataset?.artistLink;
-      if(!key||!currentEvent()) return;
-      const parts=key.split(':').map(Number);
-      const item=currentEvent().sections?.[parts[0]]?.items?.[parts[1]];
-      if(!item) return;
-      const name=String(item.name||'').trim();
-      const info=String(item.info||'').trim();
-      const link=String(item.link||'').trim();
-      if(!name||!info||!link) return;
-
-      const existing=artists().find(a=>norm(a.name)===norm(name));
-      if(existing && String(existing.info||'').trim()===info && String(existing.link||'').trim()===link) return;
-
-      if(existing){
-        if(!confirm('Artist "'+name+'" existiert schon, aber Info/Link unterscheiden sich. Artistliste aktualisieren?')) return;
-        existing.info=info;
-        existing.link=link;
-        setStatus('eventEditStatus','Artistliste für '+name+' aktualisiert.','ok');
-      }else{
-        if(!confirm('Artist "'+name+'" mit Info und Link in die Artistliste aufnehmen?')) return;
-        artists().push({name,info,link});
-        state.selectedArtist=artists().length-1;
-        setStatus('eventEditStatus','Artist '+name+' in die Artistliste aufgenommen.','ok');
-      }
-      markDirty();
-      renderArtists();
-      renderEventsJson();
+      if(!key||!currentEvent())return;
+      const [si,ai]=key.split(':').map(Number);
+      const item=currentEvent().sections?.[si]?.items?.[ai];
+      if(!item||!item.name.trim())return;
+      const exact=artists().find(a=>norm(a.name)===norm(item.name));
+      if(exact){exact.info=item.info||'';exact.link=item.link||'';setStatus('artistStatus','Artist-Daten aktualisiert. Noch nicht gespeichert.','warn')}
     };
   }
+
+  function wrapRenderAll(){
+    if(window.__adminEventsMetaRenderWrapped)return;
+    window.__adminEventsMetaRenderWrapped=true;
+    const oldRenderAll=window.renderAll;
+    window.renderAll=function(){
+      const result=oldRenderAll.apply(this,arguments);
+      injectMetaUi();
+      renderEventMeta();
+      renderEventsJson();
+      installEventImageUpload();
+      return result;
+    };
+  }
+
+  function wrapReadEventForm(){
+    if(window.__adminEventsMetaReadWrapped)return;
+    window.__adminEventsMetaReadWrapped=true;
+    const oldReadEventForm=window.readEventForm;
+    window.readEventForm=function(){
+      const result=oldReadEventForm.apply(this,arguments);
+      readEventMeta();
+      return result;
+    };
+  }
+
+  onReady(()=>{
+    installAdminBuildBadge();
+    installEventSortDefault();
+    loadControlledAdminModules();
+    injectMetaUi();
+    installEventsJsonTools();
+    installStrictArtistOffer();
+    wrapReadEventForm();
+    wrapRenderAll();
+    installEventImageUpload();
+    renderEventMeta();
+    renderEventsJson();
+  });
 
   window.loadControlledAdminModules=loadControlledAdminModules;
   window.installEventImageUpload=installEventImageUpload;
   window.renderEventMeta=renderEventMeta;
   window.readEventMeta=readEventMeta;
-
-  onReady(()=>{
-    installEventSortDefault();
-    injectMetaUi();
-    installJsonTools();
-    installStrictArtistOffer();
-    loadControlledAdminModules();
-    document.addEventListener('admin-github-media-ready',installEventImageUpload);
-    installAdminBuildBadge();
-
-    if(!window.__adminEventsMetaEnsureWrapped){
-      window.__adminEventsMetaEnsureWrapped=true;
-      const originalEnsureEvents=ensureEvents;
-      window.ensureEvents=ensureEvents=function(){
-        originalEnsureEvents();
-        ensureMetaShape();
-      };
-    }
-
-    if(!window.__adminEventsMetaRenderWrapped){
-      window.__adminEventsMetaRenderWrapped=true;
-      const originalRenderEventForm=renderEventForm;
-      window.renderEventForm=renderEventForm=function(){
-        injectMetaUi();
-        originalRenderEventForm();
-        renderEventMeta();
-        installStrictArtistOffer();
-        installEventImageUpload();
-      };
-    }
-
-    if(!window.__adminEventsMetaReadWrapped){
-      window.__adminEventsMetaReadWrapped=true;
-      const originalReadEventForm=readEventForm;
-      window.readEventForm=readEventForm=function(){
-        readEventMeta();
-        originalReadEventForm();
-      };
-    }
-
-    if(!window.__adminEventsMetaSectionHtmlWrapped){
-      window.__adminEventsMetaSectionHtmlWrapped=true;
-      const originalSectionHtml=sectionHtml;
-      window.sectionHtml=sectionHtml=function(s,si){
-        return convertGeneratedInputs(originalSectionHtml(s,si));
-      };
-    }
-
-    ensureMetaShape();
-    renderAll();
-    installEventImageUpload();
-    installAdminBuildBadge();
-  });
 })();
