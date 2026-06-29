@@ -47,6 +47,7 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 - [x] `PUBLIC_UTILITY_NO_INDEX_AUDIT_2026-06-29.md` als repo-basierter Utility-/Noindex-Audit angelegt.
 - [x] `PUBLIC_EXTERNAL_SERVICES_PRIVACY_AUDIT_2026-06-29.md` als repo-basierter External-Services-/Privacy-Audit angelegt.
 - [x] `MEDIA_RIGHTS_READINESS_AUDIT_2026-06-29.md` als repo-basierter Media-/Rights-Readiness-Audit angelegt.
+- [x] `TRACKING_READINESS_AUDIT_2026-06-29.md` als repo-basierter Tracking-Readiness-Audit angelegt.
 - [ ] Sichtbarer Test-Badge `TEST BUILD / public-media-fix-4` vollständig aus dem Repo entfernt. `residents.html` und `resident-releases.html` sind sauber; `index.html` bleibt als manueller Patch für morgen offen.
 
 ### SEO / Indexierung – Vorlagen und aktive Dateien
@@ -143,6 +144,7 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 
 - [x] Offene Legal-/Privacy-Informationen in `LEGAL_PRIVACY_REVIEW_INFO_NEEDED.md` dokumentiert.
 - [x] Repo-basierter External-Services-/Privacy-Audit erstellt; finale Rechtsprüfung bleibt offen.
+- [x] Repo-basierter Tracking-Readiness-Audit erstellt; finale Datenschutzentscheidung bleibt offen.
 - [ ] Impressum final fachlich/rechtlich prüfen.
 - [ ] Anbieterangaben final bestätigen.
 - [ ] Anbieteradresse final bestätigen.
@@ -253,6 +255,7 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 
 ### P1-C Datenschutzarmes Tracking
 
+- [x] `TRACKING_READINESS_AUDIT_2026-06-29.md` als repo-basierter Tracking-Readiness-Audit angelegt.
 - [ ] Tracking-Konzept final definieren.
 - [ ] Klären, ob serverseitiges CSV/JSON/Log-Tracking möglich ist.
 - [ ] Pageview-Events definieren.
