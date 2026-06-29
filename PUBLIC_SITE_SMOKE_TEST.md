@@ -13,13 +13,16 @@ Testergebnis: manuell durch Browser-Test bestätigt.
 
 - `/`
 - `/residents.html`
+- `/resident-releases.html`
 - `/news.html`
 - `/about.html`
 - `/contact.html`
 - `/history.html`
 - `/feedback.html`
+- `/feedback-thanks.html`
 - `/impressum.html`
 - `/datenschutz.html`
+- `/404.html`
 
 ## Ergebnis
 
@@ -31,6 +34,9 @@ Testergebnis: manuell durch Browser-Test bestätigt.
 - [x] Impressum-Link ist klickbar.
 - [x] Datenschutz-Link ist klickbar.
 - [x] Öffentliche Media-Pfad-Fixes für Startseite und Residents-Seite wurden anschließend erfolgreich im Browser gegengeprüft.
+- [x] Öffentliche Resident-Releases-Seite wurde nachträglich mit SEO-/Social-/Footer-Basics und Media-Pfad-Normalisierung ergänzt.
+- [x] `404.html` ist als eigene Fehlerseite vorhanden und auf `noindex,follow` gesetzt.
+- [x] `favicon.svg` ist vorhanden und auf den kurzen statischen Seiten verlinkt.
 
 ## Kontext der behobenen Fehler
 
@@ -40,6 +46,8 @@ Vor dem bestandenen Test wurden folgende Probleme gefunden und gefixt:
 - Startseite nutzte für Resident-Slideshow nur `photos` statt die gleiche Priorität wie die Künstlerseite.
 - Startseite normalisiert Resident-Media-Pfade jetzt für GitHub Pages.
 - Residents-Seite normalisiert Release-/Media-Pfade jetzt für GitHub Pages.
+- Resident-Releases-Seite normalisiert Artist- und Release-Media-Pfade jetzt ebenfalls für GitHub Pages.
+- Mehrere öffentliche Seiten hatten noch kein Favicon.
 
 ## Noch offen trotz bestandenem Smoke-Test
 
@@ -54,3 +62,6 @@ Der Test ersetzt keine vollständige Go-Live-Prüfung. Weiterhin offen bleiben i
 - UI-Finalcheck auf mehreren Viewports
 - Accessibility- und Performance-Tests
 - Entscheidung, wann der sichtbare Test-Badge wieder entfernt wird
+- Favicon-Verlinkung auf den langen dynamischen Seiten `index.html`, `residents.html` und `resident-releases.html`
+- `feedback-thanks.html` aus der LIVE-Sitemap-Vorlage entfernen, falls es dort weiterhin gelistet ist
+- PNG/JPG-Version des Social-Preview-Bilds für maximale Social-Preview-Kompatibilität prüfen
