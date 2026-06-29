@@ -1,6 +1,6 @@
 # Public Pre-Live Audit – 2026-06-29
 
-Status: Repo-Prüfung nach Public-Meta-Patches, Root-/Utility-Dateiprüfung, Link-/Head-Audits und manueller Warteschlange.
+Status: Repo-Prüfung nach Public-Meta-Patches, Root-/Utility-Dateiprüfung, Link-/Head-/Asset-/Noindex-Audits und manueller Warteschlange.
 
 ## Geprüfte Dateien
 
@@ -10,6 +10,8 @@ Status: Repo-Prüfung nach Public-Meta-Patches, Root-/Utility-Dateiprüfung, Lin
 - `feedback-thanks.html`
 - `404.html`
 - `robots.txt`
+- `robots.live.txt`
+- `robots.staging.txt`
 - `sitemap.xml`
 - `sitemap.live.xml`
 - `favicon.svg`
@@ -19,6 +21,8 @@ Status: Repo-Prüfung nach Public-Meta-Patches, Root-/Utility-Dateiprüfung, Lin
 - `INDEX_TEST_BADGE_MANUAL_PATCH.md`
 - `PUBLIC_INTERNAL_LINK_AUDIT_2026-06-29.md`
 - `PUBLIC_HEAD_META_AUDIT_2026-06-29.md`
+- `PUBLIC_ASSET_AUDIT_2026-06-29.md`
+- `PUBLIC_UTILITY_NO_INDEX_AUDIT_2026-06-29.md`
 
 ## Ergebnis
 
@@ -28,14 +32,18 @@ Status: Repo-Prüfung nach Public-Meta-Patches, Root-/Utility-Dateiprüfung, Lin
 - [x] `feedback-thanks.html` ist auf `noindex,follow` gesetzt und hat Favicon, Manifest und Theme-Color.
 - [x] `404.html` ist auf `noindex,follow` gesetzt und hat Favicon, Manifest und Theme-Color.
 - [x] `resident-releases.html` ist in der aktiven `sitemap.xml` enthalten.
-- [x] `feedback-thanks.html` ist nicht in `sitemap.live.xml` enthalten.
+- [x] `feedback-thanks.html` ist weder in der aktiven `sitemap.xml` noch in `sitemap.live.xml` enthalten.
 - [x] `resident-releases.html` ist in `sitemap.live.xml` enthalten.
 - [x] `robots.txt` erlaubt Crawling und verweist auf die aktive Sitemap.
+- [x] `robots.live.txt` ist als LIVE-Vorlage vorhanden.
+- [x] `robots.staging.txt` ist als STAGING-Vorlage vorhanden und blockt Crawling.
 - [x] `favicon.svg` ist vorhanden und valide als SVG-Favicon vorbereitet.
 - [x] `site.webmanifest` ist vorhanden und verweist auf `favicon.svg`.
 - [x] `.well-known/security.txt` ist vorhanden und verweist auf `club@distillery.de`.
 - [x] Repo-basierter interner Public-Link-Audit ist dokumentiert.
 - [x] Repo-basierter Head-/Meta-Audit ist dokumentiert.
+- [x] Repo-basierter Asset-Audit ist dokumentiert.
+- [x] Repo-basierter Utility-/Noindex-Audit ist dokumentiert.
 - [x] `residents.html` springt nach Footer/Wrapper direkt in das Script, ohne Test-Badge-Zwischenblock.
 - [x] `resident-releases.html` springt nach Footer/Wrapper direkt in das Script, ohne Test-Badge-Zwischenblock.
 - [ ] `index.html` enthält den sichtbaren `TEST BUILD / public-media-fix-4`-Badge noch. Der manuelle Patch ist in `MANUAL_TOMORROW_QUEUE.md` und `INDEX_TEST_BADGE_MANUAL_PATCH.md` dokumentiert.
@@ -50,13 +58,14 @@ Status: Repo-Prüfung nach Public-Meta-Patches, Root-/Utility-Dateiprüfung, Lin
 - `https://teuberleipzig-cpu.github.io/Tille/sitemap.xml`
 - `https://teuberleipzig-cpu.github.io/Tille/404.html`
 - `https://teuberleipzig-cpu.github.io/Tille/feedback-thanks.html`
+- `https://teuberleipzig-cpu.github.io/Tille/.well-known/security.txt`
 
 Dabei prüfen:
 
 - nach manuellem `index.html`-Patch keine sichtbaren Test-Badges
 - Seiten laden normal
 - keine offensichtlichen Layout-Brüche
-- Favicon, Manifest und Sitemap öffnen ohne 404
+- Favicon, Manifest, Sitemap und Security-Datei öffnen ohne 404
 - `404.html` und `feedback-thanks.html` sind visuell erreichbar, aber technisch auf `noindex,follow` gesetzt
 
 ## Weiterhin offene Go-Live-Punkte
