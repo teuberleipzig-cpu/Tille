@@ -17,6 +17,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.distillery.de/resident-releases.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.distillery.de/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -35,6 +40,11 @@
     <loc>https://www.distillery.de/feedback.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://www.distillery.de/feedback-thanks.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
   </url>
   <url>
     <loc>https://www.distillery.de/impressum.html</loc>
