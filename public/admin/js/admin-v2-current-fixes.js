@@ -1,6 +1,6 @@
 /* Admin v2 marker and read-only diagnostics. */
 (function(){
-  const TEXT='admin-v2-structure-24 geladen';
+  const TEXT='admin-v2-structure-25 geladen';
   function setBadge(){
     let b=document.getElementById('adminBuildBadge');
     if(!b){
@@ -21,9 +21,9 @@
     b.textContent=TEXT;
   }
   function installBadgeWrapper(){
-    if(window.__adminV2Structure24BadgeWrapped)return;
+    if(window.__adminV2Structure25BadgeWrapped)return;
     if(typeof window.renderAll!=='function')return;
-    window.__adminV2Structure24BadgeWrapped=true;
+    window.__adminV2Structure25BadgeWrapped=true;
     const originalRenderAll=window.renderAll;
     window.renderAll=function(){
       const result=originalRenderAll.apply(this,arguments);
