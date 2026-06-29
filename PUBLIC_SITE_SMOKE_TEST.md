@@ -37,6 +37,8 @@ Testergebnis: manuell durch Browser-Test bestätigt.
 - [x] Öffentliche Resident-Releases-Seite wurde nachträglich mit SEO-/Social-/Footer-Basics und Media-Pfad-Normalisierung ergänzt.
 - [x] `404.html` ist als eigene Fehlerseite vorhanden und auf `noindex,follow` gesetzt.
 - [x] `favicon.svg` ist vorhanden und auf den kurzen statischen Seiten verlinkt.
+- [x] `feedback.html`, `favicon.svg` und `site.webmanifest` wurden nach Deployment direkt im Browser ohne Fehler geöffnet.
+- [x] `feedback.html` hat Favicon-, Manifest- und Theme-Color-Meta im Repo.
 
 ## Kontext der behobenen Fehler
 
