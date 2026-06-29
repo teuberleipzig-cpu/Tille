@@ -46,6 +46,7 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 - [x] `PUBLIC_ASSET_AUDIT_2026-06-29.md` als repo-basierter Asset-Audit angelegt.
 - [x] `PUBLIC_UTILITY_NO_INDEX_AUDIT_2026-06-29.md` als repo-basierter Utility-/Noindex-Audit angelegt.
 - [x] `PUBLIC_EXTERNAL_SERVICES_PRIVACY_AUDIT_2026-06-29.md` als repo-basierter External-Services-/Privacy-Audit angelegt.
+- [x] `MEDIA_RIGHTS_READINESS_AUDIT_2026-06-29.md` als repo-basierter Media-/Rights-Readiness-Audit angelegt.
 - [ ] Sichtbarer Test-Badge `TEST BUILD / public-media-fix-4` vollständig aus dem Repo entfernt. `residents.html` und `resident-releases.html` sind sauber; `index.html` bleibt als manueller Patch für morgen offen.
 
 ### SEO / Indexierung – Vorlagen und aktive Dateien
