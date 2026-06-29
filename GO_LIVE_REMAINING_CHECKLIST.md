@@ -41,6 +41,7 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 - [x] `feedback.html` hat Favicon/Manifest/Theme-Color und wurde nach Deployment direkt geprüft.
 - [x] `404.html` als noindex-Fehlerseite mit Social-/Favicon-Meta vorbereitet.
 - [x] `.well-known/security.txt` mit Kontaktadresse angelegt.
+- [x] `PUBLIC_INTERNAL_LINK_AUDIT_2026-06-29.md` als repo-basierter interner Link-Audit angelegt.
 - [ ] Sichtbarer Test-Badge `TEST BUILD / public-media-fix-4` vollständig aus dem Repo entfernt. `residents.html` und `resident-releases.html` sind sauber; `index.html` bleibt als manueller Patch für morgen offen.
 
 ### SEO / Indexierung – Vorlagen und aktive Dateien
@@ -87,6 +88,7 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 - [x] Club-Adresse im Footer prüfen.
 - [x] Email und Telefon im Footer prüfen.
 - [x] Interne Footer-Links im Browser geprüft.
+- [x] Repo-basierter interner Link-Audit erstellt; Browser-Klicktest bleibt offen.
 - [x] Keine relevante Event-/Dates-Logik-Beschädigung im Browser-Smoke-Test gemeldet.
 - [x] Resident-Slideshow-Media-Pfade für GitHub Pages korrigiert.
 - [x] Public-Site-Smoke-Test für Startseite bestanden.
