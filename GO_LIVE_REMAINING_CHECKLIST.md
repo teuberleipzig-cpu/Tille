@@ -33,14 +33,15 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 - [x] Open-Graph-/Twitter-Basics auf mehreren statischen Unterseiten ergänzt.
 - [x] `index.html` sicher gelesen und SEO-/Footer-Basics ergänzt.
 - [x] `residents.html` sicher gelesen und SEO-/Footer-Basics ergänzt.
-- [x] Öffentliche Media-Pfade auf Startseite und Residents-Seite für GitHub Pages normalisiert.
+- [x] `resident-releases.html` mit SEO-/Footer-/Media-Basics ergänzt.
+- [x] Öffentliche Media-Pfade auf Startseite, Residents-Seite und Resident-Releases-Seite für GitHub Pages normalisiert.
 - [x] Public-Site-Smoke-Test auf GitHub Pages bestanden und in `PUBLIC_SITE_SMOKE_TEST.md` dokumentiert.
 - [x] Root-`favicon.svg` und `site.webmanifest` angelegt.
-- [x] Favicon/Manifest/Theme-Color auf statischen Public-Seiten vereinheitlicht.
+- [x] Favicon/Manifest/Theme-Color auf öffentlichen Public-Seiten vereinheitlicht.
 - [x] `feedback.html` hat Favicon/Manifest/Theme-Color und wurde nach Deployment direkt geprüft.
 - [x] `404.html` als noindex-Fehlerseite mit Social-/Favicon-Meta vorbereitet.
 - [x] `.well-known/security.txt` mit Kontaktadresse angelegt.
-- [ ] Sichtbarer Test-Badge `TEST BUILD / public-media-fix-4` vor LIVE wieder entfernen.
+- [x] Sichtbarer Test-Badge `TEST BUILD / public-media-fix-4` aus dem Repo entfernt.
 
 ### SEO / Indexierung – Vorlagen und aktive Dateien
 
@@ -50,6 +51,7 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 - [x] `DEPLOYMENT_STAGING_LIVE_NOTES.md` angelegt.
 - [x] Aktive Root-`robots.txt` angelegt.
 - [x] Aktive Root-`sitemap.xml` angelegt und mit `lastmod` versehen.
+- [x] `resident-releases.html` in aktive Root-`sitemap.xml` aufgenommen.
 
 ---
 
@@ -73,8 +75,8 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 - [x] Keine relevante Event-/Dates-Logik-Beschädigung im Browser-Smoke-Test gemeldet.
 - [x] Resident-Slideshow-Media-Pfade für GitHub Pages korrigiert.
 - [x] Public-Site-Smoke-Test für Startseite bestanden.
-- [ ] Favicon/Manifest/Theme-Color auf `index.html` ergänzen.
-- [ ] Sichtbaren Test-Badge vor LIVE entfernen.
+- [x] Favicon/Manifest/Theme-Color auf `index.html` ergänzt.
+- [x] Sichtbaren Test-Badge vor LIVE entfernt oder nicht mehr im Repo auffindbar.
 
 ### P0-B Öffentliche Residents-Seite / `residents.html`
 
@@ -91,10 +93,23 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 - [x] Resident- und Release-Medienpfade für GitHub Pages normalisiert.
 - [x] Keine Residents-Daten direkt geändert.
 - [x] Public-Site-Smoke-Test für Residents-Seite bestanden.
-- [ ] Favicon/Manifest/Theme-Color auf `residents.html` ergänzen.
-- [ ] Sichtbaren Test-Badge vor LIVE entfernen.
+- [x] Favicon/Manifest/Theme-Color auf `residents.html` ergänzt.
+- [x] Sichtbaren Test-Badge vor LIVE entfernt.
 
-### P0-C Legal / Pflichtangaben
+### P0-C Öffentliche Resident-Releases-Seite / `resident-releases.html`
+
+- [x] `resident-releases.html` als öffentliche Resident-Unterseite vorhanden.
+- [x] Title und Meta Description gesetzt.
+- [x] Canonical gesetzt.
+- [x] Open Graph Basics ergänzt.
+- [x] Twitter Card ergänzt.
+- [x] Impressum-/Datenschutz-Link vorhanden.
+- [x] Media-Pfade für GitHub Pages normalisiert.
+- [x] Favicon/Manifest/Theme-Color ergänzt.
+- [x] In aktive Root-`sitemap.xml` aufgenommen.
+- [x] Sichtbaren Test-Badge vor LIVE entfernt.
+
+### P0-D Legal / Pflichtangaben
 
 - [ ] Impressum final fachlich/rechtlich prüfen.
 - [ ] Anbieterangaben final bestätigen.
@@ -109,7 +124,7 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 - [ ] Tracking-Hinweis final entscheiden.
 - [ ] Bild-/Urheberrechte für verwendete Medien prüfen.
 
-### P0-D STAGING
+### P0-E STAGING
 
 - [ ] Serverzugriff bekannt.
 - [ ] STAGING-Zielpfad bekannt.
@@ -123,13 +138,13 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 - [ ] STAGING Resi-Admin testen.
 - [ ] STAGING Rollback dokumentieren.
 
-### P0-E LIVE
+### P0-F LIVE
 
 - [ ] LIVE-Zielpfad bekannt.
 - [ ] `distillery.de` / `www.distillery.de` final entschieden.
 - [ ] HTTPS für LIVE aktiv.
 - [ ] Redirect-Strategie final entschieden.
-- [ ] Test-Badge vor LIVE entfernen.
+- [x] Test-Badge vor LIVE aus dem Repo entfernt.
 - [ ] `robots.txt` auf LIVE prüfen.
 - [ ] `sitemap.xml` auf LIVE prüfen.
 - [ ] LIVE Mainpage Smoke-Test.
@@ -137,7 +152,7 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 - [ ] LIVE Resi-Admin Smoke-Test.
 - [ ] LIVE Rollback dokumentieren.
 
-### P0-F Admin V2 / Resi-Admin vor Launch
+### P0-G Admin V2 / Resi-Admin vor Launch
 
 - [ ] Admin V2 auf STAGING testen.
 - [ ] Admin V2 auf LIVE testen.
