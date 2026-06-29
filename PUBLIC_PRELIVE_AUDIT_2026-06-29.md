@@ -1,6 +1,6 @@
 # Public Pre-Live Audit – 2026-06-29
 
-Status: Repo-Prüfung nach Public-Meta-Patches, Root-/Utility-Dateiprüfung, Link-/Head-/Asset-/Noindex-/External-Services-/Deployment-Readiness-/Media-Rights-Audits und manueller Warteschlange.
+Status: Repo-Prüfung nach Public-Meta-Patches, Root-/Utility-Dateiprüfung, Link-/Head-/Asset-/Noindex-/External-Services-/Deployment-Readiness-/Media-Rights-/Tracking-Audits und manueller Warteschlange.
 
 ## Geprüfte Dateien
 
@@ -26,6 +26,7 @@ Status: Repo-Prüfung nach Public-Meta-Patches, Root-/Utility-Dateiprüfung, Lin
 - `PUBLIC_EXTERNAL_SERVICES_PRIVACY_AUDIT_2026-06-29.md`
 - `DEPLOYMENT_READINESS_AUDIT_2026-06-29.md`
 - `MEDIA_RIGHTS_READINESS_AUDIT_2026-06-29.md`
+- `TRACKING_READINESS_AUDIT_2026-06-29.md`
 
 ## Ergebnis
 
@@ -50,6 +51,7 @@ Status: Repo-Prüfung nach Public-Meta-Patches, Root-/Utility-Dateiprüfung, Lin
 - [x] Repo-basierter External-Services-/Privacy-Audit ist dokumentiert.
 - [x] Repo-basierter Deployment-Readiness-Audit ist dokumentiert.
 - [x] Repo-basierter Media-/Rights-Readiness-Audit ist dokumentiert.
+- [x] Repo-basierter Tracking-Readiness-Audit ist dokumentiert.
 - [x] `residents.html` springt nach Footer/Wrapper direkt in das Script, ohne Test-Badge-Zwischenblock.
 - [x] `resident-releases.html` springt nach Footer/Wrapper direkt in das Script, ohne Test-Badge-Zwischenblock.
 - [ ] `index.html` enthält den sichtbaren `TEST BUILD / public-media-fix-4`-Badge noch. Der manuelle Patch ist in `MANUAL_TOMORROW_QUEUE.md` und `INDEX_TEST_BADGE_MANUAL_PATCH.md` dokumentiert.
@@ -74,6 +76,7 @@ Dabei prüfen:
 - Favicon, Manifest, Sitemap und Security-Datei öffnen ohne 404
 - `404.html` und `feedback-thanks.html` sind visuell erreichbar, aber technisch auf `noindex,follow` gesetzt
 - öffentliche Medien laden ohne sichtbare 404s
+- keine unerwarteten Tracking-/Analytics-Requests im Network-Panel
 
 ## Weiterhin offene Go-Live-Punkte
 
@@ -87,5 +90,5 @@ Dabei prüfen:
 - Deployment-Methode und Rollback final klären
 - Bild-/Medienrechte final bestätigen
 - Social-Preview-PNG/JPG-Kompatibilität prüfen
-- Tracking-Konzept final entscheiden
+- Tracking-Konzept final entscheiden oder Tracking vorerst deaktiviert lassen
 - Admin V2 und Resi-Admin auf STAGING/LIVE testen
