@@ -71,7 +71,9 @@
   }
   function inject(){
     const root=$('view-releases');
-    if(!root||root.dataset.releaseLayout==='list-detail')return;
+    if(!root)return false;
+    const hasShell=!!($('wfReleaseList')&&$('wfDetail')&&root.querySelector('.releases-workflow'));
+    if(root.dataset.releaseLayout==='list-detail'&&hasShell)return true;
     root.dataset.releaseLayout='list-detail';
     root.innerHTML='<div class="releases-workflow"><aside class="panel release-list-panel"><div class="head"><div class="title"><span class="icon">R</span><h2>Releases</h2></div></div><div class="release-list-actions"><button class="tool" id="wfNewRelease">+ Release</button><button class="tool" id="wfSort">Sortieren</button><button class="tool" id="wfCsvSample">CSV-Beispiel</button><button class="tool" id="wfCsvImport">CSV importieren</button><input id="wfCsvFile" class="hidden" type="file" accept=".csv,text/csv"></div><div id="wfReleaseList"></div></aside><section class="release-detail-editor"><div id="wfDetail"></div><div class="footer"><div id="wfStatus" class="status muted">Bereit.</div><div class="tools"><button class="btn" id="wfJson">Residents JSON</button><button class="btn primary" id="wfSave">Speichern</button></div></div></section></div>';
     $('wfNewRelease').onclick=newRelease;
@@ -81,19 +83,28 @@
     $('wfCsvFile').onchange=handleCsvImport;
     $('wfJson').onclick=downloadResidents;
     $('wfSave').onclick=()=>{readDetail();saveResidentsToGithub()};
+    return !!($('wfReleaseList')&&$('wfDetail'));
   }
   function renderReleaseList(){
+    const box=$('wfReleaseList');
+    if(!box&&!inject())return;
+    const target=$('wfReleaseList');
+    if(!target)return;
     const r=selectedResident(),list=releaseList(r);
-    $('wfReleaseList').innerHTML=list.map((rel,i)=>{normalizeRelease(rel);return '<button class="release-card '+(i===(state.releaseIndex||0)?'active':'')+'" data-wf-release="'+i+'"><strong>'+esc(rel.title||'Ohne Titel')+'</strong><span>'+esc(rel.releaseDate||rel.year||'ohne Datum')+' · '+esc(rel.label||'ohne Label')+'</span></button>'}).join('')||'<p class="muted">Keine Releases.</p>';
+    target.innerHTML=list.map((rel,i)=>{normalizeRelease(rel);return '<button class="release-card '+(i===(state.releaseIndex||0)?'active':'')+'" data-wf-release="'+i+'"><strong>'+esc(rel.title||'Ohne Titel')+'</strong><span>'+esc(rel.releaseDate||rel.year||'ohne Datum')+' · '+esc(rel.label||'ohne Label')+'</span></button>'}).join('')||'<p class="muted">Keine Releases.</p>';
     document.querySelectorAll('[data-wf-release]').forEach(b=>b.onclick=()=>{readDetail();state.releaseIndex=Number(b.dataset.wfRelease);renderWorkflow()});
   }
   function field(id,label,value,cls){return '<div class="field"><label class="label">'+label+'</label><textarea class="input auto-textarea '+(cls||'')+'" id="'+id+'">'+esc(value||'')+'</textarea></div>'}
   function small(id,label,value,type){return '<div class="field"><label class="label">'+label+'</label><input class="input" id="'+id+'" type="'+type+'" value="'+esc(value||'')+'"></div>'}
   function renderDetail(){
+    let detail=$('wfDetail');
+    if(!detail&&!inject())return;
+    detail=$('wfDetail');
+    if(!detail)return;
     const r=selectedResident(),rel=selectedRelease();
-    if(!r||!rel){$('wfDetail').innerHTML='<div class="notice">Links in der Sidebar einen Artist wählen und ein Release anlegen.</div>';return}
+    if(!r||!rel){detail.innerHTML='<div class="notice">Links in der Sidebar einen Artist wählen und ein Release anlegen.</div>';return}
     normalizeRelease(rel);
-    $('wfDetail').innerHTML='<div class="release-detail-header"><div class="release-detail-title"><h2>'+esc(rel.title||'Ohne Titel')+'</h2><p>'+esc(r.name||'Artist')+' · '+esc(rel.releaseDate||rel.year||'ohne Datum')+'</p></div><div class="tools"><button class="tool" id="wfDupRelease">Release duplizieren</button><button class="tool danger" id="wfDeleteRelease">Release löschen</button></div></div><section class="release-detail-section"><h3>Release</h3><div class="release-checks"><label><input id="wfPublished" type="checkbox" '+(rel.published?'checked':'')+'> Published</label><label><input id="wfAutoNews" type="checkbox" '+(rel.autoNews!==false?'checked':'')+'> Auto News</label><label><input id="wfFeatured" type="checkbox" '+(rel.featured?'checked':'')+'> Featured</label></div><div class="form-grid">'+small('wfReleaseDate','Release Date',rel.releaseDate,'date')+small('wfYear','Year',rel.year,'number')+field('wfReleaseTitle','Release-Name',rel.title)+field('wfLabel','Label',rel.label)+field('wfType','Release Type',rel.releaseType)+field('wfFormat','Format',rel.format)+field('wfCountry','Country',rel.country)+field('wfArtists','Artists, eine Zeile pro Artist',joinLines(rel.artists))+'</div></section><section class="release-detail-section"><h3>Thumbnail / Cover</h3><img id="wfCoverPreview" class="release-cover-preview" src="'+esc(rel.coverUrl||'')+'" alt=""><div id="wfCoverDrop"></div></section><section class="release-detail-section"><h3>Tracks</h3>'+field('wfTracks','Tracks, eine Zeile pro Track',joinLines(rel.tracks))+'</section><section class="release-detail-section"><h3>Links</h3><div class="form-grid">'+field('wfDiscogs','Discogs URL',rel.discogsUrl,'link-textarea')+field('wfBeatport','Beatport URL',rel.beatportUrl,'link-textarea')+field('wfBandcamp','Bandcamp URL',rel.bandcampUrl,'link-textarea')+field('wfLabelUrl','Label URL',rel.labelUrl,'link-textarea')+'</div></section><section class="release-detail-section"><h3>Texte</h3>'+field('wfAutoNewsText','Auto News Text',rel.autoNewsText)+field('wfDescription','Release Description',rel.description)+'</section>';
+    detail.innerHTML='<div class="release-detail-header"><div class="release-detail-title"><h2>'+esc(rel.title||'Ohne Titel')+'</h2><p>'+esc(r.name||'Artist')+' · '+esc(rel.releaseDate||rel.year||'ohne Datum')+'</p></div><div class="tools"><button class="tool" id="wfDupRelease">Release duplizieren</button><button class="tool danger" id="wfDeleteRelease">Release löschen</button></div></div><section class="release-detail-section"><h3>Release</h3><div class="release-checks"><label><input id="wfPublished" type="checkbox" '+(rel.published?'checked':'')+'> Published</label><label><input id="wfAutoNews" type="checkbox" '+(rel.autoNews!==false?'checked':'')+'> Auto News</label><label><input id="wfFeatured" type="checkbox" '+(rel.featured?'checked':'')+'> Featured</label></div><div class="form-grid">'+small('wfReleaseDate','Release Date',rel.releaseDate,'date')+small('wfYear','Year',rel.year,'number')+field('wfReleaseTitle','Release-Name',rel.title)+field('wfLabel','Label',rel.label)+field('wfType','Release Type',rel.releaseType)+field('wfFormat','Format',rel.format)+field('wfCountry','Country',rel.country)+field('wfArtists','Artists, eine Zeile pro Artist',joinLines(rel.artists))+'</div></section><section class="release-detail-section"><h3>Thumbnail / Cover</h3><img id="wfCoverPreview" class="release-cover-preview" src="'+esc(rel.coverUrl||'')+'" alt=""><div id="wfCoverDrop"></div></section><section class="release-detail-section"><h3>Tracks</h3>'+field('wfTracks','Tracks, eine Zeile pro Track',joinLines(rel.tracks))+'</section><section class="release-detail-section"><h3>Links</h3><div class="form-grid">'+field('wfDiscogs','Discogs URL',rel.discogsUrl,'link-textarea')+field('wfBeatport','Beatport URL',rel.beatportUrl,'link-textarea')+field('wfBandcamp','Bandcamp URL',rel.bandcampUrl,'link-textarea')+field('wfLabelUrl','Label URL',rel.labelUrl,'link-textarea')+'</div></section><section class="release-detail-section"><h3>Texte</h3>'+field('wfAutoNewsText','Auto News Text',rel.autoNewsText)+field('wfDescription','Release Description',rel.description)+'</section>';
     $('wfDupRelease').onclick=duplicateRelease;
     $('wfDeleteRelease').onclick=deleteRelease;
     bindDetailInputs();
@@ -107,7 +118,7 @@
     rel.discogsUrl=clean('wfDiscogs');rel.beatportUrl=clean('wfBeatport');rel.bandcampUrl=clean('wfBandcamp');rel.labelUrl=clean('wfLabelUrl');rel.autoNewsText=raw('wfAutoNewsText');rel.description=raw('wfDescription');
   }
   function bindDetailInputs(){document.querySelectorAll('#wfDetail input,#wfDetail textarea').forEach(el=>{el.addEventListener('input',()=>{readDetail();markDirty();renderReleaseList();renderSidebarArtists()});el.addEventListener('blur',()=>renderWorkflow())})}
-  function renderWorkflow(){inject();ensureState();renderSidebarArtists();renderReleaseList();renderDetail()}
+  function renderWorkflow(){if(!inject())return;ensureState();renderSidebarArtists();renderReleaseList();renderDetail()}
   function newRelease(){const r=selectedResident();if(!r)return;readDetail();releaseList(r).push(normalizeRelease({published:false,autoNews:true,featured:false,releaseDate:'',year:'',title:'Neues Release',label:'',releaseType:'EP',format:'Digital',country:'',artists:[r.name||''],tracks:['Neuer Track'],coverUrl:'',trackDetails:[{title:'Neuer Track'}],trackThumbnails:['']}));state.releaseIndex=releaseList(r).length-1;markDirty();renderWorkflow()}
   function duplicateRelease(){const r=selectedResident(),rel=selectedRelease();if(!r||!rel)return;readDetail();const c=JSON.parse(JSON.stringify(rel));c.title=(c.title||'Release')+' Kopie';releaseList(r).push(c);state.releaseIndex=releaseList(r).length-1;markDirty();renderWorkflow()}
   function deleteRelease(){const r=selectedResident();if(!r||!selectedRelease())return;if(!confirm('Release wirklich löschen?'))return;releaseList(r).splice(state.releaseIndex,1);state.releaseIndex=Math.max(0,state.releaseIndex-1);markDirty();renderWorkflow()}
@@ -148,7 +159,7 @@
     if(!window.__adminReleasesWorkflowSetViewWrapped){
       window.__adminReleasesWorkflowSetViewWrapped=true;
       const oldSetView=setView;
-      window.setView=setView=function(v){oldSetView(v);renderSidebarArtists();if(v==='releases')setTimeout(renderWorkflow,0)};
+      window.setView=setView=function(v){oldSetView(v);renderSidebarArtists();if(v==='releases')renderWorkflow()};
     }
     renderSidebarArtists();
     renderWorkflow();
