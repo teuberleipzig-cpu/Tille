@@ -2,12 +2,12 @@
 
 Status: bestanden auf GitHub-Pages-Testumgebung.
 Datum: 2026-06-29.
-Testergebnis: manuell durch Browser-Test bestätigt.
+Testergebnis: manuell durch Browser-Test bestätigt und anschließend im Repo nachgezogen.
 
 ## Getestete Umgebung
 
 - GitHub Pages: `https://teuberleipzig-cpu.github.io/Tille/`
-- Test-Badge sichtbar: `TEST BUILD / public-media-fix-4`
+- Test-Badge: aus dem Repo entfernt, vor erneutem Browser-Smoke-Test nach Deploy erneut sichtbar prüfen.
 
 ## Geprüfte Seiten
 
@@ -36,9 +36,11 @@ Testergebnis: manuell durch Browser-Test bestätigt.
 - [x] Öffentliche Media-Pfad-Fixes für Startseite und Residents-Seite wurden anschließend erfolgreich im Browser gegengeprüft.
 - [x] Öffentliche Resident-Releases-Seite wurde nachträglich mit SEO-/Social-/Footer-Basics und Media-Pfad-Normalisierung ergänzt.
 - [x] `404.html` ist als eigene Fehlerseite vorhanden und auf `noindex,follow` gesetzt.
-- [x] `favicon.svg` ist vorhanden und auf den kurzen statischen Seiten verlinkt.
+- [x] `favicon.svg` ist vorhanden und auf den öffentlichen Seiten verlinkt.
+- [x] `site.webmanifest` ist auf den öffentlichen Seiten verlinkt.
+- [x] `index.html`, `residents.html`, `resident-releases.html` und `feedback.html` haben Favicon-, Manifest- und Theme-Color-Meta im Repo.
 - [x] `feedback.html`, `favicon.svg` und `site.webmanifest` wurden nach Deployment direkt im Browser ohne Fehler geöffnet.
-- [x] `feedback.html` hat Favicon-, Manifest- und Theme-Color-Meta im Repo.
+- [x] Sichtbarer `TEST BUILD / public-media-fix-4`-Badge ist im Repo nicht mehr auffindbar.
 
 ## Kontext der behobenen Fehler
 
@@ -49,12 +51,14 @@ Vor dem bestandenen Test wurden folgende Probleme gefunden und gefixt:
 - Startseite normalisiert Resident-Media-Pfade jetzt für GitHub Pages.
 - Residents-Seite normalisiert Release-/Media-Pfade jetzt für GitHub Pages.
 - Resident-Releases-Seite normalisiert Artist- und Release-Media-Pfade jetzt ebenfalls für GitHub Pages.
-- Mehrere öffentliche Seiten hatten noch kein Favicon.
+- Mehrere öffentliche Seiten hatten noch kein Favicon/Manifest/Theme-Color.
+- Sichtbarer Test-Badge wurde vor LIVE aus dem Repo entfernt.
 
 ## Noch offen trotz bestandenem Smoke-Test
 
 Der Test ersetzt keine vollständige Go-Live-Prüfung. Weiterhin offen bleiben insbesondere:
 
+- erneuter Browser-Smoke-Test nach dem letzten Deploy ohne Test-Badge
 - finale rechtliche Prüfung von Impressum und Datenschutz
 - vollständiger SEO-Audit
 - STAGING/LIVE-Deployment
@@ -63,7 +67,5 @@ Der Test ersetzt keine vollständige Go-Live-Prüfung. Weiterhin offen bleiben i
 - CSV-Import für Events
 - UI-Finalcheck auf mehreren Viewports
 - Accessibility- und Performance-Tests
-- Entscheidung, wann der sichtbare Test-Badge wieder entfernt wird
-- Favicon-Verlinkung auf den langen dynamischen Seiten `index.html`, `residents.html` und `resident-releases.html`
 - `feedback-thanks.html` aus der LIVE-Sitemap-Vorlage entfernen, falls es dort weiterhin gelistet ist
 - PNG/JPG-Version des Social-Preview-Bilds für maximale Social-Preview-Kompatibilität prüfen
