@@ -41,7 +41,7 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 - [x] `feedback.html` hat Favicon/Manifest/Theme-Color und wurde nach Deployment direkt geprüft.
 - [x] `404.html` als noindex-Fehlerseite mit Social-/Favicon-Meta vorbereitet.
 - [x] `.well-known/security.txt` mit Kontaktadresse angelegt.
-- [x] Sichtbarer Test-Badge `TEST BUILD / public-media-fix-4` aus dem Repo entfernt.
+- [ ] Sichtbarer Test-Badge `TEST BUILD / public-media-fix-4` vollständig aus dem Repo entfernt. `residents.html` und `resident-releases.html` sind sauber; `index.html` bleibt als manueller Patch für morgen offen.
 
 ### SEO / Indexierung – Vorlagen und aktive Dateien
 
@@ -60,6 +60,13 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 - [x] `datenschutz.html` geprüft: Arbeitsstand vorhanden, server-/formular-/trackingabhängige Angaben offen.
 - [x] `feedback.html` geprüft: FormSubmit-Ziel und GitHub-Pages-Weiterleitung dokumentiert.
 - [x] `LEGAL_PRIVACY_REVIEW_INFO_NEEDED.md` mit offenen Legal-/Privacy-Entscheidungen angelegt.
+
+### Manuelle Warteschlange
+
+- [x] `MANUAL_TOMORROW_QUEUE.md` angelegt.
+- [x] `INDEX_TEST_BADGE_MANUAL_PATCH.md` angelegt.
+- [ ] Manueller Patch `index.html` Test-Badge entfernen.
+- [ ] Browser-Check nach Badge-Entfernung durchführen.
 
 ---
 
@@ -84,7 +91,7 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 - [x] Resident-Slideshow-Media-Pfade für GitHub Pages korrigiert.
 - [x] Public-Site-Smoke-Test für Startseite bestanden.
 - [x] Favicon/Manifest/Theme-Color auf `index.html` ergänzt.
-- [x] Sichtbaren Test-Badge vor LIVE entfernt oder nicht mehr im Repo auffindbar.
+- [ ] Sichtbaren Test-Badge vor LIVE aus `index.html` entfernen. Siehe `MANUAL_TOMORROW_QUEUE.md`.
 
 ### P0-B Öffentliche Residents-Seite / `residents.html`
 
@@ -158,7 +165,7 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 - [ ] `distillery.de` / `www.distillery.de` final entschieden.
 - [ ] HTTPS für LIVE aktiv.
 - [ ] Redirect-Strategie final entschieden.
-- [x] Test-Badge vor LIVE aus dem Repo entfernt.
+- [ ] Test-Badge vor LIVE vollständig aus dem Repo entfernt. `index.html` bleibt offen.
 - [ ] `robots.txt` auf LIVE prüfen.
 - [ ] `sitemap.xml` auf LIVE prüfen.
 - [ ] LIVE Mainpage Smoke-Test.
