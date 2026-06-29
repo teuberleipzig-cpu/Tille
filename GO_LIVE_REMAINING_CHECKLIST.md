@@ -42,6 +42,7 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 - [x] `404.html` als noindex-Fehlerseite mit Social-/Favicon-Meta vorbereitet.
 - [x] `.well-known/security.txt` mit Kontaktadresse angelegt.
 - [x] `PUBLIC_INTERNAL_LINK_AUDIT_2026-06-29.md` als repo-basierter interner Link-Audit angelegt.
+- [x] `PUBLIC_HEAD_META_AUDIT_2026-06-29.md` als repo-basierter Head-/Meta-Audit angelegt.
 - [x] `PUBLIC_ASSET_AUDIT_2026-06-29.md` als repo-basierter Asset-Audit angelegt.
 - [x] `PUBLIC_UTILITY_NO_INDEX_AUDIT_2026-06-29.md` als repo-basierter Utility-/Noindex-Audit angelegt.
 - [x] `PUBLIC_EXTERNAL_SERVICES_PRIVACY_AUDIT_2026-06-29.md` als repo-basierter External-Services-/Privacy-Audit angelegt.
@@ -57,6 +58,14 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 - [x] Aktive Root-`robots.txt` angelegt.
 - [x] Aktive Root-`sitemap.xml` angelegt und mit `lastmod` versehen.
 - [x] `resident-releases.html` in aktive Root-`sitemap.xml` aufgenommen.
+
+### Deployment Vorbereitung
+
+- [x] `POST_DEPLOY_BROWSER_CHECK.md` angelegt.
+- [x] `DEPLOYMENT_READINESS_AUDIT_2026-06-29.md` als repo-basierter Deployment-Readiness-Audit angelegt.
+- [x] Deployment-Blocker sind dokumentiert: Serverzugang, Zielpfade, HTTPS, Redirects, Rollback und Deployment-Methode.
+- [ ] STAGING/LIVE-Serverdaten liegen noch nicht vor.
+- [ ] Echtes STAGING-/LIVE-Deployment ist noch nicht möglich.
 
 ### Legal / Privacy Vorbereitung
 
@@ -152,6 +161,7 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 ### P0-E STAGING
 
 - [x] Fehlende Server-/Hostinginformationen in `STAGING_LIVE_SERVER_INFO_NEEDED.md` dokumentiert.
+- [x] Deployment-Readiness-Audit erstellt; STAGING bleibt wegen fehlender Infrastrukturinfos blockiert.
 - [ ] Serverzugriff bekannt.
 - [ ] STAGING-Zielpfad bekannt.
 - [ ] `teuberstaging.distillery.de` technisch eingerichtet.
@@ -167,6 +177,7 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 ### P0-F LIVE
 
 - [x] Fehlende LIVE-Server-/Hostinginformationen in `STAGING_LIVE_SERVER_INFO_NEEDED.md` dokumentiert.
+- [x] Deployment-Readiness-Audit erstellt; LIVE bleibt wegen fehlender Infrastrukturinfos blockiert.
 - [ ] LIVE-Zielpfad bekannt.
 - [ ] `distillery.de` / `www.distillery.de` final entschieden.
 - [ ] HTTPS für LIVE aktiv.
