@@ -1,6 +1,6 @@
 # Public Pre-Live Audit – 2026-06-29
 
-Status: Repo-Prüfung nach Public-Meta-Patches, Root-/Utility-Dateiprüfung und manueller Warteschlange.
+Status: Repo-Prüfung nach Public-Meta-Patches, Root-/Utility-Dateiprüfung, Link-/Head-Audits und manueller Warteschlange.
 
 ## Geprüfte Dateien
 
@@ -17,6 +17,8 @@ Status: Repo-Prüfung nach Public-Meta-Patches, Root-/Utility-Dateiprüfung und 
 - `.well-known/security.txt`
 - `MANUAL_TOMORROW_QUEUE.md`
 - `INDEX_TEST_BADGE_MANUAL_PATCH.md`
+- `PUBLIC_INTERNAL_LINK_AUDIT_2026-06-29.md`
+- `PUBLIC_HEAD_META_AUDIT_2026-06-29.md`
 
 ## Ergebnis
 
@@ -32,6 +34,8 @@ Status: Repo-Prüfung nach Public-Meta-Patches, Root-/Utility-Dateiprüfung und 
 - [x] `favicon.svg` ist vorhanden und valide als SVG-Favicon vorbereitet.
 - [x] `site.webmanifest` ist vorhanden und verweist auf `favicon.svg`.
 - [x] `.well-known/security.txt` ist vorhanden und verweist auf `club@distillery.de`.
+- [x] Repo-basierter interner Public-Link-Audit ist dokumentiert.
+- [x] Repo-basierter Head-/Meta-Audit ist dokumentiert.
 - [x] `residents.html` springt nach Footer/Wrapper direkt in das Script, ohne Test-Badge-Zwischenblock.
 - [x] `resident-releases.html` springt nach Footer/Wrapper direkt in das Script, ohne Test-Badge-Zwischenblock.
 - [ ] `index.html` enthält den sichtbaren `TEST BUILD / public-media-fix-4`-Badge noch. Der manuelle Patch ist in `MANUAL_TOMORROW_QUEUE.md` und `INDEX_TEST_BADGE_MANUAL_PATCH.md` dokumentiert.
@@ -58,6 +62,7 @@ Dabei prüfen:
 ## Weiterhin offene Go-Live-Punkte
 
 - manueller Patch: Test-Badge aus `index.html` entfernen
+- Browser-Klicktest nach dem letzten Deploy
 - finale rechtliche Prüfung von Impressum und Datenschutz
 - STAGING/LIVE-Serverdaten und Zielpfade
 - HTTPS und Redirect-Strategie
