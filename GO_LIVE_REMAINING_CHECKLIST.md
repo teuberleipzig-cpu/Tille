@@ -37,6 +37,7 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 - [x] Public-Site-Smoke-Test auf GitHub Pages bestanden und in `PUBLIC_SITE_SMOKE_TEST.md` dokumentiert.
 - [x] Root-`favicon.svg` und `site.webmanifest` angelegt.
 - [x] Favicon/Manifest/Theme-Color auf statischen Public-Seiten vereinheitlicht.
+- [x] `feedback.html` hat Favicon/Manifest/Theme-Color und wurde nach Deployment direkt geprüft.
 - [x] `404.html` als noindex-Fehlerseite mit Social-/Favicon-Meta vorbereitet.
 - [x] `.well-known/security.txt` mit Kontaktadresse angelegt.
 - [ ] Sichtbarer Test-Badge `TEST BUILD / public-media-fix-4` vor LIVE wieder entfernen.
