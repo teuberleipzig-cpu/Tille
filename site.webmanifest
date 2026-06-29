@@ -1,0 +1,18 @@
+{
+  "name": "Distillery Leipzig",
+  "short_name": "Distillery",
+  "description": "Dates, residents and club information for Distillery Leipzig.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
