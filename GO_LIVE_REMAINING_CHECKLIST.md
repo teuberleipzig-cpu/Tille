@@ -54,6 +54,13 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 - [x] Aktive Root-`sitemap.xml` angelegt und mit `lastmod` versehen.
 - [x] `resident-releases.html` in aktive Root-`sitemap.xml` aufgenommen.
 
+### Legal / Privacy Vorbereitung
+
+- [x] `impressum.html` geprüft: technische Seite vorhanden, fachliche/rechtliche Bestätigung offen.
+- [x] `datenschutz.html` geprüft: Arbeitsstand vorhanden, server-/formular-/trackingabhängige Angaben offen.
+- [x] `feedback.html` geprüft: FormSubmit-Ziel und GitHub-Pages-Weiterleitung dokumentiert.
+- [x] `LEGAL_PRIVACY_REVIEW_INFO_NEEDED.md` mit offenen Legal-/Privacy-Entscheidungen angelegt.
+
 ---
 
 ## P0 – Go-Live-Blocker
@@ -112,8 +119,10 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 
 ### P0-D Legal / Pflichtangaben
 
+- [x] Offene Legal-/Privacy-Informationen in `LEGAL_PRIVACY_REVIEW_INFO_NEEDED.md` dokumentiert.
 - [ ] Impressum final fachlich/rechtlich prüfen.
 - [ ] Anbieterangaben final bestätigen.
+- [ ] Anbieteradresse final bestätigen.
 - [x] Club-Adresse auf öffentlichen Seiten sichtbar.
 - [x] Telefon und Email auf öffentlichen Seiten sichtbar.
 - [x] Impressum-Link auf geprüften öffentlichen Seiten sichtbar und klickbar.
@@ -121,6 +130,8 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 - [ ] Datenschutzseite final fachlich/rechtlich prüfen.
 - [ ] Serverlogs des späteren Servers prüfen.
 - [ ] Feedback-Formular-Dienst prüfen oder ersetzen.
+- [ ] Feedback-Formular-Zieladresse final entscheiden.
+- [ ] Feedback-Weiterleitungs-URL auf LIVE-Domain umstellen, falls Formular live bleibt.
 - [ ] Externe Dienste prüfen.
 - [ ] Tracking-Hinweis final entscheiden.
 - [ ] Bild-/Urheberrechte für verwendete Medien prüfen.
