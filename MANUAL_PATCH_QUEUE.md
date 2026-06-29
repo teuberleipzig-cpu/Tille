@@ -20,6 +20,9 @@ In `index.html` im `<head>` direkt nach:
 
 ```html
 <link rel="canonical" href="https://www.distillery.de/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#000000">
 ```
 
 diese Zeilen einfügen:
@@ -46,6 +49,9 @@ In `residents.html` im `<head>` direkt nach:
 
 ```html
 <link rel="canonical" href="https://www.distillery.de/residents.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#000000">
 ```
 
 diese Zeilen einfügen:
