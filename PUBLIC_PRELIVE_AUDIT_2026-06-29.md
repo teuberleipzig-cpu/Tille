@@ -1,6 +1,6 @@
 # Public Pre-Live Audit – 2026-06-29
 
-Status: Repo-Prüfung nach Public-Meta-Patches, Root-/Utility-Dateiprüfung, Link-/Head-/Asset-/Noindex-Audits und manueller Warteschlange.
+Status: Repo-Prüfung nach Public-Meta-Patches, Root-/Utility-Dateiprüfung, Link-/Head-/Asset-/Noindex-/External-Services-Audits und manueller Warteschlange.
 
 ## Geprüfte Dateien
 
@@ -23,6 +23,7 @@ Status: Repo-Prüfung nach Public-Meta-Patches, Root-/Utility-Dateiprüfung, Lin
 - `PUBLIC_HEAD_META_AUDIT_2026-06-29.md`
 - `PUBLIC_ASSET_AUDIT_2026-06-29.md`
 - `PUBLIC_UTILITY_NO_INDEX_AUDIT_2026-06-29.md`
+- `PUBLIC_EXTERNAL_SERVICES_PRIVACY_AUDIT_2026-06-29.md`
 
 ## Ergebnis
 
@@ -44,6 +45,7 @@ Status: Repo-Prüfung nach Public-Meta-Patches, Root-/Utility-Dateiprüfung, Lin
 - [x] Repo-basierter Head-/Meta-Audit ist dokumentiert.
 - [x] Repo-basierter Asset-Audit ist dokumentiert.
 - [x] Repo-basierter Utility-/Noindex-Audit ist dokumentiert.
+- [x] Repo-basierter External-Services-/Privacy-Audit ist dokumentiert.
 - [x] `residents.html` springt nach Footer/Wrapper direkt in das Script, ohne Test-Badge-Zwischenblock.
 - [x] `resident-releases.html` springt nach Footer/Wrapper direkt in das Script, ohne Test-Badge-Zwischenblock.
 - [ ] `index.html` enthält den sichtbaren `TEST BUILD / public-media-fix-4`-Badge noch. Der manuelle Patch ist in `MANUAL_TOMORROW_QUEUE.md` und `INDEX_TEST_BADGE_MANUAL_PATCH.md` dokumentiert.
@@ -73,6 +75,7 @@ Dabei prüfen:
 - manueller Patch: Test-Badge aus `index.html` entfernen
 - Browser-Klicktest nach dem letzten Deploy
 - finale rechtliche Prüfung von Impressum und Datenschutz
+- Feedback-Formular-Dienst, Zieladresse und Weiterleitung final entscheiden
 - STAGING/LIVE-Serverdaten und Zielpfade
 - HTTPS und Redirect-Strategie
 - LIVE-Smoke-Test nach echtem Deployment
