@@ -47,8 +47,9 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 
 - [x] `robots.live.txt` als inaktive LIVE-Vorlage angelegt.
 - [x] `robots.staging.txt` als inaktive STAGING-Vorlage angelegt.
-- [x] `sitemap.live.xml` als inaktive LIVE-Vorlage angelegt.
-- [x] `DEPLOYMENT_STAGING_LIVE_NOTES.md` angelegt.
+- [x] `sitemap.live.xml` als inaktive LIVE-Vorlage angelegt und mit `lastmod` ergänzt.
+- [x] `DEPLOYMENT_STAGING_LIVE_NOTES.md` angelegt und nach Root-SEO-Dateien aktualisiert.
+- [x] `STAGING_LIVE_SERVER_INFO_NEEDED.md` mit fehlenden Server-/Hostingdaten angelegt.
 - [x] Aktive Root-`robots.txt` angelegt.
 - [x] Aktive Root-`sitemap.xml` angelegt und mit `lastmod` versehen.
 - [x] `resident-releases.html` in aktive Root-`sitemap.xml` aufgenommen.
@@ -126,6 +127,7 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 
 ### P0-E STAGING
 
+- [x] Fehlende Server-/Hostinginformationen in `STAGING_LIVE_SERVER_INFO_NEEDED.md` dokumentiert.
 - [ ] Serverzugriff bekannt.
 - [ ] STAGING-Zielpfad bekannt.
 - [ ] `teuberstaging.distillery.de` technisch eingerichtet.
@@ -140,6 +142,7 @@ Ein Punkt gilt nur als erledigt, wenn er umgesetzt und geprüft wurde. Teilweise
 
 ### P0-F LIVE
 
+- [x] Fehlende LIVE-Server-/Hostinginformationen in `STAGING_LIVE_SERVER_INFO_NEEDED.md` dokumentiert.
 - [ ] LIVE-Zielpfad bekannt.
 - [ ] `distillery.de` / `www.distillery.de` final entschieden.
 - [ ] HTTPS für LIVE aktiv.
