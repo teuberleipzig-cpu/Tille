@@ -9,9 +9,11 @@ Status: Arbeitsdokument für die Go-Live-Vorbereitung. Diese Datei aktiviert kei
 - Ziel-Domain: `https://www.distillery.de/`
 - Zweck: öffentliche produktive Firmenwebsite der Distillery Leipzig.
 - Produktive Daten: produktive Events, Residents, Medien und öffentliche Seiten.
-- Indexierung: erst nach finalem Go-Live erlauben.
-- Aktive Robots-Datei später: `robots.live.txt` als `/robots.txt` deployen/kopieren.
-- Aktive Sitemap später: `sitemap.live.xml` als `/sitemap.xml` deployen/kopieren.
+- Indexierung: erst nach finalem Go-Live auf echter LIVE-Domain prüfen.
+- Aktive Robots-Datei vorbereitet: `robots.txt` verweist auf `https://www.distillery.de/sitemap.xml`.
+- LIVE-Template zusätzlich vorhanden: `robots.live.txt`.
+- Aktive Sitemap vorbereitet: `sitemap.xml`.
+- LIVE-Sitemap-Template zusätzlich vorhanden: `sitemap.live.xml`.
 
 ### STAGING
 
@@ -21,15 +23,18 @@ Status: Arbeitsdokument für die Go-Live-Vorbereitung. Diese Datei aktiviert kei
 - Aktive Robots-Datei später: `robots.staging.txt` als `/robots.txt` deployen/kopieren.
 - Zusätzlicher Schutz nötig: `robots.txt` ist kein Zugriffsschutz. Sobald der Server bekannt ist, zusätzlich `X-Robots-Tag: noindex, nofollow` und/oder HTTP Basic Auth prüfen.
 
-## Aktuelle Template-Dateien
+## Aktuelle Template- und Root-Dateien
 
 | Datei | Zweck | Aktiv? |
 | --- | --- | --- |
-| `robots.live.txt` | Vorlage für LIVE `/robots.txt` | Nein |
+| `robots.txt` | aktive Root-Robots-Datei für LIVE-Zielcanonical | Ja |
+| `sitemap.xml` | aktive Root-Sitemap für LIVE-Zielcanonical | Ja |
+| `robots.live.txt` | zusätzliche Vorlage für LIVE `/robots.txt` | Nein |
 | `robots.staging.txt` | Vorlage für STAGING `/robots.txt` | Nein |
-| `sitemap.live.xml` | Vorlage für LIVE `/sitemap.xml` | Nein |
+| `sitemap.live.xml` | zusätzliche Vorlage für LIVE `/sitemap.xml` mit `lastmod`, `changefreq` und `priority` | Nein |
+| `STAGING_LIVE_SERVER_INFO_NEEDED.md` | konkrete Liste der noch fehlenden Server-/Hosting-Informationen | Nein, Dokumentation |
 
-Wichtig: Es gibt bewusst noch keine aktive Root-`robots.txt` und keine aktive Root-`sitemap.xml`, damit GitHub Pages, STAGING und LIVE nicht versehentlich falsch gesteuert werden.
+Wichtig: Die aktiven Root-Dateien sind für die geplante LIVE-Canonical `https://www.distillery.de/` vorbereitet. Auf STAGING dürfen sie nicht unverändert verwendet werden, falls STAGING öffentlich erreichbar ist.
 
 ## Spätere GitHub-Actions-Zielarchitektur
 
@@ -60,6 +65,8 @@ Vor dem Einrichten echter Deployment-Actions müssen geklärt werden:
 - Ob alte URLs weitergeleitet werden müssen.
 - Ob serverseitige Logs verfügbar sind und wie lange sie gespeichert werden.
 
+Details stehen zusätzlich in `STAGING_LIVE_SERVER_INFO_NEEDED.md`.
+
 ## Deployment-Checkliste vor STAGING
 
 - [ ] Serverzugriff bekannt.
@@ -78,8 +85,10 @@ Vor dem Einrichten echter Deployment-Actions müssen geklärt werden:
 - [ ] LIVE-Domain zeigt auf korrekten Zielpfad.
 - [ ] HTTPS für LIVE aktiv.
 - [ ] Redirect-Strategie entschieden.
-- [ ] `robots.live.txt` als `/robots.txt` vorbereitet.
-- [ ] `sitemap.live.xml` als `/sitemap.xml` vorbereitet.
+- [x] `robots.txt` vorbereitet.
+- [x] `sitemap.xml` vorbereitet.
+- [x] `robots.live.txt` als zusätzliche LIVE-Vorlage vorbereitet.
+- [x] `sitemap.live.xml` als zusätzliche LIVE-Vorlage vorbereitet.
 - [ ] LIVE-Rollback definiert.
 - [ ] LIVE-Smoke-Test definiert.
 - [ ] P0/P1-Go-Live-Checklisten erledigt.
