@@ -1,0 +1,22 @@
+# Gilt fuer docker/Dockerfile. BuildKit sucht "<Dockerfile-Pfad>.dockerignore".
+# Der Build-Kontext ist das Repo-Root, nicht dieses Verzeichnis.
+
+# Nicht in das Image: Repo-Interna, Doku, Skripte.
+.git
+.gitattributes
+.github
+.nojekyll
+docs
+scripts
+reports
+**/*.md
+public/admin/structure-*-checkpoint.txt
+
+# Nur Vorlagen, nicht die aktiven Root-Dateien.
+robots.live.txt
+robots.staging.txt
+sitemap.live.xml
+
+# docker/ wird nicht ausgeliefert, nginx.conf wird aber im Build gebraucht.
+docker
+!docker/nginx.conf
