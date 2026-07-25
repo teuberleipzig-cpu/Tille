@@ -23,6 +23,14 @@ docker run --rm -p 8080:8080 tille
 
 Danach `http://localhost:8080` aufrufen. Healthcheck: `curl http://localhost:8080/healthz`.
 
+Ein einfaches `docker build` erzeugt nur die Architektur des eigenen Rechners. Das
+Multi-Arch-Image (amd64 und arm64) baut die CI. Lokal lassen sich beide Architekturen
+bei Bedarf so erzeugen:
+
+```bash
+docker buildx build --platform linux/amd64,linux/arm64 -f docker/Dockerfile -t tille .
+```
+
 Der Container laeuft als Benutzer `nginx` (UID 101) und lauscht auf **Port 8080**.
 Er terminiert kein TLS. Auf dem Server gehoert ein Reverse Proxy davor, der 80/443
 auf 8080 mappt und die Zertifikate haelt.
@@ -70,6 +78,11 @@ Er baut das Image und pusht es nach `ghcr.io/teuberleipzig-cpu/tille` mit zwei T
 
 - `latest` – der jeweils aktuelle Stand von `main`
 - `sha-<commit>` – unveraenderlich, der Handgriff fuer Rollbacks
+
+Gebaut wird als Multi-Arch-Image fuer `linux/amd64` und `linux/arm64`. Beide
+Architekturen liegen unter demselben Tag als eine Manifest-Liste; Docker zieht auf dem
+Server automatisch die passende. Der Build laeuft ueber QEMU-Emulation
+(`docker/setup-qemu-action`), der arm64-Teil dauert dadurch spuerbar laenger als amd64.
 
 Authentifiziert wird mit dem eingebauten `GITHUB_TOKEN`, es sind keine zusaetzlichen
 Secrets noetig.
