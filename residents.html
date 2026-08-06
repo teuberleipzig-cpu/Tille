@@ -84,4 +84,5 @@ function renderResident(r){activeResidentId=rid(r);renderList();document.title='
 async function boot(){try{const res=await fetch(DATA_URL,{cache:'no-store'});if(!res.ok)throw new Error('Residents konnten nicht geladen werden.');const data=await res.json();residents=(data.residents||[]);const urlId=selectedId();let resident=urlId?residents.find(x=>rid(x)===urlId):residents[0];if(resident&&!urlId){history.replaceState(null,'',`residents.html?resident=${encodeURIComponent(rid(resident))}`);}activeResidentId=resident?rid(resident):'';renderList();if(resident){renderResident(resident);}else{document.getElementById('content').innerHTML='<div class="empty"></div>';}}catch(e){document.getElementById('content').innerHTML=`<p class="error">${esc(e.message)}</p>`;}}
 boot();
 </script>
+<script src="assets/tracking.js?v=tracking-1" defer></script>
 </body></html>
