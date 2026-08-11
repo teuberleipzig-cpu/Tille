@@ -59271,6 +59271,33 @@
           ]
         }
       ]
+    },
+    {
+      "id": "2026-09-12-csv-test-night",
+      "date": "2026-09-12",
+      "title": "CSV Test Night",
+      "color": "orange",
+      "moreUrl": "https://example.com",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "genre": "House",
+          "items": [
+            {
+              "name": "Test Artist",
+              "info": "Live",
+              "link": "https://example.com/artist"
+            },
+            {
+              "name": "Second Artist",
+              "info": "DJ Set",
+              "link": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
