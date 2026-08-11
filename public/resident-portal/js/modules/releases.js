@@ -1,7 +1,7 @@
 import { $, escapeHtml, setStatus } from '../core/dom.js';
 import { markDirty, requireResident, state } from '../core/state.js';
 import { imageToJpeg } from '../core/image-processing.js';
-import { slug, uploadBlob } from '../core/upload.js';
+import { slug, uploadBlob } from '../core/upload.js?v=branch-reload-2';
 
 function assetUrl(value) {
   const url = String(value || '');
@@ -172,6 +172,7 @@ function bindDetail() {
     render();
   });
   const drop = $('releaseCoverDrop');
+  if (!drop) return;
   const fileInput = document.createElement('input');
   fileInput.type = 'file';
   fileInput.accept = 'image/*';

@@ -1,6 +1,7 @@
 import { $, setStatus, showScreen } from '../core/dom.js';
+import { CONFIG, hasExplicitBranchParam } from '../core/config.js?v=branch-reload-2';
 import { getStoredToken, setToken } from '../core/state.js';
-import { loadPublicResidents, selectResident } from '../core/github.js';
+import { loadPublicResidents, loadResidentsFromGithub, selectResident } from '../core/github.js?v=branch-reload-2';
 
 function normalizedCode(value) {
   return String(value || '').replace(/[\s-]/g, '').toUpperCase();
@@ -23,7 +24,9 @@ export function initAuth(onLogin) {
   const token = getStoredToken();
   if (token && $('githubToken')) $('githubToken').value = token;
 
-  $('loginBtn')?.addEventListener('click', () => {
+  $('loginBtn')?.addEventListener('click', async event => {
+    const button = event.currentTarget;
+    if (button.disabled) return;
     setStatus('Login wird geprüft...', 'warn');
     try {
       const resident = window.portalResidentState.resident;
@@ -31,12 +34,22 @@ export function initAuth(onLogin) {
       if (!codeMatches(resident, $('accessCode').value)) throw new Error('Code falsch. Erwartet wird der aktuelle Code aus dem Admin.');
       const enteredToken = String($('githubToken').value || '').trim();
       if (!enteredToken) throw new Error('GitHub-Token-Feld ist leer.');
+      if (hasExplicitBranchParam) {
+        if (!CONFIG.branch) throw new Error('Bitte GitHub-Branch angeben.');
+        button.disabled = true;
+        setStatus(`Lade Resident aus GitHub-Branch ${CONFIG.branch} ...`, 'warn');
+        const fresh = await loadResidentsFromGithub(enteredToken);
+        selectResident(fresh.data);
+      }
       setToken(enteredToken);
-      showScreen('editorScreen');
       onLogin();
+      showScreen('editorScreen');
       setStatus('Eingeloggt.', 'ok');
     } catch (error) {
+      showScreen('loginScreen');
       setStatus(error.message || 'Login fehlgeschlagen.', 'danger');
+    } finally {
+      button.disabled = false;
     }
   });
 }

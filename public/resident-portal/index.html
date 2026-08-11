@@ -16,6 +16,7 @@
     <section id="loginScreen" data-screen class="card portal-login hidden">
       <h2>Zugang für <span id="loginResidentName">Resident</span></h2>
       <p class="muted">Gib den 15-Zeichen-Code und den GitHub-Token ein, den du erhalten hast.</p>
+      <p class="muted" id="portalBranchStatus">GitHub-Branch wird geladen.</p>
       <div class="form-grid">
         <div class="field full"><label class="label">Code</label><input class="input" id="accessCode" autocomplete="one-time-code"></div>
         <div class="field full"><label class="label">GitHub Token</label><input class="input" id="githubToken" type="password" autocomplete="off"></div>
@@ -80,6 +81,6 @@
       <div class="footer portal-footer"><div class="tools"><button class="btn ok" id="draftBtn" type="button">Entwurf speichern</button><button id="saveBtn" class="btn primary" type="button">Speichern</button></div></div>
     </section>
   </main>
-  <script type="module" src="./js/app-coverfix.js?v=version-badge-1"></script>
+  <script type="module" src="./js/app-coverfix.js?v=branch-reload-2"></script>
 </body>
 </html>

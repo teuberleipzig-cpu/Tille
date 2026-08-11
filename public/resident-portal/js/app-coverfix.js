@@ -1,14 +1,14 @@
-import { PORTAL_VERSION } from './core/config.js';
+import { CONFIG, PORTAL_VERSION } from './core/config.js?v=branch-reload-2';
 import { bindTabs, setStatus, showScreen } from './core/dom.js';
-import { loadResidentForLogin, initAuth } from './modules/auth.js';
+import { loadResidentForLogin, initAuth } from './modules/auth.js?v=branch-reload-2';
 import * as profile from './modules/profile.js';
 import * as links from './modules/links.js';
 import * as news from './modules/news.js?v=news-top-save-2';
-import * as media from './modules/media.js?v=media-preview-map-1';
-import * as releases from './modules/releases.js?v=cover-preview-1';
-import { initSave } from './modules/save.js?v=news-save-sort-2';
+import * as media from './modules/media.js?v=branch-reload-2';
+import * as releases from './modules/releases.js?v=branch-reload-2';
+import { initSave } from './modules/save.js?v=branch-reload-2';
 
-const BUILD_LABEL = `${PORTAL_VERSION} news-media-fix-3`;
+const BUILD_LABEL = `${PORTAL_VERSION} branch-reload-2`;
 
 function showBuildBadge() {
   let badge = document.getElementById('portalBuildBadge');
@@ -54,6 +54,8 @@ function initModules() {
 async function boot() {
   console.info('[ResidentPortal]', BUILD_LABEL);
   showBuildBadge();
+  const branchStatus = document.getElementById('portalBranchStatus');
+  if (branchStatus) branchStatus.textContent = `GitHub-Branch: ${CONFIG.branch || '(nicht angegeben)'}`;
   initModules();
   try {
     await loadResidentForLogin();
