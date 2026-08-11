@@ -5,7 +5,7 @@ import { saveResident, validateSaveBranch } from '../core/github.js?v=branch-par
 import * as profile from './profile.js';
 import * as links from './links.js';
 import * as news from './news.js?v=news-top-save-2';
-import * as media from './media.js?v=media-preview-map-1';
+import * as media from './media.js?v=media-preserve-1';
 import * as releases from './releases.js?v=cover-preview-1';
 
 export function readAll() {

@@ -1,7 +1,7 @@
 import { $, escapeHtml, setStatus } from '../core/dom.js';
 import { markDirty, requireResident, state } from '../core/state.js';
 import { imageToJpeg } from '../core/image-processing.js';
-import { slug, uploadBlob, deleteRepoFile } from '../core/upload.js';
+import { slug, uploadBlob, deleteRepoFile } from '../core/upload.js?v=branch-param-1';
 
 const localPhotoPreviews = new Map();
 
@@ -30,10 +30,26 @@ function photoUrls(resident) {
   return source.map(item => typeof item === 'string' ? item : (item.url || item.src || '')).filter(Boolean);
 }
 
+function updatePhotoRepresentation(current, urls) {
+  const source = Array.isArray(current) ? current : [];
+  const remaining = source.slice();
+  const stringsOnly = source.length > 0 && source.every(item => typeof item === 'string');
+  const usesSrc = !stringsOnly && source.some(item => item && typeof item === 'object' && Object.hasOwn(item, 'src') && !Object.hasOwn(item, 'url'));
+  return urls.map(url => {
+    const index = remaining.findIndex(item => (typeof item === 'string' ? item : (item?.url || item?.src || '')) === url);
+    if (index >= 0) return remaining.splice(index, 1)[0];
+    if (stringsOnly) return url;
+    return usesSrc ? { src: url } : { url };
+  });
+}
+
 function setPhotoUrls(urls) {
   const resident = requireResident();
-  resident.photoList = urls.map(url => ({ url }));
-  resident.photos = resident.photoList;
+  const hasPhotoList = Object.hasOwn(resident, 'photoList');
+  const hasPhotos = Object.hasOwn(resident, 'photos');
+  if (hasPhotoList) resident.photoList = updatePhotoRepresentation(resident.photoList, urls);
+  if (hasPhotos) resident.photos = updatePhotoRepresentation(resident.photos, urls);
+  if (!hasPhotoList && !hasPhotos) resident.photoList = urls.map(url => ({ url }));
   const textarea = $('resPhotos');
   if (textarea) textarea.value = urls.join('\n');
   markDirty();
@@ -70,8 +86,9 @@ async function uploadPresskit(file, statusEl) {
   const path = `public/residents/media/${residentFolder()}/presskit/presskit-${Date.now()}.${slug(ext, 'pdf')}`;
   const url = await uploadBlob(path, file, state.token);
   const resident = requireResident();
-  resident.presskitUrl = url;
-  resident.presskit = url;
+  const aliases = ['presskitUrl', 'presskit', 'pressKitUrl'];
+  const existing = aliases.filter(name => Object.hasOwn(resident, name));
+  (existing.length ? existing : ['presskitUrl']).forEach(name => { resident[name] = url; });
   $('resPresskit').value = url;
   markDirty();
   statusEl.textContent = 'Hochgeladen: ' + url;
@@ -140,13 +157,16 @@ export function render() {
 }
 
 export function read() {
+  return requireResident();
+}
+
+function readEmbeds() {
   const resident = requireResident();
-  const photoList = String($('resPhotos')?.value || '').split(/\n+/).map(item => item.trim()).filter(Boolean).map(url => ({ url }));
-  resident.photoList = photoList;
-  resident.photos = photoList;
-  resident.presskitUrl = $('resPresskit')?.value || resident.presskitUrl || '';
-  resident.embeds = String($('resEmbeds')?.value || '').split(/\n+/).map(item => item.trim()).filter(Boolean);
-  resident.mediaEmbeds = resident.embeds;
+  const values = String($('resEmbeds')?.value || '').split(/\n+/).map(item => item.trim()).filter(Boolean);
+  const hasEmbeds = Object.hasOwn(resident, 'embeds');
+  const hasMediaEmbeds = Object.hasOwn(resident, 'mediaEmbeds');
+  if (hasEmbeds || !hasMediaEmbeds) resident.embeds = values;
+  if (hasMediaEmbeds) resident.mediaEmbeds = values;
   return resident;
 }
 
@@ -161,7 +181,7 @@ export function init() {
   if (pressDrop) handleFileDrop(pressDrop, uploadPresskit);
   if (photoDrop) handleFileDrop(photoDrop, uploadPhoto);
 
-  $('resEmbeds')?.addEventListener('input', () => { read(); markDirty(); });
+  $('resEmbeds')?.addEventListener('input', () => { readEmbeds(); markDirty(); });
 
   $('residentPhotosList')?.addEventListener('click', async event => {
     const card = event.target.closest('[data-photo-index]');
