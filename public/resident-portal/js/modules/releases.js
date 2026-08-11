@@ -172,6 +172,7 @@ function bindDetail() {
     render();
   });
   const drop = $('releaseCoverDrop');
+  if (!drop) return;
   const fileInput = document.createElement('input');
   fileInput.type = 'file';
   fileInput.accept = 'image/*';

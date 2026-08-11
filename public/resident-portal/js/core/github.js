@@ -1,4 +1,4 @@
-import { CONFIG, inviteParam, residentParam } from './config.js?v=branch-param-1';
+import { CONFIG, inviteParam, residentParam } from './config.js?v=branch-reload-1';
 import { state, markClean } from './state.js';
 
 function api(path) {

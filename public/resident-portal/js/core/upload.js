@@ -1,4 +1,4 @@
-import { CONFIG } from './config.js?v=branch-param-1';
+import { CONFIG } from './config.js?v=branch-reload-1';
 
 export function slug(value, fallback = 'media') {
   return String(value || fallback)

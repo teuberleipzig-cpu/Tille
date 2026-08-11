@@ -1,7 +1,7 @@
 import { $, escapeHtml, setStatus } from '../core/dom.js';
 import { markDirty, requireResident, state } from '../core/state.js';
 import { imageToJpeg } from '../core/image-processing.js';
-import { slug, uploadBlob, deleteRepoFile } from '../core/upload.js?v=branch-param-1';
+import { slug, uploadBlob, deleteRepoFile } from '../core/upload.js?v=branch-reload-1';
 
 const localPhotoPreviews = new Map();
 

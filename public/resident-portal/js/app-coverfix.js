@@ -1,12 +1,12 @@
-import { CONFIG, PORTAL_VERSION, inviteParam, residentParam } from './core/config.js?v=branch-param-1';
+import { CONFIG, PORTAL_VERSION, inviteParam, residentParam } from './core/config.js?v=branch-reload-1';
 import { bindTabs, setStatus, showScreen } from './core/dom.js';
-import { loadResidentForLogin, initAuth } from './modules/auth.js?v=branch-param-1';
+import { loadResidentForLogin, initAuth } from './modules/auth.js?v=branch-reload-1';
 import * as profile from './modules/profile.js';
 import * as links from './modules/links.js';
 import * as news from './modules/news.js?v=news-top-save-2';
-import * as media from './modules/media.js?v=media-preserve-1';
-import * as releases from './modules/releases.js?v=cover-preview-1';
-import { initSave } from './modules/save.js?v=media-preserve-1';
+import * as media from './modules/media.js?v=branch-reload-1';
+import * as releases from './modules/releases.js?v=branch-reload-1';
+import { initSave } from './modules/save.js?v=branch-reload-1';
 
 const BUILD_LABEL = `${PORTAL_VERSION} news-media-fix-3`;
 
