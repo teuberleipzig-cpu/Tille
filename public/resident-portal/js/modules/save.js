@@ -1,6 +1,7 @@
 import { setStatus } from '../core/dom.js';
+import { CONFIG } from '../core/config.js?v=branch-param-1';
 import { state, requireResident } from '../core/state.js';
-import { saveResident } from '../core/github.js';
+import { saveResident, validateSaveBranch } from '../core/github.js?v=branch-param-1';
 import * as profile from './profile.js';
 import * as links from './links.js';
 import * as news from './news.js?v=news-top-save-2';
@@ -18,12 +19,18 @@ export function readAll() {
 
 export function initSave() {
   document.getElementById('saveBtn')?.addEventListener('click', async () => {
+    try {
+      validateSaveBranch();
+    } catch (error) {
+      setStatus(error.message, 'danger');
+      return;
+    }
     if (!state.token) {
       setStatus('GitHub Token fehlt. Bitte neu einloggen.', 'warn');
       return;
     }
     try {
-      setStatus('Speichere nach GitHub...', 'warn');
+      setStatus(`Speichere Resident nach GitHub-Branch ${CONFIG.branch} ...`, 'warn');
       const resident = readAll();
       await saveResident(state.token, resident);
       news.render();

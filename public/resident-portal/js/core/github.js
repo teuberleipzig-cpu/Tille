@@ -1,4 +1,4 @@
-import { CONFIG, inviteParam, residentParam } from './config.js';
+import { CONFIG, inviteParam, residentParam } from './config.js?v=branch-param-1';
 import { state, markClean } from './state.js';
 
 function api(path) {
@@ -40,7 +40,7 @@ export async function loadPublicResidents() {
 }
 
 export async function loadResidentsFromGithub(token) {
-  const metaResponse = await fetch(api(`contents/${CONFIG.residentsPath}?ref=${CONFIG.branch}`), {
+  const metaResponse = await fetch(api(`contents/${CONFIG.residentsPath.split('/').map(encodeURIComponent).join('/')}?ref=${encodeURIComponent(CONFIG.branch)}`), {
     headers: headers(token),
     cache: 'no-store'
   });
@@ -50,7 +50,7 @@ export async function loadResidentsFromGithub(token) {
   let text = meta.content ? decodeContent(meta.content) : '';
 
   if (!text && meta.sha) {
-    const blobResponse = await fetch(api(`git/blobs/${meta.sha}`), {
+    const blobResponse = await fetch(api(`git/blobs/${encodeURIComponent(meta.sha)}`), {
       headers: headers(token),
       cache: 'no-store'
     });
@@ -93,6 +93,7 @@ export function patchCurrentResident(latestData, nextResident) {
 }
 
 export async function saveResident(token, nextResident) {
+  validateSaveBranch();
   const latest = await loadResidentsFromGithub(token);
   const patched = patchCurrentResident(latest.data, nextResident);
   const body = {
@@ -102,7 +103,7 @@ export async function saveResident(token, nextResident) {
     branch: CONFIG.branch
   };
 
-  const response = await fetch(api(`contents/${CONFIG.residentsPath}`), {
+  const response = await fetch(api(`contents/${CONFIG.residentsPath.split('/').map(encodeURIComponent).join('/')}`), {
     method: 'PUT',
     headers: { ...headers(token), 'Content-Type': 'application/json' },
     body: JSON.stringify(body)
@@ -115,4 +116,12 @@ export async function saveResident(token, nextResident) {
 
   state.resident = nextResident;
   markClean();
+}
+
+export function validateSaveBranch() {
+  if (!CONFIG.branch) throw new Error('Bitte GitHub-Branch angeben.');
+  if ((window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') && CONFIG.branch === 'main') {
+    throw new Error('Resident-Portal-Save auf main ist im lokalen Test gesperrt. Bitte ?branch=<testbranch> verwenden.');
+  }
+  return CONFIG.branch;
 }

@@ -1,6 +1,6 @@
 import { $, setStatus, showScreen } from '../core/dom.js';
 import { getStoredToken, setToken } from '../core/state.js';
-import { loadPublicResidents, selectResident } from '../core/github.js';
+import { loadPublicResidents, selectResident } from '../core/github.js?v=branch-param-1';
 
 function normalizedCode(value) {
   return String(value || '').replace(/[\s-]/g, '').toUpperCase();
