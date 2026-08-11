@@ -59249,6 +59249,28 @@
           ]
         }
       ]
+    },
+    {
+      "id": "2026-08-11-neues-event",
+      "date": "2026-08-11",
+      "title": "Neues Event",
+      "color": "orange",
+      "moreUrl": "#",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "genre": "",
+          "items": [
+            {
+              "name": "",
+              "info": "",
+              "link": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
