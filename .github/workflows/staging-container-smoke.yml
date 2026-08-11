@@ -1,0 +1,276 @@
+name: Staging container smoke test
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'docker/**'
+      - 'robots.txt'
+      - 'robots.staging.txt'
+      - 'sitemap.xml'
+      - '.github/workflows/docker-publish.yml'
+      - '.github/workflows/staging-container-smoke.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  container-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build STAGING image
+        run: |
+          set -euo pipefail
+          docker build \
+            --build-arg DEPLOY_TARGET=staging \
+            -f docker/Dockerfile \
+            -t tille-staging-smoke .
+
+      - name: Start and validate STAGING container
+        run: |
+          set -euo pipefail
+          docker run -d --rm \
+            --name tille-staging-smoke \
+            -p 18081:8080 \
+            tille-staging-smoke
+
+          ready=false
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent --show-error http://127.0.0.1:18081/healthz >/dev/null; then
+              ready=true
+              break
+            fi
+            sleep 1
+          done
+          if [[ "$ready" != true ]]; then
+            echo "STAGING container did not become healthy within 30 seconds." >&2
+            docker logs tille-staging-smoke >&2 || true
+            exit 1
+          fi
+
+          docker exec tille-staging-smoke nginx -t
+
+      - name: Test STAGING HTTP matrix
+        shell: bash
+        run: |
+          set -euo pipefail
+          base_url='http://127.0.0.1:18081'
+          response_dir="$(mktemp -d)"
+          headers="$response_dir/headers"
+          body="$response_dir/body"
+          status=''
+
+          fetch() {
+            local endpoint="$1"
+            status="$(curl --silent --show-error \
+              --dump-header "$headers" \
+              --output "$body" \
+              --write-out '%{http_code}' \
+              "$base_url$endpoint")"
+          }
+
+          fail() {
+            local endpoint="$1"
+            shift
+            echo "STAGING check failed for $endpoint: $*" >&2
+            echo "HTTP status: $status" >&2
+            echo 'Response headers:' >&2
+            sed 's/^/  /' "$headers" >&2
+            exit 1
+          }
+
+          assert_status() {
+            local endpoint="$1" expected="$2"
+            fetch "$endpoint"
+            [[ "$status" == "$expected" ]] || fail "$endpoint" "expected HTTP $expected, got $status"
+          }
+
+          header_value() {
+            local name="$1"
+            awk -F ': *' -v wanted="$name" '
+              tolower($1) == tolower(wanted) {
+                sub(/\r$/, "", $2)
+                print $2
+              }
+            ' "$headers"
+          }
+
+          assert_header_contains() {
+            local endpoint="$1" name="$2" expected="$3" actual
+            actual="$(header_value "$name")"
+            grep -Fqi -- "$expected" <<<"$actual" || fail "$endpoint" "expected $name to contain '$expected', got '${actual:-<missing>}'"
+          }
+
+          assert_noindex_and_no_cache() {
+            local endpoint="$1"
+            assert_status "$endpoint" 200
+            assert_header_contains "$endpoint" X-Robots-Tag 'noindex, nofollow, noarchive'
+            assert_header_contains "$endpoint" Cache-Control 'no-cache'
+          }
+
+          assert_noindex_and_no_cache /
+          assert_noindex_and_no_cache /index.html
+          assert_noindex_and_no_cache /public/resident-portal/js/core/config.js
+          assert_noindex_and_no_cache /public/resident-portal/css/portal.css
+
+          endpoint='/public/events/data/events.json'
+          assert_status "$endpoint" 200
+          assert_header_contains "$endpoint" X-Robots-Tag 'noindex, nofollow, noarchive'
+          assert_header_contains "$endpoint" Cache-Control 'no-store'
+
+          endpoint='/robots.txt'
+          assert_status "$endpoint" 200
+          assert_header_contains "$endpoint" X-Robots-Tag 'noindex, nofollow, noarchive'
+          grep -Eqi '^User-agent:[[:space:]]*\*[[:space:]]*$' "$body" || fail "$endpoint" 'missing User-agent: *'
+          grep -Eqi '^Disallow:[[:space:]]*/[[:space:]]*$' "$body" || fail "$endpoint" 'missing Disallow: /'
+          ! grep -Eqi '^Allow:' "$body" || fail "$endpoint" 'must not contain Allow'
+          ! grep -Fqi 'www.distillery.de/sitemap.xml' "$body" || fail "$endpoint" 'must not contain the LIVE sitemap URL'
+
+          for endpoint in /sitemap.xml /__staging-smoke-does-not-exist__; do
+            assert_status "$endpoint" 404
+            assert_header_contains "$endpoint" X-Robots-Tag 'noindex, nofollow, noarchive'
+            grep -Fqi 'Seite nicht gefunden' "$body" || fail "$endpoint" 'custom 404 body was not served'
+          done
+
+          endpoint='/healthz'
+          assert_status "$endpoint" 200
+          assert_header_contains "$endpoint" X-Robots-Tag 'noindex, nofollow, noarchive'
+          [[ "$(tr -d '\r\n' < "$body")" == 'ok' ]] || fail "$endpoint" "expected body 'ok'"
+
+          for endpoint in /docker/nginx.conf /docker/nginx.staging.conf /robots.staging.txt; do
+            assert_status "$endpoint" 404
+            assert_header_contains "$endpoint" X-Robots-Tag 'noindex, nofollow, noarchive'
+          done
+
+      - name: Stop STAGING container
+        if: always()
+        run: docker rm -f tille-staging-smoke 2>/dev/null || true
+
+      - name: Build DEFAULT / LIVE-safety image
+        run: |
+          set -euo pipefail
+          docker build \
+            -f docker/Dockerfile \
+            -t tille-default-smoke .
+
+      - name: Start and validate DEFAULT container
+        run: |
+          set -euo pipefail
+          docker run -d --rm \
+            --name tille-default-smoke \
+            -p 18082:8080 \
+            tille-default-smoke
+
+          ready=false
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent --show-error http://127.0.0.1:18082/healthz >/dev/null; then
+              ready=true
+              break
+            fi
+            sleep 1
+          done
+          if [[ "$ready" != true ]]; then
+            echo "DEFAULT container did not become healthy within 30 seconds." >&2
+            docker logs tille-default-smoke >&2 || true
+            exit 1
+          fi
+
+          docker exec tille-default-smoke nginx -t
+
+      - name: Test DEFAULT / LIVE-safety HTTP matrix
+        shell: bash
+        run: |
+          set -euo pipefail
+          base_url='http://127.0.0.1:18082'
+          response_dir="$(mktemp -d)"
+          headers="$response_dir/headers"
+          body="$response_dir/body"
+          status=''
+
+          fetch() {
+            local endpoint="$1"
+            status="$(curl --silent --show-error \
+              --dump-header "$headers" \
+              --output "$body" \
+              --write-out '%{http_code}' \
+              "$base_url$endpoint")"
+          }
+
+          fail() {
+            local endpoint="$1"
+            shift
+            echo "DEFAULT check failed for $endpoint: $*" >&2
+            echo "HTTP status: $status" >&2
+            echo 'Response headers:' >&2
+            sed 's/^/  /' "$headers" >&2
+            exit 1
+          }
+
+          assert_status() {
+            local endpoint="$1" expected="$2"
+            fetch "$endpoint"
+            [[ "$status" == "$expected" ]] || fail "$endpoint" "expected HTTP $expected, got $status"
+          }
+
+          header_value() {
+            local name="$1"
+            awk -F ': *' -v wanted="$name" '
+              tolower($1) == tolower(wanted) {
+                sub(/\r$/, "", $2)
+                print $2
+              }
+            ' "$headers"
+          }
+
+          assert_header_contains() {
+            local endpoint="$1" name="$2" expected="$3" actual
+            actual="$(header_value "$name")"
+            grep -Fqi -- "$expected" <<<"$actual" || fail "$endpoint" "expected $name to contain '$expected', got '${actual:-<missing>}'"
+          }
+
+          assert_no_noindex() {
+            local endpoint="$1" actual
+            actual="$(header_value X-Robots-Tag)"
+            ! grep -Fqi 'noindex' <<<"$actual" || fail "$endpoint" "must not contain a noindex X-Robots-Tag, got '$actual'"
+          }
+
+          endpoint='/'
+          assert_status "$endpoint" 200
+          assert_no_noindex "$endpoint"
+          assert_header_contains "$endpoint" Cache-Control 'no-cache'
+
+          for endpoint in /index.html /public/resident-portal/js/core/config.js /public/resident-portal/css/portal.css; do
+            assert_status "$endpoint" 200
+            assert_no_noindex "$endpoint"
+            assert_header_contains "$endpoint" Cache-Control 'no-cache'
+          done
+
+          endpoint='/public/events/data/events.json'
+          assert_status "$endpoint" 200
+          assert_no_noindex "$endpoint"
+          assert_header_contains "$endpoint" Cache-Control 'no-store'
+
+          endpoint='/robots.txt'
+          assert_status "$endpoint" 200
+          assert_no_noindex "$endpoint"
+          grep -Eqi '^User-agent:[[:space:]]*\*[[:space:]]*$' "$body" || fail "$endpoint" 'missing User-agent: *'
+          grep -Eqi '^Allow:[[:space:]]*/[[:space:]]*$' "$body" || fail "$endpoint" 'missing Allow: /'
+          grep -Fqi 'Sitemap: https://www.distillery.de/sitemap.xml' "$body" || fail "$endpoint" 'missing LIVE sitemap reference'
+
+          endpoint='/sitemap.xml'
+          assert_status "$endpoint" 200
+          assert_no_noindex "$endpoint"
+
+          endpoint='/healthz'
+          assert_status "$endpoint" 200
+          assert_no_noindex "$endpoint"
+          [[ "$(tr -d '\r\n' < "$body")" == 'ok' ]] || fail "$endpoint" "expected body 'ok'"
+
+      - name: Stop DEFAULT container
+        if: always()
+        run: docker rm -f tille-default-smoke 2>/dev/null || true
