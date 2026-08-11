@@ -13,7 +13,7 @@
   function apiPath(path){return String(path||'').split('/').map(encodeURIComponent).join('/')}
   function rawPath(path){return String(path||'').split('/').map(encodeURIComponent).join('/')}
   function repoApiBase(){return 'https://api.github.com/repos/'+encodeURIComponent(val('ghOwner'))+'/'+encodeURIComponent(val('ghRepo'))}
-  function apiUrl(path){return repoApiBase()+'/contents/'+apiPath(path)+'?ref='+encodeURIComponent(val('ghBranch'))+'&t='+Date.now()}
+  function apiUrl(path,branch=val('ghBranch')){return repoApiBase()+'/contents/'+apiPath(path)+'?ref='+encodeURIComponent(branch)+'&t='+Date.now()}
   function apiPutUrl(path){return repoApiBase()+'/contents/'+apiPath(path)}
   function blobUrl(sha){return repoApiBase()+'/git/blobs/'+encodeURIComponent(sha)+'?t='+Date.now()}
   function rawUrl(path){return 'https://raw.githubusercontent.com/'+encodeURIComponent(val('ghOwner'))+'/'+encodeURIComponent(val('ghRepo'))+'/'+encodeURIComponent(val('ghBranch'))+'/'+rawPath(path)+'?t='+Date.now()}
@@ -32,7 +32,7 @@
     if(blob.encoding!=='base64'||!blob.content) throw new Error('Git blob enthält keinen base64-Inhalt.');
     return JSON.parse(b64DecodeUtf8(blob.content));
   }
-  async function fetchMeta(path){log('fetchMeta:start',{path,owner:val('ghOwner'),repo:val('ghRepo'),branch:val('ghBranch'),tokenPresent:!!val('ghToken')});const res=await fetch(apiUrl(path),{headers:publicHeaders(),cache:'no-store'});const meta=await res.json().catch(()=>({}));log('fetchMeta:response',{path,status:res.status,ok:res.ok,sha:meta.sha||'',message:meta.message||'',contentLength:meta.content?meta.content.length:0});if(!res.ok)throw new Error(meta.message||('GitHub Fehler '+res.status));return meta}
+  async function fetchMeta(path,branch=val('ghBranch')){log('fetchMeta:start',{path,owner:val('ghOwner'),repo:val('ghRepo'),branch,tokenPresent:!!val('ghToken')});const res=await fetch(apiUrl(path,branch),{headers:publicHeaders(),cache:'no-store'});const meta=await res.json().catch(()=>({}));log('fetchMeta:response',{path,status:res.status,ok:res.ok,sha:meta.sha||'',message:meta.message||'',contentLength:meta.content?meta.content.length:0});if(!res.ok)throw new Error(meta.message||('GitHub Fehler '+res.status));return meta}
   async function loadFile(path){
     try{
       log('loadFile:api:start',{path});
@@ -55,23 +55,23 @@
     log('loadFile:local:start',{path});
     return{json:await fetchJsonUrl(localUrl(path)),sha:''};
   }
-  async function putJsonFile(path,jsonText,message){
+  async function putJsonFile(path,jsonText,message,branch=val('ghBranch')){
     log('putJsonFile:start',{path,message,jsonLength:jsonText.length,jsonHasMetaArtists:jsonText.includes('"artists"'),jsonPreview:jsonText.slice(0,180)});
     async function attempt(sha,label){
-      log('putJsonFile:attempt:start',{label,path,sha,branch:val('ghBranch'),contentLength:jsonText.length});
-      const body={message,content:b64EncodeUtf8(jsonText),sha,branch:val('ghBranch')};
+      log('putJsonFile:attempt:start',{label,path,sha,branch,contentLength:jsonText.length});
+      const body={message,content:b64EncodeUtf8(jsonText),sha,branch};
       const res=await fetch(apiPutUrl(path),{method:'PUT',headers:writeHeaders(),body:JSON.stringify(body)});
       const out=await res.json().catch(()=>({}));
       log('putJsonFile:attempt:response',{label,status:res.status,ok:res.ok,responseMessage:out.message||'',newSha:out.content?.sha||'',documentation_url:out.documentation_url||''});
       return{res,out};
     }
-    let meta=await fetchMeta(path);
+    let meta=await fetchMeta(path,branch);
     log('putJsonFile:freshMetaBeforeFirstPut',{path,sha:meta.sha});
     let first=await attempt(meta.sha,'first');
     if(first.res.ok) return{out:first.out,sha:first.out.content?.sha||meta.sha,retried:false};
     if(first.res.status===409){
       warn('putJsonFile:409:firstAttempt',{path,oldSha:meta.sha,githubMessage:first.out.message||''});
-      meta=await fetchMeta(path);
+      meta=await fetchMeta(path,branch);
       log('putJsonFile:freshMetaBeforeRetry',{path,sha:meta.sha});
       const second=await attempt(meta.sha,'retry-after-409');
       if(second.res.ok) return{out:second.out,sha:second.out.content?.sha||meta.sha,retried:true};
@@ -203,13 +203,16 @@
   }
   async function saveResidentsStay(){
     const currentView=state.view;
-    log('saveResidentsStay:clicked',{currentView,config:{owner:val('ghOwner'),repo:val('ghRepo'),branch:val('ghBranch'),path:val('residentsPath'),tokenPresent:!!val('ghToken')}});
+    const branch=val('ghBranch');
+    log('saveResidentsStay:clicked',{currentView,config:{owner:val('ghOwner'),repo:val('ghRepo'),branch,path:val('residentsPath'),tokenPresent:!!val('ghToken')}});
+    if(!branch){setStatus('residentStatus','Bitte GitHub-Branch angeben, bevor Residents gespeichert werden.','err');return}
+    if(branch==='main'){setStatus('residentStatus','Resident-Save auf main ist für Tests gesperrt. Bitte Testbranch verwenden.','err');return}
     if(warnSaveNeedsToken('residents')) return;
     try{
-      setStatus('residentStatus','Speichere Residents...','warn');
+      setStatus('residentStatus','Speichere Residents nach GitHub-Branch '+branch+'...','warn');
       safeReadResidents();
       if(!residents().residents?.length) throw new Error('Residents: residents[] ist leer. Speichern abgebrochen.');
-      const saved=await putJsonFile(val('residentsPath'),residentsJson(),'Update residents data from admin v2');
+      const saved=await putJsonFile(val('residentsPath'),residentsJson(),'Update residents data from admin v2',branch);
       state.residentsSha=saved.sha;
       state.loadedResidentCount=residents().residents.length;
       state.dirty=false;
@@ -217,7 +220,7 @@
       updateSaveStatus();
       setView(currentView||'residents');
       renderAll();
-      setStatus('residentStatus',saved.retried?'Residents nach SHA-Retry gespeichert.':'Residents gespeichert.','ok');
+      setStatus('residentStatus',(saved.retried?'Residents nach SHA-Retry':'Residents')+' auf Branch '+branch+' gespeichert.','ok');
       log('saveResidentsStay:success',{sha:state.residentsSha,retried:saved.retried,residentsCount:residents().residents.length});
     }catch(e){err('saveResidentsStay:error',{message:e.message,stack:e.stack});state.syncState='conflict';updateSaveStatus();setView(currentView||'residents');setStatus('residentStatus',e.message,'err')}
   }

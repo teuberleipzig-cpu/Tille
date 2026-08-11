@@ -203,7 +203,7 @@
     loadExtraExtension('./css/textareas.css','./js/textareas.js?v=textareas-no-interval-1');
     loadExtraExtension('./css/releases-admin.css','./js/releases-core.js?v=releases-core-guard-1');
     loadExtraExtension(null,'./js/releases-extra.js');
-    loadExtraExtension(null,'./js/auto-github-load.js?v=debug-save-safe-restore-1');
+    loadExtraExtension(null,'./js/auto-github-load.js?v=resident-save-branch-target-1');
     loadExtraExtension('./css/residents-order.css','./js/residents-order.js?v=residents-order-guard-1');
     loadExtraExtension('./css/releases-workflow.css','./js/releases-workflow.js?v=releases-workflow-shell-guard-1');
     loadExtraExtension('./css/resident-access.css','./extensions/resident-access.js?v=resident-access-2');
