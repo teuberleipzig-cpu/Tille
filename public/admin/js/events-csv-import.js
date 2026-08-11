@@ -7,6 +7,11 @@
   let pending=null;
 
   function clean(value){return String(value==null?'':value).trim()}
+  function globalValue(name){
+    try{if(typeof root.eval==='function'){const value=root.eval(name);if(value!=null)return value}}catch(error){}
+    return root[name];
+  }
+  function adminDependencies(){return{events:globalValue('events'),ensureEvents:globalValue('ensureEvents'),markDirty:globalValue('markDirty'),renderAll:globalValue('renderAll'),state:globalValue('state')}}
   function eventKey(row){return clean(row.event_id)?'id:'+clean(row.event_id).toLowerCase():'date-title:'+clean(row.date).toLowerCase()+'\u0000'+clean(row.title).toLowerCase()}
   function detectDelimiter(text){
     const candidates=[',',';','\t'];let best={delimiter:',',count:-1};
@@ -65,16 +70,19 @@
     preview.innerHTML=rows.length?'<div class="csv-table-wrap"><table><thead><tr><th>Datum</th><th>Titel</th><th>Farbe</th><th>Sections</th><th>Status</th></tr></thead><tbody>'+rows.join('')+'</tbody></table></div>':'<p class="muted">Keine importierbaren Events.</p>';
     button.disabled=!!result.errors.length||!result.events.length;
   }
-  function check(){const text=document.getElementById('csvImportText').value;if(!text.trim()){pending=null;renderResult({delimiter:',',errors:[{line:0,message:'Bitte eine CSV-Datei wählen oder CSV-Text einfügen.'}],warnings:[],events:[],duplicates:[]});return}if(typeof root.events!=='function'){pending=null;renderResult({delimiter:',',errors:[{line:0,message:'Event-State ist nicht verfügbar. Admin V2 bitte neu laden.'}],warnings:[],events:[],duplicates:[]});return}const data=root.events();pending=validateCsv(text,data&&data.events);renderResult(pending)}
+  function check(){const text=document.getElementById('csvImportText').value;if(!text.trim()){pending=null;renderResult({delimiter:',',errors:[{line:0,message:'Bitte eine CSV-Datei wählen oder CSV-Text einfügen.'}],warnings:[],events:[],duplicates:[]});return}const deps=adminDependencies();if(typeof deps.events!=='function'){pending=null;renderResult({delimiter:',',errors:[{line:0,message:'Globale Admin-Funktion events() ist nicht verfügbar. Admin V2 bitte neu laden.'}],warnings:[],events:[],duplicates:[]});return}const data=deps.events();pending=validateCsv(text,data&&data.events);renderResult(pending)}
   function importIntoDraft(result,dependencies){
     const deps=dependencies||root;if(!result||result.errors.length||!result.events.length)throw new Error('Kein gültiger Import vorbereitet.');
     ['events','ensureEvents','markDirty','renderAll'].forEach(name=>{if(typeof deps[name]!=='function')throw new Error('Benötigte Admin-V2-Funktion fehlt: '+name)});
-    const data=deps.events();if(!data||!Array.isArray(data.events))throw new Error('Event-State ist nicht geladen.');
-    data.events.push(...result.events);deps.ensureEvents();deps.markDirty();deps.renderAll();return result.events.length;
+    const data=deps.events();if(!data||!Array.isArray(data.events))throw new Error('events().events ist nicht geladen.');
+    const firstIndex=data.events.length,expectedLength=firstIndex+result.events.length;data.events.push(...result.events);
+    const liveData=deps.events();if(liveData!==data||liveData.events!==data.events||liveData.events.length!==expectedLength)throw new Error('Der globale Admin-State hat die importierten Events nicht übernommen.');
+    deps.ensureEvents();deps.markDirty();if(deps.state&&typeof deps.state==='object'){deps.state.selectedEvent=firstIndex;deps.state.eventListExpanded=true}deps.renderAll();
+    const renderedData=deps.events();if(!renderedData||!Array.isArray(renderedData.events)||renderedData.events.length!==expectedLength)throw new Error('Der Admin-State wurde beim Rendern unerwartet ersetzt.');return result.events.length;
   }
   function applyImport(){
     if(!pending||pending.errors.length||!pending.events.length){document.getElementById('csvImportSummary').textContent='Kein gültiger Import vorbereitet. Zuerst CSV prüfen.';return}
-    let imported;try{imported=importIntoDraft(pending,root)}catch(error){document.getElementById('csvImportSummary').textContent='Import abgebrochen: '+error.message;return}pending=null;if(typeof root.setEventTab==='function')root.setEventTab('csv-import');document.getElementById('csvImportSummary').textContent=imported+' Events in den Browser-Entwurf übernommen. GitHub wurde nicht beschrieben; zum Veröffentlichen den bestehenden Speichern-Button nutzen.';document.getElementById('csvImportApply').disabled=true;
+    let imported;try{imported=importIntoDraft(pending,adminDependencies())}catch(error){document.getElementById('csvImportSummary').textContent='Import abgebrochen: '+error.message;return}pending=null;const setTab=globalValue('setEventTab');if(typeof setTab==='function')setTab('csv-import');document.getElementById('csvImportSummary').textContent=imported+' Events in events().events übernommen. GitHub wurde nicht beschrieben; zum Veröffentlichen den bestehenden Speichern-Button nutzen.';document.getElementById('csvImportApply').disabled=true;
   }
   function downloadExample(){const text='date;title;color;moreUrl;imageUrl;description;section_label;section_genre;artist_name;artist_info;artist_link\r\n2026-09-12;CSV Test Night;Saturday Rave;https://example.com;;;up:;House;Test Artist;Live;https://example.com/artist\r\n2026-09-12;CSV Test Night;Saturday Rave;https://example.com;;;up:;House;Second Artist;DJ Set;\r\n';const url=URL.createObjectURL(new Blob([text],{type:'text/csv;charset=utf-8'}));const link=document.createElement('a');link.href=url;link.download='events-beispiel.csv';link.click();URL.revokeObjectURL(url)}
   function install(){
