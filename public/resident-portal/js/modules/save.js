@@ -1,12 +1,12 @@
 import { setStatus } from '../core/dom.js';
-import { CONFIG } from '../core/config.js?v=branch-reload-1';
+import { CONFIG } from '../core/config.js?v=branch-reload-2';
 import { state, requireResident } from '../core/state.js';
-import { saveResident, validateSaveBranch } from '../core/github.js?v=branch-reload-1';
+import { saveResident, validateSaveBranch } from '../core/github.js?v=branch-reload-2';
 import * as profile from './profile.js';
 import * as links from './links.js';
 import * as news from './news.js?v=news-top-save-2';
-import * as media from './media.js?v=media-preserve-1';
-import * as releases from './releases.js?v=cover-preview-1';
+import * as media from './media.js?v=branch-reload-2';
+import * as releases from './releases.js?v=branch-reload-2';
 
 export function readAll() {
   profile.read();

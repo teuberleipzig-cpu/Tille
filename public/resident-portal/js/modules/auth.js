@@ -1,7 +1,7 @@
 import { $, setStatus, showScreen } from '../core/dom.js';
-import { CONFIG, hasExplicitBranchParam } from '../core/config.js?v=branch-reload-1';
+import { CONFIG, hasExplicitBranchParam } from '../core/config.js?v=branch-reload-2';
 import { getStoredToken, setToken } from '../core/state.js';
-import { loadPublicResidents, loadResidentsFromGithub, selectResident } from '../core/github.js?v=branch-reload-1';
+import { loadPublicResidents, loadResidentsFromGithub, selectResident } from '../core/github.js?v=branch-reload-2';
 
 function normalizedCode(value) {
   return String(value || '').replace(/[\s-]/g, '').toUpperCase();

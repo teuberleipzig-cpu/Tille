@@ -1,14 +1,14 @@
-import { CONFIG, PORTAL_VERSION, inviteParam, residentParam } from './core/config.js?v=branch-reload-1';
+import { CONFIG, PORTAL_VERSION } from './core/config.js?v=branch-reload-2';
 import { bindTabs, setStatus, showScreen } from './core/dom.js';
-import { loadResidentForLogin, initAuth } from './modules/auth.js?v=branch-reload-1';
+import { loadResidentForLogin, initAuth } from './modules/auth.js?v=branch-reload-2';
 import * as profile from './modules/profile.js';
 import * as links from './modules/links.js';
 import * as news from './modules/news.js?v=news-top-save-2';
-import * as media from './modules/media.js?v=branch-reload-1';
-import * as releases from './modules/releases.js?v=branch-reload-1';
-import { initSave } from './modules/save.js?v=branch-reload-1';
+import * as media from './modules/media.js?v=branch-reload-2';
+import * as releases from './modules/releases.js?v=branch-reload-2';
+import { initSave } from './modules/save.js?v=branch-reload-2';
 
-const BUILD_LABEL = `${PORTAL_VERSION} news-media-fix-3`;
+const BUILD_LABEL = `${PORTAL_VERSION} branch-reload-2`;
 
 function showBuildBadge() {
   let badge = document.getElementById('portalBuildBadge');
@@ -68,12 +68,5 @@ async function boot() {
     setStatus(error.message || 'Portal konnte nicht geladen werden.', 'danger');
   }
 }
-
-window.ResidentPortalBranchDiag = () => ({
-  branch: CONFIG.branch,
-  residentParam,
-  inviteParam,
-  hostname: window.location.hostname
-});
 
 document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', boot) : boot();
