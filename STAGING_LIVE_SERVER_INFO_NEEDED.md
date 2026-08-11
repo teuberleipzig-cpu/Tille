@@ -1,67 +1,57 @@
-# STAGING / LIVE Server Info Needed
+# STAGING / LIVE Server Information
 
-Diese Datei sammelt die konkreten Informationen, die vor einem echten STAGING-/LIVE-Deployment benötigt werden. Sie enthält keine Zugangsdaten.
+Diese Datei trennt bekannte Infrastruktur von noch offenen Punkten. Sie enthält keine Zugangsdaten.
 
-## STAGING
+## STAGING – bekannt
 
-Ziel-Domain:
+- Aktive Domain: `https://www-test.distillery.de/`
+- HTTPS funktioniert.
+- `/healthz` liefert `200 ok`.
+- Anwendung: statische Website in Docker/nginx.
+- Registry/CI: GHCR und GitHub Actions.
+- Host: `vps03.itlej.de`.
+- Deployment-Konto: SSH Forced Deployment Account `deploy-www-test-distillery`.
+- Erzwungenes Deployment-Script: `/usr/local/sbin/deploy-www-test-distillery.sh`.
+- Image: `ghcr.io/teuberleipzig-cpu/tille:latest`; der aktuelle Workflow baut diesen Tag ausdrücklich als STAGING-Image.
+- Indexierungsschutz im Image: Staging-robots-Datei plus `X-Robots-Tag: noindex, nofollow, noarchive`.
 
-- `teuberstaging.distillery.de`
+`teuberstaging.distillery.de` ist nicht die aktive Staging-Umgebung.
 
-Noch benötigt:
+## STAGING – offen
 
-- [ ] Server-/Hosting-Anbieter benennen.
-- [ ] Servertyp klären: statisches Hosting, Apache, Nginx, Plesk, Netlify, Firebase, GitHub Pages oder anderes.
-- [ ] STAGING-Zielpfad für die Dateien klären.
-- [ ] Klären, ob SSH/SFTP/Git-Deployment/Panel-Upload verwendet wird.
-- [ ] HTTPS-Zertifikat für STAGING klären.
-- [ ] Schutz gegen Indexierung klären: Basic Auth, `X-Robots-Tag`, noindex-Header oder mindestens `robots.staging.txt`.
-- [ ] Prüfen, ob Custom 404 möglich ist.
-- [ ] Prüfen, ob Redirect-Regeln möglich sind.
-- [ ] Prüfen, ob Security-Headers möglich sind.
+- [ ] Basic Auth optional am Reverse Proxy ergänzen, ohne Zugangsdaten im Repository abzulegen.
+- [ ] Serverseitigen Rollback-Ablauf dokumentieren und testen.
+- [ ] Monitoring und Aufbewahrung der Serverlogs klären.
 
-## LIVE
+## LIVE – offen
 
-Ziel-Domain:
-
-- `https://www.distillery.de/`
-
-Noch benötigt:
-
-- [ ] LIVE-Zielpfad für die Dateien klären.
+- [ ] Separaten LIVE-Workflow und vom Staging-Tag getrennte Tag-Strategie definieren.
+- [ ] LIVE-Zielhost und Deployment-Methode final bestätigen.
 - [ ] Entscheiden, ob `www.distillery.de` die Hauptdomain bleibt.
-- [ ] Redirect von `distillery.de` zu `www.distillery.de` oder umgekehrt final entscheiden.
-- [ ] HTTPS-Zertifikat für LIVE klären.
-- [ ] Deployment-Methode klären: manuell, GitHub Actions, FTP/SFTP, Panel oder anderer Weg.
-- [ ] Rollback-Methode klären.
+- [ ] Redirect von `distillery.de` zu `www.distillery.de` oder umgekehrt festlegen.
+- [ ] HTTPS-Zertifikat, Rollback und Smoke-Test festlegen.
 - [ ] Prüfen, ob alte URLs weitergeleitet werden müssen.
-- [ ] Prüfen, ob Serverlogs existieren und wie sie in der Datenschutzseite beschrieben werden müssen.
+- [ ] Serverlog- und Datenschutzanforderungen klären.
 
-## Dateien für Deployment
+## Deployment-Dateien
 
 Für LIVE vorbereitet:
 
-- `robots.live.txt` als Vorlage für `/robots.txt`
-- `sitemap.live.xml` als LIVE-Sitemap-Vorlage
-- aktive `robots.txt`
-- aktive `sitemap.xml`
-- `favicon.svg`
-- `site.webmanifest`
-- `.well-known/security.txt`
-- `404.html`
+- aktive `robots.txt` und `sitemap.xml`
+- `robots.live.txt` und `sitemap.live.xml` als zusätzliche Vorlagen
+- `favicon.svg`, `site.webmanifest`, `.well-known/security.txt` und `404.html`
 
 Für STAGING vorbereitet:
 
-- `robots.staging.txt` als Vorlage für `/robots.txt`
+- `robots.staging.txt` als Source of Truth für `/robots.txt`
+- `docker/nginx.staging.conf` für den HTTP-Header-Schutz
+- `DEPLOY_TARGET=staging` im aktiven www-test-Workflow
 
-## Blocker
+Secrets, SSH-Schlüssel, Tokens und Passwörter bleiben außerhalb des Repositorys.
 
-Ohne Server-/Hosting-Informationen können die folgenden Punkte nicht zuverlässig abgeschlossen werden:
+## Weiterhin zu klären
 
-- echtes STAGING-Deployment
-- echtes LIVE-Deployment
-- HTTPS-Prüfung
-- Redirect-Strategie
-- Serverlog-/Datenschutzprüfung
-- STAGING-Noindex über Header oder Basic Auth
-- GitHub-Actions-Deployment
+- LIVE-Zielpfad und getrennte LIVE-Deployment-Methode
+- Redirect-Strategie und Weiterleitungen alter URLs
+- Serverseitige Rollback-Methode
+- Verfügbarkeit und Aufbewahrungsdauer von Serverlogs

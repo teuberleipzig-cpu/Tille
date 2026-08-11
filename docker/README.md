@@ -1,126 +1,107 @@
 # Docker-Setup der Distillery-Website
 
-Die Website ist rein statisch. Das Image kopiert die Dateien unveraendert in einen
-nginx-Container, es gibt keinen Build-Schritt.
+Die statische Website läuft in `nginxinc/nginx-unprivileged:alpine`. Der gemeinsame Dockerfile unterstützt einen LIVE-sicheren Default und einen ausdrücklich aktivierten Staging-Modus.
 
 ## Dateien
 
 | Datei | Zweck |
 | --- | --- |
-| `Dockerfile` | nginx-Image, Basis `nginxinc/nginx-unprivileged:alpine` |
-| `nginx.conf` | Server-Konfiguration, landet als `/etc/nginx/conf.d/default.conf` |
-| `Dockerfile.dockerignore` | steuert, was in das Image kommt |
-| `../.github/workflows/docker-publish.yml` | baut und pusht das Image nach GHCR |
+| `Dockerfile` | gemeinsames nginx-Image mit `DEPLOY_TARGET` |
+| `nginx.conf` | Default-/LIVE-Konfiguration |
+| `nginx.staging.conf` | Staging-Konfiguration mit `X-Robots-Tag` |
+| `Dockerfile.dockerignore` | begrenzt den Build-Kontext |
+| `../.github/workflows/docker-publish.yml` | baut, veröffentlicht und deployt das STAGING-Image |
 
 ## Lokal bauen und starten
 
-Der Build-Kontext ist immer das **Repo-Root**, nicht dieses Verzeichnis:
+Der Build-Kontext ist immer das Repository-Root.
+
+Default / LIVE-Safety:
 
 ```bash
-docker build -f docker/Dockerfile -t tille .
-docker run --rm -p 8080:8080 tille
+docker build -f docker/Dockerfile -t tille-default .
+docker run --rm -p 8080:8080 tille-default
 ```
 
-Danach `http://localhost:8080` aufrufen. Healthcheck: `curl http://localhost:8080/healthz`.
-
-Ein einfaches `docker build` erzeugt nur die Architektur des eigenen Rechners. Das
-Multi-Arch-Image (amd64 und arm64) baut die CI. Lokal lassen sich beide Architekturen
-bei Bedarf so erzeugen:
+STAGING:
 
 ```bash
-docker buildx build --platform linux/amd64,linux/arm64 -f docker/Dockerfile -t tille .
+docker build --build-arg DEPLOY_TARGET=staging -f docker/Dockerfile -t tille-staging .
+docker run --rm -p 8081:8080 tille-staging
 ```
 
-Der Container laeuft als Benutzer `nginx` (UID 101) und lauscht auf **Port 8080**.
-Er terminiert kein TLS. Auf dem Server gehoert ein Reverse Proxy davor, der 80/443
-auf 8080 mappt und die Zertifikate haelt.
+Der Container läuft als Benutzer `nginx` (UID 101) auf Port 8080. TLS wird vom vorgeschalteten Reverse Proxy terminiert. `/healthz` liefert `200 ok`.
 
-## Was nicht im Image landet
+## Verhalten der Buildmodi
 
-`Dockerfile.dockerignore` haelt Repo-Interna aus dem ausgelieferten Verzeichnis heraus:
-`.git`, `.github`, `docs/`, `scripts/`, `reports/`, alle `*.md`, die
-`structure-*-checkpoint.txt` des Admins, das Verzeichnis `docker/` selbst sowie die
-Vorlagen `robots.live.txt`, `robots.staging.txt` und `sitemap.live.xml`.
+| Verhalten | Default / `live` | `staging` |
+| --- | --- | --- |
+| `/robots.txt` | vorhandene LIVE-Datei mit `Allow: /` | Kopie von `robots.staging.txt` mit `Disallow: /` |
+| `/sitemap.xml` | vorhanden | entfernt / 404 |
+| `X-Robots-Tag` | kein Noindex | `noindex, nofollow, noarchive` |
 
-Ausgeliefert werden die aktiven Root-Dateien `robots.txt` und `sitemap.xml`, alle
-HTML-Seiten, `assets/`, `public/` inklusive Admin und Resident-Portal sowie
-`.well-known/security.txt`.
+Ein unbekannter `DEPLOY_TARGET` lässt den Build fehlschlagen. Dadurch kann ein Tippfehler nicht still einen falschen Modus erzeugen.
 
-Wichtig: BuildKit sucht die Ignore-Datei unter `<Dockerfile-Pfad>.dockerignore`.
-Deshalb heisst sie `docker/Dockerfile.dockerignore`. Ein Build mit `DOCKER_BUILDKIT=0`
-wuerde sie ignorieren und die Doku mit ausliefern. BuildKit ist in aktuellen
-Docker-Versionen und in GitHub Actions Standard.
+## nginx-Verhalten
 
-## Verhalten der nginx-Konfiguration
+Beide Konfigurationen erhalten:
 
-- Custom 404 aus `404.html`.
-- `*.json` mit `Cache-Control: no-store`. Wichtig, damit `events.json` und
-  `residents.json` nie veraltet ausgeliefert werden.
-- HTML, CSS und JS mit `no-cache`, also immer revalidieren. Ein Deploy ist damit
-  sofort sichtbar.
-- Bilder, Fonts und Videos mit `public, max-age=2592000` (30 Tage).
-- `site.webmanifest` bekommt `application/manifest+json`, da der Typ in der
-  Standard-`mime.types` von nginx fehlt.
-- Gesetzte Header: `X-Content-Type-Options: nosniff`,
-  `Referrer-Policy: strict-origin-when-cross-origin`.
-- `/healthz` liefert `200 ok` fuer Healthchecks.
+- Custom 404 aus `404.html`
+- JSON mit `Cache-Control: no-store`
+- HTML, CSS und JavaScript mit `Cache-Control: no-cache`
+- Medien mit `Cache-Control: public, max-age=2592000`
+- korrekten Manifest-MIME-Type
+- `X-Content-Type-Options: nosniff`
+- `Referrer-Policy: strict-origin-when-cross-origin`
+- gzip und `/healthz`
 
-Keine Content-Security-Policy gesetzt. Die Seite laedt bewusst externe Ziele
-(`formsubmit.co` im Feedback-Formular, `api.github.com` in Admin und Resident-Portal).
-Eine CSP muesste diese Ziele explizit erlauben und vorher getestet werden.
+Die Staging-Konfiguration setzt `X-Robots-Tag: noindex, nofollow, noarchive` auch ausdrücklich in allen Locations mit eigenen `add_header`-Direktiven. So geht der Header durch die nginx-Vererbungsregeln nicht verloren.
 
-## GitHub Actions und GHCR
+## Build-Kontext und Webroot
 
-`.github/workflows/docker-publish.yml` laeuft bei jedem Push auf `main` (ausser reinen
-Aenderungen an `*.md`, `docs/` oder `reports/`) und ist zusaetzlich manuell startbar.
+`Dockerfile.dockerignore` hält Repository-Interna, Dokumentation, Skripte, Reports und LIVE-Templates aus dem Image. `robots.staging.txt` und beide nginx-Konfigurationen sind gezielt für den Build verfügbar. Der Dockerfile entfernt anschließend `robots.staging.txt`, temporäre Konfigurationen und `docker/` aus dem ausgelieferten Webroot.
 
-Er baut das Image und pusht es nach `ghcr.io/teuberleipzig-cpu/tille` mit zwei Tags:
+## GitHub Actions, GHCR und www-test
 
-- `latest` – der jeweils aktuelle Stand von `main`
-- `sha-<commit>` – unveraenderlich, der Handgriff fuer Rollbacks
+`.github/workflows/docker-publish.yml` läuft bei Push auf `main` sowie manuell. Er baut Multi-Arch für amd64 und arm64 ausdrücklich mit `DEPLOY_TARGET=staging` und veröffentlicht:
 
-Gebaut wird als Multi-Arch-Image fuer `linux/amd64` und `linux/arm64`. Beide
-Architekturen liegen unter demselben Tag als eine Manifest-Liste; Docker zieht auf dem
-Server automatisch die passende. Der Build laeuft ueber QEMU-Emulation
-(`docker/setup-qemu-action`), der arm64-Teil dauert dadurch spuerbar laenger als amd64.
+- `ghcr.io/teuberleipzig-cpu/tille:latest`
+- einen unveränderlichen SHA-Tag
 
-Authentifiziert wird mit dem eingebauten `GITHUB_TOKEN`, es sind keine zusaetzlichen
-Secrets noetig.
+`latest` ist damit im aktuellen Workflow ausdrücklich das STAGING-Image für `https://www-test.distillery.de/`. Ein späteres LIVE-Deployment darf diesen Workflow oder Tag nicht ungeprüft wiederverwenden und benötigt eine getrennte LIVE-Strategie.
 
-## Deployment per Watchtower
+Der Deploy-Job verbindet sich mit dem SSH Forced Deployment Account `deploy-www-test-distillery` auf `vps03.itlej.de`; serverseitig läuft `/usr/local/sbin/deploy-www-test-distillery.sh`. Zugangsdaten bleiben in GitHub Secrets.
 
-Auf dem Server:
+Basic Auth bleibt eine optionale zusätzliche Härtung am Reverse Proxy. Es werden keine festen Zugangsdaten in das Repository aufgenommen.
 
-- Watchtower muss den Tag `latest` beobachten.
-- Das GHCR-Package ist zunaechst **privat**. Entweder die Package-Sichtbarkeit auf
-  public stellen oder Watchtower Zugangsdaten geben (`REPO_USER` und `REPO_PASS` mit
-  einem PAT mit `read:packages`).
-- Reverse Proxy auf Containerport 8080.
+Das Multi-Arch-Image enthält amd64 und arm64 unter derselben Manifest-Liste. Docker
+zieht auf dem Server automatisch die passende Architektur; der arm64-Build läuft in
+GitHub Actions über QEMU und kann deshalb länger dauern.
 
-### Aktualisierung von Inhalten
+## PR-Smoke-Test
 
-Die oeffentlichen Seiten lesen `public/events/data/events.json` und
-`public/residents/data/residents.json` als statische Dateien aus dem Image, nicht
-direkt von GitHub. Der Weg einer Inhaltsaenderung ist deshalb:
+`.github/workflows/staging-container-smoke.yml` baut bei relevanten Pull Requests beide
+Varianten ausschließlich lokal auf dem GitHub Runner. Der Workflow startet Container,
+führt `nginx -t` und die HTTP-/Header-Matrix aus und räumt die Container anschließend
+auf. Er meldet sich nicht bei GHCR an, pusht kein Image, verwendet kein SSH und löst
+kein Deployment aus.
 
-Admin speichert -> Commit auf `main` -> Actions baut neues `latest` -> Watchtower zieht
-das Image -> Seite zeigt die Aenderung.
+## Inhaltsauslieferung
 
-Die Verzoegerung ist Build (rund eine Minute) plus Watchtower-Intervall.
+Die öffentlichen Seiten lesen `public/events/data/events.json` und
+`public/residents/data/residents.json` aus dem Image, nicht direkt von GitHub. Der
+bestehende STAGING-Weg ist daher: Admin-Commit auf `main`, Image-Build, serverseitiger
+Pull und Container-Reload. Für LIVE muss dieser Ablauf getrennt definiert werden.
 
-### Rollback
+## Rollback-Hinweis
 
-```bash
-docker pull ghcr.io/teuberleipzig-cpu/tille:sha-<alter-commit>
-docker tag  ghcr.io/teuberleipzig-cpu/tille:sha-<alter-commit> ghcr.io/teuberleipzig-cpu/tille:latest
-```
+Die CI veröffentlicht zusätzlich zum beweglichen Tag `latest` einen unveränderlichen
+SHA-Tag. Ein serverseitiger Rollback kann ein früheres SHA-Image verwenden, muss aber
+mit dem Forced Deployment Script abgestimmt und separat getestet werden. Ein späterer
+Push auf `main` erzeugt erneut ein aktuelles STAGING-Image.
 
-Container mit dem alten Tag neu starten. Watchtower ueberschreibt das beim naechsten
-Push auf `main` wieder, ein Rollback braucht also zusaetzlich einen Fix oder Revert
-im Repository.
+## Content Security Policy
 
-## STAGING
-
-Fuer `teuberstaging.distillery.de` ist dieses Image noch nicht vorbereitet. Noetig waeren
-dort zusaetzlich `robots.staging.txt` als `/robots.txt`, ein `X-Robots-Tag: noindex`
-und Basic Auth am Reverse Proxy. Details in `../DEPLOYMENT_STAGING_LIVE_NOTES.md`.
+Es ist weiterhin keine CSP gesetzt. Die Website verwendet externe Ziele, unter anderem
+`formsubmit.co` und `api.github.com`. Eine CSP muss diese Abhängigkeiten ausdrücklich
+berücksichtigen und vor Aktivierung getestet werden.
