@@ -14,3 +14,13 @@ For real www-test operation, the infrastructure owner must separately provide:
 - a real SMTP provider, persistent digest cursor and systemd timer/cron for `npm run digest`.
 
 None of those server changes, and no modification to the external forced-deploy script, is performed by this branch.
+
+## Trusted reverse proxy
+
+`TRUST_PROXY=false` is the safe default for direct and local API operation: forwarded
+client-address headers are ignored and the socket peer is used for rate limiting.
+Set `TRUST_PROXY=true` only when a controlled nginx proxy overwrites `X-Real-IP` and
+the Feedback API port is not directly reachable from the internet. With trusted-proxy
+mode enabled, a missing or invalid `X-Real-IP` safely falls back to the socket peer.
+The address remains memory-only, is never logged or persisted, and is not included in
+board or CAPTCHA requests.

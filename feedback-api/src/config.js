@@ -4,6 +4,7 @@ const integer = (value, fallback) => Number.isSafeInteger(Number(value)) ? Numbe
 export function loadConfig(env = process.env) {
   return {
     port: integer(env.PORT, 3000),
+    trustProxy: bool(env.TRUST_PROXY),
     boardProvider: env.BOARD_PROVIDER || 'trello',
     captcha: {
       provider: env.CAPTCHA_PROVIDER || 'recaptcha',

@@ -12,4 +12,5 @@ services:
       PORT: "3000"
       BOARD_PROVIDER: fake
       RECAPTCHA_ENABLED: "false"
+      TRUST_PROXY: "true"
       RATE_LIMIT_MAX: "50"

@@ -48,6 +48,9 @@ jobs:
       - name: Start local integration stack
         run: docker compose -f docker-compose.feedback-test.yml up --build -d
 
+      - name: Verify proxy client-address configuration
+        run: docker compose -f docker-compose.feedback-test.yml exec -T website nginx -T 2>&1 | grep -F 'proxy_set_header X-Real-IP $remote_addr;'
+
       - name: Wait for proxy and run integration smoke test
         run: |
           set -euo pipefail

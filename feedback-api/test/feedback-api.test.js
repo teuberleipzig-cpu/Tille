@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import http from 'node:http';
 import test from 'node:test';
 import { readFile } from 'node:fs/promises';
-import { createHandler } from '../src/app.js';
+import { createHandler, resolveClientAddress } from '../src/app.js';
 import { BoardProvider } from '../src/board/board-provider.js';
 import { TrelloProvider, BoardConfigurationError } from '../src/board/trello-provider.js';
 import { formatDigest, runDigest } from '../src/digest/weekly-digest.js';
@@ -10,9 +10,9 @@ import { MemoryRateLimit } from '../src/rate-limit/rate-limit.js';
 
 class FakeBoard extends BoardProvider { constructor() { super(); this.items = []; this.counts = { total: 0, categories: {} }; } async createFeedback(value) { this.items.push(value); } async countNewFeedbackSince() { return this.counts; } }
 class FakeCaptcha { constructor(valid = true) { this.valid = valid; } async verify() { return this.valid; } }
-const config = enabled => ({ captcha: { provider: 'recaptcha', enabled, siteKey: 'public-site-key' } });
-async function fixture({ captcha = false, validCaptcha = true, board = new FakeBoard(), max = 50 } = {}) {
-  const server = http.createServer(createHandler({ config: config(captcha), boardProvider: board, captchaProvider: new FakeCaptcha(validCaptcha), rateLimit: new MemoryRateLimit({ max, windowMs: 60000 }), logger: { error() {} } }));
+const config = (enabled, trustProxy = false) => ({ trustProxy, captcha: { provider: 'recaptcha', enabled, siteKey: 'public-site-key' } });
+async function fixture({ captcha = false, validCaptcha = true, board = new FakeBoard(), max = 50, trustProxy = false, logger = { error() {} } } = {}) {
+  const server = http.createServer(createHandler({ config: config(captcha, trustProxy), boardProvider: board, captchaProvider: new FakeCaptcha(validCaptcha), rateLimit: new MemoryRateLimit({ max, windowMs: 60000 }), logger }));
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
   const base = `http://127.0.0.1:${server.address().port}`;
   return { board, close: () => new Promise(resolve => server.close(resolve)), request: (path, options) => fetch(base + path, options) };
@@ -34,6 +34,15 @@ test('large body = 413', async t => { const f=await fixture(); t.after(f.close);
 test('GET submit endpoint = 405', async t => { const f=await fixture(); t.after(f.close); assert.equal((await f.request('/api/feedback')).status,405); });
 test('wrong content type = 415', async t => { const f=await fixture(); t.after(f.close); assert.equal((await f.request('/api/feedback',{method:'POST',body:'x'})).status,415); });
 test('payload excludes captcha, IP and unknown fields', async t => { const f=await fixture(); t.after(f.close); await f.request('/api/feedback',post(valid)); const item=f.board.items[0]; assert.deepEqual(Object.keys(item).sort(),['category','feedback','receivedAt','replyEmail','requestId']); assert.equal(JSON.stringify(item).includes('test-token'),false); assert.equal(JSON.stringify(item).includes('127.0.0.1'),false); assert.equal(JSON.stringify(item).includes('ignored'),false); });
+test('trustProxy false ignores forged X-Real-IP and uses socket address', () => { const req={headers:{'x-real-ip':'198.51.100.9'},socket:{remoteAddress:'127.0.0.1'}}; assert.equal(resolveClientAddress(req,false),'127.0.0.1'); });
+test('trustProxy true uses valid X-Real-IP', () => { const req={headers:{'x-real-ip':'198.51.100.9'},socket:{remoteAddress:'127.0.0.1'}}; assert.equal(resolveClientAddress(req,true),'198.51.100.9'); });
+test('trustProxy true falls back for missing header', () => { assert.equal(resolveClientAddress({headers:{},socket:{remoteAddress:'127.0.0.1'}},true),'127.0.0.1'); });
+test('trustProxy true rejects invalid or chained header', () => { for (const value of ['not-an-ip','198.51.100.9, 203.0.113.4','']) assert.equal(resolveClientAddress({headers:{'x-real-ip':value},socket:{remoteAddress:'127.0.0.1'}},true),'127.0.0.1'); });
+test('trusted proxy rate limit separates client addresses', async t => { const f=await fixture({max:1,trustProxy:true}); t.after(f.close); assert.equal((await f.request('/api/feedback',{...post(valid),headers:{...post(valid).headers,'x-real-ip':'198.51.100.1'}})).status,201); assert.equal((await f.request('/api/feedback',{...post(valid),headers:{...post(valid).headers,'x-real-ip':'198.51.100.2'}})).status,201); });
+test('trusted proxy rate limit still limits same client address', async t => { const f=await fixture({max:1,trustProxy:true}); t.after(f.close); const options={...post(valid),headers:{...post(valid).headers,'x-real-ip':'198.51.100.3'}}; await f.request('/api/feedback',options); assert.equal((await f.request('/api/feedback',options)).status,429); });
+test('expired rate-limit entries are removed', () => { let now=0; const limiter=new MemoryRateLimit({max:2,windowMs:10,now:()=>now}); limiter.allow('old'); assert.equal(limiter.entries.has('old'),true); now=11; limiter.allow('new'); assert.equal(limiter.entries.has('old'),false); assert.equal(limiter.entries.has('new'),true); });
+test('client address never appears in logs', async t => { const logs=[]; const board={async createFeedback(){throw new Error('fail')}}; const f=await fixture({board,trustProxy:true,logger:{error(value){logs.push(value)}}}); t.after(f.close); await f.request('/api/feedback',{...post(valid),headers:{...post(valid).headers,'x-real-ip':'198.51.100.44'}}); assert.equal(JSON.stringify(logs).includes('198.51.100.44'),false); });
+test('client address is not passed to captcha', async t => { let args; const captchaProvider={async verify(...value){args=value;return true}}; const board=new FakeBoard(); const server=http.createServer(createHandler({config:config(true,true),boardProvider:board,captchaProvider,rateLimit:new MemoryRateLimit({max:5,windowMs:60000}),logger:{error(){}}})); await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve)); t.after(()=>new Promise(resolve=>server.close(resolve))); await fetch(`http://127.0.0.1:${server.address().port}/api/feedback`,{...post(valid),headers:{...post(valid).headers,'x-real-ip':'198.51.100.45'}}); assert.deepEqual(args,['test-token']); assert.equal(JSON.stringify(board.items).includes('198.51.100.45'),false); });
 
 const trelloConfig = () => ({ apiKey:'key', token:'token', categoryDestinations:{Einlass:'list-e',Bar:'list-b',Club:'list-c',Awareness:'list-a',Sonstiges:'list-s'},openLabelId:'open',replyRequestedLabelId:'reply' });
 for (const [category,id] of Object.entries(trelloConfig().categoryDestinations)) test(`${category} maps to category destination`, async () => { let body; const p=new TrelloProvider(trelloConfig(),async(_u,o)=>{body=o.body;return{ok:true}}); await p.createFeedback({category,feedback:'text',replyEmail:'',receivedAt:'2026-08-12T09:15:00Z'}); assert.equal(body.get('idList'),id); });
