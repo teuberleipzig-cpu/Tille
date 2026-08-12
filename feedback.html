@@ -35,30 +35,22 @@
         <p>If something made you feel uncomfortable, unsafe, excluded, or if you experienced or witnessed behaviour that should not be part of our space, please let us know.</p>
         <p>We also welcome feedback about moments that felt good, things that worked well, or situations in which you felt supported. These perspectives help us understand what we are doing right — and where we need to do better.</p>
         <p>All messages will be treated with care and respect.</p>
-        <form class="feedback-form" action="https://formsubmit.co/teuber1995@gmail.com" method="POST">
-          <input id="feedback-subject" type="hidden" name="_subject" value="New Distillery website feedback">
-          <input id="submitted-at" type="hidden" name="submitted_at" value="">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_next" value="https://teuberleipzig-cpu.github.io/Tille/feedback-thanks.html">
-          <input class="honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off">
+        <form class="feedback-form" method="POST">
+          <input class="honeypot" type="text" name="honeypot" tabindex="-1" autocomplete="off">
           <div class="field"><label for="feedback-category">Category</label><select id="feedback-category" name="category" required><option value="" selected disabled>Please select a category</option><option value="Einlass">Einlass</option><option value="Bar">Bar</option><option value="Club">Club</option><option value="Awareness">Awareness</option><option value="Sonstiges">Sonstiges</option></select></div>
           <div class="field"><label for="feedback-message">Your feedback</label><textarea id="feedback-message" name="feedback" required placeholder="Write your message here..."></textarea></div>
-          <div class="field"><label for="reply-email">Email address optional</label><p class="field-note">If you would like us to reply, you can leave your email address here. This is optional.</p><input id="reply-email" type="email" name="reply_email" placeholder="your@email.com"></div>
+          <div class="field"><label for="reply-email">Email address optional</label><p class="field-note">If you would like us to reply, you can leave your email address here. This is optional.</p><input id="reply-email" type="email" name="replyEmail" placeholder="your@email.com"></div>
+          <div id="feedback-captcha" class="field" aria-live="polite"></div>
           <div class="submit-row"><button class="submit-button" type="submit">Send feedback</button></div>
-          <p class="privacy-note">Before the message is sent, you may be asked to complete a spam protection check. This form currently uses an external form service to forward messages by email. Later we can replace this with the official Distillery awareness address and a self-hosted endpoint. Please see the <a href="datenschutz.html">Datenschutz</a> page for the current Go-Live review status.</p>
+          <p id="feedback-status" class="field-note" role="status" aria-live="polite"></p>
+          <p class="privacy-note">Before the message is sent, you may be asked to complete a spam protection check. Please see the <a href="datenschutz.html">Datenschutz</a> page for the current Go-Live review status.</p>
         </form>
       </section>
       <footer class="footer">DISTILLERY LEIPZIG | EGGEBRECHTSTRAẞE 2 | 04103 LEIPZIG | <a href="mailto:club@distillery.de">club@distillery.de</a> | <a href="tel:+4934135597400">0341 35597400</a><small><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></small></footer>
     </main>
     <aside class="sidebar" aria-hidden="true"></aside>
   </div>
-  <script>
-    document.querySelector('.feedback-form').addEventListener('submit', function(){
-      var now = new Date().toISOString();
-      document.getElementById('submitted-at').value = now;
-      document.getElementById('feedback-subject').value = 'New Distillery website feedback – ' + now;
-    });
-  </script>
+  <script src="assets/feedback.js?v=feedback-api-1" defer></script>
 <script src="assets/tracking.js?v=tracking-1" defer></script>
 </body>
 </html>

@@ -1,0 +1,7 @@
+.env
+.env.*
+!.env.example
+feedback-api/node_modules/
+feedback-api/.data/
+feedback-api/coverage/
+

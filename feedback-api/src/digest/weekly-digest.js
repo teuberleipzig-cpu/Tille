@@ -1,0 +1,3 @@
+import { CATEGORIES } from '../feedback/validation.js';
+export function formatDigest(counts) { return [`${counts.total} neue Feedbacks seit letzter Zusammenfassung.`, '', ...CATEGORIES.map(c => `${c}: ${counts.categories[c] || 0}`), '', 'Bitte Feedback-Board prüfen.'].join('\n'); }
+export async function runDigest({ boardProvider, mailProvider, since, recipient }) { const counts = await boardProvider.countNewFeedbackSince(since); if (!counts.total) return { sent: false, counts }; await mailProvider.send({ to: recipient, subject: 'Distillery Feedback – Wochenübersicht', text: formatDigest(counts) }); return { sent: true, counts }; }
