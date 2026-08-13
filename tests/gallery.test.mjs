@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { readFile } from 'node:fs/promises';
 import { moveGalleryItem, normalizeGallery, playlistCover, removeGalleryImage } from '../public/gallery/js/gallery-model.js';
+import { saveGalleryData, stageGalleryImageDelete } from '../public/admin/js/features/gallery/gallery-save.js';
 
 const empty = JSON.parse(await readFile(new URL('../public/gallery/data/gallery.json', import.meta.url), 'utf8'));
 const image = (id, order, url = `public/gallery/media/history/${id}.jpg`) => ({ id, url, alt: '', caption: '', order });
@@ -43,7 +44,57 @@ test('public and admin Gallery shells expose required controls', async () => {
   const html = await readFile(new URL('../gallery.html', import.meta.url), 'utf8');
   const page = await readFile(new URL('../public/gallery/js/gallery-page.js', import.meta.url), 'utf8');
   const admin = await readFile(new URL('../public/admin/js/features/gallery/gallery.js', import.meta.url), 'utf8');
+  const save = await readFile(new URL('../public/admin/js/features/gallery/gallery-save.js', import.meta.url), 'utf8');
   assert.match(html, /data-lightbox-prev/); assert.match(html, /data-lightbox-next/); assert.match(html, /assets\/site-navigation\.js/);
   assert.match(page, /Escape/); assert.match(page, /ArrowLeft/); assert.match(page, /ArrowRight/); assert.match(page, /Gallery konnte nicht geladen werden/);
-  assert.match(admin, /multiple accept="image\/\*"/); assert.match(admin, /getTextFile\(DATA_PATH\)/); assert.match(admin, /fresh\.sha !== loadedSha/);
+  assert.match(admin, /multiple accept="image\/\*"/); assert.match(admin, /getTextFile\(DATA_PATH\)/); assert.match(save, /fresh\.sha !== loadedSha/);
+});
+
+test('image delete is staged locally without physical delete', () => {
+  const pending = new Set(); const images = [image('a', 1)];
+  const next = stageGalleryImageDelete({ ...playlist('one'), images, coverImage: images[0].url }, images[0], pending);
+  assert.equal(next.images.length, 0); assert.deepEqual([...pending], [images[0].url]);
+});
+
+test('SHA conflict prevents JSON write and media cleanup', async () => {
+  const calls = []; const pending = new Set([image('a', 1).url]);
+  const client = { getTextFile: async () => ({ sha: 'fresh' }), putTextFile: async () => calls.push('put'), getFile: async () => calls.push('get-media'), deleteFile: async () => calls.push('delete') };
+  await assert.rejects(() => saveGalleryData({ client, dataPath: 'gallery.json', next: empty, loadedSha: 'old', pendingMediaDeletes: pending }), /zwischenzeitlich/);
+  assert.deepEqual(calls, []); assert.equal(pending.size, 1);
+});
+
+test('successful JSON write happens before media cleanup', async () => {
+  const calls = []; const path = image('a', 1).url; const pending = new Set([path]);
+  const client = { getTextFile: async () => ({ sha: 'same' }), putTextFile: async () => { calls.push('put-json'); return { content: { sha: 'next' } }; }, getFile: async () => { calls.push('get-media'); return { sha: 'media' }; }, deleteFile: async () => calls.push('delete-media') };
+  const result = await saveGalleryData({ client, dataPath: 'gallery.json', next: empty, loadedSha: 'same', pendingMediaDeletes: pending });
+  assert.deepEqual(calls, ['put-json', 'get-media', 'delete-media']); assert.equal(result.loadedSha, 'next'); assert.equal(pending.size, 0);
+});
+
+test('cleanup failure leaves orphan queued after successful JSON write', async () => {
+  const path = image('a', 1).url; const pending = new Set([path]); let jsonWritten = false;
+  const client = { getTextFile: async () => ({ sha: 'same' }), putTextFile: async () => { jsonWritten = true; return { content: { sha: 'next' } }; }, getFile: async () => { throw new Error('cleanup failed'); } };
+  const result = await saveGalleryData({ client, dataPath: 'gallery.json', next: empty, loadedSha: 'same', pendingMediaDeletes: pending });
+  assert.equal(jsonWritten, true); assert.equal(result.cleanupFailures.length, 1); assert.equal(pending.has(path), true);
+});
+
+test('404 cleanup is treated as already removed', async () => {
+  const path = image('a', 1).url; const pending = new Set([path]);
+  const client = { getTextFile: async () => ({ sha: 'same' }), putTextFile: async () => ({ content: { sha: 'next' } }), getFile: async () => { const error = new Error('missing'); error.status = 404; throw error; } };
+  const result = await saveGalleryData({ client, dataPath: 'gallery.json', next: empty, loadedSha: 'same', pendingMediaDeletes: pending });
+  assert.equal(result.cleanupFailures.length, 0); assert.equal(pending.size, 0);
+});
+
+test('delete staging rejects paths outside Gallery media', () => {
+  assert.throws(() => stageGalleryImageDelete({ ...playlist('one'), images: [] }, { id: 'x', url: 'public/events/media/x.jpg' }, new Set()), /blockiert/);
+});
+
+test('fresh Gallery load clears stale pending deletes', async () => {
+  const admin = await readFile(new URL('../public/admin/js/features/gallery/gallery.js', import.meta.url), 'utf8');
+  assert.match(admin, /loadedSha = file\.sha; pendingMediaDeletes\.clear\(\)/);
+});
+
+test('cache-busting references are current', async () => {
+  const root = new URL('../', import.meta.url); const names = ['404.html','about.html','contact.html','datenschutz.html','event.html','feedback-thanks.html','feedback.html','history.html','impressum.html','index.html','news.html','resident-releases.html','residents.html','gallery.html'];
+  for (const name of names) { const html = await readFile(new URL(name, root), 'utf8'); assert.doesNotMatch(html, /site-navigation\.js\?v=site-navigation-1/); assert.match(html, /site-navigation\.js\?v=site-navigation-2/); }
+  const admin = await readFile(new URL('../public/admin/index.html', import.meta.url), 'utf8'); assert.match(admin, /gallery\.js\?v=gallery-admin-2/);
 });

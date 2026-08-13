@@ -30,6 +30,6 @@ function renderEvent(e){const img=e.imageUrl?`<img class="hero" src="${esc(e.ima
 async function boot(){try{const id=new URLSearchParams(location.search).get('id');const res=await fetch(EVENTS_DATA_URL,{cache:'no-store'});if(!res.ok)throw new Error('Events konnten nicht geladen werden.');const data=await res.json();const e=(data.events||[]).find(x=>eventId(x)===id);document.getElementById('event').innerHTML=e?renderEvent(e):'<p class="error">Veranstaltung nicht gefunden.</p>';}catch(err){document.getElementById('event').innerHTML=`<p class="error">${esc(err.message)}</p>`;}}
 boot();
 </script>
-<script type="module" src="assets/site-navigation.js?v=site-navigation-1"></script>
+<script type="module" src="assets/site-navigation.js?v=site-navigation-2"></script>
 </body>
 </html>
