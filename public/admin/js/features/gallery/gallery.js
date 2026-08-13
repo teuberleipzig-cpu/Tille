@@ -1,5 +1,6 @@
 import { createGitHubClient } from '../../core/github-client.js';
-import { createPlaylistId, gallerySlug, isGalleryMediaPath, moveGalleryItem, normalizeGallery, removeGalleryImage } from '../../../../gallery/js/gallery-model.js';
+import { createPlaylistId, gallerySlug, moveGalleryItem, normalizeGallery } from '../../../../gallery/js/gallery-model.js';
+import { saveGalleryData, stageGalleryImageDelete } from './gallery-save.js';
 
 const DATA_PATH = 'public/gallery/data/gallery.json';
 const root = document.getElementById('view-gallery');
@@ -10,6 +11,7 @@ let gallery = null;
 let selectedId = '';
 let loadedSha = '';
 const previews = new Map();
+const pendingMediaDeletes = new Set();
 
 function setStatus(message, type = 'ok') { status.textContent = message; status.className = `status ${type}`; }
 function current() { return gallery?.playlists.find(item => item.id === selectedId) || null; }
@@ -93,16 +95,14 @@ async function uploadFiles(files) {
     markChanged(); render();
   } catch (error) { setStatus(error.message || 'Bilder konnten nicht hochgeladen werden.', 'err'); }
 }
-async function removeImage(image) {
-  if (!confirm('Bild aus Playlist und GitHub entfernen?')) return;
-  if (!isGalleryMediaPath(image.url)) return setStatus('Löschen blockiert: Bild liegt nicht unter public/gallery/media/.', 'err');
-  setStatus('Lösche Gallery-Bild...', 'warn');
-  try { const client = github(); const file = await client.getFile(image.url); await client.deleteFile(image.url, file.sha, 'Delete gallery image'); const playlist = current(); Object.assign(playlist, removeGalleryImage(playlist, image.id)); markChanged(); render(); } catch (error) { setStatus(error.message || 'Bild konnte nicht gelöscht werden.', 'err'); }
+function removeImage(image) {
+  if (!confirm('Bild aus Playlist entfernen und nach erfolgreichem Speichern aus GitHub bereinigen?')) return;
+  try { const playlist = current(); Object.assign(playlist, stageGalleryImageDelete(playlist, image, pendingMediaDeletes)); markChanged(); render(); } catch (error) { setStatus(error.message || 'Bild konnte nicht entfernt werden.', 'err'); }
 }
 function addPlaylist() { if (!gallery) return setStatus('Gallery zuerst laden.', 'err'); readFields(); const id = createPlaylistId(); gallery.playlists.push({ id, title: 'Neue Playlist', year: '', description: '', enabled: false, order: gallery.playlists.length + 1, coverImage: '', images: [] }); selectedId = id; markChanged(); render(); }
 function deletePlaylist() { const playlist = current(); if (!playlist || !confirm('Playlist wirklich löschen? Medien werden nicht rekursiv gelöscht.')) return; gallery.playlists = gallery.playlists.filter(item => item.id !== playlist.id).map((item, order) => ({ ...item, order: order + 1 })); selectedId = gallery.playlists[0]?.id || ''; markChanged(); render(); }
-async function loadGallery() { setStatus('Lade Gallery...', 'warn'); try { const file = await github().getTextFile(DATA_PATH); gallery = normalizeGallery(JSON.parse(file.text)); loadedSha = file.sha; selectedId = gallery.playlists[0]?.id || ''; render(); setStatus('Gallery geladen.', 'ok'); } catch (error) { setStatus(error.message || 'Gallery konnte nicht geladen werden.', 'err'); } }
-async function saveGallery() { setStatus('Speichere Gallery...', 'warn'); try { readFields(); const next = normalizeGallery(gallery); const client = github(); const fresh = await client.getTextFile(DATA_PATH); if (!loadedSha || fresh.sha !== loadedSha) throw new Error('Gallery wurde zwischenzeitlich geändert. Bitte neu laden.'); const result = await client.putTextFile(DATA_PATH, JSON.stringify(next, null, 2) + '\n', fresh.sha, 'Update gallery from admin v2'); loadedSha = result.content?.sha || ''; gallery = next; render(); setStatus('Gallery gespeichert.', 'ok'); } catch (error) { setStatus(error.message || 'Gallery konnte nicht gespeichert werden.', 'err'); } }
+async function loadGallery() { setStatus('Lade Gallery...', 'warn'); try { const file = await github().getTextFile(DATA_PATH); gallery = normalizeGallery(JSON.parse(file.text)); loadedSha = file.sha; pendingMediaDeletes.clear(); selectedId = gallery.playlists[0]?.id || ''; render(); setStatus('Gallery geladen.', 'ok'); } catch (error) { setStatus(error.message || 'Gallery konnte nicht geladen werden.', 'err'); } }
+async function saveGallery() { setStatus('Speichere Gallery...', 'warn'); try { readFields(); const next = normalizeGallery(gallery); const result = await saveGalleryData({ client: github(), dataPath: DATA_PATH, next, loadedSha, pendingMediaDeletes }); loadedSha = result.loadedSha; gallery = next; render(); setStatus(result.cleanupFailures.length ? `Gallery gespeichert. ${result.cleanupFailures.length} Mediendatei(en) konnten nicht bereinigt werden.` : 'Gallery gespeichert.', result.cleanupFailures.length ? 'warn' : 'ok'); } catch (error) { setStatus(error.message || 'Gallery konnte nicht gespeichert werden.', 'err'); } }
 
 root?.querySelector('[data-gallery-load]')?.addEventListener('click', loadGallery);
 root?.querySelector('[data-gallery-save]')?.addEventListener('click', saveGallery);
