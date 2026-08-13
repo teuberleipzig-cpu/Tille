@@ -62,5 +62,6 @@ function renderPage(r){activeResidentId=rid(r);renderList();document.title='Dist
 async function boot(){try{const res=await fetch(DATA_URL,{cache:'no-store'});if(!res.ok)throw new Error('Residents konnten nicht geladen werden.');const data=await res.json();residents=(data.residents||[]).sort((a,b)=>String(a.name).localeCompare(String(b.name)));const urlId=selectedId();const resident=urlId?residents.find(x=>rid(x)===urlId):residents[0];activeResidentId=resident?rid(resident):'';renderList();if(resident){renderPage(resident);}else{document.getElementById('content').innerHTML='<p class="error">Resident nicht gefunden.</p>';}}catch(e){document.getElementById('content').innerHTML=`<p class="error">${esc(e.message)}</p>`;}}
 boot();
 </script>
+<script type="module" src="assets/site-navigation.js?v=site-navigation-1"></script>
 <script src="assets/tracking.js?v=tracking-1" defer></script>
 </body></html>
