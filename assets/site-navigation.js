@@ -1,4 +1,5 @@
 import { normalizeSiteNavigation } from '../public/site/js/site-navigation-model.js';
+import { initialiseMobileNavigation } from '../public/site/js/mobile-navigation.js';
 
 const CONFIG_URL = 'public/site/data/site-navigation.json';
 const CURRENT_PAGE_IDS = { 'index.html': 'dates', 'news.html': 'news', 'residents.html': 'residents', 'resident-releases.html': 'residents', 'about.html': 'about', 'contact.html': 'contact', 'history.html': 'history', 'feedback.html': 'feedback', 'feedback-thanks.html': 'feedback', 'event.html': 'dates', 'gallery.html': 'gallery' };
@@ -37,6 +38,7 @@ async function initialise() {
     const config = normalizeSiteNavigation(await response.json());
     redirectHome(config);
     renderNavigation(nav, config);
+    initialiseMobileNavigation(config, currentPageId(), nav);
   } catch (_) {
     // The static navigation remains the fail-safe fallback.
   }

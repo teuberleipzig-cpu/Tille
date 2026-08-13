@@ -98,6 +98,6 @@ test('fresh Gallery load clears stale pending deletes', async () => {
 
 test('cache-busting references are current', async () => {
   const root = new URL('../', import.meta.url); const names = ['404.html','about.html','contact.html','datenschutz.html','event.html','feedback-thanks.html','feedback.html','history.html','impressum.html','index.html','news.html','resident-releases.html','residents.html','gallery.html'];
-  for (const name of names) { const html = await readFile(new URL(name, root), 'utf8'); assert.doesNotMatch(html, /site-navigation\.js\?v=site-navigation-1/); assert.match(html, /site-navigation\.js\?v=site-navigation-2/); }
+  for (const name of names) { const html = await readFile(new URL(name, root), 'utf8'); assert.doesNotMatch(html, /site-navigation\.js\?v=site-navigation-[12]/); assert.match(html, /site-navigation\.js\?v=site-navigation-3/); }
   const admin = await readFile(new URL('../public/admin/index.html', import.meta.url), 'utf8'); assert.match(admin, /gallery\.js\?v=gallery-admin-2/);
 });
