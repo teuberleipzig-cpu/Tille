@@ -1,0 +1,13 @@
+import http from 'node:http';
+import { createHandler } from './app.js';
+import { loadConfig } from './config.js';
+import { createBoardProvider } from './board/create-board-provider.js';
+import { DisabledCaptchaProvider } from './captcha/captcha-provider.js';
+import { RecaptchaProvider } from './captcha/recaptcha-provider.js';
+import { MemoryRateLimit } from './rate-limit/rate-limit.js';
+const config = loadConfig();
+const boardProvider = createBoardProvider(config);
+const captchaProvider = config.captcha.enabled ? new RecaptchaProvider(config.captcha.secretKey) : new DisabledCaptchaProvider();
+const rateLimit = new MemoryRateLimit(config.rateLimit);
+const server = http.createServer(createHandler({ config, boardProvider, captchaProvider, rateLimit }));
+server.headersTimeout = 10000; server.requestTimeout = 10000; server.listen(config.port, '0.0.0.0');

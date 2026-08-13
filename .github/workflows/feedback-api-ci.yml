@@ -1,0 +1,83 @@
+name: Feedback API CI
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'feedback-api/**'
+      - 'feedback.html'
+      - 'assets/feedback.js'
+      - 'docker-compose.feedback-test.yml'
+      - 'docker/nginx.feedback-test.conf'
+      - 'scripts/feedback-compose-smoke.sh'
+      - '.github/workflows/feedback-api-ci.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: feedback-api/package-lock.json
+
+      - name: Install locked dependencies
+        working-directory: feedback-api
+        run: npm ci
+
+      - name: Check JavaScript syntax
+        run: |
+          set -euo pipefail
+          node --check assets/feedback.js
+          find feedback-api/src -name '*.js' -print0 | xargs -0 -n1 node --check
+
+      - name: Run unit and API tests
+        working-directory: feedback-api
+        run: npm test
+
+      - name: Build feedback API image
+        run: docker build -t tille-feedback-api-ci ./feedback-api
+
+      - name: Start local integration stack
+        run: docker compose -f docker-compose.feedback-test.yml up --build -d
+
+      - name: Verify proxy client-address configuration
+        run: docker compose -f docker-compose.feedback-test.yml exec -T website nginx -T 2>&1 | grep -F 'proxy_set_header X-Real-IP $remote_addr;'
+
+      - name: Wait for proxy and run integration smoke test
+        run: |
+          set -euo pipefail
+          ready=false
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:18083/api/feedback/config >/dev/null; then
+              ready=true
+              break
+            fi
+            sleep 1
+          done
+          if [[ "$ready" != true ]]; then
+            docker compose -f docker-compose.feedback-test.yml logs
+            exit 1
+          fi
+          sh scripts/feedback-compose-smoke.sh
+
+      - name: Verify controlled invalid input
+        run: |
+          set -euo pipefail
+          status="$(curl --silent --output /tmp/feedback-invalid.json --write-out '%{http_code}' \
+            -X POST -H 'content-type: application/json' \
+            --data '{"category":"Unknown","feedback":"invalid","replyEmail":"","captchaToken":"","honeypot":""}' \
+            http://127.0.0.1:18083/api/feedback)"
+          test "$status" = 400
+          grep -F '"ok":false' /tmp/feedback-invalid.json
+
+      - name: Stop local integration stack
+        if: always()
+        run: docker compose -f docker-compose.feedback-test.yml down -v --remove-orphans
