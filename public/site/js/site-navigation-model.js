@@ -1,4 +1,5 @@
 export const SITE_PAGE_IDS = ['dates', 'news', 'residents', 'about', 'contact', 'history', 'feedback', 'gallery', 'team', 'podcast', 'merch'];
+const AVAILABLE_BY_DEFAULT = new Set(['dates', 'news', 'residents', 'about', 'contact', 'history', 'feedback']);
 
 export function normalizeSiteNavigation(value) {
   if (!value || typeof value !== 'object' || Array.isArray(value)) throw new Error('Navigation muss ein JSON-Objekt sein.');
@@ -15,11 +16,14 @@ export function normalizeSiteNavigation(value) {
     const label = String(source.label || '').trim();
     const href = String(source.href || '').trim();
     if (!label || !href) throw new Error('Label oder Link fehlt: ' + id);
-    return { ...source, id, label, href, enabled: source.enabled === true, order: Number.isFinite(Number(source.order)) ? Number(source.order) : index + 1 };
+    const available = source.available == null ? AVAILABLE_BY_DEFAULT.has(id) : source.available === true;
+    const enabled = source.enabled === true;
+    if (!available && enabled) throw new Error('Nicht verfügbare Navigationsseite darf nicht aktiviert sein: ' + id);
+    return { ...source, id, label, href, available, enabled, order: Number.isFinite(Number(source.order)) ? Number(source.order) : index + 1 };
   }).sort((a, b) => a.order - b.order || SITE_PAGE_IDS.indexOf(a.id) - SITE_PAGE_IDS.indexOf(b.id)).map((page, index) => ({ ...page, order: index + 1 }));
-  if (!pages.some(page => page.enabled)) throw new Error('Mindestens eine Navigationsseite muss aktiv sein.');
+  if (!pages.some(page => page.available && page.enabled)) throw new Error('Mindestens eine verfügbare Navigationsseite muss aktiv sein.');
   const homePage = String(value.homePage || '').trim();
-  if (!pages.some(page => page.id === homePage && page.enabled)) throw new Error('Startseite muss eine aktive Seite sein.');
+  if (!pages.some(page => page.id === homePage && page.available && page.enabled)) throw new Error('Startseite muss eine verfügbare und aktive Seite sein.');
   return { ...value, schemaVersion: Number(value.schemaVersion) || 1, homePage, pages };
 }
 

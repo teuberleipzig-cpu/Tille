@@ -42,10 +42,15 @@ function client() {
 
 function render() {
   if (!config) { list.innerHTML = '<p class="muted">Navigation noch nicht geladen.</p>'; return; }
-  list.innerHTML = config.pages.map((page, index) => `<div class="site-navigation-row" data-site-page="${page.id}"><div><strong>${page.label}</strong><small>${page.href}</small></div><label><input type="checkbox" data-site-enabled ${page.enabled ? 'checked' : ''}> aktiv</label><label><input type="radio" name="site-home" data-site-home ${config.homePage === page.id ? 'checked' : ''}> Startseite</label><div class="site-navigation-actions"><button class="tool" type="button" data-site-up ${index === 0 ? 'disabled' : ''}>↑</button><button class="tool" type="button" data-site-down ${index === config.pages.length - 1 ? 'disabled' : ''}>↓</button></div></div>`).join('');
+  list.innerHTML = config.pages.map((page, index) => `<div class="site-navigation-row" data-site-page="${page.id}"><div><strong>${page.label}</strong><small>${page.href}</small>${page.available ? '' : '<small>Noch nicht verfügbar</small>'}</div><label><input type="checkbox" data-site-enabled ${page.enabled ? 'checked' : ''} ${page.available ? '' : 'disabled'}> aktiv</label><label><input type="radio" name="site-home" data-site-home ${config.homePage === page.id ? 'checked' : ''} ${page.available ? '' : 'disabled'}> Startseite</label><div class="site-navigation-actions"><button class="tool" type="button" data-site-up ${index === 0 ? 'disabled' : ''}>↑</button><button class="tool" type="button" data-site-down ${index === config.pages.length - 1 ? 'disabled' : ''}>↓</button></div></div>`).join('');
   list.querySelectorAll('[data-site-page]').forEach(row => {
     const id = row.dataset.sitePage;
     row.querySelector('[data-site-enabled]').addEventListener('change', event => {
+      if (!config.pages.find(page => page.id === id).available) {
+        setStatus('Diese Seite ist noch nicht verfügbar.', 'err');
+        render();
+        return;
+      }
       if (!event.target.checked && config.homePage === id) {
         setStatus('Die Startseite muss aktiv bleiben. Bitte zuerst eine andere Startseite wählen.', 'err');
         render();
@@ -55,7 +60,7 @@ function render() {
       setStatus('Ungespeicherte Änderungen.', 'warn');
       render();
     });
-    row.querySelector('[data-site-home]').addEventListener('change', () => { const page = config.pages.find(item => item.id === id); if (!page.enabled) { setStatus('Eine inaktive Seite kann nicht Startseite sein.', 'err'); render(); return; } config.homePage = id; setStatus('Ungespeicherte Änderungen.', 'warn'); render(); });
+    row.querySelector('[data-site-home]').addEventListener('change', () => { const page = config.pages.find(item => item.id === id); if (!page.available) { setStatus('Diese Seite ist noch nicht verfügbar.', 'err'); render(); return; } if (!page.enabled) { setStatus('Eine inaktive Seite kann nicht Startseite sein.', 'err'); render(); return; } config.homePage = id; setStatus('Ungespeicherte Änderungen.', 'warn'); render(); });
     row.querySelector('[data-site-up]').addEventListener('click', () => { config = moveSitePage(config, id, -1); setStatus('Ungespeicherte Änderungen.', 'warn'); render(); });
     row.querySelector('[data-site-down]').addEventListener('click', () => { config = moveSitePage(config, id, 1); setStatus('Ungespeicherte Änderungen.', 'warn'); render(); });
   });
