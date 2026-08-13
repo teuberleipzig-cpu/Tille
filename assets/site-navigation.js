@@ -1,7 +1,7 @@
 import { normalizeSiteNavigation } from '../public/site/js/site-navigation-model.js';
 
 const CONFIG_URL = 'public/site/data/site-navigation.json';
-const CURRENT_PAGE_IDS = { 'index.html': 'dates', 'news.html': 'news', 'residents.html': 'residents', 'resident-releases.html': 'residents', 'about.html': 'about', 'contact.html': 'contact', 'history.html': 'history', 'feedback.html': 'feedback', 'feedback-thanks.html': 'feedback', 'event.html': 'dates' };
+const CURRENT_PAGE_IDS = { 'index.html': 'dates', 'news.html': 'news', 'residents.html': 'residents', 'resident-releases.html': 'residents', 'about.html': 'about', 'contact.html': 'contact', 'history.html': 'history', 'feedback.html': 'feedback', 'feedback-thanks.html': 'feedback', 'event.html': 'dates', 'gallery.html': 'gallery' };
 
 function currentPageId() {
   const file = location.pathname.split('/').pop() || 'index.html';

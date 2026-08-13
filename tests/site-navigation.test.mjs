@@ -11,26 +11,26 @@ test('default navigation contains every supported page once', () => {
   assert.deepEqual(config.pages.map(page => page.id).sort(), [...SITE_PAGE_IDS].sort());
 });
 
-test('default public navigation matches existing seven links', () => {
+test('default public navigation includes the seven existing pages and Gallery', () => {
   const config = normalizeSiteNavigation(source);
-  assert.deepEqual(config.pages.filter(page => page.enabled).map(page => page.id), ['dates', 'news', 'residents', 'about', 'contact', 'history', 'feedback']);
-  assert.deepEqual(config.pages.filter(page => page.available).map(page => page.id), ['dates', 'news', 'residents', 'about', 'contact', 'history', 'feedback']);
+  assert.deepEqual(config.pages.filter(page => page.enabled).map(page => page.id), ['dates', 'news', 'residents', 'about', 'contact', 'history', 'feedback', 'gallery']);
+  assert.deepEqual(config.pages.filter(page => page.available).map(page => page.id), ['dates', 'news', 'residents', 'about', 'contact', 'history', 'feedback', 'gallery']);
   assert.equal(config.homePage, 'dates');
 });
 
-test('future page types remain unavailable and disabled', () => {
+test('remaining future page types stay unavailable and disabled', () => {
   const config = normalizeSiteNavigation(source);
-  assert.deepEqual(config.pages.filter(page => !page.available).map(page => page.id), ['gallery', 'team', 'podcast', 'merch']);
-  assert.deepEqual(config.pages.filter(page => !page.enabled).map(page => page.id), ['gallery', 'team', 'podcast', 'merch']);
+  assert.deepEqual(config.pages.filter(page => !page.available).map(page => page.id), ['team', 'podcast', 'merch']);
+  assert.deepEqual(config.pages.filter(page => !page.enabled).map(page => page.id), ['team', 'podcast', 'merch']);
 });
 
 test('unavailable page cannot be enabled', () => {
-  const pages = source.pages.map(page => page.id === 'gallery' ? { ...page, enabled: true } : page);
+  const pages = source.pages.map(page => page.id === 'team' ? { ...page, enabled: true } : page);
   assert.throws(() => normalizeSiteNavigation({ ...source, pages }), /nicht aktiviert/);
 });
 
 test('unavailable page cannot be home page', () => {
-  assert.throws(() => normalizeSiteNavigation({ ...source, homePage: 'gallery' }), /verfügbare und aktive/);
+  assert.throws(() => normalizeSiteNavigation({ ...source, homePage: 'team' }), /verfügbare und aktive/);
 });
 
 test('available disabled page is valid when it is not home page', () => {
@@ -43,10 +43,10 @@ test('available enabled page can be home page', () => {
 });
 
 test('missing availability uses safe compatibility defaults', () => {
-  const pages = source.pages.map(({ available, ...page }) => page);
+  const pages = source.pages.map(({ available, ...page }) => page.id === 'gallery' ? { ...page, enabled: false } : page);
   const config = normalizeSiteNavigation({ ...source, pages });
   assert.equal(config.pages.find(page => page.id === 'dates').available, true);
-  assert.equal(config.pages.find(page => page.id === 'gallery').available, false);
+  assert.equal(config.pages.find(page => page.id === 'team').available, false);
 });
 
 test('duplicate ids are rejected', () => {
@@ -75,9 +75,9 @@ test('moving a page normalizes unique order values', () => {
 });
 
 test('unavailable page can still move in prepared order', () => {
-  const config = moveSitePage(source, 'gallery', -1);
-  assert.equal(config.pages[6].id, 'gallery');
-  assert.equal(config.pages[6].available, false);
+  const config = moveSitePage(source, 'team', -1);
+  assert.equal(config.pages[7].id, 'team');
+  assert.equal(config.pages[7].available, false);
 });
 
 test('admin marks unavailable controls disabled without disabling order controls', () => {

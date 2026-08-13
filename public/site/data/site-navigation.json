@@ -9,7 +9,7 @@
     { "id": "contact", "label": "Contact", "href": "contact.html", "available": true, "enabled": true, "order": 5 },
     { "id": "history", "label": "History", "href": "history.html", "available": true, "enabled": true, "order": 6 },
     { "id": "feedback", "label": "Feedback", "href": "feedback.html", "available": true, "enabled": true, "order": 7 },
-    { "id": "gallery", "label": "Gallery", "href": "gallery.html", "available": false, "enabled": false, "order": 8 },
+    { "id": "gallery", "label": "Gallery", "href": "gallery.html", "available": true, "enabled": true, "order": 8 },
     { "id": "team", "label": "Team", "href": "team.html", "available": false, "enabled": false, "order": 9 },
     { "id": "podcast", "label": "Podcast", "href": "podcast.html", "available": false, "enabled": false, "order": 10 },
     { "id": "merch", "label": "Merch", "href": "merch.html", "available": false, "enabled": false, "order": 11 }
