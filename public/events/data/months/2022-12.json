@@ -1,0 +1,581 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2022-12-02-5-years-elephant-crew",
+      "date": "2022-12-02",
+      "title": "5 YEARS ELEPHANT CREW",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20221112150632id_/https://www.distillery.de/ex/dates/2022/12/02",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "JULITA JUST",
+              "info": "Aroma +",
+              "link": ""
+            },
+            {
+              "name": "PAULI VON VOLLER",
+              "info": "Elephant Crew",
+              "link": ""
+            },
+            {
+              "name": "MR BUEGEL",
+              "info": "Elephant Crew",
+              "link": ""
+            },
+            {
+              "name": "BONNIE FORD",
+              "info": "Rummels Bucht, Berlin",
+              "link": ""
+            },
+            {
+              "name": "LA ESPINA B2B ALBATROS GOLD",
+              "info": "Elephant Crew, Transzendånce",
+              "link": ""
+            },
+            {
+              "name": "ZAPPADEUS",
+              "info": "ROSA, muy bien",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-12-03-saturday-rave",
+      "date": "2022-12-03",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20221112150632id_/https://www.distillery.de/ex/dates/2022/12/03",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SPACE DIMENSION CONTROLLER",
+              "info": "Tiraquon, Dekmantel, R&S Recordings",
+              "link": ""
+            },
+            {
+              "name": "SCHLEPP GEIST",
+              "info": "URSL",
+              "link": ""
+            },
+            {
+              "name": "MILA STERN",
+              "info": "Station Endlos",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "CLARA CUVé",
+              "info": "R - Group",
+              "link": ""
+            },
+            {
+              "name": "HOUDAFK",
+              "info": "Distillery",
+              "link": ""
+            },
+            {
+              "name": "ATALANTA",
+              "info": "Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-12-09-boundless-beatz-x-fat-bemme",
+      "date": "2022-12-09",
+      "title": "BOUNDLESS BEATZ X FAT BEMME",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20221112150632id_/https://www.distillery.de/ex/dates/2022/12/09",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: BOUNDLESS BEATZ",
+          "items": [
+            {
+              "name": "ALOO",
+              "info": "Fat Bemme",
+              "link": ""
+            },
+            {
+              "name": "AUDITE",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DUBBALOT",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "KJUBI",
+              "info": "Boundless Beatz",
+              "link": ""
+            },
+            {
+              "name": "VRUM",
+              "info": "Boundless Beatz",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: FAT BEMME",
+          "items": [
+            {
+              "name": "ACE",
+              "info": "Fat Bemme",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-12-10-saturday-rave",
+      "date": "2022-12-10",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20221204225920id_/https://www.distillery.de/ex/dates/2022/12/10",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ÂME – LIVE",
+              "info": "Innervisions, Germany",
+              "link": ""
+            },
+            {
+              "name": "DAMON JEE",
+              "info": "Dischi Autunno, Correspondant, Critical Monday",
+              "link": ""
+            },
+            {
+              "name": "GOLDIE PALM",
+              "info": "Vacanza, RBL Berlin",
+              "link": ""
+            },
+            {
+              "name": "NAPOLEON DYNAMITE",
+              "info": "Fäncy, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MIKE VAN GOETZE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-12-15-ski-aggu-apr-s-ski-tour-2022",
+      "date": "2022-12-15",
+      "title": "SKI AGGU - APRÉS SKI TOUR 2022",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20221112150632id_/https://www.distillery.de/ex/dates/2022/12/15",
+      "imageUrl": "",
+      "description": "Gefördert durch:",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SKI AGGU",
+              "info": "Start: 20:00, add to Cal",
+              "link": ""
+            },
+            {
+              "name": "++AUSVERKAUFT++",
+              "info": "Durchzechte Nächte in berliner Technoclubs, Trinkeskapaden im Kiez, der Konsum von so ziemlich jedem berauschenden Mittel und ständig auf Achse sein mit Atzen und Freundinnen - dieses Leben verpackt Ski Aggu in seinen Texten. Dabei kann der gebürtige Wilmersdorfer neben dem Feiern vor allem eines - rappen. Punchlines, Technik, laidbackflow und unterhaltsamer, authentischer westberliner Untergrundrap. Das alles macht Ski Aggu zu einem aufstrebendem Newcomer in der neuen Generation. Der “junge Atze” hat einiges vor und diesen Sommer ist seine Debut EP erschienen.",
+              "link": ""
+            },
+            {
+              "name": "DISTILLERY",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "KURT-EISNER-STR. 91",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "04275 LEIPZIG",
+              "info": "2001-2022 Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-12-16-seelen-records-label-night",
+      "date": "2022-12-16",
+      "title": "SEELEN. RECORDS LABEL NIGHT",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20221112150632id_/https://www.distillery.de/ex/dates/2022/12/16",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MONOLOC X JANEIN",
+              "info": "Dystopian, Anormal, SEELEN.",
+              "link": ""
+            },
+            {
+              "name": "SUE LèWIG - LIVE",
+              "info": "SEELEN.",
+              "link": ""
+            },
+            {
+              "name": "STIGMATIQUE",
+              "info": "Distillery, SEELEN",
+              "link": ""
+            },
+            {
+              "name": "VERSCHWENDER",
+              "info": "SEELEN., Emerald",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "SHALEEN",
+              "info": "SEELEN., BPitch",
+              "link": ""
+            },
+            {
+              "name": "REZYSTOR",
+              "info": "SEELEN., Raw",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-12-17-saturday-rave-x-mindthings",
+      "date": "2022-12-17",
+      "title": "SATURDAY RAVE X MINDTHINGS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20221204211146id_/https://www.distillery.de/ex/dates/2022/12/17",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "PAQUITA GORDON",
+              "info": "Italy, Spain",
+              "link": ""
+            },
+            {
+              "name": "ANNA MALYSZ",
+              "info": "Nice 4 What, G-Edit",
+              "link": ""
+            },
+            {
+              "name": "BEN BALLERT",
+              "info": "Tinder",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "PFIRTER",
+              "info": "Mindtrip",
+              "link": ""
+            },
+            {
+              "name": "JUSTINE PERRY",
+              "info": "Kalt, Resilience",
+              "link": ""
+            },
+            {
+              "name": "OLIVER ROSEMANN",
+              "info": "Recorded Things, Mindtrip, Mord",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-12-24-italian-christmas",
+      "date": "2022-12-24",
+      "title": "ITALIAN CHRISTMAS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20221112150632id_/https://www.distillery.de/ex/dates/2022/12/24",
+      "imageUrl": "",
+      "description": "Start: 23:00\nGefördert durch:\n2001-2022 Distillery\nmade with <3 °°",
+      "sections": []
+    },
+    {
+      "id": "2022-12-24-italo-fundamentalo-friends-pres-hold-me-tight",
+      "date": "2022-12-24",
+      "title": "ITALO FUNDAMENTALO & FRIENDS PRES. HOLD ME TIGHT",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20221204210218id_/https://www.distillery.de/ex/dates/2022/12/24",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DANS DANZA",
+              "info": "Ipnotico",
+              "link": ""
+            },
+            {
+              "name": "DON RAMONES",
+              "info": "Vaya, Hey Ciao!",
+              "link": ""
+            },
+            {
+              "name": "LUIGI ANDREA RAMAZOTTI",
+              "info": "Italo Fundamentalo",
+              "link": ""
+            },
+            {
+              "name": "MöBELNDER POP",
+              "info": "Italo Fundamentalo",
+              "link": ""
+            },
+            {
+              "name": "+ SPECIAL GUESTS",
+              "info": "Start: 23:00, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-12-25-24-h-wohnzimmer-the-last-christmas-edition",
+      "date": "2022-12-25",
+      "title": "24 H WOHNZIMMER - THE LAST CHRISTMAS EDITION",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20221112150632id_/https://www.distillery.de/ex/dates/2022/12/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "CORMAC",
+              "info": "Polari/Ostgut Ton/Correspondant",
+              "link": ""
+            },
+            {
+              "name": "CASSY",
+              "info": "Cocoon, Perlon, Berlin",
+              "link": ""
+            },
+            {
+              "name": "MATHIAS KADEN B2B DANIEL STEFANIK",
+              "info": "Muna, Distillery",
+              "link": ""
+            },
+            {
+              "name": "JENNIFER TOUCH",
+              "info": "FatCat",
+              "link": ""
+            },
+            {
+              "name": "LUX",
+              "info": "IO, Giegling",
+              "link": ""
+            },
+            {
+              "name": "RESOM",
+              "info": "mikrodisko, homoelektrik",
+              "link": ""
+            },
+            {
+              "name": "LLEWELLYN",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-12-28-spezial-120-minuten-w-miss-cleenex-und-ihr-ex",
+      "date": "2022-12-28",
+      "title": "SPEZIAL - 120 MINUTEN W/ MISS CLEENEX UND IHR EX",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20221112150632id_/https://www.distillery.de/ex/dates/2022/12/28",
+      "imageUrl": "",
+      "description": "Start: 20:00\nGefördert durch:\n2001-2022 Distillery\nmade with <3 °°",
+      "sections": []
+    },
+    {
+      "id": "2022-12-30-tobassgo",
+      "date": "2022-12-30",
+      "title": "TOBASSGO",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20221112150632id_/https://www.distillery.de/ex/dates/2022/12/30",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "BASSFACE SASCHA",
+              "info": "Low Down Deep/Original Key",
+              "link": ""
+            },
+            {
+              "name": "NANO42",
+              "info": "toBASSgo 842 United/Fraktion42",
+              "link": ""
+            },
+            {
+              "name": "BOOTLEG",
+              "info": "SMS, toBASSgo, 842",
+              "link": ""
+            },
+            {
+              "name": "HASKY",
+              "info": "Paranoised DNB",
+              "link": ""
+            },
+            {
+              "name": "NUKEM",
+              "info": "Brainclub, toBASSgo",
+              "link": ""
+            },
+            {
+              "name": "BASS LETICS",
+              "info": "Bananabassmusic/The View",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-12-31-silvester-in-family",
+      "date": "2022-12-31",
+      "title": "SILVESTER IN FAMILY",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20221112150632id_/https://www.distillery.de/ex/dates/2022/12/31",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SHURAY & WALLE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "FILBURT",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MDMK AKA",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "DAHMAR",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "MORITZ KAISER",
+              "info": "Electronic Resistance, IO",
+              "link": ""
+            },
+            {
+              "name": "THOMAS STIELER",
+              "info": "Distillery, Paracou",
+              "link": ""
+            },
+            {
+              "name": "NICI PALM",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LARS CHRISTIAN MüLLER",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

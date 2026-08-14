@@ -3,6 +3,10 @@
    Debug logs use [AdminSaveDebug] and never print the token value. */
 (function(){
   const DBG='[AdminSaveDebug]';
+  const eventStorageModules=Promise.all([
+    import('./core/event-storage-admin.js?v=event-storage-admin-1'),
+    import('./core/github-atomic-commit.js?v=github-atomic-commit-1')
+  ]);
   function log(step,data){try{console.log(DBG,step,data??'')}catch(e){}}
   function warn(step,data){try{console.warn(DBG,step,data??'')}catch(e){}}
   function err(step,data){try{console.error(DBG,step,data??'')}catch(e){}}
@@ -55,6 +59,16 @@
     log('loadFile:local:start',{path});
     return{json:await fetchJsonUrl(localUrl(path)),sha:''};
   }
+  function eventWriter(createAtomicGitHubCommit){return createAtomicGitHubCommit({owner:val('ghOwner'),repo:val('ghRepo'),branch:val('ghBranch'),token:val('ghToken')})}
+  async function loadMonthlyEvents(){
+    const[{loadMonthlyEventDocument}, {createAtomicGitHubCommit}]=await eventStorageModules;
+    const writer=eventWriter(createAtomicGitHubCommit),headBefore=await writer.readHead(),cache=new Map();
+    const readJson=async path=>{if(!cache.has(path))cache.set(path,loadFile(path).then(file=>file.json));return cache.get(path)};
+    const json=await loadMonthlyEventDocument(readJson,val('eventsPath'));
+    const headAfter=await writer.readHead();
+    if(headAfter!==headBefore)throw new Error('Events-Konflikt: Branch änderte sich während des Ladens. Bitte neu laden.');
+    return{json,head:headAfter,manifest:await readJson(val('eventsPath'))};
+  }
   async function putJsonFile(path,jsonText,message,branch=val('ghBranch')){
     log('putJsonFile:start',{path,message,jsonLength:jsonText.length,jsonHasMetaArtists:jsonText.includes('"artists"'),jsonPreview:jsonText.slice(0,180)});
     async function attempt(sha,label){
@@ -101,9 +115,11 @@
     try{
       log('loadEventsPublic:start',{currentView});
       setStatus('eventEditStatus','Lade Events automatisch...','warn');
-      const ev=await loadFile(val('eventsPath'));
+      const ev=await loadMonthlyEvents();
       state.eventsData=ev.json;
-      state.eventsSha=ev.sha||state.eventsSha||'';
+      state.eventsSha=ev.head;
+      state.eventsHead=ev.head;
+      state.eventsManifest=ev.manifest;
       state.loadedEventCount=(ev.json.events||[]).length;
       ensureEvents();
       state.selectedEvent=events().events.length?0:-1;
@@ -145,9 +161,11 @@
       const currentView=state.view;
       log('autoLoadGithubData:start',{currentView,tokenPresent:!!val('ghToken')});
       setStatus('syncStatus','Lade Daten automatisch...','warn');
-      const [ev,res]=await Promise.all([loadFile(val('eventsPath')),loadFile(val('residentsPath'))]);
+      const [ev,res]=await Promise.all([loadMonthlyEvents(),loadFile(val('residentsPath'))]);
       state.eventsData=ev.json;
-      state.eventsSha=ev.sha||'';
+      state.eventsSha=ev.head;
+      state.eventsHead=ev.head;
+      state.eventsManifest=ev.manifest;
       state.loadedEventCount=(ev.json.events||[]).length;
       state.residentsData=res.json;
       state.residentsSha=res.sha||'';
@@ -189,16 +207,20 @@
       const jsonText=eventsJson();
       log('saveEventsStay:jsonReady',{eventsCount:events().events?.length||0,artistsCount:artists().length,selectedArtist:state.selectedArtist,currentArtist:artistSnapshot(),jsonLength:jsonText.length,containsCurrentArtist:artistSnapshot()?jsonText.includes(artistSnapshot().name):null});
       if(!events().events?.length) throw new Error('Events: events[] ist leer. Speichern abgebrochen.');
-      const saved=await putJsonFile(val('eventsPath'),jsonText,'Update events data from admin v2');
-      state.eventsSha=saved.sha;
+      const[{saveMonthlyEventDocument},{createAtomicGitHubCommit}]=await eventStorageModules;
+      if(!state.eventsHead)throw new Error('Events: Bitte zuerst den monatlichen GitHub-Stand laden.');
+      const saved=await saveMonthlyEventDocument({document:events(),writer:eventWriter(createAtomicGitHubCommit),expectedHead:state.eventsHead,previousManifest:state.eventsManifest});
+      state.eventsSha=saved.commit;
+      state.eventsHead=saved.commit;
+      state.eventsManifest=saved.manifest;
       state.loadedEventCount=events().events.length;
       state.dirty=false;
       state.syncState='loaded';
       updateSaveStatus();
       setView(currentView||'events');
       renderAll();
-      setStatus('eventEditStatus',saved.retried?'Events / Artists nach SHA-Retry gespeichert.':'Events / Artists gespeichert.','ok');
-      log('saveEventsStay:success',{sha:state.eventsSha,retried:saved.retried,view:state.view,artistsCount:artists().length});
+      setStatus('eventEditStatus','Events / Artists atomar gespeichert.','ok');
+      log('saveEventsStay:success',{commit:state.eventsHead,view:state.view,artistsCount:artists().length});
     }catch(e){err('saveEventsStay:error',{message:e.message,stack:e.stack});state.syncState='conflict';updateSaveStatus();setView(currentView||'events');setStatus('eventEditStatus',e.message,'err')}
   }
   async function saveResidentsStay(){

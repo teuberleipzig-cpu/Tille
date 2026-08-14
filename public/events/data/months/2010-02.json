@@ -1,0 +1,214 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2010-02-05-livelyrix-poetry-slam",
+      "date": "2010-02-05",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20100203023946id_/http://www.distillery.de:80/ex/dates/2010/02/05",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: livelyrix poetry slam HOSTED BY:",
+          "items": [
+            {
+              "name": "LASSE SAMSTROEM",
+              "info": "Augsburg",
+              "link": ""
+            },
+            {
+              "name": "MICHAEL BITTNER",
+              "info": "Dresden",
+              "link": ""
+            },
+            {
+              "name": "UDO TIFFERT",
+              "info": "Lausitz",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-02-06-dreikommanull-meets-definition-label-night",
+      "date": "2010-02-06",
+      "title": "DREIKOMMANULL MEETS DEFINITION LABEL NIGHT",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20100203022036id_/http://www.distillery.de:80/ex/dates/2010/02/06",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: dreikommanull",
+          "items": [
+            {
+              "name": "ITALOBOYZ",
+              "info": "Get Physical, London",
+              "link": ""
+            },
+            {
+              "name": "KLEINSCHMAGER AUDIO",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-02-12-kurt-reith-abend",
+      "date": "2010-02-12",
+      "title": "KURT REITH ABEND",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20100203023952id_/http://www.distillery.de:80/ex/dates/2010/02/12",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: funk meets punk",
+          "items": [
+            {
+              "name": "DJ ROLEX",
+              "info": "Velocity Sounds, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DJ GRAPE",
+              "info": "Conne Island, Leipzig-Connewitz",
+              "link": ""
+            },
+            {
+              "name": "DJ YORK",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-02-13-hoerfunk-meets-syntax",
+      "date": "2010-02-13",
+      "title": "HOERFUNK MEETS SYNTAX",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20100203024037id_/http://www.distillery.de:80/ex/dates/2010/02/13",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: hoerfunk",
+          "items": [
+            {
+              "name": "ADA – LIVE",
+              "info": "Areal Records",
+              "link": ""
+            },
+            {
+              "name": "IRR",
+              "info": "Kompakt, Köln",
+              "link": ""
+            },
+            {
+              "name": "SEVENSOL",
+              "info": "Long Vehicle, Kann",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-02-19-rave-on-tille-fasching",
+      "date": "2010-02-19",
+      "title": "RAVE ON TILLE FASCHING",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20100202002026id_/http://www.distillery.de:80/ex/dates/2010/02/19",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: old school",
+          "items": [
+            {
+              "name": "DJ JOSH",
+              "info": "Ex-Basis, Ex-City Trax, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BERT THE JUGGLER",
+              "info": "praxisfuer, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MARKUS WELBY",
+              "info": "hoerfunk, Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-02-20-moon-harbour-flights-meets-feenstaub-friends",
+      "date": "2010-02-20",
+      "title": "MOON HARBOUR FLIGHTS MEETS FEENSTAUB & FRIENDS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20100203022041id_/http://www.distillery.de:80/ex/dates/2010/02/20",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: losing control",
+          "items": [
+            {
+              "name": "DANIEL BELL",
+              "info": "DBX, 7th City, Peacefrog, Accelerate, Detroit",
+              "link": ""
+            },
+            {
+              "name": "DAN DRASTIC",
+              "info": "Moon Harbour",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-02-27-mindcookies-meets-darkstar",
+      "date": "2010-02-27",
+      "title": "MINDCOOKIES MEETS DARKSTAR",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20100203022101id_/http://www.distillery.de:80/ex/dates/2010/02/27",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: mindcookies",
+          "items": [
+            {
+              "name": "PATRICK CHARDRONNET",
+              "info": "Pokerflat, raum...musik, Connaisseur, Stuttgart",
+              "link": ""
+            },
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "mindcookies, Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

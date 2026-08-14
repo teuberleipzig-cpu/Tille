@@ -1,0 +1,923 @@
+{
+  "schemaVersion": 1,
+  "totalEvents": 1543,
+  "topLevelKeys": [
+    "meta",
+    "events"
+  ],
+  "metaPath": "public/events/data/meta.json",
+  "eventIndexPath": "public/events/data/event-index.json",
+  "searchIndexPath": "public/events/data/search-index.json",
+  "months": [
+    {
+      "key": "2008-01",
+      "path": "public/events/data/months/2008-01.json",
+      "count": 8
+    },
+    {
+      "key": "2008-02",
+      "path": "public/events/data/months/2008-02.json",
+      "count": 9
+    },
+    {
+      "key": "2008-03",
+      "path": "public/events/data/months/2008-03.json",
+      "count": 11
+    },
+    {
+      "key": "2008-04",
+      "path": "public/events/data/months/2008-04.json",
+      "count": 8
+    },
+    {
+      "key": "2008-05",
+      "path": "public/events/data/months/2008-05.json",
+      "count": 11
+    },
+    {
+      "key": "2008-06",
+      "path": "public/events/data/months/2008-06.json",
+      "count": 17
+    },
+    {
+      "key": "2008-07",
+      "path": "public/events/data/months/2008-07.json",
+      "count": 9
+    },
+    {
+      "key": "2008-08",
+      "path": "public/events/data/months/2008-08.json",
+      "count": 2
+    },
+    {
+      "key": "2008-09",
+      "path": "public/events/data/months/2008-09.json",
+      "count": 8
+    },
+    {
+      "key": "2008-10",
+      "path": "public/events/data/months/2008-10.json",
+      "count": 11
+    },
+    {
+      "key": "2008-11",
+      "path": "public/events/data/months/2008-11.json",
+      "count": 10
+    },
+    {
+      "key": "2008-12",
+      "path": "public/events/data/months/2008-12.json",
+      "count": 12
+    },
+    {
+      "key": "2009-01",
+      "path": "public/events/data/months/2009-01.json",
+      "count": 7
+    },
+    {
+      "key": "2009-02",
+      "path": "public/events/data/months/2009-02.json",
+      "count": 8
+    },
+    {
+      "key": "2009-03",
+      "path": "public/events/data/months/2009-03.json",
+      "count": 9
+    },
+    {
+      "key": "2009-04",
+      "path": "public/events/data/months/2009-04.json",
+      "count": 10
+    },
+    {
+      "key": "2009-05",
+      "path": "public/events/data/months/2009-05.json",
+      "count": 9
+    },
+    {
+      "key": "2009-06",
+      "path": "public/events/data/months/2009-06.json",
+      "count": 8
+    },
+    {
+      "key": "2009-07",
+      "path": "public/events/data/months/2009-07.json",
+      "count": 6
+    },
+    {
+      "key": "2009-08",
+      "path": "public/events/data/months/2009-08.json",
+      "count": 1
+    },
+    {
+      "key": "2009-09",
+      "path": "public/events/data/months/2009-09.json",
+      "count": 7
+    },
+    {
+      "key": "2009-10",
+      "path": "public/events/data/months/2009-10.json",
+      "count": 11
+    },
+    {
+      "key": "2009-11",
+      "path": "public/events/data/months/2009-11.json",
+      "count": 7
+    },
+    {
+      "key": "2009-12",
+      "path": "public/events/data/months/2009-12.json",
+      "count": 10
+    },
+    {
+      "key": "2010-01",
+      "path": "public/events/data/months/2010-01.json",
+      "count": 9
+    },
+    {
+      "key": "2010-02",
+      "path": "public/events/data/months/2010-02.json",
+      "count": 7
+    },
+    {
+      "key": "2010-03",
+      "path": "public/events/data/months/2010-03.json",
+      "count": 10
+    },
+    {
+      "key": "2010-04",
+      "path": "public/events/data/months/2010-04.json",
+      "count": 9
+    },
+    {
+      "key": "2010-05",
+      "path": "public/events/data/months/2010-05.json",
+      "count": 11
+    },
+    {
+      "key": "2010-06",
+      "path": "public/events/data/months/2010-06.json",
+      "count": 11
+    },
+    {
+      "key": "2010-07",
+      "path": "public/events/data/months/2010-07.json",
+      "count": 10
+    },
+    {
+      "key": "2010-09",
+      "path": "public/events/data/months/2010-09.json",
+      "count": 4
+    },
+    {
+      "key": "2010-10",
+      "path": "public/events/data/months/2010-10.json",
+      "count": 8
+    },
+    {
+      "key": "2010-11",
+      "path": "public/events/data/months/2010-11.json",
+      "count": 10
+    },
+    {
+      "key": "2010-12",
+      "path": "public/events/data/months/2010-12.json",
+      "count": 8
+    },
+    {
+      "key": "2011-01",
+      "path": "public/events/data/months/2011-01.json",
+      "count": 8
+    },
+    {
+      "key": "2011-02",
+      "path": "public/events/data/months/2011-02.json",
+      "count": 9
+    },
+    {
+      "key": "2011-03",
+      "path": "public/events/data/months/2011-03.json",
+      "count": 10
+    },
+    {
+      "key": "2011-04",
+      "path": "public/events/data/months/2011-04.json",
+      "count": 12
+    },
+    {
+      "key": "2011-05",
+      "path": "public/events/data/months/2011-05.json",
+      "count": 9
+    },
+    {
+      "key": "2011-06",
+      "path": "public/events/data/months/2011-06.json",
+      "count": 9
+    },
+    {
+      "key": "2011-07",
+      "path": "public/events/data/months/2011-07.json",
+      "count": 1
+    },
+    {
+      "key": "2011-08",
+      "path": "public/events/data/months/2011-08.json",
+      "count": 1
+    },
+    {
+      "key": "2011-09",
+      "path": "public/events/data/months/2011-09.json",
+      "count": 7
+    },
+    {
+      "key": "2011-10",
+      "path": "public/events/data/months/2011-10.json",
+      "count": 11
+    },
+    {
+      "key": "2011-11",
+      "path": "public/events/data/months/2011-11.json",
+      "count": 10
+    },
+    {
+      "key": "2011-12",
+      "path": "public/events/data/months/2011-12.json",
+      "count": 8
+    },
+    {
+      "key": "2012-01",
+      "path": "public/events/data/months/2012-01.json",
+      "count": 8
+    },
+    {
+      "key": "2012-02",
+      "path": "public/events/data/months/2012-02.json",
+      "count": 8
+    },
+    {
+      "key": "2012-03",
+      "path": "public/events/data/months/2012-03.json",
+      "count": 11
+    },
+    {
+      "key": "2012-04",
+      "path": "public/events/data/months/2012-04.json",
+      "count": 10
+    },
+    {
+      "key": "2012-05",
+      "path": "public/events/data/months/2012-05.json",
+      "count": 12
+    },
+    {
+      "key": "2012-06",
+      "path": "public/events/data/months/2012-06.json",
+      "count": 12
+    },
+    {
+      "key": "2012-07",
+      "path": "public/events/data/months/2012-07.json",
+      "count": 3
+    },
+    {
+      "key": "2012-09",
+      "path": "public/events/data/months/2012-09.json",
+      "count": 8
+    },
+    {
+      "key": "2012-10",
+      "path": "public/events/data/months/2012-10.json",
+      "count": 10
+    },
+    {
+      "key": "2012-11",
+      "path": "public/events/data/months/2012-11.json",
+      "count": 10
+    },
+    {
+      "key": "2012-12",
+      "path": "public/events/data/months/2012-12.json",
+      "count": 11
+    },
+    {
+      "key": "2013-01",
+      "path": "public/events/data/months/2013-01.json",
+      "count": 8
+    },
+    {
+      "key": "2013-02",
+      "path": "public/events/data/months/2013-02.json",
+      "count": 8
+    },
+    {
+      "key": "2013-03",
+      "path": "public/events/data/months/2013-03.json",
+      "count": 12
+    },
+    {
+      "key": "2013-04",
+      "path": "public/events/data/months/2013-04.json",
+      "count": 11
+    },
+    {
+      "key": "2013-05",
+      "path": "public/events/data/months/2013-05.json",
+      "count": 15
+    },
+    {
+      "key": "2013-06",
+      "path": "public/events/data/months/2013-06.json",
+      "count": 8
+    },
+    {
+      "key": "2013-07",
+      "path": "public/events/data/months/2013-07.json",
+      "count": 1
+    },
+    {
+      "key": "2013-08",
+      "path": "public/events/data/months/2013-08.json",
+      "count": 1
+    },
+    {
+      "key": "2013-09",
+      "path": "public/events/data/months/2013-09.json",
+      "count": 7
+    },
+    {
+      "key": "2013-10",
+      "path": "public/events/data/months/2013-10.json",
+      "count": 3
+    },
+    {
+      "key": "2013-11",
+      "path": "public/events/data/months/2013-11.json",
+      "count": 3
+    },
+    {
+      "key": "2013-12",
+      "path": "public/events/data/months/2013-12.json",
+      "count": 5
+    },
+    {
+      "key": "2014-01",
+      "path": "public/events/data/months/2014-01.json",
+      "count": 5
+    },
+    {
+      "key": "2014-02",
+      "path": "public/events/data/months/2014-02.json",
+      "count": 9
+    },
+    {
+      "key": "2014-03",
+      "path": "public/events/data/months/2014-03.json",
+      "count": 10
+    },
+    {
+      "key": "2014-04",
+      "path": "public/events/data/months/2014-04.json",
+      "count": 11
+    },
+    {
+      "key": "2014-05",
+      "path": "public/events/data/months/2014-05.json",
+      "count": 14
+    },
+    {
+      "key": "2014-06",
+      "path": "public/events/data/months/2014-06.json",
+      "count": 13
+    },
+    {
+      "key": "2014-07",
+      "path": "public/events/data/months/2014-07.json",
+      "count": 8
+    },
+    {
+      "key": "2014-08",
+      "path": "public/events/data/months/2014-08.json",
+      "count": 1
+    },
+    {
+      "key": "2014-09",
+      "path": "public/events/data/months/2014-09.json",
+      "count": 7
+    },
+    {
+      "key": "2014-10",
+      "path": "public/events/data/months/2014-10.json",
+      "count": 13
+    },
+    {
+      "key": "2014-11",
+      "path": "public/events/data/months/2014-11.json",
+      "count": 11
+    },
+    {
+      "key": "2014-12",
+      "path": "public/events/data/months/2014-12.json",
+      "count": 9
+    },
+    {
+      "key": "2015-01",
+      "path": "public/events/data/months/2015-01.json",
+      "count": 10
+    },
+    {
+      "key": "2015-02",
+      "path": "public/events/data/months/2015-02.json",
+      "count": 9
+    },
+    {
+      "key": "2015-03",
+      "path": "public/events/data/months/2015-03.json",
+      "count": 8
+    },
+    {
+      "key": "2015-04",
+      "path": "public/events/data/months/2015-04.json",
+      "count": 11
+    },
+    {
+      "key": "2015-05",
+      "path": "public/events/data/months/2015-05.json",
+      "count": 12
+    },
+    {
+      "key": "2015-06",
+      "path": "public/events/data/months/2015-06.json",
+      "count": 10
+    },
+    {
+      "key": "2015-07",
+      "path": "public/events/data/months/2015-07.json",
+      "count": 5
+    },
+    {
+      "key": "2015-08",
+      "path": "public/events/data/months/2015-08.json",
+      "count": 1
+    },
+    {
+      "key": "2015-09",
+      "path": "public/events/data/months/2015-09.json",
+      "count": 12
+    },
+    {
+      "key": "2015-10",
+      "path": "public/events/data/months/2015-10.json",
+      "count": 12
+    },
+    {
+      "key": "2015-11",
+      "path": "public/events/data/months/2015-11.json",
+      "count": 11
+    },
+    {
+      "key": "2015-12",
+      "path": "public/events/data/months/2015-12.json",
+      "count": 11
+    },
+    {
+      "key": "2016-01",
+      "path": "public/events/data/months/2016-01.json",
+      "count": 10
+    },
+    {
+      "key": "2016-02",
+      "path": "public/events/data/months/2016-02.json",
+      "count": 9
+    },
+    {
+      "key": "2016-03",
+      "path": "public/events/data/months/2016-03.json",
+      "count": 7
+    },
+    {
+      "key": "2016-04",
+      "path": "public/events/data/months/2016-04.json",
+      "count": 12
+    },
+    {
+      "key": "2016-05",
+      "path": "public/events/data/months/2016-05.json",
+      "count": 11
+    },
+    {
+      "key": "2016-06",
+      "path": "public/events/data/months/2016-06.json",
+      "count": 10
+    },
+    {
+      "key": "2016-07",
+      "path": "public/events/data/months/2016-07.json",
+      "count": 8
+    },
+    {
+      "key": "2016-09",
+      "path": "public/events/data/months/2016-09.json",
+      "count": 9
+    },
+    {
+      "key": "2016-10",
+      "path": "public/events/data/months/2016-10.json",
+      "count": 11
+    },
+    {
+      "key": "2016-11",
+      "path": "public/events/data/months/2016-11.json",
+      "count": 12
+    },
+    {
+      "key": "2016-12",
+      "path": "public/events/data/months/2016-12.json",
+      "count": 12
+    },
+    {
+      "key": "2017-01",
+      "path": "public/events/data/months/2017-01.json",
+      "count": 9
+    },
+    {
+      "key": "2017-02",
+      "path": "public/events/data/months/2017-02.json",
+      "count": 11
+    },
+    {
+      "key": "2017-03",
+      "path": "public/events/data/months/2017-03.json",
+      "count": 10
+    },
+    {
+      "key": "2017-04",
+      "path": "public/events/data/months/2017-04.json",
+      "count": 10
+    },
+    {
+      "key": "2017-05",
+      "path": "public/events/data/months/2017-05.json",
+      "count": 13
+    },
+    {
+      "key": "2017-06",
+      "path": "public/events/data/months/2017-06.json",
+      "count": 11
+    },
+    {
+      "key": "2017-07",
+      "path": "public/events/data/months/2017-07.json",
+      "count": 6
+    },
+    {
+      "key": "2017-09",
+      "path": "public/events/data/months/2017-09.json",
+      "count": 9
+    },
+    {
+      "key": "2017-10",
+      "path": "public/events/data/months/2017-10.json",
+      "count": 10
+    },
+    {
+      "key": "2017-11",
+      "path": "public/events/data/months/2017-11.json",
+      "count": 11
+    },
+    {
+      "key": "2017-12",
+      "path": "public/events/data/months/2017-12.json",
+      "count": 11
+    },
+    {
+      "key": "2018-01",
+      "path": "public/events/data/months/2018-01.json",
+      "count": 7
+    },
+    {
+      "key": "2018-02",
+      "path": "public/events/data/months/2018-02.json",
+      "count": 7
+    },
+    {
+      "key": "2018-03",
+      "path": "public/events/data/months/2018-03.json",
+      "count": 10
+    },
+    {
+      "key": "2018-04",
+      "path": "public/events/data/months/2018-04.json",
+      "count": 9
+    },
+    {
+      "key": "2018-05",
+      "path": "public/events/data/months/2018-05.json",
+      "count": 9
+    },
+    {
+      "key": "2018-06",
+      "path": "public/events/data/months/2018-06.json",
+      "count": 9
+    },
+    {
+      "key": "2018-07",
+      "path": "public/events/data/months/2018-07.json",
+      "count": 4
+    },
+    {
+      "key": "2018-09",
+      "path": "public/events/data/months/2018-09.json",
+      "count": 10
+    },
+    {
+      "key": "2018-10",
+      "path": "public/events/data/months/2018-10.json",
+      "count": 14
+    },
+    {
+      "key": "2018-11",
+      "path": "public/events/data/months/2018-11.json",
+      "count": 6
+    },
+    {
+      "key": "2018-12",
+      "path": "public/events/data/months/2018-12.json",
+      "count": 10
+    },
+    {
+      "key": "2019-01",
+      "path": "public/events/data/months/2019-01.json",
+      "count": 9
+    },
+    {
+      "key": "2019-02",
+      "path": "public/events/data/months/2019-02.json",
+      "count": 7
+    },
+    {
+      "key": "2019-03",
+      "path": "public/events/data/months/2019-03.json",
+      "count": 12
+    },
+    {
+      "key": "2019-04",
+      "path": "public/events/data/months/2019-04.json",
+      "count": 9
+    },
+    {
+      "key": "2019-05",
+      "path": "public/events/data/months/2019-05.json",
+      "count": 9
+    },
+    {
+      "key": "2019-06",
+      "path": "public/events/data/months/2019-06.json",
+      "count": 8
+    },
+    {
+      "key": "2019-07",
+      "path": "public/events/data/months/2019-07.json",
+      "count": 3
+    },
+    {
+      "key": "2019-08",
+      "path": "public/events/data/months/2019-08.json",
+      "count": 1
+    },
+    {
+      "key": "2019-09",
+      "path": "public/events/data/months/2019-09.json",
+      "count": 9
+    },
+    {
+      "key": "2019-10",
+      "path": "public/events/data/months/2019-10.json",
+      "count": 10
+    },
+    {
+      "key": "2019-11",
+      "path": "public/events/data/months/2019-11.json",
+      "count": 12
+    },
+    {
+      "key": "2019-12",
+      "path": "public/events/data/months/2019-12.json",
+      "count": 11
+    },
+    {
+      "key": "2020-01",
+      "path": "public/events/data/months/2020-01.json",
+      "count": 8
+    },
+    {
+      "key": "2020-02",
+      "path": "public/events/data/months/2020-02.json",
+      "count": 10
+    },
+    {
+      "key": "2020-03",
+      "path": "public/events/data/months/2020-03.json",
+      "count": 5
+    },
+    {
+      "key": "2020-04",
+      "path": "public/events/data/months/2020-04.json",
+      "count": 2
+    },
+    {
+      "key": "2020-09",
+      "path": "public/events/data/months/2020-09.json",
+      "count": 11
+    },
+    {
+      "key": "2021-06",
+      "path": "public/events/data/months/2021-06.json",
+      "count": 3
+    },
+    {
+      "key": "2021-07",
+      "path": "public/events/data/months/2021-07.json",
+      "count": 13
+    },
+    {
+      "key": "2021-08",
+      "path": "public/events/data/months/2021-08.json",
+      "count": 11
+    },
+    {
+      "key": "2021-09",
+      "path": "public/events/data/months/2021-09.json",
+      "count": 10
+    },
+    {
+      "key": "2021-10",
+      "path": "public/events/data/months/2021-10.json",
+      "count": 6
+    },
+    {
+      "key": "2021-11",
+      "path": "public/events/data/months/2021-11.json",
+      "count": 6
+    },
+    {
+      "key": "2022-01",
+      "path": "public/events/data/months/2022-01.json",
+      "count": 1
+    },
+    {
+      "key": "2022-03",
+      "path": "public/events/data/months/2022-03.json",
+      "count": 8
+    },
+    {
+      "key": "2022-04",
+      "path": "public/events/data/months/2022-04.json",
+      "count": 10
+    },
+    {
+      "key": "2022-05",
+      "path": "public/events/data/months/2022-05.json",
+      "count": 7
+    },
+    {
+      "key": "2022-06",
+      "path": "public/events/data/months/2022-06.json",
+      "count": 7
+    },
+    {
+      "key": "2022-07",
+      "path": "public/events/data/months/2022-07.json",
+      "count": 6
+    },
+    {
+      "key": "2022-08",
+      "path": "public/events/data/months/2022-08.json",
+      "count": 12
+    },
+    {
+      "key": "2022-09",
+      "path": "public/events/data/months/2022-09.json",
+      "count": 9
+    },
+    {
+      "key": "2022-10",
+      "path": "public/events/data/months/2022-10.json",
+      "count": 12
+    },
+    {
+      "key": "2022-11",
+      "path": "public/events/data/months/2022-11.json",
+      "count": 10
+    },
+    {
+      "key": "2022-12",
+      "path": "public/events/data/months/2022-12.json",
+      "count": 13
+    },
+    {
+      "key": "2023-01",
+      "path": "public/events/data/months/2023-01.json",
+      "count": 9
+    },
+    {
+      "key": "2023-02",
+      "path": "public/events/data/months/2023-02.json",
+      "count": 9
+    },
+    {
+      "key": "2023-03",
+      "path": "public/events/data/months/2023-03.json",
+      "count": 11
+    },
+    {
+      "key": "2023-04",
+      "path": "public/events/data/months/2023-04.json",
+      "count": 11
+    },
+    {
+      "key": "2023-05",
+      "path": "public/events/data/months/2023-05.json",
+      "count": 10
+    },
+    {
+      "key": "2025-08",
+      "path": "public/events/data/months/2025-08.json",
+      "count": 1
+    },
+    {
+      "key": "2025-09",
+      "path": "public/events/data/months/2025-09.json",
+      "count": 3
+    },
+    {
+      "key": "2025-10",
+      "path": "public/events/data/months/2025-10.json",
+      "count": 10
+    },
+    {
+      "key": "2025-11",
+      "path": "public/events/data/months/2025-11.json",
+      "count": 9
+    },
+    {
+      "key": "2025-12",
+      "path": "public/events/data/months/2025-12.json",
+      "count": 7
+    },
+    {
+      "key": "2026-01",
+      "path": "public/events/data/months/2026-01.json",
+      "count": 9
+    },
+    {
+      "key": "2026-02",
+      "path": "public/events/data/months/2026-02.json",
+      "count": 7
+    },
+    {
+      "key": "2026-03",
+      "path": "public/events/data/months/2026-03.json",
+      "count": 8
+    },
+    {
+      "key": "2026-04",
+      "path": "public/events/data/months/2026-04.json",
+      "count": 8
+    },
+    {
+      "key": "2026-05",
+      "path": "public/events/data/months/2026-05.json",
+      "count": 9
+    },
+    {
+      "key": "2026-06",
+      "path": "public/events/data/months/2026-06.json",
+      "count": 7
+    },
+    {
+      "key": "2026-07",
+      "path": "public/events/data/months/2026-07.json",
+      "count": 4
+    },
+    {
+      "key": "2026-08",
+      "path": "public/events/data/months/2026-08.json",
+      "count": 1
+    },
+    {
+      "key": "2026-09",
+      "path": "public/events/data/months/2026-09.json",
+      "count": 1
+    },
+    {
+      "key": "2026-10",
+      "path": "public/events/data/months/2026-10.json",
+      "count": 2
+    },
+    {
+      "key": "2026-11",
+      "path": "public/events/data/months/2026-11.json",
+      "count": 1
+    }
+  ]
+}

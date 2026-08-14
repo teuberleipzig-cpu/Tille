@@ -1,0 +1,414 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2015-05-01-livelyrix-poetry-slam",
+      "date": "2015-05-01",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20150416011441id_/http://distillery.de:80/ex/dates/2015/05/01",
+      "imageUrl": "",
+      "description": "FR. 01.05.15 Mad Again! meets LAPA*CHANGA",
+      "sections": [
+        {
+          "label": "up: poetryinitsbest MODERATION: MUSIC BY:",
+          "items": [
+            {
+              "name": "FABIAN NAVARRO",
+              "info": "Hamburg",
+              "link": ""
+            },
+            {
+              "name": "IRIS SCHWARZ",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "DANNY GRIMPE",
+              "info": "Hamburg",
+              "link": ""
+            },
+            {
+              "name": "CHRISTIAN MEYER",
+              "info": "The Fuck Hornisschen Orchestra",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-05-02-dimensions-outlook-festival-launch-party",
+      "date": "2015-05-02",
+      "title": "DIMENSIONS & OUTLOOK FESTIVAL LAUNCH PARTY",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20150416050408id_/http://distillery.de:80/ex/dates/2015/05/02",
+      "imageUrl": "",
+      "description": "J:KENZO",
+      "sections": [
+        {
+          "label": "up: dimensions floor",
+          "items": [
+            {
+              "name": "ROMARE",
+              "info": "Ninja Tune, Black Acre, UK",
+              "link": ""
+            },
+            {
+              "name": "FANTASTIC MR. FOX",
+              "info": "Black Acre, Hemlock, UK",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: outlook floor J:",
+          "items": [
+            {
+              "name": "KENZO",
+              "info": "Artikal Music, Tempa, UK, Start: 23:30, add to Cal, www.romaremusic.com",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-05-07-kugelblitz-donnerstag",
+      "date": "2015-05-07",
+      "title": "KUGELBLITZ DONNERSTAG",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20150416050910id_/http://distillery.de:80/ex/dates/2015/05/07",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "special: HipHopDancehallinaAfrotwerkStyle",
+          "items": [
+            {
+              "name": "KID GRINGO",
+              "info": "Heckert Empire",
+              "link": ""
+            },
+            {
+              "name": "DJ SENSAY",
+              "info": "Rockstone Sound, ISwagga",
+              "link": ""
+            },
+            {
+              "name": "DJ BEATZEPS",
+              "info": "High Power Station, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LIFTED ERIK",
+              "info": "Phonatics Hifi, Chemnitz, Start: 22:00, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-05-08-high-life-low-sounds",
+      "date": "2015-05-08",
+      "title": "HIGH LIFE & LOW SOUNDS",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20150416050915id_/http://distillery.de:80/ex/dates/2015/05/08",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "CHRISSY – AKA",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "CHRISSY",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "MURDERBOT",
+              "info": "Loose Squares, Chicago",
+              "link": ""
+            },
+            {
+              "name": "SARAH FARINA",
+              "info": "Through My Speakers, Berlin",
+              "link": ""
+            },
+            {
+              "name": "GIMMIX",
+              "info": "Stiff Little Spinners, Audiolith",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-05-09-feel-my-bicep-meets-run-out-run",
+      "date": "2015-05-09",
+      "title": "FEEL MY BICEP MEETS RUN OUT RUN",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20150416050412id_/http://distillery.de:80/ex/dates/2015/05/09",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: esoulate music presents \"Feel my Bicep\"",
+          "items": [
+            {
+              "name": "BICEP",
+              "info": "feel my bicep, London",
+              "link": ""
+            },
+            {
+              "name": "LOOTBEG",
+              "info": "esoulate, music, afin",
+              "link": ""
+            },
+            {
+              "name": "DSANT",
+              "info": "esoulate, music",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-05-13-heinz-music-label-nacht-meets-where-the-buffalo-roam",
+      "date": "2015-05-13",
+      "title": "HEINZ MUSIC LABEL NACHT MEETS WHERE THE BUFFALO ROAM",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20150416050724id_/http://distillery.de:80/ex/dates/2015/05/13",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: heinz",
+          "items": [
+            {
+              "name": "MARCUS MEINHARDT",
+              "info": "Katermukke, Heinz-Music, Berlin",
+              "link": ""
+            },
+            {
+              "name": "SVEN DOHSE",
+              "info": "Paloma Recordings, Bar25, Berlin",
+              "link": ""
+            },
+            {
+              "name": "EMPRO",
+              "info": "HomeSweetHome",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-05-15-fire-in-da-hole-vol-ii",
+      "date": "2015-05-15",
+      "title": "FIRE IN DA HOLE VOL. II",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20150416050935id_/http://distillery.de:80/ex/dates/2015/05/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DJ SAIBZ",
+              "info": "Streetflavor, Boom Bap, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DJ D-FEKT",
+              "info": "Resistant Mindz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ZASDA",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "FRESH GREEN",
+              "info": "SlHitP",
+              "link": ""
+            },
+            {
+              "name": "BUZY A",
+              "info": "Girlz Edit",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-05-16-what-can-we-do-for-you",
+      "date": "2015-05-16",
+      "title": "WHAT CAN WE DO FOR YOU?",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20150416050436id_/http://distillery.de:80/ex/dates/2015/05/16",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "PASCAL FEOS",
+              "info": "levelNONzero, Chaca Chaca, Frankfurt/Main",
+              "link": ""
+            },
+            {
+              "name": "GUNJAH",
+              "info": "Showboxx, Funkwelt, Dresden",
+              "link": ""
+            },
+            {
+              "name": "DYNAMIN",
+              "info": "Solamente, Deepwithyou",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-05-21-kugelblitz-donnerstag",
+      "date": "2015-05-21",
+      "title": "KUGELBLITZ DONNERSTAG",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20150416050731id_/http://distillery.de:80/ex/dates/2015/05/21",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "special: HipHopDancehallinaAfrotwerkStyle",
+          "items": [
+            {
+              "name": "KID GRINGO",
+              "info": "Heckert Empire",
+              "link": ""
+            },
+            {
+              "name": "DJ BEATZEPS",
+              "info": "High Power Station, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DJ SENSAY",
+              "info": "Rockstone Sound, ISwagga",
+              "link": ""
+            },
+            {
+              "name": "LIFTED ERIK",
+              "info": "Phonatics Hifi, Chemnitz, Start: 22:00, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-05-22-nacht-flohmarkt-no-5",
+      "date": "2015-05-22",
+      "title": "(NACHT)FLOHMARKT NO.5",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20150416050515id_/http://distillery.de:80/ex/dates/2015/05/22",
+      "imageUrl": "",
+      "description": "(NACHT)FLOHMARKT\ntauschen, gaubeln, trödeln\nStart: 20:00\nAnmeldung Stand (kostenlos): urban@distillery.de\n(Nacht)Flohmarkt die 5te\n– ab 19 Uhr kann Musik, Kunst, Trödel, Klamotten, Altes, Neues, Selbstgestaltetes und noch viel mehr erworben oder getauscht werden. Es liegt an euch, ungeliebte Geschenke los zu werden oder neue Schätze zu entdecken. Wer mit einem Stand vertreten sein möchte, meldet sich bitte unter\nurban@distillery.de\nan. Das Ganze findet je nach Wetterlage drinnen und/oder draussen statt.",
+      "sections": [
+        {
+          "label": "up: up, down & maybe outdoor",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-05-29-purple-tea-vol-ii",
+      "date": "2015-05-29",
+      "title": "PURPLE TEA VOL. II",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20150416050746id_/http://distillery.de:80/ex/dates/2015/05/29",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "KITKUT",
+              "info": "Beyond07, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DRBYSTRR93",
+              "info": "raputation[.de], Leipzig, Start: 23:59, add to Cal, HipHop 2.0 x Grime x Hustle-Trap x UK x Baltimore x OG-Rap x Breaks x Ragga x Moombahton x Ghetto-Tech x GlobalBa$$ x B.I.G. x Comshut x Transforma-Scratch., www.soundcloud.com/kitkutsbassroom, www.soundcloud.com/derbystarr",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-05-30-moon-harbour-presents-sven-tasnadi-album-launch",
+      "date": "2015-05-30",
+      "title": "MOON HARBOUR PRESENTS SVEN TASNADI ALBUM LAUNCH",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20150416050811id_/http://distillery.de:80/ex/dates/2015/05/30",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: all in",
+          "items": [
+            {
+              "name": "SVEN TASNADI",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DAN DRASTIC",
+              "info": "Moon Harbour, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "JUNO6",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

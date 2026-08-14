@@ -1,0 +1,309 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2010-01-01-livelyrix-sommerfestival-der-slamabend",
+      "date": "2010-01-01",
+      "title": "LIVELYRIX SOMMERFESTIVAL - DER SLAMABEND",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20100616114030id_/http://www.distillery.de:80/ex/dates/2010/07",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "JAN KOCH",
+              "info": "songs & stories, In Puncto, Berlin",
+              "link": ""
+            },
+            {
+              "name": "SPIDER",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "SURF POETEN",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "PEH",
+              "info": "Belin",
+              "link": ""
+            },
+            {
+              "name": "PAULINE FüG",
+              "info": "Eichstaett",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-01-08-livelyrix-poetry-slam-im-anschluss-kurt-reith-abend",
+      "date": "2010-01-08",
+      "title": "LIVELYRIX POETRY SLAM // IM ANSCHLUSS: KURT REITH ABEND",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20091127180526id_/http://www.distillery.de:80/ex/dates/2010/01/08",
+      "imageUrl": "",
+      "description": "start: 21:00",
+      "sections": [
+        {
+          "label": "up: livelyrix poetry slam - einlass: 20:00 HOSTED BY:",
+          "items": [
+            {
+              "name": "BO WIMMER",
+              "info": "Marburg",
+              "link": ""
+            },
+            {
+              "name": "JULIUS FISCHER",
+              "info": "Sax Royal, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "TILMAN BIRR",
+              "info": "Berlin",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-01-09-boundary-functions-meets-where-the-buffalo-roam",
+      "date": "2010-01-09",
+      "title": "BOUNDARY FUNCTIONS MEETS WHERE THE BUFFALO ROAM",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20091123000723id_/http://distillery.de:80/ex/dates/2010/01/09",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: boundary functions",
+          "items": [
+            {
+              "name": "KRAUSE DUO NR. 2",
+              "info": "Musik Krause, Jena",
+              "link": ""
+            },
+            {
+              "name": "STEFFEN BENNEMANN",
+              "info": "Nachtdigital, Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: where the buffalo roam",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-01-15-mad-again",
+      "date": "2010-01-15",
+      "title": "MAD AGAIN!",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20100202001958id_/http://www.distillery.de:80/ex/dates/2010/01/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: gallerie floor",
+          "items": [
+            {
+              "name": "AUSSTELLUNG & CHILL OUT ZUM THEMA STREET ART",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: basshelden",
+          "items": [
+            {
+              "name": "PABLO GUNZALES",
+              "info": "Hakuna Matataa, Meißen",
+              "link": ""
+            },
+            {
+              "name": "PEAK PHINE",
+              "info": "Distillery, Black Belt Boogie",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-01-16-hoerfunk-meets-syntax",
+      "date": "2010-01-16",
+      "title": "HOERFUNK MEETS SYNTAX",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20100202002002id_/http://www.distillery.de:80/ex/dates/2010/01/16",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: hoerfunk",
+          "items": [
+            {
+              "name": "JUNO6",
+              "info": "Oh!Yeah!, Freude am Tanzen, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MARKUS WELBY",
+              "info": "hoerfunk, Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-01-22-low-bass-alliance",
+      "date": "2010-01-22",
+      "title": "LOW BASS ALLIANCE",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20100125182644id_/http://distillery.de:80/ex/dates/2010/01/22",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: breakcore",
+          "items": [
+            {
+              "name": "BONG-RA",
+              "info": "Clash Rec., Niederlande",
+              "link": ""
+            },
+            {
+              "name": "DJ HIDDEN",
+              "info": "Niederlande",
+              "link": ""
+            },
+            {
+              "name": "16PADNOISETERRORIST",
+              "info": "CHR Rec., Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LXC",
+              "info": "Alphacut, 45Seven, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-01-23-finest-selection-meets-feenstaub-friends",
+      "date": "2010-01-23",
+      "title": "FINEST SELECTION MEETS FEENSTAUB & FRIENDS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20100202002007id_/http://www.distillery.de:80/ex/dates/2010/01/23",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: finest selection",
+          "items": [
+            {
+              "name": "TOBIAS.",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "NSI",
+              "info": "Non Standard Produktion, Berlin",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-01-29-olli-banjo-tour-2010",
+      "date": "2010-01-29",
+      "title": "OLLI BANJO TOUR 2010",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20100202002014id_/http://www.distillery.de:80/ex/dates/2010/01/29",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: rap",
+          "items": [
+            {
+              "name": "OLLI BANJO",
+              "info": "Headrush Records, Heidelberg",
+              "link": ""
+            },
+            {
+              "name": "MäDNESS",
+              "info": "UN1KAT, Darmstadt",
+              "link": ""
+            },
+            {
+              "name": "DJ SKALA",
+              "info": "Spitainment",
+              "link": ""
+            },
+            {
+              "name": "BOOM BROZ",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-01-30-chitlin-circuit-meets-bass-plus",
+      "date": "2010-01-30",
+      "title": "CHITLIN' CIRCUIT MEETS BASS PLUS!",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20091127180533id_/http://www.distillery.de:80/ex/dates/2010/01/30",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: chitlin' circuit",
+          "items": [
+            {
+              "name": "VERA",
+              "info": "Oslo Records, Cyclical Tracks, Cargo Edition, FFM",
+              "link": ""
+            },
+            {
+              "name": "SVEN TASNADI",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

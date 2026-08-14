@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2019-07-06-kiezfest",
+      "date": "2019-07-06",
+      "title": "KIEZFEST",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190715230849id_/http://www.distillery.de/ex/dates/2019/07/06",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "LUCA DONZELLI",
+              "info": "Amnesia Ibiza, Hot Creations, Elrow, 8Bit, Avotre",
+              "link": ""
+            },
+            {
+              "name": "MONELLO",
+              "info": "Räucherkammer, Inmotion Music, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DILIVIUS LENNI",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SHURAY & WALLE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-07-13-saturday-rave",
+      "date": "2019-07-13",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190714140538id_/http://www.distillery.de/ex/dates/2019/07/13",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SVEN DOHSE",
+              "info": "Heinz Music, Katermukke, Berlin",
+              "link": ""
+            },
+            {
+              "name": "ANDRE KRONERT",
+              "info": "Odd Even",
+              "link": ""
+            },
+            {
+              "name": "DANIEL NITSCH",
+              "info": "The Glitz, Feel Raw Audio",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "STIGMATIQUE",
+              "info": "Distillery, SEELEN",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-07-20-closing-before-summer-break",
+      "date": "2019-07-20",
+      "title": "CLOSING BEFORE SUMMER BREAK",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190707084334id_/http://www.distillery.de/ex/dates/2019/07/20",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "TAMA SUMO",
+              "info": "Ostgut Ton, Panorama Bar / Berghain, Berlin",
+              "link": ""
+            },
+            {
+              "name": "MANAMANA",
+              "info": "Kann, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DYNAMITE KADINSKI",
+              "info": "Distillery, Fäncy, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MAURO CARACHO",
+              "info": "Distillery, Fäncy, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "JUSTIN CUDMORE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

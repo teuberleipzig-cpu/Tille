@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2013-10-05-dirt-crew-dance-rave-and-well-being",
+      "date": "2013-10-05",
+      "title": "DIRT CREW: DANCE, RAVE AND WELL-BEING",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20220117222409id_/https://www.distillery.de/ex/dates/2013/10/05",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "TIGERSKIN AKA DUB TAYLOR",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "SUOL",
+              "info": "Dessous, Rotary Cocktail, Dirt Crew, Berlin",
+              "link": ""
+            },
+            {
+              "name": "TILL VON SEIN",
+              "info": "Dirt Crew",
+              "link": ""
+            },
+            {
+              "name": "SUOL",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "DIRT CREW",
+              "info": "Break 3000, Berlin",
+              "link": ""
+            },
+            {
+              "name": "PETER INVASION",
+              "info": "Riotvan, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-10-12-musik-und-mehr",
+      "date": "2013-10-12",
+      "title": "MUSIK UND MEHR",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20221007123112id_/https://www.distillery.de/ex/dates/2013/10/12",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ACID PAULI",
+              "info": "Ouïe",
+              "link": ""
+            },
+            {
+              "name": "FILBURT",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DILIVIUS LENNI",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "SHED",
+              "info": "50Weapons, Berlin, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "KONTER",
+              "info": "Interstellar Paradise, Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-10-18-21-years-old-part-i",
+      "date": "2013-10-18",
+      "title": "21 YEARS OLD - PART I",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20131007150227id_/http://www.distillery.de:80/ex/dates/2013/10/18",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: jungle, dnb, dub",
+          "items": [
+            {
+              "name": "CONGO NATTY - LIVE",
+              "info": "aka Rebel Mc, Tenor Fly, Nanci & Phoebe, Congo Dubz, London",
+              "link": ""
+            },
+            {
+              "name": "MC LIA",
+              "info": "Halle",
+              "link": ""
+            },
+            {
+              "name": "MISS MIGHTY MELODY",
+              "info": "Séance de Danse, Dresden",
+              "link": ""
+            },
+            {
+              "name": "SELECTA EL P",
+              "info": "Vibes Ambassadors",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: dancehall, hip hop, beats, reggae, grime",
+          "items": [
+            {
+              "name": "SELECTAH SPINBACK",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

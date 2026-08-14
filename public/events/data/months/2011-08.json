@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2011-08-27-re-opening-after-summerbreak",
+      "date": "2011-08-27",
+      "title": "RE:OPENING AFTER SUMMERBREAK",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20140202164433id_/http://www.distillery.de:80/ex/dates/2011/08/27",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: re",
+          "items": [
+            {
+              "name": "SID LE ROCK",
+              "info": "Shitkatapult, Mute Records, Beach Coma, Berlin",
+              "link": ""
+            },
+            {
+              "name": "METOPE",
+              "info": "Areal, Cereal Killers, Kompakt, Köln",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

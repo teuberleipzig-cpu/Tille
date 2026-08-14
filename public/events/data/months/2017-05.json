@@ -1,0 +1,548 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2017-05-03-up-home-six-down-roam",
+      "date": "2017-05-03",
+      "title": "UP HOME SIX DOWN ROAM",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20191017164947id_/http://www.distillery.de/ex/dates/2017/05/24",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "BREGER",
+              "info": "Soupherb, Copycow",
+              "link": ""
+            },
+            {
+              "name": "MIND ESCAPE",
+              "info": "Inar, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "UPSYLER",
+              "info": "UP Home, Where the Buffalo Roam, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "FUJIMI",
+              "info": "Biotobt, Jena",
+              "link": ""
+            },
+            {
+              "name": "SUBTRAK",
+              "info": "Where the Buffalo Roam, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "STEPHAN VON WOLFFERSDORFF",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-05-04-kugelblitzdonnerstag-95",
+      "date": "2017-05-04",
+      "title": "KUGELBLITZDONNERSTAG #95",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20210121232600id_/https://www.distillery.de/ex/dates/2017/05/04",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "TEAMBIRNENPFEFFI",
+              "info": "aka DJ Beatzeps, Gringo, DJ Sensay, Lifted Erik, Start: 23:00, add to Cal, 2wöchentlich, immer am ersten und dritten (1. und 3.) Donnerstag im Monat, für 3 Euronen – mit den Residents vom Teambirnenpfeffi, Beatzeps, Gringo, Sensay, und, Lifted Erik, sowie regelmässigen Stargästen und Überraschungseskapaden., https://www.facebook.com/kugelblitzdonnerstag",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-05-05-livelyrix-poetry-slam",
+      "date": "2017-05-05",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20210121225601id_/https://www.distillery.de/ex/dates/2017/05/05",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: MODERATION: MUSIC BY:",
+          "items": [
+            {
+              "name": "JAN MöBUS",
+              "info": "Remscheid",
+              "link": ""
+            },
+            {
+              "name": "JOHANNES FLOEHR",
+              "info": "Paderborn",
+              "link": ""
+            },
+            {
+              "name": "BLEU BROODE & LEONIE WARNKE",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BLANKK DISC",
+              "info": "Hyperion, Start: 19:30, add to Cal, Der Feiertagskater ist überstanden, Zeit für ein bisschen wunderbare Bühnenpoesie! Heute beim",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-05-06-muna-musik-meets-paracou",
+      "date": "2017-05-06",
+      "title": "MUNA MUSIK MEETS PARACOU",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20210122003437id_/https://www.distillery.de/ex/dates/2017/05/06",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DIRTY DOERING",
+              "info": "Katermukke, Berlin",
+              "link": ""
+            },
+            {
+              "name": "JAMY WING",
+              "info": "Polynom, Paracou, Jena",
+              "link": ""
+            },
+            {
+              "name": "FRANZ!",
+              "info": "Kalif Storch, Muna Musik, Paracou",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "PETER SCHUMANN",
+              "info": "Kater Blau, Platte International, Berlin",
+              "link": ""
+            },
+            {
+              "name": "MAX NIPPERT",
+              "info": "Muna, Paracou, Gera, Start: 23:30",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-05-11-cobra-3-tour",
+      "date": "2017-05-11",
+      "title": "COBRA 3 TOUR",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20210122004640id_/https://www.distillery.de/ex/dates/2017/05/11",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: SUPPORT:",
+          "items": [
+            {
+              "name": "BOSCA",
+              "info": "Freunde von Niemand",
+              "link": ""
+            },
+            {
+              "name": "FACE",
+              "info": "Start: 19:00, add to Cal, Mit „Solange es schlägt“, sicherte sich Bosca erstmals einen Platz in den Charts (#10), gefolgt von dem Album „Alte Liebe rostet nicht“ auf Platz 4, welches er gemeinsam mit Labelboss Vega veröffentlichte. Nun kommt sein mittlerweile drittes Solo Album „Cobra 3“ mit gleichnamiger Tour, aus dem Hause FVN auf Euch zu., Wer die Konzerte der Jungs kennt, weiss bestens um ihre Live-Qualitäten Bescheid! Abriss pur! Sichert euch daher direkt eure Tickets für die BOSCA-COBRA-3-TOUR und dreht gemeinsam mit ihm durch!",
+              "link": ""
+            },
+            {
+              "name": "SAVE THE DISTILLERY",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-05-12-one-beat-sample-slam-8",
+      "date": "2017-05-12",
+      "title": "ONE BEAT SAMPLE SLAM #8",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20210122001344id_/https://www.distillery.de/ex/dates/2017/05/12",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "NATANAEL MEGERSA & TOM DOOLIE",
+              "info": "Winner Slam #7",
+              "link": ""
+            },
+            {
+              "name": "T S O R N",
+              "info": "No Show",
+              "link": ""
+            },
+            {
+              "name": "K.FOG",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "H ESSLICH",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "CHOCOLATE GRINDER",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "CHIAMI",
+              "info": "Leipzig, Start: 21:00",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-05-13-saturday-rave",
+      "date": "2017-05-13",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190917233821id_/http://www.distillery.de/ex/dates/2017/05/13",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MARCUS MEINHARDT",
+              "info": "Heinz Music, Katermukke, Berlin",
+              "link": ""
+            },
+            {
+              "name": "MIKE VAN GOETZE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MAURO CARACHO",
+              "info": "Distillery, Fäncy, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "OLIVER ROSEMANN",
+              "info": "Recorded Things, Mindtrip, Mord",
+              "link": ""
+            },
+            {
+              "name": "GEORG BIGALKE",
+              "info": "45 Minutes of Techno",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-05-18-kugelblitzdonnerstag-96",
+      "date": "2017-05-18",
+      "title": "KUGELBLITZDONNERSTAG #96",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20210121232021id_/https://www.distillery.de/ex/dates/2017/05/18",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "TEAMBIRNENPFEFFI",
+              "info": "aka DJ Beatzeps, Gringo, DJ Sensay, Lifted Erik",
+              "link": ""
+            },
+            {
+              "name": "SELECTAH SPINBACK",
+              "info": "Spinbaclaat/ DaSwitch, Leipzig, Start: 23:00, add to Cal, 2wöchentlich, immer am ersten und dritten (1. und 3.) Donnerstag im Monat, für 3 Euronen – mit den Residents vom Teambirnenpfeffi, Beatzeps, Gringo, Sensay, und, Lifted Erik, sowie regelmässigen Stargästen und Überraschungseskapaden.",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-05-19-purple-tea-x-defrostatica-relaseparty",
+      "date": "2017-05-19",
+      "title": "PURPLE TEA X DEFROSTATICA RELASEPARTY",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20170519235705id_/http://www.distillery.de:80/ex/dates/2017/05/19",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SAINT ONE",
+              "info": "Éspassiert, Hamburg",
+              "link": ""
+            },
+            {
+              "name": "KIT KUT",
+              "info": "Beyond07, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DRBYSTRR93",
+              "info": "Babashot Squad, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "JOSI MILLER",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "KIAT",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-05-20-speicher-club-tour",
+      "date": "2017-05-20",
+      "title": "SPEICHER CLUB TOUR",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20210127211144id_/https://www.distillery.de/ex/dates/2017/05/20",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "REINHARD VOIGT",
+              "info": "Kompakt, Köln",
+              "link": ""
+            },
+            {
+              "name": "TERRANOVA",
+              "info": "Fetisch, Kompakt, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DILIVIUS LENNI",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "XXXXX",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MONGOOSE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-05-24-up-home-six-down-roam",
+      "date": "2017-05-24",
+      "title": "UP HOME SIX DOWN ROAM",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20191017164947id_/http://www.distillery.de/ex/dates/2017/05/24",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "BREGER",
+              "info": "Soupherb, Copycow",
+              "link": ""
+            },
+            {
+              "name": "MIND ESCAPE",
+              "info": "Inar, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "UPSYLER",
+              "info": "UP Home, Where the Buffalo Roam, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "FUJIMI",
+              "info": "Biotobt, Jena",
+              "link": ""
+            },
+            {
+              "name": "SUBTRAK",
+              "info": "Where the Buffalo Roam, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "STEPHAN VON WOLFFERSDORFF",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-05-26-dash-out",
+      "date": "2017-05-26",
+      "title": "DASH OUT",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20170601131650id_/http://www.distillery.de:80/ex/dates/2017/05/26",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DJ HäGI",
+              "info": "Riddim Royals, München",
+              "link": ""
+            },
+            {
+              "name": "MUNIXX INNA MOTION DANCERZ",
+              "info": "München",
+              "link": ""
+            },
+            {
+              "name": "HIGH POWER STATION",
+              "info": "#Teameastgermany, Start: 23:00, add to Cal, Dash Out“ aka. Frass Fridaze“ – am Freitag nach Himmelfahrt bringen HighPower Station den Sound und die Stimmung jamaikanischer Street-Dances in die Distillery. Unterstützt werden Sie dabei von Hägi von Riddim Royals, der mit seiner Kombi aus Energy, Madness & Bashment“ noch jede Stadt zum Durchdrehen gebracht hat. Und weil auf einer jamaikanischen Party Tanzcrews genauso dazu gehören wie die Musik, haben sich auch die Tänzerinnen von Munixx Inna Motion angekündigt, die man getrost als die godmothers der Dancehall-Tanz-Szene in München nennen kann. Schließlich haben sie diese mit ihrer Gründung 2014 erst aus der Taufe gehoben in der Stadt an der Isar. Und High Power Station dürfte sowieso allen, die in Leipzig gern zu zeitgenössischer, karibischer Unterhaltungsmusik trinken, ein Begriff sein. Ob aus dem Club oder seit neustem durch ihre Radioshow, über die binnen kürzester Zeit sogar in Westdeutschland berichtete: Sie sind momentan einer der heißesten Juggling Sounds des Landes, setzen mit ihrer Radioshow im 4-Wochen-Takt neue Humor, Maßstäbe und versetzen deutsche Timelines in Angst und Schrecken. Das jamaikanische Badesalz“ (Back It Up Crew).",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-05-27-beste-modus-meets-exile",
+      "date": "2017-05-27",
+      "title": "BESTE MODUS MEETS EXILE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20210121233214id_/https://www.distillery.de/ex/dates/2017/05/27",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "CINTHIE",
+              "info": "Beste Modus, Watergate, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DIEGO KRAUSE",
+              "info": "Beste Modus, Unison Wax, Berlin",
+              "link": ""
+            },
+            {
+              "name": "STEVN.AINT.LEAVN",
+              "info": "Beste Modus, Certain Circles",
+              "link": ""
+            },
+            {
+              "name": "ED HERBST",
+              "info": "Beste Modus",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "JOHANNES HEIL",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

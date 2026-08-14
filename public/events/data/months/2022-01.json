@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2022-01-01-livelyrix-sommerfestival-der-slamabend",
+      "date": "2022-01-01",
+      "title": "LIVELYRIX SOMMERFESTIVAL - DER SLAMABEND",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20220524115404id_/https://www.distillery.de/ex/dates/2010/07",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "JAN KOCH",
+              "info": "songs & stories, In Puncto, Berlin",
+              "link": ""
+            },
+            {
+              "name": "SPIDER",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "SURF POETEN",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "PEH",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "PAULINE FüG",
+              "info": "Hannover",
+              "link": ""
+            },
+            {
+              "name": "KHESRAU BEHROZ",
+              "info": "Kassel",
+              "link": ""
+            },
+            {
+              "name": "FRANK KLöTGEN",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

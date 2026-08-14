@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2014-08-30-re-opening",
+      "date": "2014-08-30",
+      "title": "RE:OPENING",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20160430162637id_/http://www.distillery.de/ex/dates/2014/08/30",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ABE DUQUE",
+              "info": "New York",
+              "link": ""
+            },
+            {
+              "name": "RUKEY",
+              "info": "Distillery, esoulate, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "RON DEACON",
+              "info": "Distillery",
+              "link": ""
+            },
+            {
+              "name": "CLEMENS RUH",
+              "info": "Distillery, Frission Radio, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

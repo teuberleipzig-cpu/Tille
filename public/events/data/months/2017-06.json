@@ -1,0 +1,372 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2017-06-01-kugelblitzdonnerstag-97",
+      "date": "2017-06-01",
+      "title": "KUGELBLITZDONNERSTAG #97",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20170621015917id_/http://www.distillery.de:80/ex/dates/2017/06/01",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "TEAMBIRNENPFEFFI",
+              "info": "aka DJ Beatzeps, Gringo, DJ Sensay, Lifted Erik, Start: 23:00, add to Cal, 2wöchentlich, immer am ersten und dritten (1. und 3.) Donnerstag im Monat, für 3 Euronen – mit den Residents vom Teambirnenpfeffi, Beatzeps, Gringo, Sensay, und, Lifted Erik",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-06-02-style-wild",
+      "date": "2017-06-02",
+      "title": "STYLE WILD",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20170621145830id_/http://www.distillery.de:80/ex/dates/2017/06/02",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SLUGABED",
+              "info": "Anticon, Ninja Tune, / UK",
+              "link": ""
+            },
+            {
+              "name": "MR. BEEF",
+              "info": "Resistant Mindz",
+              "link": ""
+            },
+            {
+              "name": "SCHMEICHEL",
+              "info": "OverDubClub",
+              "link": ""
+            },
+            {
+              "name": "DYZE",
+              "info": "Resistant Mindz",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-06-03-24-h-wohnzimmer",
+      "date": "2017-06-03",
+      "title": "24 H WOHNZIMMER",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190716111637id_/http://www.distillery.de/ex/dates/2017/06/03",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MATHIAS KADEN",
+              "info": "Paracou",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "JOEL MULL",
+              "info": "Parabel Music, Stockholm",
+              "link": ""
+            },
+            {
+              "name": "MAGIT CACOON",
+              "info": "Crosstown Rebels",
+              "link": ""
+            },
+            {
+              "name": "SVEN TASNADI",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-06-09-livelyrix-poetry-slam-stadtmeisterschaft-leipzig",
+      "date": "2017-06-09",
+      "title": "LIVELYRIX POETRY SLAM - STADTMEISTERSCHAFT LEIPZIG",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20170621015648id_/http://www.distillery.de:80/ex/dates/2017/06/09",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: MODERATION: MUSIC BY:",
+          "items": [
+            {
+              "name": "PHILIPP SCHARRENBERG",
+              "info": "Stuttgart",
+              "link": ""
+            },
+            {
+              "name": "ALLE GEWINNER*INNEN DER SAISON 2016/17",
+              "info": "die Crème de la Crème",
+              "link": ""
+            },
+            {
+              "name": "BLEU BROODE & LEONIE WARNKE",
+              "info": "Marburg/Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BLANKK DISC",
+              "info": "Hyperion",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-06-10-drift-evaporate",
+      "date": "2017-06-10",
+      "title": "DRIFT & EVAPORATE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20170621015710id_/http://www.distillery.de:80/ex/dates/2017/06/10",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "BRITTA ARNOLD",
+              "info": "KaterMukke, Dantze, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DAVID DORAD",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "URSL",
+              "info": "KaterMukke, Berlin",
+              "link": ""
+            },
+            {
+              "name": "LENNY BROOKSTER",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MAURO CARACHO",
+              "info": "Distillery, Fäncy, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-06-15-kugelblitzdonnerstag-98",
+      "date": "2017-06-15",
+      "title": "KUGELBLITZDONNERSTAG #98",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20170621015418id_/http://www.distillery.de:80/ex/dates/2017/06/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "TEAMBIRNENPFEFFI",
+              "info": "aka DJ Beatzeps, Gringo, DJ Sensay, Lifted Erik, Start: 23:00, add to Cal, 2wöchentlich, immer am ersten und dritten (1. und 3.) Donnerstag im Monat, für 3 Euronen – mit den Residents vom Teambirnenpfeffi, Beatzeps, Gringo, Sensay, und, Lifted Erik",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-06-17-vary-live-at-the-bbq",
+      "date": "2017-06-17",
+      "title": "VARY - LIVE AT THE BBQ",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20170619082432id_/http://www.distillery.de:80/ex/dates/2017/06/17",
+      "imageUrl": "",
+      "description": "Start: 14:00\nNö, keine Lust mehr auf den Club. Aus so einer Anti-Haltung lässt sich tip top was machen, wenn man a) Sommer und b) einen schönen Garten hat. Addiert man dazu noch – mmh, sagen wir eine SP, mehrere Kilo Vinyl, kühle Drinks und und einen vollen, vor sich her brutzelnden Grill ist man schon ziemlich nah dran an einer der geläufigsten Vorstellungen von paradiesischen Umständen. Nun setzen wir da noch einen drauf, indem wir Beat-Shifu Crssspace dazu einladen. Und das Dreiergespann aus Shape, Skor Rokswell + Rufus Grimes hinterm Tresen in der Eisenbahnstraße wegholen und dafür an die Decks unter freiem Himmel stellen. Yummy!",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "CRSSSPACE",
+              "info": "OverDubClub, Pattern Select",
+              "link": ""
+            },
+            {
+              "name": "SHAPE",
+              "info": "VARY, Chopy Wood, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SKOR ROKSWELL",
+              "info": "VARY, Champion Sound, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-06-23-boundless-beatz",
+      "date": "2017-06-23",
+      "title": "BOUNDLESS BEATZ",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20170621015452id_/http://www.distillery.de:80/ex/dates/2017/06/23",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "PASCH",
+              "info": "Nachtbeben, Voltage, RuFFM, Mixmag Germany /Frankfurt",
+              "link": ""
+            },
+            {
+              "name": "BROKEN ONE",
+              "info": "Dub Logic, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "AUDITE",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DUBBALOT",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-06-24-several-circulations",
+      "date": "2017-06-24",
+      "title": "SEVERAL CIRCULATIONS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20170619082437id_/http://www.distillery.de:80/ex/dates/2017/06/24",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SVEN WEISEMANN",
+              "info": "Mojuba, a.r.t.less, Delsin",
+              "link": ""
+            },
+            {
+              "name": "THOMAS STIELER",
+              "info": "Distillery, Paracou",
+              "link": ""
+            },
+            {
+              "name": "FILBURT",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "O*RS",
+              "info": "Permanent Vacation",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-06-29-kugelblitzdonnerstag-99",
+      "date": "2017-06-29",
+      "title": "KUGELBLITZDONNERSTAG #99",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20170619082444id_/http://www.distillery.de:80/ex/dates/2017/06/29",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "TEAMBIRNENPFEFFI",
+              "info": "aka DJ Beatzeps, Gringo, DJ Sensay, Lifted Erik, Start: 23:00, add to Cal, 2wöchentlich, immer am ersten und dritten (1. und 3.) Donnerstag im Monat, für 3 Euronen – mit den Residents vom Teambirnenpfeffi, Beatzeps, Gringo, Sensay, und, Lifted Erik",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-06-30-highly",
+      "date": "2017-06-30",
+      "title": "HIGHLY",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20170619082508id_/http://www.distillery.de:80/ex/dates/2017/06/30",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "YO! SOUNDSYSTEM AKA DJ SEAGEL SILVER & DJ LAIK",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "DJ KARMAXUTRA",
+              "info": "Chemnitz",
+              "link": ""
+            },
+            {
+              "name": "FOREVER BROKE DJ TEAM",
+              "info": "Leipzig, Start: 23:00, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,406 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2019-05-02-shackitistan-tour",
+      "date": "2019-05-02",
+      "title": "SHACKITISTAN TOUR",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20190429211048id_/http://www.distillery.de:80/ex/dates/2019/05/02",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: + SUPPORT:",
+          "items": [
+            {
+              "name": "SHACKE ONE",
+              "info": "Nordachse, Berlin",
+              "link": ""
+            },
+            {
+              "name": "ACHIM FUNK",
+              "info": "Nordsachse, Berlin",
+              "link": ""
+            },
+            {
+              "name": "MXM",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "PAVEL",
+              "info": "Upstruct, Berlin, Start: 19:00 (Einlass), 20:00 (Beginn), add to Cal, Shacke One dicka der Boss vona Panke!, Nach dem legendären Nordachse Tape zusammen mit MC Bomber hat sich der Weddinger mittlerweile seinen eigenen Platz im Berliner Rap Olymp gesichert. Seine letzten zwei Alben, „Stecks, Schmiers und Suffs“ und „Bossen & Bumsen“, haben den Berliner Untergrund so hart zum beben gebracht, dass es auch der Rest der deutschen Raplandschaft zu spüren bekam. Das Shacke nicht nur auf Tonträgern ballert hat er bei seiner Deutschland-Tour im März 2018 unter Beweis gestellt. „Komm auf mein Konzert und ich zeig‘ dir wie Entertainment geht!“ ist bei Shacke One keineswegs eine leere Floskel. Schweiß der von der Decke tropft und kollabierende Fans sprechen ganz klar für sich!, Vorverkauf -> https://bit.ly/2HWIzPw",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-05-03-livelyrix-poetry-slam",
+      "date": "2019-05-03",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190428012322id_/http://www.distillery.de:80/ex/dates/2019/05/03",
+      "imageUrl": "",
+      "description": "FR. 03.05.19 Hyperion",
+      "sections": [
+        {
+          "label": "up: MODERATION: MUSIC BY:",
+          "items": [
+            {
+              "name": "TERESA REICHL",
+              "info": "Regensburg",
+              "link": ""
+            },
+            {
+              "name": "LARA ERMER",
+              "info": "Frankfurt",
+              "link": ""
+            },
+            {
+              "name": "JAN SCHMIDT",
+              "info": "Bochum",
+              "link": ""
+            },
+            {
+              "name": "ARON BOKS",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "LEONIE WARNKE",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BLANKK DISC",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-05-04-saturday-rave-x-seelen-records",
+      "date": "2019-05-04",
+      "title": "SATURDAY RAVE X SEELEN. RECORDS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190428015258id_/http://www.distillery.de:80/ex/dates/2019/05/04",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "RON MORELLI",
+              "info": "L.I.E.S. Records",
+              "link": ""
+            },
+            {
+              "name": "FILBURT",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SHURAY & WALLE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "FIEDEL",
+              "info": "Berghain, Ostgut Ton, Berlin",
+              "link": ""
+            },
+            {
+              "name": "JANEIN",
+              "info": "SEELEN",
+              "link": ""
+            },
+            {
+              "name": "SEELEN.",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-05-10-tobassgo",
+      "date": "2019-05-10",
+      "title": "TOBASSGO",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190429211053id_/http://www.distillery.de:80/ex/dates/2019/05/10",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: HOSTED BY:",
+          "items": [
+            {
+              "name": "NO MERCY",
+              "info": "VBArec, BananaBassMusik",
+              "link": ""
+            },
+            {
+              "name": "JANOSH",
+              "info": "Sector842",
+              "link": ""
+            },
+            {
+              "name": "ANNA BOLIKA",
+              "info": "Brain Klub, Fluid Chamber",
+              "link": ""
+            },
+            {
+              "name": "NANO42",
+              "info": "FVZ, N*Dorphin, UTM-Family, Sector 8",
+              "link": ""
+            },
+            {
+              "name": "DJ BOOTLEG",
+              "info": "SMS, Sector842",
+              "link": ""
+            },
+            {
+              "name": "MC ROB.K",
+              "info": "toBASSgo, qb, sector842",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-05-11-saturday-rave",
+      "date": "2019-05-11",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190429211112id_/http://www.distillery.de:80/ex/dates/2019/05/11",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "BRITTA ARNOLD",
+              "info": "KaterMukke, Dantze, Berlin",
+              "link": ""
+            },
+            {
+              "name": "SVEN TASNADI",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MIKE VAN GOETZE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "DAVE TARRIDA - LIVE",
+              "info": "Autofake, Wien",
+              "link": ""
+            },
+            {
+              "name": "GEORG BIGALKE",
+              "info": "45 Minutes of Techno, Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-05-17-style-wild-battles-lets-celebrate",
+      "date": "2019-05-17",
+      "title": "STYLE WILD BATTLES - LETS CELEBRATE",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190429211213id_/http://www.distillery.de:80/ex/dates/2019/05/17",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DJ Y",
+              "info": "04Lkarwa Reppin', Berlin",
+              "link": ""
+            },
+            {
+              "name": "PABLO GUNZALES",
+              "info": "Style Wild/Afro Latin What?!",
+              "link": ""
+            },
+            {
+              "name": "FREE KEE",
+              "info": "Gazelle Horn",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "DJ LAZY ONE",
+              "info": "Warsaw/Poland",
+              "link": ""
+            },
+            {
+              "name": "FREE KEE",
+              "info": "Gazelle Horn",
+              "link": ""
+            },
+            {
+              "name": "JENNY SHARP",
+              "info": "Good Hood Music, Sharp Radio",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-05-18-saturday-rave",
+      "date": "2019-05-18",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190302045620id_/http://www.distillery.de:80/ex/dates/2019/05/18",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DJ HELL",
+              "info": "International Deejay Gigolos",
+              "link": ""
+            },
+            {
+              "name": "MORE SOON...",
+              "info": "Start: 23:30, add to Cal",
+              "link": ""
+            },
+            {
+              "name": "KALENDER-DOWNLOAD",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "DISTILLERY",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "KURT-EISNER-STR. 108 A",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "04275 LEIPZIG",
+              "info": "2001-2018 Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-05-24-40tygrand",
+      "date": "2019-05-24",
+      "title": "40TYGRAND",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190822232831id_/http://www.distillery.de/ex/dates/2019/05/24",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MIGHTY FLO",
+              "info": "Upliftment",
+              "link": ""
+            },
+            {
+              "name": "DJ SEAGEL SILVER",
+              "info": "Seagel Twins",
+              "link": ""
+            },
+            {
+              "name": "LAIKY LAIK",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "YVNG EDDY",
+              "info": "Leipzig, Start: 23:00, add to Cal, Wer Rap mag ist bei 40tyGrand komplett richtig., Das Klassentreffen dieser Jungs ist wohl Ansage genug um einen Abend Rap zu zelebrieren. Der eine oder andere Abstecher ?ber Jamaica, UK oder die Mash Up Route ist wohl eingeplant., Also:",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-05-25-saturday-rave",
+      "date": "2019-05-25",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190303115757id_/http://www.distillery.de:80/ex/dates/2019/05/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "PILOCKA KRACH – LIVE",
+              "info": "Save To Disc Records, E-Minor, Bar25, maxundmoriz, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DIE MADE UND DAS DIRN",
+              "info": "Puffy, Mooquai Marbles",
+              "link": ""
+            },
+            {
+              "name": "MORE SOON...",
+              "info": "Start: 23:30, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

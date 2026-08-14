@@ -1,0 +1,378 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2015-01-02-livelyrix-poetry-slam",
+      "date": "2015-01-02",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20150116171254id_/http://distillery.de:80/ex/dates/2015/01/02",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: MODERATION:",
+          "items": [
+            {
+              "name": "PAUL WEIGL",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "FRANZISKA VALENTINA HOLZHEIMER",
+              "info": "Hamburg",
+              "link": ""
+            },
+            {
+              "name": "HANZ AUS LUDWIGSBURG",
+              "info": "Ludwigsburg",
+              "link": ""
+            },
+            {
+              "name": "ZOE HAGEN",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "CHRISTIAN MEYER",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-01-03-dystopian",
+      "date": "2015-01-03",
+      "title": "DYSTOPIAN",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20150105114549id_/http://distillery.de:80/ex/dates/2015/01/03",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "RØDHÅD",
+              "info": "Dystopian",
+              "link": ""
+            },
+            {
+              "name": "ALEX.DO",
+              "info": "Dystopian, Berlin",
+              "link": ""
+            },
+            {
+              "name": "VINCENT NEUMANN",
+              "info": "Distillery, Unitas Multiplex, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-01-09-submission",
+      "date": "2015-01-09",
+      "title": "SUBMISSION",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20150116171258id_/http://distillery.de:80/ex/dates/2015/01/09",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: dubstep, bass",
+          "items": [
+            {
+              "name": "LEON SWITCH",
+              "info": "Chestplate, London",
+              "link": ""
+            },
+            {
+              "name": "VAKUM",
+              "info": "klshs, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ASM",
+              "info": "Submission, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "TEARZTAR",
+              "info": "Start: 23.30, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-01-10-uberbois-album-tour",
+      "date": "2015-01-10",
+      "title": "UBERBOIS - ALBUM TOUR",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20150116171303id_/http://distillery.de:80/ex/dates/2015/01/10",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MAREK BOIS AKA DAPAYK",
+              "info": "Rrygular, Berlin",
+              "link": ""
+            },
+            {
+              "name": "FROM KARAOKE TO STARDOM",
+              "info": "Rrygular, Apnea, Paris",
+              "link": ""
+            },
+            {
+              "name": "DISTALE",
+              "info": "Rrygular, Berlin",
+              "link": ""
+            },
+            {
+              "name": "KLEINSCHMAGER AUDIO",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-01-16-style-wild",
+      "date": "2015-01-16",
+      "title": "STYLE WILD",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20150116171310id_/http://distillery.de:80/ex/dates/2015/01/16",
+      "imageUrl": "",
+      "description": "AB 20:00 UHR: STYLE WILD STREETDANCE BATTLE",
+      "sections": [
+        {
+          "label": "up: AB 20:00 UHR:",
+          "items": [
+            {
+              "name": "STYLE WILD STREETDANCE BATTLE",
+              "info": "Hip Hop/New Style, Experimental, House, Dancehall",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "IAMNOBODI",
+              "info": "Soulection, Jakarta Records, Berlin",
+              "link": ""
+            },
+            {
+              "name": "OVERDUBCLUB",
+              "info": "Beatmaking Jam Session - join if you like to, Start: 20:00, add to Cal, Es ist wieder soweit! Die nächste Style Wild steht an und das mit allem, was dazu gehört. Los gehts mit der mittlerweile",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-01-17-modern-house-hero",
+      "date": "2015-01-17",
+      "title": "MODERN HOUSE HERO",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20150116173630id_/http://distillery.de:80/ex/dates/2015/01/17",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "CHEZ DAMIER",
+              "info": "Mojuba, Chicago",
+              "link": ""
+            },
+            {
+              "name": "FILBURT",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "O*RS",
+              "info": "Permanent Vacation, Riotvan, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LUVLESS",
+              "info": "Tsuba, Rose Records Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-01-23-symbiz-sound",
+      "date": "2015-01-23",
+      "title": "SYMBIZ SOUND",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20150116173635id_/http://distillery.de:80/ex/dates/2015/01/23",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SYMBIZ SOUND - LIVE",
+              "info": "Mg 77, Berlin, Braunschweig",
+              "link": ""
+            },
+            {
+              "name": "KID GRINGO",
+              "info": "Heckert Empire",
+              "link": ""
+            },
+            {
+              "name": "ZEBSTA",
+              "info": "Welcome To Baltimore, Leipzig, Start: 23:30, add to Cal, Packt eure Sachen, wir machen uns los auf eine Global-Bass-Safari! Und die Weltenbummler von Symbiz Sound werden an diesem Abend die Reiseleitung übernehmen. Das deutsch-koreanischen Produzenten-Duo Buddysim & ChrisImbiss nimmt euch mit auf einen Trip durch Dancehall, Reggae, Hip Hop, Trap und Dubstep. Unterstützt werden sie dabei von Zhi MC, der schon die eine oder andere Runde mit ihnen um den Globus gedreht hat. Wenn die drei gemeinsam auf der Bühne stehen, kann es durchaus zu Turbulenzen auf dem Dancefloor kommen, denn mit ihren Live-Shows bündeln sie Energie, Entertainment und Einzigartigkeit. Schließlich schrauben sie ihre Tracks mit Hilfe eines eigens entwickelten Controllers bei jedem Gigs neu zusammen. Wohin es geht, weiß daher niemand außer sie. Lasst euch überraschen! Als sympathische Reisebegleiter werden euch an diesem Abend Zebsta, Kitkut und Kid Gringo zur Seite stehen. Was abwechslungsreichen Sound angeht, stehen die drei dem Headliner in nichts nach. Wenn sie auflegen (ver)drehen sie nicht nur Platten, sondern auch eure Köpfe, sodass ihr hinterher nicht mehr wisst, wo sich die Notausgänge befinden., Sagt nicht, wir hätten euch nicht gewarnt!",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-01-24-dinkyland",
+      "date": "2015-01-24",
+      "title": "DINKYLAND",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20150116173711id_/http://distillery.de:80/ex/dates/2015/01/24",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DINKY",
+              "info": "Visionquest, Crosstown Rebels",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "CLEMENS RUH",
+              "info": "Sonoptix, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "DANIEL SAILER",
+              "info": "Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-01-30-boundless-beatz-label-launch",
+      "date": "2015-01-30",
+      "title": "BOUNDLESS BEATZ LABEL LAUNCH",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20150116173718id_/http://distillery.de:80/ex/dates/2015/01/30",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DREADMAUL",
+              "info": "Boundless Beatz",
+              "link": ""
+            },
+            {
+              "name": "AUDITE",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DUBBALOT",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MC AMON BAY",
+              "info": "Boundless Beatz, Start: 23:30, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-01-31-month-s-end",
+      "date": "2015-01-31",
+      "title": "MONTH'S END",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20150116173737id_/http://distillery.de:80/ex/dates/2015/01/31",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ANDRé GALLUZZI",
+              "info": "ARAS Records, Berghain Ostgut, Cocoon",
+              "link": ""
+            },
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "mindcookies, Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "STEPHAN VON WOLFFERSDORFF",
+              "info": "Distillery, Where the Buffalo Roam",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

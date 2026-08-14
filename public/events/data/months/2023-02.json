@@ -1,0 +1,416 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2023-02-03-friday-rave",
+      "date": "2023-02-03",
+      "title": "FRIDAY RAVE",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20230326211707id_/https://www.distillery.de/ex/dates/2023/02/03",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "FJAAK",
+              "info": "Spandau20",
+              "link": ""
+            },
+            {
+              "name": "ATALANTA",
+              "info": "Distillery",
+              "link": ""
+            },
+            {
+              "name": "NINETTE",
+              "info": "Distillery, LÄRM",
+              "link": ""
+            },
+            {
+              "name": "TICKETS",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-02-04-saturday-rave",
+      "date": "2023-02-04",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20230326222341id_/https://www.distillery.de/ex/dates/2023/02/04",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "PER HAMMAR B2B OLGA KOROL",
+              "info": "Dirty Hands, BodyParts",
+              "link": ""
+            },
+            {
+              "name": "SEVENSOL",
+              "info": "Long Vehicle, Kann",
+              "link": ""
+            },
+            {
+              "name": "RUPERT MARNIE",
+              "info": "TPG, Long Vehicle, Hamburg",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "MARCEL DETTMANN",
+              "info": "MDR, Ostgut Ton, Panorama Bar / Berghain, Berlin",
+              "link": ""
+            },
+            {
+              "name": "VINCENT NEUMANN",
+              "info": "Distillery, Unitas Multiplex, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ROTTNMEIER",
+              "info": "Distillery, exLEpäng!",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-02-10-boundless-beatz",
+      "date": "2023-02-10",
+      "title": "BOUNDLESS BEATZ",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20230326210805id_/https://www.distillery.de/ex/dates/2023/02/10",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: HOSTED BY:",
+          "items": [
+            {
+              "name": "BREDREN",
+              "info": "1985, Dispatch, Critical, Flexout, BE",
+              "link": ""
+            },
+            {
+              "name": "STARVA",
+              "info": "equalize, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "TIDED",
+              "info": "Bass Focus, DDNBC, Outer Worlds, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "VOTHA",
+              "info": "equalize, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "VRUM",
+              "info": "Boundless Beatz",
+              "link": ""
+            },
+            {
+              "name": "MC RESC",
+              "info": "Random / Counterpoint, Freiburg",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-02-11-saturday-rave",
+      "date": "2023-02-11",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20230326221816id_/https://www.distillery.de/ex/dates/2023/02/11",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "CROMBY",
+              "info": "Potency Records",
+              "link": ""
+            },
+            {
+              "name": "LOVEFOXY",
+              "info": "New York, Berlin",
+              "link": ""
+            },
+            {
+              "name": "FILBURT",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "THOMAS STIELER",
+              "info": "Distillery, Paracou",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "DR. RUBINSTEIN",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "SENTA JULIEN",
+              "info": "ELI-Family",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-02-17-365f-djs",
+      "date": "2023-02-17",
+      "title": "365F*DJS",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20230326214113id_/https://www.distillery.de/ex/dates/2023/02/17",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "BETH LYDI",
+              "info": "SNOE",
+              "link": ""
+            },
+            {
+              "name": "MARIA DIE RUHE",
+              "info": "Djing & Vocals, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SINAH",
+              "info": "Women of Techno Jena, Weimar",
+              "link": ""
+            },
+            {
+              "name": "CATH BOO",
+              "info": "365fdjs, Dieda, Women of Techno Chemnitz",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "JULIANE WOLF",
+              "info": "Wizarding Wolf",
+              "link": ""
+            },
+            {
+              "name": "TØSCHE",
+              "info": "TENSIØN",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-02-18-saturday-rave",
+      "date": "2023-02-18",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20230326224508id_/https://www.distillery.de/ex/dates/2023/02/18",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "LEA LISA",
+              "info": "Phonica, Karakul",
+              "link": ""
+            },
+            {
+              "name": "ALBRECHT WASSERSLEBEN",
+              "info": "Uncanny Valley, Dresden",
+              "link": ""
+            },
+            {
+              "name": "ROB/NSON",
+              "info": "ND, Midi",
+              "link": ""
+            },
+            {
+              "name": "BENDER & DAHMAR",
+              "info": "Kann, Electronic Resistance",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "MARRØN",
+              "info": "Eerste Communie",
+              "link": ""
+            },
+            {
+              "name": "ÅMRTÜM",
+              "info": "Rave Alert, Berlin, Paris",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-02-22-120-minuten-w-miss-cleenex-und-ihr-ex",
+      "date": "2023-02-22",
+      "title": "120 MINUTEN W/ MISS CLEENEX UND IHR EX",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20230326210223id_/https://www.distillery.de/ex/dates/2023/02/22",
+      "imageUrl": "",
+      "description": "Start: 20:00\nTICKETS\nBei diesem Aschermittwoch-Special von „Mandys Ex“ der einst 2010 gestarteten Partyreihe wird es ein paar besondere Überraschungen geben, denn Faschingsmuffel treffen auf Profi Verkleider:innen.\nAber nein, es wird keine Karnevals-After-Hour mit Konfetti und lustigen Büttenreden. Es gibt keine Funkenmariechen und auch die klassischen Kostüme (Mutti im billo Krankenschwestern Outfit, gejagt vom Vati im Super Mario Jumpsuit) sind nicht erlaubt.\nWer auf dieser speziellen 120 Minuten Party nicht auffallen will – lädt sich auf\nhttps://www.disco120.de\ndie Originale\" Mandys Ex Anti-Faschingsmaske\" runder, gestaltet diese nach den eigenen Bedürfnissen und präsentiert diese dann zur Veranstaltung. Doch keine Panik, auch Spiel- und Spaßverderber ohne Maske sind uns willkommen!\nAchtung, neuer Zeitplan!\nGroove-in ab 20:00 Uhr\n20:15 Uhr // Maids Pop Disko mit Natasha Plastique\n21:00 Uhr // Start Mandys Ex\n21:00 Uhr // ÜberraschungsAct 1\n21:30 Uhr // Mandy und ihr Ex",
+      "sections": []
+    },
+    {
+      "id": "2023-02-24-flaesh-bending-the-final-chaepter",
+      "date": "2023-02-24",
+      "title": "FLÄSH BENDING - THE FINAL CHÄPTER",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20230326213207id_/https://www.distillery.de/ex/dates/2023/02/24",
+      "imageUrl": "",
+      "description": "breakcore\njungle\nrave ]",
+      "sections": [
+        {
+          "label": "up: [ hardcore",
+          "items": [
+            {
+              "name": "AVE FM",
+              "info": "Zulu Steppaz, Bassmæssage",
+              "link": ""
+            },
+            {
+              "name": "DAS ZIRKUSKIND",
+              "info": "3Kg Holz & Farben, exLEpäng!",
+              "link": ""
+            },
+            {
+              "name": "GRETCHEN BAZOOKA",
+              "info": "dynamic events berlin",
+              "link": ""
+            },
+            {
+              "name": "JAKIN BOAZ",
+              "info": "K124",
+              "link": ""
+            },
+            {
+              "name": "LYDI-JAH",
+              "info": "Guerilla Zoundcrew, Bloody Feet",
+              "link": ""
+            },
+            {
+              "name": "OLIOTRONIX",
+              "info": "gl333tch, exLEpäng!",
+              "link": ""
+            },
+            {
+              "name": "RAW STATE B2B BASSICK",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-02-25-saturday-rave",
+      "date": "2023-02-25",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20230326224053id_/https://www.distillery.de/ex/dates/2023/02/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DAVE DK",
+              "info": "Pampa, Moodmusic, Playhouse",
+              "link": ""
+            },
+            {
+              "name": "DYSCOTHEQUE",
+              "info": "nice4what, Drive",
+              "link": ""
+            },
+            {
+              "name": "NAPOLEON DYNAMITE",
+              "info": "Fäncy, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "ADIEL",
+              "info": "Danza Tribale",
+              "link": ""
+            },
+            {
+              "name": "SALOME",
+              "info": "Herrensauna, Berlin",
+              "link": ""
+            },
+            {
+              "name": "STIGMATIQUE",
+              "info": "Distillery, SEELEN",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

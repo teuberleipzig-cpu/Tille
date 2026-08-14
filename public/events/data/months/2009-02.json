@@ -1,0 +1,251 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2009-02-06-kurt-reith-abend",
+      "date": "2009-02-06",
+      "title": "KURT REITH ABEND",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20090131215956id_/http://distillery.de:80/ex/dates/2009/02/06",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: all syles in tha mix",
+          "items": [
+            {
+              "name": "DJ YORK",
+              "info": "Könich Heinz, Leipzig-Connewitz",
+              "link": ""
+            },
+            {
+              "name": "HANS DER JäGER",
+              "info": "Connewitz Grill Mafia, Leipzig-Connewitz",
+              "link": ""
+            },
+            {
+              "name": "DJ GRAPE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-02-07-dancematerial-meets-where-the-buffalo-roam",
+      "date": "2009-02-07",
+      "title": "DANCEMATERIAL MEETS WHERE THE BUFFALO ROAM",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20090130032519id_/http://distillery.de:80/ex/dates/2009/02/07",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: dancematerial",
+          "items": [
+            {
+              "name": "ARTO MWAMBé – LIVE",
+              "info": "Brontosaurus Records, FFM",
+              "link": ""
+            },
+            {
+              "name": "EASYDCNAE",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "STEFFEN BENNEMANN",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-02-13-stars-for-soul-oldschool-fasching",
+      "date": "2009-02-13",
+      "title": "STARS FOR SOUL OLDSCHOOL FASCHING",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20090202170105id_/http://www.distillery.de:80/ex/dates/2009/02/13",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: funky oldschool breaks floor",
+          "items": [
+            {
+              "name": "MAGIC MAYER",
+              "info": "Harzfein Studio, Dessau",
+              "link": ""
+            },
+            {
+              "name": "DJ KING BENSON",
+              "info": "SfS Disco King",
+              "link": ""
+            },
+            {
+              "name": "PADDY DELUXE",
+              "info": "Stars for Soul",
+              "link": ""
+            },
+            {
+              "name": "DA WIESEL",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-02-14-hoerfunk-meets-syntax",
+      "date": "2009-02-14",
+      "title": "HOERFUNK MEETS SYNTAX",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20090201065839id_/http://distillery.de:80/ex/dates/2009/02/14",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: hoerfunk",
+          "items": [
+            {
+              "name": "HENRIK SCHWARZ – LIVE",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "!K7",
+              "info": "Innervisions, Berlin",
+              "link": ""
+            },
+            {
+              "name": "MARKUS WELBY",
+              "info": "hoerfunk",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-02-20-tornadowarnung",
+      "date": "2009-02-20",
+      "title": "TORNADOWARNUNG",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20090202170125id_/http://distillery.de:80/ex/dates/2009/02/20",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: tornadowarnung",
+          "items": [
+            {
+              "name": "DIE TORNADOS – LIVE",
+              "info": "This is Ska!, Dynamite Festival, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "THE RUDEMENTARIES – LIVE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-02-21-5-years-finest-selection-meets-feenstaub-friends",
+      "date": "2009-02-21",
+      "title": "5 YEARS FINEST SELECTION MEETS FEENSTAUB & FRIENDS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20090201051751id_/http://distillery.de:80/ex/dates/2009/02/21",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: 5 years finest selection",
+          "items": [
+            {
+              "name": "SASSE – LIVE",
+              "info": "// Toinen Album Tour (aka Freestyle Man, Moodmusic, Berlin",
+              "link": ""
+            },
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "Finest Selection",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-02-27-hotta-fire-reggaestation",
+      "date": "2009-02-27",
+      "title": "HOTTA FIRE REGGAESTATION",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20090328121212id_/http://distillery.de:80/ex/dates/2009/02/27",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: may the soulforce be with you",
+          "items": [
+            {
+              "name": "SOULFORCE SOUND",
+              "info": "The German RMX Kings, soul-force.com, Krefeld",
+              "link": ""
+            },
+            {
+              "name": "SELECTAH SPINBACK",
+              "info": "Da Switch, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MASTAH K",
+              "info": "Hotta Fire",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-02-28-moon-harbour-label-flight-meets-darkstar",
+      "date": "2009-02-28",
+      "title": "MOON HARBOUR LABEL FLIGHT MEETS DARKSTAR",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20090216122536id_/http://distillery.de:80/ex/dates/2009/02/28",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: moon harbour label flight",
+          "items": [
+            {
+              "name": "MARTINEZ",
+              "info": "Moon Harbour, Re:connected, DK",
+              "link": ""
+            },
+            {
+              "name": "MATTHIAS TANZMANN",
+              "info": "Moon Harbour, Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

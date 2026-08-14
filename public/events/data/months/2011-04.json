@@ -1,0 +1,457 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2011-04-01-livelyrix-poetry-slam",
+      "date": "2011-04-01",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20110317045512id_/http://www.distillery.de:80/ex/dates/2011/04/01",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: livelyrix poetry slam MUSIC BY:",
+          "items": [
+            {
+              "name": "SEBASTIAN LEHMANN",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "ERIK LEICHTER",
+              "info": "Zwickau",
+              "link": ""
+            },
+            {
+              "name": "GAUNER",
+              "info": "P-Pack, Berlin",
+              "link": ""
+            },
+            {
+              "name": "ROMAN ISRAEL",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "U.V.M.",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-04-02-chitlin-circuit-meets-feenstaub-friends",
+      "date": "2011-04-02",
+      "title": "CHITLIN' CIRCUIT MEETS FEENSTAUB & FRIENDS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20110317045517id_/http://www.distillery.de:80/ex/dates/2011/04/02",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: chitlin' circuit",
+          "items": [
+            {
+              "name": "MARGARET DYGAS",
+              "info": "Perlon, Contexterrior, Non Standard Productions, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: feenstaub & friends",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-04-08-style-wild",
+      "date": "2011-04-08",
+      "title": "STYLE WILD",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20110317045527id_/http://www.distillery.de:80/ex/dates/2011/04/08",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: future floor",
+          "items": [
+            {
+              "name": "ROBOT KOCH",
+              "info": "Jahcoozi, Project Mooncircle, Berlin",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MEDLEIGH",
+              "info": "Resistant Mindz",
+              "link": ""
+            },
+            {
+              "name": "DJ D-FEKT",
+              "info": "snuffpro, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DYZE",
+              "info": "Resistant Mindz",
+              "link": ""
+            },
+            {
+              "name": "MR. BEEF",
+              "info": "Resistant Mindz",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-04-09-mindcookies-meets-syntax",
+      "date": "2011-04-09",
+      "title": "MINDCOOKIES MEETS SYNTAX",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20110317045535id_/http://www.distillery.de:80/ex/dates/2011/04/09",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: mindcookies",
+          "items": [
+            {
+              "name": "ADA – LIVE",
+              "info": "Areal Records",
+              "link": ""
+            },
+            {
+              "name": "IRR",
+              "info": "Kompakt, Köln",
+              "link": ""
+            },
+            {
+              "name": "MARKUS WELBY",
+              "info": "hoerfunk, Distillery, Melt!-Festival",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-04-15-bass-plus-on-the-run",
+      "date": "2011-04-15",
+      "title": "BASS PLUS! & ON THE RUN!",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20110317045546id_/http://www.distillery.de:80/ex/dates/2011/04/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: on the run",
+          "items": [
+            {
+              "name": "SHY FX",
+              "info": "Digital Soundboy, London",
+              "link": ""
+            },
+            {
+              "name": "STAMINA MC",
+              "info": "Digital Soundboy, London",
+              "link": ""
+            },
+            {
+              "name": "DJ K",
+              "info": "Killa Records, Ottawa",
+              "link": ""
+            },
+            {
+              "name": "BOOGA",
+              "info": "dosomethingillegal.info, It's yours, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "RECKLESS",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-04-16-fat-5zig-wtbr",
+      "date": "2011-04-16",
+      "title": "FAT 5ZIG & WTBR",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20110317045556id_/http://www.distillery.de:80/ex/dates/2011/04/16",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: freude am tanzen",
+          "items": [
+            {
+              "name": "KADEBOSTAN – LIVE",
+              "info": "Freude am Tanzen, Mo's Ferry, Fenou, Genf",
+              "link": ""
+            },
+            {
+              "name": "MONKEY MAFFIA",
+              "info": "Freude am Tanzen, Jena",
+              "link": ""
+            },
+            {
+              "name": "DOUGLAS GREED",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-04-21-the-orb-pres-baghdad-batteries",
+      "date": "2011-04-21",
+      "title": "THE ORB PRES. BAGHDAD BATTERIES",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20110317045609id_/http://www.distillery.de:80/ex/dates/2011/04/21",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Ambient-Konzert",
+          "items": [
+            {
+              "name": "THE ORB – LIVE",
+              "info": "Malicious Damage, Kompakt, London",
+              "link": ""
+            },
+            {
+              "name": "SENSUAL. - LIVE",
+              "info": "aka Juno6 & Daniel Stefanik, Start: 22:00, add to Cal, The Orb – Live in Concert",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-04-22-mad-again",
+      "date": "2011-04-22",
+      "title": "MAD AGAIN!",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20110317045629id_/http://www.distillery.de:80/ex/dates/2011/04/22",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: spielkiste",
+          "items": [
+            {
+              "name": "I BUG",
+              "info": "Film & Künstlervorstellung",
+              "link": ""
+            },
+            {
+              "name": "KLEBSTOFF",
+              "info": "Präsentation und VÖ Magazin Nr.3",
+              "link": ""
+            },
+            {
+              "name": "SKIZZENSCHLACHT MAD FLAVA",
+              "info": "Skizzenkontest",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: bass bett",
+          "items": [
+            {
+              "name": "MAX LE DARON",
+              "info": "Brüssel, Belgien",
+              "link": ""
+            },
+            {
+              "name": "MARFLIX",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-04-23-13-jahre-tekknoplanet-part-iii",
+      "date": "2011-04-23",
+      "title": "13 JAHRE TEKKNOPLANET - PART III",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20110317045632id_/http://www.distillery.de:80/ex/dates/2011/04/23",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: “früher war mehr lametta”",
+          "items": [
+            {
+              "name": "MARLOW",
+              "info": "Room with a View, Objektivity, Weimar",
+              "link": ""
+            },
+            {
+              "name": "GABBAGE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "AMIGO DJ TEAM AKA STEPHAN GRIEDER & RICARDO FERREIRA",
+              "info": "SVEK, Stockholm",
+              "link": ""
+            },
+            {
+              "name": "LARS BEHRENROTH",
+              "info": "Deeper Shades of House",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-04-24-ostgut-ton",
+      "date": "2011-04-24",
+      "title": "OSTGUT TON",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20110317045652id_/http://www.distillery.de:80/ex/dates/2011/04/24",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: ost",
+          "items": [
+            {
+              "name": "EFDEMIN",
+              "info": "Dial, Records, Ostgut, Berlin",
+              "link": ""
+            },
+            {
+              "name": "STEFFI",
+              "info": "Ostgut Ton, Panorama Bar / Berghain, Klakson Records, Berlin",
+              "link": ""
+            },
+            {
+              "name": "PHILIPP MATALLA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-04-29-pokerface",
+      "date": "2011-04-29",
+      "title": "POKERFACE",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20110317045705id_/http://www.distillery.de:80/ex/dates/2011/04/29",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: pokersaal - setzen, blöffen, checken, chips verschieben",
+          "items": [
+            {
+              "name": "POKERTURNIER",
+              "info": "Voranmeldung unter: sindy@distillery.de",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: tanzsaal - 30er bis 60er jahre jukebox-style",
+          "items": [
+            {
+              "name": "EDDIE HOT ROD",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "HANS DER JäGER",
+              "info": "Connewitz Grill Mafia, Leipzig-Connewitz",
+              "link": ""
+            },
+            {
+              "name": "DJ YORK",
+              "info": "Könich Heinz",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-04-30-moon-harbour-flights-pres-five-years-cargo-edition",
+      "date": "2011-04-30",
+      "title": "MOON HARBOUR FLIGHTS PRES. FIVE YEARS CARGO EDITION",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20110317045720id_/http://www.distillery.de:80/ex/dates/2011/04/30",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: moon harbour",
+          "items": [
+            {
+              "name": "MARTIN LANDSKY",
+              "info": "Intim, Dessous, Pokerflat",
+              "link": ""
+            },
+            {
+              "name": "DAN DRASTIC",
+              "info": "Moon Harbour, Hairy Claw, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: cargo edition",
+          "items": [
+            {
+              "name": "EKKOHAUS",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "- LIVE + DJ",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

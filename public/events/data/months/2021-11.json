@@ -1,0 +1,312 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2021-11-05-ptk-leipzig-gomorrha",
+      "date": "2021-11-05",
+      "title": "PTK LEIPZIG & GOMORRHA",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20211021110650id_/https://www.distillery.de/ex/dates/2021/11/05",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: SUPPORT:",
+          "items": [
+            {
+              "name": "PTK",
+              "info": "Leipzig & Gomorrha",
+              "link": ""
+            },
+            {
+              "name": "MCE",
+              "info": "SuedKiez, 7030, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "TIMSLINE & DERNOIE // DEINEMAFA",
+              "info": "Start: 19:00, add to Cal, VVK kommt bald!, Einlass: 19:00, Beginn: 20:00",
+              "link": ""
+            },
+            {
+              "name": "FR. 05.11.21 NAKT RAVE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "up:",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-11-06-saturday-rave",
+      "date": "2021-11-06",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20211021123901id_/https://www.distillery.de/ex/dates/2021/11/06",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ROMAN FLüGEL",
+              "info": "Dial, ESP Institute",
+              "link": ""
+            },
+            {
+              "name": "FRANZISKA BERNS",
+              "info": "Robert Johnson",
+              "link": ""
+            },
+            {
+              "name": "WILHELM",
+              "info": "IFZ",
+              "link": ""
+            },
+            {
+              "name": "MAURO CARACHO",
+              "info": "Distillery, Fäncy, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "LSDXOXO",
+              "info": "Floorgasm, XL Recordings",
+              "link": ""
+            },
+            {
+              "name": "ATALANTA",
+              "info": "Distillery, Inferis",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-11-13-saturday-rave",
+      "date": "2021-11-13",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20211021123420id_/https://www.distillery.de/ex/dates/2021/11/13",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SAN PROPER",
+              "info": "Netherlands",
+              "link": ""
+            },
+            {
+              "name": "PRELLER",
+              "info": "Tet Musik, Vice, detektor.fm",
+              "link": ""
+            },
+            {
+              "name": "MIAMI MüLLER B2B DJ RIJKAARD",
+              "info": "Music for human people, young shields",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "JP ENFANT",
+              "info": "LET Recordings, DGTL",
+              "link": ""
+            },
+            {
+              "name": "FRAU ZIMMER",
+              "info": "technose",
+              "link": ""
+            },
+            {
+              "name": "NINETTE",
+              "info": "Distillery, LÄRM",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-11-19-seelen",
+      "date": "2021-11-19",
+      "title": "SEELEN.",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20211021113516id_/https://www.distillery.de/ex/dates/2021/11/19",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SUE LèWIG - LIVE",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "JANEIN",
+              "info": "SEELEN",
+              "link": ""
+            },
+            {
+              "name": "VERSCHWENDER",
+              "info": "SEELEN., Emerald",
+              "link": ""
+            },
+            {
+              "name": "NARCISS",
+              "info": "SEELEN., Lobster Theremin",
+              "link": ""
+            },
+            {
+              "name": "KARAPAPAK",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "SHALEEN",
+              "info": "SEELEN., BPitch",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-11-20-o-rs-house-nation-ind55-record-release",
+      "date": "2021-11-20",
+      "title": "O*RS HOUSE NATION IND55 - RECORD RELEASE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20211021122924id_/https://www.distillery.de/ex/dates/2021/11/20",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DJ BORING",
+              "info": "Technicolour",
+              "link": ""
+            },
+            {
+              "name": "LEA LISA",
+              "info": "Phonica, Karakul",
+              "link": ""
+            },
+            {
+              "name": "FILBURT",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SHURAY & WALLE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "SENTA JULIEN",
+              "info": "ELI-Family",
+              "link": ""
+            },
+            {
+              "name": "PATRICK DRE",
+              "info": "Drec",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-11-26-boundless-beatz",
+      "date": "2021-11-26",
+      "title": "BOUNDLESS BEATZ",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20211021112627id_/https://www.distillery.de/ex/dates/2021/11/26",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Liquid Funk / Deep",
+          "items": [
+            {
+              "name": "ZERO T",
+              "info": "Dispatch, Metalheadz, UK",
+              "link": ""
+            },
+            {
+              "name": "MK PHILOW",
+              "info": "PUSH GANG, basscomesaveme",
+              "link": ""
+            },
+            {
+              "name": "ALOO",
+              "info": "Fat Bemme",
+              "link": ""
+            },
+            {
+              "name": "AUDITE",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DUBBALOT",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: Neurofunk / Dark",
+          "items": [
+            {
+              "name": "MISANTHROP",
+              "info": "Neosignal, RAM, Critical, Blackout, Division",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

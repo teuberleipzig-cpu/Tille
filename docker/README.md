@@ -88,8 +88,9 @@ kein Deployment aus.
 
 ## Inhaltsauslieferung
 
-Die öffentlichen Seiten lesen `public/events/data/events.json` und
-`public/residents/data/residents.json` aus dem Image, nicht direkt von GitHub. Der
+Die öffentlichen Seiten lesen Events über `public/events/data/manifest.json` und
+die Monatsdateien unter `public/events/data/months/`. Residents kommen weiterhin
+aus `public/residents/data/residents.json` im Image, nicht direkt von GitHub. Der
 bestehende STAGING-Weg ist daher: Admin-Commit auf `main`, Image-Build, serverseitiger
 Pull und Container-Reload. Für LIVE muss dieser Ablauf getrennt definiert werden.
 

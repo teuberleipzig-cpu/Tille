@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "ra-2254867",
+      "date": "2025-09-13",
+      "title": "Saturday Rave /w. Tijana T & Shaleen",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2254867",
+      "imageUrl": "",
+      "description": "Start: 21:00\nEnde: 08:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Stiwahn",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Tijana T",
+              "info": "Abe Duque Records, Belgrad",
+              "link": ""
+            },
+            {
+              "name": "I$A",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Franz!",
+              "info": "Kalif Storch, Muna Musik, Paracou",
+              "link": ""
+            },
+            {
+              "name": "Shaleen",
+              "info": "SEELEN., BPitch",
+              "link": ""
+            },
+            {
+              "name": "JANEIN",
+              "info": "SEELEN",
+              "link": ""
+            },
+            {
+              "name": "0-Dimensional",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2254891",
+      "date": "2025-09-26",
+      "title": "ReOpening Fridayclub - UK Takeover",
+      "color": "olive",
+      "moreUrl": "https://ra.co/events/2254891",
+      "imageUrl": "",
+      "description": "Start: 22:00\nEnde: 07:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "DJ Flight",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Ama (UK)",
+              "info": "UK",
+              "link": ""
+            },
+            {
+              "name": "Cuepric",
+              "info": "Bass Focu",
+              "link": ""
+            },
+            {
+              "name": "Dubbalot",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Just Jane",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "J Nuggetz",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2256153",
+      "date": "2025-09-27",
+      "title": "Saturday Rave /w. Mathias Kaden, Pauli Pocket, Rikhter",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2256153",
+      "imageUrl": "",
+      "description": "Start: 21:00\nEnde: 09:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Mathias Kaden",
+              "info": "Paracou",
+              "link": ""
+            },
+            {
+              "name": "Pauli Pocket",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Dilivius Lenni",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "RIKHTER",
+              "info": "R Label Group",
+              "link": ""
+            },
+            {
+              "name": "Ninette",
+              "info": "Distillery, LÄRM",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

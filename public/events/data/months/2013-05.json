@@ -1,0 +1,531 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2013-05-03-tanz-auf-dem-vulkan-die-album-release-gala",
+      "date": "2013-05-03",
+      "title": "TANZ AUF DEM VULKAN - DIE ALBUM RELEASE GALA",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20130419094030id_/http://distillery.de:80/ex/dates/2013/05/03",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: dancehall, reggae, hip hop",
+          "items": [
+            {
+              "name": "RONNY TRETTMANN – LIVE",
+              "info": "Heckert Empire",
+              "link": ""
+            },
+            {
+              "name": "+ SPECIAL GUESTS",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "SUPERSONIC SOUND",
+              "info": "Supersonic, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DJ SENSAY",
+              "info": "Rockstone Sound, ISwagga",
+              "link": ""
+            },
+            {
+              "name": "KID GRINGO",
+              "info": "Heckert Empire",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-05-04-no-choice-meets-feenstaub-friends",
+      "date": "2013-05-04",
+      "title": "NO CHOICE MEETS FEENSTAUB & FRIENDS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20130419094034id_/http://distillery.de:80/ex/dates/2013/05/04",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: no choice",
+          "items": [
+            {
+              "name": "REY & KJAVIK",
+              "info": "Exploited, Compost Black Label",
+              "link": ""
+            },
+            {
+              "name": "SCHLEPP GEIST – LIVE",
+              "info": "Underyourskin Records, Rostock",
+              "link": ""
+            },
+            {
+              "name": "DILIVIUS LENNI",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SCHMLZ & SCHN",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "PALETTE700",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-05-08-finest-selection",
+      "date": "2013-05-08",
+      "title": "FINEST SELECTION",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20130419094039id_/http://distillery.de:80/ex/dates/2013/05/08",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: finest selection",
+          "items": [
+            {
+              "name": "WAREIKA – LIVE",
+              "info": "Visionquest, Connaisseur, Perlon, Tartelet, Future Classic, Berlin/Hamburg",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-05-10-livelyrix-poetry-slam",
+      "date": "2013-05-10",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20130419094045id_/http://distillery.de:80/ex/dates/2013/05/10",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: illustre wortgefechte",
+          "items": [
+            {
+              "name": "MARVIN RUPPERT",
+              "info": "Marburg",
+              "link": ""
+            },
+            {
+              "name": "SARAH BOSETTI",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "PAUL BOKOWSKI",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "MAX RADEMANN",
+              "info": "Lesebühne Sax Royal",
+              "link": ""
+            },
+            {
+              "name": "U.V.M.",
+              "info": "und wie immer viele mehr",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-05-11-dystopian",
+      "date": "2013-05-11",
+      "title": "DYSTOPIAN",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20130419094050id_/http://distillery.de:80/ex/dates/2013/05/11",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: dystopian",
+          "items": [
+            {
+              "name": "RECONDITE – LIVE",
+              "info": "Dystopian, Plangent Records",
+              "link": ""
+            },
+            {
+              "name": "DON WILLIAMS",
+              "info": "Mojuba Records",
+              "link": ""
+            },
+            {
+              "name": "VINCENT NEUMANN",
+              "info": "Distillery, Unitas Multiplex, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-05-14-legends-never-die",
+      "date": "2013-05-14",
+      "title": "LEGENDS NEVER DIE",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20130418075818id_/http://distillery.de:80/ex/dates/2013/05/14",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: legends never die",
+          "items": [
+            {
+              "name": "R.A. THE RUGGED MAN - LIVE",
+              "info": "New York",
+              "link": ""
+            },
+            {
+              "name": "+ GUESTS",
+              "info": "Start: 20:00 (Einlass), 21:00 (Beginn), add to Cal, Rugged in the town. About your culture und Spitainment pres., R.A. The Rugged Man, – Live und in Farbe! Im Gepäck hat er sein neu erschienenes Album \"Legends Never Die\"., Zum",
+              "link": ""
+            },
+            {
+              "name": "VORVERKAUF",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-05-15-baddas-radio-show-uplitment-intl-pres-ward-21",
+      "date": "2013-05-15",
+      "title": "BADDAS RADIO SHOW & UPLITMENT INTL. PRES. WARD 21",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20190920042357id_/http://www.distillery.de/ex/dates/2013/05/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: ward21",
+          "items": [
+            {
+              "name": "WARD 21",
+              "info": "Greensleeves, Kingston, Jamaica",
+              "link": ""
+            },
+            {
+              "name": "UPLIFTMENT INTERNATIONAL",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MR. DAGGA",
+              "info": "Caribbean Nice Up",
+              "link": ""
+            },
+            {
+              "name": "SELECTAH SPINBACK",
+              "info": "Spinbaclaat/ DaSwitch, Leipzig, Start: 21:00, add to Cal, \"Mentally Disturbed\" hieß das erste Album, was ja auch nahe liegt wenn man den Crewnamen nach der Psychiatrieabteilung des Universitätskrankenhauses in Kingston wählt. Textlich gesehen setzt sich dieser rote Faden durchaus fort und führte am Ende zu Hits wie \"Ganja Smoke\", \"Reggae Pledge\", \"Garrisson\", \"Grimey\" oder \"Petrol\" auf dem Remake des wunderbaren Peenie Peenie Riddim. In den letzten Jahren ist es um Suku, Rumblood und Kunley leider etwas ruhig geworden. Das letzte gemeinsame Album liegt schon ein paar Jahre zurück und die Europa-Tourneen wurden seltener. Umso schöner, sie heute zum ersten Mal live in Leipzig begrüßen zu können, denn ihre Bühnenshow ist nachwievor unschlagbar. U know how we roll!, https://www.facebook.com/Ward21Music, http://www.da-switch.de",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-05-15-germaica-pres-ward-21",
+      "date": "2013-05-15",
+      "title": "GERMAICA PRES. WARD 21",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20130419094055id_/http://distillery.de:80/ex/dates/2013/05/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: ward21",
+          "items": [
+            {
+              "name": "WARD 21 – LIVE",
+              "info": "Greensleeves, Kingston, Jamaica",
+              "link": ""
+            },
+            {
+              "name": "UPLIFTMENT INTERNATIONAL",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MR. DAGGA",
+              "info": "Caribbean Nice Up",
+              "link": ""
+            },
+            {
+              "name": "SELECTAH SPINBACK",
+              "info": "Da Switch, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-05-17-style-wild-xtra-large",
+      "date": "2013-05-17",
+      "title": "STYLE WILD XTRA LARGE",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20130419094105id_/http://distillery.de:80/ex/dates/2013/05/17",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: hip hop, beats, wonky, trap",
+          "items": [
+            {
+              "name": "ROBOT KOCH",
+              "info": "Project Mooncircle, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DJ SICSTYLE",
+              "info": "Spitainment",
+              "link": ""
+            },
+            {
+              "name": "DJ D-FEKT",
+              "info": "Resistant Mindz, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: overdubclub",
+          "items": [
+            {
+              "name": "OVERDUBCLUB",
+              "info": "Beatmaking Jam Session - join if you like to",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "special:",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-05-18-up-home-tri-down-roam",
+      "date": "2013-05-18",
+      "title": "UP HOME TRI DOWN ROAM",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20130419094112id_/http://distillery.de:80/ex/dates/2013/05/18",
+      "imageUrl": "",
+      "description": "WHO:BE",
+      "sections": [
+        {
+          "label": "up: oh give me a home...“ WHO:",
+          "items": [
+            {
+              "name": "GESCHWISTER SCHUMANN - LIVE",
+              "info": "Symbiont Music, Berlin",
+              "link": ""
+            },
+            {
+              "name": "BE",
+              "info": "Golden Gate, Berlin",
+              "link": ""
+            },
+            {
+              "name": "EINER VON VIEREN",
+              "info": "Horch & Guck, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DANIEL SAILER",
+              "info": "Distillery, Where the Buffalo Roam",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-05-19-live-at-robert-johnson-the-lifesaver-tour-2013-part-i",
+      "date": "2013-05-19",
+      "title": "LIVE AT ROBERT JOHNSON - THE LIFESAVER TOUR 2013 PART I",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20130418133349id_/http://distillery.de:80/ex/dates/2013/05/19",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: lifesaver",
+          "items": [
+            {
+              "name": "ATA",
+              "info": "Live At Robert Johnson",
+              "link": ""
+            },
+            {
+              "name": "OLIVER HAFENBAUER",
+              "info": "Live At Robert Johnson",
+              "link": ""
+            },
+            {
+              "name": "HW RHAPSODY",
+              "info": "Onetake, Liebkos, Miami Müller, Leipzig), Start: 23:00",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-05-24-nachtflohmarkt-no-3",
+      "date": "2013-05-24",
+      "title": "NACHTFLOHMARKT NO.3",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20130419094117id_/http://distillery.de:80/ex/dates/2013/05/24",
+      "imageUrl": "",
+      "description": "(NACHT)FLOHMARKT\nStart: 18:00\nNachtflohmarkt die 3te!\nAb 18 Uhr kann Musik, Kunst, Trödel, Klamotten, Altes, Neues, Selbstgestaltetes und noch viel mehr erworben oder getauscht werden. Wer mit einem Stand vertreten sein möchte meldet sich bitte unter urban@distillery.de an.\nAchtung: Findet auch bei Regen statt (dann nur drinnen).",
+      "sections": [
+        {
+          "label": "up: tauschen, gaubeln, trödeln",
+          "items": [
+            {
+              "name": "FENSTER ZUM HOF",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-05-25-riotvan",
+      "date": "2013-05-25",
+      "title": "RIOTVAN",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20130419094122id_/http://distillery.de:80/ex/dates/2013/05/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: riotvan",
+          "items": [
+            {
+              "name": "MANO LE TOUGH",
+              "info": "Permanent Vacation, Internasjonal, Mirau",
+              "link": ""
+            },
+            {
+              "name": "PETER INVASION",
+              "info": "Riotvan, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "FILBURT",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-05-31-knicklicht-800-kilogramm-hot-glue",
+      "date": "2013-05-31",
+      "title": "KNICKLICHT - 800 KILOGRAMM HOT GLUE",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20130419094127id_/http://distillery.de:80/ex/dates/2013/05/31",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "down: 800 kilo hot glue",
+          "items": [
+            {
+              "name": "MEFJUS",
+              "info": "Critical, Bad Taste, Trust in Music, Linz",
+              "link": ""
+            },
+            {
+              "name": "NEONLIGHT",
+              "info": "Lifted Music, BSE, Trust in Music, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "WINTERMUTE",
+              "info": "Blackout / Boundless Beatz",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-05-31-pass-out-the-dnb-trap-juke-footwork-edition",
+      "date": "2013-05-31",
+      "title": "PASS OUT !¿! - THE DNB/TRAP/JUKE/FOOTWORK EDITION",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20130610100039id_/http://www.distillery.de:80/ex/dates/2013/05/31",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "NEONLIGHT",
+              "info": "Lifted Music, BSE, Trust in Music, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BLANKK DISC",
+              "info": "Masterout, Hyperion Crome",
+              "link": ""
+            },
+            {
+              "name": "WINTERMUTE",
+              "info": "Blackout / Boundless Beatz",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

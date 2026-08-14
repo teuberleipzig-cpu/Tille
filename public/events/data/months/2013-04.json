@@ -1,0 +1,394 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2013-04-05-livelyrix-poetry-slam",
+      "date": "2013-04-05",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20130315011854id_/http://www.distillery.de:80/ex/dates/2013/04/05",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: sportliche verbalelfmeter",
+          "items": [
+            {
+              "name": "PIERRE JARAWAN",
+              "info": "Stuttgart",
+              "link": ""
+            },
+            {
+              "name": "DENNIS SCHULZ",
+              "info": "Augsburg",
+              "link": ""
+            },
+            {
+              "name": "MAX KENNEL",
+              "info": "Bamberg",
+              "link": ""
+            },
+            {
+              "name": "VOLKER SURMANN",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "LUISE FRENZEL",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-04-06-chitlin-circuit-meets-bass-plus",
+      "date": "2013-04-06",
+      "title": "CHITLIN' CIRCUIT MEETS BASS PLUS!",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20130315011859id_/http://www.distillery.de:80/ex/dates/2013/04/06",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: chitlin' circuit",
+          "items": [
+            {
+              "name": "WILLIAM KOUAM DJOKO – LIVE",
+              "info": "Late Night Society, Trouw, Niederlande",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: bass plus!",
+          "items": [
+            {
+              "name": "USUNOV",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-04-12-outlook-festival-launch-party",
+      "date": "2013-04-12",
+      "title": "OUTLOOK FESTIVAL LAUNCH PARTY",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20130315011904id_/http://www.distillery.de:80/ex/dates/2013/04/12",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: dubstep, wonky, uk bass",
+          "items": [
+            {
+              "name": "SILKIE",
+              "info": "Deep Medi, London",
+              "link": ""
+            },
+            {
+              "name": "PAUL PRE",
+              "info": "Vast, Kiel",
+              "link": ""
+            },
+            {
+              "name": "SUBMISSION CREW",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DOWNTOWNLYRICS SOUNDSYSTEM",
+              "info": "Malcolm & Full Contact, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BASSMENT ROCKAZ",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-04-13-mindcookies-meets-down-stars",
+      "date": "2013-04-13",
+      "title": "MINDCOOKIES MEETS DOWN STARS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20130315011909id_/http://www.distillery.de:80/ex/dates/2013/04/13",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: mindcookies",
+          "items": [
+            {
+              "name": "EFDEMIN",
+              "info": "Dial, Records, Ostgut, Berlin",
+              "link": ""
+            },
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "mindcookies, Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: definition",
+          "items": [
+            {
+              "name": "CHRISTIAN FISCHER",
+              "info": "Definition Records",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-04-18-semesterauftaktparty-der-fachschatsraete",
+      "date": "2013-04-18",
+      "title": "SEMESTERAUFTAKTPARTY DER FACHSCHATSRÄTE",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20130406081550id_/http://www.distillery.de:80/ex/dates/2013/04/18",
+      "imageUrl": "",
+      "description": "Start: 22:00\nFENSTER ZUM HOF\nSIGN UP!\nDOWNLOAD PDF",
+      "sections": []
+    },
+    {
+      "id": "2013-04-19-sabor-pachangero-gets-mad-again",
+      "date": "2013-04-19",
+      "title": "SABOR-PACHANGERO GETS MAD AGAIN!",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20130315011914id_/http://www.distillery.de:80/ex/dates/2013/04/19",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: cumbia, reggaeton, merengue, salsa",
+          "items": [
+            {
+              "name": "DJANE AKIRE",
+              "info": "Lapa*Changa",
+              "link": ""
+            },
+            {
+              "name": "PAPITO GONZALES",
+              "info": "Sabor Latino",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: african rythms, global bass",
+          "items": [
+            {
+              "name": "CHABWERA BANDA",
+              "info": "Woza this is africa, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "PABLO GUNZALES",
+              "info": "Mad Again!",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-04-20-correspondant-meets-syntax",
+      "date": "2013-04-20",
+      "title": "CORRESPONDANT MEETS SYNTAX",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20130315011919id_/http://www.distillery.de:80/ex/dates/2013/04/20",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: correspondant",
+          "items": [
+            {
+              "name": "JENNIFER CARDINI",
+              "info": "Kompakt, Kill The DJ, Correspondant, Paris",
+              "link": ""
+            },
+            {
+              "name": "KALI AVAAZ",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: syntax",
+          "items": [
+            {
+              "name": "BILL YOUNGMAN",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-04-24-style-wild-xtra",
+      "date": "2013-04-24",
+      "title": "STYLE WILD XTRA",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20130315011924id_/http://www.distillery.de:80/ex/dates/2013/04/24",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: beats, wonky, glitch, juke",
+          "items": [
+            {
+              "name": "DAEDELUS – LIVE",
+              "info": "Brainfeed, Ninja Tune, Los Angeles",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MEDLEIGH - LIVE",
+              "info": "Resistant Mindz",
+              "link": ""
+            },
+            {
+              "name": "DUKTUS",
+              "info": "Resistant Mindz, Start: 21:00, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-04-26-clash-of-the-bass-titans-pt-2",
+      "date": "2013-04-26",
+      "title": "CLASH OF THE BASS TITANS PT. 2",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20130315011930id_/http://www.distillery.de:80/ex/dates/2013/04/26",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: jungle, hip hop, dancehall, dubstep, uk bass, d'n'b",
+          "items": [
+            {
+              "name": "SUB PLUS",
+              "info": "Submission & Bass Plus",
+              "link": ""
+            },
+            {
+              "name": "VS.",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "RUFF AND TUFF",
+              "info": "Caribbean Nice Up & Woza this is africa",
+              "link": ""
+            },
+            {
+              "name": "ULAN BATOR",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "DOWNTOWN LYRICS",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-04-27-katermukke",
+      "date": "2013-04-27",
+      "title": "KATERMUKKE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20130313090958id_/http://www.distillery.de:80/ex/dates/2013/04/27",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: katermukke",
+          "items": [
+            {
+              "name": "DIRTY DOERING",
+              "info": "Bar25, KaterHolzig, Berlin",
+              "link": ""
+            },
+            {
+              "name": "MARCUS MEINHARDT",
+              "info": "uponyou, home sweet home, berlin",
+              "link": ""
+            },
+            {
+              "name": "SVEN DOHSE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-04-30-moon-harbour-showcase",
+      "date": "2013-04-30",
+      "title": "MOON HARBOUR SHOWCASE",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20130313091049id_/http://www.distillery.de:80/ex/dates/2013/04/30",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: moonharbour",
+          "items": [
+            {
+              "name": "ANJA SCHNEIDER",
+              "info": "Mobilee, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DAN DRASTIC",
+              "info": "Moon Harbour, Hairy Claw, Leipzig), Start: 23:00, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,375 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2014-03-01-ostgut-ton",
+      "date": "2014-03-01",
+      "title": "OSTGUT TON",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20140309100049id_/http://distillery.de:80/ex/dates/2014/03/01",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ANTHONY PARASOLE",
+              "info": "OstGut Ton, Deconstruct, The Corner, New York",
+              "link": ""
+            },
+            {
+              "name": "TAMA SUMO",
+              "info": "Panorama Bar / Berghain, Berlin",
+              "link": ""
+            },
+            {
+              "name": "LOOTBEG",
+              "info": "Afin, Esoulate, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2014-03-07-livelyrix-poetry-slam",
+      "date": "2014-03-07",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20140310202742id_/http://www.distillery.de:80/ex/dates/2014/03/07",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: herzliches buchstabengewirr MODERATION:",
+          "items": [
+            {
+              "name": "HAZEL BRUGGER",
+              "info": "Zürich",
+              "link": ""
+            },
+            {
+              "name": "PETER PARKSTER",
+              "info": "Nürnberg",
+              "link": ""
+            },
+            {
+              "name": "KADDI CUTZ",
+              "info": "Dresden",
+              "link": ""
+            },
+            {
+              "name": "U.V.M.",
+              "info": "und wie immer viele mehr",
+              "link": ""
+            },
+            {
+              "name": "CHRISTIAN MEYER",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2014-03-08-kapitalismus-jetzt-record-release-pampa-meets-definition",
+      "date": "2014-03-08",
+      "title": "KAPITALISMUS JETZT RECORD RELEASE & PAMPA MEETS DEFINITION",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20160331133138id_/http://www.distillery.de/ex/dates/2014/03/08",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: pampa",
+          "items": [
+            {
+              "name": "ADA",
+              "info": "Pampa, Areal Records",
+              "link": ""
+            },
+            {
+              "name": "IRR",
+              "info": "Kompakt, Köln",
+              "link": ""
+            },
+            {
+              "name": "DüRERSTUBEN",
+              "info": "Pampa",
+              "link": ""
+            },
+            {
+              "name": "URSL",
+              "info": "Laut & Luise",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2014-03-12-pentatones-the-mosaique-beat-ensemble-on-a-future-trip-to-unknown-sounds",
+      "date": "2014-03-12",
+      "title": "PENTATONES - THE MOSAIQUE BEAT ENSEMBLE ON A FUTURE TRIP TO UNKNOWN SOUNDS",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20140312004238id_/http://www.distillery.de:80/ex/dates/2014/03/12",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: elektropop, house...",
+          "items": [
+            {
+              "name": "PENTATONES",
+              "info": "Berlin/Leipzig",
+              "link": ""
+            },
+            {
+              "name": "GIMMIX",
+              "info": "Stiff Little Spinners, Audiolith",
+              "link": ""
+            },
+            {
+              "name": "KONTER",
+              "info": "Interstellar Paradise, Distillery",
+              "link": ""
+            },
+            {
+              "name": "SENCHA",
+              "info": "Distillery, Bass Plus, Mad Again!, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2014-03-13-mindfield-record-release",
+      "date": "2014-03-13",
+      "title": "MINDFIELD RECORD RELEASE",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20140313045107id_/http://www.distillery.de:80/ex/dates/2014/03/13",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: mindfield",
+          "items": [
+            {
+              "name": "LANDGRAF",
+              "info": "Cäsar Music, Leipzig, Start: 20:00, add to Cal, Landgraf, – das ist die Band des Leipziger Sängers, Gitarristen und Songwriters Enrico Landgraf. Das musikalische Fundament bilden die langjährigen Bandmitglieder Torsten Wolf (Art of Voices) am Schlagzeug, Felix Richter (Substanz) am Bass und der britische Gitarrist Michael Hull (Godflesh, The Mission). Zusammen bringen sie ein Potpourri aus starkem Sound, klassischen Rock-Arrangements und gefühlvollen aber auch druckvollen Songs auf die Bühne. Einflüsse US-amerikanischer Bands wie Counting Crows oder den Foo Fighters tauchen in ihrer Musik auf – aber Landgraf ist keine Kopie. Das neue Album nimmt uns mit auf eine Reise durch die Geschichte der Musiker und viele viele Jahre Bühnenpräsenz. Viele Richtungen, etliche Wege aber stets einen roten Faden vor Augen – Landgrafs Musik lebt.",
+              "link": ""
+            },
+            {
+              "name": "FENSTER ZUM HOF",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2014-03-14-8-years-vibes-ambassadors",
+      "date": "2014-03-14",
+      "title": "8 YEARS VIBES AMBASSADORS",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20140312005221id_/http://www.distillery.de:80/ex/dates/2014/03/14",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: jungle, reggae, swing, dnb, dubstep",
+          "items": [
+            {
+              "name": "DJ K",
+              "info": "Killa Records, Ottawa",
+              "link": ""
+            },
+            {
+              "name": "MC MYSTIC DAN",
+              "info": "I-Spect, Braunschweig",
+              "link": ""
+            },
+            {
+              "name": "VIBES AMBASSADORS",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "J PATTERSON - LIVE",
+              "info": "Halle",
+              "link": ""
+            },
+            {
+              "name": "LOCO",
+              "info": "Artension Team, Native Vibes",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2014-03-15-in-technicolor",
+      "date": "2014-03-15",
+      "title": "IN TECHNICOLOR",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20160330133124id_/http://www.distillery.de/ex/dates/2014/03/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: in technicolor",
+          "items": [
+            {
+              "name": "COMA",
+              "info": "Kompakt, Köln",
+              "link": ""
+            },
+            {
+              "name": "FILBURT",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "O*RS",
+              "info": "Permanent Vacation, Riotvan, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "OH!HENRY",
+              "info": "Electronic Resistance",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2014-03-21-zwischenwelten",
+      "date": "2014-03-21",
+      "title": "ZWISCHENWELTEN",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20140312004258id_/http://www.distillery.de:80/ex/dates/2014/03/21",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: same",
+          "items": [
+            {
+              "name": "SOULSTONE",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "DR. ESCHER",
+              "info": "Halle",
+              "link": ""
+            },
+            {
+              "name": "MADAM CLOCHARG",
+              "info": "Freedom Lion, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MONGOOSE",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "MEEHAL",
+              "info": "Ovnimoon Records, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: different",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2014-03-28-pass-out",
+      "date": "2014-03-28",
+      "title": "PASS OUT !?!",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20160503101130id_/http://www.distillery.de/ex/dates/2014/03/28",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "down: grime, uk bass, footwork, trap, juke",
+          "items": [
+            {
+              "name": "TERROR DANJAH",
+              "info": "Hyperdub, London",
+              "link": ""
+            },
+            {
+              "name": "KATOR & ALZA54",
+              "info": "Defrostatica, Modern Trips",
+              "link": ""
+            },
+            {
+              "name": "PEAK PHINE",
+              "info": "Distillery, Bass Plus, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MALCOLM",
+              "info": "Downtownlyrics",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2014-03-29-tanztee-meets-where-the-buffalo-roam",
+      "date": "2014-03-29",
+      "title": "TANZTEE MEETS WHERE THE BUFFALO ROAM",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20140310182224id_/http://distillery.de:80/ex/dates/2014/03/29",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: tanztee",
+          "items": [
+            {
+              "name": "DOUGLAS GREED",
+              "info": "Freude am Tanzen, Jena",
+              "link": ""
+            },
+            {
+              "name": "GUNJAH",
+              "info": "Showboxx, Funkwelt, Dresden",
+              "link": ""
+            },
+            {
+              "name": "DILIVIUS LENNI",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

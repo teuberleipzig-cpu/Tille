@@ -1,0 +1,445 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "ra-2264349",
+      "date": "2025-10-02",
+      "title": "Thursday Rave /w. Michael Mayer, Oliver Rosemann",
+      "color": "yellow",
+      "moreUrl": "https://ra.co/events/2264349",
+      "imageUrl": "",
+      "description": "Start: 21:00\nEnde: 09:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Michael Mayer",
+              "info": "Kompakt, Köln",
+              "link": ""
+            },
+            {
+              "name": "Gunjah",
+              "info": "Showboxx, Funkwelt, Dresden",
+              "link": ""
+            },
+            {
+              "name": "Poppy",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Oliver Rosemann",
+              "info": "Recorded Things, Mindtrip, Mord",
+              "link": ""
+            },
+            {
+              "name": "JANEIN",
+              "info": "SEELEN",
+              "link": ""
+            },
+            {
+              "name": "Medha",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Thomas Stieler",
+              "info": "Distillery, Paracou",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2264351",
+      "date": "2025-10-04",
+      "title": "Saturday Rave /w. Chloé, Denise Rabe, Vincent Neumann",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2264351",
+      "imageUrl": "",
+      "description": "Start: 21:00\nEnde: 09:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Chloé",
+              "info": "Paris",
+              "link": ""
+            },
+            {
+              "name": "Peter Invasion",
+              "info": "Riotvan, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Denise Rabe",
+              "info": "Stroboscopic Artefacts",
+              "link": ""
+            },
+            {
+              "name": "Vincent Neumann",
+              "info": "Distillery, Unitas Multiplex, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "noxsonos",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2275864",
+      "date": "2025-10-10",
+      "title": "toBASSgo #13",
+      "color": "olive",
+      "moreUrl": "https://ra.co/events/2275864",
+      "imageUrl": "",
+      "description": "Start: 22:00\nEnde: 06:30 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Gourski",
+              "info": "Nibirii",
+              "link": ""
+            },
+            {
+              "name": "Lay.Dee Strange",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2276484",
+      "date": "2025-10-11",
+      "title": "Saturday Rave //w. Damon Jee, Ignez, Action Bronko",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2276484",
+      "imageUrl": "",
+      "description": "Start: 21:00\nEnde: 09:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Damon Jee",
+              "info": "Dischi Autunno, Correspondant, Critical Monday",
+              "link": ""
+            },
+            {
+              "name": "Napoleon Dynamite",
+              "info": "Fäncy, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Ignez",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Stigmatique",
+              "info": "Distillery, SEELEN",
+              "link": ""
+            },
+            {
+              "name": "STRUMM.",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2279637",
+      "date": "2025-10-17",
+      "title": "33YRS PT.1 X FRIDAYCLUB",
+      "color": "olive",
+      "moreUrl": "https://ra.co/events/2279637",
+      "imageUrl": "",
+      "description": "Start: 22:00\nEnde: 07:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Samurai Breaks",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "mʊdʌki",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "DjBadshape",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LXC",
+              "info": "Alphacut, 45Seven, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "RARRI",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "audite",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Azaleh",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2276496",
+      "date": "2025-10-18",
+      "title": "33YRS PT.2",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2276496",
+      "imageUrl": "",
+      "description": "Start: 21:00\nEnde: 09:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Andreas Eckhardt",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Ellen Allien",
+              "info": "BPitch, Berlin",
+              "link": ""
+            },
+            {
+              "name": "Hypnosta",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "lena xx",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Lydia Eisenblätter",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "The Chord Memory Club",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Thomas Stieler",
+              "info": "Distillery, Paracou",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2279733",
+      "date": "2025-10-24",
+      "title": "Delirium at Distillery",
+      "color": "olive",
+      "moreUrl": "https://ra.co/events/2279733",
+      "imageUrl": "",
+      "description": "Start: 23:00\nEnde: 06:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Dreimal T",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Paul Weck",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "voivittu",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2276498",
+      "date": "2025-10-25",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2276498",
+      "imageUrl": "",
+      "description": "Start: 21:00\nEnde: 09:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "BIGALKE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DYROFF",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Franziska Berns",
+              "info": "Robert Johnson",
+              "link": ""
+            },
+            {
+              "name": "O.B.I. (DE)",
+              "info": "DE",
+              "link": ""
+            },
+            {
+              "name": "pokka",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Richard Brook",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2276508",
+      "date": "2025-10-30",
+      "title": "10 YEARS SHURAY & WALLE X ZAN",
+      "color": "yellow",
+      "moreUrl": "https://ra.co/events/2276508",
+      "imageUrl": "",
+      "description": "Start: 20:00\nEnde: 10:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Cynthia Matisse",
+              "info": "Weimar",
+              "link": ""
+            },
+            {
+              "name": "DJ Dustin",
+              "info": "Giegling",
+              "link": ""
+            },
+            {
+              "name": "LUZI (2)",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Naomi (Berlin)",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "Siggi Petrol",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "DJ STIMULA",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Submod",
+              "info": "Distillery, vaertism, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "XDB",
+              "info": "Göttingen",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2272357",
+      "date": "2025-10-31",
+      "title": "Proper Pull pres. Proper Rave: Haunted Edition",
+      "color": "olive",
+      "moreUrl": "https://ra.co/events/2272357",
+      "imageUrl": "",
+      "description": "Start: 23:00\nEnde: 06:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "aykanakdag",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "ch4r20tte",
+              "info": "propperpullposse, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Gladee",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "nea.cuajo",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,367 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2017-01-06-livelyrix-poetry-slam",
+      "date": "2017-01-06",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20170126144056id_/http://www.distillery.de:80/ex/dates/2017/01/06",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MONA HARRY",
+              "info": "Hamburg",
+              "link": ""
+            },
+            {
+              "name": "KARSTEN LAMPE",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "JULIAN HEUN",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "THERESA HAHL",
+              "info": "Hamburg",
+              "link": ""
+            },
+            {
+              "name": "ARNDT ULRICHSEN",
+              "info": "Jena",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-01-07-dystopian",
+      "date": "2017-01-07",
+      "title": "DYSTOPIAN",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20170105182634id_/http://www.distillery.de:80/ex/dates/2017/01/07",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "RØDHÅD",
+              "info": "Dystopian",
+              "link": ""
+            },
+            {
+              "name": "MøRBECK",
+              "info": "Code is Law, Grounded Theory, Vault Series, Perc Trax, Berlin",
+              "link": ""
+            },
+            {
+              "name": "RON ALBRECHT",
+              "info": "Dystopian, Pure Traxx",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "BLAC KOLOR",
+              "info": "Basic Unit Productions",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-01-12-kugelblitzdonnerstag-88",
+      "date": "2017-01-12",
+      "title": "KUGELBLITZDONNERSTAG #88",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20170126144101id_/http://www.distillery.de:80/ex/dates/2017/01/12",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "TEAMBIRNENPFEFFI",
+              "info": "aka DJ Beatzeps, Gringo, DJ Sensay, Lifted Erik, Start: 23:00, add to Cal, 2wöchentlich, immer am ersten und dritten (1. und 3.) Donnerstag im Monat, für 3 Euronen – mit den Residents vom Teambirnenpfeffi, Beatzeps, Gringo, Sensay, und, Lifted Erik",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-01-13-purple-tea-x-defrostatica",
+      "date": "2017-01-13",
+      "title": "PURPLE TEA X DEFROSTATICA",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20170126144106id_/http://www.distillery.de:80/ex/dates/2017/01/13",
+      "imageUrl": "",
+      "description": "TUAN:ANH",
+      "sections": [
+        {
+          "label": "up: TUAN:",
+          "items": [
+            {
+              "name": "ANH",
+              "info": "Bass Gang/Tactic Signals, Berlin",
+              "link": ""
+            },
+            {
+              "name": "KIT KUT",
+              "info": "Beyond07, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DRBYSTRR93",
+              "info": "raputation[.de], Leipzig",
+              "link": ""
+            },
+            {
+              "name": "RZR",
+              "info": "NEF",
+              "link": ""
+            },
+            {
+              "name": "SHORTEE",
+              "info": "8BitBass, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-01-14-make-me-laugh",
+      "date": "2017-01-14",
+      "title": "MAKE ME LAUGH",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20170126144111id_/http://www.distillery.de:80/ex/dates/2017/01/14",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SCHLEPP GEIST",
+              "info": "URSL",
+              "link": ""
+            },
+            {
+              "name": "JONATHAN KASPAR",
+              "info": "Pets Recordings, Objektivity, KX",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "ADRIANA LóPEZ",
+              "info": "Grey Report, Modularz, Semantica, Pole Group, Barcelona",
+              "link": ""
+            },
+            {
+              "name": "MARKUS MASUHR",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-01-20-dnb-bundesliga",
+      "date": "2017-01-20",
+      "title": "DNB BUNDESLIGA",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20170126144116id_/http://www.distillery.de:80/ex/dates/2017/01/20",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "LY.DA BUDDHA",
+              "info": "Serial Killaz/Dope Ammo",
+              "link": ""
+            },
+            {
+              "name": "DERRICK",
+              "info": "Ulan Bator",
+              "link": ""
+            },
+            {
+              "name": "BASE",
+              "info": "Ulan Bator",
+              "link": ""
+            },
+            {
+              "name": "MC MYSTIC DAN",
+              "info": "I-Spect, Braunschweig",
+              "link": ""
+            },
+            {
+              "name": "BOOGA",
+              "info": "Defrostatica",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-01-21-exceptional-energy",
+      "date": "2017-01-21",
+      "title": "EXCEPTIONAL ENERGY",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20170126144121id_/http://www.distillery.de:80/ex/dates/2017/01/21",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "KOSME",
+              "info": "Cosmic AD, Thema, FR",
+              "link": ""
+            },
+            {
+              "name": "LENNY BROOKSTER",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DILIVIUS LENNI",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: Mord",
+          "items": [
+            {
+              "name": "BAS MOOY",
+              "info": "Mord Records",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-01-27-cosmic-geisha-from-outer-space",
+      "date": "2017-01-27",
+      "title": "COSMIC GEISHA FROM OUTER SPACE",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20170126144126id_/http://www.distillery.de:80/ex/dates/2017/01/27",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "KIKI HITOMI - LIVE",
+              "info": "Jahtari, Ninja Tune, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ROGER ROBINSON - LIVE",
+              "info": "Jahtari",
+              "link": ""
+            },
+            {
+              "name": "LXC",
+              "info": "Alphacut, 45Seven, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MRN",
+              "info": "BSSMSSG, Start: 23:30",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-01-28-go-beyond-the-scope",
+      "date": "2017-01-28",
+      "title": "GO BEYOND THE SCOPE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20170126144131id_/http://www.distillery.de:80/ex/dates/2017/01/28",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ANDRé GALLUZZI",
+              "info": "ARAS Records, Berghain Ostgut, Cocoon",
+              "link": ""
+            },
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "mindcookies, Distillery",
+              "link": ""
+            },
+            {
+              "name": "MAURO CARACHO",
+              "info": "Fäncy, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "BLIND OBSERVATORY",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

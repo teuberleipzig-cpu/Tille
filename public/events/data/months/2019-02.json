@@ -1,0 +1,339 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2019-02-01-poetry-slam",
+      "date": "2019-02-01",
+      "title": "POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190720144940id_/http://www.distillery.de/ex/dates/2019/02/01",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: MODERATION: MUSIC BY:",
+          "items": [
+            {
+              "name": "MARIE RADKIEWICZ",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "MARIUS LOY",
+              "info": "Esslingen",
+              "link": ""
+            },
+            {
+              "name": "AUGUST KLAR",
+              "info": "Paderborn",
+              "link": ""
+            },
+            {
+              "name": "LEONIE WARNKE",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BLANKK DISC",
+              "info": "Hyperion, Start: 19:30",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-02-02-feel-live-album-release",
+      "date": "2019-02-02",
+      "title": "FEEL LIVE - ALBUM RELEASE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190720145444id_/http://www.distillery.de/ex/dates/2019/02/02",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MASSIMILIANO PAGLIARA",
+              "info": "LARJ, Ostgut Ton",
+              "link": ""
+            },
+            {
+              "name": "PETER INVASION",
+              "info": "Riotvan, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "TALISMAN",
+              "info": "Echnoton Records, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DANIEL SAILER",
+              "info": "Distillery, Where the Buffalo Roam",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-02-09-saturday-rave",
+      "date": "2019-02-09",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190720145003id_/http://www.distillery.de/ex/dates/2019/02/09",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MARCUS MEINHARDT",
+              "info": "Heinz Music, Katermukke, Berlin",
+              "link": ""
+            },
+            {
+              "name": "STAN STARRY",
+              "info": "Betriebsfeier, Berlin",
+              "link": ""
+            },
+            {
+              "name": "MIKE VAN GOETZE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "MIJK VAN DIJK",
+              "info": "Microglobe, Berlin",
+              "link": ""
+            },
+            {
+              "name": "VINCENT NEUMANN",
+              "info": "Distillery, Unitas Multiplex, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-02-15-boundless-beatz",
+      "date": "2019-02-15",
+      "title": "BOUNDLESS BEATZ",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190720144920id_/http://www.distillery.de/ex/dates/2019/02/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: HOSTED BY:",
+          "items": [
+            {
+              "name": "CALIBRE",
+              "info": "Signature, Soul:R, Belfast-UK",
+              "link": ""
+            },
+            {
+              "name": "CLEVELAND WATKISS",
+              "info": "UK",
+              "link": ""
+            },
+            {
+              "name": "KALI AVAAZ",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "AUDITE",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DUBBALOT",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-02-16-oam-record-release",
+      "date": "2019-02-16",
+      "title": "[OAM] RECORD RELEASE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20210411001245id_/https://www.distillery.de/ex/dates/2019/02/16",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MARK BROOM",
+              "info": "Beard Man, Blueprint, Cocoon",
+              "link": ""
+            },
+            {
+              "name": "P.LEONE",
+              "info": "Rekids, e-missions",
+              "link": ""
+            },
+            {
+              "name": "LYDIA EISENBLäTTER",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: Shite Music",
+          "items": [
+            {
+              "name": "M.ONO",
+              "info": "Rose Records, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "OLIVER BERNSTEIN",
+              "info": "Shite Music, R.A.N.D. Muzik",
+              "link": ""
+            },
+            {
+              "name": "METULSKY",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-02-22-purple-green-purple-tea-x-dash-out",
+      "date": "2019-02-22",
+      "title": "PURPLE GREEN // PURPLE TEA X DASH OUT",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190826035450id_/http://www.distillery.de/ex/dates/2019/02/22",
+      "imageUrl": "",
+      "description": "FR. 22.02.19 Jake & the Convolution",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "JESS PASSERI",
+              "info": "Good Hood Music, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "TRIX",
+              "info": "TRLLXGNG, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "KIT KUT",
+              "info": "GoodHoodMusic, Beyond07, Team PurpleTea",
+              "link": ""
+            },
+            {
+              "name": "DRBYSTRR93",
+              "info": "soulutian, Team PurpleTea, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "GLOCKWORK POSSE",
+              "info": "Rosenheim, München",
+              "link": ""
+            },
+            {
+              "name": "HIGH POWER STATION",
+              "info": "Dash Out, Teameastgermany, Leipzig / Köln",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-02-23-saturday-rave",
+      "date": "2019-02-23",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190719195047id_/http://www.distillery.de/ex/dates/2019/02/23",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MICHAEL MAYER",
+              "info": "Kompakt, Köln",
+              "link": ""
+            },
+            {
+              "name": "FILBURT",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "STEPHAN VON WOLFFERSDORFF",
+              "info": "Distillery, Where the Buffalo Roam, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "0 DIMENSIONAL",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

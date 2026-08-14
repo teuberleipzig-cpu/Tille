@@ -1,0 +1,353 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2008-03-01-5-years-esoulate-part-ii",
+      "date": "2008-03-01",
+      "title": "5 YEARS ESOULATE - PART II",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20080415053920id_/http://www.distillery.de:80/ex/dates/2008/03/01",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: House, Jazz, Electro:",
+          "items": [
+            {
+              "name": "FRIVOLOUS",
+              "info": "Karloff, Background, Epsilonlab, Vancouver",
+              "link": ""
+            },
+            {
+              "name": "T.GOETHNER",
+              "info": "Brot & Spiele, esoulate, Leipzig, Berlin",
+              "link": ""
+            },
+            {
+              "name": "43GMEER",
+              "info": "esoulate, Halle, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-03-05-borderline-auf-achse-club-tour",
+      "date": "2008-03-05",
+      "title": "BORDERLINE AUF ACHSE CLUB TOUR",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20080415053925id_/http://www.distillery.de:80/ex/dates/2008/03/05",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: HipHop, Rap:",
+          "items": [
+            {
+              "name": "MORLOCKK DILEMMA",
+              "info": "snuffpro, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MIKE FICTION",
+              "info": "snuffpro, Berlin",
+              "link": ""
+            },
+            {
+              "name": "V.MANN",
+              "info": "snuffpro, Berlin",
+              "link": ""
+            },
+            {
+              "name": "RASPUTIN",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-03-08-dancematerial-dress-2-sweat",
+      "date": "2008-03-08",
+      "title": "DANCEMATERIAL & DRESS 2 SWEAT",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20080415053930id_/http://www.distillery.de:80/ex/dates/2008/03/08",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Dancematerial:",
+          "items": [
+            {
+              "name": "REDSHAPE",
+              "info": "Delsin, Styrax, Music Man, Berlin",
+              "link": ""
+            },
+            {
+              "name": "STEFFEN BENNEMANN",
+              "info": "Nachtdigital, 1bit-wonder, Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-03-14-jack-of-all-trades-album-release-tour",
+      "date": "2008-03-14",
+      "title": "JACK OF ALL TRADES ALBUM RELEASE TOUR",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20080415053935id_/http://www.distillery.de:80/ex/dates/2008/03/14",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: HipHop, Rap:",
+          "items": [
+            {
+              "name": "WILDCHILD",
+              "info": "Stones Throw, Fat Beats, Nocturne, Lootpack, San Francisco",
+              "link": ""
+            },
+            {
+              "name": "KAN KICK",
+              "info": "greylabel Recordings, San Francisco",
+              "link": ""
+            },
+            {
+              "name": "FACULTY",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-03-15-hoerfunk-meets-syntax",
+      "date": "2008-03-15",
+      "title": "HOERFUNK MEETS SYNTAX",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20080415053940id_/http://www.distillery.de:80/ex/dates/2008/03/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Hoerfunk:",
+          "items": [
+            {
+              "name": "JAKE THE RAPPER",
+              "info": "Combination Records, Bronx/New York, Seattle",
+              "link": ""
+            },
+            {
+              "name": "MARKUS WELBY",
+              "info": "Distillery, Hoerfunk, Melt!",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-03-20-riotvan-presents-don-t-believe-the-hype-ii",
+      "date": "2008-03-20",
+      "title": "RIOTVAN PRESENTS: DON'T BELIEVE THE HYPE II",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20080415053945id_/http://www.distillery.de:80/ex/dates/2008/03/20",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Mainstage:",
+          "items": [
+            {
+              "name": "THE SHOES",
+              "info": "green united music, Reims, FR",
+              "link": ""
+            },
+            {
+              "name": "BONAPARTE",
+              "info": "Proton, Berlin",
+              "link": ""
+            },
+            {
+              "name": "PEACHES – DJ SET",
+              "info": "XL-Recordings",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-03-21-black-belt-boogie-pres-bass-plus",
+      "date": "2008-03-21",
+      "title": "BLACK BELT BOOGIE PRES. BASS PLUS",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20080415053950id_/http://www.distillery.de:80/ex/dates/2008/03/21",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Mashin it dubwise:",
+          "items": [
+            {
+              "name": "AL HACA",
+              "info": "Crunchtime Records, Metapolyp, Wien",
+              "link": ""
+            },
+            {
+              "name": "PEAK PHINE",
+              "info": "Black Belt Boogie, Bass Plus",
+              "link": ""
+            },
+            {
+              "name": "SENCHA",
+              "info": "nuskoolbreaks.net",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-03-22-moon-harbour-blackred",
+      "date": "2008-03-22",
+      "title": "MOON HARBOUR & BLACKRED",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20080411042014id_/http://www.distillery.de:80/ex/dates/2008/03/22",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Matthias Tanzmann \"Restless\" Album Record Release:",
+          "items": [
+            {
+              "name": "2000 AND ONE",
+              "info": "100% Pure, Intacto, Remote Area, Amsterdam",
+              "link": ""
+            },
+            {
+              "name": "MATTHIAS TANZMANN",
+              "info": "Moon Harbour",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-03-23-bpitch-s-calling",
+      "date": "2008-03-23",
+      "title": "BPITCH'S CALLING",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20080415053956id_/http://www.distillery.de:80/ex/dates/2008/03/23",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: BPitch Control",
+          "items": [
+            {
+              "name": "PAUL KALKBRENNER",
+              "info": "Bpitch Ctrl., Berlin",
+              "link": ""
+            },
+            {
+              "name": "SASCHA FUNKE",
+              "info": "Bpitch Ctrl., Kompakt, Berlin",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-03-28-hotta-fire-reggaestation",
+      "date": "2008-03-28",
+      "title": "HOTTA FIRE REGGAESTATION",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20080411042019id_/http://distillery.de:80/ex/dates/2008/03/28",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Reggae, Dancehall:",
+          "items": [
+            {
+              "name": "POW POW MOVEMENT",
+              "info": "Pow Pow Productions, Köln",
+              "link": ""
+            },
+            {
+              "name": "HOTSTEPPER SOUND",
+              "info": "Halle",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: HipHop, Funk:",
+          "items": [
+            {
+              "name": "DJ SAIBZ & THE FU HANDS SOUNDSYSTEM",
+              "info": "esoulate, streetflavor, snuffpro",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-03-29-finest-selection-the-dash-album-tour",
+      "date": "2008-03-29",
+      "title": "FINEST SELECTION & THE DASH ALBUM TOUR",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20080409220151id_/http://distillery.de:80/ex/dates/2008/03/29",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Finest Selection:",
+          "items": [
+            {
+              "name": "EFDEMIN",
+              "info": "Dial, Records, Ostgut, Berlin",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "HöTSCHE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

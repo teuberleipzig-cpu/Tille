@@ -1,0 +1,342 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2008-12-05-deep-rooted",
+      "date": "2008-12-05",
+      "title": "DEEP ROOTED",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20081220033722id_/http://www.distillery.de:80/ex/dates/2008/12/05",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: d&b deep rooted",
+          "items": [
+            {
+              "name": "SH1",
+              "info": "Querbass, Gerangel im Jungle",
+              "link": ""
+            },
+            {
+              "name": "SHAPE",
+              "info": "cueculture, esoulate, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "CON.STRUCT",
+              "info": "Outsider, Breakbeat Journeys",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-12-06-finest-selection-meets-where-the-buffalo-get-bass",
+      "date": "2008-12-06",
+      "title": "FINEST SELECTION MEETS WHERE THE BUFFALO GET BASS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20081219233230id_/http://www.distillery.de:80/ex/dates/2008/12/06",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: finest selection",
+          "items": [
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "Finest Selection, WhirlpoolsexMusic, Distillery",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-12-10-gloria-viagra-sherry-vine-present-squeezebox",
+      "date": "2008-12-10",
+      "title": "GLORIA VIAGRA & SHERRY VINE PRESENT: SQUEEZEBOX!",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20081219225259id_/http://www.distillery.de:80/ex/dates/2008/12/10",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: sex, drags & rock'n'roll",
+          "items": [
+            {
+              "name": "GLORIA VIAGRA",
+              "info": "G**REC, GMF Berlin",
+              "link": ""
+            },
+            {
+              "name": "SHERRY VINE",
+              "info": "New York City",
+              "link": ""
+            },
+            {
+              "name": "SQUEEZEBOX",
+              "info": "Gloria Viagra, Sherry Vine & Band",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-12-12-london-night-pt-2-vs-rodigans-30th-stage-anniversary",
+      "date": "2008-12-12",
+      "title": "LONDON NIGHT PT.2 VS. RODIGANS 30TH STAGE ANNIVERSARY",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20081214183446id_/http://www.distillery.de:80/ex/dates/2008/12/12",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: 30 years on stage",
+          "items": [
+            {
+              "name": "DAVID RODIGAN",
+              "info": "London, UK",
+              "link": ""
+            },
+            {
+              "name": "LUCKY SULTAN",
+              "info": "Voxxx, Chemnitz",
+              "link": ""
+            },
+            {
+              "name": "VINNEYMAN",
+              "info": "Vibez Sensation Records",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: london night pt.2",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-12-13-hoerfunk-meets-syntax",
+      "date": "2008-12-13",
+      "title": "HOERFUNK MEETS SYNTAX",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20081220033732id_/http://www.distillery.de:80/ex/dates/2008/12/13",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: hoerfunk",
+          "items": [
+            {
+              "name": "PAN/TONE – LIVE",
+              "info": "aka Sid LeRock, Kompakt, Cereal/Killers, Köln",
+              "link": ""
+            },
+            {
+              "name": "GUNJAH",
+              "info": "Showboxx, Funkwelt, Dresden",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-12-17-santa-house-2008-by-le7even-fremdveranstaltung",
+      "date": "2008-12-17",
+      "title": "SANTA HOUSE 2008 BY LE7EVEN (FREMDVERANSTALTUNG)",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20081220033737id_/http://www.distillery.de:80/ex/dates/2008/12/17",
+      "imageUrl": "",
+      "description": "Start: 21:30\nNun ist es wieder soweit, Le7even gibt sein alljährliches weihnachtliches Stelldichein in der Distillery...\nMehr Infos gibt es auf\nwww.le7even.de",
+      "sections": []
+    },
+    {
+      "id": "2008-12-19-connewitz-grill-mafia",
+      "date": "2008-12-19",
+      "title": "CONNEWITZ GRILL MAFIA",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20081220033743id_/http://www.distillery.de:80/ex/dates/2008/12/19",
+      "imageUrl": "",
+      "description": "(aka Hans der Jäger & Alex)",
+      "sections": [
+        {
+          "label": "up: auf dem grill spielt die musik",
+          "items": [
+            {
+              "name": "LEGENDARY SKATE VIDEOS 1996-98",
+              "info": "Original in VHS!, Start: 22:30, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-12-20-moon-harbour-label-flight-meets-feenstaub-friends",
+      "date": "2008-12-20",
+      "title": "MOON HARBOUR LABEL FLIGHT MEETS FEENSTAUB & FRIENDS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20081220033748id_/http://www.distillery.de:80/ex/dates/2008/12/20",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: moon harbour",
+          "items": [
+            {
+              "name": "STEVE BUG",
+              "info": "Pokerflat, Dessous, Berlin",
+              "link": ""
+            },
+            {
+              "name": "MATTHIAS TANZMANN",
+              "info": "Moon Harbour, Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-12-25-leise-rieselt-der-schnee",
+      "date": "2008-12-25",
+      "title": "LEISE RIESELT DER SCHNEE...",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20081220033753id_/http://www.distillery.de:80/ex/dates/2008/12/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "WOODY",
+              "info": "Fumakilla, Electronic Waves, Berlin",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-12-26-bukem-in-session-vs-hotta-fire-reggaestation",
+      "date": "2008-12-26",
+      "title": "BUKEM IN SESSION VS. HOTTA FIRE REGGAESTATION",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20081219233236id_/http://www.distillery.de:80/ex/dates/2008/12/26",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: bukem in session",
+          "items": [
+            {
+              "name": "LTJ BUKEM",
+              "info": "Good Looking Records, London",
+              "link": ""
+            },
+            {
+              "name": "MC CONRAD",
+              "info": "Good Looking Records, London",
+              "link": ""
+            },
+            {
+              "name": "DJ SOULSLIDE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-12-27-dancematerial-meets-darkstar",
+      "date": "2008-12-27",
+      "title": "DANCEMATERIAL MEETS DARKSTAR",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20081218202743id_/http://www.distillery.de:80/ex/dates/2008/12/27",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: dancematerial",
+          "items": [
+            {
+              "name": "APPARAT – LIVE",
+              "info": "Shitkatapult, Bpitch Control",
+              "link": ""
+            },
+            {
+              "name": "RENTEK",
+              "info": "Giroton, Caramba!, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-12-31-silvester-in-family",
+      "date": "2008-12-31",
+      "title": "SILVESTER IN FAMILY",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20081219233241id_/http://www.distillery.de:80/ex/dates/2008/12/31",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DAN DRASTIC",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,421 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2015-09-04-lapa-changa-gets-mad-again",
+      "date": "2015-09-04",
+      "title": "LAPA*CHANGA GETS MAD AGAIN!",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20150907014117id_/http://www.distillery.de:80/ex/dates/2015/09/04",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: cumbia, salsa, reggaeton, sertanejo, electrolatino",
+          "items": [
+            {
+              "name": "DJANE AKIRE",
+              "info": "Lapa*Changa",
+              "link": ""
+            },
+            {
+              "name": "AMIGUITO",
+              "info": "Latin/Ska",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: african rhythms, tropical bass, soca, champeta, trap",
+          "items": [
+            {
+              "name": "SILENT PRESSURE",
+              "info": "Bamboo Bass, SwS, Berlin",
+              "link": ""
+            },
+            {
+              "name": "PABLO GUNZALES",
+              "info": "Mad Again!, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-09-05-sister-act",
+      "date": "2015-09-05",
+      "title": "SISTER ACT",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20150907014122id_/http://www.distillery.de:80/ex/dates/2015/09/05",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ME & HER",
+              "info": "OFF Recordings, Clarisse Rec.",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LENNY BROOKSTER",
+              "info": "Music Is Not Fashion, HomeSweetHome Session, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "ANCIENT METHODS",
+              "info": "Downwards, RSB, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DANIEL SAILER",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-09-10-kugelblitz-donnerstag",
+      "date": "2015-09-10",
+      "title": "KUGELBLITZ DONNERSTAG",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20150907014128id_/http://www.distillery.de:80/ex/dates/2015/09/10",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: HipHopDancehallinaAfrotwerkStyle",
+          "items": [
+            {
+              "name": "TEAMBIRNENPFEFFI",
+              "info": "aka DJ Beatzeps, Gringo, DJ Sensay, Lifted Erik, Start: 22:00, add to Cal, Pull-Up-Button, Woohooo-Girls, Gaza-Corna, Twerkaholic-Battles, Gratisschnäpse und viel Bass untenrum – der \"Kugelblitz Donnerstag\" (auch \"Kugelblitzdonnerschtag\") ist Leipzig's inzwischen legendärer Hot Spot (ca 37°C) für afrokaribische Diskomusik und \"Black Music\" in all ihren Facetten, kurz: #HipHopDancehallinnaAfrotwerkStyle (Dr. Alban Voice)., Die Boomtunespezialisten vom Teambirnenpfeffi sorgen dafür, dass du – insofern du ein Bassliebhaber bist / eine nicht-zu-beruhigende Kiste mit dir herumträgst / und/oder an musikalischem Fernweh leidest – hier wenigstens aller zwei Wochen auf Deine Kosten kommst. Die Partyreihe mit den Residents, DJ Sensay, Beatzeps, Gringo, und",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-09-11-t9our-torky-tork-doz9",
+      "date": "2015-09-11",
+      "title": "T9OUR - TORKY TORK & DOZ9",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20150907014133id_/http://www.distillery.de:80/ex/dates/2015/09/11",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "TORKY TORK",
+              "info": "Audio88, Yassin",
+              "link": ""
+            },
+            {
+              "name": "DOZ9",
+              "info": "Schaufel und Spaten",
+              "link": ""
+            },
+            {
+              "name": "DJ ACCESS",
+              "info": "NewDEF, Dresden",
+              "link": ""
+            },
+            {
+              "name": "MAULHELD",
+              "info": "Funkverteidiger",
+              "link": ""
+            },
+            {
+              "name": "DJ D-FEKT",
+              "info": "Resistant Mindz, Sounds Like Ham In The Pan",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-09-12-be-differnet",
+      "date": "2015-09-12",
+      "title": "BE DIFFERNET",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20150907014141id_/http://www.distillery.de:80/ex/dates/2015/09/12",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "PROSUMER",
+              "info": "Ostgut Ton, Playhouse, Berlin",
+              "link": ""
+            },
+            {
+              "name": "POLO",
+              "info": "KANN, Electronic Resistance, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BENDER",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "KANN",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DAHMAR",
+              "info": "Electronic Resistance, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-09-16-seekae-in-concert",
+      "date": "2015-09-16",
+      "title": "SEEKAE IN CONCERT",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20150907014144id_/http://www.distillery.de:80/ex/dates/2015/09/16",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SEEKAE - LIVE",
+              "info": "Sydney, Start: 21:00, add to Cal, -> Zum Vorverkauf, Die Musik von, Seekae, ist wie ein Deja-Vu für die Ohren – ein Deja-Entendu sozusagen: Einerseits neu und fremd, löst sie trotzdem dieses Gefühl wohliger Vertrautheit aus. \"Kennen wir uns?\", möchte man fragen, doch in dem Moment wandelt sich der Sound und die unterbewusste Bekanntschaft löst sich auf. Der eine Zauber ist vorbei, ein anderer wird entfacht. Es ließe sich mutmaßen, woher diese scheinbare Verbundenheit rührt. Dass das australische Trio sich verschiedenster musikalischer Stile bedient, spielt ganz sicher eine Rolle. So viele Genre wie hier verschmelzen, stellt sich die Frage Will it blend?“ überhaupt nicht mehr. It will, it does – und zwar wie! Die Skala, auf der Seekae Musik machen, reicht weit und sie ist mehrdimensional. Mal pushen knarzige Beats und vom Kopf aus abwärts gerät alles in Bewegung. Dann ist da diese sanfte Pop-Attitüde mit einem Einschlag housiger Leichtigkeit, die entgegen aller Schwerkraft die Mundwinkel nach oben zieht. Und schließlich ist auch eine Nähe zu balladenhaftem Indie-Rock spätestens seit dem letzten Album \"The Worry\" nicht von der Hand zu weisen., Auf ihrer Europa-Tour im September machen Seekae in Deutschland, nur drei Mal Halt",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-09-17-kugeblitz-donnerstag",
+      "date": "2015-09-17",
+      "title": "KUGEBLITZ DONNERSTAG",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20150907014149id_/http://www.distillery.de:80/ex/dates/2015/09/17",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: HipHopDancehallinaAfrotwerkStyle",
+          "items": [
+            {
+              "name": "TEAMBIRNENPFEFFI",
+              "info": "aka DJ Beatzeps, Gringo, DJ Sensay, Lifted Erik, Start: 22:00, add to Cal, Pull-Up-Button, Woohooo-Girls, Gaza-Corna, Twerkaholic-Battles, Gratisschnäpse und viel Bass untenrum – der \"Kugelblitz Donnerstag\" (auch \"Kugelblitzdonnerschtag\") ist Leipzig's inzwischen legendärer Hot Spot (ca 37°C) für afrokaribische Diskomusik und \"Black Music\" in all ihren Facetten, kurz: #HipHopDancehallinnaAfrotwerkStyle (Dr. Alban Voice)., Die Boomtunespezialisten vom Teambirnenpfeffi sorgen dafür, dass du – insofern du ein Bassliebhaber bist / eine nicht-zu-beruhigende Kiste mit dir herumträgst / und/oder an musikalischem Fernweh leidest – hier wenigstens aller zwei Wochen auf Deine Kosten kommst. Die Partyreihe mit den Residents, DJ Sensay, Beatzeps, Gringo, und",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-09-18-defrostatica-label-party",
+      "date": "2015-09-18",
+      "title": "DEFROSTATICA LABEL PARTY",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20150907014154id_/http://www.distillery.de:80/ex/dates/2015/09/18",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "FANU",
+              "info": "Lightless, Helsinki",
+              "link": ""
+            },
+            {
+              "name": "LXC",
+              "info": "Alphacut, 45Seven, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BOOGA",
+              "info": "Defrostatica, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "KATOR",
+              "info": "Defrostatica, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "HEXER",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-09-19-suol-meets-zwischenwelten",
+      "date": "2015-09-19",
+      "title": "SUOL MEETS ZWISCHENWELTEN",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20150907014159id_/http://www.distillery.de:80/ex/dates/2015/09/19",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "TILL VON SEIN",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "SUOL",
+              "info": "Dirt Crew, Berlin",
+              "link": ""
+            },
+            {
+              "name": "TIGERSKIN AKA DUB TAYLOR – LIVE",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "SUOL",
+              "info": "Dessous, Rotary Cocktail, Dirt Crew",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-09-24-kugeblitz-donnerstag",
+      "date": "2015-09-24",
+      "title": "KUGEBLITZ DONNERSTAG",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20150907014204id_/http://www.distillery.de:80/ex/dates/2015/09/24",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: HipHopDancehallinaAfrotwerkStyle",
+          "items": [
+            {
+              "name": "TEAMBIRNENPFEFFI",
+              "info": "aka DJ Beatzeps, Gringo, DJ Sensay, Lifted Erik, Start: 22:00, add to Cal, Pull-Up-Button, Woohooo-Girls, Gaza-Corna, Twerkaholic-Battles, Gratisschnäpse und viel Bass untenrum – der \"Kugelblitz Donnerstag\" (auch \"Kugelblitzdonnerschtag\") ist Leipzig's inzwischen legendärer Hot Spot (ca 37°C) für afrokaribische Diskomusik und \"Black Music\" in all ihren Facetten, kurz: #HipHopDancehallinnaAfrotwerkStyle (Dr. Alban Voice)., Die Boomtunespezialisten vom Teambirnenpfeffi sorgen dafür, dass du – insofern du ein Bassliebhaber bist / eine nicht-zu-beruhigende Kiste mit dir herumträgst / und/oder an musikalischem Fernweh leidest – hier wenigstens aller zwei Wochen auf Deine Kosten kommst. Die Partyreihe mit den Residents, DJ Sensay, Beatzeps, Gringo, und",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-09-25-purple-tea-vol-iii",
+      "date": "2015-09-25",
+      "title": "PURPLE TEA VOL.III",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20150907014209id_/http://www.distillery.de:80/ex/dates/2015/09/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "GIMMIX",
+              "info": "Stiff Little Spinners, Audiolith",
+              "link": ""
+            },
+            {
+              "name": "KITKUT",
+              "info": "Beyond07, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DRBYSTRR93",
+              "info": "raputation[.de], Leipzig, Start: 23:30, add to Cal, HipHop 2.0 x Grime x Hustle-Trap x UK x Baltimore x OG-Rap x Breaks x Ragga x Moombahton x Ghetto-Tech x GlobalBa$$ x B.I.G. x Comshut x Transforma-Scratch., 4cl Turntables2cl Hustler7h Bakin'8.000W60Hz5g",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-09-26-rundumzufrieden",
+      "date": "2015-09-26",
+      "title": "RUNDUMZUFRIEDEN",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20150907014215id_/http://www.distillery.de:80/ex/dates/2015/09/26",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DYNAMITE KADINSKI",
+              "info": "Fäncy, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DILIVIUS LENNI",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MAURO CARACHO",
+              "info": "Fäncy, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ROBERT TESSMANN",
+              "info": "Räucherkammer, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

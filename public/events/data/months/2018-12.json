@@ -1,0 +1,501 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2018-12-01-saturday-rave",
+      "date": "2018-12-01",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20181226030110id_/http://www.distillery.de:80/ex/dates/2018/12/01",
+      "imageUrl": "",
+      "description": "SA. 01.12.18 Label - und Synthesizerflohmarkt",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MIRA",
+              "info": "Kater Blau, URSL, Berlin",
+              "link": ""
+            },
+            {
+              "name": "MIMI LOVE",
+              "info": "Kater Blau, Berlin",
+              "link": ""
+            },
+            {
+              "name": "LARS CHRISTIAN MüLLER",
+              "info": "Distillery, mindcookies",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "DJ SKULL",
+              "info": "Rawax, Djax-Up Beats, Chicago",
+              "link": ""
+            },
+            {
+              "name": "TEMPLETON",
+              "info": "Hypress, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-12-07-livelyrix-poetry-slam",
+      "date": "2018-12-07",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20181226030115id_/http://www.distillery.de:80/ex/dates/2018/12/07",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: MODERATION: MUSIC BY:",
+          "items": [
+            {
+              "name": "LISA MARIA OLSZAKIEWIECZ",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "SVEN HENSEL",
+              "info": "Bochum",
+              "link": ""
+            },
+            {
+              "name": "ANNA LIOBA",
+              "info": "Karlsruhe",
+              "link": ""
+            },
+            {
+              "name": "U.V.M.",
+              "info": "und wie immer viele mehr",
+              "link": ""
+            },
+            {
+              "name": "LEONIE WARNKE",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BLANKK DISC",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-12-08-10-years-killekill",
+      "date": "2018-12-08",
+      "title": "10 YEARS KILLEKILL",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20181226030120id_/http://www.distillery.de:80/ex/dates/2018/12/08",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DILIVIUS LENNI",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MONELLO",
+              "info": "Räucherkammer, Inmotion Music, Berlin",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "THE MOVER",
+              "info": "Planet Phuture, KilleKill",
+              "link": ""
+            },
+            {
+              "name": "SEBASTIAN KöKOW",
+              "info": "the29nov",
+              "link": ""
+            },
+            {
+              "name": "DJ FLUSH",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-12-14-15-jahre-it-s-yours",
+      "date": "2018-12-14",
+      "title": "15 JAHRE IT'S YOURS",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20181226030125id_/http://www.distillery.de:80/ex/dates/2018/12/14",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: hip hop WARMUP & AFTERSHOW:",
+          "items": [
+            {
+              "name": "GOSSENBOSS MIT ZETT",
+              "info": "Dresden",
+              "link": ""
+            },
+            {
+              "name": "IVANG",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "DEINEMAFA",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "CASHMIRI",
+              "info": "Spash! Mag",
+              "link": ""
+            },
+            {
+              "name": "RZR",
+              "info": "G-Edit, NEF - No Entrance Fee",
+              "link": ""
+            },
+            {
+              "name": "JESS PASSERI",
+              "info": "Good Hood Music",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: drum & bass",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-12-15-24-h-wohnzimmer-faency-edition",
+      "date": "2018-12-15",
+      "title": "24 H WOHNZIMMER - FÄNCY EDITION",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20181226030130id_/http://www.distillery.de:80/ex/dates/2018/12/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MOSCOMAN",
+              "info": "Disco Halal",
+              "link": ""
+            },
+            {
+              "name": "DJ DUSTIN",
+              "info": "Giegling",
+              "link": ""
+            },
+            {
+              "name": "WILHELM",
+              "info": "HW Massive, Doumen Records, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "JUST ETIENNE",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "LORENZ KRAACH",
+              "info": "Kunstkantine, Modem:39",
+              "link": ""
+            },
+            {
+              "name": "MDMK AKA",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "DAHMAR",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-12-22-saturday-rave",
+      "date": "2018-12-22",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20181224212746id_/http://www.distillery.de:80/ex/dates/2018/12/22",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DOMINIK EULBERG",
+              "info": "k7!",
+              "link": ""
+            },
+            {
+              "name": "MIKE VAN GOETZE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DAN DRASTIC",
+              "info": "Moon Harbour, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: exLEpäng! DEATHEMBERFEZT",
+          "items": [
+            {
+              "name": "ADAM X",
+              "info": "Sonic Groove, CLR, New York",
+              "link": ""
+            },
+            {
+              "name": "TECHNOPHION",
+              "info": "exLEpäng!",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-12-25-happy-christmas",
+      "date": "2018-12-25",
+      "title": "HAPPY CHRISTMAS",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20221001220437id_/https://www.distillery.de/ex/dates/2018/12/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "NICONé",
+              "info": "dantze, Berlin",
+              "link": ""
+            },
+            {
+              "name": "GUNJAH",
+              "info": "Showboxx, Funkwelt, Dresden",
+              "link": ""
+            },
+            {
+              "name": "SVEN TASNADI",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "BLIND OBSERVATORY",
+              "info": "I/Y, Smoke Machine",
+              "link": ""
+            },
+            {
+              "name": "VINCENT NEUMANN",
+              "info": "Distillery, Unitas Multiplex, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-12-28-purple-green-purple-tea-x-dash-out",
+      "date": "2018-12-28",
+      "title": "PURPLE GREEN // PURPLE TEA X DASH OUT",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20181226030136id_/http://www.distillery.de:80/ex/dates/2018/12/28",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SAINT ONE",
+              "info": "Éspassiert, Hamburg",
+              "link": ""
+            },
+            {
+              "name": "KIT KUT",
+              "info": "GoodHoodMusic, Beyond07",
+              "link": ""
+            },
+            {
+              "name": "DRBYSTRR93",
+              "info": "soulutian",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "SELECTAH SPINBACK",
+              "info": "Spinbaclaat/ DaSwitch, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "HIGH POWER STATION",
+              "info": "Dash Out/ Teameastgermany, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SHAWTY",
+              "info": "Portmore/ Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-12-29-saturday-rave",
+      "date": "2018-12-29",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20181226030141id_/http://www.distillery.de:80/ex/dates/2018/12/29",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "PEREL",
+              "info": "O*RS, Berlin",
+              "link": ""
+            },
+            {
+              "name": "- HYBRID SET",
+              "info": "DFA Records, DE",
+              "link": ""
+            },
+            {
+              "name": "REZNIK",
+              "info": "Keinemusik, Berlin",
+              "link": ""
+            },
+            {
+              "name": "FILBURT",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "PETER INVASION",
+              "info": "Riotvan, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "PSYCHOPHYSICAL TRANSCRIPTS",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-12-31-silvester-in-family",
+      "date": "2018-12-31",
+      "title": "SILVESTER IN FAMILY",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20181226030233id_/http://www.distillery.de:80/ex/dates/2018/12/31",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "LYDIA EISENBLäTTER",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MIKE VAN GOETZE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "THOMAS STIELER",
+              "info": "Distillery, Paracou",
+              "link": ""
+            },
+            {
+              "name": "DYNAMITE KADINSKI",
+              "info": "Distillery, Fäncy, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DILIVIUS LENNI",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

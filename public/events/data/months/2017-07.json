@@ -1,0 +1,242 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2017-07-01-gso-aftershow",
+      "date": "2017-07-01",
+      "title": "GSO - AFTERSHOW",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190920042114id_/http://www.distillery.de/ex/dates/2017/07/01",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MIKE VAN GOETZE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BLANKK DISC",
+              "info": "Hyperion",
+              "link": ""
+            },
+            {
+              "name": "JANEF",
+              "info": "Artvolk",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "DUBBALOT",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "REMASURI",
+              "info": "Rolling Sounds, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LVCK SLAVE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-07-07-friday-closing",
+      "date": "2017-07-07",
+      "title": "FRIDAY CLOSING",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190823013130id_/http://www.distillery.de/ex/dates/2017/07/07",
+      "imageUrl": "",
+      "description": "AB 22:00 UHR: SURPRISE MOVIE",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "CAROOL",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "JENNY SHARP",
+              "info": "Good Hood Music, Sharp Radio",
+              "link": ""
+            },
+            {
+              "name": "SHAPE",
+              "info": "VARY, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ZEBSTA",
+              "info": "Welcome To Baltimore, Leipzig, outdoor:",
+              "link": ""
+            },
+            {
+              "name": "RILLE",
+              "info": "Style Wild, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "special: AB 22:00 UHR:",
+          "items": [
+            {
+              "name": "SURPRISE MOVIE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-07-08-spektral",
+      "date": "2017-07-08",
+      "title": "SPEKTRAL",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190719195051id_/http://www.distillery.de/ex/dates/2017/07/08",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DOUGLAS GREED",
+              "info": "Exploited, Freude am Tanzen, BPitch Control, Jena",
+              "link": ""
+            },
+            {
+              "name": "MAC-KEE",
+              "info": "Dirtydrivesounds, Sparte 13",
+              "link": ""
+            },
+            {
+              "name": "WITH ALBERT VOGT",
+              "info": "Soul Pattern, Sparte 13",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-07-13-kugelblitz-donnerstag-100",
+      "date": "2017-07-13",
+      "title": "KUGELBLITZ DONNERSTAG #100",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20190820085351id_/http://www.distillery.de/ex/dates/2017/07/13",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DELAM INTL",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "HIGH POWER STATION",
+              "info": "Dash Out, Teameastgermany, Leipzig / Köln",
+              "link": ""
+            },
+            {
+              "name": "LIFTED ERIK",
+              "info": "Phonatics Hifi, Chemnitz",
+              "link": ""
+            },
+            {
+              "name": "KID GRINGO",
+              "info": "Kugelblitz, Kampala / L",
+              "link": ""
+            },
+            {
+              "name": "DJ DERBYSTARR",
+              "info": "Brooklyn Zoo, Leipzig, Start: 23:00, add to Cal, Kugelblitz Donnerstag #100 – letzter Aufruf an alle Passagiere!",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-07-15-signature-sound",
+      "date": "2017-07-15",
+      "title": "SIGNATURE SOUND",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190820085026id_/http://www.distillery.de/ex/dates/2017/07/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "HONEY DIJON",
+              "info": "Classic, New York",
+              "link": ""
+            },
+            {
+              "name": "MONOTYPE",
+              "info": "Räucherkammer, D.O.C., Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DILIVIUS LENNI",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MONELLO",
+              "info": "Räucherkammer, Inmotion Music, Berlin",
+              "link": ""
+            },
+            {
+              "name": "SHURAY & WALLE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-07-30-th-nk-afterhour",
+      "date": "2017-07-30",
+      "title": "TH!NK? AFTERHOUR",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20190823013413id_/http://www.distillery.de/ex/dates/2017/07/30",
+      "imageUrl": "",
+      "description": "Start: 22:00\nWilkommen zur TH!NK? Afterhour-Feierei. Wer von 11 Stunden Musik am Strand noch nicht genug hat, der kann Indoor noch nachlegen. Hight five!\nMit Festivalbändchen freier Eintritt (solange es die Kapazität hergibt).\nhttp://www.think-festival.de\nKALENDER-DOWNLOAD\nKURT-EISNER-STR. 108 A",
+      "sections": []
+    }
+  ]
+}

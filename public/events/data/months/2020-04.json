@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2020-04-04-saturday-rave-meets-seelen-abgesagt",
+      "date": "2020-04-04",
+      "title": "SATURDAY RAVE MEETS SEELEN. - ABGESAGT",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20210121235205id_/https://www.distillery.de/ex/dates/2020/04/04",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SARAH WILD",
+              "info": "Tal der Verwirrung, Gutzeit, Berlin",
+              "link": ""
+            },
+            {
+              "name": "KOLJA GERSTENBERG",
+              "info": "housewax, lumberjacks in hell, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "CHAOS KATY",
+              "info": "vir.go, Ostend, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "HENDRIK KADEN",
+              "info": "Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "BILLIE JO",
+              "info": "Work Them Records",
+              "link": ""
+            },
+            {
+              "name": "JANEIN",
+              "info": "SEELEN",
+              "link": ""
+            },
+            {
+              "name": "SEELEN.",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2020-04-11-24-h-wohnzimmer-easter-edition-abgesagt",
+      "date": "2020-04-11",
+      "title": "24 H WOHNZIMMER - EASTER EDITION - ABGESAGT",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20200805135807id_/http://www.distillery.de/ex/dates/2020/04/11",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "STEFFI",
+              "info": "Ostgut Ton, Panorama Bar / Berghain, Klakson Records, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DAMON JEE",
+              "info": "Dischi Autunno, Correspondant, Critical Monday",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MIKE VAN GOETZE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "NAPOLEON DYNAMITE",
+              "info": "Fäncy, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SHURAY & WALLE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

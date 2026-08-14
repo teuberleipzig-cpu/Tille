@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2018-07-06-friday-closing",
+      "date": "2018-07-06",
+      "title": "FRIDAY CLOSING",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20180807200231id_/http://www.distillery.de:80/ex/dates/2018/07/06",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DJ MADD",
+              "info": "Roots & Future, Cosmic Bridge",
+              "link": ""
+            },
+            {
+              "name": "BANDULERA",
+              "info": "Hoch10, DarkRealDark",
+              "link": ""
+            },
+            {
+              "name": "BASE",
+              "info": "Ulan Bator",
+              "link": ""
+            },
+            {
+              "name": "BRKN1",
+              "info": "Dub Logic, Leipzig, Start: 23:00, add to Cal, Euer Lieblingswochentag verabschiedet sich in die Sommerpause. Ja, ganz richtig gelesen, es wird in den nächsten zwei Monaten keinen Freitag geben – zumindest in der Distillery. Um vorher aber nochmal unmissverständlich klar zustellen, warum ihr ihn vermissen werdet, zelebrieren wir den Saisonabschluss mit gebührend Rumsbums, Rumcola und 1 tip top Line Up. Mit seinen ersten Vinylveröffentlichungen hat, DJ Madd, das Dub in Dubstep groß geschrieben – besonders mit seinen 5 Releases für die berüchtigte WAR series. Durch deren Erfolg zog der gebürtige Ungar auch die Aufmerksamkeit wegweisender Imprints wie Osiris und Black Box auf sich und seine Produktionen, die mit Kusshand ins Repertoire aufgenommen wurden. Mit der Gründung seines eigenen Labels Roots & Future führte DJ Madd seinen dubbigen Style fort, erweitert ihn aber auch um einige Bassspielarten wie Jungle, Footwork und Halftime Drum and Bass. Dieses sympathische Desinteresse an Tellerrändern beweist er auch in seinen DJ Sets, von denen es an diesem Abend eins zu betanzen gibt. In Sachen Madness ist der Support dem Headliner in nichts unterlegen: Von der B-Klasse sprechen Kenner*Innen maximal aufgrund des alphabetisch sortierten Bookings. Denn mit",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-07-07-waldbrand",
+      "date": "2018-07-07",
+      "title": "WALDBRAND",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20180807200236id_/http://www.distillery.de:80/ex/dates/2018/07/07",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SODA KIDS",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "FILIZ",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "ZIDANE",
+              "info": "503, Start:, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-07-14-gso-aftershow",
+      "date": "2018-07-14",
+      "title": "GSO - AFTERSHOW",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20180720185710id_/http://www.distillery.de:80/ex/dates/2018/07/14",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MARKUS MASUHR",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "MODULAR",
+              "info": "Pragmat, lcr, Circular limited",
+              "link": ""
+            },
+            {
+              "name": "MBIUS",
+              "info": "Waldbrand",
+              "link": ""
+            },
+            {
+              "name": "DJ ULUDAG",
+              "info": "Waldbrand",
+              "link": ""
+            },
+            {
+              "name": "FRUITY SAASE",
+              "info": "Waldbrand",
+              "link": ""
+            },
+            {
+              "name": "BLANKK DISC",
+              "info": "Hyperion",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "NEONLIGHT",
+              "info": "Lifted Music, BSE, Trust in Music, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-07-29-th-nk-afterhour",
+      "date": "2018-07-29",
+      "title": "TH!NK? AFTERHOUR",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20180807200116id_/http://www.distillery.de:80/ex/dates/2018/07/29",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ROBAG WRUHME",
+              "info": "Pampa, Hart & Tief, Kompakt, Weimar Innenstadt",
+              "link": ""
+            },
+            {
+              "name": "THOMAS STIELER",
+              "info": "Distillery, Paracou",
+              "link": ""
+            },
+            {
+              "name": "DILIVIUS LENNI",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

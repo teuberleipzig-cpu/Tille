@@ -1,0 +1,322 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2018-02-02-livelyrix-poetry-slam",
+      "date": "2018-02-02",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20180214183358id_/http://www.distillery.de:80/ex/dates/2018/02/02",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: MODERATION:",
+          "items": [
+            {
+              "name": "JONATHAN LöFFELBEIN",
+              "info": "Tübingen",
+              "link": ""
+            },
+            {
+              "name": "HENRIK SZANTO",
+              "info": "Wien",
+              "link": ""
+            },
+            {
+              "name": "REBECCA HEIMS",
+              "info": "Bochum",
+              "link": ""
+            },
+            {
+              "name": "ELENA HAMMERSCHMID",
+              "info": "Regensburg",
+              "link": ""
+            },
+            {
+              "name": "LEONIE WARNKE",
+              "info": "Leipzig, Start: 19:30, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-02-03-sonic-journey",
+      "date": "2018-02-03",
+      "title": "SONIC JOURNEY",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20180214183403id_/http://www.distillery.de:80/ex/dates/2018/02/03",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MARCUS WORGULL",
+              "info": "Innervisions, Koeln",
+              "link": ""
+            },
+            {
+              "name": "THOMAS STIELER",
+              "info": "Distillery, Paracou",
+              "link": ""
+            },
+            {
+              "name": "PETER INVASION",
+              "info": "Riotvan, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MAURO CARACHO",
+              "info": "Distillery, Fäncy, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-02-09-freestyle-session",
+      "date": "2018-02-09",
+      "title": "FREESTYLE SESSION",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20180214183408id_/http://www.distillery.de:80/ex/dates/2018/02/09",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ÜBERKINGER MC",
+              "info": "Lockstoff, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DER REIMTEUFEL",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "PATRICK23",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DER BAUER",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MALCOLM",
+              "info": "Downtownlyrics, Radio Blau, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "FULL CONTACT",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-02-10-beste-modus-meets-slapfunk",
+      "date": "2018-02-10",
+      "title": "BESTE MODUS MEETS SLAPFUNK",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20180214184426id_/http://www.distillery.de:80/ex/dates/2018/02/10",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "CINTHIE",
+              "info": "Beste Modus, Watergate, Berlin",
+              "link": ""
+            },
+            {
+              "name": "SAMUEL DEEP",
+              "info": "Slapfunk",
+              "link": ""
+            },
+            {
+              "name": "SWEELY",
+              "info": "Lobster Theremin, Concrete Music",
+              "link": ""
+            },
+            {
+              "name": "MIKE VAN GOETZE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "DELTA FUNKTIONEN",
+              "info": "Radio Matrix, Delsin, Ann Aimee",
+              "link": ""
+            },
+            {
+              "name": "STEPHAN VON WOLFFERSDORFF",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-02-16-boundless-beatz",
+      "date": "2018-02-16",
+      "title": "BOUNDLESS BEATZ",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20180214184432id_/http://www.distillery.de:80/ex/dates/2018/02/16",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MASSL",
+              "info": "Tieftontherapie, Karlsruhe",
+              "link": ""
+            },
+            {
+              "name": "NOXAL EQUITY",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "AUDITE",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DUBBALOT",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-02-17-unreasonableness-and-sense",
+      "date": "2018-02-17",
+      "title": "UNREASONABLENESS AND SENSE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20180214184451id_/http://www.distillery.de:80/ex/dates/2018/02/17",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SCHLEPP GEIST – LIVE",
+              "info": "URSL, Rostock",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DILIVIUS LENNI",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "THOMAS P. HECKMANN",
+              "info": "Trope Recordings, AFU Limited, AFULAB",
+              "link": ""
+            },
+            {
+              "name": "TEMPLETON",
+              "info": "Hypress, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-02-24-muna-musik-meets-kalif-storch",
+      "date": "2018-02-24",
+      "title": "MUNA MUSIK MEETS KALIF STORCH",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20180214184516id_/http://www.distillery.de:80/ex/dates/2018/02/24",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MATTHIAS MEYER",
+              "info": "Liebe*Detail, Cecille, Watergate, Hive",
+              "link": ""
+            },
+            {
+              "name": "LYDIA EISENBLäTTER",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SIERRA",
+              "info": "Muna Musik",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "FRANZ!",
+              "info": "Kalif Storch, Muna Musik, Paracou",
+              "link": ""
+            },
+            {
+              "name": "DUDMAN",
+              "info": "Kalif Storch",
+              "link": ""
+            },
+            {
+              "name": "YNNK",
+              "info": "Kalif Storch",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

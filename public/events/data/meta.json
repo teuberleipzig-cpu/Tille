@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "monthLabel": "MÄRZ 2016",
+    "calendarYear": 2016,
+    "calendarMonth": 3,
+    "highlightTitle": "Saturday Rave",
+    "highlightLinks": [
+      "Fenster zum Hof",
+      "Specials"
+    ],
+    "artists": [
+      {
+        "name": "submod",
+        "info": "Distillery, Leipzig",
+        "link": "https://soundcloud.com/submod"
+      }
+    ]
+  }
+}
