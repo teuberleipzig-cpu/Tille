@@ -1,0 +1,397 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2012-03-02-livelyrix-poetry-slam",
+      "date": "2012-03-02",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20120129002759id_/http://www.distillery.de:80/ex/dates/2012/03/02",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: livelyriX poetry slam",
+          "items": [
+            {
+              "name": "TORSTEN STRäTER",
+              "info": "Dortmund",
+              "link": ""
+            },
+            {
+              "name": "BJöRN DUNNE",
+              "info": "München",
+              "link": ""
+            },
+            {
+              "name": "QUICHOTTE",
+              "info": "Köln",
+              "link": ""
+            },
+            {
+              "name": "ANDRé HERRMANN",
+              "info": "Lesebühne Schkeuditzer Kreuz, Team Totale Zerstörung",
+              "link": ""
+            },
+            {
+              "name": "U.V.M.",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-03-03-frz-msc-bx-meets-feenstaub",
+      "date": "2012-03-03",
+      "title": "FRZ MSC BX MEETS FEENSTAUB",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20120129003329id_/http://www.distillery.de:80/ex/dates/2012/03/03",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: frz msc bx",
+          "items": [
+            {
+              "name": "TODD TERJE",
+              "info": "Full Pupp, Running Back, Oslo",
+              "link": ""
+            },
+            {
+              "name": "SEVENSOL",
+              "info": "Long Vehicle, Kann",
+              "link": ""
+            },
+            {
+              "name": "HW RHAPSODY",
+              "info": "Onetake",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-03-09-flaesh-bending-005",
+      "date": "2012-03-09",
+      "title": "FLÄSH BENDING 005",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20120223195641id_/http://www.distillery.de:80/ex/dates/2012/03/09",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: digital, synthetic, chiptunes, breakcore",
+          "items": [
+            {
+              "name": "CANDIE HANK AKA PATRIC CATANI",
+              "info": "Staatsakt, Sonig, Berlin",
+              "link": ""
+            },
+            {
+              "name": "ISTARI LASTERFAHRER VS. ERROR 23 - LIVE",
+              "info": "Sozialistischer Plattenbau, Hamburg",
+              "link": ""
+            },
+            {
+              "name": "TOMIKA",
+              "info": "Dubtapes, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "STöRENFRIED",
+              "info": "mkultra, Dresden",
+              "link": ""
+            },
+            {
+              "name": "DIPUTS",
+              "info": "exLEpäng!",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-03-10-third-ear-meets-definition",
+      "date": "2012-03-10",
+      "title": "THIRD EAR MEETS DEFINITION",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20120223195646id_/http://www.distillery.de:80/ex/dates/2012/03/10",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: third ear",
+          "items": [
+            {
+              "name": "WBEEZA – LIVE",
+              "info": "Third Ear, London",
+              "link": ""
+            },
+            {
+              "name": "POLO",
+              "info": "Schach Matt, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: definition",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-03-16-livelyrix-buchmessenslam-2012-boundless-beatz-newcomer-rollout",
+      "date": "2012-03-16",
+      "title": "LIVELYRIX BUCHMESSENSLAM 2012 & BOUNDLESS BEATZ NEWCOMER ROLLOUT",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20120223195652id_/http://www.distillery.de:80/ex/dates/2012/03/16",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: livelyrix buchmessenslam",
+          "items": [
+            {
+              "name": "PATRICK SALMEN",
+              "info": "Wuppertal",
+              "link": ""
+            },
+            {
+              "name": "CHRISTIAN RITTER",
+              "info": "Bamberg",
+              "link": ""
+            },
+            {
+              "name": "MICHAEL BITTNER",
+              "info": "Dresden",
+              "link": ""
+            },
+            {
+              "name": "FRANZISKA WILHELM",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "PAULINE FüG",
+              "info": "Eichstaett",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-03-17-finest-selection-meets-where-the-buffalo-roam",
+      "date": "2012-03-17",
+      "title": "FINEST SELECTION MEETS WHERE THE BUFFALO ROAM",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20120223195657id_/http://www.distillery.de:80/ex/dates/2012/03/17",
+      "imageUrl": "",
+      "description": "- LIVE",
+      "sections": [
+        {
+          "label": "up: finest selection",
+          "items": [
+            {
+              "name": "WHITE",
+              "info": "Bar25, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DILIVIUS LENNI",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MARTIN ANACKER",
+              "info": "Tanz+Klangkombinat, Jena",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-03-23-outlook-festival-launch-party",
+      "date": "2012-03-23",
+      "title": "OUTLOOK FESTIVAL LAUNCH PARTY",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20120223195703id_/http://www.distillery.de:80/ex/dates/2012/03/23",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: jahtari - digital laptop reggae, dub, danzhall",
+          "items": [
+            {
+              "name": "MAFFI - LIVE",
+              "info": "Jahtari, Kopenhagen",
+              "link": ""
+            },
+            {
+              "name": "JAHTARI",
+              "info": "Disrupt, aDUBtion",
+              "link": ""
+            },
+            {
+              "name": "MR. WILLIAMZ",
+              "info": "London",
+              "link": ""
+            },
+            {
+              "name": "FIREHOUSE SOUND - LIVE",
+              "info": "Kopenhagen",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: bass plus - dubstep, grime, garage, uk funky",
+          "items": [
+            {
+              "name": "EL-B",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-03-24-rush-hour-meets-syntax",
+      "date": "2012-03-24",
+      "title": "RUSH HOUR MEETS SYNTAX",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20120223195717id_/http://www.distillery.de:80/ex/dates/2012/03/24",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: rush hour",
+          "items": [
+            {
+              "name": "BNJMN – LIVE",
+              "info": "Rush Hour, UK",
+              "link": ""
+            },
+            {
+              "name": "STEFFEN BENNEMANN",
+              "info": "Nachtdigital, Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "PHILIPP MATALLA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-03-29-raus-aus-den-kaemmerlein-rauf-auf-den-praesentierteller",
+      "date": "2012-03-29",
+      "title": "RAUS AUS DEN KÄMMERLEIN, RAUF AUF DEN PRÄSENTIERTELLER",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20190111224750id_/http://www.distillery.de:80/ex/dates/2012/03/29",
+      "imageUrl": "",
+      "description": "Start: 19:00\nSekt oder Selters? Wer in der Kreativszene arbeitet, hat vor allem Eines gelernt: sich durchzubeißen. Doch das Streben nach Glanz und Gloria hat seine Tücken, der Weg ist vielerorts steinig und in mancher Champagnerflasche ist am Ende nur lauwarme Selters. Bei all der Aufmerksamkeit, die der sogenannten Kreativwirtschaft neuerdings geschenkt wird, stehen die Akteure, um die es eigentlich geht zu oft im Abseits. Dabei sind sie es, die meist unbemerkt von der Masse die tollsten Geschichten schreiben. Drum heißt es seit Februar 2012 jeweils am letzten Donnerstag des Monats ab 19 Uhr in der Distillery \"Raus aus dem KÄMMERLEIN, Rauf auf den PRÄSENTIERTELLER\"!\nDer Präsentierteller“ ist ein gemeinsam von Distillery und Kreatives Leipzig eV entwickeltes Format. Wer auf der Bühne steht, hat maximal 15 Minuten Zeit, um ein Projekt bzw. Unternehmen zu präsentieren – um Aufmerksamkeit zu erzeugen, sich mit neuen Partnern zu vernetzen, oder Unterstützende zu gewinnen (bspw. für Crowdfunding-Projekte). Der Darbietungsform sind keine Grenzen gesetzt.\nHier ein paar etwas nebulöse Ankündigungen um was es sich heute so drehen könnte:\nWas gibt's diese Woche Donnerstag auf dem Präsentierteller? Unter anderem ein Urban Gardening - Projekt, was sich selbst so beschreibt: \"Während Andere über die Zukunft reden, bauen wir sie! Sie wird bunt, macht Spaß, bildet Gemeinschaften und isst echt lecker.\"\n‎\"Befeuerung der eigenen Kreativität von der Geschichte der Welt aus einer Vulkanperspektive.\" – keine Ahnung, was der Künstler damit sagen will. Wie aus seinen Notizzettel-Skizzen ein Comic-Musikvideo wurde, das mehrere Amateur-Video-Preise gewann, legt er uns aber auf den Teller.\nTote Menschen legt man noch mal schön aufgehübscht in einen Sarg - alte Gebäude werden mit Urban Art verschönert auf die letzte Reise gesandt. Sechs sind schon platt, Nr. 7 hat als Schlachthof ausgedient und ist Gastgeber des diesjährigen Festivals. Die Story dahinter und welche Künstler dieses Jahr im 'Manchester des Ostens' gastieren werden, erfahrt ihr am Donnerstag\nmehr auch unter: www.kreatives-leipzig.de/projekte/praesiteller\nKALENDER-DOWNLOAD",
+      "sections": []
+    },
+    {
+      "id": "2012-03-30-akwaaba-gets-mad-again",
+      "date": "2012-03-30",
+      "title": "AKWAABA GETS MAD AGAIN!",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20120223195738id_/http://www.distillery.de:80/ex/dates/2012/03/30",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: global bass, cumbia, afrobeat, kuduro, coupe decale, tribal",
+          "items": [
+            {
+              "name": "KING KONG DISKO",
+              "info": "Hamburg",
+              "link": ""
+            },
+            {
+              "name": "CHABWERA BANDA",
+              "info": "Woza this is africa, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "PABLO GUNZALES",
+              "info": "Mad Again!, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "special:",
+          "items": [
+            {
+              "name": "URBAN ART & STREETDANCE VIDEOS",
+              "info": "uvm.",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-03-31-dreikommanull-meets-ein-klang",
+      "date": "2012-03-31",
+      "title": "DREIKOMMANULL MEETS EIN KLANG",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20120223195744id_/http://www.distillery.de:80/ex/dates/2012/03/31",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: dreikommanull",
+          "items": [
+            {
+              "name": "DAPAYK – LIVE",
+              "info": "Mo's Ferry, Stil for Talent, Berlin",
+              "link": ""
+            },
+            {
+              "name": "KLEINSCHMAGER AUDIO",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

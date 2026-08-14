@@ -1,0 +1,304 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2011-12-03-frzn-msc-bx-meets-syntax",
+      "date": "2011-12-03",
+      "title": "FRZN MSC BX MEETS SYNTAX",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20120109065514id_/http://www.distillery.de:80/ex/dates/2011/12/03",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: frzn msc bx",
+          "items": [
+            {
+              "name": "JOHN TALABOT",
+              "info": "Permanent Vacation, Hivern Discs, Spanien",
+              "link": ""
+            },
+            {
+              "name": "SEVENSOL",
+              "info": "Long Vehicle, Kann",
+              "link": ""
+            },
+            {
+              "name": "WILHELM",
+              "info": "HW Massive",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-12-09-style-wild-oldschool-meets-future",
+      "date": "2011-12-09",
+      "title": "STYLE WILD - OLDSCHOOL MEETS FUTURE",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20120109065519id_/http://www.distillery.de:80/ex/dates/2011/12/09",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: beats, wonky, soul, electronica, dubstep",
+          "items": [
+            {
+              "name": "FLAKO",
+              "info": "Project Mooncircle, London, UK",
+              "link": ""
+            },
+            {
+              "name": "AMENTA",
+              "info": "Toronto, Kanada",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MEDLEIGH",
+              "info": "Resistant Mindz",
+              "link": ""
+            },
+            {
+              "name": "FRONT2BLAQ",
+              "info": "Resistant Mindz, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: oldschool hiphop",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-12-10-ttl-goes-winterflohmarkt-diy-meets-mindcookies-bass-plus",
+      "date": "2011-12-10",
+      "title": "TTL GOES WINTERFLOHMARKT & DIY MEETS MINDCOOKIES & BASS PLUS!",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20120109070005id_/http://www.distillery.de:80/ex/dates/2011/12/10",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: mindcookies",
+          "items": [
+            {
+              "name": "DAVE DK",
+              "info": "Moodmusic, Playhouse, Berlin",
+              "link": ""
+            },
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "mindcookies, Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: bass plus!",
+          "items": [
+            {
+              "name": "CHRISSY MURDERBOT",
+              "info": "Sleazetone",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-12-16-clash-of-the-basstitans-siegen-oder-fliegen",
+      "date": "2011-12-16",
+      "title": "CLASH OF THE BASSTITANS - SIEGEN ODER FLIEGEN",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20120109070034id_/http://www.distillery.de:80/ex/dates/2011/12/16",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: fliegen oder siegen",
+          "items": [
+            {
+              "name": "BASSMENT ROCKAZ VS.",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DA SWITCH",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "VS.",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "IT'S YOURS!",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "ULAN BATOR",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "DOWNTOWN LYRICS",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-12-17-monkey-s-on-acid-meets-feenstaub-friends",
+      "date": "2011-12-17",
+      "title": "MONKEY'S ON ACID MEETS FEENSTAUB & FRIENDS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20120107194923id_/http://www.distillery.de:80/ex/dates/2011/12/17",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: monkey's on acid",
+          "items": [
+            {
+              "name": "ACID PAULI",
+              "info": "Console, Notwist, Smaul Records, Berlin",
+              "link": ""
+            },
+            {
+              "name": "MONKEY MAFFIA",
+              "info": "Freude am Tanzen, Jena",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: feenstaub & friends",
+          "items": [
+            {
+              "name": "FEENSTAUB",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-12-24-moon-harbour-flights",
+      "date": "2011-12-24",
+      "title": "MOON HARBOUR FLIGHTS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20120109065524id_/http://www.distillery.de:80/ex/dates/2011/12/24",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: moon harbour x-mas flights",
+          "items": [
+            {
+              "name": "MATTHIAS TANZMANN",
+              "info": "Moon Harbour, Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DAN DRASTIC",
+              "info": "Moon Harbour, Hairy Claw, Leipzig), Start: 24:00, add to Cal, Wie jedes Jahr zu Weihnachten steht der, Moon Harbour Flight",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-12-25-chitlin-circuit-meets-zwischenwelten",
+      "date": "2011-12-25",
+      "title": "CHITLIN' CIRCUIT MEETS ZWISCHENWELTEN",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20120109065541id_/http://www.distillery.de:80/ex/dates/2011/12/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: chitlin' circuit",
+          "items": [
+            {
+              "name": "PROSUMER",
+              "info": "Ostgut Ton, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DILIVIUS LENNI",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: zwischenwelten",
+          "items": [
+            {
+              "name": "EZRA",
+              "info": "zwischenwelten",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-12-31-silvester-in-family",
+      "date": "2011-12-31",
+      "title": "SILVESTER IN FAMILY",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20120109070040id_/http://www.distillery.de:80/ex/dates/2011/12/31",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: good bye 2011",
+          "items": [
+            {
+              "name": "BENDER",
+              "info": "Kann, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "STEFFEN BENNEMANN",
+              "info": "Nachtdigital, Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MAP.ACHE",
+              "info": "Kann, Conne Island, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

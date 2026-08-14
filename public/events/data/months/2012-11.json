@@ -1,0 +1,397 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2012-11-02-livelyrix-poetry-slam-patterns-of-sound",
+      "date": "2012-11-02",
+      "title": "LIVELYRIX POETRY SLAM & PATTERNS OF SOUND",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20160430155907id_/http://www.distillery.de/ex/dates/2012/11/02",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: spoken word akrobatik",
+          "items": [
+            {
+              "name": "MARTIN GEIER",
+              "info": "Nürnberg",
+              "link": ""
+            },
+            {
+              "name": "AIDA",
+              "info": "Erfurt",
+              "link": ""
+            },
+            {
+              "name": "JOSEFINE BERKHOLZ",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "REBEKKA LENZ",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "U.V.M.",
+              "info": "und wie immer viele mehr",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-11-03-mindcookies-meets-syntax",
+      "date": "2012-11-03",
+      "title": "MINDCOOKIES MEETS SYNTAX",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20121105195241id_/http://www.distillery.de:80/ex/dates/2012/11/03",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: mindcookies",
+          "items": [
+            {
+              "name": "ROMAN FLüGEL",
+              "info": "Playhouse, Dial, Running Back, Frankfurt",
+              "link": ""
+            },
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "mindcookies, Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: syntax",
+          "items": [
+            {
+              "name": "PAUL BIRKEN",
+              "info": "Communique, Don't Recordings, USA",
+              "link": ""
+            },
+            {
+              "name": "GEORG BIGALKE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-11-09-c-schema-f-cyan-exe",
+      "date": "2012-11-09",
+      "title": "C:\\SCHEMA_F>CYAN.EXE",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20201201203853id_/http://www.distillery.de/ex/dates/2012/11/09",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: breakcore, jungle, ...",
+          "items": [
+            {
+              "name": "RUBY MY DEAR",
+              "info": "Ad Noiseam, Peace Off, Toulouse",
+              "link": ""
+            },
+            {
+              "name": "ASHTAR-DXD",
+              "info": "hART?de.FAKtE, Dresden",
+              "link": ""
+            },
+            {
+              "name": "DETEST",
+              "info": "Rebelscum, Motormouth, exLEpäng!",
+              "link": ""
+            },
+            {
+              "name": "ROTE RAKETE",
+              "info": "Blackred",
+              "link": ""
+            },
+            {
+              "name": "DAS ZIRKUSKIND",
+              "info": "3 Kilo Kilo Holz und Farben, exLEpäng!, visual:",
+              "link": ""
+            },
+            {
+              "name": "GROBKORN",
+              "info": "Media Artist, Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-11-10-vorne-lang-hinten-kurz",
+      "date": "2012-11-10",
+      "title": "VORNE LANG, HINTEN KURZ",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20130128035158id_/http://www.distillery.de:80/ex/dates/2012/11/10",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: vorne lang",
+          "items": [
+            {
+              "name": "ACID PAULI",
+              "info": "Console, Notwist, Smaul Records, Berlin",
+              "link": ""
+            },
+            {
+              "name": "WHITE",
+              "info": "Bar25, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DJ RUKEY",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-11-16-caribbean-nice-up-gets-mad-again",
+      "date": "2012-11-16",
+      "title": "CARIBBEAN NICE UP! GETS MAD AGAIN!",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20201201213837id_/http://www.distillery.de/ex/dates/2012/11/16",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: dancehall, reggae, soca",
+          "items": [
+            {
+              "name": "HERBALIZE IT",
+              "info": "Enschede, Niederlande",
+              "link": ""
+            },
+            {
+              "name": "DJ BEATZEPS",
+              "info": "High Power Station, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MR. DAGGA",
+              "info": "Caribbean Nice Up",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: afrotropical rythms, global bass",
+          "items": [
+            {
+              "name": "CHABWERA BANDA",
+              "info": "Woza this is africa, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SENCHA",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "PABLO GUNZALES",
+              "info": "Style Wild/Afro Latin What?!",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-11-17-dreikommanull",
+      "date": "2012-11-17",
+      "title": "DREIKOMMANULL",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20160428221056id_/http://www.distillery.de/ex/dates/2012/11/17",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: drei",
+          "items": [
+            {
+              "name": "PAUL WOOLFORD",
+              "info": "Planet E, Hotflush, 20:20 Vision, The Lab, Leeds",
+              "link": ""
+            },
+            {
+              "name": "KLEINSCHMAGER AUDIO",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-11-20-9-jahre-it-s-yours",
+      "date": "2012-11-20",
+      "title": "9 JAHRE IT'S YOURS!",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20131031204115id_/http://distillery.de/ex/dates/2012/11/20",
+      "imageUrl": "",
+      "description": "CONSCIOUS:MIND",
+      "sections": [
+        {
+          "label": "up: drum and bass CONSCIOUS:",
+          "items": [
+            {
+              "name": "DUB PHIZIX",
+              "info": "Exit, Soul:R, Samurai, Manchester/UK",
+              "link": ""
+            },
+            {
+              "name": "MC STRATEGY",
+              "info": "Exit, Manchester/UK",
+              "link": ""
+            },
+            {
+              "name": "MIND",
+              "info": "ease up, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "AUDITE",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "J.SN",
+              "info": "Break out!, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-11-23-style-wild",
+      "date": "2012-11-23",
+      "title": "STYLE WILD",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190917233907id_/http://www.distillery.de/ex/dates/2012/11/23",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: hip hop, soul, beats, raps",
+          "items": [
+            {
+              "name": "DUDLEY PERKINS AKA DECLAIME",
+              "info": "Stones Throw, SomeOthaShip Connect, Los Angeles",
+              "link": ""
+            },
+            {
+              "name": "GEORGIA ANNE MULDROW",
+              "info": "Stones Throw, SomeOthaShip Connect, Los Angeles",
+              "link": ""
+            },
+            {
+              "name": "DJ ROMES",
+              "info": "Lootpack, Stones Throw, Los Angeles",
+              "link": ""
+            },
+            {
+              "name": "SPITAINMENT & RESISTANT MINDZ ALL STARS",
+              "info": "Leipzig, Start: 23:00, add to Cal, SomeOthaShip Connect. Mal sehen wo wir heute andocken, irgendwo Outer-Space ist zumindest nicht ganz unwahrscheinlich. Unsere 3 Gäste aus der Bay Area haben musikalisch schon mehr als einen Stein umgedreht und bewegen sich nach wie vor zielsicher im weiten Kosmos zwischen Hip Hop, Soul, Vergangenheit und Zukunft. Dabei ist es nicht ganz einfach den Überblick zu behalten, kommt Georgia doch gerade mit ihrem neuem Album namens \"Seeds\" im Gepäck nach Europa. Produziert wurde das von Madlib, Georgia selbst wiederum versorgt nicht nur ihren Bühnenpartner & Ehemann mit Beats, sondern durfte auch schon zwei Erykah Badu Alben dem Mothaship ein Stück näher bringen. DJ Romes seinerseits zeichnete für sich Cuts bei Lootpack verantwortlich – und noch heute warten sicher viele auf den Nachfolger von \"Soundpieces: Da Antidote!\". Für dessen Cover war übrigens Declaime verantwortlich. Family Business eben und wen wunderts: the message is love n unity., http://www.fensterzumhof.org, http://www.someothaship.com",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-11-24-audioinvasion-aftershow",
+      "date": "2012-11-24",
+      "title": "AUDIOINVASION AFTERSHOW",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20140411081921id_/http://www.distillery.de:80/ex/dates/2012/11/24",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: audioinvasion",
+          "items": [
+            {
+              "name": "DüRERSTUBEN",
+              "info": "Pampa",
+              "link": ""
+            },
+            {
+              "name": "URSL",
+              "info": "Laut & Luise, Mutual Musik, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "PHILIPP MATALLA",
+              "info": "Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-11-30-analogsoul-pres-highs-hills-album-release",
+      "date": "2012-11-30",
+      "title": "ANALOGSOUL PRES. HIGHS & HILLS ALBUM RELEASE",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20201201202659id_/http://www.distillery.de/ex/dates/2012/11/30",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: highs & hills",
+          "items": [
+            {
+              "name": "KLINKE AUF CINCH",
+              "info": "Analogsoul, Erfurt/Jena",
+              "link": ""
+            },
+            {
+              "name": "PETULA",
+              "info": "Sn Cn, Berlin",
+              "link": ""
+            },
+            {
+              "name": "MICRONAUT",
+              "info": "Acker Records, 3000 Grad, Leipzig, Start: 21:00, add to Cal, {{image:4186:not_found}}Viel schöner als mit einer Releaseparty lässt sich der November doch nicht abschließen., Klinke auf Cinch, präsentieren heute europaweit, ja gar weltweit, zum ersten Mal live ihr neues Werk \"Highs & Hills\". Die deepen Harmoniearrangements und klackernden Rhythmusfundamente von Clemens Kynast und Lutz Hartmann werden heute auf Herz und Nieren geprüft und durch Patrick Föllmer an Gitarre und Effekten und Martin Pfützenreuter (Vocals) in eine scheinbar andere Welt gehoben. Die Virtuosität der Musiker trifft auf die kühle Eleganz der Maschinen. Loop meint Soul. Beat meint Herzschlag. Und wir meinen, es ist Zeit den Teppich auszupacken und die Reise in den Klinke auf Cinch Kosmos zu beginnen noch bevor der Dezember an die Tür klopft., http://www.releasingarecord.de, http://www.fensterzumhof.org",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2012-07-07-vorwaerts-immer",
+      "date": "2012-07-07",
+      "title": "VORWÄRTS IMMER...",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20220820024142id_/https://www.distillery.de/ex/dates/2012/07/07",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: vorwärts immer...",
+          "items": [
+            {
+              "name": "PASCAL FEOS",
+              "info": "levelNONzero, Chaca Chaca, Frankfurt/Main",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-07-14-finest-selection",
+      "date": "2012-07-14",
+      "title": "FINEST SELECTION",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20140202164709id_/http://www.distillery.de:80/ex/dates/2012/07/14",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: finest selection",
+          "items": [
+            {
+              "name": "THE SORRY ENTERTAINERS",
+              "info": "Shitkatapult, Bar25, Berlin",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "EINKLANG",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-07-21-the-last-dance",
+      "date": "2012-07-21",
+      "title": "THE LAST DANCE!",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20120722232931id_/http://www.distillery.de:80/ex/dates/2012/07/21",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: the last",
+          "items": [
+            {
+              "name": "SASCHIENNE",
+              "info": "Kompakt, Berlin",
+              "link": ""
+            },
+            {
+              "name": "STEFFEN BENNEMANN",
+              "info": "Nachtdigital, Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "POLO",
+              "info": "Schach Matt, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "KLEINSCHMAGER AUDIO",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

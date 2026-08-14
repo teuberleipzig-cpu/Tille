@@ -1,0 +1,324 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2022-05-07-saturday-rave",
+      "date": "2022-05-07",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20220524130430id_/https://www.distillery.de/ex/dates/2022/05/07",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "BRYAN KESSLER",
+              "info": "Innervisions",
+              "link": ""
+            },
+            {
+              "name": "FILBURT",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "NøRBAK",
+              "info": "Hayes, Warm Up, Soma",
+              "link": ""
+            },
+            {
+              "name": "STIGMATIQUE",
+              "info": "Distillery, SEELEN",
+              "link": ""
+            },
+            {
+              "name": "ROTTNMEIER",
+              "info": "Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-05-13-music-of-color",
+      "date": "2022-05-13",
+      "title": "MUSIC OF COLOR",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20220524114357id_/https://www.distillery.de/ex/dates/2022/05/13",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "RA-MIN",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "VANAENAE",
+              "info": "G-Edit, Music Of Color",
+              "link": ""
+            },
+            {
+              "name": "XUBII & CAROOL",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "SINH TAI & BIG HONEY",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "COLLUVISOL",
+              "info": "oh mochi, zweite reihe",
+              "link": ""
+            },
+            {
+              "name": "SOMALI VENDETTA",
+              "info": "hot boi collective",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-05-14-saturday-rave",
+      "date": "2022-05-14",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20220524125721id_/https://www.distillery.de/ex/dates/2022/05/14",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "GERD JANSON",
+              "info": "At Robert Johnson, Running Back Rec, FFM",
+              "link": ""
+            },
+            {
+              "name": "QNETE",
+              "info": "QC Records, X-Kalay",
+              "link": ""
+            },
+            {
+              "name": "DYSCOTHEQUE",
+              "info": "nice4what, Drive",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "NINETTE",
+              "info": "Distillery, LÄRM",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-05-21-saturday-rave",
+      "date": "2022-05-21",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20220524125050id_/https://www.distillery.de/ex/dates/2022/05/21",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DOMINIK MARZ",
+              "info": "Innvervisions, Exit Strategy",
+              "link": ""
+            },
+            {
+              "name": "MAURO CARACHO",
+              "info": "Distillery, Speedboat, Fäncy",
+              "link": ""
+            },
+            {
+              "name": "NAPOLEON DYNAMITE",
+              "info": "Fäncy, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "FADI MOHEM",
+              "info": "Werk-Music",
+              "link": ""
+            },
+            {
+              "name": "HOUDAFK",
+              "info": "Distillery",
+              "link": ""
+            },
+            {
+              "name": "DANIEL SAILER",
+              "info": "Up Home, Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-05-25-chris-liebing-all-night-long",
+      "date": "2022-05-25",
+      "title": "CHRIS LIEBING - ALL NIGHT LONG",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20220524114034id_/https://www.distillery.de/ex/dates/2022/05/25",
+      "imageUrl": "",
+      "description": "///",
+      "sections": [
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "CHRIS LIEBING",
+              "info": "clr.net, FFM",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-05-27-20-jahre-audite",
+      "date": "2022-05-27",
+      "title": "20 JAHRE AUDITE",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20220524120539id_/https://www.distillery.de/ex/dates/2022/05/27",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ALOO",
+              "info": "Fat Bemme",
+              "link": ""
+            },
+            {
+              "name": "AUDITE",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DRAW",
+              "info": "Soundproof, Frankfurt",
+              "link": ""
+            },
+            {
+              "name": "HIDDEN SICKNESS",
+              "info": "Breakzkartell, Magdeburg, Start: 22:00, add to Cal, Wohnzimmer-Regeln:, Rassismus, Sexismus, Antisemitismus, Trans- oder Homofeindlichkeit und alle anderen Formen der Diskriminierung haben bei uns keinen Platz. Solltet ihr euch unwohl fühlen, geht jederzeit vertrauensvoll auf unsere Awareness Crew, das Barpersonal oder die Secu Crew zu., Beachtet das Foto- und Videoverbot.",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-05-28-saturday-rave",
+      "date": "2022-05-28",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20220524131943id_/https://www.distillery.de/ex/dates/2022/05/28",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "FRANKEY & SANDRINO",
+              "info": "Innervisions, Drumpoet Community, Mood Music",
+              "link": ""
+            },
+            {
+              "name": "INNERE TUEREN",
+              "info": "KANN",
+              "link": ""
+            },
+            {
+              "name": "LARS CHRISTIAN MüLLER",
+              "info": "Distillery, mindcookies",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "VINCENT NEUMANN",
+              "info": "Distillery, Unitas Multiplex, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "PIUS",
+              "info": "punani, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BIGALKE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

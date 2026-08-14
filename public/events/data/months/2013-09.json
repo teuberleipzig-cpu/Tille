@@ -1,0 +1,265 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2013-09-12-m30-common-ground-gallery",
+      "date": "2013-09-12",
+      "title": "M30 COMMON GROUND GALLERY",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20130911063006id_/http://www.distillery.de:80/ex/dates/2013/09/12",
+      "imageUrl": "",
+      "description": "Start: 17:00 (Chill-Out)\nStart: 23:00 (M30 Common Ground Gallery)\n... liegt irgendwo zwischen 30ten Geburtstag zweier Verrückter die sich vor wahrscheinlich 28,5 Jahren erstmals im Sandkasten die Hände reichten, 30 Jahre Techno, 30 Jahre Hip Hop, 30 Jahre Kunst auf der Straße und 7 Jahre Osten – ob mit oder ohne Banane ist nicht bekannt. Dem Alter angemessen gibts auch noch verschiedenstes Rahmenprogramm. Lasst Euch überraschen oder noch besser, überrascht uns.\nFENSTER ZUM HOF\nSIGN UP!",
+      "sections": []
+    },
+    {
+      "id": "2013-09-13-boundless-beatz",
+      "date": "2013-09-13",
+      "title": "BOUNDLESS BEATZ",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20130911063011id_/http://www.distillery.de:80/ex/dates/2013/09/13",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: chill out from reggae to dub(step)",
+          "items": [
+            {
+              "name": "TEARZTAR AKA DUB SPENCER",
+              "info": "Submission",
+              "link": ""
+            },
+            {
+              "name": "RUDY GONZILLAH",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: drum and bass",
+          "items": [
+            {
+              "name": "COMMAND STRANGE",
+              "info": "V Records, Metalheadz, Good Looking, Kasachstan",
+              "link": ""
+            },
+            {
+              "name": "INTELLIGENT MANNERS",
+              "info": "Fokuz, Celsius, Good Looking, Russland",
+              "link": ""
+            },
+            {
+              "name": "DUBBALOT",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-09-14-ostgut-ton",
+      "date": "2013-09-14",
+      "title": "OSTGUT TON",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20130911063016id_/http://www.distillery.de:80/ex/dates/2013/09/14",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: ostgut",
+          "items": [
+            {
+              "name": "ND_BAUMECKER",
+              "info": "Ostgut Ton, Freeride Millenium",
+              "link": ""
+            },
+            {
+              "name": "VIRGINIA",
+              "info": "Panorama Bar / Berghain, Berlin",
+              "link": ""
+            },
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "mindcookies",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-09-20-submission",
+      "date": "2013-09-20",
+      "title": "SUBMISSION",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20130911063021id_/http://www.distillery.de:80/ex/dates/2013/09/20",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "down: dubstep, grime, uk bass, glitch, dub",
+          "items": [
+            {
+              "name": "KAHN",
+              "info": "Gorgon Sound, Bandulu, Deep Medi, Bristol",
+              "link": ""
+            },
+            {
+              "name": "DJ D-FEKT",
+              "info": "Resistant Mindz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "TEARZTAR",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "ASM",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "HERBALSELECTA",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-09-21-moon-harbour-showcase-meets-syntax",
+      "date": "2013-09-21",
+      "title": "MOON HARBOUR SHOWCASE MEETS SYNTAX",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20130911063026id_/http://www.distillery.de:80/ex/dates/2013/09/21",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: moon harbour showcase",
+          "items": [
+            {
+              "name": "JENS BOND",
+              "info": "Highgrade, Berlin",
+              "link": ""
+            },
+            {
+              "name": "SABLE SHEEP",
+              "info": "Moon Harbour, Aachen",
+              "link": ""
+            },
+            {
+              "name": "LENNY BROOKSTER",
+              "info": "Born2Groove, Dresden",
+              "link": ""
+            },
+            {
+              "name": "DAN DRASTIC",
+              "info": "Moon Harbour, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: syntax",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-09-27-style-wild-meets-overdubclub",
+      "date": "2013-09-27",
+      "title": "STYLE WILD MEETS OVERDUBCLUB",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20130911063031id_/http://www.distillery.de:80/ex/dates/2013/09/27",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: hip hop, beats, wonky, trap",
+          "items": [
+            {
+              "name": "SARAH FARINA",
+              "info": "Through My Speakers, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DJ SICSTYLE",
+              "info": "Spitainment",
+              "link": ""
+            },
+            {
+              "name": "DJ FREE-KEE",
+              "info": "Impfbass, What you want",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: overdubclub",
+          "items": [
+            {
+              "name": "OVERDUBCLUB",
+              "info": "Beatmaking Jam Session - join if you like to, Start: 23:00",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-09-28-somewhere-in-between-techno-future-bass",
+      "date": "2013-09-28",
+      "title": "SOMEWHERE IN BETWEEN TECHNO & FUTURE_BASS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20130911063036id_/http://www.distillery.de:80/ex/dates/2013/09/28",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: techno",
+          "items": [
+            {
+              "name": "BLAWAN",
+              "info": "Hinge Finger, Sheworks, London",
+              "link": ""
+            },
+            {
+              "name": "STEPHAN VON WOLFFERSDORFF",
+              "info": "Distillery, Where the Buffalo Roam, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ONETAKE",
+              "info": "Conne Island",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: between future_bass",
+          "items": [
+            {
+              "name": "TøREK",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

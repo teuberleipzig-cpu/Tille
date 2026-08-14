@@ -1,0 +1,491 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2022-11-04-oxid-invites-girlcast",
+      "date": "2022-11-04",
+      "title": "OXID INVITES GIRLCAST",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20221112150632id_/https://www.distillery.de/ex/dates/2022/11/04",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Girlcast",
+          "items": [
+            {
+              "name": "KLAUDIA KOWALSKI",
+              "info": "Mama of Girlcast, München",
+              "link": ""
+            },
+            {
+              "name": "XYNIA",
+              "info": "Rave Alert, Berlin",
+              "link": ""
+            },
+            {
+              "name": "AURUM",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "K1KO",
+              "info": "Passiv Aggressiv, Berlin",
+              "link": ""
+            },
+            {
+              "name": "JOSEPHINE VOIGT",
+              "info": "Cumulonimbus,Berlin",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: OXID",
+          "items": [
+            {
+              "name": "BASSWELL",
+              "info": "Lyon, France",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-11-05-long-vehicle-top-tourist",
+      "date": "2022-11-05",
+      "title": "LONG VEHICLE TOP TOURIST",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20221112150632id_/https://www.distillery.de/ex/dates/2022/11/05",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "GATHASPAR",
+              "info": "Chypre",
+              "link": ""
+            },
+            {
+              "name": "MAP.ACHE",
+              "info": "Kann, Giegling",
+              "link": ""
+            },
+            {
+              "name": "SEVENSOL",
+              "info": "Long Vehicle, Kann",
+              "link": ""
+            },
+            {
+              "name": "REECE WALKER & SALOMO",
+              "info": "Breakfree, R.a.n.d. Muzik",
+              "link": ""
+            },
+            {
+              "name": "HANNIE PHI",
+              "info": "Berlin",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "ATEQ",
+              "info": "Pale",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-11-11-boundless-beatz",
+      "date": "2022-11-11",
+      "title": "BOUNDLESS BEATZ",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20221112150632id_/https://www.distillery.de/ex/dates/2022/11/11",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: DRUM & BASS",
+          "items": [
+            {
+              "name": "BREAKADAWN",
+              "info": "Zucker, Bremen",
+              "link": ""
+            },
+            {
+              "name": "CASCO",
+              "info": "Sustain! / Tiefklang, München",
+              "link": ""
+            },
+            {
+              "name": "KRONIK",
+              "info": "Tiefklang, Saarbrücken",
+              "link": ""
+            },
+            {
+              "name": "DUBBALOT",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "VRUM",
+              "info": "Boundless Beatz",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: DUBSTEP",
+          "items": [
+            {
+              "name": "MIRIAM SCHULTE",
+              "info": "Mother's Finest, Berlin",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-11-12-saturday-rave",
+      "date": "2022-11-12",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20221112150632id_/https://www.distillery.de/ex/dates/2022/11/12",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SPENCER PARKER",
+              "info": "Work Them Records, ItsNotOver, Rekids",
+              "link": ""
+            },
+            {
+              "name": "KATAYA",
+              "info": "Ketoga, Badbassbitch",
+              "link": ""
+            },
+            {
+              "name": "ROB/NSON",
+              "info": "ND, N-ICE",
+              "link": ""
+            },
+            {
+              "name": "FELIPEH",
+              "info": "Sundaze",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "JAMAICA SUK",
+              "info": "Gradient, Berlin",
+              "link": ""
+            },
+            {
+              "name": "WEH8MUT",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-11-15-dance-dance-dance",
+      "date": "2022-11-15",
+      "title": "DANCE DANCE DANCE",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20221112150632id_/https://www.distillery.de/ex/dates/2022/11/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ACID PAULI",
+              "info": "Ouïe",
+              "link": ""
+            },
+            {
+              "name": "NICO STOJAN",
+              "info": "Ouïe",
+              "link": ""
+            },
+            {
+              "name": "JUDITH VAN WATERKANT",
+              "info": "Feat.Fem",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "2XNI",
+              "info": "Tresor West, bang!",
+              "link": ""
+            },
+            {
+              "name": "MALENA",
+              "info": "Konnektivmusik, Dresden",
+              "link": ""
+            },
+            {
+              "name": "BIGALKE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-11-18-9-euroticket-revival",
+      "date": "2022-11-18",
+      "title": "9-EUROTICKET-REVIVAL",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20221112150632id_/https://www.distillery.de/ex/dates/2022/11/18",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "PTK",
+              "info": "Leipzig & Gomorrha",
+              "link": ""
+            },
+            {
+              "name": "MCE",
+              "info": "SuedKiez, 7030, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "TIMSLINE",
+              "info": "70/30 Records",
+              "link": ""
+            },
+            {
+              "name": "DERNOIE",
+              "info": "7030 Records",
+              "link": ""
+            },
+            {
+              "name": "L-SURA",
+              "info": "7030 Records",
+              "link": ""
+            },
+            {
+              "name": "DEINEMAFA",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "FLAUSEN + KULMBACH",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-11-19-saturday-rave-w-partiboi69-meets-sachsentrance",
+      "date": "2022-11-19",
+      "title": "SATURDAY RAVE W/ PARTIBOI69 MEETS SACHSENTRANCE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20221112150632id_/https://www.distillery.de/ex/dates/2022/11/19",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: 69",
+          "items": [
+            {
+              "name": "PARTIBOI69",
+              "info": "Mutual Pleasure",
+              "link": ""
+            },
+            {
+              "name": "TTYFAL B2B MARIE MIDORI",
+              "info": "Institut für Zukunft, Femme Bass Mafia",
+              "link": ""
+            },
+            {
+              "name": "BLANKK DISC",
+              "info": "Hyperion",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: Sachsentrance",
+          "items": [
+            {
+              "name": "ATREO",
+              "info": "Sachsentrance",
+              "link": ""
+            },
+            {
+              "name": "THE JAKOB SISTERZ",
+              "info": "Sachsentrance, Leipzig / Berlin",
+              "link": ""
+            },
+            {
+              "name": "SABU!",
+              "info": "Sachsentrance, Berlin",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-11-25-monomente",
+      "date": "2022-11-25",
+      "title": "MONOMENTE",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20221112150632id_/https://www.distillery.de/ex/dates/2022/11/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "HEIMLICH KNüLLER",
+              "info": "Bachstelzen, Kater Blau, Berlin",
+              "link": ""
+            },
+            {
+              "name": "PLAYLOVE",
+              "info": "Les Belles de Nuit, Zürich",
+              "link": ""
+            },
+            {
+              "name": "JULY",
+              "info": "HS12, Zürich",
+              "link": ""
+            },
+            {
+              "name": "BENOSAH",
+              "info": "Wundertüte, Bügelbrett, Zürich",
+              "link": ""
+            },
+            {
+              "name": "MA.SCHI",
+              "info": "apostrophé, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "ALARICO",
+              "info": "Mutual Rytm, Katana Records",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-11-26-saturday-rave-x-proyeckt-qrach",
+      "date": "2022-11-26",
+      "title": "SATURDAY RAVE X PROYECKT QRACH",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20221112150632id_/https://www.distillery.de/ex/dates/2022/11/26",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MARCUS WORGULL",
+              "info": "Innervisions, Koeln",
+              "link": ""
+            },
+            {
+              "name": "PORTABLE / BODYCODE - LIVE",
+              "info": "Circus Company, Ghostly, Perlon",
+              "link": ""
+            },
+            {
+              "name": "ENELRAM",
+              "info": "nice4what, G-Edit",
+              "link": ""
+            },
+            {
+              "name": "INNERE TUEREN",
+              "info": "KANN",
+              "link": ""
+            },
+            {
+              "name": "MAURO CARACHO",
+              "info": "Distillery, Speedboat, Fäncy",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "NIKOLINA",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-11-30-120-minuten-w-miss-cleenex-und-ihr-ex",
+      "date": "2022-11-30",
+      "title": "120 MINUTEN W/ MISS CLEENEX UND IHR EX",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20221112150632id_/https://www.distillery.de/ex/dates/2022/11/30",
+      "imageUrl": "",
+      "description": "Start: 20:00\nTICKETS\nGefördert durch:\n2001-2022 Distillery\nmade with <3 °°",
+      "sections": []
+    }
+  ]
+}

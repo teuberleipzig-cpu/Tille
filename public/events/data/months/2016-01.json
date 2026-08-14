@@ -1,0 +1,412 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2016-01-01-livelyrix-sommerfestival-der-slamabend",
+      "date": "2016-01-01",
+      "title": "LIVELYRIX SOMMERFESTIVAL - DER SLAMABEND",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20160430155958id_/http://www.distillery.de/ex/dates/2010/07/02",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "JAN KOCH",
+              "info": "songs & stories, In Puncto, Berlin",
+              "link": ""
+            },
+            {
+              "name": "SPIDER",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "SURF POETEN",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "PEH",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "PAULINE FüG",
+              "info": "Hannover",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-01-03-like-tears-in-the-rain",
+      "date": "2016-01-03",
+      "title": "LIKE TEARS IN THE RAIN",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20160102190756id_/http://www.distillery.de:80/ex/dates/2016/01/03",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "RØDHÅD",
+              "info": "Dystopian",
+              "link": ""
+            },
+            {
+              "name": "MøRBECK",
+              "info": "Code is Law, Grounded Theory, Vault Series, Perc Trax, Berlin",
+              "link": ""
+            },
+            {
+              "name": "TIJANA T",
+              "info": "Abe Duque Records, Belgrad",
+              "link": ""
+            },
+            {
+              "name": "JANEIN",
+              "info": "SEELEN",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-01-08-livelyrix-poetry-slam",
+      "date": "2016-01-08",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20160102183325id_/http://www.distillery.de:80/ex/dates/2016/01/08",
+      "imageUrl": "",
+      "description": "FR. 08.01.16 Mad Again! vs. OverDubClub",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "NINIA LAGRANDE",
+              "info": "Hannover",
+              "link": ""
+            },
+            {
+              "name": "MARVIN SUCKUT",
+              "info": "Konstanz",
+              "link": ""
+            },
+            {
+              "name": "TOM SCHILDHAUER",
+              "info": "Halle",
+              "link": ""
+            },
+            {
+              "name": "FILO FRANKE",
+              "info": "Mannheim",
+              "link": ""
+            },
+            {
+              "name": "U.V.M.",
+              "info": "und wie immer viele mehr",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-01-09-close-your-eyes",
+      "date": "2016-01-09",
+      "title": "CLOSE YOUR EYES",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20160102190801id_/http://www.distillery.de:80/ex/dates/2016/01/09",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "RAMPUE – LIVE",
+              "info": "Audiolith, Dantze, Berlin",
+              "link": ""
+            },
+            {
+              "name": "LUX",
+              "info": "IO, Giegling, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "PETER INVASION",
+              "info": "Riotvan, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-01-15-5-years-like-ham-in-the-pan-level-up-resistant-mindz-basement-tape-release",
+      "date": "2016-01-15",
+      "title": "5 YEARS LIKE HAM IN THE PAN - LEVEL UP & RESISTANT MINDZ BASEMENT TAPE RELEASE",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20160102190806id_/http://www.distillery.de:80/ex/dates/2016/01/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DJ D-FEKT",
+              "info": "Resistant Mindz, Sounds Like Ham In The Pan",
+              "link": ""
+            },
+            {
+              "name": "DJ CONQUISTA",
+              "info": "Sound Like Ham In The Pan",
+              "link": ""
+            },
+            {
+              "name": "DJ SAIBZ",
+              "info": "Streetflavor, Boom Bap, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "PHAX",
+              "info": "Sound Like Ham In The Pan",
+              "link": ""
+            },
+            {
+              "name": "FRESH BUZYNESS AKA FRESH GREEN & BUSY A",
+              "info": "Sounds Like Ham In The Pan",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-01-16-freude-am-tanzen-meets-musik-krause",
+      "date": "2016-01-16",
+      "title": "FREUDE AM TANZEN MEETS MUSIK KRAUSE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20160102190811id_/http://www.distillery.de:80/ex/dates/2016/01/16",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DOUGLAS GREED",
+              "info": "Freude am Tanzen, Jena",
+              "link": ""
+            },
+            {
+              "name": "MONKEY MAFFIA",
+              "info": "Freude am Tanzen, Jena",
+              "link": ""
+            },
+            {
+              "name": "TARON-TREKKA",
+              "info": "Freude am Tanzen, Jena",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-01-22-purple-tea-defrostatica",
+      "date": "2016-01-22",
+      "title": "PURPLE TEA & DEFROSTATICA",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20160102190816id_/http://www.distillery.de:80/ex/dates/2016/01/22",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: hip hop, grime hustle-trap",
+          "items": [
+            {
+              "name": "DEXTAR B2B PARKZ",
+              "info": "Bass En Mass, Magdeburg",
+              "link": ""
+            },
+            {
+              "name": "DRBYSTRR93",
+              "info": "raputation[.de], Leipzig",
+              "link": ""
+            },
+            {
+              "name": "KITKUT",
+              "info": "Beyond07, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: drum and bass, juke",
+          "items": [
+            {
+              "name": "KABUKI",
+              "info": "Liquid V, Bingo Rec., Precision, FFM",
+              "link": ""
+            },
+            {
+              "name": "KATOR & ALZA54",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-01-23-honesty-is-the-best-policy",
+      "date": "2016-01-23",
+      "title": "HONESTY IS THE BEST POLICY",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20160102190821id_/http://www.distillery.de:80/ex/dates/2016/01/23",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ARIL BRIKHA – LIVE",
+              "info": "Art of Vengeance, Schweden",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "mindcookies, Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "FIDELITY KASTROW",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-01-29-boundless-beatz",
+      "date": "2016-01-29",
+      "title": "BOUNDLESS BEATZ",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20160102190826id_/http://www.distillery.de:80/ex/dates/2016/01/29",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "KRONIK",
+              "info": "Römerkartell, Tiefklang, Saarbrücken",
+              "link": ""
+            },
+            {
+              "name": "WINTERMUTE",
+              "info": "Blackout / Boundless Beatz",
+              "link": ""
+            },
+            {
+              "name": "DREADMAUL",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "AUDITE",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DUBBALOT",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-01-30-passionate",
+      "date": "2016-01-30",
+      "title": "PASSIONATE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20160102190850id_/http://www.distillery.de:80/ex/dates/2016/01/30",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: mdr",
+          "items": [
+            {
+              "name": "MARCEL DETTMANN",
+              "info": "MDR, Ostgut Ton, Panorama Bar / Berghain, Berlin",
+              "link": ""
+            },
+            {
+              "name": "VINCENT NEUMANN",
+              "info": "Distillery, Unitas Multiplex, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LENNY BROOKSTER",
+              "info": "Music Is Not Fashion, HomeSweetHome Session, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: fäncy",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

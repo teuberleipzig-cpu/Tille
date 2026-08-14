@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2019-08-31-reopening-after-summer-break",
+      "date": "2019-08-31",
+      "title": "REOPENING AFTER SUMMER BREAK",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190715230501id_/http://www.distillery.de/ex/dates/2019/08/31",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DENIS HORVAT",
+              "info": "Innervisions, AEON, Afterlife",
+              "link": ""
+            },
+            {
+              "name": "TERR",
+              "info": "Permanent Vacation, Correspondant, Clash Lion, Hotflush",
+              "link": ""
+            },
+            {
+              "name": "LARS CHRISTIAN MüLLER",
+              "info": "Distillery, mindcookies",
+              "link": ""
+            },
+            {
+              "name": "MORE SOON...",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "TIN MAN – LIVE",
+              "info": "Acis Test, Bunker NY",
+              "link": ""
+            },
+            {
+              "name": "MORE SOON...",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

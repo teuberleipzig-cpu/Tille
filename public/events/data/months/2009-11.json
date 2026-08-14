@@ -1,0 +1,210 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2009-11-06-livelyrix-poetry-slam-im-anschluss-kurt-reith-abend",
+      "date": "2009-11-06",
+      "title": "LIVELYRIX POETRY SLAM // IM ANSCHLUSS: KURT REITH ABEND",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20091010201045id_/http://www.distillery.de:80/ex/dates/2009/11/06",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: livelyrix poetry slam & kurt reith abend",
+          "items": [
+            {
+              "name": "LASSE SAMSTROEM",
+              "info": "FFM",
+              "link": ""
+            },
+            {
+              "name": "STEFAN SEYFARTH",
+              "info": "Sax Royal, Dresden",
+              "link": ""
+            },
+            {
+              "name": "SULAIMAN",
+              "info": "Paderborn",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-11-07-boundary-functions-meets-where-the-buffalo-roam",
+      "date": "2009-11-07",
+      "title": "BOUNDARY FUNCTIONS MEETS WHERE THE BUFFALO ROAM",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20091009012827id_/http://www.distillery.de:80/ex/dates/2009/11/07",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: boundary functions",
+          "items": [
+            {
+              "name": "OMAR S",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "FXHE",
+              "info": "Detroit",
+              "link": ""
+            },
+            {
+              "name": "STEFFEN BENNEMANN",
+              "info": "Nachtdigital, Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: where the buffalo roam",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-11-13-mad-again",
+      "date": "2009-11-13",
+      "title": "MAD AGAIN!",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20091010201051id_/http://www.distillery.de:80/ex/dates/2009/11/13",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: galeriefloor",
+          "items": [
+            {
+              "name": "AUSSTELLUNG & CHILL OUT ZUM THEMA STREET ART",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: bass-floor",
+          "items": [
+            {
+              "name": "TIM TURBO",
+              "info": "Berlin, München",
+              "link": ""
+            },
+            {
+              "name": "SENCHA",
+              "info": "Distillery, nuskoolbreaks, Black Belt Boogie",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-11-14-hoerfunk-meets-syntax",
+      "date": "2009-11-14",
+      "title": "HOERFUNK MEETS SYNTAX",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20091010201056id_/http://www.distillery.de:80/ex/dates/2009/11/14",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: hoerfunk",
+          "items": [
+            {
+              "name": "GUNJAH",
+              "info": "Showboxx, Funkwelt, Dresden",
+              "link": ""
+            },
+            {
+              "name": "MARKUS WELBY",
+              "info": "hoerfunk, Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-11-17-eingemachtes-outer-machines-part-ii",
+      "date": "2009-11-17",
+      "title": "EINGEMACHTES OUTER MACHINES PART II",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20091010201101id_/http://www.distillery.de:80/ex/dates/2009/11/17",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MARKO FüRSTENBERG – LIVE",
+              "info": "Rotary Cocktail, Ornaments, a.r.t.less, Thinner, Instabil",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-11-20-low-bass-alliance",
+      "date": "2009-11-20",
+      "title": "LOW BASS ALLIANCE",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20091010201106id_/http://www.distillery.de:80/ex/dates/2009/11/20",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: breakcore",
+          "items": [
+            {
+              "name": "END.USER",
+              "info": "Ohm Resistance, Hymen Records, Washington DC ), Start: 22:30, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-11-28-finest-selection-meets-feenstaub-friends",
+      "date": "2009-11-28",
+      "title": "FINEST SELECTION MEETS FEENSTAUB & FRIENDS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20091005085711id_/http://www.distillery.de:80/ex/dates/2009/11/28",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: finest selection",
+          "items": [
+            {
+              "name": "COBBLESTONE JAZZ – LIVE",
+              "info": "Wagon Repair, Canada",
+              "link": ""
+            },
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "Finest Selection, Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

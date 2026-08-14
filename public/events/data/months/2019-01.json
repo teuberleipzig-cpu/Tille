@@ -1,0 +1,428 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2019-01-01-livelyrix-sommerfestival-der-slamabend",
+      "date": "2019-01-01",
+      "title": "LIVELYRIX SOMMERFESTIVAL - DER SLAMABEND",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20190715230555id_/http://www.distillery.de/ex/dates/2010/07/02",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "JAN KOCH",
+              "info": "songs & stories, In Puncto, Berlin",
+              "link": ""
+            },
+            {
+              "name": "SPIDER",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "SURF POETEN",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "PEH",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "PAULINE FüG",
+              "info": "Hannover",
+              "link": ""
+            },
+            {
+              "name": "KHESRAU BEHROZ",
+              "info": "Kassel",
+              "link": ""
+            },
+            {
+              "name": "FRANK KLöTGEN",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-01-04-style-wild",
+      "date": "2019-01-04",
+      "title": "STYLE WILD",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190107130829id_/http://www.distillery.de:80/ex/dates/2019/01/04",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: House, Disco, Funk",
+          "items": [
+            {
+              "name": "TIJO AIMé",
+              "info": "Atmosphère, Djoon, France",
+              "link": ""
+            },
+            {
+              "name": "MS FEMDELIC",
+              "info": "The Brides, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DJ Y",
+              "info": "Casablanca, Berlin",
+              "link": ""
+            },
+            {
+              "name": "PABLO GUNZALES",
+              "info": "Style Wild/Afro Latin What?!",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: Beats, Hip Hop, Trap, Footwork, Jersey, Bass",
+          "items": [
+            {
+              "name": "DJ LAZY ONE",
+              "info": "Warsaw/Poland",
+              "link": ""
+            },
+            {
+              "name": "JENNY SHARP",
+              "info": "Good Hood Music, Sharp Radio",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-01-07-livelyrix-poetry-slam",
+      "date": "2019-01-07",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20190108231312id_/http://www.distillery.de:80/ex/dates/2019/01/07",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: MODERATION: MUSIC BY:",
+          "items": [
+            {
+              "name": "BO WIMMER",
+              "info": "Marburg",
+              "link": ""
+            },
+            {
+              "name": "LEONIE WARNKE",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BLANKK DISC",
+              "info": "Hyperion, Start: 19:30, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-01-11-hyperion",
+      "date": "2019-01-11",
+      "title": "HYPERION",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20220820012908id_/https://www.distillery.de/ex/dates/2019/01/11",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "K-LMR",
+              "info": "exlepäng",
+              "link": ""
+            },
+            {
+              "name": "SAILENT SEIHMEN",
+              "info": "Distillery, Hyperion, Proyeckt Qrach",
+              "link": ""
+            },
+            {
+              "name": "BLANKK DISC",
+              "info": "Start: 23:00, add to Cal, „New Year, New Ways“ soll unser Motto heute Nacht sein. Und genau SO werden wir es auch machen heute und haben mit K-LMR genau den richtigen für den Job gewinnen können. Er wird uns heute nacht eine gut geschüttelt und gerührte Mischung Tech-House auftischen.Sailent Seihmen und blankk_disc fliegen mit in der Formation und freuen sich schon riesig mit K-LMR, dessen exlepäng Crew ja schon bekannt für Sound Apokalypsen bekannt ist, den Club mit euch ab zu reißen., Dazu gibts Drinks vom besten Barteam der Welt und natürlich euch-der besten Dance Gang der Welt., Na dann bis Freitag, Crew!#fortheloveofhouse",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-01-12-saturday-rave",
+      "date": "2019-01-12",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190108231317id_/http://www.distillery.de:80/ex/dates/2019/01/12",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "THE DRIFTER",
+              "info": "Maeve, Permanent Vacation, Berlin",
+              "link": ""
+            },
+            {
+              "name": "MAURO CARACHO",
+              "info": "Distillery, Fäncy, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SMOOTJE",
+              "info": "Fäncy, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "DRUMCELL",
+              "info": "Droid, Detroit Underground, Blank Code, CLR, EDLX, TRUNCATE, Ibadan, Los Angeles",
+              "link": ""
+            },
+            {
+              "name": "LUIS FLORES",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "JANICE",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "PRES.",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "I MURDERED",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-01-18-tobassgo",
+      "date": "2019-01-18",
+      "title": "TOBASSGO",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190108231322id_/http://www.distillery.de:80/ex/dates/2019/01/18",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "KOLT SIEWERTS",
+              "info": "PLAY!/ drumandbass.de, Köln",
+              "link": ""
+            },
+            {
+              "name": "VOID",
+              "info": "PLAY!/ Mayan Audio, Köln",
+              "link": ""
+            },
+            {
+              "name": "LY DA BUDDHA",
+              "info": "Real Vibes/ Serial Killaz",
+              "link": ""
+            },
+            {
+              "name": "KEON",
+              "info": "Gunstarsoundz",
+              "link": ""
+            },
+            {
+              "name": "KEHA",
+              "info": "Hermsdorf",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "SHAWNE",
+              "info": "hearthis.at",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-01-19-muna-musik-x-paracou",
+      "date": "2019-01-19",
+      "title": "MUNA MUSIK X PARACOU",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190108231332id_/http://www.distillery.de:80/ex/dates/2019/01/19",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "CASSY",
+              "info": "Kwench Records, Perlon, Berlin",
+              "link": ""
+            },
+            {
+              "name": "NORMAN WEBER",
+              "info": "Luna City Express, Muna Musik, Sysiphos, Kater",
+              "link": ""
+            },
+            {
+              "name": "ONCE UPON A TIME – LIVE",
+              "info": "Paracou, Muna Musik, Salon zur wilden Renate",
+              "link": ""
+            },
+            {
+              "name": "IRIS MENZA",
+              "info": "Paracou, deep in you",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "MAX NIPPERT",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-01-25-symbiz-thankyuh-tour",
+      "date": "2019-01-25",
+      "title": "SYMBIZ „THANKYUH! TOUR“",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190822232644id_/http://www.distillery.de/ex/dates/2019/01/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SYMBIZ SOUND",
+              "info": "Mg 77, Berlin, Braunschweig",
+              "link": ""
+            },
+            {
+              "name": "LIONS MOB & EL P",
+              "info": "Afro Latin What?! & 3Takter",
+              "link": ""
+            },
+            {
+              "name": "DJ SICSTYLE",
+              "info": "Bass En Mass, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "PABLO GUNZALES",
+              "info": "Style Wild/Afro Latin What?!, Start: 23:00, add to Cal, Älter werden bedeutet manchmal auch loszulassen, vergangene Jahre in guter Erinnerung zu behalten und Neuem Platz einzuräumen. Dementsprechend wird das heute der letzte Abend, an dem wir gemeinsam mit Symbiz die Distillery auseinandernehmen. Dieser Abgang muss einfach in Erinnerung bleiben, gerne positiv bekloppt, so wie es Symbiz auch sind., Noch einmal werden die selbst gebauten Controller Bass und Samples abfeuern, Zhi am Mic Lyrics in den Raum blasen und spätestens bei YEERUH darf dann auch mal Thanyuh heißen. Knapp 10 Jahre Jahre Symbiz bedeuten auch knapp 10 Jahre Neugier und Offenheit für alle möglichen Sounds auf dieser Welt. Genregrenzen wurden regelmäßig niedergerissen, neue Elemente integriert und am Ende steht ein Hybrid - da kann auch das Auto noch was lernen - aus Global Bass, Trap, Dancehall, Afrobeats, Dnb, Jungle und Dubstep. Wahrscheinlich aber viel mehr. Und der rollt, ohne müde zu werden., Nicht müde werden ist übrigens eine recht passende Devise für den Abend, denn auch der support möchte es noch einmal wissen und wird den Soundkorridor hier und da noch ein wenig erweitern. Lions Mob & El P machen den Anfang und lockern die Muskeln, Sicstyle und Pablo Gunzales übernehmen die Führung beim finalen Ritt.",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-01-26-saturday-rave",
+      "date": "2019-01-26",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190108231339id_/http://www.distillery.de:80/ex/dates/2019/01/26",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Unnoticed Love EP",
+          "items": [
+            {
+              "name": "CHARLES WEBSTER",
+              "info": "Miso Records, Kristiana",
+              "link": ""
+            },
+            {
+              "name": "FILBURT",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "F.D.M",
+              "info": "O*RS",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "ALIENATA",
+              "info": "Discos Atónicos, Killekill",
+              "link": ""
+            },
+            {
+              "name": "MELANIA",
+              "info": "[aufnahme + wiedergabe], Verzerrung",
+              "link": ""
+            },
+            {
+              "name": "TEMPLETON",
+              "info": "Hypress, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

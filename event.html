@@ -19,8 +19,9 @@
     </main>
     <aside class="sidebar"><div class="sidebar-spacer"></div><span class="side-title">Saturday Rave</span><a class="side-link" href="#">Fenster zum Hof</a><a class="side-link" href="#">Specials</a></aside>
   </div>
-<script>
-const EVENTS_DATA_URL='public/events/data/events.json';
+<script type="module">
+import { createPublicEventStore } from './public/site/js/event-store.js?v=event-store-1';
+const eventStore=createPublicEventStore();
 const WEEKDAYS=['SO','MO','DI','MI','DO','FR','SA'];
 function esc(v){return String(v??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
 function slug(text){return String(text||'event').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')||'event';}
@@ -28,7 +29,7 @@ function eventId(e){return e.id||slug((e.date||'')+' '+(e.title||'event'));}
 function dateLabel(iso){const d=new Date(`${iso}T12:00:00`);return `${WEEKDAYS[d.getDay()]}. ${String(d.getDate()).padStart(2,'0')}.${String(d.getMonth()+1).padStart(2,'0')}.${String(d.getFullYear()).slice(-2)}`;}
 function renderItem(i){return `<span class="line"><strong>${esc(i.name)}</strong>${i.info?' ('+esc(i.info)+')':''}</span>`;}
 function renderEvent(e){const img=e.imageUrl?`<img class="hero" src="${esc(e.imageUrl)}" alt="${esc(e.title)}">`:'';const sections=(e.sections||[]).map(s=>`<div class="label">${esc(s.label||'')}</div><div class="line">${(s.items||[]).map(renderItem).join(' ')}</div>`).join('');const desc=e.description?`<div class="desc">${esc(e.description)}</div>`:'';document.title=`Distillery – ${e.title}`;return `${img}<h1 class="event-title ${esc(e.color||'olive')}">${dateLabel(e.date)} ${esc(e.title)}</h1>${sections}${desc}`;}
-async function boot(){try{const id=new URLSearchParams(location.search).get('id');const res=await fetch(EVENTS_DATA_URL,{cache:'no-store'});if(!res.ok)throw new Error('Events konnten nicht geladen werden.');const data=await res.json();const e=(data.events||[]).find(x=>eventId(x)===id);document.getElementById('event').innerHTML=e?renderEvent(e):'<p class="error">Veranstaltung nicht gefunden.</p>';}catch(err){document.getElementById('event').innerHTML=`<p class="error">${esc(err.message)}</p>`;}}
+async function boot(){try{const id=new URLSearchParams(location.search).get('id');const e=await eventStore.resolveEvent(id);document.getElementById('event').innerHTML=e?renderEvent(e):'<p class="error">Veranstaltung nicht gefunden.</p>';}catch(err){document.getElementById('event').innerHTML=`<p class="error">${esc(err.message)}</p>`;}}
 boot();
 </script>
 <script type="module" src="assets/site-navigation.js?v=site-navigation-3"></script>

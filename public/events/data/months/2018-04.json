@@ -1,0 +1,386 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2018-04-06-livelyrix-poetry-slam",
+      "date": "2018-04-06",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20180408163145id_/http://www.distillery.de:80/ex/dates/2018/04/06",
+      "imageUrl": "",
+      "description": "FR. 06.04.18 Hyperion",
+      "sections": [
+        {
+          "label": "up: MODERATION:",
+          "items": [
+            {
+              "name": "JEAN-PHILIPPE KINDLER",
+              "info": "Marburg",
+              "link": ""
+            },
+            {
+              "name": "LETICIA WAHL",
+              "info": "Marburg",
+              "link": ""
+            },
+            {
+              "name": "PIET WEBER",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "TANASGOL SABBAGH",
+              "info": "Marburg",
+              "link": ""
+            },
+            {
+              "name": "BLEU BROODE & LEONIE WARNKE",
+              "info": "Marburg/Leipzig, Start: 19:30, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-04-07-trademark-sound",
+      "date": "2018-04-07",
+      "title": "TRADEMARK SOUND",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20180408163150id_/http://www.distillery.de:80/ex/dates/2018/04/07",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "TILL VON SEIN",
+              "info": "Dirt Crew",
+              "link": ""
+            },
+            {
+              "name": "SUOL",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "REZNIK",
+              "info": "Vice Magazine, KeineMusik, Berlin",
+              "link": ""
+            },
+            {
+              "name": "PETER INVASION",
+              "info": "Riotvan, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-04-13-mehr-von-diese-bestedeutschrap",
+      "date": "2018-04-13",
+      "title": "MEHR VON DIESE BESTEDEUTSCHRAP",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20180407032024id_/http://www.distillery.de:80/ex/dates/2018/04/13",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "VISA VIE",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "SAID - LIVE",
+              "info": "Hoodrich, Berlin",
+              "link": ""
+            },
+            {
+              "name": "CRATZMEISTER CALLE",
+              "info": "BESTE, Start: 23:00, add to Cal, Hau ma‘ ab mit deinen Laptopboxen, ich will mehr von diese BESTEdeutschRap.",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-04-14-perfect-home",
+      "date": "2018-04-14",
+      "title": "PERFECT HOME",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20180408163155id_/http://www.distillery.de:80/ex/dates/2018/04/14",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "LAKE PEOPLE – LIVE",
+              "info": "Mule Musiq, Permanent Vacation",
+              "link": ""
+            },
+            {
+              "name": "MORITZ KAISER",
+              "info": "IO, Pilleneimer, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "HENDRIK KADEN",
+              "info": "Distillery, Fäncy, Dynamite Kadinski",
+              "link": ""
+            },
+            {
+              "name": "MAURO CARACHO",
+              "info": "Distillery, Fäncy, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "KOBOSIL",
+              "info": "Ostgut Ton, Panorama Bar / Berghain, Berlin",
+              "link": ""
+            },
+            {
+              "name": "MAX NIPPERT",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-04-20-boundless-beatz",
+      "date": "2018-04-20",
+      "title": "BOUNDLESS BEATZ",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20180408163231id_/http://www.distillery.de:80/ex/dates/2018/04/20",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Drum and Bass HOSTED BY:",
+          "items": [
+            {
+              "name": "SPECTRASOUL",
+              "info": "Ish Chat, Shogun Audio",
+              "link": ""
+            },
+            {
+              "name": "AUDITE",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DUBBALOT",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "TINA",
+              "info": "Defrostatica Records, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MC RESC",
+              "info": "Random / Counterpoint, Freiburg, Start: 23:00, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-04-21-we-move-as-one",
+      "date": "2018-04-21",
+      "title": "WE MOVE AS ONE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20180408163200id_/http://www.distillery.de:80/ex/dates/2018/04/21",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MAREK HEMMANN – LIVE",
+              "info": "Freude am Tanzen",
+              "link": ""
+            },
+            {
+              "name": "DILIVIUS LENNI",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MONOTYPE",
+              "info": "Räucherkammer, D.O.C., Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ROBERT TESSMANN",
+              "info": "Räucherkammer, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "FRANçOIS X",
+              "info": "Dement3d Records, Deeply Rooted",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-04-27-phonatics-gringo-present-hotsauce",
+      "date": "2018-04-27",
+      "title": "PHONATICS, + GRINGO PRESENT: HOTSAUCE",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20180408163259id_/http://www.distillery.de:80/ex/dates/2018/04/27",
+      "imageUrl": "",
+      "description": "FR. 27.04.18 Phonatics, Distillery + Gringo present: HOTSAUCE\nFR. 27.04.18 PHONATICS, DISTILLERY + GRINGO PRESENT: HOTSAUCE",
+      "sections": [
+        {
+          "label": "up: Dancehall X Hip Hop X Afrobeats X Reggae X Tropical + SPECIAL GUEST DANCERS:",
+          "items": [
+            {
+              "name": "DJ TRIPLET",
+              "info": "New Sound Order, FFM",
+              "link": ""
+            },
+            {
+              "name": "PHONATICS HIFI",
+              "info": "Dutty Wine / Meltdown, C",
+              "link": ""
+            },
+            {
+              "name": "KID GRINGO",
+              "info": "Kugelblitz, Kampala / L",
+              "link": ""
+            },
+            {
+              "name": "DJ DERBYSTARR",
+              "info": "Brooklyn Zoo, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SELECTOR MADROCK",
+              "info": "Freiburg",
+              "link": ""
+            },
+            {
+              "name": "LIL CHOCOLATE",
+              "info": "FFM",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-04-28-musical-knowledge",
+      "date": "2018-04-28",
+      "title": "MUSICAL KNOWLEDGE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20180408163205id_/http://www.distillery.de:80/ex/dates/2018/04/28",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ANDREY PUSHKAREV",
+              "info": "Circus Company, Russia",
+              "link": ""
+            },
+            {
+              "name": "FILBURT",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "O*RS",
+              "info": "Permanent Vacation, Riotvan, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "THOMAS STIELER",
+              "info": "Distillery, Paracou",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-04-30-fakear-live",
+      "date": "2018-04-30",
+      "title": "FAKEAR - LIVE",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20180408163210id_/http://www.distillery.de:80/ex/dates/2018/04/30",
+      "imageUrl": "",
+      "description": "(Nowadays Records)\nStart: 19:00 (Doors)\n20:00 (Beginn)\nPräsentiert von hhv Records, Noisey Deutschland & Cosmo.\nDer junge französische Musiker und Produzent\nFakear\n- bürgerlich Theo Le Vigoreux - hat sich in der Elektroszene bereits einen festen Namen gemacht. Im Frühjahr 2018 geht es für ihn auf Tour und führt ihn im Zuge dieser auch nach Leipzig in die Distillery.\nTickets gibts im\nVorverkauf bei Eventim",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MO. 30.04.18 THINK OUTSIDE THE BOX",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "LA FLEUR",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

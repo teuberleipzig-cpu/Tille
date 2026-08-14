@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "ra-2458325",
+      "date": "2026-10-29",
+      "title": "Erobique",
+      "color": "yellow",
+      "moreUrl": "https://ra.co/events/2458325",
+      "imageUrl": "",
+      "description": "Start: 20:00\nEnde: 23:00",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Erobique",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2370028",
+      "date": "2026-10-30",
+      "title": "DUALISM with Paracek & SPEEDBOYS LIVE",
+      "color": "olive",
+      "moreUrl": "https://ra.co/events/2370028",
+      "imageUrl": "",
+      "description": "Start: 23:00\nEnde: 09:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Paraçek",
+              "info": "(TRANCEKRAFT 4000)",
+              "link": ""
+            },
+            {
+              "name": "SPEEDBOYS",
+              "info": "(Heidelberg)",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

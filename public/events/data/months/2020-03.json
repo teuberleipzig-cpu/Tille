@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2020-03-06-poetry-slam",
+      "date": "2020-03-06",
+      "title": "POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20200927090150id_/http://www.distillery.de/ex/dates/2020/03/06",
+      "imageUrl": "",
+      "description": "FR. 06.03.20 Hyperion",
+      "sections": [
+        {
+          "label": "up: MODERATION:",
+          "items": [
+            {
+              "name": "JONAS GALM",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "KHAARO",
+              "info": "Hamburg",
+              "link": ""
+            },
+            {
+              "name": "JONATHAN LöFFELBEIN",
+              "info": "Tübingen",
+              "link": ""
+            },
+            {
+              "name": "RAINER HOLL",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MORE SOON...",
+              "info": "Start: 19:30, add to Cal, Einlass: 19.30 Uhr, Beginn: 20.30 Uhr-Eintritt: VVK (TixforGigs) 5 Euro zzgl. Geb., AK 7 Euro",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2020-03-07-space-disco-x-blackred",
+      "date": "2020-03-07",
+      "title": "SPACE DISCO X BLACKRED",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20200919165324id_/http://www.distillery.de/ex/dates/2020/03/07",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "OTTO",
+              "info": "Mond Musik, Berlin",
+              "link": ""
+            },
+            {
+              "name": "ONKIT",
+              "info": "Space Disco, Audiofiction",
+              "link": ""
+            },
+            {
+              "name": "MILLE",
+              "info": "Polish Rec., Apollo Krieg, Mille & Hirsch",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "BRONCO",
+              "info": "Privat Message, Dresden",
+              "link": ""
+            },
+            {
+              "name": "HEADNOAKS",
+              "info": "Blackred, Antizero",
+              "link": ""
+            },
+            {
+              "name": "DISKO 69",
+              "info": "Blackred",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2020-03-13-digitalism-tour-jpeg-2020-wird-verschoben",
+      "date": "2020-03-13",
+      "title": "DIGITALISM TOUR.JPEG 2020 - WIRD VERSCHOBEN!",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20200919162628id_/http://www.distillery.de/ex/dates/2020/03/13",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DIGITALISM",
+              "info": "Kitsuné, Start: 20:00, add to Cal, Liebe Digitalism-Fans, Wir haben uns sehr auf Euch und den Gig dieses Wochenende gefreut. Da die Behörden wegen des Coronavirus für die nächsten Wochen in ganz Europa Veranstaltungsverbote aussprechen, verschieben unsere Tour, bis wir neue Infos für euch haben. Wir hoffen dazu auf Euer Verständnis. Natürlich bleiben Eure Tickets gültig! Eure Gesundheit und die Eurer Liebsten ist unsere Höchste Priorität. Bitte tut uns den Gefallen und arbeitet gemeinsam mit uns daran, dass es allen um Euch herum gut geht. Danke für Euren Support und Eure Treue. Ohne Euch würde ein Stück Digitalism fehlen.Wir sehen uns bald!Jence & Isi Digitalism",
+              "link": ""
+            },
+            {
+              "name": "SAVE THE DISTILLERY",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "SOLI-TICKET",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "DISTILLERY",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "KURT-EISNER-STR. 91",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "04275 LEIPZIG",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2020-03-14-saturday-rave-abgesagt",
+      "date": "2020-03-14",
+      "title": "SATURDAY RAVE - ABGESAGT",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20201022091755id_/http://www.distillery.de/ex/dates/2020/03/14",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ROBAG WRUHME",
+              "info": "Pampa, Hart & Tief, Kompakt, Weimar Innenstadt",
+              "link": ""
+            },
+            {
+              "name": "THOMAS STIELER",
+              "info": "Distillery, Paracou",
+              "link": ""
+            },
+            {
+              "name": "I$A",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "OLIVER LIEB",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2020-03-21-saturday-rave-abgesagt",
+      "date": "2020-03-21",
+      "title": "SATURDAY RAVE - ABGESAGT",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20200808225030id_/http://www.distillery.de/ex/dates/2020/03/21",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "LEVON VINCENT",
+              "info": "Novel Sound, Deconstruct, Underground Quality, Ostgut Ton, USA",
+              "link": ""
+            },
+            {
+              "name": "PETER INVASION",
+              "info": "Riotvan, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LYDIA EISENBLäTTER",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "KLANGKüNSTLER",
+              "info": "Outworld",
+              "link": ""
+            },
+            {
+              "name": "NINETTE",
+              "info": "Distillery, LÄRM",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

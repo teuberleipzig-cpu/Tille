@@ -1,0 +1,462 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2016-11-03-kugelblitzdonnerstag-84",
+      "date": "2016-11-03",
+      "title": "KUGELBLITZDONNERSTAG #84",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20191017165402id_/http://www.distillery.de/ex/dates/2016/11/03",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "TEAMBIRNENPFEFFI",
+              "info": "aka DJ Beatzeps, Gringo, DJ Sensay, Lifted Erik, Start: 23:00, add to Cal, 2wöchentlich, immer am ersten und dritten (1. und 3.) Donnerstag im Monat, für 3 Euronen – mit den Residents vom Teambirnenpfeffi, Beatzeps, Gringo, Sensay, und, Lifted Erik, sowie regelmässigen Stargästen und Überraschungseskapaden., https://www.facebook.com/kugelblitzdonnerstag",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-11-04-style-wild",
+      "date": "2016-11-04",
+      "title": "STYLE WILD",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20161107095131id_/http://www.distillery.de:80/ex/dates/2016/11/04",
+      "imageUrl": "",
+      "description": "AB 20:30 UHR: STYLE WILD STREETDANCE BATTLES",
+      "sections": [
+        {
+          "label": "up: AB 20:30 UHR: HOSTED BY: JUDGES:",
+          "items": [
+            {
+              "name": "STYLE WILD STREETDANCE BATTLES",
+              "info": "Hip Hop/Popping, Experimental, House",
+              "link": ""
+            },
+            {
+              "name": "LUDI ROCKOON",
+              "info": "kidsandheroes",
+              "link": ""
+            },
+            {
+              "name": "RAPHAEL HILLEBRAND",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "TANYA KUPRA",
+              "info": "Düsseldorf",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-11-05-a-well-defined-position",
+      "date": "2016-11-05",
+      "title": "A WELL-DEFINED POSITION",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20170410122413id_/http://www.distillery.de/ex/dates/2016/11/05",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "LEXER",
+              "info": "Wild Animals Records, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "THOMAS STIELER",
+              "info": "Distillery, Paracou",
+              "link": ""
+            },
+            {
+              "name": "LENNY BROOKSTER",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "CHARLTON",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-11-11-livelyrix-poetry-slam",
+      "date": "2016-11-11",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20170410071229id_/http://www.distillery.de/ex/dates/2016/11/11",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: MODERATION:",
+          "items": [
+            {
+              "name": "AYLIN CELIK",
+              "info": "Düsseldorf",
+              "link": ""
+            },
+            {
+              "name": "MERAL ZIEGLER",
+              "info": "Wien",
+              "link": ""
+            },
+            {
+              "name": "KARSTEN HOHAGE",
+              "info": "Heidelberg",
+              "link": ""
+            },
+            {
+              "name": "U.V.M.",
+              "info": "und wie immer viele mehr",
+              "link": ""
+            },
+            {
+              "name": "BLEU BROODE & LEONIE WARNKE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-11-12-push-things-forward",
+      "date": "2016-11-12",
+      "title": "PUSH THINGS FORWARD",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20191017165601id_/http://www.distillery.de/ex/dates/2016/11/12",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DANA RUH",
+              "info": "Brouqade, Underground Quality, Cocoon, Work Them",
+              "link": ""
+            },
+            {
+              "name": "DAHMAR",
+              "info": "Electronic Resistance, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MAURO CARACHO",
+              "info": "Distillery, Fäncy, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "HENDRIK KADEN",
+              "info": "Distillery, Fäncy, Dynamite Kadinski",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "KYLE GEIGER",
+              "info": "Cubera, Drumcode, Soma, Droid, Perc Trax",
+              "link": ""
+            },
+            {
+              "name": "VINCENT NEUMANN",
+              "info": "Distillery, Unitas Multiplex, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-11-15-momentum-album-tour",
+      "date": "2016-11-15",
+      "title": "MOMENTUM ALBUM TOUR",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20170410183057id_/http://www.distillery.de/ex/dates/2016/11/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MATTHIAS TANZMANN",
+              "info": "Moon Harbour, Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DJ T.",
+              "info": "Get Physical, Poker Flat, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DAN DRASTIC",
+              "info": "Moon Harbour, Leipzig), Start: 23:30",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-11-17-suff-daddy-the-lunch-birds",
+      "date": "2016-11-17",
+      "title": "SUFF DADDY & THE LUNCH BIRDS",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20170410111834id_/http://www.distillery.de/ex/dates/2016/11/17",
+      "imageUrl": "",
+      "description": "DO. 17.11.16 Kugelblitzdonnerstag #85\n(Suff Central)\nStart: 19:30\n>> zum Vorverkauf\nWenn es um die Komposition von Beats geht, kommt man am Berliner Produzenten\nSuff Daddy\nnicht vorbei. Er steht quasi an der Spitze dieser Bewegung in Deutschland. Nach drei Solo-Alben, Remixes für u.a. Mayer Hawthorne, Die Fantastischen Vier, Miles Bonny, Elhzi, Pht Kat oder Flo Mega und Tourneen und Festivalauftritten in ganz Europa, wird Suff Daddy zukünftig von Four Artists verteten und macht in diesem Zuge heute mit ner flotten Nummer bei uns halt.\nhttps://www.facebook.com/suffdaddy\nhttps://soundcloud.com/suff-daddy",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-11-18-purple-tea-x-defrostatica",
+      "date": "2016-11-18",
+      "title": "PURPLE TEA X DEFROSTATICA",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20191023012241id_/http://www.distillery.de/ex/dates/2016/11/18",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "KIT KUT",
+              "info": "GoodHoodMusic, Beyond07, Team PurpleTea",
+              "link": ""
+            },
+            {
+              "name": "DRBYSTRR93",
+              "info": "soulutian, Team PurpleTea, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BUZZ",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ALEX THE KIT",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "TICKLISH",
+              "info": "From Earth, Berlin",
+              "link": ""
+            },
+            {
+              "name": "JONEY",
+              "info": "Ill, Hamburg",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-11-19-grispy-bacon",
+      "date": "2016-11-19",
+      "title": "GRISPY BACON",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20170410132045id_/http://www.distillery.de/ex/dates/2016/11/19",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "LAURENT GARNIER",
+              "info": "F-Com, France",
+              "link": ""
+            },
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "mindcookies, Distillery",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "STEPHAN VON WOLFFERSDORFF",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-11-24-5-years-elektro-konsumenten",
+      "date": "2016-11-24",
+      "title": "5 YEARS ELEKTRO-KONSUMENTEN",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20170410132603id_/http://www.distillery.de/ex/dates/2016/11/24",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: BUCHLESUNG MIT:",
+          "items": [
+            {
+              "name": "DIE MACHT DER NACHT",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "WESTBAM",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "CHRISTAL",
+              "info": "elektro-konsumenten/Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SOLOW",
+              "info": "inar/Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ORANGE DOT",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "CFM",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-11-25-bridge-the-gap",
+      "date": "2016-11-25",
+      "title": "BRIDGE THE GAP",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20170313040209id_/http://www.distillery.de/ex/dates/2016/11/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "FIXATE",
+              "info": "Exit Records, UK",
+              "link": ""
+            },
+            {
+              "name": "DEPTH RANGE CREW",
+              "info": "Terrabyte Records; Ulm/Stuttgart",
+              "link": ""
+            },
+            {
+              "name": "DUBBALOT",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "CHARLOTTE",
+              "info": "bassmybass, G-Edit, Leipzig, Start: 23:30, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-11-26-can-you-call-me-a-taxi",
+      "date": "2016-11-26",
+      "title": "CAN YOU CALL ME A TAXI?",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20170410122446id_/http://www.distillery.de/ex/dates/2016/11/26",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "CAB DRIVERS",
+              "info": "Cabinet Records",
+              "link": ""
+            },
+            {
+              "name": "LOOTBEG",
+              "info": "o'rs, esoulate, music, afin",
+              "link": ""
+            },
+            {
+              "name": "EFKA",
+              "info": "esoulate, music",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2013-08-31-re-opening-after-summerbreak",
+      "date": "2013-08-31",
+      "title": "RE:OPENING AFTER SUMMERBREAK",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20160701123305id_/http://www.distillery.de/ex/dates/2013/08/31",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "GENIUS OF TIME",
+              "info": "Aniara Recordings, Göteborg",
+              "link": ""
+            },
+            {
+              "name": "MARCUS WORGULL",
+              "info": "Innervisions, Koeln",
+              "link": ""
+            },
+            {
+              "name": "RON DEACON",
+              "info": "Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

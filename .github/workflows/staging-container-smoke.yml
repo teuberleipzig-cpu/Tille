@@ -118,10 +118,11 @@ jobs:
           assert_noindex_and_no_cache /public/resident-portal/js/core/config.js
           assert_noindex_and_no_cache /public/resident-portal/css/portal.css
 
-          endpoint='/public/events/data/events.json'
-          assert_status "$endpoint" 200
-          assert_header_contains "$endpoint" X-Robots-Tag 'noindex, nofollow, noarchive'
-          assert_header_contains "$endpoint" Cache-Control 'no-store'
+          for endpoint in /public/events/data/manifest.json /public/events/data/months/2026-08.json; do
+            assert_status "$endpoint" 200
+            assert_header_contains "$endpoint" X-Robots-Tag 'noindex, nofollow, noarchive'
+            assert_header_contains "$endpoint" Cache-Control 'no-store'
+          done
 
           endpoint='/robots.txt'
           assert_status "$endpoint" 200
@@ -250,10 +251,11 @@ jobs:
             assert_header_contains "$endpoint" Cache-Control 'no-cache'
           done
 
-          endpoint='/public/events/data/events.json'
-          assert_status "$endpoint" 200
-          assert_no_noindex "$endpoint"
-          assert_header_contains "$endpoint" Cache-Control 'no-store'
+          for endpoint in /public/events/data/manifest.json /public/events/data/months/2026-08.json; do
+            assert_status "$endpoint" 200
+            assert_no_noindex "$endpoint"
+            assert_header_contains "$endpoint" Cache-Control 'no-store'
+          done
 
           endpoint='/robots.txt'
           assert_status "$endpoint" 200

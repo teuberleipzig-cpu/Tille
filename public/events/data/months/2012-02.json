@@ -1,0 +1,313 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2012-02-03-livelyrix-poetry-slam",
+      "date": "2012-02-03",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20120203065737id_/http://www.distillery.de:80/ex/dates/2012/02/03",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: livelyriX poetry slam",
+          "items": [
+            {
+              "name": "STEFAN DöRSING",
+              "info": "Wetzlar",
+              "link": ""
+            },
+            {
+              "name": "MORITZ NEUMEIER",
+              "info": "Hamburg",
+              "link": ""
+            },
+            {
+              "name": "PAULA VERJACK",
+              "info": "Berlin/London",
+              "link": ""
+            },
+            {
+              "name": "ROMAN ISRAEL",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "KURT MONDAUGEN",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-02-04-chitlin-circuit-meets-feenstaub",
+      "date": "2012-02-04",
+      "title": "CHITLIN' CIRCUIT MEETS FEENSTAUB",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20120109005108id_/http://www.distillery.de:80/ex/dates/2012/02/04",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: chitlin' circuit",
+          "items": [
+            {
+              "name": "TOBIAS. – LIVE",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "NSI",
+              "info": "Non Standard Produktion, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: feenstaub",
+          "items": [
+            {
+              "name": "CID INC",
+              "info": "Replug Records",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-02-11-suol-label-night-meets-syntax",
+      "date": "2012-02-11",
+      "title": "SUOL LABEL NIGHT MEETS SYNTAX",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20160701132621id_/http://www.distillery.de/ex/dates/2012/02/11",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: suol",
+          "items": [
+            {
+              "name": "TIGERSKIN AKA DUB TAYLOR",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "SUOL",
+              "info": "Dessous, Rotary Cocktail, Dirt Crew, Berlin",
+              "link": ""
+            },
+            {
+              "name": "TILL VON SEIN",
+              "info": "Dirt Crew",
+              "link": ""
+            },
+            {
+              "name": "SUOL",
+              "info": "Berlin",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-02-17-style-wild-oldschool-meets-future-special",
+      "date": "2012-02-17",
+      "title": "STYLE WILD - OLDSCHOOL MEETS FUTURE - SPECIAL",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20120217021353id_/http://distillery.de:80/ex/dates/2012/02/17",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: breakestra, hiphop and good old music",
+          "items": [
+            {
+              "name": "F.I.R.S.T. & THE SILVER DELOREAN",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "FEAT. SPAX, FLOWIN IMMO & MC RENE",
+              "info": "Hannover/Berlin",
+              "link": ""
+            },
+            {
+              "name": "MENGOOLIOUS FUNK",
+              "info": "mengooliousfunk, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ÜBERKINGER MC",
+              "info": "Lockstoff, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DJ SAIBZ",
+              "info": "Streetflavor, Boom Bap, esoulate",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-02-18-moon-harbour-flights-meets-bass-plus",
+      "date": "2012-02-18",
+      "title": "MOON HARBOUR FLIGHTS MEETS BASS PLUS!",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20120216025001id_/http://www.distillery.de:80/ex/dates/2012/02/18",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: moon harbour flights",
+          "items": [
+            {
+              "name": "GUTI - LIVE",
+              "info": "Desolat, Buenos Aires",
+              "link": ""
+            },
+            {
+              "name": "SVEN TASNADI",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DAN DRASTIC",
+              "info": "Moon Harbour",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-02-22-gso-diskussionsrunde",
+      "date": "2012-02-22",
+      "title": "GSO - DISKUSSIONSRUNDE",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20201201214439id_/http://www.distillery.de/ex/dates/2012/02/22",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: diskussionsrunde",
+          "items": [
+            {
+              "name": "GLOBAL SPACE ODYSSEY 2012 - DISKUSSIONSRUNDE",
+              "info": "Start: 19:00, add to Cal, GSO sucht Mitorganisatoren und helfende Hände! (uvm.)! Mehr Details zu dieser Veranstaltung siehe Text., Seit vielen Jahren zieht es uns einmal im Jahr mit Euch auf die Straße, um Leipzig zu zeigen, wie bunt und vielfältig das (subkulturelle) Leben sein kann und dass es sich lohnt, gegen dessen Einschränkungen in jedweder Form aufmerksam zu machen. Und das nicht nur 1x im Jahr!, Das aktuelle Orgateam sorgt nun seit mittlerweile über 4 Jahren für die GSO-Durchführung. Wir haben uns als Ziel gesetzt etwas zu bewegen und nicht nur einmal im Jahr laut durch die Stadt zu marschieren. Das bedeutet, dass eine Menge Zeit investiert werden muss, es bedeutet aber auch, dass man das Gefühl hat etwas Gutes zu tun und nicht zuletzt bedeutet es eine Menge Spaß. Wir machen das alles neben Job, Studium oder Selbstständigkeit und verdienen kein Geld damit. Irgendwann kommt der Punkt, an dem man sich nach frischen Gesichtern umschaut, die sich aktiv in die GSO-Orga einbringen wollen und mit ihren Ideen und gesundem Tatendrang mit uns zusammen an Vorbereitung, Durchführung und Nachbereitung arbeiten wollen, um im nächsten Jahr vielleicht schon fest mit dabei sein können., Es geht mit Euch um die weitere Gestaltung und somit auch die Zukunft der GSO, da einige im Team ab nächstem Jahr nicht mehr so aktiv wie bisher dabei sein können. Und wenn Ihr ohnehin Ideen oder Verbesserungsvorschläge habt, bietet sich nun die Gelegenheit zu einem gemeinsamen Treffen!, Somit seid Ihr herzlich eingeladen, zu unserem offenen Treffen am 22.02.12 um 19.00 Uhr in der Distillery (Kurt-Eisner-Straße 91)!, Wir starten an diesem Abend mit einer kleinen Einführung zur bisherigen Arbeit, reißen kurz an, warum und wie wir die Dinge tun, die wir mit der GSO umsetzen und lassen auch noch ein paar ältere GSO-Organisatoren zu Wort kommen, um den Gesamtüberblick zur Historie zu bekommen., Mit ein paar Worten zur Vision und Zukunft der GSO wollen wir gern die Möglichkeit zu einer Diskussionsrunde bieten, wo ihr euch gern mit einbringen sollt. Währenddessen können sich alle Interessierten in eine Verteilerliste eintragen und wir schauen, dass wir gemeinsam etwas Gutes auf den Weg bringen!, Wir freuen uns auf Euch...",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-02-24-boundless-beatz",
+      "date": "2012-02-24",
+      "title": "BOUNDLESS BEATZ",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20120113052747id_/http://www.distillery.de:80/ex/dates/2012/02/24",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: drum & bass",
+          "items": [
+            {
+              "name": "LENZMAN",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "FEAT.",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "RIYA",
+              "info": "Metalheadz, Shogun, Den Haag/Birmingham",
+              "link": ""
+            },
+            {
+              "name": "AUDITE",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: dubstep",
+          "items": [
+            {
+              "name": "FLEXOMAT",
+              "info": "Chrome!, Darmstadt",
+              "link": ""
+            },
+            {
+              "name": "DJ PANDEM",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-02-25-innervisions",
+      "date": "2012-02-25",
+      "title": "INNERVISIONS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20160428214528id_/http://www.distillery.de/ex/dates/2012/02/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: innervisions",
+          "items": [
+            {
+              "name": "DIXON",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "MARCUS WORGULL",
+              "info": "Koeln",
+              "link": ""
+            },
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "mindcookies, Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: wtbr",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,417 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2016-10-01-24-h-wohnzimmer-meets-heinz-music",
+      "date": "2016-10-01",
+      "title": "24 H WOHNZIMMER MEETS HEINZ MUSIC",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20161003042634id_/http://www.distillery.de:80/ex/dates/2016/10/01",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MARCUS MEINHARDT",
+              "info": "Heinz Music, Katermukke, Berlin",
+              "link": ""
+            },
+            {
+              "name": "BRITTA ARNOLD",
+              "info": "KaterMukke, Dantze, Berlin",
+              "link": ""
+            },
+            {
+              "name": "KHAINZ",
+              "info": "Heinz Music",
+              "link": ""
+            },
+            {
+              "name": "DIRRTYDISHES",
+              "info": "Heinz Music, KASSETTE Records, WellDone! Music",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-10-06-kugelblitz-donnerstag-82",
+      "date": "2016-10-06",
+      "title": "KUGELBLITZ DONNERSTAG #82",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20161012093654id_/http://www.distillery.de:80/ex/dates/2016/10/06",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "TEAMBIRNENPFEFFI",
+              "info": "aka DJ Beatzeps, Gringo, DJ Sensay, Lifted Erik, Start: 23:00, add to Cal, Mist, der Herbst ist da aber das soll uns nicht in 1 Bockzhorn jagen. Wir freuen uns auf ne intensive Nacht fulla heißer Rhythmen und Tanzeinlagen mit Euch, Gringo und der High Power Station. > bis 0:00Uhr ist freier Eintritt!!!",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-10-07-livelyrix-poetry-slam",
+      "date": "2016-10-07",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20161003042638id_/http://www.distillery.de:80/ex/dates/2016/10/07",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "TEAM NATüRLICH BLOND",
+              "info": "Hannover/München",
+              "link": ""
+            },
+            {
+              "name": "ZOE HAGEN",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "ÖZGE CAKIRBEY",
+              "info": "Dortmund",
+              "link": ""
+            },
+            {
+              "name": "SAMUEL KRAMER",
+              "info": "Offenbach",
+              "link": ""
+            },
+            {
+              "name": "RUBEN KRöBER",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-10-08-saturday-rave",
+      "date": "2016-10-08",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20161003042646id_/http://www.distillery.de:80/ex/dates/2016/10/08",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "METABOMAN",
+              "info": "Musik Krause, Jena",
+              "link": ""
+            },
+            {
+              "name": "TARON-TREKKA",
+              "info": "Freude am Tanzen, Jena",
+              "link": ""
+            },
+            {
+              "name": "THOMAS STIELER",
+              "info": "Distillery, Paracou",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-10-14-caribbean-nice-up-meets-hotta-fire",
+      "date": "2016-10-14",
+      "title": "CARIBBEAN NICE UP MEETS HOTTA FIRE",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20161003042650id_/http://www.distillery.de:80/ex/dates/2016/10/14",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DJ SEAGEL SILVER",
+              "info": "Seagel Twins",
+              "link": ""
+            },
+            {
+              "name": "MASTAH K",
+              "info": "Hotta Fire, Sonic Bang",
+              "link": ""
+            },
+            {
+              "name": "TOBI FRESH",
+              "info": "Upliftment International",
+              "link": ""
+            },
+            {
+              "name": "DELAM INTL",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "HIGH POWER STATION",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-10-15-24-years-old",
+      "date": "2016-10-15",
+      "title": "24 YEARS OLD",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20161003042654id_/http://www.distillery.de:80/ex/dates/2016/10/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MISSTRESS BARBARA",
+              "info": "Iturnem, Tronic, Canada",
+              "link": ""
+            },
+            {
+              "name": "KONSTANTIN SIBOLD",
+              "info": "Innervisions, Caramelo, Mule Musiq",
+              "link": ""
+            },
+            {
+              "name": "DILIVIUS LENNI",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "UPSYLER",
+              "info": "UP Home, Where the Buffalo Roam, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-10-20-kondi-band-live",
+      "date": "2016-10-20",
+      "title": "KONDI BAND - LIVE",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20200811183055id_/http://www.distillery.de/ex/dates/2016/10/20",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "THE KONDI BAND",
+              "info": "aka Sorie Kondi & Chief Boima, Rio de Janeiro/London",
+              "link": ""
+            },
+            {
+              "name": "WILL LV",
+              "info": "Brownswood, Hyperdub",
+              "link": ""
+            },
+            {
+              "name": "CHIEF BOIMA",
+              "info": "Dutty Artz, Africa Is A Radio",
+              "link": ""
+            },
+            {
+              "name": "PABLO GUNZALES",
+              "info": "Style Wild/Afro Latin What?!",
+              "link": ""
+            },
+            {
+              "name": "KUGELBLITZ ALLSTARS",
+              "info": "Leipzig, Start: 20:00, add to Cal, Google Maps war wenig hilfreich bei der Bestimmung der Zielkoordinaten. Wie auch, bewegen wir uns am heutigen Abend doch im Spannungsfeld zwischen Tradition und einer enorm vernetzten \"neuen\" Welt – den Städten Freetown (Sierra Leone), Rio, London und Millwaukee, der Kondi (bzw. Mbira/Kalimba) und zeitgenössischer elektronischer Musik und soviel mehr. Nun hat",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-10-21-24-years-old-pt-2",
+      "date": "2016-10-21",
+      "title": "24 YEARS OLD PT. 2",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20161001085028id_/http://www.distillery.de:80/ex/dates/2016/10/21",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: THROUGH MY SPEAKERS CREW:",
+          "items": [
+            {
+              "name": "SARAH FARINA",
+              "info": "Through My Speakers, Berlin",
+              "link": ""
+            },
+            {
+              "name": "NGHT DRPS",
+              "info": "Through My Speakers, Berlin",
+              "link": ""
+            },
+            {
+              "name": "SOULMIND",
+              "info": "Through My Speakers, Berlin",
+              "link": ""
+            },
+            {
+              "name": "WALTER VINYL",
+              "info": "Through My Speakers, Berlin",
+              "link": ""
+            },
+            {
+              "name": "QUMASIQUAME",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-10-22-illusory-atmosphere",
+      "date": "2016-10-22",
+      "title": "ILLUSORY ATMOSPHERE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20161003042704id_/http://www.distillery.de:80/ex/dates/2016/10/22",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DIRTY DOERING",
+              "info": "Katermukke, Berlin",
+              "link": ""
+            },
+            {
+              "name": "GUNJAH",
+              "info": "Showboxx, Funkwelt, Dresden",
+              "link": ""
+            },
+            {
+              "name": "PETER INVASION",
+              "info": "Riotvan, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-10-28-bestedeutschrap-das-grosse-schu-tzenfest-2",
+      "date": "2016-10-28",
+      "title": "BESTEDEUTSCHRAP „DAS GROSSE SCHÜTZENFEST“",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20200815102707id_/http://www.distillery.de/ex/dates/2016/10/28",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "VISA VIE",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "DJ ACCESS",
+              "info": "NewDEF, Dresden",
+              "link": ""
+            },
+            {
+              "name": "CRATZMEISTER CALLE",
+              "info": "BESTE, Start: 23:00, add to Cal, Deutschrap ist so heiss und niedlich wie noch nie! Willkommen bei der schweißtreibensten veganen Schützenverein-Party. Und nur zum Verständnis: \"Ey Visa, spiel mal \"Break Ya Neck\" bruder\" gibts heut nicht. Nur Deutschrap. Marteria-Girls klären Deutsche Badboys. Wieder ganz nach dem Motto: Was tanzen!? Abgehen! Und das mit dem \"Cüüüüüüs-überlang nicht mehr gehört-Faktor.\" Als kleinen Leckerbissen haben uns unsere großen Brüder von Aggro Berlin 200 historische Aggro CDs in die Hand gedrückt. Diese werden Robin-Hood-mäßig am Eingang verteilt. Fetze!, #BESTEdeutschRap, #BESTEparty",
+              "link": ""
+            },
+            {
+              "name": "#BESTEvonBESTE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-10-29-24-h-wohnzimmer-the-family-edition",
+      "date": "2016-10-29",
+      "title": "24 H WOHNZIMMER - THE FAMILY EDITION",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20161003042714id_/http://www.distillery.de:80/ex/dates/2016/10/29",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MAREK HEMMANN – LIVE",
+              "info": "Freude am Tanzen",
+              "link": ""
+            },
+            {
+              "name": "SPENCER PARKER",
+              "info": "Work Them Records, ItsNotOver, Rekids",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "FILBURT",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "O*RS",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

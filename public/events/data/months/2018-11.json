@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2018-11-17-wuzzelbud-ff-all-nighter-im-sake-wahn",
+      "date": "2018-11-17",
+      "title": "WUZZELBUD FF - ALL NIGHTER IM SAKE WAHN",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20231128095026id_/https://www.distillery.de/ex/dates/2018/11/17",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ROBAG WRUHME",
+              "info": "Pampa, Hart & Tief, Kompakt, Weimar Innenstadt",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "PATRICK DRE",
+              "info": "Drec",
+              "link": ""
+            },
+            {
+              "name": "SNITCH",
+              "info": "pneuma-dor, Berlin",
+              "link": ""
+            },
+            {
+              "name": "HKKPTR",
+              "info": "Sachsentrance, IfZ, Start: 23:30",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-11-20-goodies",
+      "date": "2018-11-20",
+      "title": "GOODIES",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20191015122201id_/http://www.distillery.de/ex/dates/2018/11/20",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "WHAT SO NOT",
+              "info": "Owsla, Sydney",
+              "link": ""
+            },
+            {
+              "name": "ESKEI83",
+              "info": "Crispy Crust Records, Dresden",
+              "link": ""
+            },
+            {
+              "name": "KIT KUT",
+              "info": "GoodHoodMusic, Beyond07, Team PurpleTea",
+              "link": ""
+            },
+            {
+              "name": "YAMI",
+              "info": "Good Hood Music, Weirdo Family, Traphouse, Start:, add to Cal, Unglaublich aber wahr -",
+              "link": ""
+            },
+            {
+              "name": "ESKEI83",
+              "info": "holt mit",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-11-23-style-wild-extravaganza",
+      "date": "2018-11-23",
+      "title": "STYLE WILD EXTRAVAGANZA",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190823100843id_/http://www.distillery.de/ex/dates/2018/11/23",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "LEFTO",
+              "info": "Brownswood, Brüssel",
+              "link": ""
+            },
+            {
+              "name": "SHAPE",
+              "info": "VARY, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "RAMINSKI",
+              "info": "Music Of Color, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "PEARLY BENSON",
+              "info": "Cosmic Boogie, Leipzig, Start: 23:00, add to Cal, Nein! Doch! Ohhh!, Lefto, kommt nach Leipzig. Partypeeps zum Schwitzen und gleichzeitig Musiknerds zum Sabbern bringen, ist ein Balanceakt, den der belgische Beat-Baron meisterhaft beherrscht. Vom Fact-Magazine zum Lieblings-DJ deines Lieblings-DJs gekürt, ist er dem durchschnittlichen early adopter immer mindestens 16 Takte voraus und nimmt trotzdem alle mit. Sein unfehlbarer Geschmack hat ihm nicht nur eine Sendung auf Worldwide FM beschert, sondern ihn und seinen Plattenkoffer auch in Clubs rund um die Welt unterwegs sein lassen. Gleichzeitig sind seine Reisen Inspiration und Ausgangspunkt für neue Musik wie z.B. das Album „Karavan“ – einer Kollabo mit dem US-amerikanischen Produzenten Free The Robots. Doch selbst, wenn es darum geht, neue Musik zu veröffentlichen, bleibt Lefto in erster Linie Selector: Auf Compilations wie „Worldwide Family, Vol. 1“ auf Gilles Petersons Label Brownswood Recordings oder seiner Ausgabe für die Reihe „Southport Weekender“ präsentiert und vereint er musikalische Welten wie ein wahrer Globetrotter. Für die 2017 ausgestrahlte Doku-Serie „LeFtO - In Transit“ wurde er auf seinen Entdeckungstouren sogar von einem Filmteam begleitet. In sechs Episoden erkundet Lefto urbane Musikszenen fernab des Mainstreams.",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-11-24-2-records",
+      "date": "2018-11-24",
+      "title": "#2 RECORDS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190823100647id_/http://www.distillery.de/ex/dates/2018/11/24",
+      "imageUrl": "",
+      "description": "SA. 24.11.18 #2 Distillery Records\nSA. 24.11.18 #2 DISTILLERY RECORDS",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "JOEL MULL",
+              "info": "Parabel Music, Stockholm",
+              "link": ""
+            },
+            {
+              "name": "SCHLEPP GEIST",
+              "info": "URSL",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "0 DIMENSIONAL",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ATALANTA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "THOMAS LEITSCHUH",
+              "info": "Electronic Routes, We Call It Techno, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-11-27-native-instruments-hands-on-haptic-tour",
+      "date": "2018-11-27",
+      "title": "NATIVE INSTRUMENTS - HANDS ON HAPTIC TOUR",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20190823100905id_/http://www.distillery.de/ex/dates/2018/11/27",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: HOSTED BY:",
+          "items": [
+            {
+              "name": "GRZLY ADAMS",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "NGHT DRPS",
+              "info": "Through My Speakers, Berlin, Start: 16:00, add to Cal, Erlebe selbst, wie die neue Haptic Drive™ Technologie des TRAKTOR KONTROL S4 es das erste Mal möglich macht, den Mix zu fühlen! Wie das geht zeigen heute NGHT DRPS und GRZLY ADAMS bei der Native Instruments - Hands on Haptic Tour. Den DJ-Controller TRAKTOR KONTROL S2 und KONTROL S4 haben sie mit im Gepäck und werden die neuen Funktionen im Detail vorführen und natürlich alle Fragen beantworten. Es werden ebenfalls zwei voll ausgestattete Demo-Stations da sein, an denen die neuen Geräte ausprobiert und angetestet werden können. Die Teilnahme ist kostenlos., https://www.native-instruments.com, https://www.facebook.com/grzlyadams, https://www.facebook.com/NGHTDRPS",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-11-30-the-man-from-mo-wax-filmvorfuehrung-gespraech-mit-regisseur-matthew-jones",
+      "date": "2018-11-30",
+      "title": "THE MAN FROM MO' WAX - FILMVORFÜHRUNG & GESPRÄCH MIT REGISSEUR MATTHEW JONES",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190124171911id_/http://www.distillery.de:80/ex/dates/2018/11/30",
+      "imageUrl": "",
+      "description": "Start: 20:00\nJames Lavelle hatte seinen ersten DJ-Gig mit 14 Jahren, gründete das bahnbrechende Trip-Hop-Label Mo’ Wax mit 18 und als er 22 war, veröffentlichte er das legendäre Album Psyence Fiction“ von UNKLE. Er gilt als DJ-Ikone und weltweiter Trip-Hop-Tycoon, dessen raketenhafter Werdegang nach oben keine Grenzen zu kennen schien. Doch wer hoch fliegt, kann auch tief fallen.\n\"The Man from Mo’ Wax\"\nerzählt seine Geschichte: Die Dokumentation porträtiert Lavelles stürmische Karriere sowie die persönlichen Hoch- und Tiefpunkte, die eng mit ihr verknüpft sind. Wie eine Coming-of-Age-Story im Musikbusiness erzählt der Film von Erfolgen und Niederlagen, von zerbrochenen Freundschaften und aufgegebenen Zielen auf dem Weg vom ambitionierten Teenie zu einer der einflussreichsten Figuren zeitgenössischer Musikgeschichte. Drei Jahrzehnte seines Lebens und Schaffens lässt die Doku Revue passieren und zeichnet dabei ein Bild von Lavelle als unvergleichbaren Tatmenschen und Künstler, der – in einer ebenso unvergleichbaren Ära – Grenzen gesprengt und im immer währenden Spannungsfeld zwischen Kunst und Kommerz, sowohl zu einer Kultfigur des Underground als auch Millionär geworden ist.\nDestilliert aus über 700 Stunden Filmmaterial, das exklusive, persönliche Aufnahmen von James Lavelle und DJ Shadow beinhaltet, erkundet The Man From Mo’ Wax“ das Wesen musikalischen Erfolgs ebenso wie die Prüfungen und Beschwernisse, die dieser mit sich bringt. Das Ergebnis ist ein unterhaltsamer wie kompromissloser Einblick, der 25 abenteuerliche Jahre aus James Lavelles Leben in zwei Stunden verdichtet.\nDer Film wird in englischer Sprache mit deutschen Untertiteln gezeigt. Das Gespräch mit Regisseur Matthew Jones findet auf Englisch statt.\nTickets sind ab sofort\nonline erhältlich\nKALENDER-DOWNLOAD",
+      "sections": []
+    }
+  ]
+}

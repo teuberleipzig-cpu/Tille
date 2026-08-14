@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2009-05-01-kurt-reith-abend",
+      "date": "2009-05-01",
+      "title": "KURT REITH ABEND",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20090416010726id_/http://distillery.de:80/ex/dates/2009/05/01",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: all syles in tha mix",
+          "items": [
+            {
+              "name": "BUTTERMAKER – LIVE",
+              "info": "Bielefeld/Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DJ YORK",
+              "info": "Könich Heinz, Leipzig-Connewitz",
+              "link": ""
+            },
+            {
+              "name": "DJ GRAPE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-05-02-sounds-good-meets-definition",
+      "date": "2009-05-02",
+      "title": "SOUNDS GOOD MEETS DEFINITION",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20090403170745id_/http://distillery.de:80/ex/dates/2009/05/02",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: sounds good",
+          "items": [
+            {
+              "name": "STEFFEN BENNEMANN",
+              "info": "Nachtdigital, Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "Finest Selection, Distillery",
+              "link": ""
+            },
+            {
+              "name": "THOMAS FRöHLICH",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-05-09-finest-selection-meets-bass-plus-2",
+      "date": "2009-05-09",
+      "title": "FINEST SELECTION MEETS BASS PLUS!",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20090416053824id_/http://distillery.de:80/ex/dates/2009/05/09",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: finest selection",
+          "items": [
+            {
+              "name": "TOLGA FIDAN – LIVE",
+              "info": "Vakant, Paris",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-05-15-popup-spezial-think-about-rotation",
+      "date": "2009-05-15",
+      "title": "POPUP-SPEZIAL: THINK ABOUT ROTATION!",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20090416053830id_/http://distillery.de:80/ex/dates/2009/05/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: dance!",
+          "items": [
+            {
+              "name": "RHYTHM IS A DARKNESS",
+              "info": "East German International",
+              "link": ""
+            },
+            {
+              "name": "BUCKET BRIGADE",
+              "info": "East German International",
+              "link": ""
+            },
+            {
+              "name": "FIAT",
+              "info": "East German International, Dead Fish Audio",
+              "link": ""
+            },
+            {
+              "name": "LIMOUSINE ROT",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-05-16-markus-welby-s-b-day",
+      "date": "2009-05-16",
+      "title": "MARKUS WELBY'S B-DAY",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20090416053835id_/http://distillery.de:80/ex/dates/2009/05/16",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BURGER",
+              "info": "Freizeitglauben, Home Sweet Home, Berlin",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-05-20-happy-birthday-bpitch-control",
+      "date": "2009-05-20",
+      "title": "HAPPY BIRTHDAY BPITCH CONTROL!",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20090416012446id_/http://distillery.de:80/ex/dates/2009/05/20",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: 10 years bpitch control",
+          "items": [
+            {
+              "name": "ELLEN ALLIEN",
+              "info": "BPitch, Berlin",
+              "link": ""
+            },
+            {
+              "name": "KIKI – LIVE",
+              "info": "BPitch Control, Berlin",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-05-22-hotta-fire-reggaestation-spring-bling",
+      "date": "2009-05-22",
+      "title": "HOTTA FIRE REGGAESTATION-SPRING BLING!",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20090416053845id_/http://distillery.de:80/ex/dates/2009/05/22",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: rockstone hotta birthday",
+          "items": [
+            {
+              "name": "ROCKSTONE SOUND",
+              "info": "Rockstone, Halle",
+              "link": ""
+            },
+            {
+              "name": "SENSI MOVEMENT",
+              "info": "Ruff-e-nuff, Chemnitz), Start: 22:30, 5,- € bis 0:00, dann 7,- €, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-05-23-chitlin-circuit-meets-feenstaub-friends",
+      "date": "2009-05-23",
+      "title": "CHITLIN' CIRCUIT MEETS FEENSTAUB & FRIENDS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20090403170324id_/http://distillery.de:80/ex/dates/2009/05/23",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: chitlin' circuit",
+          "items": [
+            {
+              "name": "JACKMATE",
+              "info": "Philpot, Perlon, Playhouse, Stuttgart",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-05-29-6-years-esoulate-part-i",
+      "date": "2009-05-29",
+      "title": "6 YEARS ESOULATE - PART I",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20090416005652id_/http://distillery.de:80/ex/dates/2009/05/29",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: freaky colors",
+          "items": [
+            {
+              "name": "ILLBILLY HITEC – LIVE",
+              "info": "agents-4-music, Berlin",
+              "link": ""
+            },
+            {
+              "name": "MASTAH K",
+              "info": "Hotta Fire, Reggaestation, esoulate, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

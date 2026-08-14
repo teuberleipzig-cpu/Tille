@@ -1,0 +1,278 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2011-01-07-livelyrix-poetry-slam",
+      "date": "2011-01-07",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20110110080732id_/http://www.distillery.de:80/ex/dates/2011/01/07",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: livelyrix poetry slam MUSIC BY:",
+          "items": [
+            {
+              "name": "FELIX RöMER",
+              "info": "songs & stories, In Puncto, Berlin",
+              "link": ""
+            },
+            {
+              "name": "ANDRé HERRMANN",
+              "info": "Lesebühne Schkeuditzer Kreuz, Team Totale Zerstörung",
+              "link": ""
+            },
+            {
+              "name": "FRANZISKA WILHELM",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DJ RUKEY",
+              "info": "Distillery, esoulate, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-01-08-mindcookies",
+      "date": "2011-01-08",
+      "title": "MINDCOOKIES",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20101129054637id_/http://distillery.de:80/ex/dates/2011/01/08",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: mindcookies",
+          "items": [
+            {
+              "name": "SASCHA FUNKE",
+              "info": "BPitch Control, Berlin",
+              "link": ""
+            },
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "Distillery), Start: 23:00, add to Cal, mindcookies.net, www.bpitchcontrol.de",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-01-14-diy-do-it-yourself",
+      "date": "2011-01-14",
+      "title": "DIY - DO IT YOURSELF",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20110110080843id_/http://www.distillery.de:80/ex/dates/2011/01/14",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MODEMARKT",
+              "info": "verschiedene Lables aus Leipzig präsentieren sich",
+              "link": ""
+            },
+            {
+              "name": "FOTOGRAFIE",
+              "info": "Ausstellung, Workshop, Diskussionsrunde",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "DEMO-LISTENING FüR LEIPZIGER PRODUZENTEN",
+              "info": "listen to your own produced tracks with a real club-PA an discuss with others!, Start: 21:00, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-01-15-hoerfunk-meets-syntax",
+      "date": "2011-01-15",
+      "title": "HOERFUNK MEETS SYNTAX",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20110110061227id_/http://www.distillery.de:80/ex/dates/2011/01/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: harry klein",
+          "items": [
+            {
+              "name": "ANA",
+              "info": "Harry Klein, München",
+              "link": ""
+            },
+            {
+              "name": "JULIETTA",
+              "info": "Harry Klein, München",
+              "link": ""
+            },
+            {
+              "name": "MARKUS WELBY",
+              "info": "hoerfunk, Distillery, Melt!-Festival",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-01-21-5-jahre-bass-plus",
+      "date": "2011-01-21",
+      "title": "5 JAHRE BASS PLUS!",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20110110080901id_/http://www.distillery.de:80/ex/dates/2011/01/21",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: bass plus!",
+          "items": [
+            {
+              "name": "16BIT",
+              "info": "London, Uk",
+              "link": ""
+            },
+            {
+              "name": "SENCHA",
+              "info": "Distillery, nuskoolbreaks, Black Belt Boogie",
+              "link": ""
+            },
+            {
+              "name": "PEAK PHINE",
+              "info": "Distillery, Black Belt Boogie, Bass Plus, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-01-22-finest-selection-meets-feenstaub-friends",
+      "date": "2011-01-22",
+      "title": "FINEST SELECTION MEETS FEENSTAUB & FRIENDS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20110109045659id_/http://www.distillery.de:80/ex/dates/2011/01/22",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: finest selection",
+          "items": [
+            {
+              "name": "MAREK HEMMANN – LIVE",
+              "info": "Freude am Tanzen, Gera",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-01-28-funky-kingston",
+      "date": "2011-01-28",
+      "title": "FUNKY KINGSTON",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20110110080704id_/http://www.distillery.de:80/ex/dates/2011/01/28",
+      "imageUrl": "",
+      "description": "AB 19 UHR: TANZWORKSHOP MIT DEN LOCALOREZ DANCERS",
+      "sections": [
+        {
+          "label": "up: kingston town - dancehall, ska, rocksteady, roots AB 19 UHR:",
+          "items": [
+            {
+              "name": "ROCKSTONE SOUND",
+              "info": "Rockstone, Halle",
+              "link": ""
+            },
+            {
+              "name": "HAKUNA MATATAA",
+              "info": "Meißen",
+              "link": ""
+            },
+            {
+              "name": "RUDY RANZIG",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "TANZWORKSHOP MIT DEN LOCALOREZ DANCERS",
+              "info": "for free",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: funky town - funk, soul",
+          "items": [
+            {
+              "name": "MR. OLSEN",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-01-29-dreikommanull",
+      "date": "2011-01-29",
+      "title": "DREIKOMMANULL",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20110110080912id_/http://www.distillery.de:80/ex/dates/2011/01/29",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: dreikommanull",
+          "items": [
+            {
+              "name": "INSECT ELEKTRIKA – LIVE",
+              "info": "Vekton Musik, Monocline, Paria, Prag",
+              "link": ""
+            },
+            {
+              "name": "KLEINSCHMAGER AUDIO",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

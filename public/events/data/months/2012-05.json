@@ -1,0 +1,447 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2012-05-04-livelyrix-poetry-slam",
+      "date": "2012-05-04",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20120324173626id_/http://www.distillery.de:80/ex/dates/2012/05/04",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: livelyrix poetry slam MUSIC BY:",
+          "items": [
+            {
+              "name": "TILL REINERS",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "TILMAN BIRR",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "DOMINIK BARTEL",
+              "info": "Helmstedt",
+              "link": ""
+            },
+            {
+              "name": "MAX KENNEL",
+              "info": "Bamberg",
+              "link": ""
+            },
+            {
+              "name": "U.V.M.",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-05-05-dreikommanull-meets-syntax",
+      "date": "2012-05-05",
+      "title": "DREIKOMMANULL MEETS SYNTAX",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20120324173630id_/http://www.distillery.de:80/ex/dates/2012/05/05",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: dreikommanull",
+          "items": [
+            {
+              "name": "CESARE VS. DISORDER",
+              "info": "Dumb Unit, Vakant, Serialism, Berlin",
+              "link": ""
+            },
+            {
+              "name": "KLEINSCHMAGER AUDIO",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-05-11-flaesh-bending-meets-bass-plus",
+      "date": "2012-05-11",
+      "title": "FLÄSH BENDING MEETS BASS PLUS",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20120514012619id_/http://www.distillery.de:80/ex/dates/2012/05/11",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: digital, synthetic, pop, chiptunes, breakcore",
+          "items": [
+            {
+              "name": "KARL-MARX-STADT",
+              "info": "Sozialistischer Plattenbau, Berlin",
+              "link": ""
+            },
+            {
+              "name": "CHIP TRONIC",
+              "info": "Stonedwave, Bombtrap, Mannheim",
+              "link": ""
+            },
+            {
+              "name": "NOIZE CREATOR",
+              "info": "Suburbantrash, Dresden",
+              "link": ""
+            },
+            {
+              "name": "SUGAR D",
+              "info": "exLEpäng!",
+              "link": ""
+            },
+            {
+              "name": "EINE MILLION",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-05-12-final-frzn-msc-bx-meets-definition",
+      "date": "2012-05-12",
+      "title": "FINAL FRZN MSC BX MEETS DEFINITION",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20120506035436id_/http://www.distillery.de:80/ex/dates/2012/05/12",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: frz msc bx",
+          "items": [
+            {
+              "name": "ÂME – LIVE",
+              "info": "Innervisions, Germany",
+              "link": ""
+            },
+            {
+              "name": "MAP.ACHE",
+              "info": "Kann, Conne Island, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "KALI AVAAZ",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-05-16-freude-am-tanzen",
+      "date": "2012-05-16",
+      "title": "FREUDE AM TANZEN",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20220701141813id_/https://www.distillery.de/ex/dates/2012/05/16",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: freude am tanzen",
+          "items": [
+            {
+              "name": "DOUGLAS GREED – LIVE",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "FEAT. NAGLER & KUSS",
+              "info": "Jena",
+              "link": ""
+            },
+            {
+              "name": "MONKEY MAFFIA",
+              "info": "Jena",
+              "link": ""
+            },
+            {
+              "name": "TARON-TREKKA",
+              "info": "Jena), Start: 23:00, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-05-17-afterhour-rien-ne-va-plus",
+      "date": "2012-05-17",
+      "title": "AFTERHOUR - RIEN NE VA PLUS",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20120520065940id_/http://www.distillery.de:80/ex/dates/2012/05/17",
+      "imageUrl": "",
+      "description": "Start: 10:00\nSaft gibt keene Kraft.",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "KOB",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MARY B.",
+              "info": "KTRnetlabel, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DEINE MUTTI",
+              "info": "Voll Neunzscher, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-05-18-dub-a-dub",
+      "date": "2012-05-18",
+      "title": "DUB A DUB",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20120520070449id_/http://www.distillery.de:80/ex/dates/2012/05/18",
+      "imageUrl": "",
+      "description": "AB 22:30 UHR: SURPRISE MOVIE",
+      "sections": [
+        {
+          "label": "up: heavyweight dub, roots reggae, digital danzhall",
+          "items": [
+            {
+              "name": "DUBATEERS FEAT. CHARLIE P",
+              "info": "Sound from the Underground, London",
+              "link": ""
+            },
+            {
+              "name": "SIGNORE SERENO",
+              "info": "Dubliftement, Palmbeatz, Kassablanca, Jena",
+              "link": ""
+            },
+            {
+              "name": "DOC DRESSLA",
+              "info": "Jahtari, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "special: AB 22:30 UHR:",
+          "items": [
+            {
+              "name": "SURPRISE MOVIE",
+              "info": "Start: 23:00",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-05-19-shapeworld-uebertragung-championsleague-finale",
+      "date": "2012-05-19",
+      "title": "SHAPEWORLD & ÜBERTRAGUNG CHAMPIONSLEAGUE FINALE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20120520070454id_/http://www.distillery.de:80/ex/dates/2012/05/19",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: shapeworld",
+          "items": [
+            {
+              "name": "REDSHAPE",
+              "info": "Delsin, Berlin",
+              "link": ""
+            },
+            {
+              "name": "RON DEACON",
+              "info": "Distillery",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "special: übertragung championsleague finale",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-05-25-analogsoul-wenn-leipzig-keine-insel-waere-2",
+      "date": "2012-05-25",
+      "title": "ANALOGSOUL - WENN LEIPZIG KEINE INSEL WÄRE - 2",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20120520070504id_/http://www.distillery.de:80/ex/dates/2012/05/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: wennn leipzig keine insel wäre - 2",
+          "items": [
+            {
+              "name": "VALERY GORE – LIVE",
+              "info": "Do Right Music, Kanada",
+              "link": ""
+            },
+            {
+              "name": "TOUCHY MOB – LIVE",
+              "info": "the next big thing, Berlin",
+              "link": ""
+            },
+            {
+              "name": "BASSKANTE",
+              "info": "Klinke auf Cinch, Jena",
+              "link": ""
+            },
+            {
+              "name": "DJ RUKEY",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-05-26-finest-selection-meets-zwischenwelten",
+      "date": "2012-05-26",
+      "title": "FINEST SELECTION MEETS ZWISCHENWELTEN",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20120520070509id_/http://www.distillery.de:80/ex/dates/2012/05/26",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: finest selection",
+          "items": [
+            {
+              "name": "ADA – LIVE",
+              "info": "Areal Records",
+              "link": ""
+            },
+            {
+              "name": "IRR",
+              "info": "Kompakt, Köln",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-05-27-up-home-two-down-roam",
+      "date": "2012-05-27",
+      "title": "UP HOME TWO DOWN ROAM",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20120520070514id_/http://www.distillery.de:80/ex/dates/2012/05/27",
+      "imageUrl": "",
+      "description": "(0,5\nWHO:BE",
+      "sections": [
+        {
+          "label": "up: Oh give me a home...“ WHO:",
+          "items": [
+            {
+              "name": "HYPNOREX",
+              "info": "0,5, Sportbrigade Sparwasser, Berlin",
+              "link": ""
+            },
+            {
+              "name": "BE",
+              "info": "Golden Gate, Berlin",
+              "link": ""
+            },
+            {
+              "name": "FUCHSER",
+              "info": "Zollschuppen, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-05-31-tille-tubby-land-2-0-uebertragung-germany-israel-after-match-meschugge-party",
+      "date": "2012-05-31",
+      "title": "TILLE TUBBY LAND 2.0 + ÜBERTRAGUNG & GERMANY-ISRAEL-AFTER-MATCH-MESCHUGGE-PARTY",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20120520070519id_/http://www.distillery.de:80/ex/dates/2012/05/31",
+      "imageUrl": "",
+      "description": "Start: 18:00 (TTL)\nStart: 20:30 (Übertragung)\nStart: 23:00 (After-Match-Party)",
+      "sections": [
+        {
+          "label": "outdoor: ÜBERTRAGUNG FREUNDSCHAFTSSPIEL:",
+          "items": [
+            {
+              "name": "DEUTSCHLAND - ISRAEL",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "PRäSENTIERTELLER:",
+          "items": [
+            {
+              "name": "THEATER MIT FRANZ FRIEDRICH",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "IM ANSCHLUSS:",
+          "items": [
+            {
+              "name": "GERMANY-ISRAEL-AFTER-MATCH-MESCHUGGE-PARTY",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "DJ AVIV NETTER",
+              "info": "Tel Aviv/Berlin",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

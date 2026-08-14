@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2012-09-01-re-opening-after-summerbreak",
+      "date": "2012-09-01",
+      "title": "RE:OPENING AFTER SUMMERBREAK",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20120905043958id_/http://distillery.de:80/ex/dates/2012/09/01",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: re",
+          "items": [
+            {
+              "name": "WAREIKA",
+              "info": "Connaisseur Rec., Perlon, Tartelet, Future Classic, Berlin/Hamburg",
+              "link": ""
+            },
+            {
+              "name": "MANAMANA",
+              "info": "Kann, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-09-08-dreikommanull-meets-definition",
+      "date": "2012-09-08",
+      "title": "DREIKOMMANULL MEETS DEFINITION",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20120905044004id_/http://distillery.de:80/ex/dates/2012/09/08",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: dreikommanull",
+          "items": [
+            {
+              "name": "TERRANOVA",
+              "info": "Fetisch, Kompakt, Berlin",
+              "link": ""
+            },
+            {
+              "name": "KLEINSCHMAGER AUDIO",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MENTELL",
+              "info": "Dreikommanull",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-09-14-kingston-affair",
+      "date": "2012-09-14",
+      "title": "KINGSTON AFFAIR",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20120905044009id_/http://distillery.de:80/ex/dates/2012/09/14",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: reggae & dancehall",
+          "items": [
+            {
+              "name": "SELECTAH SPINBACK",
+              "info": "Da Switch, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DJ BEATZEPS",
+              "info": "High Power Station, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "HI DEE",
+              "info": "Rockstone/Halle",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "special:",
+          "items": [
+            {
+              "name": "DOMINO & MOVIES",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-09-15-chitlin-circuit-meets-syntax",
+      "date": "2012-09-15",
+      "title": "CHITLIN' CIRCUIT MEETS SYNTAX",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20121031150948id_/http://www.distillery.de:80/ex/dates/2012/09/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: chitlin' circuit",
+          "items": [
+            {
+              "name": "KINK",
+              "info": "Rush Hour, liebe*detail, Ovum, Bulgarien",
+              "link": ""
+            },
+            {
+              "name": "THOMAS STIELER",
+              "info": "Distillery, Paracou",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-09-21-submission-abtauchen-mit-bass",
+      "date": "2012-09-21",
+      "title": "SUBMISSION - ABTAUCHEN MIT BASS",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20121021203357id_/http://www.distillery.de:80/ex/dates/2012/09/21",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: submission - dubstep, garage",
+          "items": [
+            {
+              "name": "NEELE VS. ONETAKE",
+              "info": "Girls Edit / HW Massive",
+              "link": ""
+            },
+            {
+              "name": "CUN B2B FULL CONTACT",
+              "info": "Bassment Rockaz / Downtownlyrics",
+              "link": ""
+            },
+            {
+              "name": "SCHANA VS. STEVE",
+              "info": "Girls Edit / Break Out!",
+              "link": ""
+            },
+            {
+              "name": "MALCOLM B2B PEAK PHINE",
+              "info": "Downtownlyrics / Black Belt Boogie",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "special:",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-09-22-bar25-tage-ausserhalb-der-zeit",
+      "date": "2012-09-22",
+      "title": "BAR25 - TAGE AUSSERHALB DER ZEIT",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20120904010109id_/http://distillery.de:80/ex/dates/2012/09/22",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: tage ausserhalb der zeit",
+          "items": [
+            {
+              "name": "NICONé",
+              "info": "dantze",
+              "link": ""
+            },
+            {
+              "name": "JAKE THE RAPPER",
+              "info": "Combination Records, bar25",
+              "link": ""
+            },
+            {
+              "name": "DANNY FABER",
+              "info": "bar25",
+              "link": ""
+            },
+            {
+              "name": "NICO STOJAN",
+              "info": "Connaisseur, Upon You",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-09-28-style-wild",
+      "date": "2012-09-28",
+      "title": "STYLE WILD",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20120905044014id_/http://distillery.de:80/ex/dates/2012/09/28",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: beats, raps, future bass, hiphop, electronica",
+          "items": [
+            {
+              "name": "SHIGETO - LIVE",
+              "info": "Ghostly International, Michigan/USA",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MEDLEIGH",
+              "info": "Resistant Mindz",
+              "link": ""
+            },
+            {
+              "name": "TABOOZE",
+              "info": "Chopy Wood, Jena",
+              "link": ""
+            },
+            {
+              "name": "SHAPE",
+              "info": "Chopy Wood, Jena, Start: 23:00",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-09-29-riotvan-meest-feenstaub",
+      "date": "2012-09-29",
+      "title": "RIOTVAN MEEST FEENSTAUB",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20120905044019id_/http://distillery.de:80/ex/dates/2012/09/29",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: riotvan",
+          "items": [
+            {
+              "name": "MARIO & VIDIS",
+              "info": "Silence Music, Lithuania",
+              "link": ""
+            },
+            {
+              "name": "FILBURT",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "PETER INVASION",
+              "info": "Riotvan, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

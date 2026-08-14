@@ -1,0 +1,301 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2022-07-01-nakt-rave",
+      "date": "2022-07-01",
+      "title": "NAKT RAVE",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20220705032226id_/https://www.distillery.de/ex/dates/2022/07/01",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SCHERING",
+              "info": "NAKT",
+              "link": ""
+            },
+            {
+              "name": "NIKOLINA",
+              "info": "NAKT",
+              "link": ""
+            },
+            {
+              "name": "FLOOR FORCE ONE",
+              "info": "NAKT",
+              "link": ""
+            },
+            {
+              "name": "PARALICH",
+              "info": "NAKT",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "KARAH",
+              "info": "NAKT",
+              "link": ""
+            },
+            {
+              "name": "DOMINIQUE LAMEE",
+              "info": "NAKT",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-07-02-saturday-rave",
+      "date": "2022-07-02",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20220705042854id_/https://www.distillery.de/ex/dates/2022/07/02",
+      "imageUrl": "",
+      "description": "WEH:MUT",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "VANAENAE",
+              "info": "G-Edit, Music Of Color",
+              "link": ""
+            },
+            {
+              "name": "THOMAS STIELER",
+              "info": "Distillery, Paracou",
+              "link": ""
+            },
+            {
+              "name": "SHURAY & WALLE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: Inferis WEH:",
+          "items": [
+            {
+              "name": "WALLIS",
+              "info": "R - Label Group, Jell",
+              "link": ""
+            },
+            {
+              "name": "ATALANTA",
+              "info": "Distillery, Inferis",
+              "link": ""
+            },
+            {
+              "name": "MUT",
+              "info": "Inferis, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-07-16-o-rs-x-up-home",
+      "date": "2022-07-16",
+      "title": "O*RS X UP HOME",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20220820014656id_/https://www.distillery.de/ex/dates/2022/07/16",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "COSMIC CHERRY",
+              "info": "Blaq Numbers, Alzaya",
+              "link": ""
+            },
+            {
+              "name": "SAM PARADISE",
+              "info": "theBasement Discos, Miura Records",
+              "link": ""
+            },
+            {
+              "name": "FILBURT",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "THE LADY MACHINE",
+              "info": "Unterwegs, Mote Evolver, TOKEN, pornceptual",
+              "link": ""
+            },
+            {
+              "name": "DANIEL SAILER",
+              "info": "Up Home, Distillery, Where the Buffalo Roam",
+              "link": ""
+            },
+            {
+              "name": "SUBTRAK",
+              "info": "Where the Buffalo Roam, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-07-23-ins-de-soliticket",
+      "date": "2022-07-23",
+      "title": "INS:DE SOLITICKET",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20220820013418id_/https://www.distillery.de/ex/dates/2022/07/23",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "THEUS MAGO",
+              "info": "Turbo, Correspondant",
+              "link": ""
+            },
+            {
+              "name": "ANNA MALYSZ",
+              "info": "Nice 4 What, G-Edit",
+              "link": ""
+            },
+            {
+              "name": "MIKE VAN GOETZE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "SUBKUTAN",
+              "info": "IFZ, Vertigo",
+              "link": ""
+            },
+            {
+              "name": "HOUDAFK",
+              "info": "Distillery",
+              "link": ""
+            },
+            {
+              "name": "VINCENT NEUMANN",
+              "info": "Distillery, Unitas Multiplex, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-07-27-i-love-gardening",
+      "date": "2022-07-27",
+      "title": "I LOVE GARDENING",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20220820023346id_/https://www.distillery.de/ex/dates/2022/07/27",
+      "imageUrl": "",
+      "description": "Start: 18:00\nWährend auf dem Land gerade harte Erntearbeit vonstatten geht, widmet sich die Stadtbevölkerung dem Gardening. Da es nicht für alle freie Parzellen geben kann, bieten wir unsere an. Einfach rumkommen und ohne Regeln, Maßnahmen und Vorschriften daran teilnehmen.\nEintritt ist frei. Am Einlass findet ihr aber eine Spendenbox, deren Erlöse den DJs des Abends zu Gute kommen.",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "MICRONAUT",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "- DJ SET",
+              "info": "Acker Records, 3000 Grad, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BLOKK",
+              "info": "DJ",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-07-30-golden-dance",
+      "date": "2022-07-30",
+      "title": "GOLDEN DANCE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20220820033138id_/https://www.distillery.de/ex/dates/2022/07/30",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "JULITA JUST",
+              "info": "Radio Electronica Jena",
+              "link": ""
+            },
+            {
+              "name": "MAGIC MO",
+              "info": "HS12, Langstrasse97, Zürich",
+              "link": ""
+            },
+            {
+              "name": "MARTIN YOUNG",
+              "info": "IN.TAKT",
+              "link": ""
+            },
+            {
+              "name": "MAT.JOE",
+              "info": "PRÏMA",
+              "link": ""
+            },
+            {
+              "name": "MATHIAS ACHE & MULE",
+              "info": "Zwischenwelten, elipamanoke",
+              "link": ""
+            },
+            {
+              "name": "MATIJA",
+              "info": "Hive Audio, Heimlich, Zürich",
+              "link": ""
+            },
+            {
+              "name": "RAWLEY",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

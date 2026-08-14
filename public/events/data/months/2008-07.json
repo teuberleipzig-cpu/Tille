@@ -1,0 +1,295 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2008-07-04-rolling-sounds-pres-crowd-control",
+      "date": "2008-07-04",
+      "title": "ROLLING SOUNDS PRES. CROWD CONTROL",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20080528144552id_/http://www.distillery.de:80/ex/dates/2008/07/04",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Drum&Bass:",
+          "items": [
+            {
+              "name": "BASSFACE SASCHA",
+              "info": "YouFM, Dance Rock, Poets Club Records",
+              "link": ""
+            },
+            {
+              "name": "AUDITE",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "REMASURI",
+              "info": "Rolling Sounds",
+              "link": ""
+            },
+            {
+              "name": "MC SCHNEMANN",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-07-05-bar25-meets-hoerfunk-vs-dress-2-sweat",
+      "date": "2008-07-05",
+      "title": "BAR25 MEETS HOERFUNK VS. DRESS 2 SWEAT",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20080528004413id_/http://www.distillery.de:80/ex/dates/2008/07/05",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: hoerfunk:",
+          "items": [
+            {
+              "name": "DANIEL DREIER",
+              "info": "Highgrade, Klang Elektronik, Panoramabar, Bar25, Berlin",
+              "link": ""
+            },
+            {
+              "name": "MARKUS WELBY",
+              "info": "Distillery, hoerfunk, Melt!-Festival",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-07-11-all-styles-sommerklatsche",
+      "date": "2008-07-11",
+      "title": "ALL STYLES SOMMERKLATSCHE",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20080627000556id_/http://distillery.de:80/ex/dates/2008/07/11",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Bootybass, Spherical-tribal-soul-Houseclub:",
+          "items": [
+            {
+              "name": "PIRAHNAHEAD",
+              "info": "Detroit, USA",
+              "link": ""
+            },
+            {
+              "name": "HEADNOAKS",
+              "info": "Blackred",
+              "link": ""
+            },
+            {
+              "name": "ACID SEEMS",
+              "info": "Stuttgart, Berlin",
+              "link": ""
+            },
+            {
+              "name": "SOULSLIDE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-07-12-finest-selection-presents-connaisseur-label-tour",
+      "date": "2008-07-12",
+      "title": "FINEST SELECTION PRESENTS: CONNAISSEUR LABEL TOUR",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20080428015803id_/http://www.distillery.de:80/ex/dates/2008/07/12",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "down: syntax",
+          "items": [
+            {
+              "name": "SIGI HAUSSNER AKA TUNEBOX - LIVE",
+              "info": "Tunebox Records, Ingolstadt",
+              "link": ""
+            },
+            {
+              "name": "FAPSER",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "STEVE K",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-07-18-bass-plus-pres-local-bass-patrol-vol-1",
+      "date": "2008-07-18",
+      "title": "BASS PLUS PRES. LOCAL BASS PATROL VOL. 1",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20080627000601id_/http://distillery.de:80/ex/dates/2008/07/18",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Breakbeat, Mash Up:",
+          "items": [
+            {
+              "name": "OUTCRY – LIVE",
+              "info": "Black Belt Boogie, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "AUDITE",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BOOGA",
+              "info": "dosomethingillegal.info",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-07-19-feenstaub-friends-meets-where-the-buffalo-room",
+      "date": "2008-07-19",
+      "title": "FEENSTAUB & FRIENDS MEETS WHERE THE BUFFALO ROOM",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20080428015808id_/http://www.distillery.de:80/ex/dates/2008/07/19",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: feenstaub",
+          "items": [
+            {
+              "name": "FEENSTAUB",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: where the buffalo roam",
+          "items": [
+            {
+              "name": "STEPHAN VON WOLFFERSDORFF",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "PETER RINGEL",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-07-25-hotta-fire-reggaestation-the-last-friday",
+      "date": "2008-07-25",
+      "title": "HOTTA FIRE REGGAESTATION - THE LAST FRIDAY",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20080428015814id_/http://www.distillery.de:80/ex/dates/2008/07/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Reggae, Dancehall:",
+          "items": [
+            {
+              "name": "MIGHTY SAMSON",
+              "info": "Hollywood Florida, USA, Start: 22:30, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-07-26-the-last-dance",
+      "date": "2008-07-26",
+      "title": "THE LAST DANCE!",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20080428015839id_/http://www.distillery.de:80/ex/dates/2008/07/26",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "Archive source: https://web.archive.org/web/20080428015839id_/http://www.distillery.de:",
+          "items": [
+            {
+              "name": "80/ex/dates/2008/07/26",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "Original URL: http://www.distillery.de:",
+          "items": [
+            {
+              "name": "80/ex/dates/2008/07/26",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-07-27-the-last-dance-afterhour-by-dreikommanull",
+      "date": "2008-07-27",
+      "title": "THE LAST DANCE! AFTERHOUR BY DREIKOMMANULL",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20080627000606id_/http://distillery.de:80/ex/dates/2008/07/27",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Dreikommanull",
+          "items": [
+            {
+              "name": "JOERN KLEINSCHMAGER",
+              "info": "Dreikommanull, Mo's Ferry Prod.",
+              "link": ""
+            },
+            {
+              "name": "MENTELL",
+              "info": "Dreikommanull, esoulate",
+              "link": ""
+            },
+            {
+              "name": "NIKOLAS STERNBERG",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,398 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2017-10-02-bpitch-control",
+      "date": "2017-10-02",
+      "title": "BPITCH CONTROL",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20171010102608id_/http://www.distillery.de:80/ex/dates/2017/10/02",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Nost Album Tour",
+          "items": [
+            {
+              "name": "ELLEN ALLIEN",
+              "info": "BPitch, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DAN DRASTIC",
+              "info": "Moon Harbour, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LYDIA EISENBLäTTER",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "ALAN OLDHAM",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-10-06-livelyrix-poetry-slam",
+      "date": "2017-10-06",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20171010102728id_/http://www.distillery.de:80/ex/dates/2017/10/06",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "JEAN PHILIPPE KINDLER",
+              "info": "Tübingen",
+              "link": ""
+            },
+            {
+              "name": "TERESA REICHL",
+              "info": "Tübingen",
+              "link": ""
+            },
+            {
+              "name": "JULIA SZYMIK",
+              "info": "Marbung",
+              "link": ""
+            },
+            {
+              "name": "FINN HOLITZKA",
+              "info": "Frankfurt",
+              "link": ""
+            },
+            {
+              "name": "U.V.M.",
+              "info": "und wie immer viele mehr",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-10-07-muna-musik-nacht",
+      "date": "2017-10-07",
+      "title": "MUNA MUSIK NACHT",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20171010102632id_/http://www.distillery.de:80/ex/dates/2017/10/07",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "TOBI NEUMANN",
+              "info": "Cocoon, 100% Pure, It-Sounds, Berlin",
+              "link": ""
+            },
+            {
+              "name": "NORMAN WEBER",
+              "info": "Luna City Express, Moon Harbour, Berlin",
+              "link": ""
+            },
+            {
+              "name": "JAMY WING",
+              "info": "Polynom, Paracou, Jena",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-10-13-style-wild-the-chicago-edition",
+      "date": "2017-10-13",
+      "title": "STYLE WILD - THE CHICAGO EDITION",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20171010102734id_/http://www.distillery.de:80/ex/dates/2017/10/13",
+      "imageUrl": "",
+      "description": "AB 21:00 UHR: STYLE WILD STREETDANCE BATTLES",
+      "sections": [
+        {
+          "label": "up: AB 21:00 UHR:",
+          "items": [
+            {
+              "name": "STYLE WILD STREETDANCE BATTLES",
+              "info": "Hip Hop/Popping, Experimental, House",
+              "link": ""
+            },
+            {
+              "name": "JENNY SHARP",
+              "info": "Good Hood Music, Sharp Radio",
+              "link": ""
+            },
+            {
+              "name": "RILLE",
+              "info": "Style Wild, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "DJ CRASH",
+              "info": "Fusion Art",
+              "link": ""
+            },
+            {
+              "name": "PABLO GUNZALES",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-10-14-25-years-25-hours",
+      "date": "2017-10-14",
+      "title": "25 YEARS - 25 HOURS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20171010102739id_/http://www.distillery.de:80/ex/dates/2017/10/14",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MATTHIAS TANZMANN",
+              "info": "Moon Harbour, Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MONKEY SAFARI",
+              "info": "Hommage",
+              "link": ""
+            },
+            {
+              "name": "SPENCER PARKER",
+              "info": "Work Them Records, ItsNotOver, Rekids",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MARLOW",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-10-20-25-years-of",
+      "date": "2017-10-20",
+      "title": "25 YEARS OF",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20171010102836id_/http://www.distillery.de:80/ex/dates/2017/10/20",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ADDISON GROOVE",
+              "info": "Gutterfunk/Hyperdub/50 Weapons/Swamp 81, Bristol",
+              "link": ""
+            },
+            {
+              "name": "SENCHA B2B PEAK PHINE",
+              "info": "Submission, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "GOODKAT",
+              "info": "Good Hood, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "CHARLOTTE",
+              "info": "bassmybass/G-Edit, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "DIGITAL",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-10-21-garten-wald-und-wiesen",
+      "date": "2017-10-21",
+      "title": "GARTEN, WALD UND WIESEN",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20171008114212id_/http://www.distillery.de:80/ex/dates/2017/10/21",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DOMINIK EULBERG",
+              "info": "k7!",
+              "link": ""
+            },
+            {
+              "name": "FILBURT",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "O*RS",
+              "info": "Permanent Vacation, Riotvan, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "mindcookies",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-10-27-dash-out",
+      "date": "2017-10-27",
+      "title": "DASH OUT",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20171010102744id_/http://www.distillery.de:80/ex/dates/2017/10/27",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "YARDCRIME",
+              "info": "Regensburg",
+              "link": ""
+            },
+            {
+              "name": "HIGH POWER STATION",
+              "info": "#teameastgermany",
+              "link": ""
+            },
+            {
+              "name": "WHINE 'N' SHINE DANCERS",
+              "info": "#teambayernbutterberg, Start: 23:00, add to Cal, It's #DASHOUT time again: Der jamaikanischste Dance Leipzigs meldet sich zurück! Der Entertainmentsound des Ostens aka, High Power Station",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-10-28-transversal-surprises",
+      "date": "2017-10-28",
+      "title": "TRANSVERSAL SURPRISES",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20171010102841id_/http://www.distillery.de:80/ex/dates/2017/10/28",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "L_CIO",
+              "info": "D.Edge, D.O.C., Sao Paulo / Brazil",
+              "link": ""
+            },
+            {
+              "name": "GUNJAH",
+              "info": "Showboxx, Funkwelt, Dresden",
+              "link": ""
+            },
+            {
+              "name": "DILIVIUS LENNI",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-10-30-take-me",
+      "date": "2017-10-30",
+      "title": "TAKE ME",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20171010102646id_/http://www.distillery.de:80/ex/dates/2017/10/30",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MARCEL DETTMANN",
+              "info": "MDR, Ostgut Ton, Panorama Bar / Berghain, Berlin",
+              "link": ""
+            },
+            {
+              "name": "VINCENT NEUMANN",
+              "info": "Distillery, Unitas Multiplex, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DANIEL SAILER",
+              "info": "Distillery, Where the Buffalo Roam",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

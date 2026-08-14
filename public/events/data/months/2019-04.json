@@ -1,0 +1,408 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2019-04-05-livelyrix-poetry-slam",
+      "date": "2019-04-05",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190416144229id_/http://www.distillery.de:80/ex/dates/2019/04/05",
+      "imageUrl": "",
+      "description": "FR. 05.04.19 Vinylschleifer StepBack",
+      "sections": [
+        {
+          "label": "up: MODERATION: MUSIC BY:",
+          "items": [
+            {
+              "name": "FLORIAN CIESLIK",
+              "info": "Frankfurt",
+              "link": ""
+            },
+            {
+              "name": "BERNARD HOFFMEISTER",
+              "info": "Düsseldorf",
+              "link": ""
+            },
+            {
+              "name": "LISA MARIA OLSZAKIEWIECZ",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "ANNE KALKBRENNER",
+              "info": "Rostock",
+              "link": ""
+            },
+            {
+              "name": "LEONIE WARNKE",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BLANKK DISC",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-04-06-saturday-rave",
+      "date": "2019-04-06",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190416144234id_/http://www.distillery.de:80/ex/dates/2019/04/06",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Lava Record Release",
+          "items": [
+            {
+              "name": "BEBETTA",
+              "info": "Monaberry",
+              "link": ""
+            },
+            {
+              "name": "DILIVIUS LENNI",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ROWA",
+              "info": "Traumschallplatten, Monopolar",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "DEVELOPER",
+              "info": "Modularz, USA",
+              "link": ""
+            },
+            {
+              "name": "FR. JPLA",
+              "info": "Rillendisco, IfZ",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-04-12-fat-bemme-x-boundless-beatz",
+      "date": "2019-04-12",
+      "title": "FAT BEMME X BOUNDLESS BEATZ",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190415025117id_/http://www.distillery.de:80/ex/dates/2019/04/12",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SURVEY",
+              "info": "Dispatch, Flexout, Invisible",
+              "link": ""
+            },
+            {
+              "name": "ALOO",
+              "info": "Fat Bemme",
+              "link": ""
+            },
+            {
+              "name": "AUDITE",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DUBBALOT",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ACE",
+              "info": "Fat Bemme",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "PHACE",
+              "info": "Neosignal, Vision, Critical",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-04-13-saturday-rave",
+      "date": "2019-04-13",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190416144239id_/http://www.distillery.de:80/ex/dates/2019/04/13",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "STEVE BUG",
+              "info": "Poker Flat, Ovum, Berlin",
+              "link": ""
+            },
+            {
+              "name": "THOMAS STIELER",
+              "info": "Distillery, Paracou",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "JUHO KUSTI",
+              "info": "Deep Space, Helsinki",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-04-20-24-h-wohnzimmer-easter-edition",
+      "date": "2019-04-20",
+      "title": "24 H WOHNZIMMER - EASTER EDITION",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190416144244id_/http://www.distillery.de:80/ex/dates/2019/04/20",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "PROSUMER",
+              "info": "Ostgut Ton, Playhouse, Berlin",
+              "link": ""
+            },
+            {
+              "name": "LAKE PEOPLE – LIVE",
+              "info": "Mule Musiq, Permanent Vacation",
+              "link": ""
+            },
+            {
+              "name": "TOKTOK",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "VS.",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "SOFFY O – LIVE",
+              "info": "Toktok Records, Berlin",
+              "link": ""
+            },
+            {
+              "name": "REZNIK",
+              "info": "Keinemusik, Berlin",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-04-25-ebow-praesentiert-vom-splash-mag",
+      "date": "2019-04-25",
+      "title": "EBOW - PRÄSENTIERT VOM SPLASH! MAG",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20190416144249id_/http://www.distillery.de:80/ex/dates/2019/04/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "EBOW",
+              "info": "Problembär Records, Start: 19:00, add to Cal, splash! Mag präsentiert:, Komplexität ist das neue Album der Wahlwiener Rapperin Ebow. Komplexität deshalb, weil das Wort den Status Quo unserer Gegenwart beschreibt und Ebow diese in Worte fassen will. Komplexität aber auch, weil das Album einen Bogen spannen will von sozialkritischem Rap (Asyl, Baba Bak) über intime Reflektionen (Das Wetter, Vogel & Meer) bis hin zu Club-Bangern (Ghetto Rave, Bad Lan). Um dieser Vielfalt in Inhalt und Sound Rechnung zu tragen, hat Ebow mit einer Vielzahl an Produzenten zusammengearbeitet: Nik Le Clap, mit dem sie schon seit ihren musikalischen Anfängen arbeitet, Pennedhaus, der auch auf der aktuellen Single Paradise gefeatured ist, Walter P99 Arke$tra, mit dem sie auch ihr anderes Musikprojekt Gaddafi Gals macht, außerdem ZinoBeatz und Rafael Alvarez. Dabei wird Komplexitätgerade durch die Verschiedenartigkeit der Songs zusammengehalten. Ebows Style reicht dabei von Old School Rap bis hin zu Future R’n’B. Erstmals Aufmerksamkeit auf sich ziehen konnte Ebow durch Guerilla-Auftritte im Münchner Bahnhofsviertel, unter anderem in Waschsalons, Supermärkten oder der Straßenbahn. Auf die ersten Reaktionen der Presse (SZ, BR etc.) folgten zahlreiche Liveauftritte auf konventionelleren Bühnen. Mit dem selbstproduzierten halbstündigen Video-Mixtape Habibi’s Liebe und Kriege verortete sich Ebow zwischen Hip Hop und orientalischen Klängen und verpackte soziale Realität in angriffslustige Texte, die von Geschlechterrollen in der türkischen Community, falschen Patriotismus bis zu Waffenhandel reichen., Vorverkauf ->, https://bit.ly/2tQY0Qb",
+              "link": ""
+            },
+            {
+              "name": "KALENDER-DOWNLOAD",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-04-26-purple-green",
+      "date": "2019-04-26",
+      "title": "PURPLE GREEN",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190416144255id_/http://www.distillery.de:80/ex/dates/2019/04/26",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MONACO BASS",
+              "info": "München",
+              "link": ""
+            },
+            {
+              "name": "YAMI",
+              "info": "Good Hood Music, Weirdo Family, Traphouse",
+              "link": ""
+            },
+            {
+              "name": "KIT KUT",
+              "info": "GoodHoodMusic, Beyond07, Team PurpleTea",
+              "link": ""
+            },
+            {
+              "name": "DRBYSTRR93",
+              "info": "soulutian, Team PurpleTea, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "CITY LOCK",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "PRIMETIME DIMENSION",
+              "info": "Berlin",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-04-27-saturday-rave",
+      "date": "2019-04-27",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190416144320id_/http://www.distillery.de:80/ex/dates/2019/04/27",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SHINEDOE",
+              "info": "Intacto, MTM Records",
+              "link": ""
+            },
+            {
+              "name": "NEELE",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LYDIA EISENBLäTTER",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "FUJIMI",
+              "info": "Biotobt, Jena",
+              "link": ""
+            },
+            {
+              "name": "ATALANTA",
+              "info": "Leipzig, Start: 23:30",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-04-30-spektral",
+      "date": "2019-04-30",
+      "title": "SPEKTRAL",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20190416144454id_/http://www.distillery.de:80/ex/dates/2019/04/30",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MAGIT CACOON",
+              "info": "Crosstown Rebels",
+              "link": ""
+            },
+            {
+              "name": "DIE RUHE",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LARS CHRISTIAN MüLLER",
+              "info": "Distillery, mindcookies",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

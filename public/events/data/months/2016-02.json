@@ -1,0 +1,350 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2016-02-05-livelyrix-poetry-slam",
+      "date": "2016-02-05",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20160102183332id_/http://www.distillery.de:80/ex/dates/2016/02/05",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "PHILIPP SCHARRI",
+              "info": "Stuttgart",
+              "link": ""
+            },
+            {
+              "name": "LISA ECKHART",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "HELGE ALBRECHT",
+              "info": "Kiel",
+              "link": ""
+            },
+            {
+              "name": "RAINER HOLL",
+              "info": "Dortmund",
+              "link": ""
+            },
+            {
+              "name": "SVENJA GRäFEN",
+              "info": "Dortmund",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-02-06-mood-sweeps",
+      "date": "2016-02-06",
+      "title": "MOOD SWEEPS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20160203094027id_/http://www.distillery.de:80/ex/dates/2016/02/06",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "BRITTA ARNOLD",
+              "info": "KaterMukke, Dantze, Berlin",
+              "link": ""
+            },
+            {
+              "name": "FILBURT",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "O*RS",
+              "info": "Permanent Vacation, Riotvan, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-02-11-mndsgn-ivan-ave-helping-hands-tour-2016",
+      "date": "2016-02-11",
+      "title": "MNDSGN & IVAN AVE - HELPING HANDS TOUR 2016",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20160102183404id_/http://www.distillery.de:80/ex/dates/2016/02/11",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MNDSGN & IVAN AVE",
+              "info": "Jakarta Records",
+              "link": ""
+            },
+            {
+              "name": "CRSSSPACE - LIVE",
+              "info": "OverDubClub, Pattern Select",
+              "link": ""
+            },
+            {
+              "name": "SKOR ROKSWELL",
+              "info": "VARY, ChampionSound, Start: 19:00, 8,50,- € zzgl. Gebühr im VVK, 12,- € Abendkasse, add to Cal, Vorverkauf bei TixForGigs, Manchmal weiß man gar nicht, wofür man dem Internet am meisten danken soll. Ganz weit oben auf der Liste steht auf jeden Fall, dass es die Distanz zwischen Oslo und Los Angeles zumindest virtuell auf wenige Sekunden reduziert. Wäre das nicht so, hätten",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-02-12-caribbean-nice-up-way-up-stay-up-dancers-edition",
+      "date": "2016-02-12",
+      "title": "CARIBBEAN NICE UP! - WAY UP! STAY UP! DANCERS EDITION",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20160203094032id_/http://www.distillery.de:80/ex/dates/2016/02/12",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "FABI BENZ",
+              "info": "City Lock, Stuttgart",
+              "link": ""
+            },
+            {
+              "name": "DELAM INTL",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "HIGH POWER STATION",
+              "info": "#Teameastgermany",
+              "link": ""
+            },
+            {
+              "name": "+ SPECIAL GUEST DANCERS",
+              "info": "Champion Bubblers, Quali'Ty'me, Dash Out, Watch Mi Step uvm., Start: 23:00, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-02-13-we-grow-you-decline-album-release",
+      "date": "2016-02-13",
+      "title": "WE GROW, YOU DECLINE - ALBUM RELEASE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20160203094037id_/http://www.distillery.de:80/ex/dates/2016/02/13",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "KONSTANTIN SIBOLD",
+              "info": "Innervisions, Caramelo, Mule Musiq",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DILIVIUS LENNI",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "KOBOSIL",
+              "info": "Ostgut Ton, Panorama Bar / Berghain, Berlin",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-02-19-bridge-the-gap",
+      "date": "2016-02-19",
+      "title": "BRIDGE THE GAP",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20160203094042id_/http://www.distillery.de:80/ex/dates/2016/02/19",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "OM UNIT",
+              "info": "Exit, Civil Music, Metalheadz, London",
+              "link": ""
+            },
+            {
+              "name": "RBYN",
+              "info": "Finest Ego, H.O.M.E., Berlin",
+              "link": ""
+            },
+            {
+              "name": "METASOUND",
+              "info": "Break the Surface, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DUBBALOT",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-02-20-zwischenwelten",
+      "date": "2016-02-20",
+      "title": "ZWISCHENWELTEN",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20160203094100id_/http://www.distillery.de:80/ex/dates/2016/02/20",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "KIKI",
+              "info": "BPitch Control, Berlin",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MAC-KEE",
+              "info": "Dirtydrivesounds, Sparte 13",
+              "link": ""
+            },
+            {
+              "name": "MATHIAS ACHE & MULE",
+              "info": "Zwischenwelten, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-02-26-the-bug-presents-acid-ragga",
+      "date": "2016-02-26",
+      "title": "THE BUG PRESENTS ACID RAGGA",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20160208015124id_/http://www.distillery.de:80/ex/dates/2016/02/26",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "THE BUG FEAT. MISS RED - LIVE",
+              "info": "Ninja Tune, Acid Ragga",
+              "link": ""
+            },
+            {
+              "name": "EL_P",
+              "info": "Vibes Ambassadors, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DERRICK",
+              "info": "Ulan Bator",
+              "link": ""
+            },
+            {
+              "name": "TEARZTAR",
+              "info": "Submission, Leipzig, Start: 23:30",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-02-27-born-in-ruins",
+      "date": "2016-02-27",
+      "title": "BORN IN RUINS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20160201204806id_/http://www.distillery.de:80/ex/dates/2016/02/27",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ANDRé GALLUZZI",
+              "info": "ARAS Records, Berghain Ostgut, Cocoon",
+              "link": ""
+            },
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "mindcookies, Distillery",
+              "link": ""
+            },
+            {
+              "name": "CLEMENS RUH",
+              "info": "Distillery, Frission Radio, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "BLAC KOLOR",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

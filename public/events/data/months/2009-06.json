@@ -1,0 +1,242 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2009-06-05-kurt-reith-abend",
+      "date": "2009-06-05",
+      "title": "KURT REITH ABEND",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20090503080619id_/http://www.distillery.de:80/ex/dates/2009/06/05",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: all syles in tha mix",
+          "items": [
+            {
+              "name": "HANS DER JäGER",
+              "info": "Connewitz Grill Mafia, Leipzig-Connewitz",
+              "link": ""
+            },
+            {
+              "name": "DJ YORK",
+              "info": "Könich Heinz, Leipzig-Connewitz",
+              "link": ""
+            },
+            {
+              "name": "DJ GRAPE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-06-06-dancematerial-meets-where-the-buffalo-roam",
+      "date": "2009-06-06",
+      "title": "DANCEMATERIAL MEETS WHERE THE BUFFALO ROAM",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20090416120027id_/http://distillery.de:80/ex/dates/2009/06/06",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: dancematerial",
+          "items": [
+            {
+              "name": "NATHAN FAKE – LIVE",
+              "info": "Border Community, London",
+              "link": ""
+            },
+            {
+              "name": "THE MORODERS",
+              "info": "Cosmic Dancer, Dresden",
+              "link": ""
+            },
+            {
+              "name": "STEFFEN BENNEMANN",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-06-12-riotvan-loves-you",
+      "date": "2009-06-12",
+      "title": "RIOTVAN LOVES YOU",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20090606085524id_/http://www.distillery.de:80/ex/dates/2009/06/12",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DAVID JONATHAN",
+              "info": "A Heart Is An Airport, Berlin",
+              "link": ""
+            },
+            {
+              "name": "GREGOR. – LIVE",
+              "info": "Riotvan, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-06-13-hoerfunk-meets-syntax",
+      "date": "2009-06-13",
+      "title": "HOERFUNK MEETS SYNTAX",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20090503080624id_/http://www.distillery.de:80/ex/dates/2009/06/13",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: hoerfunk",
+          "items": [
+            {
+              "name": "MARKUS WELBY",
+              "info": "hoerfunk, Distillery, Melt!-Festival, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: syntax",
+          "items": [
+            {
+              "name": "DEBASSER",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-06-19-you-say-rave-we-say-die",
+      "date": "2009-06-19",
+      "title": "YOU SAY: RAVE! WE SAY: DIE!",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20101124025403id_/http://www.distillery.de:80/ex/dates/2009/06/19",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: indietronic, discopunk, 8-bit-chaos, noizeattacks & geballer",
+          "items": [
+            {
+              "name": "KRTECH AKA JOEY",
+              "info": "The Sonic Boom Foundation, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SERGEANT KLANG",
+              "info": "Brockdorff Klanglabor, Leipzig), Start: 22:30, add to Cal, Was im März als Schnapsidee \"Brockdorff Boom Foundation\" begann, geht jetzt unter neuem Namen in die nächste Runde.",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-06-20-finest-selection-meets-feenstaub-friends",
+      "date": "2009-06-20",
+      "title": "FINEST SELECTION MEETS FEENSTAUB & FRIENDS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20090503080647id_/http://www.distillery.de:80/ex/dates/2009/06/20",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: dekadent schallplatten",
+          "items": [
+            {
+              "name": "YOUANDME – AKA",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "TWO_EM",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "EL LOCCO",
+              "info": "Dekadent, Platzhirsch, Rotary Cocktail",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-06-26-charity-month",
+      "date": "2009-06-26",
+      "title": "CHARITY MONTH",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20090503080652id_/http://www.distillery.de:80/ex/dates/2009/06/26",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: all syles in tha mix",
+          "items": [
+            {
+              "name": "MANGO TREE",
+              "info": "Nuernberg",
+              "link": ""
+            },
+            {
+              "name": "HAKUNA MATATAA",
+              "info": "Meißen",
+              "link": ""
+            },
+            {
+              "name": "SELECTAH SPINBACK",
+              "info": "Da Switch, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-06-27-moon-harbour-pres-10-years-of-poker-flat",
+      "date": "2009-06-27",
+      "title": "MOON HARBOUR PRES. 10 YEARS OF POKER FLAT",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20090503080722id_/http://www.distillery.de:80/ex/dates/2009/06/27",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: 10 years of poker flat",
+          "items": [
+            {
+              "name": "STEVE BUG",
+              "info": "Poker Flat, Dessous, Berlin), CLé, Märtini Brös, Poker Flat",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

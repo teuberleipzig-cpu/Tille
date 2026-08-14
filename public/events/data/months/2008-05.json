@@ -1,0 +1,347 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2008-05-02-breakbeat-journeys",
+      "date": "2008-05-02",
+      "title": "BREAKBEAT JOURNEYS",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20080419003928id_/http://www.distillery.de:80/ex/dates/2008/05/02",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Drum&Bass:",
+          "items": [
+            {
+              "name": "EQUINOX",
+              "info": "Scientific Wax, Bassbin, Inperspective, Planet µ, Metalheadz, London",
+              "link": ""
+            },
+            {
+              "name": "CON.STRUCT",
+              "info": "Outsider, Breakbeat Journeys",
+              "link": ""
+            },
+            {
+              "name": "LOWCUT",
+              "info": "Royal Juice",
+              "link": ""
+            },
+            {
+              "name": "MC SCHNEMANN",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-05-03-the-devil-s-advocate",
+      "date": "2008-05-03",
+      "title": "THE DEVIL'S ADVOCATE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20080415052201id_/http://www.distillery.de:80/ex/dates/2008/05/03",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Techno:",
+          "items": [
+            {
+              "name": "DAVE CLARKE",
+              "info": "Skint Records, UK",
+              "link": ""
+            },
+            {
+              "name": "CHRISTIAN FISCHER",
+              "info": "Definition Records, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: House:",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-05-09-at-it-s-best",
+      "date": "2008-05-09",
+      "title": "AT IT'S BEST",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20080419003932id_/http://www.distillery.de:80/ex/dates/2008/05/09",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: HipHop, Funk, Electronica:",
+          "items": [
+            {
+              "name": "DJ FRICTION",
+              "info": "Freundeskreis, Four Music, Complex, Replay, Motor Mouth, Stuttgart",
+              "link": ""
+            },
+            {
+              "name": "SPLENDOR",
+              "info": "sunsetsoul, polyesterclub, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DA WIESEL",
+              "info": "Da Switch, polyesterclub",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-05-10-sound-s-good-meets-esoulate",
+      "date": "2008-05-10",
+      "title": "SOUND'S GOOD MEETS ESOULATE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20080419003937id_/http://www.distillery.de:80/ex/dates/2008/05/10",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Sound's Good:",
+          "items": [
+            {
+              "name": "MOD.CIVIL – LIVE",
+              "info": "Gerrit Behrens &, Snout, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MANAMANA – AKA",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-05-11-markus-welby-s-b-day",
+      "date": "2008-05-11",
+      "title": "MARKUS WELBY'S B-DAY",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20080419003942id_/http://www.distillery.de:80/ex/dates/2008/05/11",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: minimal house:",
+          "items": [
+            {
+              "name": "NORMAN WEBBER/LUNA CITY EXPRESS",
+              "info": "Moon Harbour",
+              "link": ""
+            },
+            {
+              "name": "D. HOERSTE AKA WHITE HORSE",
+              "info": "Muna, Fortschritt 3000, Rügen",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-05-16-black-belt-boogie-pres-bass-plus",
+      "date": "2008-05-16",
+      "title": "BLACK BELT BOOGIE PRES. BASS PLUS",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20080419003947id_/http://www.distillery.de:80/ex/dates/2008/05/16",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Breakbeat, Electronica, Dubstep, Dub:",
+          "items": [
+            {
+              "name": "TES LA ROK",
+              "info": "Helsinki",
+              "link": ""
+            },
+            {
+              "name": "PEAK PHINE",
+              "info": "Black Belt Boogie, Bass Plus",
+              "link": ""
+            },
+            {
+              "name": "SENCHA",
+              "info": "nuskoolbreaks.net",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-05-17-finest-selection-presents-highgrade",
+      "date": "2008-05-17",
+      "title": "FINEST SELECTION PRESENTS: HIGHGRADE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20080419003952id_/http://www.distillery.de:80/ex/dates/2008/05/17",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Highgrade \"Our Thing\" Tour 2008:",
+          "items": [
+            {
+              "name": "TIGERSKIN AKA DUB TAYLOR – LIVE",
+              "info": "Highgrade Records, Berlin",
+              "link": ""
+            },
+            {
+              "name": "HEINRICHS & HIRTENFELLNER",
+              "info": "Highgrade Records, Berlin",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-05-23-hotta-fire-reggaestation",
+      "date": "2008-05-23",
+      "title": "HOTTA FIRE REGGAESTATION",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20080419003957id_/http://www.distillery.de:80/ex/dates/2008/05/23",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Reggae, Dancehall:",
+          "items": [
+            {
+              "name": "POT OF GOLD",
+              "info": "Yakuza Productions Crew, Madrid",
+              "link": ""
+            },
+            {
+              "name": "SELECTA SPINBACK",
+              "info": "Da Switch, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MASTAH K",
+              "info": "Hotta Fire",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-05-24-popup-speziale-moon-harbour-blackred",
+      "date": "2008-05-24",
+      "title": "POPUP-SPEZIALE: MOON HARBOUR & BLACKRED",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20080419004003id_/http://www.distillery.de:80/ex/dates/2008/05/24",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Moon Harbour:",
+          "items": [
+            {
+              "name": "LOUIE AUSTEN – LIVE",
+              "info": "L.A. Music, Kitty YO, Kleinrecords, Interactbooking / Vienna",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-05-30-global-playaz-high-grade-drum-and-bass",
+      "date": "2008-05-30",
+      "title": "GLOBAL PLAYAZ! HIGH-GRADE DRUM AND BASS",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20080419004007id_/http://www.distillery.de:80/ex/dates/2008/05/30",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Movement Floor:",
+          "items": [
+            {
+              "name": "JFB",
+              "info": "Hospital, UK DMC Champion 2007, Battle Jam, Brighton",
+              "link": ""
+            },
+            {
+              "name": "MC FIVE ALIVE",
+              "info": "Natural Selection, Movement, Good Looking",
+              "link": ""
+            },
+            {
+              "name": "SOULSLIDE",
+              "info": "Distillery, Master Out, esoulate, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MC PHOWA",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-05-31-dancematerial-meets-dress-2-sweat",
+      "date": "2008-05-31",
+      "title": "DANCEMATERIAL MEETS DRESS 2 SWEAT",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20080419004012id_/http://www.distillery.de:80/ex/dates/2008/05/31",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Dancematerial:",
+          "items": [
+            {
+              "name": "ROLANDO",
+              "info": "Los Hermanos, Cross Roads, Veteran, Detroit/Edinburgh",
+              "link": ""
+            },
+            {
+              "name": "STEFFEN BENNEMANN",
+              "info": "Nachtdigital, Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}
