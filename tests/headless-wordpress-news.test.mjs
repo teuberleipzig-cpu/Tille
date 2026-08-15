@@ -1,0 +1,98 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import { mkdtemp, readFile, readdir, rm, writeFile, mkdir } from 'node:fs/promises';
+import os from 'node:os';
+import path from 'node:path';
+import { sanitizeHtml, decodeHtmlEntities, plainTextFromHtml, safeHttpUrl } from '../scripts/news/html-sanitize.mjs';
+import { normalizeWordPressPost, normalizeWordPressPosts, EXCERPT_LIMIT } from '../scripts/news/news-model.mjs';
+import { renderArticle, renderOverview } from '../scripts/news/news-render.mjs';
+import { fetchWordPressPosts } from '../scripts/news/wordpress-client.mjs';
+import { generateNewsSite } from '../scripts/news/generate-news.mjs';
+
+const fixturePath = new URL('./fixtures/wordpress-posts.json', import.meta.url);
+const fixtures = JSON.parse(await readFile(fixturePath, 'utf8'));
+const published = () => normalizeWordPressPosts(fixtures);
+const post = (overrides = {}) => ({ ...structuredClone(fixtures[0]), ...overrides });
+const temp = () => mkdtemp(path.join(os.tmpdir(), 'tille-news-'));
+
+test('publish post accepted', () => assert.equal(published().length, 3));
+test('draft excluded', () => assert.ok(!published().some(item => item.slug === 'draft-post')));
+test('private excluded', () => assert.ok(!published().some(item => item.slug === 'private-post')));
+test('slug preserved', () => assert.equal(normalizeWordPressPost(post()).slug, 'summer-update'));
+test('unsafe parent slug rejected', () => assert.throws(() => normalizeWordPressPost(post({ slug: '../x' })), /Unsicherer/));
+test('unsafe slash slug rejected', () => assert.throws(() => normalizeWordPressPost(post({ slug: 'x/y' })), /Unsicherer/));
+test('unsafe query slug rejected', () => assert.throws(() => normalizeWordPressPost(post({ slug: 'x?q' })), /Unsicherer/));
+test('duplicate slug rejected', () => assert.throws(() => normalizeWordPressPosts([post(), post({ id: 999 })]), /Doppelter News-Slug/));
+test('duplicate ID rejected', () => assert.throws(() => normalizeWordPressPosts([post(), post({ slug: 'other' })]), /Doppelte WordPress-ID/));
+test('title normalized', () => assert.equal(normalizeWordPressPost(post()).title, 'Summer & Update'));
+test('excerpt normalized', () => assert.equal(normalizeWordPressPost(post()).excerpt, 'Neues aus der Distillery Leipzig.'));
+test('excerpt fallback uses content plaintext', () => assert.match(published().find(item => item.slug === 'lange-nacht').excerpt, /Programm Eine längere/));
+test('excerpt fallback is bounded', () => { const value = post({ excerpt: { rendered: '' }, content: { rendered: `<p>${'word '.repeat(100)}</p>` } }); assert.ok(normalizeWordPressPost(value).excerpt.length <= EXCERPT_LIMIT + 1); });
+test('published date parsed', () => assert.equal(normalizeWordPressPost(post()).publishedAt, '2026-08-10T14:00:00'));
+test('modified date parsed', () => assert.equal(normalizeWordPressPost(post()).modifiedAt, '2026-08-11T09:30:00'));
+test('invalid date rejected', () => assert.throws(() => normalizeWordPressPost(post({ date: 'yesterday' })), /Datum/));
+test('featured image mapped', () => assert.equal(normalizeWordPressPost(post()).featuredImage.url, 'https://images.example.com/summer.jpg'));
+test('featured image alt mapped', () => assert.equal(normalizeWordPressPost(post()).featuredImage.alt, 'Sommernacht in Leipzig'));
+test('missing featured image handled', () => assert.equal(published().find(item => item.slug === 'lange-nacht').featuredImage, null));
+test('broken featured image scheme handled', () => { const value = post(); value._embedded['wp:featuredmedia'][0].source_url = 'data:image/png,x'; assert.equal(normalizeWordPressPost(value).featuredImage, null); });
+test('categories deterministic', () => { const value = post(); value._embedded['wp:term'][0].push({ taxonomy: 'category', name: 'Abend' }); assert.deepEqual(normalizeWordPressPost(value).categories, ['Abend', 'Club']); });
+test('tags deterministic', () => assert.deepEqual(normalizeWordPressPost(post()).tags, ['Sommer']));
+
+test('plain title escaped by renderer', () => assert.match(renderArticle({ ...published()[0], title: '<unsafe>' }), /&lt;unsafe&gt;/));
+test('ampersand decoded once', () => assert.equal(decodeHtmlEntities('A &amp; B'), 'A & B'));
+test('numeric entity decoded', () => assert.equal(decodeHtmlEntities('&#8220;Hallo&#8221;'), '“Hallo”'));
+test('umlauts remain intact', () => assert.equal(plainTextFromHtml('<p>Grüße</p>'), 'Grüße'));
+test('script removed', () => assert.equal(sanitizeHtml('<p>A<script>x</script>B</p>'), '<p>AB</p>'));
+test('onclick removed', () => assert.equal(sanitizeHtml('<p onclick="x">A</p>'), '<p>A</p>'));
+test('javascript link target removed', () => assert.equal(sanitizeHtml('<a href="javascript:x">A</a>'), '<a>A</a>'));
+test('data link target removed', () => assert.equal(sanitizeHtml('<a href="data:text/html,x">A</a>'), '<a>A</a>'));
+test('normal https link retained', () => assert.match(sanitizeHtml('<a href="https://example.com/a">A</a>'), /href="https:\/\/example.com\/a"/));
+test('external target gets safe rel', () => assert.match(sanitizeHtml('<a href="https://example.com" target="_blank">A</a>'), /rel="noopener noreferrer"/));
+test('iframe removed by default', () => assert.equal(sanitizeHtml('<p>A</p><iframe>x</iframe><p>B</p>'), '<p>A</p><p>B</p>'));
+test('http image allowed', () => assert.match(sanitizeHtml('<img src="http://example.com/a.jpg">'), /src="http:\/\/example.com\/a.jpg"/));
+test('https image allowed', () => assert.match(sanitizeHtml('<img src="https://example.com/a.jpg">'), /src="https:\/\/example.com\/a.jpg"/));
+test('data image rejected', () => assert.equal(sanitizeHtml('<img src="data:image/png,x">'), '<img>'));
+test('malicious image attribute not emitted', () => assert.doesNotMatch(sanitizeHtml('<img src="https://example.com/a.jpg" onerror="x">'), /onerror/));
+test('WordPress admin link rejected', () => assert.equal(safeHttpUrl('https://cms.example/wp-admin/post.php'), ''));
+test('WordPress REST link rejected', () => assert.equal(safeHttpUrl('https://cms.example/wp-json/wp/v2/posts'), ''));
+
+test('overview generated', () => assert.match(renderOverview(published()), /class="news-list"/));
+test('article generated', () => assert.match(renderArticle(published()[0]), /<article class="news-content news-article">/));
+test('correct article href', () => assert.match(renderOverview(published()), /news\/summer-update\//));
+test('correct canonical', () => assert.match(renderArticle(published()[0]), /https:\/\/www\.distillery\.de\/news\/summer-update\//));
+test('correct article title', () => assert.match(renderArticle(published()[0]), /Distillery – Summer &amp; Update/));
+test('correct meta description', () => assert.match(renderArticle(published()[0]), /content="Neues aus der Distillery Leipzig\."/));
+test('OG URL correct', () => assert.match(renderArticle(published()[0]), /property="og:url" content="https:\/\/www\.distillery\.de\/news\/summer-update\/"/));
+test('OG image uses featured image', () => assert.match(renderArticle(published()[0]), /property="og:image" content="https:\/\/images\.example\.com\/summer\.jpg"/));
+test('OG image fallback works', () => assert.match(renderArticle(published().find(item => !item.featuredImage)), /assets\/social-preview\.svg/));
+test('posts sorted descending', () => assert.deepEqual(published().map(item => item.slug), ['summer-update', 'lange-nacht', 'unsafe-content']));
+test('tie sort deterministic', () => { const a = post({ id: 1, slug: 'z-post' }), b = post({ id: 2, slug: 'a-post' }); assert.deepEqual(normalizeWordPressPosts([a, b]).map(item => item.slug), ['a-post', 'z-post']); });
+test('empty state', () => assert.match(renderOverview([]), /Noch keine News/));
+test('deterministic renderer output', () => assert.equal(renderOverview(published()), renderOverview(published())));
+test('no WordPress admin URL leakage', () => assert.doesNotMatch(renderArticle(published().find(item => item.slug === 'unsafe-content')), /wp-admin|wp-login|wp-json/i));
+
+function response(data, pages = 1, status = 200) { return { ok: status >= 200 && status < 300, status, headers: { get: name => name.toLowerCase() === 'x-wp-totalpages' ? String(pages) : null }, json: async () => data }; }
+test('REST single page', async () => assert.equal((await fetchWordPressPosts({ wordpressBaseUrl: 'https://cms.example', fetchImpl: async () => response([post()]) })).length, 1));
+test('REST multiple pages', async () => { let calls = 0; const data = await fetchWordPressPosts({ wordpressBaseUrl: 'https://cms.example', fetchImpl: async () => response([post({ id: ++calls, slug: `post-${calls}` })], 2) }); assert.equal(data.length, 2); });
+test('REST pagination terminates at header total', async () => { let calls = 0; await fetchWordPressPosts({ wordpressBaseUrl: 'https://cms.example', fetchImpl: async () => { calls++; return response([post()], 2); } }); assert.equal(calls, 2); });
+test('REST empty posts', async () => assert.deepEqual(await fetchWordPressPosts({ wordpressBaseUrl: 'https://cms.example', fetchImpl: async () => response([]) }), []));
+test('REST 404', async () => assert.rejects(() => fetchWordPressPosts({ wordpressBaseUrl: 'https://cms.example', fetchImpl: async () => response([], 1, 404) }), /HTTP 404/));
+test('REST 500', async () => assert.rejects(() => fetchWordPressPosts({ wordpressBaseUrl: 'https://cms.example', fetchImpl: async () => response([], 1, 500) }), /HTTP 500/));
+test('REST malformed JSON', async () => assert.rejects(() => fetchWordPressPosts({ wordpressBaseUrl: 'https://cms.example', fetchImpl: async () => ({ ...response([]), json: async () => { throw new Error('bad'); } }) }), /ungültiges JSON/));
+test('REST malformed structure', async () => assert.rejects(() => fetchWordPressPosts({ wordpressBaseUrl: 'https://cms.example', fetchImpl: async () => response({ posts: [] }) }), /kein Array/));
+test('REST pagination max bound', async () => assert.rejects(() => fetchWordPressPosts({ wordpressBaseUrl: 'https://cms.example', maxPages: 2, fetchImpl: async () => response([post()], 3) }), /Limit/));
+test('REST network failure', async () => assert.rejects(() => fetchWordPressPosts({ wordpressBaseUrl: 'https://cms.example', fetchImpl: async () => { throw new Error('offline'); } }), /nicht erreichbar/));
+test('REST timeout aborts without retry', async () => { let calls = 0; await assert.rejects(() => fetchWordPressPosts({ wordpressBaseUrl: 'https://cms.example', timeoutMs: 5, fetchImpl: (_, options) => new Promise((_, reject) => { calls++; options.signal.addEventListener('abort', () => reject(new Error('aborted'))); }) }), /nicht erreichbar/); assert.equal(calls, 1); });
+
+test('render failure leaves old output intact', async t => { const root = await temp(); t.after(() => rm(root, { recursive: true, force: true })); await mkdir(path.join(root, 'news')); await writeFile(path.join(root, 'news/index.html'), 'old'); await writeFile(path.join(root, 'news.html'), 'old legacy'); await assert.rejects(() => generateNewsSite({ rawPosts: fixtures, outputRoot: root, renderArticleImpl: () => { throw new Error('render'); } })); assert.equal(await readFile(path.join(root, 'news/index.html'), 'utf8'), 'old'); assert.equal(await readFile(path.join(root, 'news.html'), 'utf8'), 'old legacy'); });
+test('duplicate slug leaves old output intact', async t => { const root = await temp(); t.after(() => rm(root, { recursive: true, force: true })); await mkdir(path.join(root, 'news')); await writeFile(path.join(root, 'news/index.html'), 'old'); await assert.rejects(() => generateNewsSite({ rawPosts: [post(), post({ id: 999 })], outputRoot: root }), /Doppelter/); assert.equal(await readFile(path.join(root, 'news/index.html'), 'utf8'), 'old'); });
+test('injected failure leaves old output intact', async t => { const root = await temp(); t.after(() => rm(root, { recursive: true, force: true })); await mkdir(path.join(root, 'news')); await writeFile(path.join(root, 'news/index.html'), 'old'); await assert.rejects(() => generateNewsSite({ rawPosts: fixtures, outputRoot: root, failBeforePublish: true }), /Injected/); assert.equal(await readFile(path.join(root, 'news/index.html'), 'utf8'), 'old'); });
+test('publish failure rolls back both entry points', async t => { const root = await temp(); t.after(() => rm(root, { recursive: true, force: true })); await mkdir(path.join(root, 'news')); await writeFile(path.join(root, 'news/index.html'), 'old'); await writeFile(path.join(root, 'news.html'), 'old legacy'); await assert.rejects(() => generateNewsSite({ rawPosts: fixtures, outputRoot: root, failAfterNewsPublish: true }), /publish failure/); assert.equal(await readFile(path.join(root, 'news/index.html'), 'utf8'), 'old'); assert.equal(await readFile(path.join(root, 'news.html'), 'utf8'), 'old legacy'); });
+test('successful generation replaces full output', async t => { const root = await temp(); t.after(() => rm(root, { recursive: true, force: true })); await mkdir(path.join(root, 'news/obsolete'), { recursive: true }); await writeFile(path.join(root, 'news/obsolete/index.html'), 'old'); const result = await generateNewsSite({ rawPosts: fixtures, outputRoot: root }); assert.equal(result.posts.length, 3); assert.rejects(() => readFile(path.join(root, 'news/obsolete/index.html'))); assert.match(await readFile(path.join(root, 'news/summer-update/index.html'), 'utf8'), /Summer &amp; Update/); });
+test('no partial article set', async t => { const root = await temp(); t.after(() => rm(root, { recursive: true, force: true })); await generateNewsSite({ rawPosts: fixtures, outputRoot: root }); assert.deepEqual((await readdir(path.join(root, 'news'))).sort(), ['index.html', 'lange-nacht', 'summer-update', 'unsafe-content']); });
+test('same input produces byte-identical files', async t => { const a = await temp(), b = await temp(); t.after(() => Promise.all([rm(a, { recursive: true, force: true }), rm(b, { recursive: true, force: true })])); await generateNewsSite({ rawPosts: fixtures, outputRoot: a }); await generateNewsSite({ rawPosts: fixtures, outputRoot: b }); assert.equal(await readFile(path.join(a, 'news/summer-update/index.html'), 'utf8'), await readFile(path.join(b, 'news/summer-update/index.html'), 'utf8')); });
+
+test('committed public output is neutral and fixture-free', async () => { const legacy = await readFile(new URL('../news.html', import.meta.url), 'utf8'), canonical = await readFile(new URL('../news/index.html', import.meta.url), 'utf8'); assert.match(legacy, /Noch keine News/); assert.match(canonical, /Noch keine News/); for (const slug of ['summer-update', 'lange-nacht', 'unsafe-content']) { assert.doesNotMatch(legacy, new RegExp(slug)); await assert.rejects(() => readFile(new URL(`../news/${slug}/index.html`, import.meta.url))); } });
+test('legacy and canonical overview share one generated shell', async () => { const legacy = await readFile(new URL('../news.html', import.meta.url), 'utf8'), canonical = await readFile(new URL('../news/index.html', import.meta.url), 'utf8'); assert.match(legacy, /data-site-page="news"/); assert.match(canonical, /data-site-page="news"/); assert.match(legacy, /site-navigation-4/); assert.match(canonical, /site-navigation-4/); });
+test('nginx directory index and strict 404 remain configured', async () => { for (const name of ['nginx.conf', 'nginx.staging.conf']) { const value = await readFile(new URL(`../docker/${name}`, import.meta.url), 'utf8'); assert.match(value, /index index\.html/); assert.match(value, /try_files \$uri \$uri\/ =404/); } });
+test('GitHub Pages directory output is enabled', async () => assert.match(await readFile(new URL('../.nojekyll', import.meta.url), 'utf8'), /Disable Jekyll/));
