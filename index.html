@@ -81,7 +81,7 @@ function initResidentSlideshow(){fetch(RESIDENTS_DATA_URL,{cache:'no-store'}).th
 async function boot(){try{initResidentSlideshow();await eventStore.manifest();searchQuery=(new URLSearchParams(location.search).get('search')||'');const detail=new URLSearchParams(location.search).get('event'),fromUrl=new URLSearchParams(location.search).get('month');let detailEvent=null;if(/^\d{4}-\d{2}$/.test(fromUrl||'')){const [y,m]=fromUrl.split('-').map(Number);activeYear=y;activeMonth=m}else if(detail){detailEvent=await eventStore.resolveEvent(detail);const dt=detailEvent?parseEventDate(detailEvent.date):null;if(dt){activeYear=dt.getFullYear();activeMonth=dt.getMonth()+1}}renderSidebar();if(detail){if(detailEvent){allEvents=[detailEvent];renderCalendar([detailEvent]);renderDetail(detailEvent);updateSearchStatus()}else document.getElementById('events').innerHTML='<p class="error">Veranstaltung nicht gefunden.</p>'}else await renderCurrentMonth();document.getElementById('prev-month').onclick=()=>changeMonth(-1);document.getElementById('next-month').onclick=()=>changeMonth(1)}catch(e){document.getElementById('events').innerHTML=`<p class="error">Fehler: ${esc(e.message)}</p>`}}
 boot();
 </script>
-<script type="module" src="assets/site-navigation.js?v=site-navigation-3"></script>
+<script type="module" src="assets/site-navigation.js?v=site-navigation-4"></script>
 <script src="assets/tracking.js?v=tracking-1" defer></script>
 </body>
 </html>
