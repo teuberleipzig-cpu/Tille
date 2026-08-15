@@ -101,8 +101,15 @@ export function buildResidentNewsPreview(parsed, mapping, existingNews = []) {
 
 export function mergeResidentNews(existingNews, previewRows) {
   const existing = Array.isArray(existingNews) ? existingNews.map(item => structuredClone(item)) : [];
+  const knownKeys = new Set(existing.map(residentNewsKey));
   const additions = (Array.isArray(previewRows) ? previewRows : [])
     .filter(row => row.included && row.status === 'valid')
+    .filter(row => {
+      const key = residentNewsKey(row);
+      if (knownKeys.has(key)) return false;
+      knownKeys.add(key);
+      return true;
+    })
     .map(row => ({ date: row.date, text: row.text }));
   return [...existing, ...additions].sort((a, b) =>
     String(b.date || '').localeCompare(String(a.date || '')) || String(a.text || '').localeCompare(String(b.text || ''), 'de'));

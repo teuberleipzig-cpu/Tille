@@ -64,6 +64,7 @@ test('merge preserves existing news', () => { const old = [{ date: '2025-01-01',
 test('merge adds selected valid news', () => assert.equal(mergeResidentNews([], preview('date;text\n2026-01-01;new')).length, 1));
 test('merge sorts date descending', () => assert.deepEqual(mergeResidentNews([{ date: '2025-01-01', text: 'old' }], preview('date;text\n2026-01-01;new')).map(x => x.date), ['2026-01-01', '2025-01-01']));
 test('merge preserves unknown existing news fields', () => assert.equal(mergeResidentNews([{ date: '2025-01-01', text: 'old', future: 7 }], [])[0].future, 7));
+test('fresh GitHub duplicate is skipped', () => assert.equal(mergeResidentNews([{ date: '2026-01-01', text: 'new' }], validRows()).length, 1));
 test('merge does not mutate existing list', () => { const old = [{ date: '2025-01-01', text: 'old' }]; mergeResidentNews(old, preview('date;text\n2026-01-01;new')); assert.deepEqual(old, [{ date: '2025-01-01', text: 'old' }]); });
 
 const documentFixture = () => ({ version: 4, residents: [{ id: 'a', name: 'A', portal: { invite: 'x' }, future: 9, news: 'legacy', newsItems: [] }, { id: 'b', name: 'B', newsItems: [{ date: '2025-01-01', text: 'old' }] }] });
@@ -81,12 +82,17 @@ test('duplicate target aborts', () => { const d = documentFixture(); d.residents
 test('empty residents aborts', () => assert.throws(() => patchResidentNews({ residents: [] }, 'a', []), /leer/));
 test('invalid document aborts', () => assert.throws(() => patchResidentNews(null, 'a', []), /ungültig/));
 
-function clientMock({ status = 200, invalid = false } = {}) {
+function clientMock({ status = 200, invalid = false, document = documentFixture() } = {}) {
   const calls = [];
-  return { calls, getTextFile: async path => { calls.push(['get', path]); return { text: invalid ? '{' : JSON.stringify(documentFixture()), sha: 'fresh-sha' }; }, putTextFile: async (path, text, sha) => { calls.push(['put', path, text, sha]); if (status !== 200) { const error = new Error('conflict'); error.status = status; throw error; } return { content: { sha: 'new-sha' } }; } };
+  return { calls, getTextFile: async path => { calls.push(['get', path]); return { text: invalid ? '{' : JSON.stringify(document), sha: 'fresh-sha' }; }, putTextFile: async (path, text, sha) => { calls.push(['put', path, text, sha]); if (status !== 200) { const error = new Error('conflict'); error.status = status; throw error; } return { content: { sha: 'new-sha' } }; } };
 }
 const validRows = () => preview('date;text\n2026-01-01;new');
+const freshDuplicateDocument = () => ({ version: 4, residents: [{ id: 'a', newsItems: [{ date: '2026-01-01', text: 'new', future: 7 }] }] });
 test('fresh SHA is used', async () => { const client = clientMock(); await saveResidentNewsImport({ client, path: 'residents.json', residentId: 'a', previewRows: validRows(), confirmed: true }); assert.equal(client.calls[1][3], 'fresh-sha'); });
+test('fresh duplicate only -> no PUT', async () => { const client = clientMock({ document: freshDuplicateDocument() }); await assert.rejects(() => saveResidentNewsImport({ client, path: 'x', residentId: 'a', previewRows: validRows(), confirmed: true }), /Keine importierbaren News vorhanden/); assert.equal(client.calls.filter(x => x[0] === 'put').length, 0); });
+test('mixed fresh duplicate + new row -> only new row saved', async () => { const client = clientMock({ document: freshDuplicateDocument() }); const rows = preview('date;text\n2026-01-01;new\n2026-02-01;another'); const result = await saveResidentNewsImport({ client, path: 'x', residentId: 'a', previewRows: rows, confirmed: true }); const saved = JSON.parse(client.calls.find(x => x[0] === 'put')[2]); assert.deepEqual(saved.residents[0].newsItems.map(item => item.text), ['another', 'new']); assert.equal(result.imported, 1); });
+test('imported count reflects actual fresh-state additions', async () => { const client = clientMock({ document: freshDuplicateDocument() }); const rows = preview('date;text\n2026-01-01;new\n2026-02-01;another'); const result = await saveResidentNewsImport({ client, path: 'x', residentId: 'a', previewRows: rows, confirmed: true }); assert.equal(result.imported, 1); });
+test('existing unknown news fields remain preserved after fresh dedupe', async () => { const client = clientMock({ document: freshDuplicateDocument() }); const rows = preview('date;text\n2026-01-01;new\n2026-02-01;another'); const result = await saveResidentNewsImport({ client, path: 'x', residentId: 'a', previewRows: rows, confirmed: true }); assert.equal(result.document.residents[0].newsItems.find(item => item.text === 'new').future, 7); });
 test('conflict aborts save', async () => { const client = clientMock({ status: 409 }); await assert.rejects(() => saveResidentNewsImport({ client, path: 'x', residentId: 'a', previewRows: validRows(), confirmed: true }), /verändert/); });
 test('conflict is not retried', async () => { const client = clientMock({ status: 409 }); await assert.rejects(() => saveResidentNewsImport({ client, path: 'x', residentId: 'a', previewRows: validRows(), confirmed: true })); assert.equal(client.calls.filter(x => x[0] === 'put').length, 1); });
 test('GitHub failure returns no allegedly saved document', async () => { const client = clientMock({ status: 500 }); await assert.rejects(() => saveResidentNewsImport({ client, path: 'x', residentId: 'a', previewRows: validRows(), confirmed: true }), /GitHub-Speichern/); });
