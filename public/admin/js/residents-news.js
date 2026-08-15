@@ -67,6 +67,9 @@
         setStatus('residentStatus','News nach Datum sortiert. Noch nicht veröffentlicht.','ok');
       };
     }
+    import('./features/residents/residents-news-csv-import.js?v=resident-news-csv-1')
+      .then(module=>module.installResidentNewsCsvImport())
+      .catch(error=>setStatus('residentStatus','CSV-Import konnte nicht geladen werden: '+error.message,'err'));
   }
   function renderResidentNews(){
     injectResidentsNewsUi();

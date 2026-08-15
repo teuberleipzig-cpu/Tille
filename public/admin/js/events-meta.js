@@ -198,7 +198,7 @@
   function loadControlledAdminModules(){
     loadExtraExtension(null,'./js/save-status-ux.js?v=status-ux-render-bound-1');
     loadExtraExtension('./css/github-media.css','./js/github-media.js?v=github-media-generic-guard-1');
-    loadExtraExtension('./css/residents-news.css','./js/residents-news.js?v=residents-news-guard-1');
+    loadExtraExtension('./css/residents-news.css?v=resident-news-csv-1','./js/residents-news.js?v=resident-news-csv-1');
     loadExtraExtension('./css/residents-media.css','./js/residents-media.js?v=resident-media-guard-1');
     loadExtraExtension('./css/textareas.css','./js/textareas.js?v=textareas-no-interval-1');
     loadExtraExtension('./css/releases-admin.css','./js/releases-core.js?v=releases-core-guard-1');
