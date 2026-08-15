@@ -39,7 +39,7 @@ function shell({ title, description, canonical, content, depth = 0, ogImage = FA
       <header class="logo" aria-label="Distillery"><img src="assets/distillery-logo.png" alt="Distillery"></header>
       <nav class="nav" aria-label="Hauptnavigation"><a href="index.html">Dates</a><a class="active" href="news.html">News</a><a href="residents.html">Residents</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="history.html">History</a><a href="feedback.html">Feedback</a></nav>
       ${content}
-      <footer class="footer">DISTILLERY LEIPZIG | EGGEBRECHTSTRASSE 2 | 04103 LEIPZIG | <a href="mailto:club@distillery.de">club@distillery.de</a> | <a href="tel:+4934135597400">0341 35597400</a><small><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></small></footer>
+      <footer class="footer">DISTILLERY LEIPZIG | EGGEBRECHTSTRAẞE 2 | 04103 LEIPZIG | <a href="mailto:club@distillery.de">club@distillery.de</a> | <a href="tel:+4934135597400">0341 35597400</a><small><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></small></footer>
     </main>
     <aside class="sidebar" aria-hidden="true"></aside>
   </div>

@@ -38,10 +38,10 @@ function truncate(text, limit = EXCERPT_LIMIT) {
   return `${slice.slice(0, end > limit / 2 ? end : limit).trim()}…`;
 }
 
-export function normalizeWordPressPost(post) {
+export function normalizeWordPressPost(post, { sourceOrigin = '' } = {}) {
   if (!post || typeof post !== 'object' || Array.isArray(post)) throw new Error('WordPress-Post ist ungültig.');
   if (!Number.isSafeInteger(post.id) || post.id <= 0) throw new Error('WordPress-Post-ID ist ungültig.');
-  const contentHtml = sanitizeHtml(post.content?.rendered || '');
+  const contentHtml = sanitizeHtml(post.content?.rendered || '', { blockedAnchorOrigins: sourceOrigin ? [sourceOrigin] : [] });
   const title = clean(decodeHtmlEntities(plainTextFromHtml(post.title?.rendered || '')));
   if (!title) throw new Error(`WordPress-Post ${post.id} hat keinen Titel.`);
   const suppliedExcerpt = plainTextFromHtml(post.excerpt?.rendered || '');
@@ -61,9 +61,9 @@ export function normalizeWordPressPost(post) {
   };
 }
 
-export function normalizeWordPressPosts(posts) {
+export function normalizeWordPressPosts(posts, options = {}) {
   if (!Array.isArray(posts)) throw new Error('WordPress-Response muss ein Array sein.');
-  const published = posts.filter(post => post?.status === 'publish').map(normalizeWordPressPost);
+  const published = posts.filter(post => post?.status === 'publish').map(post => normalizeWordPressPost(post, options));
   const ids = new Set(), slugs = new Set();
   for (const post of published) {
     if (ids.has(post.sourceId)) throw new Error(`Doppelte WordPress-ID: ${post.sourceId}`);

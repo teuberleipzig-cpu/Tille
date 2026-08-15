@@ -22,9 +22,9 @@ function validateRendered(files) {
   }
 }
 
-export async function generateNewsSite({ rawPosts = [], outputRoot, renderArticleImpl = renderArticle, failBeforePublish = false, failAfterNewsPublish = false }) {
+export async function generateNewsSite({ rawPosts = [], outputRoot, sourceOrigin = '', renderArticleImpl = renderArticle, failBeforePublish = false, failAfterNewsPublish = false }) {
   const root = path.resolve(outputRoot);
-  const posts = normalizeWordPressPosts(rawPosts);
+  const posts = normalizeWordPressPosts(rawPosts, { sourceOrigin });
   const files = new Map([
     ['news/index.html', renderOverview(posts, { depth: 1, articlePrefix: '' })],
     ['news.html', renderOverview(posts, { depth: 0, articlePrefix: 'news/' })],
@@ -76,18 +76,23 @@ function parseArguments(argv) {
     else if (arg === '--wordpress') result.mode = 'wordpress';
     else if (arg === '--empty') result.mode = 'empty';
     else if (arg === '--out') result.outputRoot = argv[++index];
+    else if (arg === '--source-origin') result.sourceOrigin = argv[++index];
     else throw new Error(`Unbekanntes Argument: ${arg}`);
   }
   if (!result.mode) throw new Error('Bitte --input, --wordpress oder --empty angeben.');
   return result;
 }
 
+export async function loadNewsSource({ mode, input, sourceOrigin = '', wordpressBaseUrl = '', fetchImpl = globalThis.fetch }) {
+  if (mode === 'input') return { rawPosts: JSON.parse(await readFile(path.resolve(input), 'utf8')), sourceOrigin };
+  if (mode === 'wordpress') return { rawPosts: await fetchWordPressPosts({ wordpressBaseUrl, fetchImpl }), sourceOrigin: wordpressBaseUrl };
+  return { rawPosts: [], sourceOrigin };
+}
+
 async function main() {
   const options = parseArguments(process.argv.slice(2));
-  let rawPosts = [];
-  if (options.mode === 'input') rawPosts = JSON.parse(await readFile(path.resolve(options.input), 'utf8'));
-  if (options.mode === 'wordpress') rawPosts = await fetchWordPressPosts({ wordpressBaseUrl: process.env.WORDPRESS_BASE_URL });
-  const result = await generateNewsSite({ rawPosts, outputRoot: options.outputRoot });
+  const source = await loadNewsSource({ ...options, wordpressBaseUrl: process.env.WORDPRESS_BASE_URL });
+  const result = await generateNewsSite({ ...source, outputRoot: options.outputRoot });
   process.stdout.write(`News generiert: ${result.posts.length} Beiträge, ${result.files.length} Dateien.\n`);
 }
 

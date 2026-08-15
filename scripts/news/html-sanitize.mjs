@@ -50,12 +50,16 @@ function parseAttributes(source) {
   return attributes;
 }
 
-function sanitizeAttributes(tag, source) {
+function sanitizeAttributes(tag, source, blockedAnchorOrigins) {
   const allowed = tag === 'a' ? new Set(['href', 'title', 'target']) : tag === 'img' ? new Set(['src', 'alt', 'title', 'width', 'height']) : new Set([]);
   const clean = new Map();
   for (const [name, value] of parseAttributes(source)) {
     if (!allowed.has(name) || name.startsWith('on')) continue;
-    if (name === 'href') { const safe = safeHttpUrl(value, { allowRelative: true }); if (safe) clean.set(name, safe); }
+    if (name === 'href') {
+      const safe = safeHttpUrl(value, { allowRelative: true });
+      const blocked = safe && blockedAnchorOrigins.size > 0 && (safe.startsWith('/') || safe.startsWith('./') || safe.startsWith('../') || blockedAnchorOrigins.has(new URL(safe).origin));
+      if (safe && !blocked) clean.set(name, safe);
+    }
     else if (name === 'src') { const safe = safeHttpUrl(value); if (safe) clean.set(name, safe); }
     else if ((name === 'width' || name === 'height') && /^\d{1,4}$/.test(value)) clean.set(name, value);
     else if (name === 'target' && value === '_blank') clean.set(name, value);
@@ -65,8 +69,9 @@ function sanitizeAttributes(tag, source) {
   return [...clean].map(([name, value]) => ` ${name}="${escapeHtml(value)}"`).join('');
 }
 
-export function sanitizeHtml(value) {
+export function sanitizeHtml(value, { blockedAnchorOrigins = [] } = {}) {
   const html = String(value ?? '');
+  const blocked = new Set(blockedAnchorOrigins.map(value => { try { return new URL(value).origin; } catch (_) { return ''; } }).filter(Boolean));
   let output = '', index = 0, dropping = '';
   while (index < html.length) {
     const open = html.indexOf('<', index);
@@ -82,7 +87,7 @@ export function sanitizeHtml(value) {
     if (!closing && DROP_CONTENT_TAGS.has(name)) { dropping = name; index = end + 1; continue; }
     if (ALLOWED_TAGS.has(name)) {
       if (closing) { if (!VOID_TAGS.has(name)) output += `</${name}>`; }
-      else output += `<${name}${sanitizeAttributes(name, raw.slice(name.length))}>`;
+      else output += `<${name}${sanitizeAttributes(name, raw.slice(name.length), blocked)}>`;
     }
     index = end + 1;
   }
