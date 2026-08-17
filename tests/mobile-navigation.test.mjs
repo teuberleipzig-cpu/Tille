@@ -43,7 +43,7 @@ test('hamburger and drawer expose required accessibility controls', () => {
 test('all public navigation pages use consistent cache versions', async () => {
   for (const name of publicPages) {
     const html = await readFile(new URL(name, root), 'utf8');
-    assert.match(html, /site-navigation\.js\?v=site-navigation-3/);
+    assert.match(html, /site-navigation\.js\?v=site-navigation-4/);
     assert.doesNotMatch(html, /site-navigation\.js\?v=site-navigation-2/);
     assert.match(html, /mobile-navigation\.css\?v=mobile-navigation-1/);
   }

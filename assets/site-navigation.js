@@ -5,6 +5,7 @@ const CONFIG_URL = 'public/site/data/site-navigation.json';
 const CURRENT_PAGE_IDS = { 'index.html': 'dates', 'news.html': 'news', 'residents.html': 'residents', 'resident-releases.html': 'residents', 'about.html': 'about', 'contact.html': 'contact', 'history.html': 'history', 'feedback.html': 'feedback', 'feedback-thanks.html': 'feedback', 'event.html': 'dates', 'gallery.html': 'gallery' };
 
 function currentPageId() {
+  if (document.body?.dataset.sitePage) return document.body.dataset.sitePage;
   const file = location.pathname.split('/').pop() || 'index.html';
   return CURRENT_PAGE_IDS[file] || '';
 }
@@ -24,7 +25,7 @@ function renderNavigation(nav, config) {
 
 function redirectHome(config) {
   const file = location.pathname.split('/').pop() || 'index.html';
-  if (file !== 'index.html' || location.search || location.hash || config.homePage === 'dates') return;
+  if (file !== 'index.html' || currentPageId() !== 'dates' || location.search || location.hash || config.homePage === 'dates') return;
   const target = config.pages.find(page => page.id === config.homePage && page.enabled);
   if (target && target.href !== 'index.html') location.replace(target.href);
 }

@@ -1,0 +1,56 @@
+[
+  {
+    "id": 101,
+    "slug": "summer-update",
+    "status": "publish",
+    "date": "2026-08-10T14:00:00",
+    "modified": "2026-08-11T09:30:00",
+    "title": { "rendered": "Summer &amp; Update" },
+    "excerpt": { "rendered": "<p>Neues aus der Distillery Leipzig.</p>" },
+    "content": { "rendered": "<p>Hallo <strong>Leipzig</strong>.</p><p><a href=\"https://example.com/info\" target=\"_blank\">Mehr erfahren</a></p>" },
+    "_embedded": {
+      "wp:featuredmedia": [{ "source_url": "https://images.example.com/summer.jpg", "alt_text": "Sommernacht in Leipzig" }],
+      "wp:term": [[{ "taxonomy": "category", "name": "Club" }, { "taxonomy": "post_tag", "name": "Sommer" }]]
+    }
+  },
+  {
+    "id": 102,
+    "slug": "lange-nacht",
+    "status": "publish",
+    "date": "2026-08-05T20:00:00",
+    "modified": "2026-08-05T20:00:00",
+    "title": { "rendered": "Lange Nacht – Grüße aus Leipzig" },
+    "excerpt": { "rendered": "" },
+    "content": { "rendered": "<h2>Programm</h2><p>Eine längere Ankündigung mit Umlauten und typografischen “Quotes”.</p><ul><li>Musik</li><li>Community</li></ul><blockquote>Bis bald.</blockquote>" }
+  },
+  {
+    "id": 103,
+    "slug": "unsafe-content",
+    "status": "publish",
+    "date": "2026-08-01T12:00:00",
+    "modified": "2026-08-01T12:00:00",
+    "title": { "rendered": "Sicher &amp; sauber" },
+    "excerpt": { "rendered": "<p>Sicherer Inhalt.</p>" },
+    "content": { "rendered": "<p onclick=\"alert(1)\">Text<script>alert(1)</script><a href=\"javascript:alert(1)\">böse</a><iframe src=\"https://evil.example\">x</iframe><img src=\"data:image/png;base64,AAAA\" onerror=\"alert(1)\"></p>" }
+  },
+  {
+    "id": 104,
+    "slug": "draft-post",
+    "status": "draft",
+    "date": "2026-08-20T12:00:00",
+    "modified": "2026-08-20T12:00:00",
+    "title": { "rendered": "Nicht öffentlich" },
+    "excerpt": { "rendered": "" },
+    "content": { "rendered": "<p>Darf nicht erscheinen.</p>" }
+  },
+  {
+    "id": 105,
+    "slug": "private-post",
+    "status": "private",
+    "date": "2026-08-21T12:00:00",
+    "modified": "2026-08-21T12:00:00",
+    "title": { "rendered": "Privat" },
+    "excerpt": { "rendered": "" },
+    "content": { "rendered": "<p>Darf ebenfalls nicht erscheinen.</p>" }
+  }
+]
