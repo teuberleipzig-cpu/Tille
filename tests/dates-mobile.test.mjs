@@ -126,7 +126,7 @@ test('desktop event detail keeps controls in the Sidebar', () => {
 });
 
 test('Dates mobile stylesheet and cache references are scoped', () => {
-  assert.match(html, /dates-mobile\.css\?v=dates-mobile-5/);
+  assert.match(html, /dates-mobile\.css\?v=dates-mobile-6/);
   assert.match(html, /dates-mobile-filters\.js\?v=dates-mobile-filters-2/);
   assert.match(html, /dates-mobile-layout\.js\?v=dates-mobile-layout-2/);
   assert.match(css, /@media\(max-width:820px\)/);
@@ -137,7 +137,8 @@ test('filter toggle is accessible and summary uses the existing app state', () =
   assert.match(html, /id="dates-filter-toggle"[^>]+aria-expanded="false"[^>]+aria-controls="dates-filter-panel"/);
   assert.match(html, /function updateDatesFilterSummary\(count=0\)[\s\S]*?searchQuery\.trim\(\)\?`EVENTS FILTERN · \$\{count\} TREFFER`:[\s\S]*?activeFilter\?'EVENTS FILTERN · 1 AKTIV':'EVENTS FILTERN'/);
   assert.doesNotMatch(filters, /localStorage|sessionStorage|pushState|replaceState|MutationObserver|setInterval/);
-  assert.match(css, /dates-filter-toggle\{display:flex;[^}]*min-height:48px/);
+  assert.match(css, /dates-filter-toggle\{display:flex;[^}]*min-height:42px;[^}]*background:linear-gradient\(var\(--grey\),var\(--grey\)\) center\/100% 26px no-repeat;color:#000;[^}]*font-size:12px/);
+  assert.match(css, /dates-filter-toggle-icon\{[^}]*font-size:10px/);
   assert.match(css, /dates-filter-panel\[hidden\]\{display:none\}/);
 });
 
@@ -147,27 +148,31 @@ test('mobile CSS guarantees default closed before filter JavaScript runs', () =>
   assert.doesNotMatch(mobileCss, /dates-filter-toggle\[aria-expanded="true"\] \+ \.dates-filter-panel\{[^}]*display:none/);
 });
 
-test('search and month navigation meet mobile touch contracts', () => {
-  assert.match(css, /event-search input\{min-height:48px;[^}]*font-size:16px/);
-  assert.match(css, /event-search button\{width:48px;height:48px;font-size:20px/);
-  assert.match(css, /calendar-head\{width:100%;grid-template-columns:48px minmax\(0,1fr\) 48px/);
-  assert.match(css, /calendar-head button\{height:48px;background:#4b4b4b;color:#fff/);
+test('search and month navigation use compact mobile contracts', () => {
+  assert.match(css, /event-search input\{min-height:42px;[^}]*font-size:16px/);
+  assert.match(css, /event-search button\{width:42px;height:42px;font-size:18px/);
+  assert.match(css, /calendar-head\{width:100%;grid-template-columns:36px minmax\(0,1fr\) 36px/);
+  assert.match(css, /calendar-head button\{height:36px;background:#4b4b4b;color:#fff/);
   assert.match(css, /calendar-head button:hover,.calendar-head button:focus\{background:#4b4b4b;color:#fff/);
   assert.match(css, /calendar-head button:focus-visible\{outline:3px solid #000;outline-offset:2px/);
-  assert.match(css, /calendar-head \.month\{[^}]*min-height:48px;[^}]*font-size:15px/);
+  assert.match(css, /calendar-head \.month\{[^}]*min-height:36px;[^}]*font-size:12px/);
 });
 
 test('calendar and filters meet mobile layout contracts', () => {
   assert.match(css, /calendar\{width:100%;table-layout:fixed;[^}]*color:#000/);
-  assert.match(css, /calendar th\{color:#000;font-size:13px;font-weight:900/);
+  assert.match(css, /calendar th,.calendar td\{[^}]*height:33px;font-size:12px/);
+  assert.match(css, /calendar th\{color:#000;font-size:11px;font-weight:900/);
   assert.match(css, /calendar td\{color:#707070/);
   assert.match(css, /calendar td\.event-day\{color:#000/);
-  assert.match(css, /calendar td a\{[^}]*display:flex;[^}]*min-height:44px/);
-  assert.match(css, /calendar \.day-orange a\{background:linear-gradient\(var\(--orange\),var\(--orange\)\) center\/30px 30px no-repeat/);
-  assert.match(css, /calendar \.day-olive a\{background:linear-gradient\(var\(--olive\),var\(--olive\)\) center\/30px 30px no-repeat/);
-  assert.match(css, /calendar \.day-yellow a\{background:linear-gradient\(var\(--yellow\),var\(--yellow\)\) center\/30px 30px no-repeat/);
-  assert.match(css, /category-filters\{display:flex;flex-wrap:wrap;gap:6px/);
-  assert.match(css, /side-filter\{[^}]*min-height:44px;[^}]*padding:8px 10px;font-size:13px/);
+  assert.match(css, /calendar td a\{[^}]*display:flex;[^}]*min-height:33px/);
+  assert.match(css, /calendar \.day-orange a\{background:linear-gradient\(var\(--orange\),var\(--orange\)\) center\/22px 22px no-repeat/);
+  assert.match(css, /calendar \.day-olive a\{background:linear-gradient\(var\(--olive\),var\(--olive\)\) center\/22px 22px no-repeat/);
+  assert.match(css, /calendar \.day-yellow a\{background:linear-gradient\(var\(--yellow\),var\(--yellow\)\) center\/22px 22px no-repeat/);
+  const categoryColumns = css.match(/category-filters\{display:grid;grid-template-columns:minmax\(0,([\d.]+)fr\) minmax\(0,([\d.]+)fr\) minmax\(0,([\d.]+)fr\);gap:4px;width:100%/);
+  assert.ok(categoryColumns);
+  assert.ok(Number(categoryColumns[1]) > Number(categoryColumns[3]));
+  assert.match(css, /side-filter\{[^}]*width:100%;[^}]*min-height:34px;[^}]*padding:2px;font-size:10px;[^}]*white-space:nowrap/);
+  assert.doesNotMatch(css, /#category-filters\{[^}]*flex-wrap/);
 });
 
 test('event list and detail preserve one modern event URL', () => {
