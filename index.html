@@ -25,7 +25,7 @@
 </style>
 <link rel="stylesheet" href="assets/mobile-navigation.css?v=mobile-navigation-2">
 <link rel="stylesheet" href="assets/mobile-foundation.css?v=mobile-foundation-2">
-<link rel="stylesheet" href="assets/dates-mobile.css?v=dates-mobile-3">
+<link rel="stylesheet" href="assets/dates-mobile.css?v=dates-mobile-4">
 </head>
 <body>
 <div class="page">
@@ -38,10 +38,13 @@
 </main>
 <aside class="sidebar">
 <div id="dates-controls" class="dates-controls">
+<button id="dates-filter-toggle" class="dates-filter-toggle" type="button" aria-expanded="false" aria-controls="dates-filter-panel"><span id="dates-filter-toggle-label">EVENTS FILTERN</span><span class="dates-filter-toggle-icon" aria-hidden="true">▼</span></button>
+<div id="dates-filter-panel" class="dates-filter-panel">
 <div class="event-search"><label for="event-search-input">SEARCH:</label><div class="event-search-row"><input id="event-search-input" type="search" autocomplete="off" placeholder="Event, Artist, ..." aria-label="Alle Events durchsuchen"><button id="event-search-clear" type="button" aria-label="Suche löschen">×</button></div><div class="event-search-status" id="event-search-status" aria-live="polite"></div></div>
 <div class="calendar-head"><button id="prev-month" type="button">&lt;</button><button class="month" id="month-label" type="button" aria-haspopup="dialog">...</button><button id="next-month" type="button">&gt;</button></div>
 <table class="calendar" aria-label="Kalender"><thead><tr><th>MO</th><th>DI</th><th>MI</th><th>DO</th><th>FR</th><th>SA</th><th>SO</th></tr></thead><tbody id="calendar-body"></tbody></table>
 <div class="side-block" id="category-filters"><button class="side-filter orange" type="button" data-filter="orange">SATURDAY RAVE</button><button class="side-filter olive" type="button" data-filter="olive">FRIDAY CLUB</button><button class="side-filter yellow" type="button" data-filter="yellow">SPECIAL</button></div>
+</div>
 </div>
 <div class="resident-slideshow" id="resident-slideshow" hidden aria-label="Resident Slideshow"></div>
 </aside>
@@ -70,7 +73,7 @@ function renderEvents(events,msg=''){if(!events.length){document.getElementById(
 function renderDetail(e){const c=normalizeColor(e.color),img=e.imageUrl?`<img class="event-hero" src="${esc(e.imageUrl)}" alt="${esc(e.title)}">`:'',sections=(e.sections||[]).map(s=>`<div class="label">${esc(s.label||'')}</div><div class="line">${(s.items||[]).map(renderArtist).join(' ')}</div>`).join(''),desc=e.description?`<div class="event-description">${esc(e.description)}</div>`:'';document.title=`Distillery – ${e.title}`;document.getElementById('events').innerHTML=`<a class="back-link" href="${showListUrl()}">back to dates</a>${img}<section class="event event-detail"><h1 class="event-title event-detail-title ${esc(c)}"><span class="event-date">${formatEventDate(e.date)}</span> <span class="event-name">${esc(e.title)}</span></h1>${sections}${desc}</section>`}
 function filteredEventsForMonth(){const ev=getMonthEvents(allEvents,activeYear,activeMonth).sort((a,b)=>String(a.date).localeCompare(String(b.date)));return activeFilter?ev.filter(e=>normalizeColor(e.color)===activeFilter):ev}
 function renderCalendar(events){const first=new Date(activeYear,activeMonth-1,1),lastDay=new Date(activeYear,activeMonth,0).getDate(),offset=(first.getDay()+6)%7,map=new Map();events.forEach(e=>{const d=parseEventDate(e.date);if(d&&d.getFullYear()===activeYear&&d.getMonth()+1===activeMonth){const day=d.getDate();if(!map.has(day))map.set(day,[]);map.get(day).push(e)}});let rows=[],day=1;for(let w=0;w<6;w++){let cells=[];for(let wd=0;wd<7;wd++){if((w===0&&wd<offset)||day>lastDay)cells.push('<td></td>');else{const ev=map.get(day)||[],c=normalizeColor(ev[0]?.color||''),txt=String(day).padStart(2,'0');cells.push(ev.length?`<td class="event-day day-${esc(c)}" title="${esc(ev.map(e=>e.title).join(' / '))}"><a href="${eventDetailUrl(ev[0])}">${txt}</a></td>`:`<td>${txt}</td>`);day++}}rows.push(`<tr>${cells.join('')}</tr>`);if(day>lastDay)break}document.getElementById('calendar-body').innerHTML=rows.join('');document.getElementById('month-label').textContent=`${MONTHS[activeMonth-1]} ${activeYear}`}
-function renderFilterButtons(){document.querySelectorAll('[data-filter]').forEach(b=>b.classList.toggle('active',b.dataset.filter===activeFilter))}function updateSearchStatus(c=null){const s=document.getElementById('event-search-status');s.textContent=searchQuery.trim()?`${c??searchEvents(searchQuery).length} TREFFER`:''}
+function renderFilterButtons(){document.querySelectorAll('[data-filter]').forEach(b=>b.classList.toggle('active',b.dataset.filter===activeFilter))}function updateDatesFilterSummary(count=0){const label=document.getElementById('dates-filter-toggle-label');if(!label)return;label.textContent=searchQuery.trim()?`EVENTS FILTERN · ${count} TREFFER`:activeFilter?'EVENTS FILTERN · 1 AKTIV':'EVENTS FILTERN'}function updateSearchStatus(c=null){const s=document.getElementById('event-search-status'),count=c??(searchQuery.trim()?searchEvents(searchQuery).length:0);s.textContent=searchQuery.trim()?`${count} TREFFER`:'';updateDatesFilterSummary(count)}
 async function renderCurrentMonth(){const version=++renderVersion,monthKey=`${activeYear}-${String(activeMonth).padStart(2,'0')}`;try{if(searchQuery.trim()){const[matched,monthEvents]=await Promise.all([eventStore.search(searchQuery),eventStore.loadMonth(monthKey)]);if(version!==renderVersion)return;allEvents=matched;renderCalendar(monthEvents.filter(e=>e.status!=='archived'));renderEvents(matched,`Keine Veranstaltungen für „${esc(searchQuery.trim())}“ gefunden.`);updateSearchStatus(matched.length);renderFilterButtons();return}allEvents=(await eventStore.loadMonth(monthKey)).filter(e=>e.status!=='archived');if(version!==renderVersion)return;const v=filteredEventsForMonth();renderCalendar(v);renderEvents(v);renderFilterButtons();updateSearchStatus();document.title='Distillery – Events'}catch(e){if(version===renderVersion)document.getElementById('events').innerHTML=`<p class="error">Fehler: ${esc(e.message)}</p>`}}
 function setSearchQuery(v,u=true){searchQuery=String(v||'');const i=document.getElementById('event-search-input');if(i.value!==searchQuery)i.value=searchQuery;activeFilter=null;if(u)history.replaceState(null,'',showListUrl());renderCurrentMonth()}
 function changeMonth(d){const n=new Date(activeYear,activeMonth-1+d,1);activeYear=n.getFullYear();activeMonth=n.getMonth()+1;history.replaceState(null,'',showListUrl());renderCurrentMonth()}
@@ -87,6 +90,7 @@ async function boot(){try{initResidentSlideshow();await eventStore.manifest();se
 boot();
 </script>
 <script type="module" src="public/site/js/dates-mobile-layout.js?v=dates-mobile-layout-2"></script>
+<script type="module" src="public/site/js/dates-mobile-filters.js?v=dates-mobile-filters-1"></script>
 <script type="module" src="assets/site-navigation.js?v=site-navigation-5"></script>
 <script src="assets/tracking.js?v=tracking-1" defer></script>
 </body>

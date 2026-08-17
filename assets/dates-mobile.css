@@ -1,4 +1,5 @@
 .dates-title,.more-mobile{display:none}
+.dates-filter-toggle{display:none}
 .event-detail-title{margin:0}
 
 @media(max-width:820px){
@@ -6,6 +7,13 @@
   .dates-event-detail-mode .dates-title{display:none}
   .dates-title{display:block;width:max-content;max-width:100%;margin:0 0 24px;padding:1px 3px;background:#000;color:#fff;font-size:24px;font-weight:900;line-height:1.1;text-transform:uppercase}
   .dates-controls{width:100%;margin:0 0 24px}
+  .dates-filter-toggle{display:flex;width:100%;min-height:48px;align-items:center;justify-content:space-between;gap:12px;border:0;background:#000;color:#fff;padding:0 12px;font:inherit;font-size:15px;font-weight:900;line-height:1.15;text-align:left;text-transform:uppercase;cursor:pointer}
+  .dates-filter-toggle:focus-visible{outline:3px solid #000;outline-offset:2px}
+  .dates-filter-toggle-icon{flex:0 0 auto}
+  .dates-filter-toggle[aria-expanded="true"] .dates-filter-toggle-icon{transform:rotate(180deg)}
+  .dates-filter-panel{padding-top:14px}
+  .dates-filter-panel[hidden]{display:none}
+  .dates-event-detail-mode .dates-filter-toggle{display:none}
   .event-search{width:100%;margin:0 0 16px}
   .event-search label{margin-bottom:6px;color:#000;font-size:14px}
   .event-search-row{grid-template-columns:minmax(0,1fr) 48px;gap:6px}
@@ -25,9 +33,10 @@
   .calendar td{color:#707070}
   .calendar td.event-day{color:#000}
   .calendar td a{display:flex;width:100%;height:auto;min-height:44px;align-items:center;justify-content:center;line-height:1}
-  .calendar .day-orange{background:var(--orange);color:#000}
-  .calendar .day-olive{background:var(--olive);color:#000}
-  .calendar .day-yellow{background:var(--yellow);color:#000}
+  .calendar .day-orange,.calendar .day-olive,.calendar .day-yellow{background:transparent;color:#000}
+  .calendar .day-orange a{background:linear-gradient(var(--orange),var(--orange)) center/30px 30px no-repeat}
+  .calendar .day-olive a{background:linear-gradient(var(--olive),var(--olive)) center/30px 30px no-repeat}
+  .calendar .day-yellow a{background:linear-gradient(var(--yellow),var(--yellow)) center/30px 30px no-repeat}
   #category-filters{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:0}
   .side-filter{display:inline-flex;min-height:44px;max-width:100%;align-items:center;margin:0;padding:8px 10px;font-size:13px;line-height:1.1}
   .resident-slideshow{display:none!important}
