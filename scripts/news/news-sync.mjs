@@ -77,7 +77,10 @@ export function diffNewsOutput(currentFiles, generatedFiles) {
 
 export function planNewsSync({ mode, diff, existingPrNumber = null }) {
   if (!['validate-only', 'sync-pr'].includes(mode)) throw new Error(`Unsupported sync mode: ${mode}`);
-  if (mode === 'validate-only' || !diff.hasChanges) return { action: 'none', write: false };
+  if (mode === 'validate-only') return { action: 'none', write: false };
+  if (!diff.hasChanges) return existingPrNumber
+    ? { action: 'close-pr', write: true, base: SYNC_PR_BASE, branch: AUTOMATION_BRANCH, prNumber: existingPrNumber }
+    : { action: 'none', write: false };
   return {
     action: existingPrNumber ? 'update-pr' : 'create-pr',
     write: true,

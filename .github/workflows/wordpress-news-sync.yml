@@ -107,6 +107,12 @@ jobs:
           else
             gh pr create --draft --base main --head "$AUTOMATION_BRANCH" --title "Sync WordPress news" --body-file "$body_file"
           fi
-      - name: Report no changes
+      - name: Report no changes and close stale sync PR
         if: steps.sync.outputs.has_changes != 'true'
-        run: echo "No WordPress news changes detected."
+        run: |
+          echo "No WordPress news changes detected."
+          pr_number="$(gh pr list --state open --base main --head "$AUTOMATION_BRANCH" --json number --jq '.[0].number // empty')"
+          if test -n "$pr_number"; then
+            gh pr comment "$pr_number" --body "Closing stale WordPress news sync PR because the current WordPress publish state produces no changes against main."
+            gh pr close "$pr_number"
+          fi

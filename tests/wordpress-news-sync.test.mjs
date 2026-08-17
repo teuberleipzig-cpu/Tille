@@ -73,7 +73,12 @@ test('generated blob URL is rejected', () => assert.throws(() => assertNewsOutpu
 test('generated token pattern is rejected without logging it', () => assert.throws(() => assertNewsOutputContentSafe(output({ post: `token ${'ghp_' + 'a'.repeat(30)}` })), /Possible secret/));
 
 test('no changes plan performs no write', () => assert.deepEqual(planNewsSync({ mode: 'sync-pr', diff: { hasChanges: false } }), { action: 'none', write: false }));
+test('no changes with an existing automation PR selects close path', () => {
+  const plan = planNewsSync({ mode: 'sync-pr', diff: { hasChanges: false }, existingPrNumber: 42 });
+  assert.equal(plan.action, 'close-pr'); assert.equal(plan.prNumber, 42);
+});
 test('validate-only plan performs no write despite changes', () => assert.equal(planNewsSync({ mode: 'validate-only', diff: { hasChanges: true } }).write, false));
+test('validate-only does not mutate an existing PR', () => assert.deepEqual(planNewsSync({ mode: 'validate-only', diff: { hasChanges: false }, existingPrNumber: 42 }), { action: 'none', write: false }));
 test('changes target automation branch', () => assert.equal(planNewsSync({ mode: 'sync-pr', diff: { hasChanges: true } }).branch, AUTOMATION_BRANCH));
 test('existing automation PR selects update path', () => assert.equal(planNewsSync({ mode: 'sync-pr', diff: { hasChanges: true }, existingPrNumber: 42 }).action, 'update-pr'));
 test('new automation PR selects one create path', () => assert.equal(planNewsSync({ mode: 'sync-pr', diff: { hasChanges: true } }).action, 'create-pr'));
@@ -81,6 +86,20 @@ test('sync PR always targets main', () => assert.equal(planNewsSync({ mode: 'syn
 test('sync PR always remains draft', () => assert.equal(planNewsSync({ mode: 'sync-pr', diff: { hasChanges: true } }).draft, true));
 test('workflow updates an existing open automation PR', () => assert.match(workflow, /gh pr list --state open --base main --head/));
 test('automation push uses force-with-lease only', () => { assert.match(workflow, /git push --force-with-lease/); assert.doesNotMatch(workflow, /git push --force(?:\s|$)/); });
+test('stale close targets only automation branch into main', () => {
+  const block = workflow.split('- name: Report no changes and close stale sync PR')[1];
+  assert.match(block, /gh pr list --state open --base main --head "\$AUTOMATION_BRANCH"/);
+  assert.match(workflow, /AUTOMATION_BRANCH: automation\/wordpress-news-sync/);
+});
+test('stale close uses PR close and never merge', () => {
+  const block = workflow.split('- name: Report no changes and close stale sync PR')[1];
+  assert.match(block, /gh pr close/); assert.doesNotMatch(block, /gh pr merge/);
+});
+test('stale close performs no git commit', () => assert.doesNotMatch(workflow.split('- name: Report no changes and close stale sync PR')[1], /git commit/));
+test('stale close performs no git push', () => assert.doesNotMatch(workflow.split('- name: Report no changes and close stale sync PR')[1], /git push/));
+test('stale close does not delete a branch', () => assert.doesNotMatch(workflow.split('- name: Report no changes and close stale sync PR')[1], /git branch|gh api.*refs|--delete/));
+test('workflow still contains no auto merge', () => assert.doesNotMatch(workflow, /gh pr merge|enable-auto-merge/));
+test('workflow still contains no deploy', () => assert.doesNotMatch(workflow, /deploy|docker (?:build|push)|kubectl/i));
 
 test('apply removes orphaned article output', async () => {
   const root = await mkdtemp(path.join(os.tmpdir(), 'tille-sync-apply-'));
