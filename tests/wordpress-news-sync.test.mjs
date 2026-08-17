@@ -95,6 +95,14 @@ test('stale close uses PR close and never merge', () => {
   const block = workflow.split('- name: Report no changes and close stale sync PR')[1];
   assert.match(block, /gh pr close/); assert.doesNotMatch(block, /gh pr merge/);
 });
+test('stale close occurs before the optional comment', () => {
+  const block = workflow.split('- name: Report no changes and close stale sync PR')[1];
+  assert.ok(block.indexOf('gh pr close') < block.indexOf('gh pr comment'));
+});
+test('comment failure cannot prevent stale close', () => {
+  const block = workflow.split('- name: Report no changes and close stale sync PR')[1];
+  assert.match(block, /gh pr comment[^\n]+\|\| true/);
+});
 test('stale close performs no git commit', () => assert.doesNotMatch(workflow.split('- name: Report no changes and close stale sync PR')[1], /git commit/));
 test('stale close performs no git push', () => assert.doesNotMatch(workflow.split('- name: Report no changes and close stale sync PR')[1], /git push/));
 test('stale close does not delete a branch', () => assert.doesNotMatch(workflow.split('- name: Report no changes and close stale sync PR')[1], /git branch|gh api.*refs|--delete/));

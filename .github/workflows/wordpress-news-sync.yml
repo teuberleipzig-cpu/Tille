@@ -113,6 +113,6 @@ jobs:
           echo "No WordPress news changes detected."
           pr_number="$(gh pr list --state open --base main --head "$AUTOMATION_BRANCH" --json number --jq '.[0].number // empty')"
           if test -n "$pr_number"; then
-            gh pr comment "$pr_number" --body "Closing stale WordPress news sync PR because the current WordPress publish state produces no changes against main."
             gh pr close "$pr_number"
+            gh pr comment "$pr_number" --body "Closing stale WordPress news sync PR because the current WordPress publish state produces no changes against main." || true
           fi
