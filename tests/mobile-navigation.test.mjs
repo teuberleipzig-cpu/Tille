@@ -35,6 +35,7 @@ test('drawer readiness is fail-safe and initialization is idempotent', () => {
 });
 
 test('hamburger and drawer expose required accessibility controls', () => {
+  assert.match(mobile, /for \(let line = 0; line < 3; line \+= 1\) toggle\.append\(document\.createElement\('span'\)\)/);
   for (const value of ['aria-label', 'aria-expanded', 'aria-controls', 'aria-hidden', 'aria-current']) assert.match(mobile, new RegExp(value));
   assert.match(mobile, /aria-modal/);
   assert.match(mobile, /event\.key === 'Escape'/);
@@ -43,6 +44,16 @@ test('hamburger and drawer expose required accessibility controls', () => {
   assert.match(mobile, /event\.preventDefault\(\)/);
   assert.match(mobile, /close\.focus\(\)/);
   assert.match(mobile, /toggle\.focus\(\)/);
+});
+
+test('hamburger morphs its three existing lines into the open D mark', () => {
+  assert.match(css, /site-mobile-toggle span\{[^}]*position:absolute;[^}]*width:21px;height:2px;[^}]*transition:[^}]*\.2s ease/);
+  assert.match(css, /site-mobile-toggle span:nth-child\(1\)\{transform:translateY\(-6px\)\}/);
+  assert.match(css, /site-mobile-toggle span:nth-child\(3\)\{transform:translateY\(6px\)\}/);
+  assert.match(css, /is-open \.site-mobile-toggle span:nth-child\(1\)\{[^}]*transform:rotate\(90deg\)/);
+  assert.match(css, /is-open \.site-mobile-toggle span:nth-child\(2\)\{[^}]*transform:rotate\(28deg\)/);
+  assert.match(css, /is-open \.site-mobile-toggle span:nth-child\(3\)\{[^}]*transform:rotate\(-28deg\)/);
+  assert.match(css, /prefers-reduced-motion:reduce\)\{\.site-mobile-drawer,\.site-mobile-toggle span\{transition:none\}/);
 });
 
 test('mobile navigation meets touch, safe-area and reduced-motion contracts', () => {
@@ -75,7 +86,7 @@ test('all public navigation pages use consistent cache versions', async () => {
     const html = await readFile(new URL(name, root), 'utf8');
     assert.match(html, /site-navigation\.js\?v=site-navigation-5/);
     assert.doesNotMatch(html, /site-navigation\.js\?v=site-navigation-[1-4]/);
-    assert.match(html, /mobile-navigation\.css\?v=mobile-navigation-2/);
+    assert.match(html, /mobile-navigation\.css\?v=mobile-navigation-3/);
     assert.match(html, /mobile-foundation\.css\?v=mobile-foundation-2/);
     assert.doesNotMatch(html, /mobile-foundation\.css\?v=mobile-foundation-1/);
   }
