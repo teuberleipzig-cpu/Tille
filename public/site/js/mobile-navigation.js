@@ -38,6 +38,9 @@ export function initialiseMobileNavigation(config, activePageId, nav) {
   const drawer = document.createElement('aside');
   drawer.className = 'site-mobile-drawer';
   drawer.id = 'site-mobile-drawer';
+  drawer.setAttribute('role', 'dialog');
+  drawer.setAttribute('aria-modal', 'false');
+  drawer.setAttribute('aria-label', 'Mobile Hauptnavigation');
   drawer.setAttribute('aria-hidden', 'true');
 
   const close = document.createElement('button');
@@ -66,9 +69,12 @@ export function initialiseMobileNavigation(config, activePageId, nav) {
     toggle.setAttribute('aria-expanded', String(open));
     toggle.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
     drawer.setAttribute('aria-hidden', String(!open));
+    drawer.setAttribute('aria-modal', String(open));
     if (open) close.focus();
     else if (returnFocus) toggle.focus();
   };
+
+  const focusableElements = () => [...drawer.querySelectorAll('a[href],button:not([disabled]),[tabindex]:not([tabindex="-1"])')];
 
   const controller = new AbortController();
   const listenerOptions = { signal: controller.signal };
@@ -76,7 +82,26 @@ export function initialiseMobileNavigation(config, activePageId, nav) {
   close.addEventListener('click', () => setOpen(false, true), listenerOptions);
   overlay.addEventListener('click', () => setOpen(false, true), listenerOptions);
   document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') setOpen(false, true);
+    if (toggle.getAttribute('aria-expanded') !== 'true') return;
+    if (event.key === 'Escape') {
+      setOpen(false, true);
+      return;
+    }
+    if (event.key !== 'Tab') return;
+    const focusable = focusableElements();
+    const first = focusable[0];
+    const last = focusable.at(-1);
+    if (!first) {
+      event.preventDefault();
+      return;
+    }
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
   }, listenerOptions);
   const media = matchMedia(MOBILE_QUERY);
   media.addEventListener('change', event => {
