@@ -58,7 +58,10 @@ test('mobile navigation meets touch, safe-area and reduced-motion contracts', ()
 });
 
 test('mobile foundation covers forms, residents, gallery and focus visibility', () => {
-  assert.match(foundation, /:focus-visible/);
+  assert.match(foundation, /:focus-visible[^}]+outline:3px solid #000;outline-offset:3px/);
+  assert.match(css, /site-mobile-toggle:focus-visible,.site-mobile-close:focus-visible,.site-mobile-links a:focus-visible\{outline:3px solid #e49a78/);
+  assert.match(foundation, /lightbox button:focus-visible\{outline-color:#e49a78\}/);
+  assert.doesNotMatch(`${foundation}\n${css}`, /:focus(?!-visible)/);
   assert.match(foundation, /feedback-form input,.feedback-form select\{min-height:48px;font-size:16px\}/);
   assert.match(foundation, /feedback-form textarea\{font-size:16px;line-height:1\.45\}/);
   assert.match(foundation, /submit-button\{min-height:52px;font-size:16px\}/);
@@ -73,6 +76,7 @@ test('all public navigation pages use consistent cache versions', async () => {
     assert.match(html, /site-navigation\.js\?v=site-navigation-5/);
     assert.doesNotMatch(html, /site-navigation\.js\?v=site-navigation-[1-4]/);
     assert.match(html, /mobile-navigation\.css\?v=mobile-navigation-2/);
-    assert.match(html, /mobile-foundation\.css\?v=mobile-foundation-1/);
+    assert.match(html, /mobile-foundation\.css\?v=mobile-foundation-2/);
+    assert.doesNotMatch(html, /mobile-foundation\.css\?v=mobile-foundation-1/);
   }
 });

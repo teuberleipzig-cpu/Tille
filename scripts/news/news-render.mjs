@@ -32,7 +32,7 @@ function shell({ title, description, canonical, content, depth = 0, ogImage = FA
   <meta name="twitter:image" content="${escapeHtml(ogImage)}">
   <link rel="stylesheet" href="assets/news.css?v=news-foundation-1">
   <link rel="stylesheet" href="assets/mobile-navigation.css?v=mobile-navigation-2">
-  <link rel="stylesheet" href="assets/mobile-foundation.css?v=mobile-foundation-1">
+  <link rel="stylesheet" href="assets/mobile-foundation.css?v=mobile-foundation-2">
 </head>
 <body data-site-page="news">
   <div class="page">
