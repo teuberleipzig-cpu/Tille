@@ -17,9 +17,10 @@ export function initialiseDatesMobileFilters({ documentRef = document, matchMedi
   };
 
   const closeMobilePanel = () => {
-    if (panel.contains(documentRef.activeElement)) toggle.focus();
+    const shouldRestoreFocus = panel.contains(documentRef.activeElement);
     mobileExpanded = false;
     applyState();
+    if (shouldRestoreFocus) toggle.focus();
   };
 
   toggle.addEventListener('click', () => {

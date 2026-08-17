@@ -32,7 +32,7 @@ function filterFixture(matches) {
     hidden: false,
     addEventListener(type, handler) { assert.equal(type, 'click'); this.handler = handler; },
     setAttribute(name, value) { attributes.set(name, value); },
-    focus() { activeElement = this; }
+    focus() { if (!this.hidden) activeElement = this; }
   };
   const documentRef = {
     get activeElement() { return activeElement; },
@@ -87,6 +87,18 @@ test('desktop Dates filters stay visible and mobile re-entry resets closed', () 
   assert.equal(fixture.panel.hidden, false);
 });
 
+test('desktop to mobile resize restores panel focus after toggle becomes visible', () => {
+  const fixture = filterFixture(false);
+  initialiseDatesMobileFilters({ documentRef: fixture.documentRef, matchMediaRef: () => fixture.media });
+  fixture.setActive(fixture.panelChild);
+  fixture.media.matches = true;
+  fixture.media.handler();
+  assert.equal(fixture.toggle.hidden, false);
+  assert.equal(fixture.panel.hidden, true);
+  assert.equal(fixture.attributes.get('aria-expanded'), 'false');
+  assert.equal(fixture.documentRef.activeElement, fixture.toggle);
+});
+
 test('mobile placement moves and restores the same controls element', () => {
   const fixture = layoutFixture(true);
   assert.equal(initialiseDatesMobileLayout({ documentRef: fixture.documentRef, matchMediaRef: () => fixture.media, locationRef: { search: '' } }), true);
@@ -114,8 +126,8 @@ test('desktop event detail keeps controls in the Sidebar', () => {
 });
 
 test('Dates mobile stylesheet and cache references are scoped', () => {
-  assert.match(html, /dates-mobile\.css\?v=dates-mobile-4/);
-  assert.match(html, /dates-mobile-filters\.js\?v=dates-mobile-filters-1/);
+  assert.match(html, /dates-mobile\.css\?v=dates-mobile-5/);
+  assert.match(html, /dates-mobile-filters\.js\?v=dates-mobile-filters-2/);
   assert.match(html, /dates-mobile-layout\.js\?v=dates-mobile-layout-2/);
   assert.match(css, /@media\(max-width:820px\)/);
   assert.match(css, /resident-slideshow\{display:none!important\}/);
@@ -127,6 +139,12 @@ test('filter toggle is accessible and summary uses the existing app state', () =
   assert.doesNotMatch(filters, /localStorage|sessionStorage|pushState|replaceState|MutationObserver|setInterval/);
   assert.match(css, /dates-filter-toggle\{display:flex;[^}]*min-height:48px/);
   assert.match(css, /dates-filter-panel\[hidden\]\{display:none\}/);
+});
+
+test('mobile CSS guarantees default closed before filter JavaScript runs', () => {
+  const mobileCss = css.slice(css.indexOf('@media(max-width:820px)'), css.indexOf('@media(max-width:320px)'));
+  assert.match(mobileCss, /dates-filter-toggle\[aria-expanded="false"\] \+ \.dates-filter-panel\{display:none\}/);
+  assert.doesNotMatch(mobileCss, /dates-filter-toggle\[aria-expanded="true"\] \+ \.dates-filter-panel\{[^}]*display:none/);
 });
 
 test('search and month navigation meet mobile touch contracts', () => {

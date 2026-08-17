@@ -12,6 +12,7 @@
   .dates-filter-toggle-icon{flex:0 0 auto}
   .dates-filter-toggle[aria-expanded="true"] .dates-filter-toggle-icon{transform:rotate(180deg)}
   .dates-filter-panel{padding-top:14px}
+  .dates-filter-toggle[aria-expanded="false"] + .dates-filter-panel{display:none}
   .dates-filter-panel[hidden]{display:none}
   .dates-event-detail-mode .dates-filter-toggle{display:none}
   .event-search{width:100%;margin:0 0 16px}
