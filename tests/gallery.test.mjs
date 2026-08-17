@@ -47,7 +47,7 @@ test('public and admin Gallery shells expose required controls', async () => {
   const admin = await readFile(new URL('../public/admin/js/features/gallery/gallery.js', import.meta.url), 'utf8');
   const save = await readFile(new URL('../public/admin/js/features/gallery/gallery-save.js', import.meta.url), 'utf8');
   assert.match(html, /data-lightbox-prev/); assert.match(html, /data-lightbox-next/); assert.match(html, /assets\/site-navigation\.js/);
-  assert.match(html, /gallery\.css\?v=gallery-3/);
+  assert.match(html, /gallery\.css\?v=gallery-4/);
   for (const shellRule of [/--grey:#d9d9d9/, /\.page\{width:800px;[^}]*grid-template-columns:606px 194px/, /\.main\{[^}]*padding:18px 58px 14px 30px/, /\.logo\{width:280px;height:78px;margin:0 0 8px -35px/, /\.nav\{width:520px;[^}]*font-size:13px/, /\.nav a\{[^}]*background:var\(--grey\)/, /\.nav a:hover,\.nav a\.active\{color:#fff;background:#000\}/]) assert.match(css, shellRule);
   assert.match(page, /Escape/); assert.match(page, /ArrowLeft/); assert.match(page, /ArrowRight/); assert.match(page, /Gallery konnte nicht geladen werden/);
   assert.match(admin, /multiple accept="image\/\*"/); assert.match(admin, /getTextFile\(DATA_PATH\)/); assert.match(save, /fresh\.sha !== loadedSha/);
