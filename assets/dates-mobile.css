@@ -1,0 +1,56 @@
+.dates-title,.more-mobile{display:none}
+.event-detail-title{margin:0}
+
+@media(max-width:820px){
+  html.dates-mobile-layout-ready .sidebar{display:none}
+  .dates-event-detail-mode .dates-title{display:none}
+  .dates-title{display:block;width:max-content;max-width:100%;margin:0 0 24px;padding:1px 3px;background:#000;color:#fff;font-size:24px;font-weight:900;line-height:1.1;text-transform:uppercase}
+  .dates-controls{width:100%;margin:0 0 30px}
+  .event-search{width:100%;margin:0 0 18px}
+  .event-search label{margin-bottom:6px;color:#000;font-size:14px}
+  .event-search-row{grid-template-columns:minmax(0,1fr) 48px;gap:6px}
+  .event-search input{min-height:48px;border:2px solid #000;padding:0 12px;font-size:16px}
+  .event-search input:focus{outline:0}
+  .event-search input:focus-visible{outline:3px solid #000;outline-offset:2px}
+  .event-search button{width:48px;height:48px;font-size:24px;line-height:48px}
+  .event-search-status{min-height:19px;margin-top:5px;color:#000;font-size:13px;line-height:1.45}
+  .calendar-head{width:100%;grid-template-columns:48px minmax(0,1fr) 48px;margin-bottom:8px;font-size:16px}
+  .calendar-head button{height:48px;line-height:48px;font-size:16px}
+  .calendar-head .month{min-width:0;min-height:48px;margin:0 6px;font-size:16px;line-height:1.15;text-overflow:ellipsis}
+  .calendar{width:100%;table-layout:fixed;margin-bottom:18px;font-size:16px}
+  .calendar th,.calendar td{width:auto;height:44px;font-size:16px}
+  .calendar th{font-size:13px;font-weight:900}
+  .calendar td a{display:flex;width:100%;height:auto;min-height:44px;align-items:center;justify-content:center;line-height:1}
+  #category-filters{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:0}
+  .side-filter{display:inline-flex;min-height:46px;max-width:100%;align-items:center;margin:0;padding:10px 12px;font-size:14px;line-height:1.1}
+  .resident-slideshow{display:none!important}
+  #events{min-width:0}
+  .event{max-width:100%;margin:0 0 28px;padding-bottom:23px;border-bottom:2px solid #000}
+  .event-title{display:block;padding:0;background:transparent!important;font-size:22px;line-height:1.05}
+  .event-title a{display:block}
+  .event-date{display:block;margin-bottom:5px;font-size:14px;font-weight:900;line-height:1.15}
+  .event-name{display:inline;padding:1px 4px;font-size:22px;font-weight:900;line-height:1.05;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  .event-title.olive .event-name{background:var(--olive)}
+  .event-title.orange .event-name{background:var(--orange)}
+  .event-title.yellow .event-name{background:var(--yellow)}
+  .label{margin-top:10px;font-size:14px;font-weight:900;text-transform:uppercase}
+  .line{font-size:15px;line-height:1.35}
+  .line strong{font-size:18px;line-height:1.2}
+  .more{display:inline-flex;min-height:46px;align-items:center;margin-top:12px;padding:0 14px;font-size:15px;font-weight:900;text-transform:uppercase}
+  .more-desktop{display:none}
+  .more-mobile{display:inline}
+  .back-link{display:inline-flex;min-height:44px;align-items:center;margin-bottom:14px;padding:0 10px;font-size:14px;font-weight:900;text-transform:uppercase}
+  .event-hero{width:100%;aspect-ratio:16/9;margin-bottom:18px}
+  .event-detail .event-name{font-size:24px}
+  .event-description{max-width:100%;margin-top:24px;font-size:16px;line-height:1.5}
+  .month-picker{width:min(320px,calc(100vw - 32px));max-height:calc(100vh - 32px);overflow:auto;padding:14px}
+  .month-picker label{font-size:14px}
+  .month-picker select,.month-picker input{min-height:48px;padding:9px 10px;font-size:16px}
+  .month-picker-actions{flex-wrap:wrap}
+  .month-picker button{min-height:46px;padding:8px 12px;font-size:14px}
+}
+
+@media(max-width:320px){
+  .calendar-head .month{margin-right:4px;margin-left:4px;font-size:15px}
+  .month-picker-actions button{flex:1 1 auto}
+}
