@@ -1,0 +1,142 @@
+name: FileMaker event intake
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        required: true
+        type: choice
+        options: [validate-only, sync-pr]
+      operation:
+        required: true
+        type: choice
+        options: [upsert, remove]
+      event_json:
+        required: true
+        type: string
+
+concurrency:
+  group: filemaker-event-intake
+  cancel-in-progress: false
+
+jobs:
+  validate-only:
+    if: inputs.mode == 'validate-only'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      FILEMAKER_EVENT_JSON: ${{ inputs.event_json }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node --test tests/*.test.mjs
+      - name: Validate FileMaker event
+        run: node scripts/filemaker/prepare-filemaker-event.mjs --mode validate-only --operation "${{ inputs.operation }}" --workspace "$GITHUB_WORKSPACE"
+
+  sync-pr:
+    if: inputs.mode == 'sync-pr'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    env:
+      FILEMAKER_EVENT_JSON: ${{ inputs.event_json }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Capture base SHA
+        id: base
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - run: node --test tests/*.test.mjs
+      - name: Prepare FileMaker event storage
+        id: intake
+        run: node scripts/filemaker/prepare-filemaker-event.mjs --mode sync-pr --operation "${{ inputs.operation }}" --workspace "$GITHUB_WORKSPACE"
+      - name: Enforce single FileMaker PR
+        id: pull
+        env:
+          EVENT_BRANCH: ${{ steps.intake.outputs.branch }}
+        run: |
+          pulls="$(gh pr list --state open --base main --limit 100 --json number,headRefName)"
+          count="$(jq '[.[] | select(.headRefName | startswith("automation/filemaker-event/"))] | length' <<<"$pulls")"
+          test "$count" -le 1 || (echo "More than one FileMaker event intake PR is open. Close duplicates before rerunning." >&2 && exit 1)
+          other="$(jq -r --arg branch "$EVENT_BRANCH" '[.[] | select(.headRefName | startswith("automation/filemaker-event/")) | select(.headRefName != $branch)][0] | if . == null then empty else @base64 end' <<<"$pulls")"
+          if test -n "$other"; then
+            number="$(base64 -d <<<"$other" | jq -r .number)"
+            head="$(base64 -d <<<"$other" | jq -r .headRefName)"
+            echo "Another FileMaker event intake PR is already open: PR #$number for ${head#automation/filemaker-event/}. Merge or close it before sending another FileMaker event." >&2
+            exit 1
+          fi
+          number="$(jq -r --arg branch "$EVENT_BRANCH" '[.[] | select(.headRefName == $branch)][0].number // empty' <<<"$pulls")"
+          echo "number=$number" >> "$GITHUB_OUTPUT"
+      - name: Verify main has not moved
+        env:
+          BASE_SHA: ${{ steps.base.outputs.sha }}
+        run: |
+          git fetch origin main
+          test "$BASE_SHA" = "$(git rev-parse origin/main)" || (echo "main moved during FileMaker intake; rerun required." >&2 && exit 1)
+      - name: Commit controlled event storage
+        if: steps.intake.outputs.has_changes == 'true'
+        env:
+          EVENT_BRANCH: ${{ steps.intake.outputs.branch }}
+        run: |
+          git fetch origin "+refs/heads/$EVENT_BRANCH:refs/remotes/origin/$EVENT_BRANCH" || true
+          git switch -C "$EVENT_BRANCH"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- public/events/data
+          unexpected="$(git diff --cached --name-only | grep -Ev '^public/events/data/(manifest|meta|event-index|search-index)\.json$|^public/events/data/months/[0-9]{4}-(0[1-9]|1[0-2])\.json$' || true)"
+          test -z "$unexpected" || (echo "Unexpected staged paths:" >&2 && echo "$unexpected" >&2 && exit 1)
+          git commit -m "chore: apply filemaker event intake"
+          git push --force-with-lease origin "HEAD:$EVENT_BRANCH"
+      - name: Create or update Draft PR
+        if: steps.intake.outputs.has_changes == 'true'
+        env:
+          PR_NUMBER: ${{ steps.pull.outputs.number }}
+          EVENT_BRANCH: ${{ steps.intake.outputs.branch }}
+          EVENT_ID: ${{ steps.intake.outputs.event_id }}
+          EVENT_DATE: ${{ steps.intake.outputs.date }}
+          EVENT_TITLE: ${{ steps.intake.outputs.title }}
+          OPERATION: ${{ steps.intake.outputs.operation }}
+          BASE_SHA: ${{ steps.base.outputs.sha }}
+          BEFORE_MONTH: ${{ steps.intake.outputs.before_month }}
+          AFTER_MONTH: ${{ steps.intake.outputs.after_month }}
+          CHANGED_FILES: ${{ steps.intake.outputs.changed_files }}
+        run: |
+          body="$RUNNER_TEMP/filemaker-event-pr.md"
+          {
+            echo "## Source"; echo "FileMaker Event Intake V1"
+            echo; echo "## Operation"; echo "$OPERATION"
+            echo; echo "## Event"; echo "- ID: $EVENT_ID"; echo "- Date: ${EVENT_DATE:-n/a}"; echo "- Title: ${EVENT_TITLE:-n/a}"
+            echo; echo "## Base"; echo "$BASE_SHA"
+            echo; echo "## Storage"; echo "- Previous month: ${BEFORE_MONTH:-none}"; echo "- Result month: ${AFTER_MONTH:-none}"; echo "- Changed artifacts: $CHANGED_FILES"
+            echo; echo "## Validation"; echo "PASS"
+            echo; echo "## Safety"; echo "- FileMaker-controlled fm-* ID"; echo "- No auto-merge"; echo "- No deployment"
+          } > "$body"
+          title="FileMaker event: $OPERATION ${EVENT_DATE:-n/a} ${EVENT_TITLE:-$EVENT_ID}"
+          if test -n "$PR_NUMBER"; then
+            gh pr edit "$PR_NUMBER" --title "$title" --body-file "$body"
+            test "$(gh pr view "$PR_NUMBER" --json isDraft --jq .isDraft)" = true || gh pr ready "$PR_NUMBER" --undo
+          else
+            gh pr create --draft --base main --head "$EVENT_BRANCH" --title "$title" --body-file "$body"
+          fi
+      - name: Close stale same-event PR
+        if: steps.intake.outputs.has_changes != 'true' && steps.pull.outputs.number != ''
+        env:
+          PR_NUMBER: ${{ steps.pull.outputs.number }}
+        run: |
+          gh pr close "$PR_NUMBER"
+          gh pr comment "$PR_NUMBER" --body "Closing stale FileMaker event intake PR because the requested operation produces no changes against main." || true
+      - name: Report no changes
+        if: steps.intake.outputs.has_changes != 'true'
+        run: echo "No FileMaker event changes detected."
