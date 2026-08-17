@@ -126,11 +126,15 @@ test('desktop event detail keeps controls in the Sidebar', () => {
 });
 
 test('Dates mobile stylesheet and cache references are scoped', () => {
-  assert.match(html, /dates-mobile\.css\?v=dates-mobile-6/);
+  assert.match(html, /dates-mobile\.css\?v=dates-mobile-7/);
   assert.match(html, /dates-mobile-filters\.js\?v=dates-mobile-filters-2/);
   assert.match(html, /dates-mobile-layout\.js\?v=dates-mobile-layout-2/);
   assert.match(css, /@media\(max-width:820px\)/);
   assert.match(css, /resident-slideshow\{display:none!important\}/);
+});
+
+test('collapsed mobile Dates filters keep a compact 20px event gap', () => {
+  assert.match(css, /dates-controls\{width:100%;margin:0 0 20px\}/);
 });
 
 test('filter toggle is accessible and summary uses the existing app state', () => {
