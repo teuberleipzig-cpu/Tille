@@ -103,9 +103,23 @@ Alle Buttons rufen das gemeinsame Script **Website – Event API** mit diesem Sc
 
 ## Response und Fehler
 
-Ein erfolgreicher Workflow-Dispatch liefert üblicherweise HTTP 204 ohne Run-ID im Body. Deshalb darf FileMaker nicht behaupten, der Build sei bereits erfolgreich; der Lauf wird in GitHub Actions über Repository/Workflow und Zeitpunkt geprüft. Falls GitHub künftig `workflow_run_id` oder `html_url` liefert, mit `JSONGetElement` nach `WebsiteLastRunID`/`WebsiteLastRunURL` übernehmen.
+Mit der in der Vorlage verwendeten GitHub REST API Version `2026-03-10` erwarten wir bei erfolgreichem **Create a workflow dispatch event** HTTP 200 mit einer Run-Response:
 
-Nach **Aus URL einfügen** immer `Get ( LastError )` und `Get ( LastErrorDetail )` prüfen. Fehler in `WebsiteLastError` speichern und keine Erfolgsmeldung anzeigen. `WebsiteLastSentAt` erst nach erfolgreichem HTTP-Dispatch setzen.
+Referenz: [GitHub REST API – Create a workflow dispatch event](https://docs.github.com/en/rest/actions/workflows?apiVersion=2026-03-10#create-a-workflow-dispatch-event).
+
+```json
+{
+  "workflow_run_id": 123456789,
+  "run_url": "https://api.github.com/repos/teuberleipzig-cpu/Tille/actions/runs/123456789",
+  "html_url": "https://github.com/teuberleipzig-cpu/Tille/actions/runs/123456789"
+}
+```
+
+FileMaker speichert mindestens `workflow_run_id` in `WebsiteLastRunID` und bevorzugt `html_url` in `WebsiteLastRunURL`, damit der Lauf direkt geöffnet werden kann. Die Response muss mindestens eine Run-ID oder HTML-URL enthalten. Fehlen beide trotz erfolgreichem HTTP-Aufruf, wird `WebsiteLastError` gesetzt und keine Erfolgsmeldung angezeigt.
+
+Direkt nach **Aus URL einfügen** erfasst ein einzelner `JSONSetElement`-Schritt `Get ( LastError )` und `Get ( LastErrorDetail )`; dazwischen darf kein anderer Scriptschritt liegen. Fehler werden in `WebsiteLastError` gespeichert. Nach validierter Run-Response setzt FileMaker `WebsiteLastRunID`, `WebsiteLastRunURL` und `WebsiteLastSentAt`, leert `WebsiteLastError` und meldet ausschließlich: **GitHub-Workflow wurde gestartet.** Das Ergebnis ist anschließend im verlinkten GitHub-Actions-Lauf zu prüfen.
+
+Wird eine neue `WebsiteEventID` per `Get ( UUID )` erzeugt, muss FileMaker den Datensatz vor dem Netzwerkaufruf mit **Commit Records/Requests** speichern und den Commit-Fehler unmittelbar prüfen. Bei einem Commit-Fehler wird das Script ohne Dispatch beendet. Dadurch bleibt dieselbe ID beim Retry erhalten und eine bereits gesendete ID kann nicht durch Verwerfen eines uncommitteten Datensatzes verloren gehen.
 
 ## Meeting Runbook – First Connection
 

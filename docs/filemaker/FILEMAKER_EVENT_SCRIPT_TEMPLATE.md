@@ -22,6 +22,22 @@ Set Variable [ $operation ; Value: GetValue ( $parts ; 2 ) ]
 
 If [ IsEmpty ( Events::WebsiteEventID ) ]
   Set Field [ Events::WebsiteEventID ; Get ( UUID ) ]
+  Commit Records/Requests [ With dialog: Off ]
+  Set Variable [ $commitErrorSnapshot ; Value:
+    JSONSetElement (
+      "{}" ;
+      [ "code" ; Get ( LastError ) ; JSONNumber ] ;
+      [ "detail" ; Get ( LastErrorDetail ) ; JSONString ]
+    )
+  ]
+  If [ JSONGetElement ( $commitErrorSnapshot ; "code" ) ≠ 0 ]
+    Set Field [ Events::WebsiteLastError ;
+      "WebsiteEventID konnte nicht gespeichert werden: " &
+      JSONGetElement ( $commitErrorSnapshot ; "detail" )
+    ]
+    Show Custom Dialog [ "Website API Fehler" ; Events::WebsiteLastError ]
+    Exit Script [ Text Result: "error" ]
+  End If
 End If
 
 Set Variable [ $eventID ; Value: "fm-" & Lower ( Events::WebsiteEventID ) ]
@@ -74,14 +90,21 @@ Set Variable [ $curl ; Value:
   "--header " & Quote ( "Authorization: Bearer " & Settings::Website_API_Token ) & " " &
   "--header " & Quote ( "X-GitHub-Api-Version: 2026-03-10" ) & " " &
   "--header " & Quote ( "Content-Type: application/json" ) & " " &
-  "--data @$requestJSON --show-error"
+  "--data @$requestJSON --show-error --max-time 30"
 ]
 
-Insert from URL [ Select ; With dialog: Off ; Target: $response ;
+Insert from URL [ Select ; With dialog: Off ; Verify SSL Certificates ; Target: $response ;
   Settings::Website_API_URL ; cURL options: $curl ]
 
-Set Variable [ $lastError ; Value: Get ( LastError ) ]
-Set Variable [ $lastErrorDetail ; Value: Get ( LastErrorDetail ) ]
+Set Variable [ $errorSnapshot ; Value:
+  JSONSetElement (
+    "{}" ;
+    [ "code" ; Get ( LastError ) ; JSONNumber ] ;
+    [ "detail" ; Get ( LastErrorDetail ) ; JSONString ]
+  )
+]
+Set Variable [ $lastError ; Value: JSONGetElement ( $errorSnapshot ; "code" ) ]
+Set Variable [ $lastErrorDetail ; Value: JSONGetElement ( $errorSnapshot ; "detail" ) ]
 
 If [ $lastError ≠ 0 ]
   Set Field [ Events::WebsiteLastError ; $lastError & ": " & $lastErrorDetail ]
@@ -89,14 +112,27 @@ If [ $lastError ≠ 0 ]
   Exit Script [ Text Result: "error" ]
 End If
 
-Set Field [ Events::WebsiteLastError ; "" ]
+Set Variable [ $workflowRunID ; Value: JSONGetElement ( $response ; "workflow_run_id" ) ]
+Set Variable [ $workflowRunURL ; Value: JSONGetElement ( $response ; "html_url" ) ]
+If [ IsEmpty ( $workflowRunID ) and IsEmpty ( $workflowRunURL ) ]
+  Set Field [ Events::WebsiteLastError ;
+    "GitHub hat den HTTP-Aufruf angenommen, aber keine erwartete Workflow-Run-Response geliefert."
+  ]
+  Show Custom Dialog [ "Website API Fehler" ; Events::WebsiteLastError ]
+  Exit Script [ Text Result: "error" ]
+End If
+
+Set Field [ Events::WebsiteLastRunID ; $workflowRunID ]
+Set Field [ Events::WebsiteLastRunURL ; $workflowRunURL ]
 Set Field [ Events::WebsiteLastSentAt ; Get ( CurrentTimestamp ) ]
-Set Field [ Events::WebsiteLastRunID ; JSONGetElement ( $response ; "workflow_run_id" ) ]
-Set Field [ Events::WebsiteLastRunURL ; JSONGetElement ( $response ; "html_url" ) ]
-Show Custom Dialog [ "Dispatch angenommen" ; "GitHub Actions jetzt öffnen und den Lauf prüfen." ]
+Set Field [ Events::WebsiteLastError ; "" ]
+Show Custom Dialog [ "GitHub-Workflow wurde gestartet." ;
+  "Der Workflow läuft jetzt. Das Ergebnis anschließend in GitHub Actions prüfen." &
+  If ( IsEmpty ( $workflowRunURL ) ; "" ; "¶¶Run in GitHub Actions öffnen: " & $workflowRunURL )
+]
 ```
 
-`--data @$requestJSON` übergibt die FileMaker-Variable als Request-Body. SSL-Verifikation bleibt aktiv; keine Option zum Abschalten der Zertifikatsprüfung verwenden.
+`--data @$requestJSON` übergibt die FileMaker-Variable als Request-Body. **Verify SSL Certificates / SSL-Zertifikate verifizieren** ist im Insert-Schritt explizit aktiv; keine Option zum Abschalten der Zertifikatsprüfung verwenden. `--max-time 30` begrenzt den Netzwerkaufruf für das Meeting auf 30 Sekunden.
 
 ## Erweiterte Sections
 

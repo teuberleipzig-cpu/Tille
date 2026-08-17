@@ -8,6 +8,8 @@ import { applyFileMakerOperation, MAX_PAYLOAD_BYTES, normalizeFileMakerId, parse
 import { FILEMAKER_BRANCH_PREFIX, applyEventStorage, assertAllowedEventOutputPaths, diffEventStorage, fileMakerBranch, isAllowedEventOutputPath, loadEventDocumentFromWorkspace, planFileMakerPullRequest, prepareFileMakerEvent } from '../scripts/filemaker/filemaker-event-intake.mjs';
 
 const workflow = await readFile(new URL('../.github/workflows/filemaker-event-intake.yml', import.meta.url), 'utf8');
+const meetingDocs = await readFile(new URL('../docs/FILEMAKER_EVENT_INTAKE.md', import.meta.url), 'utf8');
+const scriptTemplate = await readFile(new URL('../docs/filemaker/FILEMAKER_EVENT_SCRIPT_TEMPLATE.md', import.meta.url), 'utf8');
 const fixture = JSON.parse(await readFile(new URL('./fixtures/filemaker-event.json', import.meta.url), 'utf8'));
 const ID = fixture.id, ID2 = 'fm-11111111-2222-3333-4444-555555555555';
 const baseDocument = () => ({ meta: { keep: true }, events: [
@@ -148,3 +150,27 @@ test('invalid month rejected', () => assert.equal(isAllowedEventOutputPath('publ
 test('storage diff detects added file', () => assert.equal(diffEventStorage(new Map(), new Map([['public/events/data/manifest.json', 'x']])).hasChanges, true));
 test('storage diff detects unchanged files', () => assert.equal(diffEventStorage(new Map([['public/events/data/manifest.json', 'x']]), new Map([['public/events/data/manifest.json', 'x']])).hasChanges, false));
 test('storage diff ignores checkout line endings', () => assert.equal(diffEventStorage(new Map([['public/events/data/manifest.json', 'x\r\n']]), new Map([['public/events/data/manifest.json', 'x\n']])).hasChanges, false));
+
+test('script template explicitly verifies SSL certificates', () => assert.match(scriptTemplate, /Insert from URL \[[^\]]*Verify SSL Certificates/));
+test('error snapshot occurs immediately after Insert from URL', () => assert.match(scriptTemplate, /Insert from URL \[[\s\S]*?cURL options: \$curl \]\n\nSet Variable \[ \$errorSnapshot/));
+test('no variable step exists between Insert from URL and error snapshot', () => {
+  const between = scriptTemplate.slice(scriptTemplate.indexOf('Insert from URL'), scriptTemplate.indexOf('Set Variable [ $errorSnapshot'));
+  assert.doesNotMatch(between, /Set Variable/);
+});
+test('UUID creation is committed before dispatch', () => {
+  const setId = scriptTemplate.indexOf('Set Field [ Events::WebsiteEventID');
+  const commit = scriptTemplate.indexOf('Commit Records/Requests', setId);
+  const dispatch = scriptTemplate.indexOf('Insert from URL');
+  assert.ok(setId >= 0 && setId < commit && commit < dispatch);
+});
+test('failed UUID commit exits before dispatch', () => {
+  const commit = scriptTemplate.indexOf('Commit Records/Requests');
+  const exit = scriptTemplate.indexOf('Exit Script [ Text Result: "error" ]', commit);
+  assert.ok(commit >= 0 && commit < exit && exit < scriptTemplate.indexOf('Insert from URL'));
+});
+test('API version remains 2026-03-10', () => assert.match(scriptTemplate, /X-GitHub-Api-Version: 2026-03-10/));
+test('meeting docs describe current HTTP 200 response', () => assert.match(meetingDocs, /HTTP 200/));
+test('workflow run id is documented and stored', () => { assert.match(meetingDocs, /workflow_run_id/); assert.match(scriptTemplate, /WebsiteLastRunID/); });
+test('HTML run URL is documented and stored', () => { assert.match(meetingDocs, /html_url/); assert.match(scriptTemplate, /WebsiteLastRunURL/); });
+test('outdated HTTP 204 without run id wording is absent', () => assert.doesNotMatch(meetingDocs, /HTTP 204 ohne Run-ID/));
+test('response is validated before success dialog', () => assert.ok(scriptTemplate.indexOf('IsEmpty ( $workflowRunID )') < scriptTemplate.indexOf('GitHub-Workflow wurde gestartet.')));
