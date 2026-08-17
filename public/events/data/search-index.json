@@ -10801,6 +10801,13 @@
       "date": "2026-09-12",
       "title": "CSV Test Night",
       "haystack": "csv test night  https://example.com up: test artist live https://example.com/artist second artist dj set "
+    },
+    {
+      "id": "fm-2f98f1a8-6dd9-4bc2-9f70-9fb80dd90df1",
+      "month": "2026-12",
+      "date": "2026-12-31",
+      "title": "FileMaker Validate Only Test",
+      "haystack": "filemaker validate only test filemaker validate-only preflight - do not publish "
     }
   ]
 }

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "fm-2f98f1a8-6dd9-4bc2-9f70-9fb80dd90df1",
+      "date": "2026-12-31",
+      "title": "FileMaker Validate Only Test",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "FileMaker validate-only preflight - DO NOT PUBLISH",
+      "sections": []
+    }
+  ]
+}
