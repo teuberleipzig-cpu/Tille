@@ -8,6 +8,18 @@ const html = await readFile(new URL('index.html', root), 'utf8');
 const css = await readFile(new URL('assets/dates-mobile.css', root), 'utf8');
 const layout = await readFile(new URL('public/site/js/dates-mobile-layout.js', root), 'utf8');
 
+function layoutFixture(matches, search = '') {
+  let parent = 'sidebar';
+  const controls = { dataset: {} }, slideshow = {};
+  const events = { before(value) { assert.equal(value, controls); parent = 'main'; } };
+  const sidebar = { insertBefore(value, anchor) { assert.equal(value, controls); assert.equal(anchor, slideshow); parent = 'sidebar'; } };
+  const classes = new Set();
+  const classList = { add: value => classes.add(value), toggle: (value, force) => force ? classes.add(value) : classes.delete(value) };
+  const documentRef = { getElementById: id => ({ 'dates-controls': controls, events, 'resident-slideshow': slideshow })[id], querySelector: selector => selector === '.sidebar' ? sidebar : null, documentElement: { classList } };
+  const media = { matches, addEventListener(type, handler) { assert.equal(type, 'change'); this.handler = handler; } };
+  return { classes, controls, documentRef, getParent: () => parent, media, search };
+}
+
 test('Dates controls have single DOM ownership', () => {
   for (const id of ['event-search-input', 'calendar-body', 'category-filters', 'dates-controls']) {
     assert.equal((html.match(new RegExp(`id="${id}"`, 'g')) || []).length, 1);
@@ -16,25 +28,34 @@ test('Dates controls have single DOM ownership', () => {
 });
 
 test('mobile placement moves and restores the same controls element', () => {
-  let parent = 'sidebar';
-  const controls = { dataset: {} };
-  const slideshow = {};
-  const events = { before(value) { assert.equal(value, controls); parent = 'main'; } };
-  const sidebar = { insertBefore(value, anchor) { assert.equal(value, controls); assert.equal(anchor, slideshow); parent = 'sidebar'; } };
-  const classes = new Set();
-  const documentRef = { getElementById: id => ({ 'dates-controls': controls, events, 'resident-slideshow': slideshow })[id], querySelector: selector => selector === '.sidebar' ? sidebar : null, documentElement: { classList: { add: value => classes.add(value) } } };
-  const media = { matches: true, addEventListener(type, handler) { assert.equal(type, 'change'); this.handler = handler; } };
-  assert.equal(initialiseDatesMobileLayout({ documentRef, matchMediaRef: () => media }), true);
-  assert.equal(parent, 'main');
-  media.matches = false;
-  media.handler();
-  assert.equal(parent, 'sidebar');
-  assert.ok(classes.has('dates-mobile-layout-ready'));
+  const fixture = layoutFixture(true);
+  assert.equal(initialiseDatesMobileLayout({ documentRef: fixture.documentRef, matchMediaRef: () => fixture.media, locationRef: { search: '' } }), true);
+  assert.equal(fixture.getParent(), 'main');
+  fixture.media.matches = false;
+  fixture.media.handler();
+  assert.equal(fixture.getParent(), 'sidebar');
+  assert.ok(fixture.classes.has('dates-mobile-layout-ready'));
+  assert.ok(!fixture.classes.has('dates-event-detail-mode'));
+});
+
+test('mobile event detail keeps controls in the hidden Sidebar owner', () => {
+  const fixture = layoutFixture(true, '?event=example');
+  initialiseDatesMobileLayout({ documentRef: fixture.documentRef, matchMediaRef: () => fixture.media, locationRef: { search: fixture.search } });
+  assert.equal(fixture.getParent(), 'sidebar');
+  assert.ok(fixture.classes.has('dates-event-detail-mode'));
+  assert.match(css, /dates-event-detail-mode \.dates-title\{display:none\}/);
+});
+
+test('desktop event detail keeps controls in the Sidebar', () => {
+  const fixture = layoutFixture(false, '?event=example');
+  initialiseDatesMobileLayout({ documentRef: fixture.documentRef, matchMediaRef: () => fixture.media, locationRef: { search: fixture.search } });
+  assert.equal(fixture.getParent(), 'sidebar');
+  assert.ok(fixture.classes.has('dates-event-detail-mode'));
 });
 
 test('Dates mobile stylesheet and cache references are scoped', () => {
-  assert.match(html, /dates-mobile\.css\?v=dates-mobile-1/);
-  assert.match(html, /dates-mobile-layout\.js\?v=dates-mobile-layout-1/);
+  assert.match(html, /dates-mobile\.css\?v=dates-mobile-2/);
+  assert.match(html, /dates-mobile-layout\.js\?v=dates-mobile-layout-2/);
   assert.match(css, /@media\(max-width:820px\)/);
   assert.match(css, /resident-slideshow\{display:none!important\}/);
 });
@@ -63,6 +84,9 @@ test('event list and detail preserve one modern event URL', () => {
   assert.match(css, /back-link\{[^}]*min-height:44px/);
   assert.match(css, /event-description\{[^}]*font-size:16px;line-height:1\.5/);
   assert.match(css, /event-hero\{width:100%;aspect-ratio:16\/9/);
+  assert.match(html, /renderEvent\(e\)[\s\S]*?<h2 class="event-title/);
+  assert.match(html, /renderDetail\(e\)[\s\S]*?<h1 class="event-title event-detail-title \$\{esc\(c\)\}"/);
+  assert.match(css, /event-detail-title\{margin:0\}/);
 });
 
 test('month picker is mobile-safe and traps focus', () => {
