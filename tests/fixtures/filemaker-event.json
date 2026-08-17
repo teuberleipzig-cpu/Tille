@@ -1,0 +1,16 @@
+{
+  "id": "fm-e47e7ae0-5cf0-4f45-b3ad-c12b3e765cd5",
+  "date": "2026-09-12",
+  "title": "FileMaker Test Night",
+  "color": "orange",
+  "moreUrl": "https://example.test/event",
+  "imageUrl": "",
+  "description": "Offline fixture für den Intake-Test.",
+  "sections": [
+    {
+      "label": "line-up:",
+      "genre": "",
+      "items": [{ "name": "Test Artist", "info": "Leipzig", "link": "https://example.test/artist" }]
+    }
+  ]
+}
