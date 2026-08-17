@@ -31,7 +31,8 @@ function shell({ title, description, canonical, content, depth = 0, ogImage = FA
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="${escapeHtml(ogImage)}">
   <link rel="stylesheet" href="assets/news.css?v=news-foundation-1">
-  <link rel="stylesheet" href="assets/mobile-navigation.css?v=mobile-navigation-1">
+  <link rel="stylesheet" href="assets/mobile-navigation.css?v=mobile-navigation-2">
+  <link rel="stylesheet" href="assets/mobile-foundation.css?v=mobile-foundation-1">
 </head>
 <body data-site-page="news">
   <div class="page">
@@ -43,7 +44,7 @@ function shell({ title, description, canonical, content, depth = 0, ogImage = FA
     </main>
     <aside class="sidebar" aria-hidden="true"></aside>
   </div>
-  <script type="module" src="assets/site-navigation.js?v=site-navigation-4"></script>
+  <script type="module" src="assets/site-navigation.js?v=site-navigation-5"></script>
   <script src="assets/tracking.js?v=tracking-1" defer></script>
 </body>
 </html>
