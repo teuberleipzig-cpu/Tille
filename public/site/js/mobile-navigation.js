@@ -2,6 +2,15 @@ const ROOT_READY_CLASS = 'mobile-navigation-ready';
 const BODY_OPEN_CLASS = 'site-mobile-navigation-open';
 const MOBILE_QUERY = '(max-width: 820px)';
 const SCROLL_THRESHOLD = 10;
+export const ART_STATE_COUNT = 8;
+
+export function chooseArtState(previousState, randomValue = Math.random()) {
+  const previous = Number.isInteger(previousState) && previousState >= 0 && previousState < ART_STATE_COUNT ? previousState : null;
+  const optionCount = previous === null ? ART_STATE_COUNT : ART_STATE_COUNT - 1;
+  const normalizedRandom = Math.min(Math.max(Number(randomValue) || 0, 0), 1 - Number.EPSILON);
+  const pick = Math.floor(normalizedRandom * optionCount);
+  return previous !== null && pick >= previous ? pick + 1 : pick;
+}
 
 export function enabledMobilePages(config) {
   return config.pages.filter(page => page.enabled);
@@ -74,7 +83,13 @@ export function initialiseMobileNavigation(config, activePageId, nav) {
     links.append(link);
   });
 
+  let previousArtState = null;
   const setOpen = (open, returnFocus = false) => {
+    const wasOpen = toggle.getAttribute('aria-expanded') === 'true';
+    if (open && !wasOpen) {
+      previousArtState = chooseArtState(previousArtState);
+      toggle.dataset.artState = String(previousArtState);
+    }
     root.classList.toggle('is-open', open);
     document.body.classList.toggle(BODY_OPEN_CLASS, open);
     toggle.setAttribute('aria-expanded', String(open));
