@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { readFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
-import { enabledMobilePages } from '../public/site/js/mobile-navigation.js';
+import { ART_STATE_COUNT, chooseArtState, enabledMobilePages } from '../public/site/js/mobile-navigation.js';
 import { normalizeSiteNavigation } from '../public/site/js/site-navigation-model.js';
 
 const root = new URL('../', import.meta.url);
@@ -56,17 +56,39 @@ test('hamburger and drawer expose required accessibility controls', () => {
   assert.match(mobile, /toggle\.focus\(\)/);
 });
 
-test('hamburger morphs its three existing lines into an abstract open composition', () => {
+test('hamburger has exactly eight three-line art state contracts', () => {
   assert.match(css, /site-mobile-toggle span\{[^}]*position:absolute;[^}]*width:21px;height:2px;[^}]*transition:[^}]*\.22s ease/);
   assert.match(css, /site-mobile-toggle span:nth-child\(1\)\{transform:translateY\(-6px\)\}/);
   assert.match(css, /site-mobile-toggle span:nth-child\(3\)\{transform:translateY\(6px\)\}/);
   assert.doesNotMatch(mobile, /toggleMark|site-mobile-toggle-mark/);
   assert.doesNotMatch(css, /site-mobile-toggle-mark/);
   assert.match(css, /is-open \.site-mobile-toggle span\{opacity:1\}/);
-  assert.match(css, /span:nth-child\(1\)\{[^}]*width:31px;transform:rotate\(82deg\)/);
-  assert.match(css, /span:nth-child\(2\)\{[^}]*width:31px;transform:rotate\(77deg\)/);
-  assert.match(css, /span:nth-child\(3\)\{[^}]*width:42px;transform:rotate\(-43deg\)/);
+  const contracts = [...css.matchAll(/data-art-state="(\d)"\] span:nth-child\(([123])\)/g)].map(match => `${match[1]}:${match[2]}`);
+  assert.equal(contracts.length, 24);
+  for (let state = 0; state < ART_STATE_COUNT; state += 1) {
+    assert.deepEqual(contracts.filter(contract => contract.startsWith(`${state}:`)), [`${state}:1`,`${state}:2`,`${state}:3`]);
+  }
+  assert.match(css, /data-art-state="0"\] span:nth-child\(1\)\{[^}]*width:31px;transform:rotate\(82deg\)/);
+  assert.match(css, /data-art-state="0"\] span:nth-child\(2\)\{[^}]*width:31px;transform:rotate\(77deg\)/);
+  assert.match(css, /data-art-state="0"\] span:nth-child\(3\)\{[^}]*width:42px;transform:rotate\(-43deg\)/);
   assert.match(css, /prefers-reduced-motion:reduce[^}]+site-mobile-toggle span\{transition:none\}/);
+});
+
+test('art state helper reaches all states without direct repetition', () => {
+  assert.equal(ART_STATE_COUNT, 8);
+  assert.deepEqual(Array.from({ length: 8 }, (_, index) => chooseArtState(null, (index + 0.25) / 8)), [0,1,2,3,4,5,6,7]);
+  for (let previous = 0; previous < ART_STATE_COUNT; previous += 1) {
+    const choices = Array.from({ length: 7 }, (_, index) => chooseArtState(previous, (index + 0.25) / 7));
+    assert.equal(choices.includes(previous), false);
+    assert.deepEqual(new Set(choices), new Set(Array.from({ length: 8 }, (_, state) => state).filter(state => state !== previous)));
+  }
+});
+
+test('art state selection occurs only on a closed to open transition', () => {
+  assert.match(mobile, /const wasOpen = toggle\.getAttribute\('aria-expanded'\) === 'true'/);
+  assert.match(mobile, /if \(open && !wasOpen\) \{\s*previousArtState = chooseArtState\(previousArtState\);\s*toggle\.dataset\.artState = String\(previousArtState\)/);
+  assert.doesNotMatch(mobile, /localStorage|sessionStorage|document\.cookie|URLSearchParams/);
+  assert.doesNotMatch(mobile, /setInterval|MutationObserver|canvas|createElement\(['"](?:img|svg)['"]\)/);
 });
 
 test('mobile header moves and restores the single existing logo deterministically', () => {
@@ -126,11 +148,11 @@ test('mobile foundation covers forms, residents, gallery and focus visibility', 
 test('all public navigation pages use consistent cache versions', async () => {
   for (const name of publicPages) {
     const html = await readFile(new URL(name, root), 'utf8');
-    assert.match(html, /site-navigation\.js\?v=site-navigation-7/);
-    assert.doesNotMatch(html, /site-navigation\.js\?v=site-navigation-[1-6]/);
-    assert.match(html, /mobile-navigation\.css\?v=mobile-navigation-5/);
+    assert.match(html, /site-navigation\.js\?v=site-navigation-8/);
+    assert.doesNotMatch(html, /site-navigation\.js\?v=site-navigation-[1-7]/);
+    assert.match(html, /mobile-navigation\.css\?v=mobile-navigation-6/);
     assert.match(html, /mobile-foundation\.css\?v=mobile-foundation-4/);
     assert.doesNotMatch(html, /mobile-foundation\.css\?v=mobile-foundation-[1-3]/);
   }
-  assert.match(owner, /mobile-navigation\.js\?v=mobile-navigation-4/);
+  assert.match(owner, /mobile-navigation\.js\?v=mobile-navigation-5/);
 });

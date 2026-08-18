@@ -1,5 +1,5 @@
 import { normalizeSiteNavigation } from '../public/site/js/site-navigation-model.js';
-import { initialiseMobileNavigation } from '../public/site/js/mobile-navigation.js?v=mobile-navigation-4';
+import { initialiseMobileNavigation } from '../public/site/js/mobile-navigation.js?v=mobile-navigation-5';
 
 const CONFIG_URL = 'public/site/data/site-navigation.json';
 const CURRENT_PAGE_IDS = { 'index.html': 'dates', 'news.html': 'news', 'residents.html': 'residents', 'resident-releases.html': 'residents', 'about.html': 'about', 'contact.html': 'contact', 'history.html': 'history', 'feedback.html': 'feedback', 'feedback-thanks.html': 'feedback', 'event.html': 'dates', 'gallery.html': 'gallery' };
