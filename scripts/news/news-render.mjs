@@ -19,7 +19,7 @@ function shell({ title, description, canonical, content, depth = 0, ogImage = FA
   <title>${escapeHtml(title)}</title>
   <meta name="description" content="${escapeHtml(description)}">
   <link rel="canonical" href="${escapeHtml(canonical)}">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/distillery-d.svg" type="image/svg+xml">
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#000000">
   <meta property="og:title" content="${escapeHtml(title)}">
@@ -31,20 +31,21 @@ function shell({ title, description, canonical, content, depth = 0, ogImage = FA
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="${escapeHtml(ogImage)}">
   <link rel="stylesheet" href="assets/news.css?v=news-foundation-1">
-  <link rel="stylesheet" href="assets/mobile-navigation.css?v=mobile-navigation-2">
-  <link rel="stylesheet" href="assets/mobile-foundation.css?v=mobile-foundation-2">
+  <style>.logo{margin-left:0}</style>
+  <link rel="stylesheet" href="assets/mobile-navigation.css?v=mobile-navigation-4">
+  <link rel="stylesheet" href="assets/mobile-foundation.css?v=mobile-foundation-4">
 </head>
 <body data-site-page="news">
   <div class="page">
     <main class="main">
-      <header class="logo" aria-label="Distillery"><img src="assets/distillery-logo.png" alt="Distillery"></header>
+      <header class="logo" aria-label="Distillery"><img src="assets/distillery-logo.svg" alt="Distillery"></header>
       <nav class="nav" aria-label="Hauptnavigation"><a href="index.html">Dates</a><a class="active" href="news.html">News</a><a href="residents.html">Residents</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="history.html">History</a><a href="feedback.html">Feedback</a></nav>
       ${content}
       <footer class="footer">DISTILLERY LEIPZIG | EGGEBRECHTSTRAẞE 2 | 04103 LEIPZIG | <a href="mailto:club@distillery.de">club@distillery.de</a> | <a href="tel:+4934135597400">0341 35597400</a><small><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></small></footer>
     </main>
     <aside class="sidebar" aria-hidden="true"></aside>
   </div>
-  <script type="module" src="assets/site-navigation.js?v=site-navigation-5"></script>
+  <script type="module" src="assets/site-navigation.js?v=site-navigation-6"></script>
   <script src="assets/tracking.js?v=tracking-1" defer></script>
 </body>
 </html>

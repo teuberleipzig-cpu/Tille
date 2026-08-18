@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="240.16"
+   height="177.36"
+   viewBox="0 0 240.16 177.36"
+   sodipodi:docname="Distillery_D.eps"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath2">
+      <path
+         d="M 0,1330 H 1800 V 0 H 0 Z"
+         id="path2" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4">
+      <path
+         d="M 0,1330 H 1800 V 0 H 0 Z"
+         id="path4" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:page
+       x="0"
+       y="0"
+       inkscape:label="1"
+       id="page1"
+       width="240.16"
+       height="177.36"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <g
+     id="g1"
+     inkscape:groupmode="layer"
+     inkscape:label="1">
+    <path
+       id="path1"
+       d="M 466.836,1330.24 H 1690.79 c 80.5,0 128.27,-65.26 106.7,-145.75 L 1519.2,145.762 C 1497.64,65.2617 1414.9,0 1334.39,0 H 110.445 C 29.9531,0 -17.8242,65.2617 3.74609,145.762 L 282.039,1184.49 c 21.57,80.49 104.305,145.75 184.797,145.75"
+       style="fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(0.13333333,0,0,-0.13333333,0,177.36)"
+       clip-path="url(#clipPath2)" />
+    <path
+       id="path3"
+       d="M 1156.54,1160.33 1095.71,933.293 H 607.07 c -120.992,0 -243.632,-96.73 -276.054,-217.723 L 243.152,387.621 C 210.742,266.648 281.555,169.91 402.551,169.91 h 151.344 747.485 l 69.34,258.856 h -142.03 l -564.303,-0.008 16.004,59.773 33.797,126.145 16.023,59.769 h 387.719 l 318.63,-0.007 71.85,268.175 58.33,217.717 h -410.2"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(0.13333333,0,0,-0.13333333,0,177.36)"
+       clip-path="url(#clipPath4)" />
+  </g>
+</svg>
