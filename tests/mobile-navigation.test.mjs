@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { readFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 import { enabledMobilePages } from '../public/site/js/mobile-navigation.js';
 import { normalizeSiteNavigation } from '../public/site/js/site-navigation-model.js';
 
@@ -11,6 +12,15 @@ const mobile = await readFile(new URL('public/site/js/mobile-navigation.js', roo
 const css = await readFile(new URL('assets/mobile-navigation.css', root), 'utf8');
 const foundation = await readFile(new URL('assets/mobile-foundation.css', root), 'utf8');
 const publicPages = ['404.html','about.html','contact.html','datenschutz.html','event.html','feedback-thanks.html','feedback.html','gallery.html','history.html','impressum.html','index.html','news.html','news/index.html','resident-releases.html','residents.html'];
+
+test('official Distillery D asset is byte-identical and self-contained', async () => {
+  const asset = await readFile(new URL('assets/distillery-d.svg', root));
+  const svg = asset.toString('utf8');
+  assert.equal(createHash('sha256').update(asset).digest('hex'), '01edd286f356abd05efeb2735d360c1af15f55283a098dcaa9310dacbca1dad8');
+  assert.match(svg, /<svg\b/);
+  assert.match(svg, /viewBox="0 0 240\.16 177\.36"/);
+  assert.doesNotMatch(svg, /<script\b|javascript:|(?:href|src)\s*=\s*["']https?:\/\//i);
+});
 
 test('mobile drawer uses enabled navigation pages in configured order', () => {
   assert.deepEqual(enabledMobilePages(config).map(page => page.id), ['dates','news','residents','about','contact','history','feedback','gallery']);
@@ -46,14 +56,30 @@ test('hamburger and drawer expose required accessibility controls', () => {
   assert.match(mobile, /toggle\.focus\(\)/);
 });
 
-test('hamburger morphs its three existing lines into the open D mark', () => {
+test('hamburger morphs its three existing lines into the official D mark', () => {
   assert.match(css, /site-mobile-toggle span\{[^}]*position:absolute;[^}]*width:21px;height:2px;[^}]*transition:[^}]*\.2s ease/);
   assert.match(css, /site-mobile-toggle span:nth-child\(1\)\{transform:translateY\(-6px\)\}/);
   assert.match(css, /site-mobile-toggle span:nth-child\(3\)\{transform:translateY\(6px\)\}/);
-  assert.match(css, /is-open \.site-mobile-toggle span:nth-child\(1\)\{[^}]*transform:rotate\(90deg\)/);
-  assert.match(css, /is-open \.site-mobile-toggle span:nth-child\(2\)\{[^}]*transform:rotate\(28deg\)/);
-  assert.match(css, /is-open \.site-mobile-toggle span:nth-child\(3\)\{[^}]*transform:rotate\(-28deg\)/);
-  assert.match(css, /prefers-reduced-motion:reduce\)\{\.site-mobile-drawer,\.site-mobile-toggle span\{transition:none\}/);
+  assert.match(mobile, /toggleMark\.src = '\/assets\/distillery-d\.svg'/);
+  assert.match(mobile, /toggleMark\.alt = ''/);
+  assert.match(mobile, /toggleMark\.setAttribute\('aria-hidden', 'true'\)/);
+  assert.match(css, /is-open \.site-mobile-toggle-mark\{opacity:1;transform:scale\(1\)\}/);
+  assert.doesNotMatch(css, /rotate\((?:90|28|-28)deg\)/);
+  assert.match(css, /prefers-reduced-motion:reduce[^}]+site-mobile-toggle-mark\{transition:none\}/);
+});
+
+test('mobile header moves and restores the single existing logo deterministically', () => {
+  assert.match(mobile, /document\.querySelector\('header\.logo'\)/);
+  assert.doesNotMatch(mobile, /cloneNode/);
+  assert.match(mobile, /header\.prepend\(logo\)/);
+  assert.match(mobile, /logoAnchor\.after\(logo\)/);
+  assert.match(mobile, /root\.mobileNavigationDestroy = \(\) => \{[\s\S]*restoreLogo\(\)[\s\S]*logoAnchor\.remove\(\)/);
+  assert.match(mobile, /updateMobileState\(media\.matches\)/);
+  assert.match(mobile, /window\.addEventListener\('scroll', updateScrollState, scrollListenerOptions\)/);
+  assert.match(mobile, /passive: true/);
+  assert.doesNotMatch(mobile, /setInterval|MutationObserver/);
+  assert.match(css, /site-mobile-header\{position:fixed;top:0;left:0;right:0/);
+  assert.match(css, /site-mobile-logo-anchor\{display:block;height:86px\}/);
 });
 
 test('mobile navigation meets touch, safe-area and reduced-motion contracts', () => {
@@ -85,10 +111,11 @@ test('mobile foundation covers forms, residents, gallery and focus visibility', 
 test('all public navigation pages use consistent cache versions', async () => {
   for (const name of publicPages) {
     const html = await readFile(new URL(name, root), 'utf8');
-    assert.match(html, /site-navigation\.js\?v=site-navigation-5/);
-    assert.doesNotMatch(html, /site-navigation\.js\?v=site-navigation-[1-4]/);
-    assert.match(html, /mobile-navigation\.css\?v=mobile-navigation-3/);
+    assert.match(html, /site-navigation\.js\?v=site-navigation-6/);
+    assert.doesNotMatch(html, /site-navigation\.js\?v=site-navigation-[1-5]/);
+    assert.match(html, /mobile-navigation\.css\?v=mobile-navigation-4/);
     assert.match(html, /mobile-foundation\.css\?v=mobile-foundation-4/);
     assert.doesNotMatch(html, /mobile-foundation\.css\?v=mobile-foundation-[1-3]/);
   }
+  assert.match(owner, /mobile-navigation\.js\?v=mobile-navigation-3/);
 });

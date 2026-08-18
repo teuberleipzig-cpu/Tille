@@ -1,6 +1,7 @@
 const ROOT_READY_CLASS = 'mobile-navigation-ready';
 const BODY_OPEN_CLASS = 'site-mobile-navigation-open';
 const MOBILE_QUERY = '(max-width: 820px)';
+const SCROLL_THRESHOLD = 10;
 
 export function enabledMobilePages(config) {
   return config.pages.filter(page => page.enabled);
@@ -21,6 +22,16 @@ export function initialiseMobileNavigation(config, activePageId, nav) {
   root.className = 'site-mobile-navigation';
   root.dataset.siteMobileNavigation = '';
 
+  const logo = document.querySelector('header.logo');
+  if (!logo) return false;
+  const logoAnchor = document.createElement('span');
+  logoAnchor.className = 'site-mobile-logo-anchor';
+  logoAnchor.setAttribute('aria-hidden', 'true');
+  logo.before(logoAnchor);
+
+  const header = document.createElement('div');
+  header.className = 'site-mobile-header';
+
   const toggle = document.createElement('button');
   toggle.className = 'site-mobile-toggle';
   toggle.type = 'button';
@@ -28,6 +39,12 @@ export function initialiseMobileNavigation(config, activePageId, nav) {
   toggle.setAttribute('aria-expanded', 'false');
   toggle.setAttribute('aria-controls', 'site-mobile-drawer');
   for (let line = 0; line < 3; line += 1) toggle.append(document.createElement('span'));
+  const toggleMark = document.createElement('img');
+  toggleMark.className = 'site-mobile-toggle-mark';
+  toggleMark.src = '/assets/distillery-d.svg';
+  toggleMark.alt = '';
+  toggleMark.setAttribute('aria-hidden', 'true');
+  toggle.append(toggleMark);
 
   const overlay = document.createElement('button');
   overlay.className = 'site-mobile-overlay';
@@ -78,6 +95,7 @@ export function initialiseMobileNavigation(config, activePageId, nav) {
 
   const controller = new AbortController();
   const listenerOptions = { signal: controller.signal };
+  const scrollListenerOptions = { passive: true, signal: controller.signal };
   toggle.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true', true), listenerOptions);
   close.addEventListener('click', () => setOpen(false, true), listenerOptions);
   overlay.addEventListener('click', () => setOpen(false, true), listenerOptions);
@@ -104,17 +122,42 @@ export function initialiseMobileNavigation(config, activePageId, nav) {
     }
   }, listenerOptions);
   const media = matchMedia(MOBILE_QUERY);
+  const mountLogo = () => {
+    if (logo.parentElement !== header) header.prepend(logo);
+  };
+  const restoreLogo = () => {
+    if (logo.parentElement === header) logoAnchor.after(logo);
+  };
+  const updateScrollState = () => {
+    header.classList.toggle('site-mobile-header-scrolled', window.scrollY > SCROLL_THRESHOLD);
+  };
+  const updateMobileState = matches => {
+    if (matches) {
+      mountLogo();
+      updateScrollState();
+    } else {
+      setOpen(false);
+      restoreLogo();
+      header.classList.remove('site-mobile-header-scrolled');
+    }
+  };
   media.addEventListener('change', event => {
-    if (!event.matches) setOpen(false);
+    updateMobileState(event.matches);
   }, listenerOptions);
+  window.addEventListener('scroll', updateScrollState, scrollListenerOptions);
+  window.addEventListener('pageshow', updateScrollState, listenerOptions);
 
   drawer.append(close, links);
-  root.append(toggle, overlay, drawer);
+  header.append(toggle);
+  root.append(header, overlay, drawer);
   root.mobileNavigationDestroy = () => {
     setOpen(false);
     controller.abort();
+    restoreLogo();
+    logoAnchor.remove();
   };
   document.body.append(root);
+  updateMobileState(media.matches);
   document.documentElement.classList.add(ROOT_READY_CLASS);
   return true;
 }
