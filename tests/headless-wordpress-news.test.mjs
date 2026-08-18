@@ -77,6 +77,23 @@ test('empty state', () => assert.match(renderOverview([]), /Noch keine News/));
 test('deterministic renderer output', () => assert.equal(renderOverview(published()), renderOverview(published())));
 test('no WordPress admin URL leakage', () => assert.doesNotMatch(renderArticle(published().find(item => item.slug === 'unsafe-content')), /wp-admin|wp-login|wp-json/i));
 
+const currentShellContracts = [
+  /<link rel="icon" href="\/assets\/distillery-d\.svg" type="image\/svg\+xml">/,
+  /<img src="assets\/distillery-logo\.svg" alt="Distillery">/,
+  /<style>\.logo\{margin-left:0\}<\/style>/,
+  /mobile-navigation\.css\?v=mobile-navigation-4/,
+  /mobile-foundation\.css\?v=mobile-foundation-4/,
+  /site-navigation\.js\?v=site-navigation-6/
+];
+const staleShellContracts = /href="favicon\.svg"|distillery-logo\.png|mobile-navigation-2|mobile-foundation-2|site-navigation-5/;
+
+test('generated overview and article use the current public shell', () => {
+  for (const html of [renderOverview(published()), renderArticle(published()[0])]) {
+    for (const contract of currentShellContracts) assert.match(html, contract);
+    assert.doesNotMatch(html, staleShellContracts);
+  }
+});
+
 function response(data, pages = 1, status = 200) { return { ok: status >= 200 && status < 300, status, headers: { get: name => name.toLowerCase() === 'x-wp-totalpages' ? String(pages) : null }, json: async () => data }; }
 test('REST single page', async () => assert.equal((await fetchWordPressPosts({ wordpressBaseUrl: 'https://cms.example', fetchImpl: async () => response([post()]) })).length, 1));
 test('REST multiple pages', async () => { let calls = 0; const data = await fetchWordPressPosts({ wordpressBaseUrl: 'https://cms.example', fetchImpl: async () => response([post({ id: ++calls, slug: `post-${calls}` })], 2) }); assert.equal(data.length, 2); });
@@ -103,6 +120,18 @@ test('source filtering keeps Distillery canonical', () => { const value = post({
 
 test('committed public output is neutral and fixture-free', async () => { const legacy = await readFile(new URL('../news.html', import.meta.url), 'utf8'), canonical = await readFile(new URL('../news/index.html', import.meta.url), 'utf8'); assert.match(legacy, /Noch keine News/); assert.match(canonical, /Noch keine News/); for (const slug of ['summer-update', 'lange-nacht', 'unsafe-content']) { assert.doesNotMatch(legacy, new RegExp(slug)); await assert.rejects(() => readFile(new URL(`../news/${slug}/index.html`, import.meta.url))); } });
 test('legacy and canonical overview share one generated shell', async () => { const legacy = await readFile(new URL('../news.html', import.meta.url), 'utf8'), canonical = await readFile(new URL('../news/index.html', import.meta.url), 'utf8'); assert.match(legacy, /data-site-page="news"/); assert.match(canonical, /data-site-page="news"/); assert.match(legacy, /site-navigation-6/); assert.match(canonical, /site-navigation-6/); assert.match(legacy, /mobile-foundation-4/); assert.match(canonical, /mobile-foundation-4/); });
+test('committed and generated News shells keep branding and cache parity', async () => {
+  const shells = [
+    await readFile(new URL('../news.html', import.meta.url), 'utf8'),
+    await readFile(new URL('../news/index.html', import.meta.url), 'utf8'),
+    renderOverview(published()),
+    renderArticle(published()[0])
+  ];
+  for (const html of shells) {
+    for (const contract of currentShellContracts) assert.match(html, contract);
+    assert.doesNotMatch(html, staleShellContracts);
+  }
+});
 test('all news templates preserve the existing footer address', async () => { const legacy = await readFile(new URL('../news.html', import.meta.url), 'utf8'), canonical = await readFile(new URL('../news/index.html', import.meta.url), 'utf8'), article = renderArticle(published()[0]); for (const html of [legacy, canonical, article]) { assert.match(html, /EGGEBRECHTSTRAẞE 2/); assert.doesNotMatch(html, /EGGEBRECHTSTRASSE 2/); } });
 test('nginx directory index and strict 404 remain configured', async () => { for (const name of ['nginx.conf', 'nginx.staging.conf']) { const value = await readFile(new URL(`../docker/${name}`, import.meta.url), 'utf8'); assert.match(value, /index index\.html/); assert.match(value, /try_files \$uri \$uri\/ =404/); } });
 test('GitHub Pages directory output is enabled', async () => assert.match(await readFile(new URL('../.nojekyll', import.meta.url), 'utf8'), /Disable Jekyll/));
