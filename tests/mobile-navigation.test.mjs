@@ -79,7 +79,7 @@ test('mobile foundation covers forms, residents, gallery and focus visibility', 
   assert.match(foundation, /social-icon\{width:48px;height:48px/);
   assert.match(foundation, /profile-tab\{min-height:44px/);
   assert.match(foundation, /lightbox button\{min-width:48px;min-height:48px\}/);
-  assert.match(foundation, /@media\(max-width:320px\)\{[\s\S]*?\.logo,\.logo img\{width:min\((?:250|2[0-4]\d)px,calc\(100vw - 70px\)\)\}/);
+  assert.match(foundation, /@media\(max-width:320px\)\{[\s\S]*?\.logo,\.logo img\{width:min\((?:230|2[0-2]\d)px,calc\(100vw - 90px\)\)\}/);
 });
 
 test('all public navigation pages use consistent cache versions', async () => {
@@ -88,7 +88,7 @@ test('all public navigation pages use consistent cache versions', async () => {
     assert.match(html, /site-navigation\.js\?v=site-navigation-5/);
     assert.doesNotMatch(html, /site-navigation\.js\?v=site-navigation-[1-4]/);
     assert.match(html, /mobile-navigation\.css\?v=mobile-navigation-3/);
-    assert.match(html, /mobile-foundation\.css\?v=mobile-foundation-3/);
-    assert.doesNotMatch(html, /mobile-foundation\.css\?v=mobile-foundation-[12]/);
+    assert.match(html, /mobile-foundation\.css\?v=mobile-foundation-4/);
+    assert.doesNotMatch(html, /mobile-foundation\.css\?v=mobile-foundation-[1-3]/);
   }
 });

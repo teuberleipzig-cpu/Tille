@@ -28,6 +28,14 @@ test('public pages use the official Distillery SVG logo', async () => {
   }
 });
 
+test('official SVG logo pages cancel the legacy negative margin', async () => {
+  for (const page of publicPages) {
+    const html = await readFile(new URL(page, root), 'utf8');
+    assert.doesNotMatch(html, /\.logo\{[^}]*margin(?:-left)?:\s*[^;}]*-\d+px/i);
+    assert.match(html, /\.logo\{[^}]*margin(?:-left)?:\s*(?:0 0 8px )?0/i);
+  }
+});
+
 test('official Distillery logo is a self-contained SVG', async () => {
   const logoUrl = new URL('assets/distillery-logo.svg', root);
   const [logo, metadata] = await Promise.all([
