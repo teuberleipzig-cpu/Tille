@@ -36,7 +36,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 
 @media(max-width:320px){
   .main{padding-right:max(16px,env(safe-area-inset-right));padding-left:max(16px,env(safe-area-inset-left))}
-  .logo,.logo img{width:min(250px,calc(100vw - 70px))}
+  .logo,.logo img{width:min(230px,calc(100vw - 90px))}
   .profile-tab-list{flex-wrap:wrap;gap:4px}
   .profile-tab{margin:0}
 }
