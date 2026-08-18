@@ -38,3 +38,14 @@ test('resident page retains detail embeds and existing slider contract', () => {
   assert.match(pageSource, /history\.replaceState/);
   assert.match(pageSource, /resident-directory-mode \.sidebar\{display:none\}/);
 });
+
+test('resident detail socials stay in one shrinkable mobile row', () => {
+  assert.match(pageSource, /mobile-foundation\.css\?v=mobile-foundation-4">\s*<style>\s*@media\(max-width:820px\)/);
+  assert.match(pageSource, /\.profile-column \.socials\{flex-wrap:nowrap;gap:clamp\(3px,1vw,7px\)\}/);
+  assert.match(pageSource, /\.profile-column \.social-icon\{flex:0 1 48px;width:48px;height:auto;min-width:0;aspect-ratio:1;/);
+  assert.doesNotMatch(pageSource, /\.profile-column \.socials\{[^}]*overflow-x:auto/);
+});
+
+test('resident social platform order remains unchanged', () => {
+  assert.match(pageSource, /function renderSocials\(r\)\{return \[socialIcon\('Instagram',[\s\S]*socialIcon\('Resident Advisor',[\s\S]*socialIcon\('Discogs',[\s\S]*socialIcon\('Beatport',[\s\S]*socialIcon\('Bandcamp',[\s\S]*socialIcon\('SoundCloud'/);
+});
