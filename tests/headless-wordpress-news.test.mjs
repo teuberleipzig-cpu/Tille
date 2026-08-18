@@ -81,11 +81,11 @@ const currentShellContracts = [
   /<link rel="icon" href="\/assets\/distillery-d\.svg" type="image\/svg\+xml">/,
   /<img src="assets\/distillery-logo\.svg" alt="Distillery">/,
   /<style>\.logo\{margin-left:0\}<\/style>/,
-  /mobile-navigation\.css\?v=mobile-navigation-4/,
+  /mobile-navigation\.css\?v=mobile-navigation-5/,
   /mobile-foundation\.css\?v=mobile-foundation-4/,
-  /site-navigation\.js\?v=site-navigation-6/
+  /site-navigation\.js\?v=site-navigation-7/
 ];
-const staleShellContracts = /href="favicon\.svg"|distillery-logo\.png|mobile-navigation-2|mobile-foundation-2|site-navigation-5/;
+const staleShellContracts = /href="favicon\.svg"|distillery-logo\.png|mobile-navigation-[2-4]|mobile-foundation-2|site-navigation-[5-6]/;
 
 test('generated overview and article use the current public shell', () => {
   for (const html of [renderOverview(published()), renderArticle(published()[0])]) {
@@ -119,7 +119,7 @@ test('generated public article contains no source-origin anchor href', async t =
 test('source filtering keeps Distillery canonical', () => { const value = post({ content: { rendered: '<a href="https://cms.example.org/post-one/">Post</a>' } }); const html = renderArticle(normalizeWordPressPost(value, { sourceOrigin: 'https://cms.example.org' })); assert.match(html, /https:\/\/www\.distillery\.de\/news\/summer-update\//); assert.doesNotMatch(html, /canonical[^>]+cms\.example\.org/); });
 
 test('committed public output is neutral and fixture-free', async () => { const legacy = await readFile(new URL('../news.html', import.meta.url), 'utf8'), canonical = await readFile(new URL('../news/index.html', import.meta.url), 'utf8'); assert.match(legacy, /Noch keine News/); assert.match(canonical, /Noch keine News/); for (const slug of ['summer-update', 'lange-nacht', 'unsafe-content']) { assert.doesNotMatch(legacy, new RegExp(slug)); await assert.rejects(() => readFile(new URL(`../news/${slug}/index.html`, import.meta.url))); } });
-test('legacy and canonical overview share one generated shell', async () => { const legacy = await readFile(new URL('../news.html', import.meta.url), 'utf8'), canonical = await readFile(new URL('../news/index.html', import.meta.url), 'utf8'); assert.match(legacy, /data-site-page="news"/); assert.match(canonical, /data-site-page="news"/); assert.match(legacy, /site-navigation-6/); assert.match(canonical, /site-navigation-6/); assert.match(legacy, /mobile-foundation-4/); assert.match(canonical, /mobile-foundation-4/); });
+test('legacy and canonical overview share one generated shell', async () => { const legacy = await readFile(new URL('../news.html', import.meta.url), 'utf8'), canonical = await readFile(new URL('../news/index.html', import.meta.url), 'utf8'); assert.match(legacy, /data-site-page="news"/); assert.match(canonical, /data-site-page="news"/); assert.match(legacy, /site-navigation-7/); assert.match(canonical, /site-navigation-7/); assert.match(legacy, /mobile-foundation-4/); assert.match(canonical, /mobile-foundation-4/); });
 test('committed and generated News shells keep branding and cache parity', async () => {
   const shells = [
     await readFile(new URL('../news.html', import.meta.url), 'utf8'),

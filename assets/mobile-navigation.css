@@ -8,20 +8,15 @@
   .site-mobile-header .logo{flex:0 0 auto;width:280px;height:78px;margin:0;overflow:visible}
   .site-mobile-header .logo img{display:block;width:280px;height:78px;object-fit:contain;transition:filter .2s ease}
   .site-mobile-toggle{position:relative;z-index:1;display:block;flex:0 0 48px;width:48px;height:48px;border:2px solid #fff;background:#000;color:#fff;cursor:pointer;transition:background-color .2s ease,border-color .2s ease}
-  .site-mobile-toggle span{position:absolute;top:21px;left:12px;display:block;width:21px;height:2px;background:#fff;transform-origin:center;opacity:1;transition:top .2s ease,left .2s ease,width .2s ease,transform .2s ease,opacity .1s ease .1s}
+  .site-mobile-toggle span{position:absolute;top:21px;left:12px;display:block;width:21px;height:2px;background:#fff;transform-origin:center;opacity:1;transition:top .22s ease,left .22s ease,width .22s ease,transform .22s ease}
   .site-mobile-toggle span:nth-child(1){transform:translateY(-6px)}
   .site-mobile-toggle span:nth-child(3){transform:translateY(6px)}
-  .site-mobile-toggle-mark{position:absolute;top:8px;left:7px;width:30px;height:28px;object-fit:contain;filter:invert(1);opacity:0;transform:scale(.72);transition:opacity .1s ease .1s,transform .2s ease;pointer-events:none}
-  .site-mobile-navigation.is-open .site-mobile-toggle span{left:13px;width:18px;opacity:0;transition-delay:0s}
-  .site-mobile-navigation.is-open .site-mobile-toggle span:nth-child(1){top:18px;transform:rotate(38deg)}
-  .site-mobile-navigation.is-open .site-mobile-toggle span:nth-child(2){top:21px;transform:scaleX(.65)}
-  .site-mobile-navigation.is-open .site-mobile-toggle span:nth-child(3){top:24px;transform:rotate(-38deg)}
-  .site-mobile-navigation.is-open .site-mobile-toggle-mark{opacity:1;transform:scale(1)}
+  .site-mobile-navigation.is-open .site-mobile-toggle span{opacity:1}
+  .site-mobile-navigation.is-open .site-mobile-toggle span:nth-child(1){top:21px;left:6px;width:31px;transform:rotate(82deg)}
+  .site-mobile-navigation.is-open .site-mobile-toggle span:nth-child(2){top:22px;left:14px;width:31px;transform:rotate(77deg)}
+  .site-mobile-navigation.is-open .site-mobile-toggle span:nth-child(3){top:22px;left:1px;width:42px;transform:rotate(-43deg)}
   .site-mobile-header.site-mobile-header-scrolled{background:#000}
   .site-mobile-header.site-mobile-header-scrolled .logo img{filter:invert(1)}
-  .site-mobile-header.site-mobile-header-scrolled .site-mobile-toggle{border-color:#000;background:#fff}
-  .site-mobile-header.site-mobile-header-scrolled .site-mobile-toggle span{background:#000}
-  .site-mobile-header.site-mobile-header-scrolled .site-mobile-toggle-mark{filter:none}
   .site-mobile-overlay{position:fixed;inset:0;z-index:60;border:0;background:rgba(0,0,0,.58);opacity:0;pointer-events:none}
   .site-mobile-drawer{position:fixed;top:calc(80px + env(safe-area-inset-top));right:0;bottom:0;z-index:61;width:min(86vw,340px);padding:16px max(16px,env(safe-area-inset-right)) max(16px,env(safe-area-inset-bottom)) 20px;background:#000;color:#fff;overflow-y:auto;overscroll-behavior:contain;transform:translateX(100%);transition:transform .2s ease;visibility:hidden}
   .site-mobile-navigation.is-open .site-mobile-overlay{opacity:1;pointer-events:auto}
@@ -33,6 +28,6 @@
   .site-mobile-toggle:focus-visible,.site-mobile-close:focus-visible,.site-mobile-links a:focus-visible{outline:3px solid #e49a78;outline-offset:3px}
   body.site-mobile-navigation-open{overflow:hidden}
 }
-@media(max-width:480px){.site-mobile-header{padding-left:max(20px,env(safe-area-inset-left))}}
+@media(max-width:480px){.site-mobile-header{padding-left:max(20px,env(safe-area-inset-left))}.site-mobile-header .logo,.site-mobile-header .logo img{width:min(280px,calc(100vw - 92px))}}
 @media(max-width:320px){.site-mobile-header{padding-right:max(16px,env(safe-area-inset-right));padding-left:max(16px,env(safe-area-inset-left))}.site-mobile-header .logo,.site-mobile-header .logo img{width:min(230px,calc(100vw - 90px))}}
-@media(prefers-reduced-motion:reduce){.site-mobile-drawer,.site-mobile-header,.site-mobile-header .logo img,.site-mobile-toggle,.site-mobile-toggle span,.site-mobile-toggle-mark{transition:none}}
+@media(prefers-reduced-motion:reduce){.site-mobile-drawer,.site-mobile-header,.site-mobile-header .logo img,.site-mobile-toggle,.site-mobile-toggle span{transition:none}}

@@ -32,7 +32,7 @@ function shell({ title, description, canonical, content, depth = 0, ogImage = FA
   <meta name="twitter:image" content="${escapeHtml(ogImage)}">
   <link rel="stylesheet" href="assets/news.css?v=news-foundation-1">
   <style>.logo{margin-left:0}</style>
-  <link rel="stylesheet" href="assets/mobile-navigation.css?v=mobile-navigation-4">
+  <link rel="stylesheet" href="assets/mobile-navigation.css?v=mobile-navigation-5">
   <link rel="stylesheet" href="assets/mobile-foundation.css?v=mobile-foundation-4">
 </head>
 <body data-site-page="news">
@@ -45,7 +45,7 @@ function shell({ title, description, canonical, content, depth = 0, ogImage = FA
     </main>
     <aside class="sidebar" aria-hidden="true"></aside>
   </div>
-  <script type="module" src="assets/site-navigation.js?v=site-navigation-6"></script>
+  <script type="module" src="assets/site-navigation.js?v=site-navigation-7"></script>
   <script src="assets/tracking.js?v=tracking-1" defer></script>
 </body>
 </html>

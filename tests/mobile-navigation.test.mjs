@@ -56,16 +56,17 @@ test('hamburger and drawer expose required accessibility controls', () => {
   assert.match(mobile, /toggle\.focus\(\)/);
 });
 
-test('hamburger morphs its three existing lines into the official D mark', () => {
-  assert.match(css, /site-mobile-toggle span\{[^}]*position:absolute;[^}]*width:21px;height:2px;[^}]*transition:[^}]*\.2s ease/);
+test('hamburger morphs its three existing lines into an abstract open composition', () => {
+  assert.match(css, /site-mobile-toggle span\{[^}]*position:absolute;[^}]*width:21px;height:2px;[^}]*transition:[^}]*\.22s ease/);
   assert.match(css, /site-mobile-toggle span:nth-child\(1\)\{transform:translateY\(-6px\)\}/);
   assert.match(css, /site-mobile-toggle span:nth-child\(3\)\{transform:translateY\(6px\)\}/);
-  assert.match(mobile, /toggleMark\.src = '\/assets\/distillery-d\.svg'/);
-  assert.match(mobile, /toggleMark\.alt = ''/);
-  assert.match(mobile, /toggleMark\.setAttribute\('aria-hidden', 'true'\)/);
-  assert.match(css, /is-open \.site-mobile-toggle-mark\{opacity:1;transform:scale\(1\)\}/);
-  assert.doesNotMatch(css, /rotate\((?:90|28|-28)deg\)/);
-  assert.match(css, /prefers-reduced-motion:reduce[^}]+site-mobile-toggle-mark\{transition:none\}/);
+  assert.doesNotMatch(mobile, /toggleMark|site-mobile-toggle-mark/);
+  assert.doesNotMatch(css, /site-mobile-toggle-mark/);
+  assert.match(css, /is-open \.site-mobile-toggle span\{opacity:1\}/);
+  assert.match(css, /span:nth-child\(1\)\{[^}]*width:31px;transform:rotate\(82deg\)/);
+  assert.match(css, /span:nth-child\(2\)\{[^}]*width:31px;transform:rotate\(77deg\)/);
+  assert.match(css, /span:nth-child\(3\)\{[^}]*width:42px;transform:rotate\(-43deg\)/);
+  assert.match(css, /prefers-reduced-motion:reduce[^}]+site-mobile-toggle span\{transition:none\}/);
 });
 
 test('mobile header moves and restores the single existing logo deterministically', () => {
@@ -80,6 +81,10 @@ test('mobile header moves and restores the single existing logo deterministicall
   assert.doesNotMatch(mobile, /setInterval|MutationObserver/);
   assert.match(css, /site-mobile-header\{position:fixed;top:0;left:0;right:0/);
   assert.match(css, /site-mobile-logo-anchor\{display:block;height:86px\}/);
+  assert.match(css, /@media\(max-width:480px\)/);
+  assert.match(css, /\.site-mobile-header \.logo,\.site-mobile-header \.logo img\{width:min\(280px,calc\(100vw - 92px\)\)\}/);
+  assert.match(css, /site-mobile-header\.site-mobile-header-scrolled \.logo img\{filter:invert\(1\)\}/);
+  assert.doesNotMatch(css, /site-mobile-header\.site-mobile-header-scrolled \.site-mobile-toggle/);
 });
 
 test('official D favicon and manifest are root absolute on every public page', async () => {
@@ -121,11 +126,11 @@ test('mobile foundation covers forms, residents, gallery and focus visibility', 
 test('all public navigation pages use consistent cache versions', async () => {
   for (const name of publicPages) {
     const html = await readFile(new URL(name, root), 'utf8');
-    assert.match(html, /site-navigation\.js\?v=site-navigation-6/);
-    assert.doesNotMatch(html, /site-navigation\.js\?v=site-navigation-[1-5]/);
-    assert.match(html, /mobile-navigation\.css\?v=mobile-navigation-4/);
+    assert.match(html, /site-navigation\.js\?v=site-navigation-7/);
+    assert.doesNotMatch(html, /site-navigation\.js\?v=site-navigation-[1-6]/);
+    assert.match(html, /mobile-navigation\.css\?v=mobile-navigation-5/);
     assert.match(html, /mobile-foundation\.css\?v=mobile-foundation-4/);
     assert.doesNotMatch(html, /mobile-foundation\.css\?v=mobile-foundation-[1-3]/);
   }
-  assert.match(owner, /mobile-navigation\.js\?v=mobile-navigation-3/);
+  assert.match(owner, /mobile-navigation\.js\?v=mobile-navigation-4/);
 });
