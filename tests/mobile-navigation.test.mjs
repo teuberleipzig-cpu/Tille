@@ -82,6 +82,16 @@ test('mobile header moves and restores the single existing logo deterministicall
   assert.match(css, /site-mobile-logo-anchor\{display:block;height:86px\}/);
 });
 
+test('official D favicon and manifest are root absolute on every public page', async () => {
+  for (const name of publicPages) {
+    const html = await readFile(new URL(name, root), 'utf8');
+    assert.match(html, /<link rel="icon" href="\/assets\/distillery-d\.svg" type="image\/svg\+xml">/);
+    assert.doesNotMatch(html, /rel="icon"[^>]+favicon\.svg/);
+  }
+  const manifest = JSON.parse(await readFile(new URL('site.webmanifest', root), 'utf8'));
+  assert.deepEqual(manifest.icons[0], { src: '/assets/distillery-d.svg', sizes: 'any', type: 'image/svg+xml', purpose: 'any' });
+});
+
 test('mobile navigation meets touch, safe-area and reduced-motion contracts', () => {
   assert.match(css, /site-mobile-toggle[^}]+width:48px;height:48px/);
   assert.match(css, /site-mobile-close[^}]+width:48px;height:48px/);
