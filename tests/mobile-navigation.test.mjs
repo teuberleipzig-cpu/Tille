@@ -57,20 +57,23 @@ test('hamburger and drawer expose required accessibility controls', () => {
 });
 
 test('hamburger has exactly eight three-line art state contracts', () => {
-  assert.match(css, /site-mobile-toggle span\{[^}]*position:absolute;[^}]*width:21px;height:2px;[^}]*transition:[^}]*\.22s ease/);
+  assert.match(css, /site-mobile-toggle span\{[^}]*position:absolute;[^}]*width:21px;height:2px;[^}]*transition:top \.22s ease,left \.22s ease,transform \.22s ease/);
+  assert.doesNotMatch(css, /site-mobile-toggle span\{[^}]*transition:[^}]*width/);
   assert.match(css, /site-mobile-toggle span:nth-child\(1\)\{transform:translateY\(-6px\)\}/);
   assert.match(css, /site-mobile-toggle span:nth-child\(3\)\{transform:translateY\(6px\)\}/);
   assert.doesNotMatch(mobile, /toggleMark|site-mobile-toggle-mark/);
   assert.doesNotMatch(css, /site-mobile-toggle-mark/);
   assert.match(css, /is-open \.site-mobile-toggle span\{opacity:1\}/);
-  const contracts = [...css.matchAll(/data-art-state="(\d)"\] span:nth-child\(([123])\)/g)].map(match => `${match[1]}:${match[2]}`);
+  const rules = [...css.matchAll(/data-art-state="(\d)"\] span:nth-child\(([123])\)\{([^}]+)\}/g)];
+  const contracts = rules.map(match => `${match[1]}:${match[2]}`);
   assert.equal(contracts.length, 24);
+  for (const rule of rules) assert.doesNotMatch(rule[3], /(?:^|;)width:/);
   for (let state = 0; state < ART_STATE_COUNT; state += 1) {
     assert.deepEqual(contracts.filter(contract => contract.startsWith(`${state}:`)), [`${state}:1`,`${state}:2`,`${state}:3`]);
   }
-  assert.match(css, /data-art-state="0"\] span:nth-child\(1\)\{[^}]*width:31px;transform:rotate\(82deg\)/);
-  assert.match(css, /data-art-state="0"\] span:nth-child\(2\)\{[^}]*width:31px;transform:rotate\(77deg\)/);
-  assert.match(css, /data-art-state="0"\] span:nth-child\(3\)\{[^}]*width:42px;transform:rotate\(-43deg\)/);
+  assert.match(css, /data-art-state="0"\] span:nth-child\(1\)\{[^}]*left:11px;transform:rotate\(82deg\)/);
+  assert.match(css, /data-art-state="0"\] span:nth-child\(2\)\{[^}]*left:19px;transform:rotate\(77deg\)/);
+  assert.match(css, /data-art-state="0"\] span:nth-child\(3\)\{[^}]*left:11\.5px;transform:rotate\(-43deg\)/);
   assert.match(css, /prefers-reduced-motion:reduce[^}]+site-mobile-toggle span\{transition:none\}/);
 });
 
@@ -150,7 +153,7 @@ test('all public navigation pages use consistent cache versions', async () => {
     const html = await readFile(new URL(name, root), 'utf8');
     assert.match(html, /site-navigation\.js\?v=site-navigation-8/);
     assert.doesNotMatch(html, /site-navigation\.js\?v=site-navigation-[1-7]/);
-    assert.match(html, /mobile-navigation\.css\?v=mobile-navigation-6/);
+    assert.match(html, /mobile-navigation\.css\?v=mobile-navigation-7/);
     assert.match(html, /mobile-foundation\.css\?v=mobile-foundation-4/);
     assert.doesNotMatch(html, /mobile-foundation\.css\?v=mobile-foundation-[1-3]/);
   }

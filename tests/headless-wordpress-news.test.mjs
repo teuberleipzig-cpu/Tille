@@ -81,11 +81,11 @@ const currentShellContracts = [
   /<link rel="icon" href="\/assets\/distillery-d\.svg" type="image\/svg\+xml">/,
   /<img src="assets\/distillery-logo\.svg" alt="Distillery">/,
   /<style>\.logo\{margin-left:0\}<\/style>/,
-  /mobile-navigation\.css\?v=mobile-navigation-6/,
+  /mobile-navigation\.css\?v=mobile-navigation-7/,
   /mobile-foundation\.css\?v=mobile-foundation-4/,
   /site-navigation\.js\?v=site-navigation-8/
 ];
-const staleShellContracts = /href="favicon\.svg"|distillery-logo\.png|mobile-navigation-[2-5]|mobile-foundation-2|site-navigation-[5-7]/;
+const staleShellContracts = /href="favicon\.svg"|distillery-logo\.png|mobile-navigation-[2-6]|mobile-foundation-2|site-navigation-[5-7]/;
 
 test('generated overview and article use the current public shell', () => {
   for (const html of [renderOverview(published()), renderArticle(published()[0])]) {
