@@ -39,12 +39,6 @@ export function initialiseMobileNavigation(config, activePageId, nav) {
   toggle.setAttribute('aria-expanded', 'false');
   toggle.setAttribute('aria-controls', 'site-mobile-drawer');
   for (let line = 0; line < 3; line += 1) toggle.append(document.createElement('span'));
-  const toggleMark = document.createElement('img');
-  toggleMark.className = 'site-mobile-toggle-mark';
-  toggleMark.src = '/assets/distillery-d.svg';
-  toggleMark.alt = '';
-  toggleMark.setAttribute('aria-hidden', 'true');
-  toggle.append(toggleMark);
 
   const overlay = document.createElement('button');
   overlay.className = 'site-mobile-overlay';
