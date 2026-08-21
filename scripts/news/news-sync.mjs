@@ -17,7 +17,8 @@ export function validateWordPressBaseUrl(value) {
 
 export function isAllowedNewsOutputPath(file) {
   const normalized = String(file || '').replaceAll('\\', '/');
-  return normalized === 'news.html'
+  return normalized === 'sitemap.xml'
+    || normalized === 'news.html'
     || normalized === 'news/index.html'
     || /^news\/[a-z0-9]+(?:-[a-z0-9]+)*\/index\.html$/.test(normalized);
 }
@@ -71,7 +72,8 @@ export function diffNewsOutput(currentFiles, generatedFiles) {
     updated,
     removed,
     overviewChanged: changedFiles.includes('news/index.html'),
-    legacyChanged: changedFiles.includes('news.html')
+    legacyChanged: changedFiles.includes('news.html'),
+    sitemapChanged: changedFiles.includes('sitemap.xml')
   };
 }
 
@@ -106,6 +108,8 @@ async function collect(root, relative, output) {
 
 export async function readNewsOutput(root) {
   const output = new Map();
+  try { output.set('sitemap.xml', await readFile(path.join(root, 'sitemap.xml'), 'utf8')); }
+  catch (error) { if (error.code === 'ENOENT') throw new Error('sitemap.xml fehlt im Workspace.'); throw error; }
   try { output.set('news.html', await readFile(path.join(root, 'news.html'), 'utf8')); }
   catch (error) { if (error.code !== 'ENOENT') throw error; }
   await collect(root, 'news', output);
@@ -117,7 +121,7 @@ export async function applyNewsOutput(workspaceRoot, generatedFiles) {
   const files = entries(generatedFiles);
   assertAllowedNewsOutputPaths(files.keys());
   assertNewsOutputContentSafe(files);
-  if (!files.has('news.html') || !files.has('news/index.html')) throw new Error('Generated news output is incomplete.');
+  if (!files.has('sitemap.xml') || !files.has('news.html') || !files.has('news/index.html')) throw new Error('Generated news output is incomplete.');
   await rm(path.join(workspaceRoot, 'news'), { recursive: true, force: true });
   await rm(path.join(workspaceRoot, 'news.html'), { force: true });
   for (const [file, content] of files) {

@@ -1,4 +1,5 @@
 import { escapeHtml } from './html-sanitize.mjs';
+import { newsArticleUrl, renderNewsArticleStructuredData } from './news-seo.mjs';
 
 const SITE_URL = 'https://www.distillery.de';
 const FALLBACK_IMAGE = `${SITE_URL}/assets/social-preview.svg`;
@@ -8,8 +9,9 @@ function displayDate(value) {
   return `${day}.${month}.${year}`;
 }
 
-function shell({ title, description, canonical, content, depth = 0, ogImage = FALLBACK_IMAGE, ogType = 'website' }) {
+function shell({ title, description, canonical, content, depth = 0, ogImage = FALLBACK_IMAGE, ogType = 'website', structuredData = '' }) {
   const prefix = '../'.repeat(depth);
+  const structuredDataMarkup = structuredData ? `  ${structuredData}\n` : '';
   return `<!doctype html>
 <html lang="de">
 <head>
@@ -30,7 +32,7 @@ function shell({ title, description, canonical, content, depth = 0, ogImage = FA
   <meta property="og:image" content="${escapeHtml(ogImage)}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="${escapeHtml(ogImage)}">
-  <link rel="stylesheet" href="assets/news.css?v=news-foundation-1">
+${structuredDataMarkup}  <link rel="stylesheet" href="assets/news.css?v=news-foundation-1">
   <style>.logo{margin-left:0}</style>
   <link rel="stylesheet" href="assets/mobile-navigation.css?v=mobile-navigation-7">
   <link rel="stylesheet" href="assets/mobile-foundation.css?v=mobile-foundation-4">
@@ -67,8 +69,8 @@ export function renderOverview(posts, { depth = 0, articlePrefix = 'news/' } = {
 }
 
 export function renderArticle(post) {
-  const canonical = `${SITE_URL}/news/${post.slug}/`;
-  return shell({ title: `Distillery – ${post.title}`, description: post.excerpt || post.title, canonical, depth: 2, ogImage: post.featuredImage?.url || FALLBACK_IMAGE, ogType: 'article', content: `<article class="news-content news-article">
+  const canonical = newsArticleUrl(post.slug);
+  return shell({ title: `Distillery – ${post.title}`, description: post.excerpt || post.title, canonical, depth: 2, ogImage: post.featuredImage?.url || FALLBACK_IMAGE, ogType: 'article', structuredData: renderNewsArticleStructuredData(post), content: `<article class="news-content news-article">
         <a class="news-back" href="news/">Zurück zu News</a>
         <h1>${escapeHtml(post.title)}</h1>
         <time datetime="${escapeHtml(post.publishedAt)}">${displayDate(post.publishedAt)}</time>
