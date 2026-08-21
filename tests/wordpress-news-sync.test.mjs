@@ -11,11 +11,13 @@ import { prepareNewsSync } from '../scripts/news/prepare-sync.mjs';
 
 const workflow = await readFile(new URL('../.github/workflows/wordpress-news-sync.yml', import.meta.url), 'utf8');
 const fixtures = JSON.parse(await readFile(new URL('./fixtures/wordpress-posts.json', import.meta.url), 'utf8'));
-const output = (articles = {}) => new Map([
-  ['news.html', 'legacy'], ['news/index.html', 'overview'],
+const sitemap = await readFile(new URL('../sitemap.xml', import.meta.url), 'utf8');
+const output = (articles = {}, sitemapValue = sitemap) => new Map([
+  ['sitemap.xml', sitemapValue], ['news.html', 'legacy'], ['news/index.html', 'overview'],
   ...Object.entries(articles).map(([slug, html]) => [`news/${slug}/index.html`, html])
 ]);
 const response = data => ({ ok: true, status: 200, headers: { get: () => '1' }, json: async () => data });
+const seedSitemap = root => writeFile(path.join(root, 'sitemap.xml'), sitemap, 'utf8');
 
 test('new post is added', () => assert.deepEqual(diffNewsOutput(output(), output({ 'new-post': 'x' })).added, ['new-post']));
 test('changed post is updated', () => assert.deepEqual(diffNewsOutput(output({ post: 'a' }), output({ post: 'b' })).updated, ['post']));
@@ -23,6 +25,7 @@ test('removed post is removed', () => assert.deepEqual(diffNewsOutput(output({ o
 test('unchanged output has no changes', () => assert.equal(diffNewsOutput(output({ post: 'a' }), output({ post: 'a' })).hasChanges, false));
 test('overview change is detected', () => { const next = output(); next.set('news/index.html', 'new'); assert.equal(diffNewsOutput(output(), next).overviewChanged, true); });
 test('legacy change is detected', () => { const next = output(); next.set('news.html', 'new'); assert.equal(diffNewsOutput(output(), next).legacyChanged, true); });
+test('sitemap change is detected', () => assert.equal(diffNewsOutput(output(), output({}, `${sitemap}\n`)).sitemapChanged, true));
 test('non-news path is rejected by diff', () => assert.throws(() => diffNewsOutput(output(), { 'index.html': 'x' }), /not allowed/));
 
 test('workflow_dispatch is the only trigger', () => { assert.match(workflow, /\non:\n  workflow_dispatch:/); assert.doesNotMatch(workflow, /\n  (?:push|schedule|repository_dispatch):/); });
@@ -45,23 +48,24 @@ test('valid WordPress URL is normalized', () => assert.equal(validateWordPressBa
 test('WordPress URL credentials are rejected', () => assert.throws(() => validateWordPressBaseUrl('https://user:pass@cms.example'), /credentials/));
 test('mock REST source generates successfully', async () => {
   const root = await mkdtemp(path.join(os.tmpdir(), 'tille-sync-test-'));
-  try { const result = await prepareNewsSync({ mode: 'validate-only', workspaceRoot: root, wordpressBaseUrl: 'https://cms.example', fetchImpl: async () => response(fixtures) }); assert.equal(result.articleCount, 3); }
+  try { await seedSitemap(root); const result = await prepareNewsSync({ mode: 'validate-only', workspaceRoot: root, wordpressBaseUrl: 'https://cms.example', fetchImpl: async () => response(fixtures) }); assert.equal(result.articleCount, 3); }
   finally { await rm(root, { recursive: true, force: true }); }
 });
 test('source-origin filtering remains active', async () => {
   const root = await mkdtemp(path.join(os.tmpdir(), 'tille-sync-origin-'));
   const source = structuredClone(fixtures[0]); source.content.rendered = '<a href="https://cms.example/internal">internal</a>';
-  try { await prepareNewsSync({ mode: 'sync-pr', workspaceRoot: root, wordpressBaseUrl: 'https://cms.example', fetchImpl: async () => response([source]) }); assert.doesNotMatch(await readFile(path.join(root, 'news', source.slug, 'index.html'), 'utf8'), /href="https:\/\/cms\.example/); }
+  try { await seedSitemap(root); await prepareNewsSync({ mode: 'sync-pr', workspaceRoot: root, wordpressBaseUrl: 'https://cms.example', fetchImpl: async () => response([source]) }); assert.doesNotMatch(await readFile(path.join(root, 'news', source.slug, 'index.html'), 'utf8'), /href="https:\/\/cms\.example/); }
   finally { await rm(root, { recursive: true, force: true }); }
 });
 test('published-only behavior remains active', async () => {
   const root = await mkdtemp(path.join(os.tmpdir(), 'tille-sync-publish-'));
-  try { const result = await prepareNewsSync({ mode: 'validate-only', workspaceRoot: root, wordpressBaseUrl: 'https://cms.example', fetchImpl: async () => response(fixtures) }); assert.equal(result.normalizedPosts, 3); }
+  try { await seedSitemap(root); const result = await prepareNewsSync({ mode: 'validate-only', workspaceRoot: root, wordpressBaseUrl: 'https://cms.example', fetchImpl: async () => response(fixtures) }); assert.equal(result.normalizedPosts, 3); }
   finally { await rm(root, { recursive: true, force: true }); }
 });
 
 test('news overview path is accepted', () => assert.equal(isAllowedNewsOutputPath('news/index.html'), true));
 test('news article path is accepted', () => assert.equal(isAllowedNewsOutputPath('news/safe-slug/index.html'), true));
+test('sitemap path is accepted and arbitrary root XML is rejected', () => { assert.equal(isAllowedNewsOutputPath('sitemap.xml'), true); assert.equal(isAllowedNewsOutputPath('other.xml'), false); });
 test('residents path is rejected', () => assert.throws(() => assertAllowedNewsOutputPaths(['public/residents/data/residents.json']), /not allowed/));
 test('events path is rejected', () => assert.throws(() => assertAllowedNewsOutputPaths(['public/events/data/event-index.json']), /not allowed/));
 test('site navigation path is rejected', () => assert.throws(() => assertAllowedNewsOutputPaths(['public/site/data/site-navigation.json']), /not allowed/));
@@ -108,6 +112,7 @@ test('stale close performs no git push', () => assert.doesNotMatch(workflow.spli
 test('stale close does not delete a branch', () => assert.doesNotMatch(workflow.split('- name: Report no changes and close stale sync PR')[1], /git branch|gh api.*refs|--delete/));
 test('workflow still contains no auto merge', () => assert.doesNotMatch(workflow, /gh pr merge|enable-auto-merge/));
 test('workflow still contains no deploy', () => assert.doesNotMatch(workflow, /deploy|docker (?:build|push)|kubectl/i));
+test('workflow stages and allowlists sitemap exactly', () => { assert.match(workflow, /git add -A -- news\.html news sitemap\.xml/); assert.equal(workflow.includes("^(news\\.html|news/([^/]+/)?index\\.html|sitemap\\.xml)$"), true); assert.doesNotMatch(workflow, /\*\.xml/); });
 
 test('apply removes orphaned article output', async () => {
   const root = await mkdtemp(path.join(os.tmpdir(), 'tille-sync-apply-'));
@@ -116,6 +121,12 @@ test('apply removes orphaned article output', async () => {
 });
 test('sync-pr applies generated output while validate-only does not', async () => {
   const root = await mkdtemp(path.join(os.tmpdir(), 'tille-sync-modes-'));
-  try { await prepareNewsSync({ mode: 'validate-only', workspaceRoot: root, wordpressBaseUrl: 'https://cms.example', fetchImpl: async () => response([]) }); await assert.rejects(readFile(path.join(root, 'news.html'))); await prepareNewsSync({ mode: 'sync-pr', workspaceRoot: root, wordpressBaseUrl: 'https://cms.example', fetchImpl: async () => response([]) }); assert.match(await readFile(path.join(root, 'news.html'), 'utf8'), /Noch keine News/); }
+  try { await seedSitemap(root); const before = await readFile(path.join(root, 'sitemap.xml'), 'utf8'); await prepareNewsSync({ mode: 'validate-only', workspaceRoot: root, wordpressBaseUrl: 'https://cms.example', fetchImpl: async () => response([]) }); await assert.rejects(readFile(path.join(root, 'news.html'))); assert.equal(await readFile(path.join(root, 'sitemap.xml'), 'utf8'), before); await prepareNewsSync({ mode: 'sync-pr', workspaceRoot: root, wordpressBaseUrl: 'https://cms.example', fetchImpl: async () => response([]) }); assert.match(await readFile(path.join(root, 'news.html'), 'utf8'), /Noch keine News/); }
+  finally { await rm(root, { recursive: true, force: true }); }
+});
+
+test('missing workspace sitemap fails closed before sync output is applied', async () => {
+  const root = await mkdtemp(path.join(os.tmpdir(), 'tille-sync-no-sitemap-'));
+  try { await assert.rejects(() => prepareNewsSync({ mode: 'sync-pr', workspaceRoot: root, wordpressBaseUrl: 'https://cms.example', fetchImpl: async () => response([]) }), /sitemap\.xml fehlt/); await assert.rejects(readFile(path.join(root, 'news.html'))); }
   finally { await rm(root, { recursive: true, force: true }); }
 });

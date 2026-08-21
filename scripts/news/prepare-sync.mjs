@@ -1,18 +1,20 @@
-import { appendFile, mkdtemp, rm } from 'node:fs/promises';
+import { appendFile, mkdtemp, rm, writeFile } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { generateNewsSite, loadNewsSource } from './generate-news.mjs';
 import { applyNewsOutput, assertNewsOutputContentSafe, diffNewsOutput, readNewsOutput, validateWordPressBaseUrl } from './news-sync.mjs';
+import { updateNewsSitemap } from './news-seo.mjs';
 
 export async function prepareNewsSync({ mode, workspaceRoot, wordpressBaseUrl, fetchImpl = globalThis.fetch }) {
   if (!['validate-only', 'sync-pr'].includes(mode)) throw new Error(`Unsupported sync mode: ${mode}`);
   const sourceOrigin = validateWordPressBaseUrl(wordpressBaseUrl);
   const temporaryRoot = await mkdtemp(path.join(os.tmpdir(), 'tille-news-sync-'));
   try {
+    const currentFiles = await readNewsOutput(workspaceRoot);
     const source = await loadNewsSource({ mode: 'wordpress', wordpressBaseUrl: sourceOrigin, fetchImpl });
     const result = await generateNewsSite({ rawPosts: source.rawPosts, outputRoot: temporaryRoot, sourceOrigin: source.sourceOrigin });
-    const currentFiles = await readNewsOutput(workspaceRoot);
+    await writeFile(path.join(temporaryRoot, 'sitemap.xml'), updateNewsSitemap(currentFiles.get('sitemap.xml'), result.posts), 'utf8');
     const generatedFiles = await readNewsOutput(temporaryRoot);
     assertNewsOutputContentSafe(generatedFiles);
     const diff = diffNewsOutput(currentFiles, generatedFiles);
@@ -51,6 +53,7 @@ async function writeActionsOutput(summary) {
     `added=${summary.added.join(',')}`,
     `updated=${summary.updated.join(',')}`,
     `removed=${summary.removed.join(',')}`,
+    `sitemap_changed=${summary.sitemapChanged}`,
     `source_origin=${summary.sourceOrigin}`
   ];
   await appendFile(process.env.GITHUB_OUTPUT, `${lines.join('\n')}\n`, 'utf8');
