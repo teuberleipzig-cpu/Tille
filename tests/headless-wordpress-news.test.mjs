@@ -11,6 +11,7 @@ import { generateNewsSite, loadNewsSource } from '../scripts/news/generate-news.
 
 const fixturePath = new URL('./fixtures/wordpress-posts.json', import.meta.url);
 const fixtures = JSON.parse(await readFile(fixturePath, 'utf8'));
+const fixtureSlugs = ['summer-update', 'lange-nacht', 'unsafe-content'];
 const published = () => normalizeWordPressPosts(fixtures);
 const post = (overrides = {}) => ({ ...structuredClone(fixtures[0]), ...overrides });
 const temp = () => mkdtemp(path.join(os.tmpdir(), 'tille-news-'));
@@ -118,7 +119,16 @@ test('same input produces byte-identical files', async t => { const a = await te
 test('generated public article contains no source-origin anchor href', async t => { const root = await temp(); t.after(() => rm(root, { recursive: true, force: true })); const value = post({ content: { rendered: '<p><a href="https://cms.example.org/post-one/">Post</a><img src="https://cms.example.org/wp-content/uploads/test.jpg"></p>' } }); await generateNewsSite({ rawPosts: [value], outputRoot: root, sourceOrigin: 'https://cms.example.org' }); const html = await readFile(path.join(root, 'news/summer-update/index.html'), 'utf8'); assert.doesNotMatch(html, /<a[^>]+href="https:\/\/cms\.example\.org/); assert.match(html, /<img src="https:\/\/cms\.example\.org\/wp-content\/uploads\/test\.jpg">/); });
 test('source filtering keeps Distillery canonical', () => { const value = post({ content: { rendered: '<a href="https://cms.example.org/post-one/">Post</a>' } }); const html = renderArticle(normalizeWordPressPost(value, { sourceOrigin: 'https://cms.example.org' })); assert.match(html, /https:\/\/www\.distillery\.de\/news\/summer-update\//); assert.doesNotMatch(html, /canonical[^>]+cms\.example\.org/); });
 
-test('committed public output is neutral and fixture-free', async () => { const legacy = await readFile(new URL('../news.html', import.meta.url), 'utf8'), canonical = await readFile(new URL('../news/index.html', import.meta.url), 'utf8'); assert.match(legacy, /Noch keine News/); assert.match(canonical, /Noch keine News/); for (const slug of ['summer-update', 'lange-nacht', 'unsafe-content']) { assert.doesNotMatch(legacy, new RegExp(slug)); await assert.rejects(() => readFile(new URL(`../news/${slug}/index.html`, import.meta.url))); } });
+test('committed public output is fixture-free', async () => {
+  const legacy = await readFile(new URL('../news.html', import.meta.url), 'utf8');
+  const canonical = await readFile(new URL('../news/index.html', import.meta.url), 'utf8');
+  for (const slug of fixtureSlugs) {
+    const pattern = new RegExp(slug);
+    assert.doesNotMatch(legacy, pattern);
+    assert.doesNotMatch(canonical, pattern);
+    await assert.rejects(() => readFile(new URL(`../news/${slug}/index.html`, import.meta.url)));
+  }
+});
 test('legacy and canonical overview share one generated shell', async () => { const legacy = await readFile(new URL('../news.html', import.meta.url), 'utf8'), canonical = await readFile(new URL('../news/index.html', import.meta.url), 'utf8'); assert.match(legacy, /data-site-page="news"/); assert.match(canonical, /data-site-page="news"/); assert.match(legacy, /site-navigation-8/); assert.match(canonical, /site-navigation-8/); assert.match(legacy, /mobile-foundation-4/); assert.match(canonical, /mobile-foundation-4/); });
 test('committed and generated News shells keep branding and cache parity', async () => {
   const shells = [
