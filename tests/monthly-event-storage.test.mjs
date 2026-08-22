@@ -10,11 +10,27 @@ const root = new URL('../', import.meta.url);
 const readGenerated = path => readFile(new URL(path, root), 'utf8').then(JSON.parse);
 const original = await loadMonthlyEventDocument(readGenerated);
 const canonicalDigest = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
+const nonFileMakerDocument = value => ({ ...value, events: value.events.filter(event => !String(event.id || '').startsWith('fm-')) });
 const built = buildEventStorage(original);
 const reconstructed = reconstructEventDocument(built);
 
-test('generated production history matches the pre-migration canonical digest', () => {
-  assert.equal(canonicalDigest(original), 'fc464bed43a8f27717b1664c18e85053c754c8b8dac0f19a9f97ef7744c185fb');
+test('generated non-FileMaker production history matches the pre-FileMaker canonical digest', () => {
+  assert.equal(canonicalDigest(nonFileMakerDocument(original)), 'fc464bed43a8f27717b1664c18e85053c754c8b8dac0f19a9f97ef7744c185fb');
+});
+test('legacy digest retains metadata and the complete ordered non-FileMaker event data', () => {
+  const legacy = nonFileMakerDocument(original);
+  assert.deepEqual(legacy.meta, original.meta);
+  assert.deepEqual(legacy.events, original.events.filter(event => !String(event.id || '').startsWith('fm-')));
+});
+test('additional controlled FileMaker events do not change the protected legacy digest', () => {
+  const withAdditionalFileMakerEvent = structuredClone(original);
+  withAdditionalFileMakerEvent.events.push({ id: 'fm-test-controlled-event', date: '2026-08-22', title: 'Test', sections: [] });
+  assert.equal(canonicalDigest(nonFileMakerDocument(withAdditionalFileMakerEvent)), canonicalDigest(nonFileMakerDocument(original)));
+});
+test('non-FileMaker event changes alter the protected legacy digest', () => {
+  const changed = structuredClone(original);
+  changed.events.find(event => !String(event.id || '').startsWith('fm-')).title += ' changed';
+  assert.notEqual(canonicalDigest(nonFileMakerDocument(changed)), canonicalDigest(nonFileMakerDocument(original)));
 });
 
 test('manifest parses and declares monthly storage schema', async () => {
