@@ -2,13 +2,13 @@
 
 ## Architektur und Grenze
 
-FileMaker sendet ausschließlich Operation und Event-JSON per HTTPS an GitHub Actions. Der Workflow validiert die Daten, rekonstruiert den aktuellen Eventbestand aus `main`, wendet Upsert oder Remove an, regeneriert den bestehenden Monthly Event Storage und erzeugt höchstens einen kontrollierten Draft-PR.
+FileMaker sendet ausschließlich Operation und Event-JSON per HTTPS an GitHub Actions. Der Workflow validiert die Daten, rekonstruiert den aktuellen Eventbestand aus `main`, wendet Upsert oder Remove an, regeneriert den bestehenden Monthly Event Storage und erzeugt höchstens einen kontrollierten Draft-PR. Bei `sync-pr` mit echten Änderungen prüft der GitHub-Workflow diesen konkreten PR anschließend erneut, mergt ihn SHA-gebunden und startet den bestehenden Staging-Deploy-Workflow mit dem verifizierten Merge-SHA.
 
 ```text
-FileMaker → workflow_dispatch → Validierung → Monthly Event Storage → Draft PR → menschliche Freigabe
+FileMaker → workflow_dispatch → Validierung → Monthly Event Storage → Draft PR → Sicherheitsgates → SHA-gebundener Merge → SHA-geprüfter Staging-Deploy-Dispatch
 ```
 
-FileMaker schreibt weder GitHub Contents noch `main`, kennt keine Monats-/Indexdateien und startet kein Deployment. Der Workflow mergt und deployt ebenfalls nicht.
+FileMaker schreibt weder GitHub Contents noch `main`, kennt keine Monats-/Indexdateien, mergt keinen PR und deployt nicht selbst. Diese kontrollierten Schritte übernimmt ausschließlich der GitHub-Workflow für `sync-pr` und ausschließlich für den konkreten `automation/filemaker-event/*`-PR. `validate-only` bleibt vollständig read-only; No-change erzeugt weder Merge noch Deployment.
 
 ## GitHub-Endpunkt und Token
 
@@ -143,17 +143,17 @@ I. `Validation PASS`, Event-ID, Operation, Monate und Changed-Files prüfen.
 
 J. **Website – Event senden** ausführen.
 
-K. erzeugten Draft-PR öffnen.
+K. erzeugten Draft-PR und dessen GitHub-Actions-Lauf öffnen.
 
 L. ausschließlich erwartete Event-Storage-Diffs prüfen.
 
-M. erst nach menschlicher Freigabe mergen.
+M. Sicherheitsgates, Expected-Head-SHA-Merge und `origin/main`-Verifikation im Lauf prüfen.
 
-N. normales Main-Deployment abwarten.
+N. expliziten, mit `expected_sha` geschützten Dispatch von `docker-publish.yml` prüfen.
 
 O. `www-test.distillery.de` prüfen.
 
-Vor dem echten Senden zuerst `validate-only`. Der erste synthetische Content-PR bleibt bis zur bewussten Prüfung Draft und wird nicht automatisch gemergt.
+Vor dem echten Senden zuerst `validate-only`. Ein realer End-to-End-Test mit automatischem Merge und Staging-Deployment darf erst nach bewusster Aktivierung der Workflow-Änderung erfolgen.
 
 ## Workflow-Sicherheiten
 
@@ -166,4 +166,9 @@ Vor dem echten Senden zuerst `validate-only`. Der erste synthetische Content-PR 
 - `main`-SHA wird direkt vor dem ersten Write erneut geprüft
 - ausschließlich event-abgeleiteter Automation-Branch und `--force-with-lease`
 - No-change schließt nur den stale PR desselben Event-Branches
-- kein Auto-Merge und kein Deployment
+- Auto-Merge ausschließlich für den konkret erzeugten `automation/filemaker-event/* → main`-PR
+- frische PR-Prüfung von Status, Base, Head Branch, Head SHA und tatsächlichen Changed Files vor Ready
+- erneute PR- und `main`-Prüfung nach Ready; Merge über GitHub REST mit erwartetem Event-Head-SHA
+- Deployment nur nach verifiziertem Merge-SHA und `origin/main == merge_sha`
+- expliziter Dispatch von `docker-publish.yml` auf `main` mit `expected_sha=merge_sha`
+- jeder Fehler beendet den Ablauf ohne nachfolgenden Merge oder Deploy-Dispatch
