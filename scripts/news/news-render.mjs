@@ -32,7 +32,7 @@ function shell({ title, description, canonical, content, depth = 0, ogImage = FA
   <meta property="og:image" content="${escapeHtml(ogImage)}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="${escapeHtml(ogImage)}">
-${structuredDataMarkup}  <link rel="stylesheet" href="assets/news.css?v=news-foundation-1">
+${structuredDataMarkup}  <link rel="stylesheet" href="assets/news.css?v=news-foundation-2">
   <style>.logo{margin-left:0}</style>
   <link rel="stylesheet" href="assets/mobile-navigation.css?v=mobile-navigation-7">
   <link rel="stylesheet" href="assets/mobile-foundation.css?v=mobile-foundation-4">
@@ -57,7 +57,7 @@ ${structuredDataMarkup}  <link rel="stylesheet" href="assets/news.css?v=news-fou
 export function renderOverview(posts, { depth = 0, articlePrefix = 'news/' } = {}) {
   const entries = posts.length ? posts.map(post => `<article class="news-card">
         ${post.featuredImage ? `<a class="news-card-image" href="${articlePrefix}${post.slug}/"><img src="${escapeHtml(post.featuredImage.url)}" alt="${escapeHtml(post.featuredImage.alt)}"></a>` : ''}
-        <time datetime="${escapeHtml(post.publishedAt)}">${displayDate(post.publishedAt)}</time>
+        <div class="news-card-meta"><time datetime="${escapeHtml(post.publishedAt)}">${displayDate(post.publishedAt)}</time></div>
         <h2><a href="${articlePrefix}${post.slug}/">${escapeHtml(post.title)}</a></h2>
         ${post.excerpt ? `<p>${escapeHtml(post.excerpt)}</p>` : ''}
         <a class="news-more" href="${articlePrefix}${post.slug}/">Artikel lesen</a>
@@ -72,8 +72,10 @@ export function renderArticle(post) {
   const canonical = newsArticleUrl(post.slug);
   return shell({ title: `Distillery – ${post.title}`, description: post.excerpt || post.title, canonical, depth: 2, ogImage: post.featuredImage?.url || FALLBACK_IMAGE, ogType: 'article', structuredData: renderNewsArticleStructuredData(post), content: `<article class="news-content news-article">
         <a class="news-back" href="news/">Zurück zu News</a>
-        <h1>${escapeHtml(post.title)}</h1>
-        <time datetime="${escapeHtml(post.publishedAt)}">${displayDate(post.publishedAt)}</time>
+        <header class="news-article-header">
+          <h1>${escapeHtml(post.title)}</h1>
+          <time datetime="${escapeHtml(post.publishedAt)}">${displayDate(post.publishedAt)}</time>
+        </header>
         ${post.featuredImage ? `<img class="news-hero" src="${escapeHtml(post.featuredImage.url)}" alt="${escapeHtml(post.featuredImage.alt)}">` : ''}
         <div class="news-body">${post.contentHtml}</div>
       </article>` });
