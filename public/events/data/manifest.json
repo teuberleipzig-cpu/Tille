@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "totalEvents": 1544,
+  "totalEvents": 1545,
   "topLevelKeys": [
     "meta",
     "events"
@@ -902,7 +902,7 @@
     {
       "key": "2026-08",
       "path": "public/events/data/months/2026-08.json",
-      "count": 2
+      "count": 3
     },
     {
       "key": "2026-09",
