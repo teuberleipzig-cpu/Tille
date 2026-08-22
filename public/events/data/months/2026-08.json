@@ -2,6 +2,16 @@
   "schemaVersion": 1,
   "events": [
     {
+      "id": "fm-ae7ab5cf-bf83-4f85-a84b-83932742d507",
+      "date": "2026-08-21",
+      "title": "5 YEARS OF Proper Pull",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": []
+    },
+    {
       "id": "2026-08-11-neues-event",
       "date": "2026-08-11",
       "title": "Neues Event",
