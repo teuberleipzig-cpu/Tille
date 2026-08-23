@@ -2,6 +2,80 @@
   "schemaVersion": 1,
   "events": [
     {
+      "id": "fm-56116ab2-345a-4834-8d05-7429a773a157",
+      "date": "2026-08-08",
+      "title": "FEED THE RAVER: SACHSENTRANCE",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "PVLLN",
+          "genre": "House",
+          "items": [
+            {
+              "name": "DILIVIUS LENNI",
+              "info": "(Distillery, Räucherkammer)",
+              "link": ""
+            },
+            {
+              "name": "GOLDIE PALM",
+              "info": "(Vacanza, RBL Berlin)",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "GRDN",
+          "genre": "House",
+          "items": [
+            {
+              "name": "BONNIETHEBICEPS",
+              "info": "(fem*vak)",
+              "link": ""
+            },
+            {
+              "name": "JACKY ICKX",
+              "info": "(Berlin)",
+              "link": ""
+            },
+            {
+              "name": "MRGNSTRN",
+              "info": "(Dresden)",
+              "link": ""
+            },
+            {
+              "name": "DJ ZUGZWANG",
+              "info": "(Freiburg)",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "UNTEN",
+          "genre": "Trance",
+          "items": [
+            {
+              "name": "ITSADISASTA",
+              "info": "(Leipzig)",
+              "link": ""
+            },
+            {
+              "name": "THE JAKOB SISTER",
+              "info": "(Sachsentrance)",
+              "link": ""
+            },
+            {
+              "name": "CLJU",
+              "info": "(2K)",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "fm-ae7ab5cf-bf83-4f85-a84b-83932742d507",
       "date": "2026-08-21",
       "title": "5 YEARS OF Proper Pull",
