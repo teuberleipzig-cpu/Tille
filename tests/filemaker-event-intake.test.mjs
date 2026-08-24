@@ -4,8 +4,9 @@ import { mkdtemp, mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 import { buildEventStorage, reconstructEventDocument, storageArtifacts } from '../public/site/js/event-storage-model.js';
+import { eventOutputPath, eventPublicUrl, eventSeoArtifacts } from '../scripts/events/event-seo.mjs';
 import { applyFileMakerOperation, MAX_PAYLOAD_BYTES, normalizeFileMakerId, parseFileMakerEventJson } from '../scripts/filemaker/filemaker-event-model.mjs';
-import { FILEMAKER_BRANCH_PREFIX, applyEventStorage, assertAllowedEventOutputPaths, diffEventStorage, fileMakerBranch, isAllowedEventOutputPath, loadEventDocumentFromWorkspace, planFileMakerPullRequest, prepareFileMakerEvent } from '../scripts/filemaker/filemaker-event-intake.mjs';
+import { FILEMAKER_BRANCH_PREFIX, applyEventStorage, assertAllowedEventOutputPaths, assertAllowedFileMakerOutputPaths, diffEventStorage, fileMakerBranch, isAllowedEventOutputPath, isAllowedFileMakerOutputPath, loadEventDocumentFromWorkspace, planFileMakerPullRequest, prepareFileMakerEvent } from '../scripts/filemaker/filemaker-event-intake.mjs';
 
 const workflow = await readFile(new URL('../.github/workflows/filemaker-event-intake.yml', import.meta.url), 'utf8');
 const deployWorkflow = await readFile(new URL('../.github/workflows/docker-publish.yml', import.meta.url), 'utf8');
@@ -13,6 +14,13 @@ const meetingDocs = await readFile(new URL('../docs/FILEMAKER_EVENT_INTAKE.md', 
 const scriptTemplate = await readFile(new URL('../docs/filemaker/FILEMAKER_EVENT_SCRIPT_TEMPLATE.md', import.meta.url), 'utf8');
 const fixture = JSON.parse(await readFile(new URL('./fixtures/filemaker-event.json', import.meta.url), 'utf8'));
 const ID = fixture.id, ID2 = 'fm-11111111-2222-3333-4444-555555555555';
+const SITEMAP = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.distillery.de/</loc>
+  </url>
+</urlset>
+`;
 const baseDocument = () => ({ meta: { keep: true }, events: [
   { id: 'historic-a', date: '2026-09-01', title: 'Historic A', unknown: { keep: true }, sections: [] },
   { id: ID, date: '2026-09-12', title: 'Existing FM', imageUrl: 'public/events/media/keep.jpg', sections: [{ label: 'old', genre: '', items: [] }], future: 7 },
@@ -22,6 +30,14 @@ const parse = (value = fixture, operation = 'upsert') => parseFileMakerEventJson
 const apply = (operation, value, document = baseDocument()) => applyFileMakerOperation(document, operation, parse(value, operation));
 const temp = () => mkdtemp(path.join(os.tmpdir(), 'tille-filemaker-'));
 async function writeStorage(root, document) { for (const [file, content] of storageArtifacts(document).files) { const target = path.join(root, file); await mkdir(path.dirname(target), { recursive: true }); await writeFile(target, content); } }
+async function writeWorkspace(root, document) {
+  await writeStorage(root, document);
+  for (const [file, content] of eventSeoArtifacts(document, SITEMAP).files) {
+    const target = path.join(root, file);
+    await mkdir(path.dirname(target), { recursive: true });
+    await writeFile(target, content);
+  }
+}
 
 test('valid fm UUID accepted', () => assert.equal(normalizeFileMakerId(ID), ID));
 test('uppercase UUID normalized lowercase', () => assert.equal(normalizeFileMakerId(ID.toUpperCase()), ID));
@@ -95,9 +111,14 @@ test('new month updated after date move', () => { const doc = { meta: {}, events
 test('reconstruct equals intended document', () => { const doc = apply('upsert', { id: ID, title: 'Changed' }).document; assert.deepEqual(reconstructEventDocument(buildEventStorage(doc)), doc); });
 test('duplicate ID collision rejected', () => assert.throws(() => buildEventStorage({ events: [{ ...fixture }, { ...fixture }] }), /Kollision/));
 test('unchanged historical events preserve value integrity', () => { const before = baseDocument(); const after = apply('upsert', { id: ID, title: 'Changed' }, before).document; assert.deepEqual(after.events.filter(e => !e.id.startsWith('fm-')), before.events.filter(e => !e.id.startsWith('fm-'))); });
-test('empty target month is removed from applied workspace', async () => { const root = await temp(); try { const doc = { meta: {}, events: [{ ...fixture }] }; await writeStorage(root, doc); await prepareFileMakerEvent({ mode: 'sync-pr', operation: 'remove', eventJson: JSON.stringify({ id: ID }), workspaceRoot: root }); await assert.rejects(readFile(path.join(root, 'public/events/data/months/2026-09.json'))); } finally { await rm(root, { recursive: true, force: true }); } });
+test('empty target month is removed from applied workspace', async () => { const root = await temp(); try { const doc = { meta: {}, events: [{ ...fixture }] }; await writeWorkspace(root, doc); await prepareFileMakerEvent({ mode: 'sync-pr', operation: 'remove', eventJson: JSON.stringify({ id: ID }), workspaceRoot: root }); await assert.rejects(readFile(path.join(root, 'public/events/data/months/2026-09.json'))); } finally { await rm(root, { recursive: true, force: true }); } });
 test('workspace reconstruction uses manifest monthly data', async () => { const root = await temp(); try { const doc = baseDocument(); await writeStorage(root, doc); assert.deepEqual(await loadEventDocumentFromWorkspace(root), doc); } finally { await rm(root, { recursive: true, force: true }); } });
-test('validate-only does not mutate workspace', async () => { const root = await temp(); try { const doc = baseDocument(); await writeStorage(root, doc); const before = await readFile(path.join(root, 'public/events/data/months/2026-09.json'), 'utf8'); await prepareFileMakerEvent({ mode: 'validate-only', operation: 'upsert', eventJson: JSON.stringify({ id: ID, title: 'Changed' }), workspaceRoot: root }); assert.equal(await readFile(path.join(root, 'public/events/data/months/2026-09.json'), 'utf8'), before); } finally { await rm(root, { recursive: true, force: true }); } });
+test('upsert updates storage and exactly the affected static Event page', async () => { const root = await temp(); try { const doc = baseDocument(); await writeWorkspace(root, doc); const unrelated = eventOutputPath('historic-a'), before = await readFile(path.join(root, unrelated), 'utf8'); const out = await prepareFileMakerEvent({ mode: 'sync-pr', operation: 'upsert', eventJson: JSON.stringify({ id: ID, title: 'Changed for SEO' }), workspaceRoot: root }); assert.equal(out.eventPage, eventOutputPath(ID)); assert.equal(out.eventPageChanged, true); assert.equal(out.changedFiles.includes(eventOutputPath(ID)), true); assert.match(await readFile(path.join(root, eventOutputPath(ID)), 'utf8'), /Changed for SEO/); assert.equal(await readFile(path.join(root, unrelated), 'utf8'), before); } finally { await rm(root, { recursive: true, force: true }); } });
+test('new upsert adds the static page and Event sitemap URL together', async () => { const root = await temp(); try { const doc = baseDocument(); await writeWorkspace(root, doc); const out = await prepareFileMakerEvent({ mode: 'sync-pr', operation: 'upsert', eventJson: JSON.stringify({ id: ID2, date: '2026-10-01', title: 'New SEO Event' }), workspaceRoot: root }); assert.equal(out.sitemapChanged, true); assert.deepEqual(out.changedFiles.filter(file => file === eventOutputPath(ID2) || file === 'sitemap.xml'), [eventOutputPath(ID2), 'sitemap.xml']); assert.match(await readFile(path.join(root, eventOutputPath(ID2)), 'utf8'), /New SEO Event/); assert.match(await readFile(path.join(root, 'sitemap.xml'), 'utf8'), new RegExp(eventPublicUrl(ID2))); } finally { await rm(root, { recursive: true, force: true }); } });
+test('remove deletes the affected static page and Event sitemap URL together', async () => { const root = await temp(); try { const doc = baseDocument(); await writeWorkspace(root, doc); const out = await prepareFileMakerEvent({ mode: 'sync-pr', operation: 'remove', eventJson: JSON.stringify({ id: ID }), workspaceRoot: root }); assert.equal(out.eventPageChanged, true); assert.equal(out.sitemapChanged, true); await assert.rejects(readFile(path.join(root, eventOutputPath(ID)))); assert.doesNotMatch(await readFile(path.join(root, 'sitemap.xml'), 'utf8'), new RegExp(eventPublicUrl(ID))); } finally { await rm(root, { recursive: true, force: true }); } });
+test('storage no-op repairs a missing affected Event page without touching other pages', async () => { const root = await temp(); try { const doc = baseDocument(); await writeWorkspace(root, doc); const unrelated = eventOutputPath('historic-b'), before = await readFile(path.join(root, unrelated), 'utf8'); await rm(path.join(root, eventOutputPath(ID))); const out = await prepareFileMakerEvent({ mode: 'sync-pr', operation: 'upsert', eventJson: JSON.stringify({ id: ID }), workspaceRoot: root }); assert.equal(out.hasChanges, true); assert.deepEqual(out.changedFiles, [eventOutputPath(ID)]); assert.match(await readFile(path.join(root, eventOutputPath(ID)), 'utf8'), /Existing FM/); assert.equal(await readFile(path.join(root, unrelated), 'utf8'), before); } finally { await rm(root, { recursive: true, force: true }); } });
+test('validate-only does not mutate storage Event page or sitemap', async () => { const root = await temp(); try { const doc = baseDocument(); await writeWorkspace(root, doc); const files = ['public/events/data/months/2026-09.json', eventOutputPath(ID), 'sitemap.xml']; const before = new Map(await Promise.all(files.map(async file => [file, await readFile(path.join(root, file), 'utf8')]))); const out = await prepareFileMakerEvent({ mode: 'validate-only', operation: 'upsert', eventJson: JSON.stringify({ id: ID, title: 'Changed' }), workspaceRoot: root }); assert.equal(out.hasChanges, true); for (const file of files) assert.equal(await readFile(path.join(root, file), 'utf8'), before.get(file)); } finally { await rm(root, { recursive: true, force: true }); } });
+test('missing sitemap fails before storage mutation', async () => { const root = await temp(); try { const doc = baseDocument(); await writeStorage(root, doc); const file = path.join(root, 'public/events/data/months/2026-09.json'), before = await readFile(file, 'utf8'); await assert.rejects(() => prepareFileMakerEvent({ mode: 'sync-pr', operation: 'upsert', eventJson: JSON.stringify({ id: ID, title: 'Changed' }), workspaceRoot: root }), /sitemap\.xml fehlt/); assert.equal(await readFile(file, 'utf8'), before); } finally { await rm(root, { recursive: true, force: true }); } });
 
 test('workflow dispatch only', () => { assert.match(workflow, /\non:\n  workflow_dispatch:/); assert.doesNotMatch(workflow, /\n  (push|schedule|repository_dispatch|workflow_run):/); });
 test('mode choices present', () => { assert.match(workflow, /validate-only/); assert.match(workflow, /sync-pr/); });
@@ -139,15 +160,15 @@ test('comment failure cannot block close', () => assert.match(workflow.split('- 
 test('no branch delete', () => assert.doesNotMatch(workflow, /git branch.*-[dD]|--delete-branch/));
 test('no merge command', () => assert.doesNotMatch(workflow, /gh pr merge/));
 test('validate-only plan remains read-only', () => assert.deepEqual(planFileMakerPullRequest({ mode: 'validate-only', hasChanges: true, eventId: ID, openPullRequests: [{ number: 1, base: 'main', head: fileMakerBranch(ID) }] }), { action: 'none', write: false }));
-test('main moved gate precedes commit step', () => assert.ok(workflow.indexOf('Verify main has not moved') < workflow.indexOf('Commit controlled event storage')));
-test('different PR gate precedes commit step', () => assert.ok(workflow.indexOf('Enforce single FileMaker PR') < workflow.indexOf('Commit controlled event storage')));
+test('main moved gate precedes commit step', () => assert.ok(workflow.indexOf('Verify main has not moved') < workflow.indexOf('Commit controlled event storage and SEO')));
+test('different PR gate precedes commit step', () => assert.ok(workflow.indexOf('Enforce single FileMaker PR') < workflow.indexOf('Commit controlled event storage and SEO')));
 test('existing PR forced back to Draft', () => assert.match(workflow, /gh pr ready "\$PR_NUMBER" --undo/));
 test('auto merge branch is restricted to exact FileMaker event branch', () => assert.match(workflow, /case "\$EVENT_BRANCH" in automation\/filemaker-event\/\*\)/));
 test('created or updated PR number is determined uniquely', () => { assert.match(workflow, /gh pr list --state open --base main --head "\$EVENT_BRANCH" --limit 2/); assert.match(workflow, /Expected exactly one open PR/); assert.match(workflow, /echo "number=\$number" >> "\$GITHUB_OUTPUT"/); });
 test('fresh PR gate requires open state and main base', () => { assert.match(workflow, /gh api "repos\/\$GITHUB_REPOSITORY\/pulls\/\$PR_NUMBER"/); assert.match(workflow, /jq -r \.state[\s\S]*?= open/); assert.match(workflow, /jq -r \.base\.ref[\s\S]*?= main/); });
 test('fresh PR gate requires exact event branch and generated head SHA', () => { assert.match(workflow, /jq -r \.head\.ref[\s\S]*?"\$EVENT_BRANCH"/); assert.match(workflow, /jq -r \.head\.sha[\s\S]*?"\$EVENT_HEAD_SHA"/); assert.match(workflow, /head_sha=\$\(git rev-parse HEAD\)/); });
 test('fresh changed files are fetched from GitHub immediately before Ready', () => assert.match(workflow, /gh api --paginate "repos\/\$GITHUB_REPOSITORY\/pulls\/\$PR_NUMBER\/files\?per_page=100" --jq '\.\[\]\.filename'/));
-test('fresh changed files retain the strict event storage allowlist', () => assert.match(workflow, /\^public\/events\/data\/\(manifest\|meta\|event-index\|search-index\)\\\.json\$\|\^public\/events\/data\/months\/\[0-9\]\{4\}-\(0\[1-9\]\|1\[0-2\]\)\\\.json\$/));
+test('fresh changed files retain the strict storage Event-page and sitemap allowlist', () => { assert.match(workflow, /sitemap\.xml\|"\$EVENT_PAGE"/); assert.match(workflow, /public\/events\/data\/months\/\*\.json/); assert.match(workflow, /\^public\/events\/data\/months\/\[0-9\]\{4\}-\(0\[1-9\]\|1\[0-2\]\)\\\.json\$/); });
 test('main is fetched and checked immediately before Ready and merge', () => { const checks = workflow.match(/git fetch origin main[\s\S]*?git rev-parse origin\/main/g) || []; assert.ok(checks.length >= 3); assert.match(workflow, /main moved immediately before FileMaker merge/); });
 test('Draft becomes Ready only after all first-pass gates', () => assert.ok(workflow.indexOf('Verify FileMaker PR and changed files before Ready') < workflow.indexOf('Mark verified FileMaker PR Ready for Review')));
 test('PR is freshly reverified after Ready', () => { assert.ok(workflow.indexOf('Mark verified FileMaker PR Ready for Review') < workflow.indexOf('Reverify and merge exact FileMaker PR')); const block = workflow.split('- name: Reverify and merge exact FileMaker PR')[1]; for (const field of ['.number','.state','.base.ref','.head.ref','.head.sha']) assert.match(block, new RegExp(field.replaceAll('.', '\\\.'))); });
@@ -162,6 +183,7 @@ test('normal docker push trigger on main remains present', () => assert.match(de
 
 for (const file of ['manifest.json', 'meta.json', 'event-index.json', 'search-index.json']) test(`${file} allowed`, () => assert.equal(isAllowedEventOutputPath(`public/events/data/${file}`), true));
 test('YYYY-MM month allowed', () => assert.equal(isAllowedEventOutputPath('public/events/data/months/2026-09.json'), true));
+test('only the exact FileMaker Event page and sitemap are added to the output allowlist', () => { assert.equal(isAllowedFileMakerOutputPath(eventOutputPath(ID), ID), true); assert.equal(isAllowedFileMakerOutputPath('sitemap.xml', ID), true); assert.equal(isAllowedFileMakerOutputPath(eventOutputPath(ID2), ID), false); assert.throws(() => assertAllowedFileMakerOutputPaths(['events/other/index.html'], ID), /not allowed/); });
 for (const [label, file] of [
   ['residents', 'public/residents/data/residents.json'], ['gallery', 'public/gallery/data/gallery.json'],
   ['site navigation', 'public/site/data/site-navigation.json'], ['tracking', 'assets/tracking.js'],

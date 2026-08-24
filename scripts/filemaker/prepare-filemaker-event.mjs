@@ -20,6 +20,8 @@ async function writeOutput(summary) {
     has_changes: summary.hasChanges, event_id: summary.eventId, operation: summary.operation,
     branch: summary.branch, action: summary.action, existed: summary.exists,
     before_month: summary.beforeMonth, after_month: summary.afterMonth,
+    event_page: summary.eventPage, event_page_changed: summary.eventPageChanged,
+    sitemap_changed: summary.sitemapChanged,
     changed_files_count: summary.changedFilesCount,
     changed_files: summary.changedFiles.join(','), title: summary.title.replace(/[\r\n]/g, ' '), date: summary.date
   };
@@ -30,7 +32,7 @@ async function main() {
   const options = parseArguments(process.argv.slice(2));
   const summary = await prepareFileMakerEvent({ ...options, eventJson: process.env.FILEMAKER_EVENT_JSON });
   await writeOutput(summary);
-  console.log(`FileMaker Event Intake validation PASS: operation=${summary.operation}, id=${summary.eventId}, exists=${summary.exists}, before=${summary.beforeMonth || 'none'}, after=${summary.afterMonth || 'none'}, changed_files=${summary.changedFilesCount}, result=${summary.action}.`);
+  console.log(`FileMaker Event Intake validation PASS: operation=${summary.operation}, id=${summary.eventId}, exists=${summary.exists}, before=${summary.beforeMonth || 'none'}, after=${summary.afterMonth || 'none'}, event_page=${summary.eventPageChanged ? 'changed' : 'unchanged'}, sitemap=${summary.sitemapChanged ? 'changed' : 'unchanged'}, changed_files=${summary.changedFilesCount}, result=${summary.action}.`);
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {

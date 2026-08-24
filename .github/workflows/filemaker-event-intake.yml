@@ -60,7 +60,7 @@ jobs:
         id: base
         run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
       - run: node --test tests/*.test.mjs
-      - name: Prepare FileMaker event storage
+      - name: Prepare FileMaker event storage and SEO
         id: intake
         run: node scripts/filemaker/prepare-filemaker-event.mjs --mode sync-pr --operation "${{ inputs.operation }}" --workspace "$GITHUB_WORKSPACE"
       - name: Enforce single FileMaker PR
@@ -86,18 +86,29 @@ jobs:
         run: |
           git fetch origin main
           test "$BASE_SHA" = "$(git rev-parse origin/main)" || (echo "main moved during FileMaker intake; rerun required." >&2 && exit 1)
-      - name: Commit controlled event storage
+      - name: Commit controlled event storage and SEO
         if: steps.intake.outputs.has_changes == 'true'
         id: commit
         env:
           EVENT_BRANCH: ${{ steps.intake.outputs.branch }}
+          EVENT_PAGE: ${{ steps.intake.outputs.event_page }}
         run: |
           git fetch origin "+refs/heads/$EVENT_BRANCH:refs/remotes/origin/$EVENT_BRANCH" || true
           git switch -C "$EVENT_BRANCH"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A -- public/events/data
-          unexpected="$(git diff --cached --name-only | grep -Ev '^public/events/data/(manifest|meta|event-index|search-index)\.json$|^public/events/data/months/[0-9]{4}-(0[1-9]|1[0-2])\.json$' || true)"
+          test -n "$EVENT_PAGE" || (echo "Generated FileMaker Event page path is missing." >&2 && exit 1)
+          git add -A -- public/events/data "$EVENT_PAGE" sitemap.xml
+          unexpected="$(git diff --cached --name-only | while IFS= read -r file; do
+            case "$file" in
+              sitemap.xml|"$EVENT_PAGE") ;;
+              public/events/data/manifest.json|public/events/data/meta.json|public/events/data/event-index.json|public/events/data/search-index.json) ;;
+              public/events/data/months/*.json)
+                [[ "$file" =~ ^public/events/data/months/[0-9]{4}-(0[1-9]|1[0-2])\.json$ ]] || printf '%s\n' "$file"
+                ;;
+              *) printf '%s\n' "$file" ;;
+            esac
+          done)"
           test -z "$unexpected" || (echo "Unexpected staged paths:" >&2 && echo "$unexpected" >&2 && exit 1)
           git commit -m "chore: apply filemaker event intake"
           git push --force-with-lease origin "HEAD:$EVENT_BRANCH"
@@ -116,6 +127,9 @@ jobs:
           BEFORE_MONTH: ${{ steps.intake.outputs.before_month }}
           AFTER_MONTH: ${{ steps.intake.outputs.after_month }}
           CHANGED_FILES: ${{ steps.intake.outputs.changed_files }}
+          EVENT_PAGE: ${{ steps.intake.outputs.event_page }}
+          EVENT_PAGE_CHANGED: ${{ steps.intake.outputs.event_page_changed }}
+          SITEMAP_CHANGED: ${{ steps.intake.outputs.sitemap_changed }}
         run: |
           body="$RUNNER_TEMP/filemaker-event-pr.md"
           {
@@ -123,7 +137,8 @@ jobs:
             echo; echo "## Operation"; echo "$OPERATION"
             echo; echo "## Event"; echo "- ID: $EVENT_ID"; echo "- Date: ${EVENT_DATE:-n/a}"; echo "- Title: ${EVENT_TITLE:-n/a}"
             echo; echo "## Base"; echo "$BASE_SHA"
-            echo; echo "## Storage"; echo "- Previous month: ${BEFORE_MONTH:-none}"; echo "- Result month: ${AFTER_MONTH:-none}"; echo "- Changed artifacts: $CHANGED_FILES"
+            echo; echo "## Storage"; echo "- Previous month: ${BEFORE_MONTH:-none}"; echo "- Result month: ${AFTER_MONTH:-none}"
+            echo; echo "## Event SEO"; echo "- Event page: $EVENT_PAGE (${EVENT_PAGE_CHANGED})"; echo "- Event sitemap changed: $SITEMAP_CHANGED"; echo "- Changed artifacts: $CHANGED_FILES"
             echo; echo "## Validation"; echo "PASS"
             echo; echo "## Safety"; echo "- FileMaker-controlled fm-* ID"; echo "- Auto-merge restricted to this exact FileMaker PR and head SHA"; echo "- SHA-gated staging deployment after verified merge"
           } > "$body"
@@ -146,6 +161,7 @@ jobs:
           EVENT_BRANCH: ${{ steps.intake.outputs.branch }}
           EVENT_HEAD_SHA: ${{ steps.commit.outputs.head_sha }}
           BASE_SHA: ${{ steps.base.outputs.sha }}
+          EVENT_PAGE: ${{ steps.intake.outputs.event_page }}
         run: |
           test -n "$PR_NUMBER" && test -n "$EVENT_HEAD_SHA" || (echo "FileMaker PR identity is incomplete." >&2 && exit 1)
           case "$EVENT_BRANCH" in automation/filemaker-event/*) ;; *) echo "Unexpected FileMaker event branch: $EVENT_BRANCH" >&2; exit 1 ;; esac
@@ -157,7 +173,16 @@ jobs:
           test "$(jq -r .head.sha <<<"$pull")" = "$EVENT_HEAD_SHA" || (echo "FileMaker PR head SHA mismatch." >&2 && exit 1)
           files="$(gh api --paginate "repos/$GITHUB_REPOSITORY/pulls/$PR_NUMBER/files?per_page=100" --jq '.[].filename')"
           test -n "$files" || (echo "FileMaker PR contains no changed files." >&2 && exit 1)
-          unexpected="$(printf '%s\n' "$files" | grep -Ev '^public/events/data/(manifest|meta|event-index|search-index)\.json$|^public/events/data/months/[0-9]{4}-(0[1-9]|1[0-2])\.json$' || true)"
+          unexpected="$(printf '%s\n' "$files" | while IFS= read -r file; do
+            case "$file" in
+              sitemap.xml|"$EVENT_PAGE") ;;
+              public/events/data/manifest.json|public/events/data/meta.json|public/events/data/event-index.json|public/events/data/search-index.json) ;;
+              public/events/data/months/*.json)
+                [[ "$file" =~ ^public/events/data/months/[0-9]{4}-(0[1-9]|1[0-2])\.json$ ]] || printf '%s\n' "$file"
+                ;;
+              *) printf '%s\n' "$file" ;;
+            esac
+          done)"
           test -z "$unexpected" || (echo "Unexpected FileMaker PR paths:" >&2 && printf '%s\n' "$unexpected" >&2 && exit 1)
           git fetch origin main
           test "$BASE_SHA" = "$(git rev-parse origin/main)" || (echo "main moved before FileMaker PR approval; rerun required." >&2 && exit 1)

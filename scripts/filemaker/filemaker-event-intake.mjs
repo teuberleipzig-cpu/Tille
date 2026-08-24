@@ -1,10 +1,12 @@
-import { mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, readdir, rm, rmdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { reconstructEventDocument, storageArtifacts } from '../../public/site/js/event-storage-model.js';
+import { eventOutputPath, eventSeoArtifacts } from '../events/event-seo.mjs';
 import { applyFileMakerOperation, parseFileMakerEventJson } from './filemaker-event-model.mjs';
 
 export const FILEMAKER_BRANCH_PREFIX = 'automation/filemaker-event/';
 const DATA_ROOT = 'public/events/data';
+const SITEMAP_PATH = 'sitemap.xml';
 
 export function fileMakerBranch(eventId) { return `${FILEMAKER_BRANCH_PREFIX}${eventId}`; }
 
@@ -17,6 +19,15 @@ export function isAllowedEventOutputPath(file) {
 
 export function assertAllowedEventOutputPaths(files) {
   for (const file of files) if (!isAllowedEventOutputPath(file)) throw new Error(`FileMaker output path is not allowed: ${file}`);
+}
+
+export function isAllowedFileMakerOutputPath(file, eventId) {
+  const value = String(file || '').replaceAll('\\', '/');
+  return isAllowedEventOutputPath(value) || value === SITEMAP_PATH || value === eventOutputPath(eventId);
+}
+
+export function assertAllowedFileMakerOutputPaths(files, eventId) {
+  for (const file of files) if (!isAllowedFileMakerOutputPath(file, eventId)) throw new Error(`FileMaker output path is not allowed: ${file}`);
 }
 
 export async function loadEventDocumentFromWorkspace(root) {
@@ -77,6 +88,27 @@ export async function applyEventStorage(root, previousFiles, nextFiles) {
   }
 }
 
+async function readOptionalFile(root, relative) {
+  try { return await readFile(path.join(root, relative), 'utf8'); }
+  catch (error) { if (error.code === 'ENOENT') return undefined; throw error; }
+}
+
+async function applyEventSeo(root, eventId, eventPage, currentPage, nextPage, currentSitemap, nextSitemap) {
+  assertAllowedFileMakerOutputPaths([eventPage, SITEMAP_PATH], eventId);
+  if (currentPage !== nextPage) {
+    const target = path.join(root, eventPage);
+    if (nextPage === undefined) {
+      await rm(target, { force: true });
+      try { await rmdir(path.dirname(target)); }
+      catch (error) { if (error.code !== 'ENOENT') throw error; }
+    } else {
+      await mkdir(path.dirname(target), { recursive: true });
+      await writeFile(target, nextPage, 'utf8');
+    }
+  }
+  if (currentSitemap !== nextSitemap) await writeFile(path.join(root, SITEMAP_PATH), nextSitemap, 'utf8');
+}
+
 export async function prepareFileMakerEvent({ mode, operation, eventJson, workspaceRoot }) {
   if (!['validate-only', 'sync-pr'].includes(mode)) throw new Error(`Unsupported mode: ${mode}`);
   const input = parseFileMakerEventJson(eventJson, operation);
@@ -86,11 +118,33 @@ export async function prepareFileMakerEvent({ mode, operation, eventJson, worksp
   const generated = storageArtifacts(result.document);
   const reconstructed = reconstructEventDocument(generated.storage);
   if (JSON.stringify(reconstructed) !== JSON.stringify(result.document)) throw new Error('Generated Event Storage failed reconstruction validation.');
-  const diff = diffEventStorage(previousFiles, generated.files);
-  if (mode === 'sync-pr' && diff.hasChanges) await applyEventStorage(workspaceRoot, previousFiles, generated.files);
+  const storageDiff = diffEventStorage(previousFiles, generated.files);
+  const eventPage = eventOutputPath(input.id);
+  let currentSitemap;
+  try { currentSitemap = await readFile(path.join(workspaceRoot, SITEMAP_PATH), 'utf8'); }
+  catch (error) {
+    if (error.code === 'ENOENT') throw new Error('sitemap.xml fehlt im FileMaker-Workspace.');
+    throw error;
+  }
+  const seo = eventSeoArtifacts(result.document, currentSitemap);
+  const currentPage = await readOptionalFile(workspaceRoot, eventPage);
+  const nextPage = seo.files.get(eventPage);
+  const nextSitemap = seo.files.get(SITEMAP_PATH);
+  const seoChangedFiles = [
+    ...(currentPage === nextPage ? [] : [eventPage]),
+    ...(currentSitemap === nextSitemap ? [] : [SITEMAP_PATH])
+  ];
+  const changedFiles = [...new Set([...storageDiff.changedFiles, ...seoChangedFiles])].sort();
+  assertAllowedFileMakerOutputPaths(changedFiles, input.id);
+  const hasChanges = changedFiles.length > 0;
+  if (mode === 'sync-pr' && hasChanges) {
+    await applyEventStorage(workspaceRoot, previousFiles, generated.files);
+    await applyEventSeo(workspaceRoot, input.id, eventPage, currentPage, nextPage, currentSitemap, nextSitemap);
+  }
   return {
-    ...result, ...diff, eventId: input.id, operation,
-    branch: fileMakerBranch(input.id), changedFilesCount: diff.changedFiles.length,
+    ...result, hasChanges, changedFiles, eventPage, sitemapChanged: currentSitemap !== nextSitemap,
+    eventPageChanged: currentPage !== nextPage, eventId: input.id, operation,
+    branch: fileMakerBranch(input.id), changedFilesCount: changedFiles.length,
     title: result.document.events.find(event => event.id === input.id)?.title || '',
     date: result.document.events.find(event => event.id === input.id)?.date || input.date || ''
   };
