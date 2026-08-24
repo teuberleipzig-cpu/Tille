@@ -113,7 +113,56 @@
       "moreUrl": "",
       "imageUrl": "",
       "description": "",
-      "sections": []
+      "sections": [
+        {
+          "label": "GRDN",
+          "genre": "",
+          "items": [
+            {
+              "name": "MATHIAS KADEN",
+              "info": "Muna Musik, F.A.T.",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Cocoon, Distillery, Leipzig",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "LEENI & DANILO KUPFERNAGEL",
+              "info": "3000 Grad, Muna, RHRN",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "UNTEN",
+          "genre": "",
+          "items": [
+            {
+              "name": "Kimya",
+              "info": "ZAN",
+              "link": ""
+            },
+            {
+              "name": "STEPHAN VON WOLFFERSDORFF",
+              "info": "Distillery, Where the Buffalo Roam, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MALENA",
+              "info": "HTXSTHSTX, Dresden",
+              "link": ""
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "fm-c2bc1658-3c06-4fb7-a83d-acb14c59dd0e",
