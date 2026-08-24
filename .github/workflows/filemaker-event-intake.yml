@@ -98,7 +98,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           test -n "$EVENT_PAGE" || (echo "Generated FileMaker Event page path is missing." >&2 && exit 1)
-          git add -A -- public/events/data "$EVENT_PAGE" sitemap.xml
+          git add -A -- public/events/data sitemap.xml
+          if test -e "$EVENT_PAGE" || git ls-files --error-unmatch -- "$EVENT_PAGE" >/dev/null 2>&1; then
+            git add -A -- "$EVENT_PAGE"
+          fi
           unexpected="$(git diff --cached --name-only | while IFS= read -r file; do
             case "$file" in
               sitemap.xml|"$EVENT_PAGE") ;;
