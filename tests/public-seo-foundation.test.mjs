@@ -14,6 +14,8 @@ const robots = await readFile(new URL('../robots.txt', import.meta.url), 'utf8')
 const GALLERY_URL = 'https://www.distillery.de/gallery.html';
 const FEEDBACK_URL = 'https://www.distillery.de/feedback.html';
 const NEWS_URL = 'https://www.distillery.de/news/';
+const SEO_FOUNDATION_FIXTURE = { slug: 'seo-foundation-fixture', publishedAt: '2026-01-02T03:04:05', modifiedAt: '2026-01-02T03:04:05' };
+const SEO_FOUNDATION_FIXTURE_URL = `${NEWS_URL}${SEO_FOUNDATION_FIXTURE.slug}/`;
 
 function sitemapLocations(xml) {
   return [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => match[1]);
@@ -113,19 +115,24 @@ test('Sitemap retains central public and legal URLs', () => {
   ]) assert.ok(locations.includes(location), `missing ${location}`);
 });
 
-test('Sitemap retains News overview and existing article URLs', () => {
+test('Sitemap retains the News overview URL', () => {
   const locations = sitemapLocations(sitemap);
   assert.ok(locations.includes(NEWS_URL));
-  assert.ok(locations.includes('https://www.distillery.de/news/distillery-news-test/'));
 });
 
 test('WordPress News sitemap sync preserves the new non-News indexability policy', () => {
-  const synced = updateNewsSitemap(sitemap, [{ slug: 'distillery-news-test', publishedAt: '2026-08-21T23:39:26', modifiedAt: '2026-08-21T23:39:26' }]);
+  const synced = updateNewsSitemap(sitemap, [SEO_FOUNDATION_FIXTURE]);
   const locations = sitemapLocations(synced);
   assert.equal(locations.includes(FEEDBACK_URL), false);
   assert.equal(locations.includes(GALLERY_URL), false);
   assert.ok(locations.includes(NEWS_URL));
-  assert.ok(locations.includes('https://www.distillery.de/news/distillery-news-test/'));
+  assert.ok(locations.includes(SEO_FOUNDATION_FIXTURE_URL));
+  for (const location of [
+    'https://www.distillery.de/',
+    'https://www.distillery.de/residents.html',
+    'https://www.distillery.de/contact.html',
+    'https://www.distillery.de/impressum.html'
+  ]) assert.ok(locations.includes(location), `missing ${location}`);
 });
 
 test('Affected pages contain no staging canonical', () => {
