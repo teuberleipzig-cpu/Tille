@@ -76,6 +76,85 @@
       ]
     },
     {
+      "id": "fm-d0f79189-000b-498f-b1e6-57ee98efb0b4",
+      "date": "2026-09-12",
+      "title": "CLUB GRDN X SEELEN.",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "GRDN",
+          "genre": "",
+          "items": [
+            {
+              "name": "CLUB GRDN GANG",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "CLUB GRDN GANG",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "CLUB GRDN GANG",
+              "info": "",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "CLUB GRDN GANG",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "CLUB GRDN GANG",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "CLUB GRDN GANG",
+              "info": "",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "UNTEN",
+          "genre": "",
+          "items": [
+            {
+              "name": "STIGMATIQUE",
+              "info": "SEELEN.",
+              "link": ""
+            },
+            {
+              "name": "JANEIN",
+              "info": "SEELEN.",
+              "link": ""
+            },
+            {
+              "name": "STEPHANIE SYKES",
+              "info": "Fullpanda, 47",
+              "link": ""
+            },
+            {
+              "name": "MEDHA",
+              "info": "PVC, aequalis",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "2026-09-12-csv-test-night",
       "date": "2026-09-12",
       "title": "CSV Test Night",
