@@ -183,7 +183,8 @@ test('event list and detail preserve one modern event URL', () => {
   assert.match(html, /class="event-date"/);
   assert.match(html, /class="event-name"/);
   assert.match(html, /class="more-desktop">more\.\.\.<\/span><span class="more-mobile">More Info/);
-  assert.match(html, /function eventDetailUrl\(e\)[^}]+p\.set\('event',getEventId\(e\)\)/);
+  assert.match(html, /function eventDetailUrl\(e\)\{return`events\/\$\{encodeURIComponent\(getEventId\(e\)\)\}\/`\}/);
+  assert.match(html, /new URLSearchParams\(location\.search\)\.get\('event'\)/);
   assert.match(css, /event-name\{[^}]*font-size:20px/);
   assert.match(css, /line\{font-size:14px;line-height:1\.4/);
   assert.match(css, /line strong\{font-size:17px;line-height:1\.25/);
