@@ -2,6 +2,80 @@
   "schemaVersion": 1,
   "events": [
     {
+      "id": "fm-6f708fb5-b0ee-4173-891a-8d6a7708f600",
+      "date": "2026-09-05",
+      "title": "Crème GRDN + Afterhour",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "GRDN",
+          "genre": "",
+          "items": [
+            {
+              "name": "ALEXIA",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "ALI E.",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "CRÈME CLUB",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "FELIX LÜCKE",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "FOXLOE",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "CRÈME CLUB",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "DJ PIPE",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "UNTEN",
+          "genre": "",
+          "items": [
+            {
+              "name": "VINCENT NEUMANN",
+              "info": "Distillery, Unitas Multiplex",
+              "link": ""
+            },
+            {
+              "name": "CARLOTTA JACOBI",
+              "info": "Connwax",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "2026-09-12-csv-test-night",
       "date": "2026-09-12",
       "title": "CSV Test Night",
