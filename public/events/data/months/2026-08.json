@@ -2,6 +2,16 @@
   "schemaVersion": 1,
   "events": [
     {
+      "id": "fm-6ff3bff4-c7cb-4a80-b64c-f688ddfdf392",
+      "date": "2026-08-01",
+      "title": "OUT OF OFFICE: VACANZA X TIMSTAGRAM",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": []
+    },
+    {
       "id": "fm-56116ab2-345a-4834-8d05-7429a773a157",
       "date": "2026-08-08",
       "title": "FEED THE RAVER: SACHSENTRANCE",
