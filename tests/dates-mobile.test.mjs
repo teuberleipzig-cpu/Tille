@@ -179,11 +179,11 @@ test('calendar and filters meet mobile layout contracts', () => {
   assert.doesNotMatch(css, /#category-filters\{[^}]*flex-wrap/);
 });
 
-test('event list and detail preserve one modern event URL', () => {
+test('event list and detail preserve the legacy event URL until SEO automation is complete', () => {
   assert.match(html, /class="event-date"/);
   assert.match(html, /class="event-name"/);
   assert.match(html, /class="more-desktop">more\.\.\.<\/span><span class="more-mobile">More Info/);
-  assert.match(html, /function eventDetailUrl\(e\)\{return`events\/\$\{encodeURIComponent\(getEventId\(e\)\)\}\/`\}/);
+  assert.match(html, /function eventDetailUrl\(e\)\{const p=new URLSearchParams\(\);p\.set\('event',getEventId\(e\)\);[^}]+return`index\.html\?\$\{p\}`\}/);
   assert.match(html, /new URLSearchParams\(location\.search\)\.get\('event'\)/);
   assert.match(css, /event-name\{[^}]*font-size:20px/);
   assert.match(css, /line\{font-size:14px;line-height:1\.4/);
