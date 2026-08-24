@@ -235,9 +235,9 @@ test('WordPress News sitemap update preserves Event URLs', () => {
   assert.ok(locations(output).includes(eventPublicUrl(fixture().id)));
 });
 
-test('public index retains legacy Event URLs until FileMaker SEO automation is complete', () => {
-  assert.match(publicIndexHtml, /function eventDetailUrl\(e\)\{const p=new URLSearchParams\(\);p\.set\('event',getEventId\(e\)\);[^}]+return`index\.html\?\$\{p\}`\}/);
-  assert.doesNotMatch(publicIndexHtml, /function eventDetailUrl\(e\)\{return`events\/\$\{encodeURIComponent\(getEventId\(e\)\)\}\/`\}/);
+test('public index emits static Event URLs while retaining the legacy query loader', () => {
+  assert.match(publicIndexHtml, /function eventDetailUrl\(e\)\{return`events\/\$\{encodeURIComponent\(getEventId\(e\)\)\}\/`\}/);
+  assert.doesNotMatch(publicIndexHtml, /function eventDetailUrl\(e\)[^\n]+index\.html\?\$\{p\}/);
   assert.match(publicIndexHtml, /new URLSearchParams\(location\.search\)\.get\('event'\)/);
   assert.match(publicIndexHtml, /eventStore\.resolveEvent\(detail\)/);
 });
