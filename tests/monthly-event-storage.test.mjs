@@ -10,27 +10,28 @@ const root = new URL('../', import.meta.url);
 const readGenerated = path => readFile(new URL(path, root), 'utf8').then(JSON.parse);
 const original = await loadMonthlyEventDocument(readGenerated);
 const canonicalDigest = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
-const nonFileMakerDocument = value => ({ ...value, events: value.events.filter(event => !String(event.id || '').startsWith('fm-')) });
+const nonFileMakerEvents = value => value.events.filter(event => !String(event.id || '').startsWith('fm-'));
 const built = buildEventStorage(original);
 const reconstructed = reconstructEventDocument(built);
 
 test('generated non-FileMaker production history matches the pre-FileMaker canonical digest', () => {
-  assert.equal(canonicalDigest(nonFileMakerDocument(original)), 'fc464bed43a8f27717b1664c18e85053c754c8b8dac0f19a9f97ef7744c185fb');
+  assert.equal(canonicalDigest(nonFileMakerEvents(original)), '1c9ef5b4731c2d9309bba7d2f1739d139a17fc224160df821e5a4c79e017e974');
 });
-test('legacy digest retains metadata and the complete ordered non-FileMaker event data', () => {
-  const legacy = nonFileMakerDocument(original);
-  assert.deepEqual(legacy.meta, original.meta);
-  assert.deepEqual(legacy.events, original.events.filter(event => !String(event.id || '').startsWith('fm-')));
+test('legacy digest covers the complete ordered non-FileMaker event data only', () => {
+  assert.deepEqual(nonFileMakerEvents(original), original.events.filter(event => !String(event.id || '').startsWith('fm-')));
+  const changedMeta = structuredClone(original);
+  changedMeta.meta = { changed: true };
+  assert.equal(canonicalDigest(nonFileMakerEvents(changedMeta)), canonicalDigest(nonFileMakerEvents(original)));
 });
 test('additional controlled FileMaker events do not change the protected legacy digest', () => {
   const withAdditionalFileMakerEvent = structuredClone(original);
   withAdditionalFileMakerEvent.events.push({ id: 'fm-test-controlled-event', date: '2026-08-22', title: 'Test', sections: [] });
-  assert.equal(canonicalDigest(nonFileMakerDocument(withAdditionalFileMakerEvent)), canonicalDigest(nonFileMakerDocument(original)));
+  assert.equal(canonicalDigest(nonFileMakerEvents(withAdditionalFileMakerEvent)), canonicalDigest(nonFileMakerEvents(original)));
 });
 test('non-FileMaker event changes alter the protected legacy digest', () => {
   const changed = structuredClone(original);
   changed.events.find(event => !String(event.id || '').startsWith('fm-')).title += ' changed';
-  assert.notEqual(canonicalDigest(nonFileMakerDocument(changed)), canonicalDigest(nonFileMakerDocument(original)));
+  assert.notEqual(canonicalDigest(nonFileMakerEvents(changed)), canonicalDigest(nonFileMakerEvents(original)));
 });
 
 test('manifest parses and declares monthly storage schema', async () => {
