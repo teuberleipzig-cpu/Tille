@@ -9,7 +9,91 @@
       "moreUrl": "#",
       "imageUrl": "",
       "description": "",
-      "sections": []
+      "sections": [
+        {
+          "label": "GRDN",
+          "genre": "",
+          "items": [
+            {
+              "name": "FRIDO BLANKO",
+              "info": "VACANZA",
+              "link": ""
+            },
+            {
+              "name": "COSMIC CHERRY",
+              "info": "Blaq Numbers, Alzaya",
+              "link": ""
+            },
+            {
+              "name": "TONI PFAD",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "SOUCI",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "ROSA KANTE",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "F.FEUERSTEIN",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "MARENGO",
+              "info": "METRO",
+              "link": ""
+            },
+            {
+              "name": ":MUMM",
+              "info": "VACANZA",
+              "link": ""
+            },
+            {
+              "name": "CRILLE&TAMALT",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "UNTEN",
+          "genre": "",
+          "items": [
+            {
+              "name": "HANï",
+              "info": "PULSE.KOLLEKTIV",
+              "link": ""
+            },
+            {
+              "name": "TIMSTAGRAM",
+              "info": "KEINKOLLEKTIV",
+              "link": ""
+            },
+            {
+              "name": "BRVDER JAKOB",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "COLON:P",
+              "info": "CRUSH",
+              "link": ""
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "fm-56116ab2-345a-4834-8d05-7429a773a157",
