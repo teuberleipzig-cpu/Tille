@@ -47,10 +47,11 @@ export async function prepareEventSeo({ workspaceRoot = process.cwd(), expectedC
   }
   const existingPages = await readGeneratedEventPages(workspaceRoot);
   const expectedPages = new Map([...generated.files].filter(([file]) => file !== 'sitemap.xml'));
-  const changedPages = [...expectedPages].filter(([file, content]) => existingPages.get(file) !== content).map(([file]) => file);
+  const comparable = value => typeof value === 'string' ? value.replaceAll('\r\n', '\n') : value;
+  const changedPages = [...expectedPages].filter(([file, content]) => comparable(existingPages.get(file)) !== comparable(content)).map(([file]) => file);
   const stalePages = [...existingPages.keys()].filter(file => !expectedPages.has(file));
   const nextSitemap = generated.files.get('sitemap.xml');
-  const sitemapChanged = existingSitemap !== nextSitemap;
+  const sitemapChanged = comparable(existingSitemap) !== comparable(nextSitemap);
 
   if (write) {
     for (const file of stalePages) {

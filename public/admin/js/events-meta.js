@@ -81,6 +81,7 @@
     if(!el || el.dataset.metaExtBound==='1') return;
     el.dataset.metaExtBound='1';
     el.addEventListener('input',()=>{
+      if(id!=='evImageUrl')return;
       readEventForm();
       markDirty();
       updateEditorHeader();
@@ -117,7 +118,7 @@
     toTextarea('evMoreUrl','small-textarea');
     toTextarea('evImageUrl','small-textarea');
 
-    ['evTitle','evMoreUrl','evImageUrl','metaMonthLabel','metaCalendarYear','metaCalendarMonth','metaHighlightTitle','metaHighlightLinks'].forEach(addInputListener);
+    ['evImageUrl'].forEach(addInputListener);
   }
 
   function renderEventMeta(){
@@ -131,13 +132,7 @@
   }
 
   function readEventMeta(){
-    ensureMetaShape();
-    const meta=events().meta||{};
-    if($('metaMonthLabel')) meta.monthLabel=$('metaMonthLabel').value.trim();
-    if($('metaCalendarYear')) meta.calendarYear=Number($('metaCalendarYear').value)||new Date().getFullYear();
-    if($('metaCalendarMonth')) meta.calendarMonth=Number($('metaCalendarMonth').value)||new Date().getMonth()+1;
-    if($('metaHighlightTitle')) meta.highlightTitle=$('metaHighlightTitle').value.trim();
-    if($('metaHighlightLinks')) meta.highlightLinks=String($('metaHighlightLinks').value||'').split('\n').map(x=>x.trim()).filter(Boolean);
+    return events().meta;
   }
 
   function renderEventsJson(){
@@ -154,11 +149,8 @@
     box.style.marginTop='18px';
     box.innerHTML='<label class="label">Events JSON Export</label><textarea class="input" id="eventsJsonOutput" style="min-height:160px;font-family:monospace" readonly></textarea><div class="tools" style="margin-top:10px"><button class="tool" id="refreshEventsJson">JSON aktualisieren</button><button class="tool" id="copyEventsJson">JSON kopieren</button></div>';
     panel.appendChild(box);
-    $('refreshEventsJson').onclick=()=>{readEventForm();readEventMeta();readArtistForm();renderEventsJson();setStatus('eventEditStatus','Events JSON aktualisiert.','ok')};
+    $('refreshEventsJson').onclick=()=>{renderEventsJson();setStatus('eventEditStatus','Events JSON aktualisiert.','ok')};
     $('copyEventsJson').onclick=async()=>{
-      readEventForm();
-      readEventMeta();
-      readArtistForm();
       const text=eventsJson();
       try{
         await navigator.clipboard.writeText(text);
@@ -196,6 +188,7 @@
   }
 
   function loadControlledAdminModules(){
+    loadExtraExtension(null,'./js/event-image-only-ui.js?v=event-image-only-ui-1');
     loadExtraExtension(null,'./js/save-status-ux.js?v=status-ux-render-bound-1');
     loadExtraExtension('./css/github-media.css','./js/github-media.js?v=github-media-generic-guard-1');
     loadExtraExtension('./css/residents-news.css?v=resident-news-csv-1','./js/residents-news.js?v=resident-news-csv-1');
@@ -243,16 +236,7 @@
   }
 
   function installStrictArtistOffer(){
-    window.offerArtistSave=offerArtistSave=function(input){
-      readEventForm();
-      const key=input?.dataset?.artistName||input?.dataset?.artistInfo||input?.dataset?.artistLink;
-      if(!key||!currentEvent())return;
-      const [si,ai]=key.split(':').map(Number);
-      const item=currentEvent().sections?.[si]?.items?.[ai];
-      if(!item||!item.name.trim())return;
-      const exact=artists().find(a=>norm(a.name)===norm(item.name));
-      if(exact){exact.info=item.info||'';exact.link=item.link||'';setStatus('artistStatus','Artist-Daten aktualisiert. Noch nicht gespeichert.','warn')}
-    };
+    window.offerArtistSave=offerArtistSave=function(){};
   }
 
   function wrapRenderAll(){

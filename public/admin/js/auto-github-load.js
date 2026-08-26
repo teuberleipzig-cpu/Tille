@@ -5,7 +5,8 @@
   const DBG='[AdminSaveDebug]';
   const eventStorageModules=Promise.all([
     import('./core/event-storage-admin.js?v=event-storage-admin-1'),
-    import('./core/github-atomic-commit.js?v=github-atomic-commit-1')
+    import('./core/github-atomic-commit.js?v=github-atomic-commit-1'),
+    import('./core/event-image-only-save.js?v=event-image-only-save-1')
   ]);
   function log(step,data){try{console.log(DBG,step,data??'')}catch(e){}}
   function warn(step,data){try{console.warn(DBG,step,data??'')}catch(e){}}
@@ -36,6 +37,13 @@
     if(blob.encoding!=='base64'||!blob.content) throw new Error('Git blob enthält keinen base64-Inhalt.');
     return JSON.parse(b64DecodeUtf8(blob.content));
   }
+  async function fetchBlobText(sha,path){
+    const res=await fetch(blobUrl(sha),{headers:publicHeaders(),cache:'no-store'});
+    const blob=await res.json().catch(()=>({}));
+    if(!res.ok)throw new Error(blob.message||('Git blob laden fehlgeschlagen '+res.status));
+    if(blob.encoding!=='base64'||!blob.content)throw new Error('Git blob enthält keinen base64-Inhalt.');
+    return b64DecodeUtf8(blob.content);
+  }
   async function fetchMeta(path,branch=val('ghBranch')){log('fetchMeta:start',{path,owner:val('ghOwner'),repo:val('ghRepo'),branch,tokenPresent:!!val('ghToken')});const res=await fetch(apiUrl(path,branch),{headers:publicHeaders(),cache:'no-store'});const meta=await res.json().catch(()=>({}));log('fetchMeta:response',{path,status:res.status,ok:res.ok,sha:meta.sha||'',message:meta.message||'',contentLength:meta.content?meta.content.length:0});if(!res.ok)throw new Error(meta.message||('GitHub Fehler '+res.status));return meta}
   async function loadFile(path){
     try{
@@ -59,15 +67,27 @@
     log('loadFile:local:start',{path});
     return{json:await fetchJsonUrl(localUrl(path)),sha:''};
   }
+  async function loadTextFileStrict(path){
+    const meta=await fetchMeta(path);
+    if(meta.content&&meta.content.trim())return b64DecodeUtf8(meta.content);
+    if(meta.sha)return fetchBlobText(meta.sha,path);
+    throw new Error('GitHub-Datei enthält keinen lesbaren Inhalt: '+path);
+  }
+  async function loadFileStrict(path){
+    const text=await loadTextFileStrict(path);
+    if(!text.trim())throw new Error('GitHub-Datei ist leer: '+path);
+    return{json:JSON.parse(text)};
+  }
   function eventWriter(createAtomicGitHubCommit){return createAtomicGitHubCommit({owner:val('ghOwner'),repo:val('ghRepo'),branch:val('ghBranch'),token:val('ghToken')})}
-  async function loadMonthlyEvents(){
+  async function loadMonthlyEvents({strict=false,includeSitemap=false}={}){
     const[{loadMonthlyEventDocument}, {createAtomicGitHubCommit}]=await eventStorageModules;
     const writer=eventWriter(createAtomicGitHubCommit),headBefore=await writer.readHead(),cache=new Map();
-    const readJson=async path=>{if(!cache.has(path))cache.set(path,loadFile(path).then(file=>file.json));return cache.get(path)};
+    const readJson=async path=>{if(!cache.has(path))cache.set(path,(strict?loadFileStrict(path):loadFile(path)).then(file=>file.json));return cache.get(path)};
     const json=await loadMonthlyEventDocument(readJson,val('eventsPath'));
+    const sitemap=includeSitemap?await loadTextFileStrict('sitemap.xml'):undefined;
     const headAfter=await writer.readHead();
     if(headAfter!==headBefore)throw new Error('Events-Konflikt: Branch änderte sich während des Ladens. Bitte neu laden.');
-    return{json,head:headAfter,manifest:await readJson(val('eventsPath'))};
+    return{json,head:headAfter,manifest:await readJson(val('eventsPath')),sitemap};
   }
   async function putJsonFile(path,jsonText,message,branch=val('ghBranch')){
     log('putJsonFile:start',{path,message,jsonLength:jsonText.length,jsonHasMetaArtists:jsonText.includes('"artists"'),jsonPreview:jsonText.slice(0,180)});
@@ -199,28 +219,38 @@
   }
   async function saveEventsStay(){
     const currentView=state.view;
-    log('saveEventsStay:clicked',{currentView,button:'events-or-artists-save',config:{owner:val('ghOwner'),repo:val('ghRepo'),branch:val('ghBranch'),path:val('eventsPath'),tokenPresent:!!val('ghToken')}});
+    log('saveEventsStay:clicked',{currentView,button:'event-image-save',config:{owner:val('ghOwner'),repo:val('ghRepo'),branch:val('ghBranch'),path:val('eventsPath'),tokenPresent:!!val('ghToken')}});
     if(warnSaveNeedsToken('events')){warn('saveEventsStay:aborted:noToken');return;}
     try{
-      setStatus('eventEditStatus','Speichere Events / Artists...','warn');
-      safeReadEvents();
-      const jsonText=eventsJson();
-      log('saveEventsStay:jsonReady',{eventsCount:events().events?.length||0,artistsCount:artists().length,selectedArtist:state.selectedArtist,currentArtist:artistSnapshot(),jsonLength:jsonText.length,containsCurrentArtist:artistSnapshot()?jsonText.includes(artistSnapshot().name):null});
-      if(!events().events?.length) throw new Error('Events: events[] ist leer. Speichern abgebrochen.');
-      const[{saveMonthlyEventDocument},{createAtomicGitHubCommit}]=await eventStorageModules;
-      if(!state.eventsHead)throw new Error('Events: Bitte zuerst den monatlichen GitHub-Stand laden.');
-      const saved=await saveMonthlyEventDocument({document:events(),writer:eventWriter(createAtomicGitHubCommit),expectedHead:state.eventsHead,previousManifest:state.eventsManifest});
+      const selected=currentEvent();
+      if(!selected)throw new Error('Bitte zuerst ein Event auswählen.');
+      const requestedImageUrl=val('evImageUrl');
+      const[,{createAtomicGitHubCommit},{saveEventImageOnly,eventImageTargetId}]=await eventStorageModules;
+      const targetEventId=eventImageTargetId(selected);
+      if(!targetEventId)throw new Error('Event-ID fehlt. Bitte Event neu laden.');
+      setStatus('eventEditStatus','Speichere Eventbild auf Basis des frischen GitHub-Stands...','warn');
+      const saved=await saveEventImageOnly({
+        targetEventId,
+        requestedImageUrl,
+        writer:eventWriter(createAtomicGitHubCommit),
+        loadFresh:async()=>{
+          const fresh=await loadMonthlyEvents({strict:true,includeSitemap:true});
+          return{document:fresh.json,manifest:fresh.manifest,sitemap:fresh.sitemap,head:fresh.head};
+        }
+      });
       state.eventsSha=saved.commit;
       state.eventsHead=saved.commit;
       state.eventsManifest=saved.manifest;
-      state.loadedEventCount=events().events.length;
+      state.eventsData=saved.document;
+      state.selectedEvent=saved.eventIndex;
+      state.loadedEventCount=saved.document.events.length;
       state.dirty=false;
       state.syncState='loaded';
       updateSaveStatus();
       setView(currentView||'events');
       renderAll();
-      setStatus('eventEditStatus','Events / Artists atomar gespeichert.','ok');
-      log('saveEventsStay:success',{commit:state.eventsHead,view:state.view,artistsCount:artists().length});
+      setStatus('eventEditStatus',saved.changed?'Eventbild atomar gespeichert.':'Eventbild war bereits unverändert.','ok');
+      log('saveEventsStay:success',{commit:state.eventsHead,view:state.view,eventId:targetEventId,eventPage:saved.eventPage,sitemapChanged:saved.sitemapChanged});
     }catch(e){err('saveEventsStay:error',{message:e.message,stack:e.stack});state.syncState='conflict';updateSaveStatus();setView(currentView||'events');setStatus('eventEditStatus',e.message,'err')}
   }
   async function saveResidentsStay(){
@@ -255,11 +285,12 @@
     const loadEv=$('loadEventsGitBtn');if(loadEv)loadEv.onclick=loadEventsPublic;
     const loadRes=$('loadResidentsGitBtn');if(loadRes)loadRes.onclick=loadResidentsPublic;
     const evSave=$('eventSaveBtn');if(evSave)evSave.onclick=saveEventsStay;
-    const artistSave=$('saveArtistsGitBtn');if(artistSave)artistSave.onclick=saveEventsStay;
-    const topSave=$('topSaveBtn');if(topSave)topSave.onclick=()=>state.view==='residents'||state.view==='releases'?saveResidentsStay():saveEventsStay();
-    const evSettingsSave=$('saveEventsGitBtn');if(evSettingsSave)evSettingsSave.onclick=saveEventsStay;
+    const artistSave=$('saveArtistsGitBtn');if(artistSave)artistSave.onclick=()=>setStatus('artistStatus','Artist-Daten werden über FileMaker gepflegt.','warn');
+    const topSave=$('topSaveBtn');if(topSave)topSave.onclick=()=>state.view==='residents'||state.view==='releases'?saveResidentsStay():state.view==='events'?saveEventsStay():undefined;
+    const evSettingsSave=$('saveEventsGitBtn');if(evSettingsSave)evSettingsSave.onclick=()=>setStatus('syncStatus','Event-Save ist hier deaktiviert. Bitte im Event unter „Bild“ speichern.','warn');
     const resSettingsSave=$('saveResidentsGitBtn2');if(resSettingsSave)resSettingsSave.onclick=saveResidentsStay;
     const resSave=$('saveResidentsGitBtn');if(resSave)resSave.onclick=saveResidentsStay;
+    window.applyEventImageOnlyUi?.();
     log('rebindButtons:done',{topLoad:!!topLoad,eventSave:!!evSave,artistSave:!!artistSave,topSave:!!topSave,saveEventsFn:window.saveEventsToGithub?.name||'anonymous'});
   }
   onReady(()=>{

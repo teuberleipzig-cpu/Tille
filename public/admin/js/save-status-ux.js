@@ -31,21 +31,7 @@
     console.log(DBG,'artistStatus:copiedFromEventStatus',{text:txt,type,view:currentView()});
   }
   async function artistSaveClick(){
-    console.log(DBG,'artistSaveFeedback:click',{view:currentView(),visibleArtistTab:visibleArtistTab(),tokenPresent:tokenPresent()});
-    if(!tokenPresent()){
-      setStatus('artistStatus','Speichern braucht einen GitHub Token. Laden/Bearbeiten geht ohne Token.','err');
-      return;
-    }
-    setStatus('artistStatus','Speichere Artists in GitHub...','warn');
-    try{
-      const result=window.saveEventsToGithub?.();
-      await Promise.resolve(result);
-      setTimeout(copyEventStatusToArtist,0);
-      setTimeout(copyEventStatusToArtist,150);
-      setTimeout(copyEventStatusToArtist,700);
-    }catch(e){
-      setStatus('artistStatus',e?.message||'Artists speichern fehlgeschlagen.','err');
-    }
+    setStatus('artistStatus','Artist-Daten werden über FileMaker gepflegt.','warn');
   }
   function installSetStatusMirror(){
     if(window.__artistStatusMirrorInstalled) return;
@@ -63,14 +49,16 @@
     const artistSave=document.getElementById('saveArtistsGitBtn');
     if(artistSave&&artistSave.dataset.artistStatusFeedbackBound!=='1'){
       artistSave.onclick=artistSaveClick;
+      artistSave.disabled=true;
       artistSave.dataset.artistStatusFeedbackBound='1';
     }
     const topSave=document.getElementById('topSaveBtn');
     if(topSave&&topSave.dataset.adminSaveStatusUxBound!=='1'){
-      topSave.onclick=()=>visibleArtistTab()?artistSaveClick():(currentView()==='residents'||currentView()==='releases'?window.saveResidentsToGithub?.():window.saveEventsToGithub?.());
+      topSave.onclick=()=>visibleArtistTab()?artistSaveClick():(currentView()==='residents'||currentView()==='releases'?window.saveResidentsToGithub?.():currentView()==='events'?window.saveEventsToGithub?.():undefined);
       topSave.dataset.adminSaveStatusUxBound='1';
     }
     console.log(DBG,'artistStatusFeedback:bound',{artistSave:!!artistSave,topSave:!!topSave,view:currentView(),visibleArtistTab:visibleArtistTab()});
+    window.applyEventImageOnlyUi?.();
   }
   window.bindAdminSaveStatusUx=bindArtistButtons;
   onReady(()=>{
