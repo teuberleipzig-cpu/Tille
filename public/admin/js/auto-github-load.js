@@ -290,6 +290,7 @@
     const evSettingsSave=$('saveEventsGitBtn');if(evSettingsSave)evSettingsSave.onclick=()=>setStatus('syncStatus','Event-Save ist hier deaktiviert. Bitte im Event unter „Bild“ speichern.','warn');
     const resSettingsSave=$('saveResidentsGitBtn2');if(resSettingsSave)resSettingsSave.onclick=saveResidentsStay;
     const resSave=$('saveResidentsGitBtn');if(resSave)resSave.onclick=saveResidentsStay;
+    window.applyEventImageOnlyUi?.();
     log('rebindButtons:done',{topLoad:!!topLoad,eventSave:!!evSave,artistSave:!!artistSave,topSave:!!topSave,saveEventsFn:window.saveEventsToGithub?.name||'anonymous'});
   }
   onReady(()=>{

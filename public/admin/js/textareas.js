@@ -55,18 +55,7 @@
   function safeSplit(value){return String(value||'').split(',').map(x=>x.trim()).filter(Boolean)}
   function safeReadEventForm(){
     const e=currentEvent();if(!e)return;
-    e.date=$('evDate').value;
-    e.title=raw('evTitle');
-    e.color=$('evColor').value;
-    e.moreUrl=url('evMoreUrl')||'#';
     e.imageUrl=url('evImageUrl');
-    e.description=raw('evDescription');
-    e.id=e.id||slug((e.date||'')+' '+((e.title||'').trim()||'event'));
-    document.querySelectorAll('[data-section-label]').forEach(i=>{const si=Number(i.dataset.sectionLabel);if(e.sections[si])e.sections[si].label=i.value});
-    document.querySelectorAll('[data-section-genre]').forEach(i=>{const si=Number(i.dataset.sectionGenre);if(e.sections[si])e.sections[si].genre=i.value});
-    document.querySelectorAll('[data-artist-name]').forEach(i=>{const[si,ai]=i.dataset.artistName.split(':').map(Number);if(e.sections[si]?.items?.[ai])e.sections[si].items[ai].name=i.value});
-    document.querySelectorAll('[data-artist-info]').forEach(i=>{const[si,ai]=i.dataset.artistInfo.split(':').map(Number);if(e.sections[si]?.items?.[ai])e.sections[si].items[ai].info=i.value});
-    document.querySelectorAll('[data-artist-link]').forEach(i=>{const[si,ai]=i.dataset.artistLink.split(':').map(Number);if(e.sections[si]?.items?.[ai])e.sections[si].items[ai].link=i.value.trim()});
   }
   function safeReadResidentForm(){
     const r=currentResident();if(!r)return;
@@ -87,8 +76,7 @@
     r.id=r.id||slug((r.name||'resident').trim()||'resident');
   }
   function safeReadArtistForm(){
-    const a=currentArtist();
-    if(a){a.name=raw('artistName');a.info=raw('artistInfo');a.link=url('artistLink')}
+    return currentArtist();
   }
   function installSafeReaders(){
     window.readEventForm=readEventForm=safeReadEventForm;
@@ -108,9 +96,9 @@
         autoResize(textarea);
         try{
           if(textarea.closest('#view-events')){
-            readEventForm();markDirty();updateEditorHeader();renderEventList();renderPreview();renderEventsJson();
+            if(textarea.id==='evImageUrl'){readEventForm();markDirty();updateEditorHeader();renderPreview();renderEventsJson()}
           }else if(textarea.closest('#view-artists')){
-            readArtistForm();markDirty();renderArtists();
+            return;
           }else if(textarea.closest('#view-residents')){
             readResidentForm();markDirty();renderResidentList();renderStats();
           }else if(textarea.closest('#view-releases')){
