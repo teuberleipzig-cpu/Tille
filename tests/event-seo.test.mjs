@@ -263,6 +263,21 @@ test('stale owned output is removed and second run is a no-change', async () => 
   } finally { await rm(root, { recursive: true, force: true }); }
 });
 
+test('check mode ignores Windows CRLF-only Event page and sitemap differences', async () => {
+  const root = await mkdtemp(path.join(os.tmpdir(), 'tille-event-seo-crlf-'));
+  try {
+    await writeWorkspace(root, { meta: {}, events: [fixture()] });
+    await prepareEventSeo({ workspaceRoot: root, expectedCount: 1 });
+    const page = path.join(root, eventOutputPath(fixture().id));
+    const sitemap = path.join(root, 'sitemap.xml');
+    await writeFile(page, (await readFile(page, 'utf8')).replaceAll('\n', '\r\n'), 'utf8');
+    await writeFile(sitemap, (await readFile(sitemap, 'utf8')).replaceAll('\n', '\r\n'), 'utf8');
+    const checked = await prepareEventSeo({ workspaceRoot: root, expectedCount: 1, write: false });
+    assert.equal(checked.hasChanges, false);
+    assert.match(await readFile(page, 'utf8'), /\r\n/);
+  } finally { await rm(root, { recursive: true, force: true }); }
+});
+
 test('unexpected foreign output fails closed without deletion', async () => {
   const root = await mkdtemp(path.join(os.tmpdir(), 'tille-event-seo-foreign-'));
   try {
