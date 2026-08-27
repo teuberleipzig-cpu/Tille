@@ -276,7 +276,111 @@
       "moreUrl": "#",
       "imageUrl": "",
       "description": "",
-      "sections": []
+      "sections": [
+        {
+          "label": "GRDN",
+          "genre": "",
+          "items": [
+            {
+              "name": "PROMA",
+              "info": "Brainstorm Kollektiv",
+              "link": ""
+            },
+            {
+              "name": "DELIRANTE",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "SKONTI",
+              "info": "KEINKOLLEKTIV",
+              "link": ""
+            },
+            {
+              "name": "HAN/NAH",
+              "info": "Charles Bronson, Halle/Saale",
+              "link": ""
+            },
+            {
+              "name": "SCHLAUER",
+              "info": "tumult Halle",
+              "link": ""
+            },
+            {
+              "name": "LUMINOUS DELUSION",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "Crush9",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "Zischer",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "AFFE",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "JGR",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Vinyldependents",
+              "info": "Leipzig, Halle/Saale",
+              "link": ""
+            },
+            {
+              "name": "DJ Kikeriki",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "UNTEN",
+          "genre": "",
+          "items": [
+            {
+              "name": "Bi Män",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "LEQ",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "LuckyLeo",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "TIMSTAGRAM",
+              "info": "KEINKOLLEKTIV",
+              "link": ""
+            },
+            {
+              "name": "DJ EGOSHOOTER 10000",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "2026-08-11-neues-event",
