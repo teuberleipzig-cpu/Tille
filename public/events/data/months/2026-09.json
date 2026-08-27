@@ -229,6 +229,90 @@
       ]
     },
     {
+      "id": "fm-79e1901d-5b81-4353-9765-c640ab6bf703",
+      "date": "2026-09-26",
+      "title": "METRO X DISTILLERY NEW KIDS",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "GRDN",
+          "genre": "",
+          "items": [
+            {
+              "name": "METRO Act",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "METRO Act",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "METRO Act",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "METRO Act",
+              "info": "",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "METRO Act",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "METRO Act",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "METRO Act",
+              "info": "",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "UNTEN",
+          "genre": "",
+          "items": [
+            {
+              "name": "INTERSTELLA",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "VINYLDEPENDENTS",
+              "info": "Leipzig, Halle/Saale",
+              "link": ""
+            },
+            {
+              "name": "TINOU",
+              "info": "Leipzig, Vendee",
+              "link": ""
+            },
+            {
+              "name": "DO",
+              "info": "XA",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "2026-09-12-csv-test-night",
       "date": "2026-09-12",
       "title": "CSV Test Night",
