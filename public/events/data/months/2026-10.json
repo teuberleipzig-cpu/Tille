@@ -2,6 +2,80 @@
   "schemaVersion": 1,
   "events": [
     {
+      "id": "fm-eacb2a63-e681-4847-a302-f6c1588e4501",
+      "date": "2026-10-10",
+      "title": "KEINKOLLEKTIV X DISTILLERY",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "HOUSE Resident + Regular",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "HOUSE Resident + Regular",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "HOUSE Resident + Regular",
+              "info": "",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "UNTEN",
+          "genre": "",
+          "items": [
+            {
+              "name": "KEINKOLLEKTIV Act",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "KEINKOLLEKTIV Act",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "KEINKOLLEKTIV Act",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "KEINKOLLEKTIV Act",
+              "info": "",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "OBEN",
+          "genre": "",
+          "items": [
+            {
+              "name": "NORMAN NODGE",
+              "info": "Berghain, Ostgut Ton, Berlin",
+              "link": ""
+            },
+            {
+              "name": "NADINE TALAKOVICS",
+              "info": "Distillery",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "ra-2458325",
       "date": "2026-10-29",
       "title": "Erobique",
