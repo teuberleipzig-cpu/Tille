@@ -150,6 +150,85 @@
       ]
     },
     {
+      "id": "fm-0e6a6520-4fdd-4d8c-a456-52d6339ea870",
+      "date": "2026-09-19",
+      "title": "VACANZA + BUTSCHI ALL-NIGHT-LONG",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "GRDN",
+          "genre": "",
+          "items": [
+            {
+              "name": "VACANZA Artist",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "VACANZA Artist",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "VACANZA Artist",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "MONTEZUMA",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "VACANZA Artist",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "VACANZA Artist",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "VACANZA Artist",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Residents & Friends",
+              "info": "Atalanta, Bigalke, DJ HDGDL, Mike van Götze, Nadine Talakovics, Vincent Neumann",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "UNTEN",
+          "genre": "",
+          "items": [
+            {
+              "name": "BUTSCHI",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "KRASH CORA",
+              "info": "Berlin",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "2026-09-12-csv-test-night",
       "date": "2026-09-12",
       "title": "CSV Test Night",
