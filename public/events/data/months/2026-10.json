@@ -2,6 +2,33 @@
   "schemaVersion": 1,
   "events": [
     {
+      "id": "fm-dd98b2ec-292d-453a-9ae5-a799385ddf93",
+      "date": "2026-10-01",
+      "title": "TEST VA",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "AFFE",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Jeff Mills",
+              "info": "Axis Records, Detroit",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "fm-eacb2a63-e681-4847-a302-f6c1588e4501",
       "date": "2026-10-10",
       "title": "KEINKOLLEKTIV X DISTILLERY",
