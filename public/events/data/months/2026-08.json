@@ -320,7 +320,34 @@
       "moreUrl": "#",
       "imageUrl": "",
       "description": "",
-      "sections": []
+      "sections": [
+        {
+          "label": "GRDN",
+          "genre": "",
+          "items": [
+            {
+              "name": "MILOX",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "Vora",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "SKORIA",
+              "info": "Progressive Leipzig",
+              "link": ""
+            },
+            {
+              "name": "EMEVEKA",
+              "info": "Progressive Leipzig",
+              "link": ""
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "fm-72bbedc7-bbfc-4aba-9f78-d221c92149a8",
