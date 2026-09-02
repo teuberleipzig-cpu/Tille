@@ -103,6 +103,160 @@
       ]
     },
     {
+      "id": "fm-294548ed-4cc3-4ddc-a8b9-29fb3800593d",
+      "date": "2026-10-16",
+      "title": "34 YRS DSTLLRY",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "MAY/O",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "SUBMOD",
+              "info": "vaertism, Daydream Records, INAR",
+              "link": ""
+            },
+            {
+              "name": "TRAXX JR",
+              "info": "My Grooves, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MP.ULLE",
+              "info": "Neue Welle",
+              "link": ""
+            },
+            {
+              "name": "NEELE",
+              "info": "IFZ",
+              "link": ""
+            },
+            {
+              "name": "PADSINGERS",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "THOMAS STIELER",
+              "info": "Paracou, Distillery, My King Is Light",
+              "link": ""
+            },
+            {
+              "name": "POKKA",
+              "info": "Leipzig, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DAHMAR",
+              "info": "Electronic Resistance, Leipzig)&#8232",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Cocoon, Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "CYNTHIA MATISSE",
+              "info": "Triebwerk, Weimar",
+              "link": ""
+            },
+            {
+              "name": "OLIV",
+              "info": "ZENA",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "UNTEN",
+          "genre": "",
+          "items": [
+            {
+              "name": "NØRBAK",
+              "info": "Hayes, Warm Up, Soma",
+              "link": ""
+            },
+            {
+              "name": "",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "RIKHTER",
+              "info": "R Label Group",
+              "link": ""
+            },
+            {
+              "name": "MASCHA ROTH",
+              "info": "Dresden",
+              "link": ""
+            },
+            {
+              "name": "NOXSONOS",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BEPHÅL",
+              "info": "SAFT",
+              "link": ""
+            },
+            {
+              "name": "STEPHAN VON WOLFFERSDORFF",
+              "info": "Distillery, Where the Buffalo Roam, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "CARLOTTA JACOBI",
+              "info": "Connwax",
+              "link": ""
+            },
+            {
+              "name": "BIGALKE",
+              "info": "DON'T BE AFRAID OF YOURSELF, HTXSTHSTX",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "OBEN",
+          "genre": "",
+          "items": [
+            {
+              "name": "offen - Steffens Oldschool Classics",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "offen - Steffens Oldschool Classics",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "offen - Steffens Oldschool Classics",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "MOTO MOTO",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "ra-2458325",
       "date": "2026-10-29",
       "title": "Erobique",
