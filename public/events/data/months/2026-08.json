@@ -177,7 +177,71 @@
       "moreUrl": "#",
       "imageUrl": "",
       "description": "",
-      "sections": []
+      "sections": [
+        {
+          "label": "GRDN",
+          "genre": "",
+          "items": [
+            {
+              "name": "GREATA",
+              "info": "VAYA",
+              "link": ""
+            },
+            {
+              "name": "MYSTIGRIX",
+              "info": "Berlin",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "FILBURT",
+              "info": "Distillery, O'RS",
+              "link": ""
+            },
+            {
+              "name": "FAMM FATAL",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "NAPOLEON DYNAMITE",
+              "info": "Distillery, Fäncy",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "UNTEN",
+          "genre": "",
+          "items": [
+            {
+              "name": "CLEO SNK",
+              "info": "IFZ, HOTSHOT, Waldbrand",
+              "link": ""
+            },
+            {
+              "name": "DJ CHEETAH",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "OSTBAM",
+              "info": "Institut für Zukunft / ProZecco",
+              "link": ""
+            },
+            {
+              "name": "BEPHÅL",
+              "info": "SAFT",
+              "link": ""
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "fm-ae7ab5cf-bf83-4f85-a84b-83932742d507",
