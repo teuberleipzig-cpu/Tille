@@ -29,6 +29,69 @@
       ]
     },
     {
+      "id": "fm-aaa88b4b-6d78-44a2-a3aa-9745e90a3d31",
+      "date": "2026-10-03",
+      "title": "FOCUS + KARETE BU invites",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "Karete Bu invites",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Karete Bu invites",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "NATASCHA KANN",
+              "info": "://about blank",
+              "link": ""
+            },
+            {
+              "name": "KARETE BU",
+              "info": "DRIVE, G-Edit)",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "UNTEN",
+          "genre": "",
+          "items": [
+            {
+              "name": "V:SONNTAG",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "FOCUS act",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "TOXIDO MASK",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "LAIMA ADELAIDE",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "fm-eacb2a63-e681-4847-a302-f6c1588e4501",
       "date": "2026-10-10",
       "title": "KEINKOLLEKTIV X DISTILLERY",
