@@ -11,28 +11,12 @@
       "order": 1
     },
     {
-      "id": "news",
-      "label": "News",
-      "href": "news.html",
-      "available": true,
-      "enabled": false,
-      "order": 2
-    },
-    {
-      "id": "residents",
-      "label": "Residents",
-      "href": "residents.html",
-      "available": true,
-      "enabled": false,
-      "order": 3
-    },
-    {
       "id": "about",
       "label": "About",
       "href": "about.html",
       "available": true,
       "enabled": true,
-      "order": 4
+      "order": 2
     },
     {
       "id": "contact",
@@ -40,7 +24,7 @@
       "href": "contact.html",
       "available": true,
       "enabled": true,
-      "order": 5
+      "order": 3
     },
     {
       "id": "history",
@@ -48,6 +32,22 @@
       "href": "history.html",
       "available": true,
       "enabled": true,
+      "order": 4
+    },
+    {
+      "id": "news",
+      "label": "News",
+      "href": "news.html",
+      "available": true,
+      "enabled": false,
+      "order": 5
+    },
+    {
+      "id": "residents",
+      "label": "Residents",
+      "href": "residents.html",
+      "available": true,
+      "enabled": false,
       "order": 6
     },
     {
