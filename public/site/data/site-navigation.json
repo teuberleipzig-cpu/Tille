@@ -39,7 +39,7 @@
       "label": "News",
       "href": "news.html",
       "available": true,
-      "enabled": false,
+      "enabled": true,
       "order": 5
     },
     {
