@@ -150,6 +150,74 @@
       ]
     },
     {
+      "id": "fm-37a8ea95-dc55-4ea7-8e29-9450aacbb07f",
+      "date": "2026-09-18",
+      "title": "Kollektiv Krumm & Schief X PANAM",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "GRDN",
+          "genre": "",
+          "items": [
+            {
+              "name": "Minelect",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "Primo",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "Projekt 2",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "Mozz!",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "Diyah",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "phosie",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "Kreuton (Live)",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "davdav",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "attekk toni",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "fm-0e6a6520-4fdd-4d8c-a456-52d6339ea870",
       "date": "2026-09-19",
       "title": "VACANZA + BUTSCHI ALL-NIGHT-LONG",
