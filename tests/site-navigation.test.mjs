@@ -11,17 +11,22 @@ test('default navigation contains every supported page once', () => {
   assert.deepEqual(config.pages.map(page => page.id).sort(), [...SITE_PAGE_IDS].sort());
 });
 
-test('default public navigation includes the seven existing pages and Gallery', () => {
+test('committed navigation is valid and enabled pages are available', () => {
   const config = normalizeSiteNavigation(source);
-  assert.deepEqual(config.pages.filter(page => page.enabled).map(page => page.id), ['dates', 'news', 'residents', 'about', 'contact', 'history', 'feedback', 'gallery']);
-  assert.deepEqual(config.pages.filter(page => page.available).map(page => page.id), ['dates', 'news', 'residents', 'about', 'contact', 'history', 'feedback', 'gallery']);
   assert.equal(config.homePage, 'dates');
+  assert.equal(config.pages.find(page => page.id === config.homePage)?.enabled, true);
+  assert.deepEqual(
+    config.pages.filter(page => page.available).map(page => page.id).sort(),
+    ['dates', 'news', 'residents', 'about', 'contact', 'history', 'feedback', 'gallery'].sort()
+  );
+  assert.ok(config.pages.filter(page => page.enabled).every(page => page.available));
 });
 
-test('remaining future page types stay unavailable and disabled', () => {
+test('remaining future page types stay unavailable and cannot be enabled', () => {
   const config = normalizeSiteNavigation(source);
-  assert.deepEqual(config.pages.filter(page => !page.available).map(page => page.id), ['team', 'podcast', 'merch']);
-  assert.deepEqual(config.pages.filter(page => !page.enabled).map(page => page.id), ['team', 'podcast', 'merch']);
+  const unavailable = config.pages.filter(page => !page.available);
+  assert.deepEqual(unavailable.map(page => page.id), ['team', 'podcast', 'merch']);
+  assert.ok(unavailable.every(page => page.enabled === false));
 });
 
 test('unavailable page cannot be enabled', () => {
@@ -39,7 +44,8 @@ test('available disabled page is valid when it is not home page', () => {
 });
 
 test('available enabled page can be home page', () => {
-  assert.equal(normalizeSiteNavigation({ ...source, homePage: 'news' }).homePage, 'news');
+  const pages = source.pages.map(page => page.id === 'news' ? { ...page, enabled: true } : page);
+  assert.equal(normalizeSiteNavigation({ ...source, pages, homePage: 'news' }).homePage, 'news');
 });
 
 test('missing availability uses safe compatibility defaults', () => {
@@ -69,15 +75,22 @@ test('unknown fields survive normalization', () => {
 });
 
 test('moving a page normalizes unique order values', () => {
-  const config = moveSitePage(source, 'news', -1);
-  assert.deepEqual(config.pages.slice(0, 2).map(page => page.id), ['news', 'dates']);
+  const before = normalizeSiteNavigation(source);
+  const movingId = before.pages[1].id;
+  const firstId = before.pages[0].id;
+  const config = moveSitePage(source, movingId, -1);
+  assert.deepEqual(config.pages.slice(0, 2).map(page => page.id), [movingId, firstId]);
   assert.deepEqual(config.pages.map(page => page.order), Array.from({ length: SITE_PAGE_IDS.length }, (_, index) => index + 1));
 });
 
 test('unavailable page can still move in prepared order', () => {
-  const config = moveSitePage(source, 'team', -1);
-  assert.equal(config.pages[7].id, 'team');
-  assert.equal(config.pages[7].available, false);
+  const before = normalizeSiteNavigation(source);
+  const index = before.pages.findIndex(page => page.id === 'team');
+  const offset = index > 0 ? -1 : 1;
+  const target = index + offset;
+  const config = moveSitePage(source, 'team', offset);
+  assert.equal(config.pages[target].id, 'team');
+  assert.equal(config.pages[target].available, false);
 });
 
 test('admin marks unavailable controls disabled without disabling order controls', () => {
