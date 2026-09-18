@@ -231,23 +231,18 @@
           "genre": "",
           "items": [
             {
-              "name": "VACANZA Artist",
-              "info": "",
-              "link": ""
-            },
-            {
-              "name": "VACANZA Artist",
-              "info": "",
-              "link": ""
-            },
-            {
-              "name": "VACANZA Artist",
-              "info": "",
+              "name": "VOELLER",
+              "info": "...",
               "link": ""
             },
             {
               "name": "MONTEZUMA",
               "info": "...",
+              "link": ""
+            },
+            {
+              "name": "Gretaepisch",
+              "info": "Leipzig/Dresden",
               "link": ""
             }
           ]
@@ -257,29 +252,29 @@
           "genre": "",
           "items": [
             {
-              "name": "VACANZA Artist",
-              "info": "",
+              "name": "OBERÜBER",
+              "info": "...",
               "link": ""
             },
             {
-              "name": "VACANZA Artist",
-              "info": "",
-              "link": ""
-            },
-            {
-              "name": "VACANZA Artist",
-              "info": "",
-              "link": ""
-            },
-            {
-              "name": "Residents & Friends",
+              "name": "Hop'N Honey",
               "info": "Atalanta, Bigalke, DJ HDGDL, Mike van Götze, Nadine Talakovics, Vincent Neumann",
+              "link": ""
+            },
+            {
+              "name": "KRUE",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "Goldie Palm",
+              "info": "Vacanza, RBL Berlin",
               "link": ""
             }
           ]
         },
         {
-          "label": "UNTEN",
+          "label": "DOWN",
           "genre": "",
           "items": [
             {
