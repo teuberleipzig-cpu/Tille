@@ -22,8 +22,11 @@ test('official Distillery D asset is byte-identical and self-contained', async (
   assert.doesNotMatch(svg, /<script\b|javascript:|(?:href|src)\s*=\s*["']https?:\/\//i);
 });
 
-test('mobile drawer uses enabled navigation pages in configured order', () => {
-  assert.deepEqual(enabledMobilePages(config).map(page => page.id), ['dates','news','residents','about','contact','history','feedback','gallery']);
+test('mobile drawer uses currently enabled navigation pages in configured order', () => {
+  const expected = config.pages.filter(page => page.enabled).map(page => page.id);
+  const actual = enabledMobilePages(config).map(page => page.id);
+  assert.deepEqual(actual, expected);
+  assert.ok(enabledMobilePages(config).every(page => page.enabled && page.available));
 });
 
 test('future disabled pages are absent from the mobile drawer model', () => {

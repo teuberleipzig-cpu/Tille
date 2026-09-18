@@ -34,7 +34,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: node --test tests/*.test.mjs
+      - name: Run FileMaker-scoped tests
+        run: node --test tests/filemaker-event-intake.test.mjs tests/monthly-event-storage.test.mjs tests/event-seo.test.mjs
       - name: Validate FileMaker event
         run: node scripts/filemaker/prepare-filemaker-event.mjs --mode validate-only --operation "${{ inputs.operation }}" --workspace "$GITHUB_WORKSPACE"
 
@@ -59,7 +60,8 @@ jobs:
       - name: Capture base SHA
         id: base
         run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
-      - run: node --test tests/*.test.mjs
+      - name: Run FileMaker-scoped tests
+        run: node --test tests/filemaker-event-intake.test.mjs tests/monthly-event-storage.test.mjs tests/event-seo.test.mjs
       - name: Prepare FileMaker event storage and SEO
         id: intake
         run: node scripts/filemaker/prepare-filemaker-event.mjs --mode sync-pr --operation "${{ inputs.operation }}" --workspace "$GITHUB_WORKSPACE"

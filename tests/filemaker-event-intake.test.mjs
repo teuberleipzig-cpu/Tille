@@ -248,3 +248,10 @@ test('workflow run id is documented and stored', () => { assert.match(meetingDoc
 test('HTML run URL is documented and stored', () => { assert.match(meetingDocs, /html_url/); assert.match(scriptTemplate, /WebsiteLastRunURL/); });
 test('outdated HTTP 204 without run id wording is absent', () => assert.doesNotMatch(meetingDocs, /HTTP 204 ohne Run-ID/));
 test('response is validated before success dialog', () => assert.ok(scriptTemplate.indexOf('IsEmpty ( $workflowRunID )') < scriptTemplate.indexOf('GitHub-Workflow wurde gestartet.')));
+
+
+test('FileMaker workflow is isolated from unrelated repository tests', () => {
+  const command = 'node --test tests/filemaker-event-intake.test.mjs tests/monthly-event-storage.test.mjs tests/event-seo.test.mjs';
+  assert.equal(workflow.split(command).length - 1, 2);
+  assert.doesNotMatch(workflow, /node --test tests\/\*\.test\.mjs/);
+});
