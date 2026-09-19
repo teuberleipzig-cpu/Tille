@@ -78,53 +78,6 @@
           "genre": "",
           "items": [
             {
-              "name": "HOUSE Resident + Regular",
-              "info": "",
-              "link": ""
-            },
-            {
-              "name": "HOUSE Resident + Regular",
-              "info": "",
-              "link": ""
-            },
-            {
-              "name": "HOUSE Resident + Regular",
-              "info": "",
-              "link": ""
-            }
-          ]
-        },
-        {
-          "label": "UNTEN",
-          "genre": "",
-          "items": [
-            {
-              "name": "KEINKOLLEKTIV Act",
-              "info": "",
-              "link": ""
-            },
-            {
-              "name": "KEINKOLLEKTIV Act",
-              "info": "",
-              "link": ""
-            },
-            {
-              "name": "KEINKOLLEKTIV Act",
-              "info": "",
-              "link": ""
-            },
-            {
-              "name": "KEINKOLLEKTIV Act",
-              "info": "",
-              "link": ""
-            }
-          ]
-        },
-        {
-          "label": "OBEN",
-          "genre": "",
-          "items": [
-            {
               "name": "NORMAN NODGE",
               "info": "Berghain, Ostgut Ton, Berlin",
               "link": ""
@@ -132,6 +85,37 @@
             {
               "name": "NADINE TALAKOVICS",
               "info": "Distillery",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "UP",
+          "genre": "",
+          "items": []
+        },
+        {
+          "label": "DOWN",
+          "genre": "",
+          "items": [
+            {
+              "name": "KEINKOLLEKTIV ACT",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "KEINKOLLEKTIV ACT",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "KEINKOLLEKTIV ACT",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "KEINKOLLEKTIV ACT",
+              "info": "",
               "link": ""
             }
           ]
