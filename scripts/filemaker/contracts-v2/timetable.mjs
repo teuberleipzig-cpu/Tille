@@ -39,7 +39,7 @@ function normalizeSlot(value) {
   }
   return {
     start: value.start, end: value.end,
-    floor: contractText(value.floor, 'Floor', 300, true),
+    floor: Object.hasOwn(value, 'floor') ? contractText(value.floor, 'Floor', 300, true) : '',
     artists: value.artists.map(normalizeArtist)
   };
 }

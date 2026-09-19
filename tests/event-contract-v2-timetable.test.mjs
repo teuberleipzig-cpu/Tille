@@ -29,7 +29,16 @@ test('slot limit 40 is accepted; full payload budget remains separate', () => {
   assert.equal(MAX_TIMETABLE_SLOTS, 40);
   assert.equal(normalizeTimetable({ slots: Array(40).fill(slot()) }).slots.length, 40);
 });
-for (const changes of [{ start: undefined }, { end: undefined }, { end: '2026-10-16T21:00:00+02:00' }, { end: '2026-10-16T22:00:00+02:00' }, { floor: '' }, { floor: '<b>Main</b>' }, { floor: 'x'.repeat(301) }, { artists: [] }, { artists: Array(11).fill({ name: 'Fixture' }) }, { artists: [{}] }, { unexpected: true }]) {
+test('missing floors are valid and normalize deterministically', () => {
+  const first = slot(), second = slot();
+  delete first.floor; delete second.floor;
+  second.start = '2026-10-17T01:00:00+02:00'; second.end = '2026-10-17T03:00:00+02:00';
+  assert.deepEqual(normalizeTimetable({ slots: [first, second] }).slots.map(value => value.floor), ['', '']);
+});
+test('an explicitly provided normal floor remains unchanged', () => {
+  assert.equal(normalizeTimetable({ slots: [slot()] }).slots[0].floor, 'Main');
+});
+for (const changes of [{ start: undefined }, { end: undefined }, { end: '2026-10-16T21:00:00+02:00' }, { end: '2026-10-16T22:00:00+02:00' }, { floor: '' }, { floor: '   ' }, { floor: '<b>Main</b>' }, { floor: 'x'.repeat(301) }, { artists: [] }, { artists: Array(11).fill({ name: 'Fixture' }) }, { artists: [{}] }, { unexpected: true }]) {
   test(`invalid slot ${JSON.stringify(changes).slice(0, 65)}`, () => assert.throws(() => normalizeTimetable({ slots: [{ ...slot(), ...changes }] })));
 }
 for (const link of ['javascript:x', 'data:text/plain,x', 'blob:x', 'ftp://example.com', '/artist', 'https://user:pass@example.com']) {

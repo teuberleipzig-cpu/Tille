@@ -85,7 +85,11 @@ Ein Objekt besitzt ausschließlich slots; 1–40 Slots, je Slot:
 - Offset und lokale Uhrzeit müssen laut Intl/IANA zur Zone Europe/Berlin passen.
 - Herbst: beide 02:30-Uhr-Zeitpunkte mit +02:00 und +01:00 sind gültig.
 - Frühjahr: die übersprungene lokale 02:30-Uhr-Zeit ist ungültig.
-- floor: erforderlicher nichtleerer Text, maximal 300 Codepoints.
+- floor: optional. Ein fehlendes Feld wird intern deterministisch zu `""`
+  normalisiert. Wenn vorhanden, muss es ein sicherer, nichtleerer Text mit
+  maximal 300 Codepoints sein; `floor: ""` und reine Whitespace-Werte sind
+  ungültig. Mehrere Slots dürfen ohne Floor existieren. Eine spätere UI braucht
+  Floor-Zwischenüberschriften nur bei tatsächlich vorhandenen Informationen.
 - artists: 1–10 Artists, jeweils name erforderlich (300), info optional (1000),
   link optional (2000). Fehlendes info/link wird leer normalisiert.
 - Links: HTTP/HTTPS ohne Credentials; keine relativen, data/blob/javascript-URLs.
