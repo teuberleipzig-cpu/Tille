@@ -12,16 +12,11 @@
       "sections": [
         {
           "label": "PVLLN",
-          "genre": "",
+          "genre": "House",
           "items": [
             {
-              "name": "Karete Bu invites",
-              "info": "",
-              "link": ""
-            },
-            {
-              "name": "Karete Bu invites",
-              "info": "",
+              "name": "KARETE BU",
+              "info": "DRIVE, G-Edit)",
               "link": ""
             },
             {
@@ -30,15 +25,20 @@
               "link": ""
             },
             {
-              "name": "KARETE BU",
-              "info": "DRIVE, G-Edit)",
+              "name": "HEFE",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "R!KE",
+              "info": "...",
               "link": ""
             }
           ]
         },
         {
-          "label": "UNTEN",
-          "genre": "",
+          "label": "DOWN",
+          "genre": "Techno",
           "items": [
             {
               "name": "V:SONNTAG",
@@ -46,8 +46,8 @@
               "link": ""
             },
             {
-              "name": "FOCUS act",
-              "info": "",
+              "name": "EIGENRAUSCH",
+              "info": "[115], Leipzig",
               "link": ""
             },
             {
