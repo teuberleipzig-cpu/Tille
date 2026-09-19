@@ -318,6 +318,69 @@
           "genre": ""
         }
       ]
+    },
+    {
+      "id": "fm-2cf21148-e9dd-496c-b2d5-50327a8c1465",
+      "date": "2026-10-31",
+      "title": "SELECTORS CLUB + ???",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "SELECTORS CLUB ACT",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "SELECTORS CLUB ACT",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "SELECTORS CLUB ACT",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "DOWN",
+          "genre": "",
+          "items": [
+            {
+              "name": "MARIE MONTEXIER",
+              "info": "Köln",
+              "link": ""
+            },
+            {
+              "name": "SELECTORS CLUB ACT",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "SELECTORS CLUB ACT",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "SELECTORS CLUB ACT",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "SELECTORS CLUB ACT",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
