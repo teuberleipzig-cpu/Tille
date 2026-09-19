@@ -299,7 +299,131 @@
       "moreUrl": "",
       "imageUrl": "",
       "description": "",
-      "sections": []
+      "sections": [
+        {
+          "label": "GRDN",
+          "genre": "",
+          "items": [
+            {
+              "name": "OUTWITHJANE",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "SAMANDTHESOUND",
+              "info": "Drum and Bass",
+              "link": ""
+            },
+            {
+              "name": "M.OSQUITO",
+              "info": "Melodic TechHouse",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "A DREAMS A",
+              "info": "LIVE Electronic Acid",
+              "link": ""
+            },
+            {
+              "name": "JON BORELL",
+              "info": "LIVE Electronic",
+              "link": ""
+            },
+            {
+              "name": "CAROL SELIG",
+              "info": "LIVE Tech House",
+              "link": ""
+            },
+            {
+              "name": "OCIN JD",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "LE SOLEIL",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "HECKLER",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "LARRY LOVE",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "DANIEL WITTIG",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "HERR LONGER",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "DOWN",
+          "genre": "",
+          "items": [
+            {
+              "name": "UNKNOWN SPECIES",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ATCON",
+              "info": "Live: Techno & Voice",
+              "link": ""
+            },
+            {
+              "name": "CAPEY",
+              "info": "Live: Techno & Voice",
+              "link": ""
+            },
+            {
+              "name": "MAX BAMBI",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "KALITOS",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "SAMI ZEE",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "AKSL",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "D-BOY",
+              "info": "deep ground, coolblue",
+              "link": ""
+            },
+            {
+              "name": "CHRIS LACONI",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "fm-79e1901d-5b81-4353-9765-c640ab6bf703",
