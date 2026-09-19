@@ -7802,24 +7802,29 @@
       "order": 1559
     },
     {
-      "id": "fm-2cf21148-e9dd-496c-b2d5-50327a8c1465",
+      "id": "fm-035d35f0-0337-e541-99e1-8ec1e4f69e94",
       "month": "2026-10",
       "order": 1560
     },
     {
+      "id": "fm-2cf21148-e9dd-496c-b2d5-50327a8c1465",
+      "month": "2026-10",
+      "order": 1561
+    },
+    {
       "id": "2026-06-23-neues-event",
       "month": "2026-11",
-      "order": 1561
+      "order": 1562
     },
     {
       "id": "2026-08-11-neues-event",
       "month": "2026-08",
-      "order": 1562
+      "order": 1563
     },
     {
       "id": "2026-09-12-csv-test-night",
       "month": "2026-09",
-      "order": 1563
+      "order": 1564
     }
   ]
 }
