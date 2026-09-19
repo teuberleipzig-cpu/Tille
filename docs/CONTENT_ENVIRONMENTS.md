@@ -1,5 +1,9 @@
 # B1a: Staging/Live Content Foundation
 
+Fortsetzung B1b-1: [Content-Branch Bootstrap Tooling](CONTENT_BOOTSTRAP.md) ergänzt
+lokale Dry-Run-/Tree-Validation und einen Buildplan. Die folgenden B1a-Contracts
+bleiben unverändert. Schreiben, Content-Refs und Aktivierung folgen erst in B1b-2.
+
 Auditbasis: `bf2009c14b79b8792970c5e74640d7d71f289134` (PR #100 gemergt).
 B1a definiert reine, noch nicht eingebundene Contracts. Es gibt keine neuen
 Content-Branches, Migration, UI-Änderung, Workflow-Umschaltung oder Veröffentlichung.
