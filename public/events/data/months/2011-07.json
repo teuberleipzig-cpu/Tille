@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2011-07-09-closing",
+      "date": "2011-07-09",
+      "title": "CLOSING",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20110711034533id_/http://www.distillery.de:80/ex/dates/2011/07/09",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: the last",
+          "items": [
+            {
+              "name": "ARIL BRIKHA",
+              "info": "Peacefrog, Kompakt, Transmat, Music Man, Stockholm",
+              "link": ""
+            },
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "mindcookies, Distillery",
+              "link": ""
+            },
+            {
+              "name": "MARKUS WELBY",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

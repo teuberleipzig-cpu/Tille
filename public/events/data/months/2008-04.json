@@ -1,0 +1,262 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2008-04-05-aftershowparty-audioinvasion",
+      "date": "2008-04-05",
+      "title": "AFTERSHOWPARTY AUDIOINVASION",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20080412181250id_/http://www.distillery.de:80/ex/dates/2008/04/05",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Dreikommanull:",
+          "items": [
+            {
+              "name": "AKIKO KIYAMA",
+              "info": "Contexterrior, Lick My Deck, Japan",
+              "link": ""
+            },
+            {
+              "name": "JOERN KLEINSCHMAGER",
+              "info": "Dreikommanull, Mo's Ferry Prod.",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-04-11-stars-for-soul-funky-mash-up-special",
+      "date": "2008-04-11",
+      "title": "STARS FOR SOUL FUNKY MASH UP SPECIAL",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20080611194840id_/http://distillery.de:80/ex/dates/2008/04/11",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Funk, Soul, Disco, Latin Breaks, Reggae:",
+          "items": [
+            {
+              "name": "DJ DOOBY",
+              "info": "bureau45, Frankfurt a.M.",
+              "link": ""
+            },
+            {
+              "name": "DJ STUPID DEEP",
+              "info": "bureau45, Frankfurt a.M.",
+              "link": ""
+            },
+            {
+              "name": "MR. T-ROX",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-04-12-hoerfunk-meets-syntax",
+      "date": "2008-04-12",
+      "title": "HOERFUNK MEETS SYNTAX",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20080411042141id_/http://www.distillery.de:80/ex/dates/2008/04/12",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: hoerfunk:",
+          "items": [
+            {
+              "name": "CEREAL KILLERS",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "- LIVE // AKA",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "ADA",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "METOPE",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "PAN/TONE",
+              "info": "Kompakt, Areal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-04-18-black-belt-boogie-pres-bass-plus",
+      "date": "2008-04-18",
+      "title": "BLACK BELT BOOGIE PRES. BASS PLUS",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20080423111126id_/http://distillery.de:80/ex/dates/2008/04/18",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Hip Hop, Breakbeat, Electronica, Visual Kei:",
+          "items": [
+            {
+              "name": "MISSILL",
+              "info": "Citizen, BMC, Discograph, Paris",
+              "link": ""
+            },
+            {
+              "name": "PEAK PHINE",
+              "info": "Black Belt Boogie, Bass Plus",
+              "link": ""
+            },
+            {
+              "name": "SENCHA",
+              "info": "nuskoolbreaks.net",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-04-19-finest-selection-blackred-beatbattle",
+      "date": "2008-04-19",
+      "title": "FINEST SELECTION & BLACKRED BEATBATTLE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20081024103703id_/http://distillery.de:80/ex/dates/2008/04/19",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Finest Selection:",
+          "items": [
+            {
+              "name": "MARGARET DYGAS",
+              "info": "Contexterrior, Berlin",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-04-25-hotta-fire-reggaestation",
+      "date": "2008-04-25",
+      "title": "HOTTA FIRE REGGAESTATION",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20080423111131id_/http://distillery.de:80/ex/dates/2008/04/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Reggae, Dancehall:",
+          "items": [
+            {
+              "name": "DEE BUZZ",
+              "info": "deebuzz.com, Mannheim",
+              "link": ""
+            },
+            {
+              "name": "HAKUNA MATATAA",
+              "info": "Meißen",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: Streetflavor: Brasil, Latin-Breaks, Funk:",
+          "items": [
+            {
+              "name": "DJ SAIBZ",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-04-26-moon-harbour-presents-secretsundaze",
+      "date": "2008-04-26",
+      "title": "MOON HARBOUR PRESENTS SECRETSUNDAZE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20080413070754id_/http://www.distillery.de:80/ex/dates/2008/04/26",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Secretsundaze:",
+          "items": [
+            {
+              "name": "GILES SMITH",
+              "info": "secretsundaze, Dessous, London",
+              "link": ""
+            },
+            {
+              "name": "JAMES PRIESTLEY",
+              "info": "secretsundaze, Simple",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-04-30-sei-es-drum",
+      "date": "2008-04-30",
+      "title": "SEI ES DRUM!!!",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20080413070811id_/http://www.distillery.de:80/ex/dates/2008/04/30",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Sei es drum:",
+          "items": [
+            {
+              "name": "RICARDO VILLALOBOS",
+              "info": "Cocoon, Perlon, Playhouse",
+              "link": ""
+            },
+            {
+              "name": "MARKUS WELBY",
+              "info": "Distillery, Hoerfunk",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

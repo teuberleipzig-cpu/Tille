@@ -1,0 +1,406 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2011-10-01-chitlin-circuit",
+      "date": "2011-10-01",
+      "title": "CHITLIN' CIRCUIT",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20111003195940id_/http://www.distillery.de:80/ex/dates/2011/10/01",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: chitlin' circuit",
+          "items": [
+            {
+              "name": "DORIAN PAIC",
+              "info": "raum...musik, Cocoon, Freebase, FFM",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-10-02-style-wild-oldschool-meets-future",
+      "date": "2011-10-02",
+      "title": "STYLE WILD - OLDSCHOOL MEETS FUTURE",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20111003150140id_/http://www.distillery.de:80/ex/dates/2011/10/02",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: style",
+          "items": [
+            {
+              "name": "SLUGABED",
+              "info": "Ninja Tune, London, Uk",
+              "link": ""
+            },
+            {
+              "name": "MR. BEEF",
+              "info": "Resistant Mindz",
+              "link": ""
+            },
+            {
+              "name": "DUKTUS",
+              "info": "Resistant Mindz",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: wild",
+          "items": [
+            {
+              "name": "DOWNTOWNLYRICS SOUNDSYSTEM",
+              "info": "Malcolm & Full Contact, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-10-07-livelyrix-poetry-slam-fenster-zum-hof-mash-up-sause",
+      "date": "2011-10-07",
+      "title": "LIVELYRIX POETRY SLAM & FENSTER ZUM HOF MASH UP SAUSE",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20111003150146id_/http://www.distillery.de:80/ex/dates/2011/10/07",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: livelyrix poetry slam",
+          "items": [
+            {
+              "name": "THERESA HAHL",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "PATRICK SALMEN",
+              "info": "Wuppertal",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS WEBER",
+              "info": "Münster",
+              "link": ""
+            },
+            {
+              "name": "ERIK LEICHTER",
+              "info": "Zwickau",
+              "link": ""
+            },
+            {
+              "name": "KATJA HOFMANN",
+              "info": "Halle",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-10-08-hoerfunk-meets-feenstaub",
+      "date": "2011-10-08",
+      "title": "HOERFUNK MEETS FEENSTAUB",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20111003150151id_/http://www.distillery.de:80/ex/dates/2011/10/08",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: hoerfunk",
+          "items": [
+            {
+              "name": "AXEL BOMAN",
+              "info": "Pampa Records, Studio Barnhus, Stockholm",
+              "link": ""
+            },
+            {
+              "name": "MARKUS WELBY",
+              "info": "hoerfunk, Distillery, Melt!-Festival, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: feenstaub",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-10-14-exlepaeng-flaesh-bending-004",
+      "date": "2011-10-14",
+      "title": "EXLEPÄNG - FLÄSH BENDING 004",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20111003150156id_/http://www.distillery.de:80/ex/dates/2011/10/14",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Skwee/Chiptunes/Elektronika/Breakcore",
+          "items": [
+            {
+              "name": "3TERN4UT AKA HYPANAUT",
+              "info": "chip'n'damnedrecords",
+              "link": ""
+            },
+            {
+              "name": "THIRTYTWOBIT",
+              "info": "Brüssel",
+              "link": ""
+            },
+            {
+              "name": "JAKIN BOAZ",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SUBTRAK",
+              "info": "Where the Buffalo Roam, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "TOMIKA",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-10-15-mindcookies-meest-syntax",
+      "date": "2011-10-15",
+      "title": "MINDCOOKIES MEEST SYNTAX",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20111003150201id_/http://www.distillery.de:80/ex/dates/2011/10/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: mindcookies",
+          "items": [
+            {
+              "name": "GERD JANSON",
+              "info": "Running Back Rec, Robert Johnson, FFM",
+              "link": ""
+            },
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "mindcookies, Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: syntax",
+          "items": [
+            {
+              "name": "GEORG BIGALKE",
+              "info": "Distillery, esoulate",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-10-20-lesung-tatar-mit-veilchen",
+      "date": "2011-10-20",
+      "title": "LESUNG - TATAR MIT VEILCHEN",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20111022040548id_/http://www.distillery.de:80/ex/dates/2011/10/20",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: lesung im rahmen des \"Literarischen Herbstes\"",
+          "items": [
+            {
+              "name": "JAROMIR KONECNY",
+              "info": "Ariel Verlag, München, Start: 20:00, add to Cal, \"Schulen verbannen Sex-Autor\" titelte Spiegel-Online 2009 anlässlich des Skandals um, Jaromir Konecnys, Buch \"Fifi poppt den Elch\". Auch wenn die Moralisten da heftig übertrieben haben, sind die Texte des in München lebenden Tschechen nicht ganz ohne. Der brave Soldat Schwejk trifft auf Feuchtgebiete., Jaromir Konecny ist vielfacher Gewinner von Poetry Slams, einmal sogar Meister des deutschspachigen Raumes. Wenn er also heute aus seinem neuen Buch \"Tatar mit Veilchen\", das gerade im Leipzig-Dresdner Verlag Voland & Quist erscheint, vorträgt, ist keine Lesung zu erwarten. Der ganze Körper wird etwas davon haben., www.livelyrix.de, www.jaromir-konecny.de",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-10-21-19-years-old-part-i",
+      "date": "2011-10-21",
+      "title": "19 YEARS OLD PART I",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20111003150206id_/http://www.distillery.de:80/ex/dates/2011/10/21",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: jahtari labelnight - family business",
+          "items": [
+            {
+              "name": "KENNY KNOTS",
+              "info": "Scotch Bonnet, London",
+              "link": ""
+            },
+            {
+              "name": "MUNGOS HIFI",
+              "info": "Scotch Bonnet, Jahtari, Glasgow",
+              "link": ""
+            },
+            {
+              "name": "SOOM T",
+              "info": "Scotch Bonnet, Jahtari, Leipzig/Glasgow",
+              "link": ""
+            },
+            {
+              "name": "JAHTARI",
+              "info": "Disrupt, aDUBtion, Start: 22:00, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-10-22-19-years-old-part-ii",
+      "date": "2011-10-22",
+      "title": "19 YEARS OLD PART II",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20111003150212id_/http://www.distillery.de:80/ex/dates/2011/10/22",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: 19 years!",
+          "items": [
+            {
+              "name": "MARBERT ROCEL – LIVE",
+              "info": "Compost Records, Erfurt",
+              "link": ""
+            },
+            {
+              "name": "STEFFEN BENNEMANN",
+              "info": "Nachtdigital, Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-10-28-akwaba-this-is-africa",
+      "date": "2011-10-28",
+      "title": "AKWABA - THIS IS AFRICA",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20111020171940id_/http://www.distillery.de:80/ex/dates/2011/10/28",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: akwaba floor",
+          "items": [
+            {
+              "name": "MUSEKE MüSEKE",
+              "info": "Hamburg",
+              "link": ""
+            },
+            {
+              "name": "TOP AFRIKA",
+              "info": "Oldenburg",
+              "link": ""
+            },
+            {
+              "name": "CHABWERA BANDA",
+              "info": "Woza this is africa, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "KUKAYEMOTO",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "special:",
+          "items": [
+            {
+              "name": "AFRIKANISCHES ESSEN",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-10-30-motto-gibt-es-nicht",
+      "date": "2011-10-30",
+      "title": "MOTTO GIBT ES NICHT",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20111003150231id_/http://www.distillery.de:80/ex/dates/2011/10/30",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: oben",
+          "items": [
+            {
+              "name": "ROBAG WRUHME",
+              "info": "Pampa, Hart & Tief, Kompakt, Weimar Innenstadt",
+              "link": ""
+            },
+            {
+              "name": "PHILIPP MATALLA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: unten",
+          "items": [
+            {
+              "name": "JACQUES GREENE",
+              "info": "LuckyMe",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,322 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2018-01-05-livelyrix-poetry-slam",
+      "date": "2018-01-05",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190823012818id_/http://www.distillery.de/ex/dates/2018/01/05",
+      "imageUrl": "",
+      "description": "FR. 05.01.18 Hyperion",
+      "sections": [
+        {
+          "label": "up: MODERATION:",
+          "items": [
+            {
+              "name": "SANDRA DA VINA",
+              "info": "Essen",
+              "link": ""
+            },
+            {
+              "name": "MARVIN WEINSTEIN",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "RAINER HOLL",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SVENJA GRäFEN",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "U.V.M.",
+              "info": "und wie immer viele mehr",
+              "link": ""
+            },
+            {
+              "name": "BLEU BROODE",
+              "info": "Marburg",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-01-06-dystopian",
+      "date": "2018-01-06",
+      "title": "DYSTOPIAN",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190720145526id_/http://www.distillery.de/ex/dates/2018/01/06",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "RØDHÅD",
+              "info": "Dystopian",
+              "link": ""
+            },
+            {
+              "name": "JON HESTER",
+              "info": "EDEC Music Outlet, Berlin",
+              "link": ""
+            },
+            {
+              "name": "RON ALBRECHT",
+              "info": "Dystopian, Pure Traxx",
+              "link": ""
+            },
+            {
+              "name": "NADINE TALAKOVICS",
+              "info": "Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "DJ T.A.G.",
+              "info": "Tresor, Berlin",
+              "link": ""
+            },
+            {
+              "name": "GEORG BIGALKE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-01-12-cosmic-bridge-label-night",
+      "date": "2018-01-12",
+      "title": "COSMIC BRIDGE LABEL NIGHT",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190820085627id_/http://www.distillery.de/ex/dates/2018/01/12",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "OM UNIT",
+              "info": "Cosmic Bridge, Metalheadz",
+              "link": ""
+            },
+            {
+              "name": "DANNY SCRILLA",
+              "info": "Bacchanalism",
+              "link": ""
+            },
+            {
+              "name": "DERRICK",
+              "info": "Ulan Bator",
+              "link": ""
+            },
+            {
+              "name": "AK47-11",
+              "info": "Deeper Access, Dresden, Start: 23:00, add to Cal, Om Unit, hat ein neues Album rausgebracht und macht damit eine weiteres Mal Halt bei uns in der Distillery. Seine dritte LP \"Self\" setzt das fort, was den Engländer zu einem der spannendsten Bass-und-Breaks-Produzenten der Gegenwart macht: Die Verquickung verschiedener Genres, die konstante Weiterentwicklung des eigenen Sounds. Ob die Liebe zu Jungle, der Hang zu Dubstep, seine gemeinsame Geschichte mit Hip Hop oder die Neugierde auf Footwork - alles findet seinen Platz in Om Units Musik, wird immer wieder neu vermessen und interpretiert. Doch es sind nicht nur die musikalischen Einflüsse, die seine Produktionen so einzigartig und entwaffnend machen. Es ist seine authentische und ausdrucksstarke Art und Weise, die aus seinen Tracks mehr als dancefloor-taugliche Banger oder Roller macht. Es sind Geschichten. Seine Fähigkeit solche zu erzählen, stellt er auch als DJ immer wieder unter Beweis. Doch eine Labelnight wäre keine Labelnight, wenn nur der Boss am Start wäre. Mit, Danny Scrilla",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-01-13-undeniably-seductive",
+      "date": "2018-01-13",
+      "title": "UNDENIABLY SEDUCTIVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190826061600id_/http://www.distillery.de/ex/dates/2018/01/13",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MAGIT CACOON",
+              "info": "Crosstown Rebels",
+              "link": ""
+            },
+            {
+              "name": "NICONé",
+              "info": "dantze, Berlin",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "HECTOR OAKS",
+              "info": "OAKS, Berlin",
+              "link": ""
+            },
+            {
+              "name": "VINCENT NEUMANN",
+              "info": "Distillery, Unitas Multiplex, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-01-20-pure-communication",
+      "date": "2018-01-20",
+      "title": "PURE COMMUNICATION",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190823012811id_/http://www.distillery.de/ex/dates/2018/01/20",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "TAMA SUMO",
+              "info": "Ostgut Ton, Panorama Bar / Berghain, Berlin",
+              "link": ""
+            },
+            {
+              "name": "F.D.M",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "& TRAXX JR",
+              "info": "MyGrooves, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DYNAMITE KADINSKI",
+              "info": "Distillery, Fäncy, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "MARAL SALMASSI",
+              "info": "Konsequent Records",
+              "link": ""
+            },
+            {
+              "name": "TEMPLETON",
+              "info": "Hypress, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-01-26-purple-tea-xv",
+      "date": "2018-01-26",
+      "title": "PURPLE TEA XV",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20191118072744id_/http://www.distillery.de/ex/dates/2018/01/26",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "KIT KUT",
+              "info": "GoodHoodMusic, Beyond07, Team PurpleTea",
+              "link": ""
+            },
+            {
+              "name": "DRBYSTRR93",
+              "info": "soulutian, Team PurpleTea, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "GVCCI MING",
+              "info": "GoodHoodMusic",
+              "link": ""
+            },
+            {
+              "name": "RZR",
+              "info": "G-Edit, NEF - No Entrance Fee, Start: 23:00, add to Cal, HipHop 2.0 x Grime x Hustle-Trap x UK x Baltimore x OG-Rap x Breaks x Ragga x Moombahton x Ghetto-Tech x GlobalBa$$ x B.I.G. x Transforma-Scratch, 4cl Turntables, 2cl Hustler",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-01-27-mord-meets-o-rs",
+      "date": "2018-01-27",
+      "title": "MORD MEETS O*RS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190920042453id_/http://www.distillery.de/ex/dates/2018/01/27",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ROI PEREZ",
+              "info": "Ostgut Ton, Panorama Bar / Berghain, Berlin",
+              "link": ""
+            },
+            {
+              "name": "JANA FALCON",
+              "info": "Smile For A While",
+              "link": ""
+            },
+            {
+              "name": "LOOTBEG",
+              "info": "o'rs, esoulate, music, afin",
+              "link": ""
+            },
+            {
+              "name": "FILBURT",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MR. FONK",
+              "info": "Smile For A While",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,286 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2014-07-03-kugelblitzdonnerstag",
+      "date": "2014-07-03",
+      "title": "KUGELBLITZDONNERSTAG",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20140728230837id_/http://www.distillery.de:80/ex/dates/2014/07/03",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: dancehall, reggae, hip hop, trap, soca",
+          "items": [
+            {
+              "name": "KID GRINGO",
+              "info": "Heckert Empire",
+              "link": ""
+            },
+            {
+              "name": "MR. DAGGA",
+              "info": "Caribbean Nice Up",
+              "link": ""
+            },
+            {
+              "name": "DJ BEATZEPS",
+              "info": "High Power Station, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DJ SENSAY",
+              "info": "Rockstone Sound, ISwagga, outdoor:",
+              "link": ""
+            },
+            {
+              "name": "TISCHTENNIS, CHILL OUT & FRICKELEIEN",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2014-07-04-fussball-wm-2014-viertelfinale",
+      "date": "2014-07-04",
+      "title": "FUSSBALL WM 2014 - VIERTELFINALE",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20140728230842id_/http://www.distillery.de:80/ex/dates/2014/07/04",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: fussball",
+          "items": [
+            {
+              "name": "DEUTSCHLAND - FRANKREICH",
+              "info": "Start: 17:30, add to Cal, Nein, wir bauen uns immer noch keine Deutschlandfahnen ans Auto und rennen auch nicht \"Schland, Schland\" grölend durch die Strassen, aber dem Viertelfinal-WM-Spiel unserer Elf gegen Frankreich blickt die Tille-Crew dann doch aufgeregt entgegen. Wir übertragen live und in Farbe ab 17:30 Uhr!, Also Leinwand angeschraubt, Beamer rausgeholt, die Sofas noch ordentlich hingestellt und los gehts. Anpfiff ist 18:00 Uhr, der Eintritt ist natürlich frei, die Bar selbstverständlich gut bestückt.",
+              "link": ""
+            },
+            {
+              "name": "FENSTER ZUM HOF",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2014-07-05-m3",
+      "date": "2014-07-05",
+      "title": "M3",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20140728230847id_/http://www.distillery.de:80/ex/dates/2014/07/05",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MARCUS MEINHARDT",
+              "info": "Katermukke, Heinz-Music, Berlin",
+              "link": ""
+            },
+            {
+              "name": "MANAMANA",
+              "info": "Kann, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2014-07-08-fussball-wm-2014-halbfinale",
+      "date": "2014-07-08",
+      "title": "FUSSBALL WM 2014 - HALBFINALE",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20140728230852id_/http://www.distillery.de:80/ex/dates/2014/07/08",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: fussball",
+          "items": [
+            {
+              "name": "DEUTSCHLAND - BRASILIEN",
+              "info": "Start: 21:30, add to Cal, Heute wird's spannend! Das Halbfinal-WM-Spiel unserer Elf gegen Brasilien steht bei uns heute Abend auf der Agenda. Wir übertragen live und in Farbe ab 21:30 Uhr!, Also Leinwand angeschraubt, Beamer rausgeholt, die Sofas noch ordentlich hingestellt und los gehts. Anpfiff ist 22:00 Uhr, der Eintritt ist natürlich frei, die Bar selbstverständlich gut bestückt.",
+              "link": ""
+            },
+            {
+              "name": "FENSTER ZUM HOF",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2014-07-10-kugelblitzdonnerstag-start-heute-22-00",
+      "date": "2014-07-10",
+      "title": "KUGELBLITZDONNERSTAG (START HEUTE 22:00)",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20140728230857id_/http://www.distillery.de:80/ex/dates/2014/07/10",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: dancehall, reggae, hip hop, trap, soca",
+          "items": [
+            {
+              "name": "DJ SICSTYLE",
+              "info": "Spitainment",
+              "link": ""
+            },
+            {
+              "name": "MR. DAGGA",
+              "info": "Caribbean Nice Up",
+              "link": ""
+            },
+            {
+              "name": "DJ SENSAY",
+              "info": "Rockstone Sound, ISwagga",
+              "link": ""
+            },
+            {
+              "name": "DJ BEATZEPS",
+              "info": "High Power Station, Leipzig, outdoor:",
+              "link": ""
+            },
+            {
+              "name": "TISCHTENNIS, CHILL OUT & FRICKELEIEN",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2014-07-12-global-space-odyssey",
+      "date": "2014-07-12",
+      "title": "GLOBAL SPACE ODYSSEY",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20160510093747id_/http://www.distillery.de/ex/dates/2014/07/12",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "GARSTIQUE",
+              "info": "Lonesome Riders",
+              "link": ""
+            },
+            {
+              "name": "DAHMAR",
+              "info": "Electronic Resistance, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MORITZ KAISER",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "TICO",
+              "info": "Viecollective",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2014-07-13-fussball-wm-2014-finale",
+      "date": "2014-07-13",
+      "title": "FUSSBALL WM 2014 - FINALE",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20140728230916id_/http://www.distillery.de:80/ex/dates/2014/07/13",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: fussball",
+          "items": [
+            {
+              "name": "DEUTSCHLAND - ARGENTINIEN",
+              "info": "Start: 20:30, add to Cal, Finale, Finale, Finale. Aber auch jetzt haben wir keine Fahnen am Auto und schmieren uns das Gesicht voll. Dennoch fiebern wir gespannt und euphorisch dem WM-Finalspiel unserer Elf gegen Argentinien und freuen uns auf eine (hoffentlich) spannendes und faires Sportspielereignis. Wir übertragen live und in Farbe ab 20:30 Uhr!, Leinwand ist angebracht, Beamer ist angeschraubt, Sitzgelegenheiten sind bereitgestellt. Anpfiff ist 21:00 Uhr, der Eintritt ist natürlich frei, die Bar selbstverständlich gut bestückt., Bis nachher.",
+              "link": ""
+            },
+            {
+              "name": "FENSTER ZUM HOF",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2014-07-17-kugelblitzdonnerstag",
+      "date": "2014-07-17",
+      "title": "KUGELBLITZDONNERSTAG",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20140728230944id_/http://www.distillery.de:80/ex/dates/2014/07/17",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: dancehall, reggae, hip hop, trap, soca",
+          "items": [
+            {
+              "name": "KID GRINGO",
+              "info": "Heckert Empire",
+              "link": ""
+            },
+            {
+              "name": "MR. DAGGA",
+              "info": "Caribbean Nice Up",
+              "link": ""
+            },
+            {
+              "name": "DJ SENSAY",
+              "info": "Rockstone Sound, ISwagga",
+              "link": ""
+            },
+            {
+              "name": "DJ BEATZEPS",
+              "info": "High Power Station, Leipzig, outdoor:",
+              "link": ""
+            },
+            {
+              "name": "TISCHTENNIS, CHILL OUT & FRICKELEIEN",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

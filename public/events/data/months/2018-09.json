@@ -1,0 +1,450 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2018-09-01-re-opening-after-summerbreak",
+      "date": "2018-09-01",
+      "title": "RE:OPENING AFTER SUMMERBREAK",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20180807200419id_/http://www.distillery.de:80/ex/dates/2018/09/01",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "EAGLES & BUTTERFLIES",
+              "info": "Innervisions, Get Physical, Bedrock",
+              "link": ""
+            },
+            {
+              "name": "LARS CHRISTIAN MüLLER",
+              "info": "Distillery, mindcookies",
+              "link": ""
+            },
+            {
+              "name": "MAURO CARACHO",
+              "info": "Distillery, Fäncy, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "AMOTIK",
+              "info": "47, Amotik, Berlin",
+              "link": ""
+            },
+            {
+              "name": "NADINE TALAKOVICS",
+              "info": "Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-09-07-livelyrix-poetry-slam",
+      "date": "2018-09-07",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20180823112124id_/http://www.distillery.de:80/ex/dates/2018/09/07",
+      "imageUrl": "",
+      "description": "FR. 07.09.18 Hyperion",
+      "sections": [
+        {
+          "label": "up: MODERATION: MUSIC BY:",
+          "items": [
+            {
+              "name": "NIK SALSFLAUSEN",
+              "info": "Esslingen",
+              "link": ""
+            },
+            {
+              "name": "KADDI CUTZ",
+              "info": "Dresden",
+              "link": ""
+            },
+            {
+              "name": "U.V.M.",
+              "info": "und wie immer viele mehr",
+              "link": ""
+            },
+            {
+              "name": "ERIK LEICHTER",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "LEONIE WARNKE",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BLANKK DISC",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-09-08-saturday-rave",
+      "date": "2018-09-08",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20180920182358id_/http://www.distillery.de:80/ex/dates/2018/09/08",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "PLEASUREKRAFT",
+              "info": "Drumcode, Kraftek",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MIKE VAN GOETZE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "UMWELT",
+              "info": "Rave or die, New Flesh",
+              "link": ""
+            },
+            {
+              "name": "DANIEL SAILER",
+              "info": "Distillery, Where the Buffalo Roam, kompl3x",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-09-14-queen16-festival-warm-up-party",
+      "date": "2018-09-14",
+      "title": "QUEEN16 FESTIVAL WARM UP PARTY",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20180807200137id_/http://www.distillery.de:80/ex/dates/2018/09/14",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DJ NEXT ONE",
+              "info": "Italien",
+              "link": ""
+            },
+            {
+              "name": "LAZY ONE",
+              "info": "Polen",
+              "link": ""
+            },
+            {
+              "name": "DJ WAVE",
+              "info": "Spanien, Start: 20:00 (Einlass), 21:00 (Beginn), add to Cal",
+              "link": ""
+            },
+            {
+              "name": "KALENDER-DOWNLOAD",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-09-15-saturday-rave",
+      "date": "2018-09-15",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20180918020857id_/http://www.distillery.de:80/ex/dates/2018/09/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MICHAL ZIETARA",
+              "info": "osba, pets rec, wilde renate",
+              "link": ""
+            },
+            {
+              "name": "HENDRIK KADEN",
+              "info": "Distillery, Fäncy, Dynamite Kadinski",
+              "link": ""
+            },
+            {
+              "name": "SHURAY & WALLE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "JANICE",
+              "info": "JANICE",
+              "link": ""
+            },
+            {
+              "name": "GERALD VDH",
+              "info": "Meat Market, Vienna",
+              "link": ""
+            },
+            {
+              "name": "STIGMATIQUE",
+              "info": "Distillery, SEELEN",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-09-21-tobassgo",
+      "date": "2018-09-21",
+      "title": "TOBASSGO",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20180823112155id_/http://www.distillery.de:80/ex/dates/2018/09/21",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "STIXONSPEED - LIVE",
+              "info": "human sampler",
+              "link": ""
+            },
+            {
+              "name": "BOOTLEG",
+              "info": "SMS, Sector842",
+              "link": ""
+            },
+            {
+              "name": "SHAWNE",
+              "info": "hearthis.at",
+              "link": ""
+            },
+            {
+              "name": "HASKY",
+              "info": "Paranoised DnB, Knagge",
+              "link": ""
+            },
+            {
+              "name": "KOBEE",
+              "info": "Bass Up, Bloody Feet",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: Rushhour showcase",
+          "items": [
+            {
+              "name": "NO MERCY",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-09-22-saturday-rave",
+      "date": "2018-09-22",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20180920182405id_/http://www.distillery.de:80/ex/dates/2018/09/22",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MUALLEM",
+              "info": "Blitz, Munich",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "FILBURT",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "O*RS",
+              "info": "Permanent Vacation, Riotvan, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LYDIA EISENBLäTTER",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-09-27-money-boy-hustensaft-juengling",
+      "date": "2018-09-27",
+      "title": "MONEY BOY & HUSTENSAFT JÜNGLING",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20180807200302id_/http://www.distillery.de:80/ex/dates/2018/09/27",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MONEY BOY",
+              "info": "Glo Up Dinero, Wien",
+              "link": ""
+            },
+            {
+              "name": "HUSTENSAFT JüNGLING",
+              "info": "Glo Up Dinero, Berlin, Start: 19:00 (Einlass), 20:30 (Beginn), add to Cal, Glo Up Dinero Gang & True Spirit Concerts präsentieren: Why Sl Know Plug aka. Money Boy himself!, Kaum ein anderer deutschsprachiger Rapper polarisiert so stark wie, Money Boy, . Doch eins steht fest: Der Hype ist immer noch real. Das beweisen allein die über vier Millionen Klicks, die sein aktuelles Musikvideo zu \"Monte Carlo\" mittlerweile auf YouTube verzeichnet. Oder der Fakt, dass der Österreicher mit \"I bims\", dem offiziellen Jugendwort des Jahres 2017, einmal mehr die deutsche Jugendsprache mitgeprägt hat. Nun kehrt der Kopf der Glo Up Dinero Gang für mehr als 16 Shows auf die Bühnen des Landes zurück. Heute auf unserer in der Distillery. Unterstütztung bekommt Money Boy dabei GUDG-Kumpel und Special Guest, Hustensaft Jüngling, der Ende Februar sein Debüt Album \"Der erste Rapper mit Abitur\" veröffentlichte. Sheesh., Ticktets gibts im Vorverkauf bei",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-09-28-beep-street-x-clear-memory",
+      "date": "2018-09-28",
+      "title": "BEEP STREET X CLEAR MEMORY",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20180920182422id_/http://www.distillery.de:80/ex/dates/2018/09/28",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MESAK – LIVE",
+              "info": "Klakson, On Board Music",
+              "link": ""
+            },
+            {
+              "name": "SNACK ATOMS - LIVE",
+              "info": "Vertext Chant, V.C.",
+              "link": ""
+            },
+            {
+              "name": "BERTOLT BRECHTAKT & KID KOZMOE",
+              "info": "Beep Street",
+              "link": ""
+            },
+            {
+              "name": "PORKFOUR & ROBYRT HECHT",
+              "info": "Clear Memory, Start: 23:00, add to Cal, Mesak, ist in Leipzig kein Unbekannter. Als Teil des legendären Electro-Projekts",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-09-29-saturday-rave",
+      "date": "2018-09-29",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20180920182427id_/http://www.distillery.de:80/ex/dates/2018/09/29",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "VONDA7",
+              "info": "Kneaded Pains, LNOE",
+              "link": ""
+            },
+            {
+              "name": "DOMINIK MARZ",
+              "info": "Suol, Pastamusik, Augsburg",
+              "link": ""
+            },
+            {
+              "name": "PETER INVASION",
+              "info": "Riotvan, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "ELAD MAGDASI",
+              "info": "Front Left Records, Berlin",
+              "link": ""
+            },
+            {
+              "name": "VINCENT NEUMANN",
+              "info": "Distillery, Unitas Multiplex, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

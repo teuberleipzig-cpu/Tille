@@ -1,0 +1,503 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2023-03-03-friday-rave",
+      "date": "2023-03-03",
+      "title": "FRIDAY RAVE",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20230326212211id_/https://www.distillery.de/ex/dates/2023/03/03",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "KOBOSIL",
+              "info": "R Label Group",
+              "link": ""
+            },
+            {
+              "name": "ROTTNMEIER",
+              "info": "Distillery, exLEpäng!",
+              "link": ""
+            },
+            {
+              "name": "TARIK WEISS",
+              "info": "Halle/Saale",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: [CHTSCH]",
+          "items": [
+            {
+              "name": "SCOVE X VEYLA",
+              "info": "Bassgeflüster",
+              "link": ""
+            },
+            {
+              "name": "MADDA CHANTAL X SANGUINICA",
+              "info": "Bottom Topixxx",
+              "link": ""
+            },
+            {
+              "name": "NACHTIGALL X NEPTUNE",
+              "info": "PX13",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-03-04-saturday-rave",
+      "date": "2023-03-04",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20230326222948id_/https://www.distillery.de/ex/dates/2023/03/04",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MATHEW JONSON",
+              "info": "Wagon Repair, Vancouver / Canada",
+              "link": ""
+            },
+            {
+              "name": "COLINE",
+              "info": "Pressure Vibes, Dresden",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "MELL G",
+              "info": "Juicy Gang Records",
+              "link": ""
+            },
+            {
+              "name": "TTYFAL",
+              "info": "Institut für Zukunft",
+              "link": ""
+            },
+            {
+              "name": "VINCENT NEUMANN",
+              "info": "Distillery, Unitas Multiplex, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-03-10-konzertabend-stay-mekong-airlines-peekgoose",
+      "date": "2023-03-10",
+      "title": "KONZERTABEND: STAY / MEKONG AIRLINES / PEEKGOOSE",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20230326211055id_/https://www.distillery.de/ex/dates/2023/03/10",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "STAY",
+              "info": "Post-Hardcore, Grunge, Shoegaze, Halle/Saale",
+              "link": ""
+            },
+            {
+              "name": "PEEKGOOSE",
+              "info": "Psychedelic, Post-Rock, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MEKONG AIRLINES",
+              "info": "Postrock, Leipzig, Start: 19:00, add to Cal, Einlass 19:00, Beginn 20:00",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-03-11-saturday-rave-x-10-years-mord",
+      "date": "2023-03-11",
+      "title": "SATURDAY RAVE X 10 YEARS MORD",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20230326222154id_/https://www.distillery.de/ex/dates/2023/03/11",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "VOISKI",
+              "info": "Delsin, Super 95, Superski",
+              "link": ""
+            },
+            {
+              "name": "ROSA RED",
+              "info": "Permanent Vacation",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: 10 Years MORD",
+          "items": [
+            {
+              "name": "BAS MOOY",
+              "info": "Mord Records, Rotterdam",
+              "link": ""
+            },
+            {
+              "name": "OLIVER ROSEMANN",
+              "info": "Recorded Things, Mindtrip, Mord",
+              "link": ""
+            },
+            {
+              "name": "FR.JPLA",
+              "info": "Rillendisco, IfZ",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-03-17-oxidation",
+      "date": "2023-03-17",
+      "title": "OXIDATION",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20230326214413id_/https://www.distillery.de/ex/dates/2023/03/17",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DJ HYPERDRIVE",
+              "info": "BCCO, Berlin",
+              "link": ""
+            },
+            {
+              "name": "MARC MOELLER",
+              "info": "Folta wax, Berlin",
+              "link": ""
+            },
+            {
+              "name": "WLLKR",
+              "info": "Dorncore, Raveletics, Berlin, Ominous, Fvll-Recordings, Köln",
+              "link": ""
+            },
+            {
+              "name": "MIEZZZ",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DAVID ZIKARSKY B2B TECHNOTONI",
+              "info": "Berlin",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "NONEOFTHEABOVE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-03-18-saturday-rave",
+      "date": "2023-03-18",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20230326224918id_/https://www.distillery.de/ex/dates/2023/03/18",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ROMAN FLüGEL",
+              "info": "Dial, ESP Institute",
+              "link": ""
+            },
+            {
+              "name": "ENELRAM",
+              "info": "nice4what, G-Edit",
+              "link": ""
+            },
+            {
+              "name": "MAURO CARACHO",
+              "info": "Distillery, Speedboat, Fäncy",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "ATALANTA",
+              "info": "Distillery",
+              "link": ""
+            },
+            {
+              "name": "BIGALKE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-03-19-laerm",
+      "date": "2023-03-19",
+      "title": "LÄRM",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20230326220005id_/https://www.distillery.de/ex/dates/2023/03/19",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "CHLAMYDIA",
+              "info": "SUBVERTED",
+              "link": ""
+            },
+            {
+              "name": "NINETTE",
+              "info": "Distillery, LÄRM",
+              "link": ""
+            },
+            {
+              "name": "KIM VALMOUNT",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "BELA BERTRAM B2B HOCK",
+              "info": "Start: 18:00, add to Cal",
+              "link": ""
+            },
+            {
+              "name": "TICKETS",
+              "info": "LÄRM steht für High Energy Techno. Laut, schnell, hart und kompromisslos ist der Sound., LÄRM steht für Freiheit und Freizügigkeit. Unsere Message „Ecstasize your inner Fetish“ spiegelt sich sowohl musikalisch als auch im extravaganten Auftreten unserer Community wieder.",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-03-24-boundless-beatz",
+      "date": "2023-03-24",
+      "title": "BOUNDLESS BEATZ",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20230326213559id_/https://www.distillery.de/ex/dates/2023/03/24",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: DRUM & BASS",
+          "items": [
+            {
+              "name": "BUUNSHIN",
+              "info": "Critical / Vision, NL",
+              "link": ""
+            },
+            {
+              "name": "ANNCA",
+              "info": "CLX&EDU, Hannover",
+              "link": ""
+            },
+            {
+              "name": "AUDITE",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DUBBALOT",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SWAGNER",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: DUBSTEP",
+          "items": [
+            {
+              "name": "BUKEZ FINEZT",
+              "info": "Deep Medi / Next Level, Berlin",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-03-25-saturday-rave-x-10-years-voxnox",
+      "date": "2023-03-25",
+      "title": "SATURDAY RAVE X 10 YEARS VOXNOX",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20230326224318id_/https://www.distillery.de/ex/dates/2023/03/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DANA RUH",
+              "info": "Brouqade, 60waves",
+              "link": ""
+            },
+            {
+              "name": "GILI",
+              "info": "II.R, closed",
+              "link": ""
+            },
+            {
+              "name": "SHURAY & WALLE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: 10 Years VOXNOX",
+          "items": [
+            {
+              "name": "KALTE LIEBE",
+              "info": "BFT, 01010100 Records, Vitus Curse",
+              "link": ""
+            },
+            {
+              "name": "LUCINEE",
+              "info": "Voxnox Records, EXHALE, Space Trax, RAW",
+              "link": ""
+            },
+            {
+              "name": "NEW FRAMES",
+              "info": "R - Label Group",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-03-29-120-minuten-w-miss-cleenex-und-ihr-ex",
+      "date": "2023-03-29",
+      "title": "120 MINUTEN W/ MISS CLEENEX UND IHR EX",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20230326213951id_/https://www.distillery.de/ex/dates/2023/03/29",
+      "imageUrl": "",
+      "description": "Start: 20:00\nTICKETS\nGefördert durch:\n2001-2022 Distillery\nmade with <3 °°",
+      "sections": []
+    },
+    {
+      "id": "2023-03-31-friday-rave",
+      "date": "2023-03-31",
+      "title": "FRIDAY RAVE",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20230326212932id_/https://www.distillery.de/ex/dates/2023/03/31",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "CHRIS LIEBING",
+              "info": "clr.net, FFM",
+              "link": ""
+            },
+            {
+              "name": "NADINE TALAKOVICS",
+              "info": "Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "RNGR - LIVE",
+              "info": "Micronium, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "0-DIMENSIONAL",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "XXXXX - LIVE",
+              "info": "Distillery, Start: 23:00",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

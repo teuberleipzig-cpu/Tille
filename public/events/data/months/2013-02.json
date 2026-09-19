@@ -1,0 +1,292 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2013-02-01-livelyrix-poetry-slam",
+      "date": "2013-02-01",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20130127024841id_/http://www.distillery.de:80/ex/dates/2013/02/01",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: spannende wortgefechte",
+          "items": [
+            {
+              "name": "PETER PARKSTER",
+              "info": "Nürnberg",
+              "link": ""
+            },
+            {
+              "name": "HAUKE PRIGGE",
+              "info": "Marburg",
+              "link": ""
+            },
+            {
+              "name": "LUCAS FASSNACHT",
+              "info": "Erlangen",
+              "link": ""
+            },
+            {
+              "name": "UDO TIFFERT",
+              "info": "Lausitz, Neusorge",
+              "link": ""
+            },
+            {
+              "name": "JAN LINDNER",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-02-02-chitlin-circuit-meets-definition",
+      "date": "2013-02-02",
+      "title": "CHITLIN' CIRCUIT MEETS DEFINITION",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20130126001636id_/http://www.distillery.de:80/ex/dates/2013/02/02",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: chitlin' circuit",
+          "items": [
+            {
+              "name": "MARKUS FIX",
+              "info": "Cecille, Cocoon, Be Chosen, Below, FFM",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-02-08-pass-out",
+      "date": "2013-02-08",
+      "title": "PASS OUT!",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20130127024845id_/http://www.distillery.de:80/ex/dates/2013/02/08",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "down: grime, juke, trap, future garage, dubstep, uk funky",
+          "items": [
+            {
+              "name": "PEAK PHINE",
+              "info": "Distillery, Bass Plus, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DOWNTOWNLYRICS SOUNDSYSTEM",
+              "info": "Malcolm & Full Contact, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SENCHA",
+              "info": "Distillery, Bass Plus",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-02-09-house-meets-where-the-bufallo-tour",
+      "date": "2013-02-09",
+      "title": "HOUSE MEETS WHERE THE BUFALLO TOUR",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20130127024850id_/http://www.distillery.de:80/ex/dates/2013/02/09",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: (play)house meets",
+          "items": [
+            {
+              "name": "PROSUMER",
+              "info": "Ostgut Ton, Playhouse, Berlin",
+              "link": ""
+            },
+            {
+              "name": "ALEXANDER SLAUGHTER",
+              "info": "Vancouver, Berlin",
+              "link": ""
+            },
+            {
+              "name": "RON DEACON",
+              "info": "Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-02-15-caribbean-nice-up",
+      "date": "2013-02-15",
+      "title": "CARIBBEAN NICE UP!",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20130127024858id_/http://www.distillery.de:80/ex/dates/2013/02/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: dancehall, reggae, soca, african rythms",
+          "items": [
+            {
+              "name": "SPLENDID SOUND",
+              "info": "Champion Sound, Breslau, Polen",
+              "link": ""
+            },
+            {
+              "name": "CHABWERA BANDA",
+              "info": "Woza this is africa, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DJ BEATZEPS",
+              "info": "High Power Station, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MR. DAGGA",
+              "info": "Unity Sound",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "special:",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-02-16-riotvan-meets-grounded-theory",
+      "date": "2013-02-16",
+      "title": "RIOTVAN MEETS GROUNDED THEORY",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20130127024904id_/http://www.distillery.de:80/ex/dates/2013/02/16",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: riotvan",
+          "items": [
+            {
+              "name": "RAMPUE – LIVE",
+              "info": "Audiolith, Dantze, Berlin",
+              "link": ""
+            },
+            {
+              "name": "FILBURT",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-02-22-boundless-beatz",
+      "date": "2013-02-22",
+      "title": "BOUNDLESS BEATZ",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20130127024909id_/http://www.distillery.de:80/ex/dates/2013/02/22",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: drum and bass, jungle",
+          "items": [
+            {
+              "name": "BETTER THAN GOLD - LIVE",
+              "info": "Mc Mike Romeo, Steve.e, Sam Francesco",
+              "link": ""
+            },
+            {
+              "name": "DJ UPZET",
+              "info": "out of mind, Berlin",
+              "link": ""
+            },
+            {
+              "name": "CORN FLEX",
+              "info": "High Finesse, Dresden",
+              "link": ""
+            },
+            {
+              "name": "AUDITE",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: dubstep, broken beats",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-02-23-moon-harbour-showcase-meets-downground",
+      "date": "2013-02-23",
+      "title": "MOON HARBOUR SHOWCASE MEETS DOWNGROUND",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20130127024915id_/http://www.distillery.de:80/ex/dates/2013/02/23",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: moon harbour",
+          "items": [
+            {
+              "name": "KABALE UND LIEBE",
+              "info": "Soweso, Remote Area, NL",
+              "link": ""
+            },
+            {
+              "name": "DAN DRASTIC",
+              "info": "Moon Harbour, Hairy Claw, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: downground",
+          "items": [
+            {
+              "name": "REKORDER",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

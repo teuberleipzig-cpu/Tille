@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2015-08-29-re-opening-after-summerbreak",
+      "date": "2015-08-29",
+      "title": "RE:OPENING AFTER SUMMERBREAK",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20150828225011id_/http://www.distillery.de:80/ex/dates/2015/08/29",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MASSIMILIANO PAGLIARA",
+              "info": "LARJ, Ostgut Ton",
+              "link": ""
+            },
+            {
+              "name": "DAVE DK",
+              "info": "Pampa Records, Kompakt Records, Berlin",
+              "link": ""
+            },
+            {
+              "name": "RUKEY",
+              "info": "Distillery, esoulate, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "KARL FRIEDRICH",
+              "info": "Hommage, Halle/Saale",
+              "link": ""
+            },
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "mindcookies",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,420 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2018-05-04-livelyrix-poetry-slam",
+      "date": "2018-05-04",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190823100726id_/http://www.distillery.de/ex/dates/2018/05/04",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: MODERATION:",
+          "items": [
+            {
+              "name": "NOAH KLAUS",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "TEREZA HOSSA",
+              "info": "Wien",
+              "link": ""
+            },
+            {
+              "name": "HANK M. FLEMMING",
+              "info": "Tübingen",
+              "link": ""
+            },
+            {
+              "name": "LARA ERMER",
+              "info": "Frankfurt",
+              "link": ""
+            },
+            {
+              "name": "BONNY LYCEN",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BLEU BROODE & LEONIE WARNKE",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-05-05-transit",
+      "date": "2018-05-05",
+      "title": "TRANSIT",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20220705043935id_/https://www.distillery.de/ex/dates/2018/05/05",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "YOUNG MARCO",
+              "info": "Dekmantel, ESP Institute",
+              "link": ""
+            },
+            {
+              "name": "KARETE BU",
+              "info": "DRIVE, G-Edit",
+              "link": ""
+            },
+            {
+              "name": "DAHMAR",
+              "info": "Electronic Resistance, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "CREDIT 00",
+              "info": "Rat Life Records, Uncanny Valley",
+              "link": ""
+            },
+            {
+              "name": "FAQ",
+              "info": "IFZ, Young Shields",
+              "link": ""
+            },
+            {
+              "name": "TNRG",
+              "info": "Possbl Things",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-05-09-raw-and-naturally-crafted",
+      "date": "2018-05-09",
+      "title": "RAW AND NATURALLY CRAFTED",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20220705033334id_/https://www.distillery.de/ex/dates/2018/05/09",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "FJAAK",
+              "info": "50Weapons, Cityslang",
+              "link": ""
+            },
+            {
+              "name": "FADI MOHEM",
+              "info": "Werk-Music",
+              "link": ""
+            },
+            {
+              "name": "J.MANUEL",
+              "info": "Werk-Music",
+              "link": ""
+            },
+            {
+              "name": "NADINE TALAKOVICS",
+              "info": "Distillery",
+              "link": ""
+            },
+            {
+              "name": "FJAAK",
+              "info": "das Trio von sympathischen Hardware-Nerds. Felix Wagner, Aaron Röbig und Kevin Kozicki, die gemeinsam in Spandau am Stadtrand von Berlin aufgewachsen sind, haben sich in der elektronischen Musikszene zunächst durch die Organisation illegaler Raves einen Namen gemacht, bevor sie dann schließlich als Live-Act auf der Überholspur alle anderen hinter sich gelassen haben. Ihren aufwändigen analogen Klang haben sie seitdem rund um den Globus verbreitet. Und dort wo FJAAK auftraucht, ist auch FJAAK drin: roher, natürlich gefertigter Techno!, https://www.residentadvisor.net/dj/fjaak",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-05-11-defrostatica-presents-future-sound-of-leipzig",
+      "date": "2018-05-11",
+      "title": "DEFROSTATICA PRESENTS: FUTURE SOUND OF LEIPZIG",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20220705032457id_/https://www.distillery.de/ex/dates/2018/05/11",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "BRKN1",
+              "info": "Dub Logic, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BOOGA",
+              "info": "Defrostatica, Records, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DJ YUMYUM",
+              "info": "Eclectic, Leipzig, noisy answer",
+              "link": ""
+            },
+            {
+              "name": "KJUBI",
+              "info": "Boundless Beatz / DDNBC, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LXC",
+              "info": "Alphacut, 45Seven, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-05-12-record-release-1",
+      "date": "2018-05-12",
+      "title": "RECORD RELEASE #1",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20210514114632id_/https://www.distillery.de/ex/dates/2018/05/12",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MONKEY MAFFIA",
+              "info": "Freude am Tanzen, Jena",
+              "link": ""
+            },
+            {
+              "name": "LARS CHRISTIAN MüLLER",
+              "info": "Distillery, mindcookies",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "THOMAS STIELER",
+              "info": "Distillery, Paracou",
+              "link": ""
+            },
+            {
+              "name": "LYDIA EISENBLäTTER",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-05-18-style-wild",
+      "date": "2018-05-18",
+      "title": "STYLE WILD",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190823100651id_/http://www.distillery.de/ex/dates/2018/05/18",
+      "imageUrl": "",
+      "description": "AB 21:00 UHR: STYLE WILD STREETDANCE BATTLES",
+      "sections": [
+        {
+          "label": "up: AB 21:00 UHR: HOSTED BY:",
+          "items": [
+            {
+              "name": "STYLE WILD STREETDANCE BATTLES",
+              "info": "Hip Hop, Funkstyle, Experimental",
+              "link": ""
+            },
+            {
+              "name": "LUDI ROCKOON",
+              "info": "kidsandheroes",
+              "link": ""
+            },
+            {
+              "name": "DJ CRASH",
+              "info": "Fusion Art",
+              "link": ""
+            },
+            {
+              "name": "RILLE",
+              "info": "Style Wild, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "DJ Y",
+              "info": "04Lkarwa Reppin', Berlin",
+              "link": ""
+            },
+            {
+              "name": "JENNY SHARP",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-05-19-24-h-up-homezimmer",
+      "date": "2018-05-19",
+      "title": "24 H UP HOMEZIMMER",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20210304150002id_/https://www.distillery.de/ex/dates/2018/05/19",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MODESELEKTOR – DJ SET",
+              "info": "Monkeytown Records, Berlin",
+              "link": ""
+            },
+            {
+              "name": "EFDEMIN",
+              "info": "Dial, Records, Ostgut, Berlin",
+              "link": ""
+            },
+            {
+              "name": "BONNIE FORD",
+              "info": "Rummels Bucht, Berlin",
+              "link": ""
+            },
+            {
+              "name": "MORITZ KAISER",
+              "info": "IO, Pilleneimer, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DAHMAR",
+              "info": "Electronic Resistance, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "UPSYLER",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-05-25-purple-tea-xvii",
+      "date": "2018-05-25",
+      "title": "PURPLE TEA XVII",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190823100411id_/http://www.distillery.de/ex/dates/2018/05/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ED PARIS",
+              "info": "CLSR",
+              "link": ""
+            },
+            {
+              "name": "SHORTEE",
+              "info": "Superfreunde, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "KIT KUT",
+              "info": "GoodHoodMusic, Beyond07, Team PurpleTea",
+              "link": ""
+            },
+            {
+              "name": "DRBYSTRR93",
+              "info": "soulutian, Team PurpleTea, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "TRIX",
+              "info": "TRLLXGNG, Leipzig, Start: 23:00, add to Cal, HipHop 2.0 x Grime x Hustle-Trap x UK x Baltimore x OG-Rap x Breaks x Ragga x Moombahton x Ghetto-Tech x GlobalBa$$ x B.I.G. x Transforma-Scratch",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-05-26-20-years-of-resident",
+      "date": "2018-05-26",
+      "title": "20 YEARS OF RESIDENT",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20220705025308id_/https://www.distillery.de/ex/dates/2018/05/26",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MICRONAUT – DJ SET",
+              "info": "Acker Records, 3000 Grad, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MAC-KEE",
+              "info": "Dirtydrivesounds, Sparte 13",
+              "link": ""
+            },
+            {
+              "name": "WITH ALBERT VOGT",
+              "info": "Soul Pattern, Sparte 13",
+              "link": ""
+            },
+            {
+              "name": "MARC MODEL",
+              "info": "Piccolo Records",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LARS CHRISTIAN MüLLER",
+              "info": "Distillery, mindcookies",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

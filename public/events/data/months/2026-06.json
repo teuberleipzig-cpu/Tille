@@ -1,0 +1,338 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "ra-2445249",
+      "date": "2026-06-06",
+      "title": "GLOBAL SPACE ODYSSEY Afterparty",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2445249",
+      "imageUrl": "",
+      "description": "Start: 22:00\nEnde: 08:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Carotin",
+              "info": "Dresden",
+              "link": ""
+            },
+            {
+              "name": "catjes",
+              "info": "Hypress, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DELIKAT",
+              "info": "alsob sounds , Leipzig",
+              "link": ""
+            },
+            {
+              "name": "genelle",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "ILOVDADDYZ",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Kalpea",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "KRUE",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "DJ Schnürschuh",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Sebastian Strootmann",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Timstagram",
+              "info": "Keinkollektiv, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "VLUNA",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2435637",
+      "date": "2026-06-07",
+      "title": "Rillendisco",
+      "color": "yellow",
+      "moreUrl": "https://ra.co/events/2435637",
+      "imageUrl": "",
+      "description": "Start: 14:00\nEnde: 22:00",
+      "sections": []
+    },
+    {
+      "id": "ra-2421173",
+      "date": "2026-06-13",
+      "title": "roothirteen",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2421173",
+      "imageUrl": "",
+      "description": "Start: 14:00\nEnde: 22:00",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "CRAVO",
+              "info": "HAYES, KLOCKWORKS, SK11, ANAØH, Lisboa",
+              "link": ""
+            },
+            {
+              "name": "IRA DELTA",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Niktech",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2026-06-10-neues-event",
+      "date": "2026-06-13",
+      "title": "STOLEN MONEY POSSE X NEBULA",
+      "color": "orange",
+      "moreUrl": "#https://de.ra.co/events/2449225",
+      "imageUrl": "public/events/media/shared/migrated-8bc896fff6ca7f84.jpg",
+      "description": "Please show a valid ID card at the entry.\nNo bags larger than 20x30x20cm allowed.\nNo liquids, no weapons, no pyros, no photos, no videos, no national flags. No -ISMS. Be nice!",
+      "sections": [
+        {
+          "label": "pavillon:",
+          "items": [
+            {
+              "name": "DJ HDGDL B2B NIOK",
+              "info": "Stolen Money, Leipzig",
+              "link": "https://soundcloud.com/thomas-heinrich/andreas-eckhardt-thomas-heinrich-echo-sanctum-festival-2025"
+            },
+            {
+              "name": "PLATTENBETRÜGER",
+              "info": "Stolen Money, Leipzig",
+              "link": "https://soundcloud.com/thomas-heinrich/andreas-eckhardt-thomas-heinrich-echo-sanctum-festival-2025"
+            },
+            {
+              "name": "STLU",
+              "info": "Stolen Money, Leipzig",
+              "link": "https://soundcloud.com/thomas-heinrich/andreas-eckhardt-thomas-heinrich-echo-sanctum-festival-2025"
+            },
+            {
+              "name": "THOMAS HEINRICH",
+              "info": "Stolen Money, Leipzig",
+              "link": "https://soundcloud.com/thomas-heinrich/andreas-eckhardt-thomas-heinrich-echo-sanctum-festival-2025"
+            }
+          ],
+          "genre": "house"
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "KONTINUM",
+              "info": "Nebula, Leipzig",
+              "link": "https://soundcloud.com/nebulakollektiv"
+            },
+            {
+              "name": "MORAINE",
+              "info": "Nebula, Leipzig",
+              "link": "https://soundcloud.com/nebulakollektiv"
+            },
+            {
+              "name": "SCHWRZMLRN b2b JANKOW",
+              "info": "Nebula, Leipzig",
+              "link": "https://soundcloud.com/nebulakollektiv"
+            },
+            {
+              "name": "SCHROEDERIN b2b TREUHAND",
+              "info": "Nebula, Leipzig",
+              "link": "https://soundcloud.com/nebulakollektiv"
+            }
+          ],
+          "genre": "techno"
+        }
+      ]
+    },
+    {
+      "id": "ra-2455557",
+      "date": "2026-06-19",
+      "title": "MIDSUMMER MADNESS PT I [OPEN AIR & INDOOR]",
+      "color": "olive",
+      "moreUrl": "https://ra.co/events/2455557",
+      "imageUrl": "",
+      "description": "Start: 18:00\nEnde: 06:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Paige Julia",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "audite",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Cafgar",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "J Nuggetz",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "nea.cuajo",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2455553",
+      "date": "2026-06-20",
+      "title": "MIDSUMMER MADNESS PT II [OPEN AIR BY DAY & INDOOR AT NIGHT]",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2455553",
+      "imageUrl": "",
+      "description": "Start: 14:00\nEnde: 10:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "LUVLESS",
+              "info": "Tsuba, Rose Records Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Padsingers",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Zischko",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Shuray & Walle",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Bephål",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Medha",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Vincent Neumann",
+              "info": "Distillery, Unitas Multiplex, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2455562",
+      "date": "2026-06-27",
+      "title": "PROGRESSIVE LEIPZIG & FRIENDS [OPEN AIR BY DAY & INDOOR AT NIGHT]",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2455562",
+      "imageUrl": "",
+      "description": "Start: 14:00\nEnde: 10:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "NICI PALM",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Simon Phil.ter",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Traxx Jr",
+              "info": "MyGrooves, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MAY/O",
+              "info": "Ostend, MorningStretch, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Dilivius Lenni",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Big Honey",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Emeveka",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "MAGDALENA MAY",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Skoria",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

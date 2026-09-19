@@ -1,0 +1,342 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2019-06-01-saturday-rave",
+      "date": "2019-06-01",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190514021010id_/http://www.distillery.de:80/ex/dates/2019/06/01",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "RSS DISCO",
+              "info": "Mireia Records",
+              "link": ""
+            },
+            {
+              "name": "KARETE BU",
+              "info": "DRIVE, G-Edit",
+              "link": ""
+            },
+            {
+              "name": "DYNAMITE KADINSKI",
+              "info": "Distillery, Fäncy, Leipzig, Start: 23:30, add to Cal",
+              "link": ""
+            },
+            {
+              "name": "KALENDER-DOWNLOAD",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-06-07-livelyrix-poetry-slam-stadtmeisterschaft-leipzig",
+      "date": "2019-06-07",
+      "title": "LIVELYRIX POETRY SLAM - STADTMEISTERSCHAFT LEIPZIG",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190617021344id_/http://www.distillery.de:80/ex/dates/2019/06/07",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "RAINER HOLL",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ELISABETH WEISSE",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LINA KLOEPPER",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "JONAS GALM",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LINA WEDEMEYER",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "TOBI SCHIFFNER",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BORIS FLECKLER",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-06-08-24h-wohnzimmer-pfingsten",
+      "date": "2019-06-08",
+      "title": "24H WOHNZIMMER - PFINGSTEN",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190615192239id_/http://www.distillery.de:80/ex/dates/2019/06/08",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "OCTAVE ONE",
+              "info": "430° West, Detroit",
+              "link": ""
+            },
+            {
+              "name": "SESSION VICTIM",
+              "info": "Real Soon, Hairy Claw, HH/B",
+              "link": ""
+            },
+            {
+              "name": "DAVID DORAD",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "URSL",
+              "info": "KaterMukke, Berlin",
+              "link": ""
+            },
+            {
+              "name": "GUNJAH",
+              "info": "Showboxx, Funkwelt, Dresden",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-06-14-bondlezz-beatz-meets-sustain",
+      "date": "2019-06-14",
+      "title": "BONDLEZZ BEATZ MEETS SUSTAIN!",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190617021349id_/http://www.distillery.de:80/ex/dates/2019/06/14",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "CASCO",
+              "info": "Sustain!, M?nchen",
+              "link": ""
+            },
+            {
+              "name": "CYKLOS",
+              "info": "Sustain, !, München",
+              "link": ""
+            },
+            {
+              "name": "ZEBSTER",
+              "info": "Sustain!, M94.5 BBA, München",
+              "link": ""
+            },
+            {
+              "name": "AUDITE",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DUBBALOT",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-06-15-saturday-rave",
+      "date": "2019-06-15",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190515223531id_/http://www.distillery.de:80/ex/dates/2019/06/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MARCEL FENGLER",
+              "info": "IMF, Mote Evolver",
+              "link": ""
+            },
+            {
+              "name": "VINCENT NEUMANN",
+              "info": "Distillery, Unitas Multiplex, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LYNXES",
+              "info": "Leipzig, Start: 23:30, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-06-22-happy-40th-daniels-stefaniks-birthday",
+      "date": "2019-06-22",
+      "title": "HAPPY 40TH - DANIELS STEFANIKS BIRTHDAY",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190515223611id_/http://www.distillery.de:80/ex/dates/2019/06/22",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MATHIAS KADEN",
+              "info": "Paracou",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "THOMAS STIELER",
+              "info": "Distillery, Paracou",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-06-28-purplegreen-21-summerbreak-w-forever-broke-sensi-movement",
+      "date": "2019-06-28",
+      "title": "PURPLEGREEN 21! #SUMMERBREAK W/ FOREVER BROKE, SENSI MOVEMENT",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190715230727id_/http://www.distillery.de/ex/dates/2019/06/28",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "RARAM & MR. KRISTUS",
+              "info": "Forever Broke, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DJ SICSTYLE",
+              "info": "Bass En Mass, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "KIT KUT",
+              "info": "GoodHoodMusic, Beyond07, Team PurpleTea",
+              "link": ""
+            },
+            {
+              "name": "DJ DERBYSTARR",
+              "info": "Brooklyn Zoo, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "SENSI MOVEMENT",
+              "info": "Chemnitz, Berlin",
+              "link": ""
+            },
+            {
+              "name": "HIGH POWER STATION",
+              "info": "Dash Out, Teameastgermany, Leipzig / Köln",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-06-29-transit",
+      "date": "2019-06-29",
+      "title": "TRANSIT",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190514023623id_/http://www.distillery.de:80/ex/dates/2019/06/29",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SEBO K",
+              "info": "Scenario, Tsuba, Robsoul, Berlin",
+              "link": ""
+            },
+            {
+              "name": "RUEDE HAGELSTEIN",
+              "info": "Upon You, Watergate, Berlin",
+              "link": ""
+            },
+            {
+              "name": "QNETE",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "WILHELM",
+              "info": "IfZ, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MAURO CARACHO",
+              "info": "Distillery, Fäncy, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

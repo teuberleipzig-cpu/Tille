@@ -1,0 +1,361 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2022-09-03-saturday-rave",
+      "date": "2022-09-03",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20221001211110id_/https://www.distillery.de/ex/dates/2022/09/03",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ANDRé GALLUZZI",
+              "info": "ARAS Records, Berghain Ostgut, Cocoon",
+              "link": ""
+            },
+            {
+              "name": "MELLA DEE",
+              "info": "Warehouse Music, Shall Not Fade",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "MATRIXXMAN",
+              "info": "Dekmantel, Ghostly International",
+              "link": ""
+            },
+            {
+              "name": "STIGMATIQUE",
+              "info": "Distillery, SEELEN",
+              "link": ""
+            },
+            {
+              "name": "HOUDAFK",
+              "info": "Distillery, Start: 23:00",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-09-07-i-love-gardening",
+      "date": "2022-09-07",
+      "title": "I LOVE GARDENING",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20221001220642id_/https://www.distillery.de/ex/dates/2022/09/07",
+      "imageUrl": "",
+      "description": "Start: 18:00\nGefördert durch:\n2001-2022 Distillery",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "NAPOLEON DYNAMITE",
+              "info": "Fäncy, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-09-09-boundless-beatz",
+      "date": "2022-09-09",
+      "title": "BOUNDLESS BEATZ",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20221001202703id_/https://www.distillery.de/ex/dates/2022/09/09",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "PULL 180",
+              "info": "Überschall, Muna, Jena",
+              "link": ""
+            },
+            {
+              "name": "KAMIKATZE",
+              "info": "TimeTripping, München",
+              "link": ""
+            },
+            {
+              "name": "DøRTE",
+              "info": "vib:ez",
+              "link": ""
+            },
+            {
+              "name": "DUBLET",
+              "info": "GSO",
+              "link": ""
+            },
+            {
+              "name": "DUBBALOT",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "TICKETS",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-09-10-saturday-rave",
+      "date": "2022-09-10",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20221001210405id_/https://www.distillery.de/ex/dates/2022/09/10",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "FKA.M4A",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "MYSTERY AFFAIR",
+              "info": "Pervert/Monocero Records",
+              "link": ""
+            },
+            {
+              "name": "PETER INVASION",
+              "info": "Riotvan, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "SANDRIEN",
+              "info": "wolfskuil",
+              "link": ""
+            },
+            {
+              "name": "STEPHAN VON WOLFFERSDORFF",
+              "info": "Distillery, Where the Buffalo Roam, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-09-14-i-love-gardening",
+      "date": "2022-09-14",
+      "title": "I LOVE GARDENING",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20221001220013id_/https://www.distillery.de/ex/dates/2022/09/14",
+      "imageUrl": "",
+      "description": "Start: 18:00\nGefördert durch:\n2001-2022 Distillery",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "DANIEL SAILER",
+              "info": "(Up Home, Distillery,, Where the Buffalo Roam",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-09-17-saturday-rave",
+      "date": "2022-09-17",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20221001213626id_/https://www.distillery.de/ex/dates/2022/09/17",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MATTHIAS TANZMANN",
+              "info": "Moon Harbour, Circoloco",
+              "link": ""
+            },
+            {
+              "name": "STEVE BUG",
+              "info": "Raw Elements, Pokerflat",
+              "link": ""
+            },
+            {
+              "name": "DAN DRASTIC",
+              "info": "Moon Harbour, Hairy Claw, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "PARTOK",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "VINCENT NEUMANN",
+              "info": "Distillery, Unitas Multiplex, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ATALANTA",
+              "info": "Distillery, Inferis",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-09-23-defrostatica-self-learning-system-praesentieren-cosmic-chaos",
+      "date": "2022-09-23",
+      "title": "DEFROSTATICA & SELF LEARNING SYSTEM PRÄSENTIEREN: COSMIC CHAOS",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20221001201625id_/https://www.distillery.de/ex/dates/2022/09/23",
+      "imageUrl": "",
+      "description": "FR. 23.09.22 Defrostatica & Self Learning System präsentieren:\nCosmic Chaos",
+      "sections": [
+        {
+          "label": "up: Electro + Breaks",
+          "items": [
+            {
+              "name": "ACIDFINKY",
+              "info": "BLVSH, THF Radio",
+              "link": ""
+            },
+            {
+              "name": "DJ UNISEX",
+              "info": "Self Learning System",
+              "link": ""
+            },
+            {
+              "name": "ALICE IN FLAMES",
+              "info": "Disposable Time",
+              "link": ""
+            },
+            {
+              "name": "FRIEDRICH ERNST",
+              "info": "Self Learning System",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: Jungle + DnB",
+          "items": [
+            {
+              "name": "SUN PEOPLE",
+              "info": "Defrostatica, Exit",
+              "link": ""
+            },
+            {
+              "name": "PHILO",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-09-24-saturday-rave-x-recorded-things",
+      "date": "2022-09-24",
+      "title": "SATURDAY RAVE X RECORDED THINGS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20221001213048id_/https://www.distillery.de/ex/dates/2022/09/24",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "LAUER",
+              "info": "Permanent Vacation, Running Back, Robert Johnson",
+              "link": ""
+            },
+            {
+              "name": "NEW HOOK DJ-SET",
+              "info": "Riotvan",
+              "link": ""
+            },
+            {
+              "name": "MAURO CARACHO",
+              "info": "Distillery, Speedboat, Fäncy",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "ALEXANDER KOWALSKI",
+              "info": "Damage Music, Kanzleramt, Mord",
+              "link": ""
+            },
+            {
+              "name": "TAUCETI",
+              "info": "Vaerel Records, PapaMaman, Le Sucre",
+              "link": ""
+            },
+            {
+              "name": "OLIVER ROSEMANN",
+              "info": "Recorded Things, Mindtrip, Mord",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-09-28-120-minuten-w-miss-cleenex-und-ihr-ex",
+      "date": "2022-09-28",
+      "title": "120 MINUTEN W/ MISS CLEENEX UND IHR EX",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20221001201836id_/https://www.distillery.de/ex/dates/2022/09/28",
+      "imageUrl": "",
+      "description": "Start: 20:00\nTICKETS\nEinfach 120 Minuten Party. Mehr nicht - aber auch nicht weniger. Musikalisch: ein Hauch Mainstream mit einer gehörigen Prise elektronischen, housigen, erinnerungsschwangeren Beats bis hin zu Deep Clubbing Sounds - in absolut tanzbarem Soundteppich verwoben.\n120 Minuten Gute-Laune-Afterwork-Life-Balance-Sause mit Show-Specials, netten Leuten und coolen Drinks!\nnon-violent, non-homophobic, peaceful, tolerant, friendly,happy party-people of any kind, gender, color.\ngroove-in: ab 20:00 Uhr\nstart: 21:00 Uhr\nende: 23:00 Uhr\ncool down: bis 00:00 Uhr",
+      "sections": []
+    }
+  ]
+}

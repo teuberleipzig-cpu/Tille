@@ -1,0 +1,273 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2021-09-04-i-love-gardening",
+      "date": "2021-09-04",
+      "title": "I LOVE GARDENING",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20210920140001id_/https://www.distillery.de/ex/dates/2021/09/04",
+      "imageUrl": "",
+      "description": "Start: 18:00",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "SABINE HOFFMANN",
+              "info": "Frauengedeck, OYE Rec.",
+              "link": ""
+            },
+            {
+              "name": "FRAU ZIMMER",
+              "info": "technose",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-09-08-i-love-gardening",
+      "date": "2021-09-08",
+      "title": "I LOVE GARDENING",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20210920145916id_/https://www.distillery.de/ex/dates/2021/09/08",
+      "imageUrl": "",
+      "description": "Start: 18:00",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "DAS DIRN",
+              "info": "Die Made und das Dirn, Puffy",
+              "link": ""
+            },
+            {
+              "name": "NAPOLEON DYNAMITE",
+              "info": "Fäncy, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-09-09-moskau-petuschki-ein-performatives-live-hoerspiel-mit-karaoke-und-wodka",
+      "date": "2021-09-09",
+      "title": "MOSKAU-PETUSCHKI - EIN PERFORMATIVES LIVE-HÖRSPIEL MIT KARAOKE UND WODKA",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20210920140328id_/https://www.distillery.de/ex/dates/2021/09/09",
+      "imageUrl": "",
+      "description": "Start: 18:00\n18:00 Einlass-19:00 „Moskau-Petuschki“-21:00 Karaoke-Wendikt Jerofejews Poem „Die Reise nach Petuschki“ ist eine literarische Sauftour, bei der die Übergänge zwischen der Schilderung der chaotischen Realität in der Sowjetunion der späten 1960er, Satire und intelligentem Nonsens verschwimmen:Der Trinker Wenedikt Jerofejew besteigt mit einem Köfferchen voll Schnaps den Zug von Moskau nach Petuschki. Von Station zu Station und Flasche zu Flasche werden Wenedikts Monologe und sein Gedankenaustausch mit den mittrinkenden Reisegefährten aberwitziger und geraten zu einer Demontage aller moralischen und geistigen Werte.Publikum und Mitwirkende trinken gemeinsam mit dem Protagonisten. Der Strudel vonJerofejwes Gedankenwelt wird körperlich erfahrbar. Durch Live-Musik und gemeinsamesKaraoke-Singen gerät dieses Livehörspiel zu einem ganzheitlichen Erlebnis, einem Spaß für jung und alt, einem kulturvollen Exzess und einer großartigen Abendunterhaltung.Lesung: Kay LiemannMusik: Philipp Rücker",
+      "sections": []
+    },
+    {
+      "id": "2021-09-10-i-love-gardening-x-think-aftershow-down",
+      "date": "2021-09-10",
+      "title": "I LOVE GARDENING X THINK AFTERSHOW - DOWN",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20210920145121id_/https://www.distillery.de/ex/dates/2021/09/10",
+      "imageUrl": "",
+      "description": "Start: 18:00",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "GEORG BIGALKE",
+              "info": "45 MOT, Distillery, Drec",
+              "link": ""
+            },
+            {
+              "name": "TøSCHE",
+              "info": "Tensiøn",
+              "link": ""
+            },
+            {
+              "name": "CEDRIC KUSCHNICK",
+              "info": "Inferis, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-09-11-i-love-gardening",
+      "date": "2021-09-11",
+      "title": "I LOVE GARDENING",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20210920135342id_/https://www.distillery.de/ex/dates/2021/09/11",
+      "imageUrl": "",
+      "description": "Start: 18:00",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "SUBMOD",
+              "info": "Distillery, vaertism, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-09-15-i-love-gardening",
+      "date": "2021-09-15",
+      "title": "I LOVE GARDENING",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20210920145503id_/https://www.distillery.de/ex/dates/2021/09/15",
+      "imageUrl": "",
+      "description": "Start: 18:00\nAufgrund steigender Inzidenz benötigt ihr ab sofort für unsere I LOVE GARDENING Veranstaltungen einen negativen Corona Test, ein digitales Impfzertifikat oder eine Genesenheitsbescheinigung.\nDer Eintritt ist wie immer frei!\nDue to the rising corona cases, you need to bring a certified negative test, a digital vaccination certificate or an official health certification (that you had Corona already)There will be some tabletennis and kicker and most likely some tasty Handbrot. See ya!\nWir haben einen Tischkicker, Tischtennis und leckeres Handbrot von Lipsia Backstuben vor Ort.\nBringt ein Lächeln mit und lasst uns gemeinsam die Musik unter freiem Himmel genießen!",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "ROTTNMEIER",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "STIGMATIQUE",
+              "info": "Distillery, SEELEN",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-09-17-i-love-gardening-x-manamana",
+      "date": "2021-09-17",
+      "title": "I LOVE GARDENING X MANAMANA",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20210920151738id_/https://www.distillery.de/ex/dates/2021/09/17",
+      "imageUrl": "",
+      "description": "Start: 18:00\nAufgrund steigender Inzidenz benötigt ihr ab sofort für unsere I LOVE GARDENING Veranstaltungen einen negativen Corona Test, ein digitales Impfzertifikat oder eine Genesenheitsbescheinigung.\nDer Eintritt ist wie immer frei!\nDue to the rising corona cases, you need to bring a certified negative test, a digital vaccination certificate or an official health certification (that you had Corona already)There will be some tabletennis and kicker and most likely some tasty Handbrot. See ya!\nWir haben einen Tischkicker, Tischtennis und leckeres Handbrot von Lipsia Backstuben vor Ort.\nBringt ein Lächeln mit und lasst uns gemeinsam die Musik unter freiem Himmel genießen!",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "MANAMANA",
+              "info": "Kann, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-09-18-i-love-gardening-x-recorded-things",
+      "date": "2021-09-18",
+      "title": "I LOVE GARDENING X RECORDED THINGS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20210920142500id_/https://www.distillery.de/ex/dates/2021/09/18",
+      "imageUrl": "",
+      "description": "Start: 18:00\nAufgrund steigender Inzidenz benötigt ihr ab sofort für unsere I LOVE GARDENING Veranstaltungen einen negativen Corona Test, ein digitales Impfzertifikat oder eine Genesenheitsbescheinigung.\nDer Eintritt ist wie immer frei!\nDue to the rising corona cases, you need to bring a certified negative test, a digital vaccination certificate or an official health certification (that you had Corona already)There will be some tabletennis and kicker and most likely some tasty Handbrot. See ya!\nWir haben einen Tischkicker, Tischtennis und leckeres Handbrot von Lipsia Backstuben vor Ort.\nBringt ein Lächeln mit und lasst uns gemeinsam die Musik unter freiem Himmel genießen!",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "ALEXANDER KOWALSKI",
+              "info": "Damage Music, Kanzleramt, Mord",
+              "link": ""
+            },
+            {
+              "name": "OLIVER ROSEMANN",
+              "info": "Recorded Things, Mindtrip, Mord",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-09-24-i-love-gardening",
+      "date": "2021-09-24",
+      "title": "I LOVE GARDENING",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20210920151122id_/https://www.distillery.de/ex/dates/2021/09/24",
+      "imageUrl": "",
+      "description": "Start: 18:00",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "DAN DRASTIC",
+              "info": "Moon Harbour, Hairy Claw, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-09-25-fonky-town",
+      "date": "2021-09-25",
+      "title": "FONKY TOWN",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20211021114303id_/https://www.distillery.de/ex/dates/2021/09/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SENIOR KIEZ",
+              "info": "Polyester Club",
+              "link": ""
+            },
+            {
+              "name": "JESS PASSERI",
+              "info": "Good Hood Music",
+              "link": ""
+            },
+            {
+              "name": "DJ SICSTYLE",
+              "info": "Good Hood Music",
+              "link": ""
+            },
+            {
+              "name": "DJ DøRBYSTARR AKA BOB KARLI AKA DERBYDELAY",
+              "info": "RAW SOLE",
+              "link": ""
+            },
+            {
+              "name": "FELA KULKI",
+              "info": "RAW SOLE, Schlappendisko",
+              "link": ""
+            },
+            {
+              "name": "JAY MAGNUM",
+              "info": "Schlappendisko, Start: 20:00",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

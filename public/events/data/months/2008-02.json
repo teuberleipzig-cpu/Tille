@@ -1,0 +1,289 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2008-02-01-breakbeat-journeys-battle-of-the-breaks-pt-2",
+      "date": "2008-02-01",
+      "title": "BREAKBEAT JOURNEYS' BATTLE OF THE BREAKS PT.2",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20081024205309id_/http://distillery.de:80/ex/dates/2008/02/01",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Drum&Bass:",
+          "items": [
+            {
+              "name": "ANDY SKOPES",
+              "info": "Renegade, Inperspective, Jerona Fruits, Immerse, London",
+              "link": ""
+            },
+            {
+              "name": "SUB",
+              "info": "Syncopathic, Thermal, Subtle Audio, Innsbruck",
+              "link": ""
+            },
+            {
+              "name": "CON.STRUCT",
+              "info": "Outsider",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-02-02-6-years-hoerfunk-this-is-audiofiction",
+      "date": "2008-02-02",
+      "title": "6 YEARS HOERFUNK & THIS IS AUDIOFICTION",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20081024205318id_/http://distillery.de:80/ex/dates/2008/02/02",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: \"Pan-o-Rama\" Tour 2007/2008:",
+          "items": [
+            {
+              "name": "PAN POT",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "/DECKS/EFX",
+              "info": "Mobilee, Berlin",
+              "link": ""
+            },
+            {
+              "name": "MARKUS WELBY",
+              "info": "hoerfunk, Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-02-08-stars-for-soul-s-funky-oldschool-fasching",
+      "date": "2008-02-08",
+      "title": "STARS FOR SOUL'S FUNKY OLDSCHOOL FASCHING",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20081024205326id_/http://distillery.de:80/ex/dates/2008/02/08",
+      "imageUrl": "",
+      "description": "B-BOYS: L.E. ALIVE!",
+      "sections": [
+        {
+          "label": "up: B-BOYS:",
+          "items": [
+            {
+              "name": "KID CUT",
+              "info": "Ready to Rock, Hannover",
+              "link": ""
+            },
+            {
+              "name": "KING BENSON",
+              "info": "Stars for Soul, Stattstrand",
+              "link": ""
+            },
+            {
+              "name": "L.E. ALIVE!",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-02-09-finest-selection-meets-syntax",
+      "date": "2008-02-09",
+      "title": "FINEST SELECTION MEETS SYNTAX",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20081024205331id_/http://distillery.de:80/ex/dates/2008/02/09",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Finest Selection:",
+          "items": [
+            {
+              "name": "WIGHNOMY BROTHERS",
+              "info": "Freude am Tanzen, Jena",
+              "link": ""
+            },
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "Finest Selection, WhirlpoolsexMusic, Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: Syntax:",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-02-15-black-belt-boogie-pres-bass-plus",
+      "date": "2008-02-15",
+      "title": "BLACK BELT BOOGIE PRES. BASS PLUS",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20081024205336id_/http://distillery.de:80/ex/dates/2008/02/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Escalation Mash Up, Baltimore Club, Nu Rave:",
+          "items": [
+            {
+              "name": "TOP BILLIN",
+              "info": "seriousdjsonly, topbillinmusic.com, Helsinki",
+              "link": ""
+            },
+            {
+              "name": "SCHOWI",
+              "info": "Massive Töne, Bass Ill Euro, Kopfnicker Rec., Stuttgart",
+              "link": ""
+            },
+            {
+              "name": "PEAK PHINE",
+              "info": "Distillery, Black Belt Boogie",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-02-16-dreikommanull-feenstaub-und-friends",
+      "date": "2008-02-16",
+      "title": "DREIKOMMANULL & FEENSTAUB UND FRIENDS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20080606031633id_/http://www.distillery.de:80/ex/dates/2008/02/16",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Dreikommanull:",
+          "items": [
+            {
+              "name": "GLIMPSE",
+              "info": "Glimpse, Rec., Harry Klein, London",
+              "link": ""
+            },
+            {
+              "name": "JOERN KLEINSCHMAGER",
+              "info": "Dreikommanull",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-02-22-hotta-fire-reggaestation",
+      "date": "2008-02-22",
+      "title": "HOTTA FIRE REGGAESTATION",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20081024205347id_/http://distillery.de:80/ex/dates/2008/02/22",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Reggae, Dancehall:",
+          "items": [
+            {
+              "name": "BLESSED LOVE",
+              "info": "Buyreggae, Berlin, Stuttgart",
+              "link": ""
+            },
+            {
+              "name": "BLUE BLUNT SOUNDSYSTEM",
+              "info": "Erfurt",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: HipHop, Funk, Soul:",
+          "items": [
+            {
+              "name": "FU HANDS SOUNDSYSTEM",
+              "info": "DJ Saibz & DJ D-Fekt",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-02-23-moon-harbour-label-flight-frequency-radio-vs-blackred-beatbattle",
+      "date": "2008-02-23",
+      "title": "MOON HARBOUR LABEL FLIGHT & FREQUENCY RADIO VS. BLACKRED BEATBATTLE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20081024205352id_/http://distillery.de:80/ex/dates/2008/02/23",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Moon Harbour Label Flight:",
+          "items": [
+            {
+              "name": "VERA",
+              "info": "Cyclical Tracks, Robert Johnson, FFM",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-02-29-5-years-esoulate-part-i",
+      "date": "2008-02-29",
+      "title": "5 YEARS ESOULATE - PART I",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20081024205357id_/http://distillery.de:80/ex/dates/2008/02/29",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Funk, HipHop, Mashup:",
+          "items": [
+            {
+              "name": "MENGOOLIOUS FUNK",
+              "info": "mengooliousfunk, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "THE FUNKY 4 ASTMATIX",
+              "info": "L.Stolz&M.Löschner/Trompete, M.Peuker&H.Gimaledinow/Posaune",
+              "link": ""
+            },
+            {
+              "name": "MR. T-ROX",
+              "info": "Rhythm Club, Sooshee",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

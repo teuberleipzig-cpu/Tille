@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2021-06-23-i-love-gardening-re-opening",
+      "date": "2021-06-23",
+      "title": "I LOVE GARDENING RE:OPENING",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20210803001705id_/https://www.distillery.de/ex/dates/2021/06/23",
+      "imageUrl": "",
+      "description": "Start: 18:00",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "MICRONAUT",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "- DJ SET",
+              "info": "Acker Records, 3000 Grad, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BLOKK",
+              "info": "DJ",
+              "link": ""
+            },
+            {
+              "name": "HMDI",
+              "info": "Fäncy",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-06-25-i-love-gardening-x-seelen",
+      "date": "2021-06-25",
+      "title": "I LOVE GARDENING X SEELEN.",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20210803005433id_/https://www.distillery.de/ex/dates/2021/06/25",
+      "imageUrl": "",
+      "description": "Start: 18:00",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "JANEIN",
+              "info": "SEELEN",
+              "link": ""
+            },
+            {
+              "name": "SEELEN.",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "STIGMATIQUE",
+              "info": "Distillery, SEELEN",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-06-30-i-love-gardening",
+      "date": "2021-06-30",
+      "title": "I LOVE GARDENING",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20210803000757id_/https://www.distillery.de/ex/dates/2021/06/30",
+      "imageUrl": "",
+      "description": "Start: 18:00",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "MILA STERN",
+              "info": "Station Endlos",
+              "link": ""
+            },
+            {
+              "name": "SCHLEPP GEIST",
+              "info": "URSL",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

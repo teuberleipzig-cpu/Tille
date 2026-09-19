@@ -1,0 +1,401 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2012-06-01-rumpelkammer-goes-haute-couture",
+      "date": "2012-06-01",
+      "title": "RUMPELKAMMER GOES HAUTE COUTURE",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20120604002757id_/http://www.distillery.de:80/ex/dates/2012/06/01",
+      "imageUrl": "",
+      "description": "Start: 18:00\nFindet auch wenns regnet statt! Bei Schlechtwetter wird alles von unserem schönen Garten nach drinnen verlegt!\nAb 18 Uhr kann nicht nur Musik, Kunst, Trödel, Klamotten, Altes, Neues und Selbstgestaltetes erworben oder getauscht werden – auch werden wir eine Verlosung für einen bzw. mehrere gute Zwecke vornehmen. Obendrein wird es noch ein Tischtennisturnier geben. Wie auch sonst zum Tille Tubby Land üblich werden wir für musikalische Unterhaltung sorgen, es stehen verschiedenste Spiele zur Verfügung und die Grill-Mafia wird allerhand Leckeres servieren. Die Flutlichtmasten werden am 1.6. ebenfalls installiert und so kann bis tief in die Nacht gediggt werden. Sollte es wider Erwarten schlechtes Wetter geben, werden wir ähnlich wie im Winter einfach nach drinnen ausweichen.\nWer mit einem Stand vertreten sein möchte, meldet sich bitte unter urban@distillery.de an.\nwww.fensterzumhof.org",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "(NACHT)FLOHMARKT",
+              "info": "alles kann, nichts muss, jeder darf",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-06-02-chitlin-circuit",
+      "date": "2012-06-02",
+      "title": "CHITLIN' CIRCUIT",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20120604052617id_/http://www.distillery.de:80/ex/dates/2012/06/02",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: chitlin' circuit",
+          "items": [
+            {
+              "name": "CASSY",
+              "info": "Cocoon, Perlon, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SVEN TASNADI",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-06-08-livelyrix-poetry-slam",
+      "date": "2012-06-08",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20160430160633id_/http://www.distillery.de/ex/dates/2012/06/08",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: livelyrix poetry slam",
+          "items": [
+            {
+              "name": "NADJA SCHLüTER",
+              "info": "München",
+              "link": ""
+            },
+            {
+              "name": "VOLKER STRüBING",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "ERIK LEICHTER",
+              "info": "Zwickau",
+              "link": ""
+            },
+            {
+              "name": "ELENA ANAIS",
+              "info": "München",
+              "link": ""
+            },
+            {
+              "name": "SASCHA MüLLER",
+              "info": "Zwickau",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-06-09-mindcookies-meets-bass-plus-fussball-em-2012-gruppenspiel",
+      "date": "2012-06-09",
+      "title": "MINDCOOKIES MEETS BASS PLUS! & FUSSBALL EM 2012 - GRUPPENSPIEL",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20120602194208id_/http://www.distillery.de:80/ex/dates/2012/06/09",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: mindcookies",
+          "items": [
+            {
+              "name": "MONKEY SAFARI",
+              "info": "Jackdown, What What, Halle",
+              "link": ""
+            },
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "mindcookies, Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: bass plus!",
+          "items": [
+            {
+              "name": "FREQ NASTY",
+              "info": "GiveBack, Los Angeles",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-06-13-fussball-em-2012-gruppenspiel",
+      "date": "2012-06-13",
+      "title": "FUSSBALL EM 2012 - GRUPPENSPIEL",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20120526142019id_/http://www.distillery.de:80/ex/dates/2012/06/13",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "special: übertragung EM 2012 - gruppenspiel",
+          "items": [
+            {
+              "name": "HOLLAND - DEUTSCHLAND",
+              "info": "Start: 20:45, free Entry, add to Cal, Spiel Nummero 2 der Deutschen Elf in der Gruppenphase – das wollen wir uns natürlich nicht entgehen lassen und öffnen, ab 20:00 Uhr, den Distillery-Garten für alle, die mit uns in gewohnt gemütlicher Atmosphäre nur eines im Sinn haben: \"das Runde muß in's Eckige\"..., (Anpfiff des Spiels ist 20:45 Uhr, bei Schlechtwetter findet die Übertragung im Club statt).",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-06-16-riotvan-record-release",
+      "date": "2012-06-16",
+      "title": "RIOTVAN RECORD RELEASE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20120604052633id_/http://www.distillery.de:80/ex/dates/2012/06/16",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: riotvan record release",
+          "items": [
+            {
+              "name": "GOOD GUY MIKESH & FILBURT – DJ SET",
+              "info": "Permanent Vacation, Riotvan, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "PERMANENT VACATION",
+              "info": "Tom Bioly & Benjamin Fröhlich, München",
+              "link": ""
+            },
+            {
+              "name": "PETER INVASION",
+              "info": "Riotvan, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "& GARDENER",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-06-17-fussball-em-2012-gruppenspiel",
+      "date": "2012-06-17",
+      "title": "FUSSBALL EM 2012 - GRUPPENSPIEL",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20120604052638id_/http://www.distillery.de:80/ex/dates/2012/06/17",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "special: übertragung EM 2012",
+          "items": [
+            {
+              "name": "DäNEMARK - DEUTSCHLAND",
+              "info": "Start: 20:45, Eintritt frei, add to Cal, Spiel Nummero 3 unserer Mannen in der Gruppenphase – das wollen wir uns natürlich wieder nicht entgehen lassen und öffnen ab 20:00 Uhr den Distillery-Garten für alle, die mit uns in gewohnt gemütlicher Atmosphäre nur eines im Sinn haben: \"das Runde muß in's Eckige\"..., (Anpfiff des Spiels ist 20:45 Uhr, bei Schlechtwetter findet die Übertragung im Club statt).",
+              "link": ""
+            },
+            {
+              "name": "FENSTER ZUM HOF",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-06-22-summer-madness-em-2012-viertelfinale",
+      "date": "2012-06-22",
+      "title": "SUMMER MADNESS & EM 2012 VIERTELFINALE",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20120604052648id_/http://www.distillery.de:80/ex/dates/2012/06/22",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: mad again: global bass, cumbia, afrotropical rythms",
+          "items": [
+            {
+              "name": "UPROOT ANDY",
+              "info": "ZZK, Bersa Disco, Dutty Artz, New York",
+              "link": ""
+            },
+            {
+              "name": "CHABWERA BANDA",
+              "info": "Woza this is africa, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SENCHA",
+              "info": "Distillery, Black Belt Boogie, Mad Again!",
+              "link": ""
+            },
+            {
+              "name": "PABLO GUNZALES",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-06-23-moon-harbour-inhouse-vol-4-tour-em-2012-viertelfinale",
+      "date": "2012-06-23",
+      "title": "MOON HARBOUR INHOUSE VOL.4 TOUR & EM 2012 - VIERTELFINALE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20120604052653id_/http://www.distillery.de:80/ex/dates/2012/06/23",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: moon harbour",
+          "items": [
+            {
+              "name": "LUNA CITY EXPRESS",
+              "info": "Moon Harbour, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DAN DRASTIC",
+              "info": "Moon Harbour, Hairy Claw, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "special: übertragung EM 2012 - viertelfinale spiel 3",
+          "items": [
+            {
+              "name": "SIEGER GRUPPE C - ZWEITER GRUPPE D",
+              "info": "Start: 20:45 (Übertragung), Start: 23:00 (Moon Harbour",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-06-27-fussball-em-2012-halbfinale",
+      "date": "2012-06-27",
+      "title": "FUSSBALL EM 2012 - HALBFINALE",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20120604052703id_/http://www.distillery.de:80/ex/dates/2012/06/27",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "special: übertragung EM 2012 - halbfinale spiel 1",
+          "items": [
+            {
+              "name": "SIEGER SPIEL 1 - SIEGER SPIEL 3",
+              "info": "Start: 20:45, free Entry, add to Cal",
+              "link": ""
+            },
+            {
+              "name": "FENSTER ZUM HOF",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-06-28-tille-tubby-land-2-0-fussball-em-2012-halbfinale",
+      "date": "2012-06-28",
+      "title": "TILLE TUBBY LAND 2.0 & FUSSBALL EM 2012 - HALBFINALE",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20190723035650id_/http://www.distillery.de/ex/dates/2012/06/28",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "special: übertragung EM 2012 - halbfinale spiel 2",
+          "items": [
+            {
+              "name": "DEUTSCHLAND - ITALIEN",
+              "info": "Start: 18:00, add to Cal",
+              "link": ""
+            },
+            {
+              "name": "KALENDER-DOWNLOAD",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "DISTILLERY",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "KURT-EISNER-STR. 108 A",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "04275 LEIPZIG",
+              "info": "2001-2018 Distillery, Impressum, Disclaimer",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-06-30-bright-forward",
+      "date": "2012-06-30",
+      "title": "BRIGHT & FORWARD",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20120604052713id_/http://www.distillery.de:80/ex/dates/2012/06/30",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: bright & forward",
+          "items": [
+            {
+              "name": "ALBRECHT WASSERSLEBEN",
+              "info": "Uncanny Valley, Dresden",
+              "link": ""
+            },
+            {
+              "name": "HERR FUCHS & FRAU ELSTER",
+              "info": "FABELhaft, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DILIVIUS LENNI",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2008-08-30-re-opening-after-summerbreak",
+      "date": "2008-08-30",
+      "title": "RE:OPENING AFTER SUMMERBREAK",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20080820092457id_/http://www.distillery.de:80/ex/dates/2008/08/30",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: old faces:",
+          "items": [
+            {
+              "name": "JUNO6 – LIVE",
+              "info": "Broque Records, 1bit-wonder, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MARKUS WELBY",
+              "info": "hoerfunk",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-08-31-re-opening-afterhour-by-feenstaub",
+      "date": "2008-08-31",
+      "title": "RE:OPENING AFTERHOUR BY: FEENSTAUB",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20080917010953id_/http://distillery.de:80/ex/dates/2008/08/31",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "FEENSTAUB",
+              "info": "Philter Music, Distillery, Leipzig, Start: 10:00, add to Cal, www.feenstaubmusic.de, www.philter-music.de, www.myspace.com/feenstaubmusic",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

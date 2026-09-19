@@ -1,0 +1,262 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2008-01-04-fridayclub-s-crowd-control",
+      "date": "2008-01-04",
+      "title": "FRIDAYCLUB'S CROWD CONTROL",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20081024205233id_/http://distillery.de:80/ex/dates/2008/01/04",
+      "imageUrl": "public/events/media/2008-01-04-fridayclub-s-crowd-control/event-1782226620081.jpg",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Mashup, Elektro, Pop:",
+          "items": [
+            {
+              "name": "ACID MILCH & HONIG",
+              "info": "mellebooking, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DJ HAIRCUT",
+              "info": "Riotvan, Ilses Erika, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "PRELLER",
+              "info": "Whizzkids, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: Drum&Bass:",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-01-05-hoerfunk-presents-ein-flotter-dreier-this-is-audiofiction",
+      "date": "2008-01-05",
+      "title": "HOERFUNK PRESENTS: EIN FLOTTER DREIER & THIS IS AUDIOFICTION",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20080530074142id_/http://www.distillery.de:80/ex/dates/2008/01/05",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Hoerfunk:",
+          "items": [
+            {
+              "name": "DANIEL DREIER",
+              "info": "Highgrade, Klang Elektronik, Panoramabar, Bar25, Berlin",
+              "link": ""
+            },
+            {
+              "name": "MARKUS WELBY",
+              "info": "Distillery, hoerfunk, Melt!-Festival",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-01-11-black-belt-boogie-pres-bass-plus",
+      "date": "2008-01-11",
+      "title": "BLACK BELT BOOGIE PRES. BASS PLUS",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20081024205238id_/http://distillery.de:80/ex/dates/2008/01/11",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Breakbeat, Mashup:",
+          "items": [
+            {
+              "name": "FLORE",
+              "info": "Frenchbreaks, Lab Rok, iBreaks, Lyon",
+              "link": ""
+            },
+            {
+              "name": "PEAK PHINE",
+              "info": "Distillery, Black Belt Boogie, Bass Plus",
+              "link": ""
+            },
+            {
+              "name": "SENCHA",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-01-12-4-years-of-finest-selection-meets-syntax",
+      "date": "2008-01-12",
+      "title": "4 YEARS OF FINEST SELECTION MEETS SYNTAX",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20081024205243id_/http://distillery.de:80/ex/dates/2008/01/12",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: 4 Years of Finest Selection:",
+          "items": [
+            {
+              "name": "MATHEW JONSON",
+              "info": "Wagon Repair, Vancouver / Canada",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-01-18-break-the-surface",
+      "date": "2008-01-18",
+      "title": "BREAK THE SURFACE",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20081024205248id_/http://distillery.de:80/ex/dates/2008/01/18",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: HipHop, Funk, 2-Step:",
+          "items": [
+            {
+              "name": "LUCIUS14",
+              "info": "Modular Music, Frankfurt",
+              "link": ""
+            },
+            {
+              "name": "DA WIESEL",
+              "info": "Da Switch, polyesterclub, sunsetsoul, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: Drum&Bass:",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-01-19-dancematerial-definition-label-night",
+      "date": "2008-01-19",
+      "title": "DANCEMATERIAL & DEFINITION LABEL NIGHT",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20081024205254id_/http://distillery.de:80/ex/dates/2008/01/19",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Dancematerial:",
+          "items": [
+            {
+              "name": "MODESELEKTOR",
+              "info": "BPitch Control, Berlin",
+              "link": ""
+            },
+            {
+              "name": "STEFFEN BENNEMANN",
+              "info": "Distillery, Nachtdigital, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-01-25-hotta-fire-reggaestation",
+      "date": "2008-01-25",
+      "title": "HOTTA FIRE REGGAESTATION",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20081024205259id_/http://distillery.de:80/ex/dates/2008/01/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Reggae, Dancehall:",
+          "items": [
+            {
+              "name": "BADDIS CREW",
+              "info": "Baddis Records, Luzern",
+              "link": ""
+            },
+            {
+              "name": "ROTZLöFFELS HIFI AKA KID GRINGO & MASTAH K",
+              "info": "The People's Choise, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: HipHop, Funk:",
+          "items": [
+            {
+              "name": "FU HANDS SOUNDSYSTEM",
+              "info": "DJ Saibz & DJ D-Fekt",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2008-01-26-moon-harbour-label-flight-vs-blackred-beat-battle",
+      "date": "2008-01-26",
+      "title": "MOON HARBOUR LABEL FLIGHT VS. BLACKRED BEAT BATTLE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20080421042819id_/http://www.distillery.de:80/ex/dates/2008/01/26",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Moon Harbour Label Flight:",
+          "items": [
+            {
+              "name": "MICHAL HO",
+              "info": "TuningSpork, Zürich, CH",
+              "link": ""
+            },
+            {
+              "name": "MARLOW",
+              "info": "Moon Harbour, Curl Curl",
+              "link": ""
+            },
+            {
+              "name": "DAN DRASTIC",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

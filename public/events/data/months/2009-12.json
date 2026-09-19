@@ -1,0 +1,316 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2009-12-04-turntablerocker-livelyrix-poetry-slam",
+      "date": "2009-12-04",
+      "title": "TURNTABLEROCKER & LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20091027081949id_/http://www.distillery.de:80/ex/dates/2009/12/04",
+      "imageUrl": "",
+      "description": "Einlass/Start: 00:00",
+      "sections": [
+        {
+          "label": "up: turntablerocker",
+          "items": [
+            {
+              "name": "TURNTABLEROCKER",
+              "info": "Compost Black Label, Berlin",
+              "link": ""
+            },
+            {
+              "name": "POLO",
+              "info": "Schach Matt, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SOULSLIDE",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "-ARCHIVE SESSIONS",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-12-05-dreikommanull-meets-darkstar",
+      "date": "2009-12-05",
+      "title": "DREIKOMMANULL MEETS DARKSTAR",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20091027081953id_/http://www.distillery.de:80/ex/dates/2009/12/05",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: dusty dance album tour",
+          "items": [
+            {
+              "name": "RAUDIVE AKA OLIVER HO",
+              "info": "Meta Records, Klang Elektronik, Rrygular, London",
+              "link": ""
+            },
+            {
+              "name": "MARCEL KNOPF",
+              "info": "Mo's Ferry",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-12-11-squeeze-box-sex-drags-rock-n-roll",
+      "date": "2009-12-11",
+      "title": "SQUEEZE BOX! - SEX, DRAGS & ROCK'N'ROLL",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20091227032029id_/http://www.distillery.de:80/ex/dates/2009/12/11",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: sex, drags & rock'n'roll",
+          "items": [
+            {
+              "name": "SQUEEZEBOX!-BAND – LIVE",
+              "info": "Gloria Viagra, Sherry Vine & Band, Berlin/New York",
+              "link": ""
+            },
+            {
+              "name": "FEENSTAUB",
+              "info": "Nu:Trance, Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "N.AKIN",
+              "info": "Institut für Zukunft, Conne Island, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-12-12-hoerfunk-meets-syntax",
+      "date": "2009-12-12",
+      "title": "HOERFUNK MEETS SYNTAX",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20091027082003id_/http://www.distillery.de:80/ex/dates/2009/12/12",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: hoerfunk",
+          "items": [
+            {
+              "name": "DINKY",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "- LIVE / ANEMIK ALBUM TOUR",
+              "info": "Wagon Repair, Berlin",
+              "link": ""
+            },
+            {
+              "name": "MARKUS WELBY",
+              "info": "hoerfunk, Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-12-18-kurt-reith-night",
+      "date": "2009-12-18",
+      "title": "KURT REITH NIGHT",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190723035530id_/http://www.distillery.de/ex/dates/2009/12/18",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: funk meets punk",
+          "items": [
+            {
+              "name": "PAUL",
+              "info": "Deeskalations Kommando, Zorro, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DJ GRAPE",
+              "info": "Conne Island, Leipzig-Connewitz",
+              "link": ""
+            },
+            {
+              "name": "DJ YORK",
+              "info": "Könich Heinz, Leipzig-Connewitz",
+              "link": ""
+            },
+            {
+              "name": "SLOWHAND E",
+              "info": "Stars for Soul, Rhythm Club, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "HANS DER JäGER",
+              "info": "Connewitz Grill Mafia",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-12-19-feenstaub-friends-meets-finest-selection",
+      "date": "2009-12-19",
+      "title": "FEENSTAUB & FRIENDS MEETS FINEST SELECTION",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20091027082008id_/http://www.distillery.de:80/ex/dates/2009/12/19",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: feenstaub & friends",
+          "items": [
+            {
+              "name": "TIM HEALEY",
+              "info": "Giant Pussy Records, UK",
+              "link": ""
+            },
+            {
+              "name": "FEENSTAUB",
+              "info": "Nu:Trance, Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: finest selection",
+          "items": [
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-12-23-marmor-stein-und-eisen-bricht",
+      "date": "2009-12-23",
+      "title": "MARMOR, STEIN UND EISEN BRICHT, ...",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20091202082017id_/http://distillery.de:80/ex/dates/2009/12/23",
+      "imageUrl": "",
+      "description": "8,- €",
+      "sections": [
+        {
+          "label": "up: von anfang (1992) bis ende (2009)...von uns für euch...only wb!!!",
+          "items": [
+            {
+              "name": "WIGHNOMY BROTHERS",
+              "info": "Freude am Tanzen, Jena), Start: 22:00, 8,- €, add to Cal, Kennt Ihr diese Momente, wenn Ihr ganz genau wisst, dass das, was Ihr macht, genau richtig und dem nichts hinzuzufügen ist? Der Tag, an dem das Booking des heutigen Tages festgemacht wurde, war genau so ein Tag und wir freuen uns wahnsinnig, dass, Gabor und Sören",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-12-25-feline-night-meets-hotta-fire-x-mas-station",
+      "date": "2009-12-25",
+      "title": "FELINE NIGHT MEETS HOTTA FIRE X-MAS STATION",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20091227032039id_/http://www.distillery.de:80/ex/dates/2009/12/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: feline night",
+          "items": [
+            {
+              "name": "STORM",
+              "info": "Metalheadz, London",
+              "link": ""
+            },
+            {
+              "name": "ALLEY CAT",
+              "info": "Kokeshi, Skunkrock, Reinforced, London",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-12-26-moon-harbour-label-flight-meets-definition",
+      "date": "2009-12-26",
+      "title": "MOON HARBOUR LABEL FLIGHT MEETS DEFINITION",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20091027082026id_/http://www.distillery.de:80/ex/dates/2009/12/26",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: moon harbour label flight",
+          "items": [
+            {
+              "name": "MATTHIAS TANZMANN",
+              "info": "Moon Harbour, Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MARKUS SCHATZ – LIVE",
+              "info": "Cargo Edition, Highgrade",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-12-31-silvester-in-family",
+      "date": "2009-12-31",
+      "title": "SILVESTER IN FAMILY",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20091205142831id_/http://distillery.de:80/ex/dates/2009/12/31",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: exit 2009",
+          "items": [
+            {
+              "name": "SVEN TASNADI",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

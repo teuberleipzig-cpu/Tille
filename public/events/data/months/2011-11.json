@@ -1,0 +1,326 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2011-11-04-livelyrix-poetry-slam-trifft-mad-again",
+      "date": "2011-11-04",
+      "title": "LIVELYRIX POETRY SLAM TRIFFT MAD AGAIN!",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20111102012546id_/http://www.distillery.de:80/ex/dates/2011/11/04",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: livelyrix poetry slam MODERATION:",
+          "items": [
+            {
+              "name": "MICHAEL BITTNER",
+              "info": "Dresden",
+              "link": ""
+            },
+            {
+              "name": "LUCAS FASSNACHT",
+              "info": "Erlangen",
+              "link": ""
+            },
+            {
+              "name": "FABIAN KöSTER",
+              "info": "Köln",
+              "link": ""
+            },
+            {
+              "name": "JACINTA NANDI",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "CHRISTIAN MEYER",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-11-05-stefanikaden-meets-definition",
+      "date": "2011-11-05",
+      "title": "STEFANIKADEN MEETS DEFINITION",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20111102012551id_/http://www.distillery.de:80/ex/dates/2011/11/05",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: stefanikaden",
+          "items": [
+            {
+              "name": "MATHIAS KADEN",
+              "info": "Paracou",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-11-11-bass-plus-on-the-run",
+      "date": "2011-11-11",
+      "title": "BASS PLUS! & ON THE RUN!",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20111102012557id_/http://www.distillery.de:80/ex/dates/2011/11/11",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: bass plus - live dubstep",
+          "items": [
+            {
+              "name": "BULLDOGS – LIVE",
+              "info": "audio phreaks, Berlin",
+              "link": ""
+            },
+            {
+              "name": "PEAK PHINE",
+              "info": "Distillery, Black Belt Boogie, Bass Plus, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SENCHA",
+              "info": "Distillery, nuskoolbreaks",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-11-12-dreikommanull-meets-feenstaub",
+      "date": "2011-11-12",
+      "title": "DREIKOMMANULL MEETS FEENSTAUB",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20111102012602id_/http://www.distillery.de:80/ex/dates/2011/11/12",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: dreikommanull",
+          "items": [
+            {
+              "name": "GATHASPAR – LIVE",
+              "info": "Freude am Tanzen, Numbolic, Resopal, Polen",
+              "link": ""
+            },
+            {
+              "name": "KLEINSCHMAGER AUDIO",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-11-15-kill-the-dj",
+      "date": "2011-11-15",
+      "title": "KILL THE DJ",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20111124171113id_/http://www.distillery.de/ex/dates/2011/11/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: kill the dj",
+          "items": [
+            {
+              "name": "IVAN SMAGGHE",
+              "info": "it's a fine line, London",
+              "link": ""
+            },
+            {
+              "name": "STEFFEN BENNEMANN",
+              "info": "Nachtdigital, Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "mindcookies, Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-11-15-the-art-of-department",
+      "date": "2011-11-15",
+      "title": "THE ART OF DEPARTMENT",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20111102012607id_/http://www.distillery.de:80/ex/dates/2011/11/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: the art of department",
+          "items": [
+            {
+              "name": "ART DEPARTMENT",
+              "info": "Crosstown Rebels, No.19 Music, Kanada",
+              "link": ""
+            },
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "mindcookies, Distillery",
+              "link": ""
+            },
+            {
+              "name": "MARKUS WELBY",
+              "info": "hoerfunk, Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-11-18-kingston-affair",
+      "date": "2011-11-18",
+      "title": "KINGSTON AFFAIR",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20111102012612id_/http://www.distillery.de:80/ex/dates/2011/11/18",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: forward ever, backward never",
+          "items": [
+            {
+              "name": "SILLY WALKS DISCOTHEQUE",
+              "info": "Hamburg",
+              "link": ""
+            },
+            {
+              "name": "HAKUNA MATATAA",
+              "info": "Meißen, Start: 23:00, add to Cal, Im September hieß es 10 Jahre Hotta Fire Reggaestation. Heute setzen wir noch einmal 10 weitere Jahre drauf. Unser heutiger Gast-Sound aus Hamburg feierte dieses Jahr sein 20-jähriges Jubiläum u.a. auch mit Gentleman, welcher auf eben jenem Sound seine ersten Erfahrungen sammelte und so manche Party damals zum Kochen brachte., Die Rede kann natürlich nur von, Silly Walks Discotheque, ehemals Silly Walks Movement, sein. 1995 konnte man Olli, seines Zeichens Gründungsmitglied und Selecta, bereits in der Lost in Music-Reihe des WDR sehen, als die Reggaeszene etwas genauer unter die Lupe genommen wurde. Damals schipperte Olli noch im Blaumann mit der Fähre nach UK, um neue Platten zu kaufen und Dubplates cutten zu lassen. Wer diese Doku noch nicht gesehen hat, der kann dies heute Abend nachholen, denn wir werden den 2ten Floor zum Kinosaal umfunktionieren. Vor ein paar Jahren verließ mit David Meyer das zweite Gründungsmitglied den Sound und aus Silly Walks Movement wurde Silly Walks Discotheque. Dieser Namensänderung trägt auch das musikalische Spektrum Rechnung, welches Olli dem Publikum am Abend serviert. Denn neben 40 Jahren Reggaegeschichte, von Studio 1 bis Busy Signal, kommen auch häufiger einmal Coupe Decale oder Hiplife auf den Plattenteller. Gehostet wird diese Mischung dann fachgerecht von Joscha, seinerseits langer Wegbegleiter von Silly Walks und Bushfire Sound. Produziert wird nebenbei auch noch und wenn alles passt, dürfen wir eine der ersten Dances sein, die das neue Album auch live zu hören bekommt, denn dieses wurde von Silly Walks für den Herbst angeteast. Wer also das Komplettpaket aus Dancehall, Reggae und ein wenig african roots bevorzugt, ist bei Silly Walks an der absolut richtigen Adresse, denn (leider) gibt es sehr wenige Sounds die sowohl die Geschichte von Dancehall erzählen können als auch den Blick in Richtung Zukunft werfen! Langeweile ist ein Wort, das die rollende Discotheque aus Hamburg nicht kennt. Also Feuerzeug, Rag und Geschenk für Silly Walks eingepackt – sie werden euch schon zeigen, wie ihr diese Utensilien heute Abend zu nutzen habt! Support liefern heute Abend",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-11-19-audio-invasion-aftershow-meets-syntax",
+      "date": "2011-11-19",
+      "title": "AUDIO INVASION AFTERSHOW MEETS SYNTAX",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20111124164641id_/http://www.distillery.de/ex/dates/2011/11/19",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: audio invasion aftershow",
+          "items": [
+            {
+              "name": "RYAN ELLIOTT",
+              "info": "Ghostly, Spectral Sound",
+              "link": ""
+            },
+            {
+              "name": "NICK HöPPNER",
+              "info": "Ostgut Ton, My My, Berlin",
+              "link": ""
+            },
+            {
+              "name": "M.ONO & LUVLESS",
+              "info": "Rose Records",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-11-25-pik-as-und-die-jukebox",
+      "date": "2011-11-25",
+      "title": "PIK-AS UND DIE JUKEBOX",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20111102012617id_/http://www.distillery.de:80/ex/dates/2011/11/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: pokersall: pokersaal - setzen, blöffen, checken, chips verschieben",
+          "items": [
+            {
+              "name": "POKERTURNIER",
+              "info": "Voranmeldungen an: sindy@distillery.de",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: tanzsaal - 30er bis 60er jahre jukebox-style",
+          "items": [
+            {
+              "name": "PLUG THE FUNKY 45",
+              "info": "Dynamite Soul",
+              "link": ""
+            },
+            {
+              "name": "MIGHTY HIGHTY TIGHTEES",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "KURT REITH DJ-TEAM",
+              "info": "Leipzig, Start: 23:00",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-11-26-finest-selection-meets-where-the-buffalo-roam",
+      "date": "2011-11-26",
+      "title": "FINEST SELECTION MEETS WHERE THE BUFFALO ROAM",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20111102012622id_/http://www.distillery.de:80/ex/dates/2011/11/26",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: finest selection",
+          "items": [
+            {
+              "name": "NHAR – LIVE",
+              "info": "Perspective, Correspondant, 200, Frankreich",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

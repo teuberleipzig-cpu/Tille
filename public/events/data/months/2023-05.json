@@ -1,0 +1,458 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2023-05-05-italo-fundamentalo-presents-italoconnection",
+      "date": "2023-05-05",
+      "title": "ITALO FUNDAMENTALO PRESENTS: ITALOCONNECTION",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20230608115235id_/https://www.distillery.de/ex/dates/2023/05/05",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ITALOCONNECTION & DJ",
+              "info": "Fred Ventura & Paolo Gozzetti, Mailand",
+              "link": ""
+            },
+            {
+              "name": "SHIMANSKI",
+              "info": "Disco Bizarre, KitKatClub",
+              "link": ""
+            },
+            {
+              "name": "RASCHELJACKE",
+              "info": "Italo Fundamentalo",
+              "link": ""
+            },
+            {
+              "name": "CORRADO DJ",
+              "info": "Italo Fundamentalo, Start: 23:00, add to Cal",
+              "link": ""
+            },
+            {
+              "name": "TICKETS",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-05-06-saturday-rave",
+      "date": "2023-05-06",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20230608105243id_/https://www.distillery.de/ex/dates/2023/05/06",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SCHWARZMANN",
+              "info": "Innervisions",
+              "link": ""
+            },
+            {
+              "name": "LARS CHRISTIAN MüLLER",
+              "info": "Distillery, mindcookies",
+              "link": ""
+            },
+            {
+              "name": "DAHMAR",
+              "info": "Electronic Resistance, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "COCO COBRA",
+              "info": "soft spot",
+              "link": ""
+            },
+            {
+              "name": "SOLARIS",
+              "info": "PH17",
+              "link": ""
+            },
+            {
+              "name": "DJ YUMYUM",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-05-12-seelen-records",
+      "date": "2023-05-12",
+      "title": "SEELEN. RECORDS",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20230608114351id_/https://www.distillery.de/ex/dates/2023/05/12",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SHDW & OBSCURE SHAPE",
+              "info": "Mutual Rytm",
+              "link": ""
+            },
+            {
+              "name": "ANNA HJALMARRSON",
+              "info": "SEELEN., Robert Johnson",
+              "link": ""
+            },
+            {
+              "name": "SEELEN. SOUND.SYSTEM",
+              "info": "aka JANEIN b2b Stigmatique",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "SHALEEN",
+              "info": "SEELEN., BPitch",
+              "link": ""
+            },
+            {
+              "name": "MARTIN MENGE B2B CLOSURE",
+              "info": "WIR, Rote Sonne), Start: 23:00, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-05-13-kleine-klinke-present-s-part-ii",
+      "date": "2023-05-13",
+      "title": "KLEINE KLINKE PRESENT(S) PART II",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20230608104155id_/https://www.distillery.de/ex/dates/2023/05/13",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "KORNEL KOVACS",
+              "info": "Studio Barnhus",
+              "link": ""
+            },
+            {
+              "name": "KLEINE KLINKE",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BONBONS",
+              "info": "Fäncy",
+              "link": ""
+            },
+            {
+              "name": "THOMAS HAMMAN B2B INNERE TUEREN",
+              "info": "Robert Johnson, KANN",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "CHARLOTT",
+              "info": "bassmybass, G-Edit, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "GAL",
+              "info": "Balance Festival, G-Edit",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-05-14-get-your-gimmicks",
+      "date": "2023-05-14",
+      "title": "GET YOUR GIMMICKS",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20230608120903id_/https://www.distillery.de/ex/dates/2023/05/14",
+      "imageUrl": "",
+      "description": "SO. 14.05.23 LÄRM\nStart: 15:00\nSO. 14.05.23 LÄRM",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "TINER",
+              "info": "transit",
+              "link": ""
+            },
+            {
+              "name": "KIMYA",
+              "info": "ZAN",
+              "link": ""
+            },
+            {
+              "name": "NINETTE",
+              "info": "Distillery, LÄRM",
+              "link": ""
+            },
+            {
+              "name": "KIM VALMOUNT",
+              "info": "LÄRM, Laut Klub, Start: 21:00, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-05-17-spezial-120-minuten-w-miss-cleenex-und-ihr-ex",
+      "date": "2023-05-17",
+      "title": "SPEZIAL - 120 MINUTEN W/ MISS CLEENEX UND IHR EX",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20230608114950id_/https://www.distillery.de/ex/dates/2023/05/17",
+      "imageUrl": "",
+      "description": "Start: 20:00\nTICKETS\nDie Partyreihe Mandys Ex (and Friends) verabschiedet sich endgültig von der Distillery Leipzig in ihrem alten Gewand und schließt damit die finale Staffel ab. Die Veranstaltung wird überdimensional, besonders schön gestaltet und absolut übertrieben sein.\nAuf zwei Floors startet die Party bereits um 20:00 Uhr mit einem Mix aus Oldschool Pop, Trash, Electro, Techno und später auch sehr harten Beats. Ein buntes Treiben im sicheren Raum erwartet euch!\nDie von Miss Mandy Cleenex sorgfältig ausgewählten Acts der letzten beiden Staffeln werden mit ihren 60-minütigen Sets den gesamten Club zum Beben bringen. Auch die neuen Nachbarn werden sich freuen. Zusammen mit kleinen Comedy- und Drag-Shows von Miss Mandy Cleenex und den Devious Drag Maids wird dieser Abend unvergesslich und einmalig.\nErst ab 06:00 Uhr morgens werden die Putzlichter wieder eingeschaltet und die Realität setzt wieder ein.\nMISS MANDY CLEENEX und ihr EX\nFELIPEH\nMICRONAUT\nBIGALKE\nDARI AND THE BEAST\nNORMAN HENTSCHEL\nLUCILLE DU BASSE",
+      "sections": []
+    },
+    {
+      "id": "2023-05-19-tobassgo",
+      "date": "2023-05-19",
+      "title": "TOBASSGO",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20230608121231id_/https://www.distillery.de/ex/dates/2023/05/19",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "GOURSKI",
+              "info": "Nibirii",
+              "link": ""
+            },
+            {
+              "name": "MOULDER",
+              "info": "Storno Beatz Recordings, toBASSgo Allstars",
+              "link": ""
+            },
+            {
+              "name": "JUDOKAY",
+              "info": "toBASSgo Allstars, Ambiguity Audio",
+              "link": ""
+            },
+            {
+              "name": "NO MERCY",
+              "info": "toBASSgo Allstars, VBAcrew",
+              "link": ""
+            },
+            {
+              "name": "TKR",
+              "info": "BASS UP?, Jena",
+              "link": ""
+            },
+            {
+              "name": "YUSTN",
+              "info": "Muna, Kunstland 654",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-05-20-saturday-rave",
+      "date": "2023-05-20",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20230608125743id_/https://www.distillery.de/ex/dates/2023/05/20",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "CHEZ DAMIER",
+              "info": "Distance, Chicago",
+              "link": ""
+            },
+            {
+              "name": "GILI",
+              "info": "II.R, closed",
+              "link": ""
+            },
+            {
+              "name": "FILBURT",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "SOMEWHEN",
+              "info": "R-Label Group, SANA",
+              "link": ""
+            },
+            {
+              "name": "JOHANNES SCHUSTER",
+              "info": "unreal, 999999999, SOMA, VOXNOX",
+              "link": ""
+            },
+            {
+              "name": "ROTTNMEIER",
+              "info": "Distillery, exLEpäng!",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-05-26-the-last-dance-part-i",
+      "date": "2023-05-26",
+      "title": "THE LAST DANCE - PART I",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20230608120449id_/https://www.distillery.de/ex/dates/2023/05/26",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ELLEN ALLIEN",
+              "info": "BPitch, Berlin",
+              "link": ""
+            },
+            {
+              "name": "COLINE",
+              "info": "Pressure Vibes, Dresden",
+              "link": ""
+            },
+            {
+              "name": "SENTA JULIEN",
+              "info": "ELI-Family",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "CLEO SNK",
+              "info": "IFZ, HOTSHOT, Waldbrand",
+              "link": ""
+            },
+            {
+              "name": "TØSCHE",
+              "info": "TENSIØN",
+              "link": ""
+            },
+            {
+              "name": "HOUDAFK",
+              "info": "Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-05-27-the-last-dance-part-ii-24-h-wohnzimmer",
+      "date": "2023-05-27",
+      "title": "THE LAST DANCE - PART II - 24 H WOHNZIMMER",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20230608111831id_/https://www.distillery.de/ex/dates/2023/05/27",
+      "imageUrl": "",
+      "description": "SA. 27.05.23 Flashday meets Kunstmarkt",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "FINEST SELECTION",
+              "info": "Andreas Eckhardt, Chris Manura, Lars Christian Müller",
+              "link": ""
+            },
+            {
+              "name": "DREIKOMMANULL",
+              "info": "Kleinschmager Audio, Mentell, Nikolas Sternberg",
+              "link": ""
+            },
+            {
+              "name": "MOON HARBOUR",
+              "info": "Dan Drastic, Daniel Stefanik, Sven Tasnadi",
+              "link": ""
+            },
+            {
+              "name": "DRESDEN CONNECTION",
+              "info": "Albrecht Wassersleben, Gunjah",
+              "link": ""
+            },
+            {
+              "name": "FäNCY",
+              "info": "Mauro Caracho, Napoleon Dynamite",
+              "link": ""
+            },
+            {
+              "name": "RäUCHERKAMMER",
+              "info": "Dilivius Lenni, Shuray & Walle, Thomas Stieler",
+              "link": ""
+            },
+            {
+              "name": "ITALO FUNDAMENTALO",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

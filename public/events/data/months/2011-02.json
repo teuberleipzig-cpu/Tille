@@ -1,0 +1,341 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2011-02-04-livelyrix-poetry-slam",
+      "date": "2011-02-04",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20110108131023id_/http://distillery.de:80/ex/dates/2011/02/04",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: livelyrix poetry slam MUSIC BY:",
+          "items": [
+            {
+              "name": "NICO SEMSROTT",
+              "info": "Lebensqualitäter, Hamburg",
+              "link": ""
+            },
+            {
+              "name": "MARQUES-REGNIER HüBSCHER",
+              "info": "Hamburg",
+              "link": ""
+            },
+            {
+              "name": "BLEU BROODE",
+              "info": "Marburg",
+              "link": ""
+            },
+            {
+              "name": "U.V.M.",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "DJ RUKEY",
+              "info": "Distillery, esoulate, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-02-05-chitlin-circuit-meets-where-the-buffalo-roam",
+      "date": "2011-02-05",
+      "title": "CHITLIN' CIRCUIT MEETS WHERE THE BUFFALO ROAM",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20110108131033id_/http://distillery.de:80/ex/dates/2011/02/05",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: chitlin' circuit",
+          "items": [
+            {
+              "name": "ROBAG WRUHME",
+              "info": "Pampa, Hart & Tief, Kompakt, Weimar Innenstadt",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: where the buffalo roam",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-02-11-style-wild",
+      "date": "2011-02-11",
+      "title": "STYLE WILD",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20110108131204id_/http://distillery.de:80/ex/dates/2011/02/11",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: oldschool floor",
+          "items": [
+            {
+              "name": "DJ KNICKNECK",
+              "info": "PDM Caravan Records",
+              "link": ""
+            },
+            {
+              "name": "DJ D-FEKT",
+              "info": "snuffpro, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: future floor",
+          "items": [
+            {
+              "name": "COMFORT FIT",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "DOWNTOWNLYRICS SOUNDSYSTEM",
+              "info": "Malcolm & Full Contact, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "special:",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-02-12-mindcookies-meets-bass-pluss",
+      "date": "2011-02-12",
+      "title": "MINDCOOKIES MEETS BASS PLUSS!",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20110108131038id_/http://distillery.de:80/ex/dates/2011/02/12",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: mindcookies",
+          "items": [
+            {
+              "name": "DIE VöGEL – LIVE",
+              "info": "Pampa Records, Hamburg",
+              "link": ""
+            },
+            {
+              "name": "STEFFEN BENNEMANN",
+              "info": "Nachtdigital, Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "mindcookies, Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-02-17-strictly-disco",
+      "date": "2011-02-17",
+      "title": "STRICTLY DISCO!",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20110107060339id_/http://distillery.de:80/ex/dates/2011/02/17",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: house",
+          "items": [
+            {
+              "name": "DJ RUSH",
+              "info": "Kne'deep, Berlin, Chicago",
+              "link": ""
+            },
+            {
+              "name": "HOMBRES DISCOS",
+              "info": "aka, Tiny, Spunky, Uncanny Valley, Dresden), Start: 22:00",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-02-18-mad-again",
+      "date": "2011-02-18",
+      "title": "MAD AGAIN!",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20110108131046id_/http://distillery.de:80/ex/dates/2011/02/18",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: rappelkiste",
+          "items": [
+            {
+              "name": "DIE SPIELWIESE",
+              "info": "Wiesbaden",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: bass bett",
+          "items": [
+            {
+              "name": "ZEBSTA",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "MURDOCK",
+              "info": "Welcome to Bmore",
+              "link": ""
+            },
+            {
+              "name": "SENCHA",
+              "info": "Distillery, nuskoolbreaks, Black Belt Boogie",
+              "link": ""
+            },
+            {
+              "name": "PABLO GUNZALES",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-02-19-moon-harbour-flights-meets-feenstaub-friends",
+      "date": "2011-02-19",
+      "title": "MOON HARBOUR FLIGHTS MEETS FEENSTAUB & FRIENDS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20110108131129id_/http://distillery.de:80/ex/dates/2011/02/19",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: \"well spent youth\" album release",
+          "items": [
+            {
+              "name": "ISOLéE – LIVE",
+              "info": "Playhouse, Dial, Pampa, FFM",
+              "link": ""
+            },
+            {
+              "name": "MICHAEL MELCHNER",
+              "info": "Cargo Edition, Nürnberg",
+              "link": ""
+            },
+            {
+              "name": "DAN DRASTIC",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-02-25-jahtari-label-night",
+      "date": "2011-02-25",
+      "title": "JAHTARI LABEL NIGHT",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20110108131212id_/http://distillery.de:80/ex/dates/2011/02/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: jahtari label night",
+          "items": [
+            {
+              "name": "CLAUSE FOUR",
+              "info": "London, UK",
+              "link": ""
+            },
+            {
+              "name": "JAHTARI",
+              "info": "Disrupt, aDUBtion",
+              "link": ""
+            },
+            {
+              "name": "SOLO BANTON",
+              "info": "London, UK",
+              "link": ""
+            },
+            {
+              "name": "TAPES",
+              "info": "London, Start: 22:00, 5,- € bis 0:00, dann 7,- €, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-02-26-hoerfunk-meets-syntax",
+      "date": "2011-02-26",
+      "title": "HOERFUNK MEETS SYNTAX",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20110108131246id_/http://distillery.de:80/ex/dates/2011/02/26",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: hoerfunk",
+          "items": [
+            {
+              "name": "MICHAEL MAYER",
+              "info": "Kompakt, Köln",
+              "link": ""
+            },
+            {
+              "name": "MARKUS WELBY",
+              "info": "hoerfunk, Distillery, Melt!-Festival, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: syntax",
+          "items": [
+            {
+              "name": "GEORG BIGALKE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

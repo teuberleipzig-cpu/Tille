@@ -1,0 +1,565 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "fm-6f708fb5-b0ee-4173-891a-8d6a7708f600",
+      "date": "2026-09-05",
+      "title": "Crème GRDN + Afterhour",
+      "color": "orange",
+      "moreUrl": "#",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "GRDN",
+          "genre": "",
+          "items": [
+            {
+              "name": "ALEXIA",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "ALI E.",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "CRÈME CLUB",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "FELIX LÜCKE",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "FOXLOE",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "CRÈME CLUB",
+              "info": "Nivea",
+              "link": ""
+            },
+            {
+              "name": "DJ PIPE",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "UNTEN",
+          "genre": "",
+          "items": [
+            {
+              "name": "VINCENT NEUMANN",
+              "info": "Distillery, Unitas Multiplex",
+              "link": ""
+            },
+            {
+              "name": "CARLOTTA JACOBI",
+              "info": "Connwax",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fm-d0f79189-000b-498f-b1e6-57ee98efb0b4",
+      "date": "2026-09-12",
+      "title": "CLUB GRDN X SEELEN.",
+      "color": "orange",
+      "moreUrl": "#",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "GRDN",
+          "genre": "",
+          "items": [
+            {
+              "name": "Thomas Stieler",
+              "info": "Paracou, Distillery, My King Is Light",
+              "link": ""
+            },
+            {
+              "name": "Bärtaub",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "Luyse",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "Submod",
+              "info": "vaertism, Daydream Records, INAR",
+              "link": ""
+            },
+            {
+              "name": "Jana Falcon",
+              "info": "Smile For A While",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "UNTEN",
+          "genre": "",
+          "items": [
+            {
+              "name": "STIGMATIQUE",
+              "info": "SEELEN.",
+              "link": ""
+            },
+            {
+              "name": "JANEIN",
+              "info": "SEELEN.",
+              "link": ""
+            },
+            {
+              "name": "STEPHANIE SYKES",
+              "info": "Fullpanda, 47",
+              "link": ""
+            },
+            {
+              "name": "MEDHA",
+              "info": "PVC, aequalis",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fm-37a8ea95-dc55-4ea7-8e29-9450aacbb07f",
+      "date": "2026-09-18",
+      "title": "Kollektiv Krumm & Schief X PANAM",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "GRDN",
+          "genre": "",
+          "items": [
+            {
+              "name": "Minelect",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "Primo",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "Projekt 2",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "Mozz!",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "Diyah",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "phosie",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "Kreuton (Live)",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "davdav",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "attekk toni",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fm-0e6a6520-4fdd-4d8c-a456-52d6339ea870",
+      "date": "2026-09-19",
+      "title": "VACANZA + BUTSCHI ALL-NIGHT-LONG",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "GRDN",
+          "genre": "",
+          "items": [
+            {
+              "name": "VOELLER",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "MONTEZUMA",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "Gretaepisch",
+              "info": "Leipzig/Dresden",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "OBERÜBER",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "Hop'N Honey",
+              "info": "Atalanta, Bigalke, DJ HDGDL, Mike van Götze, Nadine Talakovics, Vincent Neumann",
+              "link": ""
+            },
+            {
+              "name": "KRUE",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "Goldie Palm",
+              "info": "Vacanza, RBL Berlin",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "DOWN",
+          "genre": "",
+          "items": [
+            {
+              "name": "BUTSCHI",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "KRASH CORA",
+              "info": "Berlin",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fm-30c262d9-67ca-4751-93d2-e292dc82da51",
+      "date": "2026-09-25",
+      "title": "S.D.H.Q. presents: Sonic Dimensions - Part 1",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "GRDN",
+          "genre": "",
+          "items": [
+            {
+              "name": "OUTWITHJANE",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "SAMANDTHESOUND",
+              "info": "Drum and Bass",
+              "link": ""
+            },
+            {
+              "name": "M.OSQUITO",
+              "info": "Melodic TechHouse",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "A DREAMS A",
+              "info": "LIVE Electronic Acid",
+              "link": ""
+            },
+            {
+              "name": "JON BORELL",
+              "info": "LIVE Electronic",
+              "link": ""
+            },
+            {
+              "name": "CAROL SELIG",
+              "info": "LIVE Tech House",
+              "link": ""
+            },
+            {
+              "name": "OCIN JD",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "LE SOLEIL",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "HECKLER",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "LARRY LOVE",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "DANIEL WITTIG",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "HERR LONGER",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "DOWN",
+          "genre": "",
+          "items": [
+            {
+              "name": "UNKNOWN SPECIES",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ATCON",
+              "info": "Live: Techno & Voice",
+              "link": ""
+            },
+            {
+              "name": "CAPEY",
+              "info": "Live: Techno & Voice",
+              "link": ""
+            },
+            {
+              "name": "MAX BAMBI",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "KALITOS",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "SAMI ZEE",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "AKSL",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "D-BOY",
+              "info": "deep ground, coolblue",
+              "link": ""
+            },
+            {
+              "name": "CHRIS LACONI",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fm-79e1901d-5b81-4353-9765-c640ab6bf703",
+      "date": "2026-09-26",
+      "title": "METRO X DISTILLERY NEW KIDS",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "GRDN",
+          "genre": "",
+          "items": [
+            {
+              "name": "CLEMI",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "JEWELRY",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MARENGO",
+              "info": "METRO",
+              "link": ""
+            },
+            {
+              "name": "MATHILDA",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "CARLUSCHKA",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "MP.ULLE",
+              "info": "Neue Welle",
+              "link": ""
+            },
+            {
+              "name": "DJ SOFTICE",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "MIDNXGHT",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "DEGEN",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "DREIMAL T",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "FATMUSKA",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "DJ G1NA R.",
+              "info": "Metro",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "DOWN",
+          "genre": "",
+          "items": [
+            {
+              "name": "INTERSTELLA",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "VINYLDEPENDENTS",
+              "info": "Leipzig, Halle/Saale",
+              "link": ""
+            },
+            {
+              "name": "TINOU",
+              "info": "Leipzig, Vendee",
+              "link": ""
+            },
+            {
+              "name": "DO",
+              "info": "XA",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2026-09-12-csv-test-night",
+      "date": "2026-09-12",
+      "title": "CSV Test Night",
+      "color": "orange",
+      "moreUrl": "https://example.com",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "genre": "House",
+          "items": [
+            {
+              "name": "Test Artist",
+              "info": "Live",
+              "link": "https://example.com/artist"
+            },
+            {
+              "name": "Second Artist",
+              "info": "DJ Set",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

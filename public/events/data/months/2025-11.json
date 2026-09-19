@@ -1,0 +1,403 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "ra-2276512",
+      "date": "2025-11-01",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2276512",
+      "imageUrl": "",
+      "description": "Start: 21:00\nEnde: 09:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Biesmans",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "Hannie Phi",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "noxsonos",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SLANY",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Zisko",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2284488",
+      "date": "2025-11-07",
+      "title": "GLOOM - DUBSTEP ALL NIGHT LONG",
+      "color": "olive",
+      "moreUrl": "https://ra.co/events/2284488",
+      "imageUrl": "",
+      "description": "Start: 22:00\nEnde: 06:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Goth-Trad",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "DJ Annita",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Grawinkel",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Old Man Crane",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2276515",
+      "date": "2025-11-08",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2276515",
+      "imageUrl": "",
+      "description": "Start: 21:00\nEnde: 09:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Carlotta Jacobi",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Frankey & Sandrino",
+              "info": "Innervisions, Drumpoet Community, Mood Music",
+              "link": ""
+            },
+            {
+              "name": "karete bu",
+              "info": "DRIVE, G-Edit",
+              "link": ""
+            },
+            {
+              "name": "LOLSNAKE",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "V:SONNTAG",
+              "info": "focus, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2288137",
+      "date": "2025-11-14",
+      "title": "Boundless Beatz feat. Skylark",
+      "color": "olive",
+      "moreUrl": "https://ra.co/events/2288137",
+      "imageUrl": "",
+      "description": "Start: 22:00\nEnde: 06:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "audite",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "VRUM",
+              "info": "Boundless Beatz",
+              "link": ""
+            },
+            {
+              "name": "Dubbalot",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2276517",
+      "date": "2025-11-15",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2276517",
+      "imageUrl": "",
+      "description": "Start: 21:00\nEnde: 13:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Aivee",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Daniel Stefanik",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Dorsch",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Henning Baer",
+              "info": "Grounded Theory",
+              "link": ""
+            },
+            {
+              "name": "Lea Jessen",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Robag Wruhme",
+              "info": "Pampa, Hart & Tief, Kompakt, Weimar Innenstadt",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2276519",
+      "date": "2025-11-18",
+      "title": "TUESDAY RAVE",
+      "color": "yellow",
+      "moreUrl": "https://ra.co/events/2276519",
+      "imageUrl": "",
+      "description": "Start: 21:00\nEnde: 10:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "0-Dimensional",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DJ Hell",
+              "info": "International Deejay Gigolos",
+              "link": ""
+            },
+            {
+              "name": "Local Suicide",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "NICI PALM",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Olivia Mendez",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2276522",
+      "date": "2025-11-22",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2276522",
+      "imageUrl": "",
+      "description": "Start: 21:00\nEnde: 10:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Keepsakes",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Len Faki",
+              "info": "Len Series, Ostgut Ton, Podium, Figure, Berghain, Berlin",
+              "link": ""
+            },
+            {
+              "name": "Malena (2)",
+              "info": "Konnektivmusik, Dresden",
+              "link": ""
+            },
+            {
+              "name": "Sevensol",
+              "info": "Long Vehicle, Kann",
+              "link": ""
+            },
+            {
+              "name": "Shuray & Walle",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Zacharias",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Zischko",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2289309",
+      "date": "2025-11-28",
+      "title": "SLEEPLESS & PARANOID",
+      "color": "olive",
+      "moreUrl": "https://ra.co/events/2289309",
+      "imageUrl": "",
+      "description": "Start: 22:00\nEnde: 07:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Alexa Fluor",
+              "info": "Another Records",
+              "link": ""
+            },
+            {
+              "name": "audite",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BIGALKE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Millie Forsberg",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Ninette",
+              "info": "Distillery, LÄRM",
+              "link": ""
+            },
+            {
+              "name": "Paraçek",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Siggi Petrol",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2276524",
+      "date": "2025-11-29",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2276524",
+      "imageUrl": "",
+      "description": "Start: 21:00\nEnde: 10:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Filburt",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Kaspar Oberon",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Nat Wendell",
+              "info": "Depth Of My Soul, Berlin",
+              "link": ""
+            },
+            {
+              "name": "Quelza",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Sinamin",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Vincent Neumann",
+              "info": "Distillery, Unitas Multiplex, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "V:SONNTAG",
+              "info": "focus, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

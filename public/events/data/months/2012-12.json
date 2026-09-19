@@ -1,0 +1,383 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2012-12-01-17-50-meets-syntax",
+      "date": "2012-12-01",
+      "title": "17:50 MEETS SYNTAX",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20121213214557id_/http://www.distillery.de:80/ex/dates/2012/12/01",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: siebzehnfuffzig",
+          "items": [
+            {
+              "name": "STEFAN GOLDMANN",
+              "info": "Macro, Berlin",
+              "link": ""
+            },
+            {
+              "name": "RON DEACON",
+              "info": "Distillery",
+              "link": ""
+            },
+            {
+              "name": "POLO",
+              "info": "Schach Matt, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-12-07-livelyrix-poetry-slam",
+      "date": "2012-12-07",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20121210044729id_/http://www.distillery.de:80/ex/dates/2012/12/07",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: spoken word akrobatik MUSIC BY:",
+          "items": [
+            {
+              "name": "ALEX MEYER",
+              "info": "Hannover",
+              "link": ""
+            },
+            {
+              "name": "RENATO KAISER",
+              "info": "Fribourg, Schweiz",
+              "link": ""
+            },
+            {
+              "name": "JAN PHILIPP ZYMNY",
+              "info": "Wuppertal",
+              "link": ""
+            },
+            {
+              "name": "U.V.M.",
+              "info": "und wie immer viele mehr",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-12-11-kingston-affair-special",
+      "date": "2012-12-11",
+      "title": "KINGSTON AFFAIR SPECIAL",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20121213212602id_/http://www.distillery.de:80/ex/dates/2012/12/11",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: dancehall, reggae",
+          "items": [
+            {
+              "name": "GENERAL DEGREE",
+              "info": "Kingston, Jamaika",
+              "link": ""
+            },
+            {
+              "name": "UPLIFTMENT INTERNATIONAL",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SELECTAH SPINBACK",
+              "info": "Da Switch, Leipzig), Start: 21:00, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-12-14-boundless-beatz",
+      "date": "2012-12-14",
+      "title": "BOUNDLESS BEATZ",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20121213214603id_/http://www.distillery.de:80/ex/dates/2012/12/14",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: drum and bass",
+          "items": [
+            {
+              "name": "MC DRS",
+              "info": "Soul:R, Good Looking, Manchester",
+              "link": ""
+            },
+            {
+              "name": "+ GUESTS",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "STONE",
+              "info": "Out Of Mind, Refloat, Berlin",
+              "link": ""
+            },
+            {
+              "name": "PEAK",
+              "info": "Rue:de:gare, Gera",
+              "link": ""
+            },
+            {
+              "name": "AUDITE",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-12-15-riotvan-meets-where-the-buffalo-roam",
+      "date": "2012-12-15",
+      "title": "RIOTVAN MEETS WHERE THE BUFFALO ROAM",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20121213212539id_/http://www.distillery.de:80/ex/dates/2012/12/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: riotvan",
+          "items": [
+            {
+              "name": "DANIEL BORTZ",
+              "info": "SUOL, Augsburg",
+              "link": ""
+            },
+            {
+              "name": "PETER INVASION",
+              "info": "Riotvan, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: where the buffalo roam",
+          "items": [
+            {
+              "name": "STEPHAN VON WOLFFERSDORFF",
+              "info": "Distillery, Where the Buffalo Roam",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-12-21-zwischenwelten",
+      "date": "2012-12-21",
+      "title": "ZWISCHENWELTEN",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20121213212608id_/http://www.distillery.de:80/ex/dates/2012/12/21",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: aka life never ends floor",
+          "items": [
+            {
+              "name": "KYA - LIVE",
+              "info": "littlebigsensations",
+              "link": ""
+            },
+            {
+              "name": "MONGOOSE",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "MEEHAL",
+              "info": "Ovnimoon Records, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "PSYCHOPHYSICAL TRANSCRIPTS – LIVE",
+              "info": "Ovnimoon Records, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SOULSTONE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-12-22-uncanny-valley-meets-vault-series",
+      "date": "2012-12-22",
+      "title": "UNCANNY VALLEY MEETS VAULT SERIES",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20121213214450id_/http://www.distillery.de:80/ex/dates/2012/12/22",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: uncanny valley",
+          "items": [
+            {
+              "name": "JACOB KORN – LIVE",
+              "info": "Uncanny Valley, Running Back, Dresden",
+              "link": ""
+            },
+            {
+              "name": "CONRAD KADEN",
+              "info": "Uncanny Valley, The Moroders, Dresden",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-12-25-moon-harbour-showcase",
+      "date": "2012-12-25",
+      "title": "MOON HARBOUR SHOWCASE",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20121213212631id_/http://www.distillery.de:80/ex/dates/2012/12/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: moon harbour",
+          "items": [
+            {
+              "name": "MATTHIAS TANZMANN",
+              "info": "Moon Harbour, Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "KIKI – LIVE",
+              "info": "BPitch Control, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DAN DRASTIC",
+              "info": "Moon Harbour",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-12-28-submission-meets-week-of-death",
+      "date": "2012-12-28",
+      "title": "SUBMISSION MEETS WEEK OF DEATH",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20121213214458id_/http://www.distillery.de:80/ex/dates/2012/12/28",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: dubstep",
+          "items": [
+            {
+              "name": "BULLDOGS – LIVE",
+              "info": "audio phreaks, Berlin",
+              "link": ""
+            },
+            {
+              "name": "SENCHA",
+              "info": "Distillery, Bass Plus, Mad Again!, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "TEARZTAR",
+              "info": "Submission",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-12-29-chitlin-circuit",
+      "date": "2012-12-29",
+      "title": "CHITLIN' CIRCUIT",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20121213220231id_/http://www.distillery.de:80/ex/dates/2012/12/29",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: chitlin' circuit",
+          "items": [
+            {
+              "name": "MATHIAS KADEN",
+              "info": "Paracou",
+              "link": ""
+            },
+            {
+              "name": "MONKEY MAFFIA",
+              "info": "Freude am Tanzen, Jena",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-12-31-silvester-in-family",
+      "date": "2012-12-31",
+      "title": "SILVESTER IN FAMILY",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20121208022642id_/http://www.distillery.de:80/ex/dates/2012/12/31",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: goodbye 2012",
+          "items": [
+            {
+              "name": "THOMAS STIELER",
+              "info": "Distillery, Paracou",
+              "link": ""
+            },
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "mindcookies, Distillery",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

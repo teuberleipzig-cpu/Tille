@@ -1,0 +1,465 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2018-03-02-livelyrix-poetry-slam",
+      "date": "2018-03-02",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20180306214936id_/http://www.distillery.de:80/ex/dates/2018/03/02",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: MODERATION:",
+          "items": [
+            {
+              "name": "SOPHIE PASSMANN",
+              "info": "Freiburg",
+              "link": ""
+            },
+            {
+              "name": "BJöRN GöGGE",
+              "info": "Krefeld",
+              "link": ""
+            },
+            {
+              "name": "KATHARINA HUBOI",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "SAMUEL KRAMER",
+              "info": "Offenbach",
+              "link": ""
+            },
+            {
+              "name": "LEONIE WARNKE",
+              "info": "Leipzig, Start: 19:30, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-03-03-highly-demand",
+      "date": "2018-03-03",
+      "title": "HIGHLY DEMAND",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190823100826id_/http://www.distillery.de/ex/dates/2018/03/03",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "BART SKILS",
+              "info": "Drumcode, Amsterdam",
+              "link": ""
+            },
+            {
+              "name": "MIKE VAN GOETZE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "CLEMENS RUH",
+              "info": "Distillery, Frission Radio, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "KYLE GEIGER",
+              "info": "Cubera, Drumcode, Soma, Droid, Perc Trax",
+              "link": ""
+            },
+            {
+              "name": "VINCENT NEUMANN",
+              "info": "Distillery, Unitas Multiplex, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-03-09-utm-session",
+      "date": "2018-03-09",
+      "title": "UTM-SESSION",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190823100505id_/http://www.distillery.de/ex/dates/2018/03/09",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "RIDO",
+              "info": "Blackout / LET IT ROLL / Metalheadz, Prag",
+              "link": ""
+            },
+            {
+              "name": "VENOM218 B2B JORK",
+              "info": "UTM Family, Dresden",
+              "link": ""
+            },
+            {
+              "name": "SMA B2B JANKINS",
+              "info": "UTM Family / Sub Sequence, Dresden",
+              "link": ""
+            },
+            {
+              "name": "IMPACT",
+              "info": "Rush Hour / Broken Vision / Sector 8, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SONZA",
+              "info": "UTM Family, Dresden",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "NANO42",
+              "info": "FVZ, N*Dorphin, UTM-Family, Sector 8",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-03-16-b-seiten-stimmen-aus-clubkultur-und-musikszenen",
+      "date": "2018-03-16",
+      "title": "B-SEITEN: STIMMEN AUS CLUBKULTUR UND MUSIKSZENEN",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20221001044127id_/https://www.distillery.de/ex/dates/2018/03/16",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: MODERATION:",
+          "items": [
+            {
+              "name": "FILBURT",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SUPAKC",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "PETER INVASION",
+              "info": "Riotvan, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MRS. PEPSTEIN",
+              "info": "Radio Blau",
+              "link": ""
+            },
+            {
+              "name": "DONIS",
+              "info": "Disco09, Ilses Erika, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "CFM",
+              "info": "caramba records!",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-03-17-playful-uncompromising",
+      "date": "2018-03-17",
+      "title": "PLAYFUL UNCOMPROMISING",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190819110629id_/http://www.distillery.de/ex/dates/2018/03/17",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "BRITTA ARNOLD",
+              "info": "KaterMukke, Dantze, Berlin",
+              "link": ""
+            },
+            {
+              "name": "SVEN TASNADI",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DYNAMITE KADINSKI",
+              "info": "Distillery, Fäncy, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "ANASTASIA KRISTENSEN",
+              "info": "Arcola, Culture Box",
+              "link": ""
+            },
+            {
+              "name": "MARKUS MASUHR",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "MODULAR",
+              "info": "Pragmat, lcr, Circular limited",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-03-22-shacke-one",
+      "date": "2018-03-22",
+      "title": "SHACKE ONE",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20190823100836id_/http://www.distillery.de/ex/dates/2018/03/22",
+      "imageUrl": "",
+      "description": "(Nordachse, Berlin)\nStart: 19:00\nschickt sich an, den kompromisslosen Berliner Untergrund-Battlerap wieder fett anzustreichen. Seine Flows sitzen straff, seine Punchlines haben mehr Schärfe und Intensität als die geheimsten Chili-Sorten. Passend dazu fügen die instrumentalen Unterbauten von Achim Funk und der \"Das Zündet\"-Crew dem straighten Atzentalk die nötige Idee Funk hinzu. Shacke One hat eine Nische besetzt, die kein anderer Deutschrapper ausfüllen kann: mit der Entdeckung als Sahnehäubchen, dass es einen deutschen Rapper gibt, der Busta Rhymes in Sachen Stakkato-Rap locker in die Tasche steckt. Respekt dafür!\nhttps://www.facebook.com/mcshacke",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "KALENDER-DOWNLOAD",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "DISTILLERY",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-03-23-defrostatica-meets-ftp",
+      "date": "2018-03-23",
+      "title": "DEFROSTATICA MEETS FTP",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20180326083556id_/http://www.distillery.de:80/ex/dates/2018/03/23",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "down: juke, ghettotech, jungle",
+          "items": [
+            {
+              "name": "DJ DR-660",
+              "info": "FTP, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "C.D.N.",
+              "info": "FTP, Frankfurt a.M.",
+              "link": ""
+            },
+            {
+              "name": "SUPPLY",
+              "info": "FTP, Berlin",
+              "link": ""
+            },
+            {
+              "name": "KATOR",
+              "info": "Defrostatica, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BOOGA",
+              "info": "Defrostatica, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "TINA",
+              "info": "Defrostatica, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-03-24-an-illustrious-journey",
+      "date": "2018-03-24",
+      "title": "AN ILLUSTRIOUS JOURNEY",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190823100501id_/http://www.distillery.de/ex/dates/2018/03/24",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SPENCER PARKER",
+              "info": "Work Them Records, ItsNotOver, Rekids",
+              "link": ""
+            },
+            {
+              "name": "LYDIA EISENBLäTTER",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SHURAY & WALLE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "MøRBECK",
+              "info": "Code is Law, Berlin",
+              "link": ""
+            },
+            {
+              "name": "TSORN",
+              "info": "No Show",
+              "link": ""
+            },
+            {
+              "name": "TEMPLETON",
+              "info": "Hypress, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-03-30-purple-tea-xvi",
+      "date": "2018-03-30",
+      "title": "PURPLE TEA XVI",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190823100404id_/http://www.distillery.de/ex/dates/2018/03/30",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DJ SICSTYLE",
+              "info": "Bass En Mass, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "YAMI",
+              "info": "Good Hood Music, Weirdo Family, Traphouse",
+              "link": ""
+            },
+            {
+              "name": "TRIX",
+              "info": "TRLLXGNG, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "KIT KUT",
+              "info": "GoodHoodMusic, Beyond07, Team PurpleTea",
+              "link": ""
+            },
+            {
+              "name": "DRBYSTRR93",
+              "info": "soulutian, Team PurpleTea, Leipzig, Start: 23:00, add to Cal, HipHop 2.0 x Grime x Hustle-Trap x UK x Baltimore x OG-Rap x Breaks x Ragga x Moombahton x Ghetto-Tech x GlobalBa$$ x B.I.G. x Transforma-Scratch",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2018-03-31-24-h-wohnzimmer-easter-edition",
+      "date": "2018-03-31",
+      "title": "24 H WOHNZIMMER - EASTER EDITION",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190823100926id_/http://www.distillery.de/ex/dates/2018/03/31",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "TIMO MAAS",
+              "info": "Rockets & Ponies",
+              "link": ""
+            },
+            {
+              "name": "ADANA TWINS",
+              "info": "Watergate Records",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "GUNJAH",
+              "info": "Showboxx, Funkwelt, Dresden",
+              "link": ""
+            },
+            {
+              "name": "LARS CHRISTIAN MüLLER",
+              "info": "Distillery, mindcookies",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

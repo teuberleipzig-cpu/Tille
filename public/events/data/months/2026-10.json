@@ -1,0 +1,446 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "fm-0dc58892-532d-cb42-a864-6a0290eb3668",
+      "date": "2026-10-02",
+      "title": "FAT BEMME X Boundless Beatz",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": []
+    },
+    {
+      "id": "fm-aaa88b4b-6d78-44a2-a3aa-9745e90a3d31",
+      "date": "2026-10-03",
+      "title": "FOCUS + KARETE BU invites",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "PVLLN",
+          "genre": "House",
+          "items": [
+            {
+              "name": "KARETE BU",
+              "info": "DRIVE, G-Edit)",
+              "link": ""
+            },
+            {
+              "name": "NATASCHA KANN",
+              "info": "://about blank",
+              "link": ""
+            },
+            {
+              "name": "HEFE",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "R!KE",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "DOWN",
+          "genre": "Techno",
+          "items": [
+            {
+              "name": "V:SONNTAG",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "EIGENRAUSCH",
+              "info": "[115], Leipzig",
+              "link": ""
+            },
+            {
+              "name": "TOXIDO MASK",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "LAIMA ADELAIDE",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fm-bafce641-547a-3e4c-87c7-e890dff525d9",
+      "date": "2026-10-09",
+      "title": "Poetry Slam & Peace Harmony Kollektiv",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": []
+    },
+    {
+      "id": "fm-eacb2a63-e681-4847-a302-f6c1588e4501",
+      "date": "2026-10-10",
+      "title": "KEINKOLLEKTIV X DISTILLERY",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "NORMAN NODGE",
+              "info": "Berghain, Ostgut Ton, Berlin",
+              "link": ""
+            },
+            {
+              "name": "NADINE TALAKOVICS",
+              "info": "Distillery",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "UP",
+          "genre": "",
+          "items": []
+        },
+        {
+          "label": "DOWN",
+          "genre": "",
+          "items": [
+            {
+              "name": "KEINKOLLEKTIV ACT",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "KEINKOLLEKTIV ACT",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "KEINKOLLEKTIV ACT",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "KEINKOLLEKTIV ACT",
+              "info": "",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fm-294548ed-4cc3-4ddc-a8b9-29fb3800593d",
+      "date": "2026-10-16",
+      "title": "34 YRS DSTLLRY",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "MAY/O",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "SUBMOD",
+              "info": "vaertism, Daydream Records, INAR",
+              "link": ""
+            },
+            {
+              "name": "TRAXX JR",
+              "info": "My Grooves, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MP.ULLE",
+              "info": "Neue Welle",
+              "link": ""
+            },
+            {
+              "name": "NEELE",
+              "info": "IFZ",
+              "link": ""
+            },
+            {
+              "name": "PADSINGERS",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "THOMAS STIELER",
+              "info": "Paracou, Distillery, My King Is Light",
+              "link": ""
+            },
+            {
+              "name": "POKKA",
+              "info": "Leipzig, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DAHMAR",
+              "info": "Electronic Resistance, Leipzig)&#8232",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Cocoon, Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "CYNTHIA MATISSE",
+              "info": "Triebwerk, Weimar",
+              "link": ""
+            },
+            {
+              "name": "OLIV",
+              "info": "ZENA",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "UP",
+          "genre": "",
+          "items": []
+        },
+        {
+          "label": "DOWN",
+          "genre": "",
+          "items": [
+            {
+              "name": "NØRBAK",
+              "info": "Hayes, Warm Up, Soma",
+              "link": ""
+            },
+            {
+              "name": "",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "RIKHTER",
+              "info": "R Label Group",
+              "link": ""
+            },
+            {
+              "name": "MASCHA ROTH",
+              "info": "Dresden",
+              "link": ""
+            },
+            {
+              "name": "NOXSONOS",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BEPHÅL",
+              "info": "SAFT",
+              "link": ""
+            },
+            {
+              "name": "STEPHAN VON WOLFFERSDORFF",
+              "info": "Distillery, Where the Buffalo Roam, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MOTO MOTO",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "CARLOTTA JACOBI",
+              "info": "Connwax",
+              "link": ""
+            },
+            {
+              "name": "BIGALKE",
+              "info": "DON'T BE AFRAID OF YOURSELF, HTXSTHSTX",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fm-71382675-33c4-3846-b1eb-a2f6034d56a5",
+      "date": "2026-10-23",
+      "title": "Rob K. Jubiläum",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": []
+    },
+    {
+      "id": "fm-ee31d66d-3559-44a4-8f05-ff845999047b",
+      "date": "2026-10-24",
+      "title": "Vinylschleifer StepBack",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": []
+    },
+    {
+      "id": "fm-78b499de-110b-2443-99b9-3829933a7a75",
+      "date": "2026-10-27",
+      "title": "Arte & DOK",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": []
+    },
+    {
+      "id": "ra-2458325",
+      "date": "2026-10-29",
+      "title": "Erobique",
+      "color": "yellow",
+      "moreUrl": "https://ra.co/events/2458325",
+      "imageUrl": "",
+      "description": "Start: 20:00\nEnde: 23:00",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Erobique",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "fm-0c06851a-e414-a145-9cb4-3b568bd4167c",
+      "date": "2026-10-29",
+      "title": "Erobique",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": []
+    },
+    {
+      "id": "ra-2370028",
+      "date": "2026-10-30",
+      "title": "DUALISM with Paracek & SPEEDBOYS LIVE",
+      "color": "olive",
+      "moreUrl": "https://ra.co/events/2370028",
+      "imageUrl": "",
+      "description": "Start: 23:00\nEnde: 09:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Paraçek",
+              "info": "(TRANCEKRAFT 4000)",
+              "link": ""
+            },
+            {
+              "name": "SPEEDBOYS",
+              "info": "(Heidelberg)",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "fm-035d35f0-0337-e541-99e1-8ec1e4f69e94",
+      "date": "2026-10-30",
+      "title": "Dualism",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": []
+    },
+    {
+      "id": "fm-2cf21148-e9dd-496c-b2d5-50327a8c1465",
+      "date": "2026-10-31",
+      "title": "SELECTORS CLUB + ???",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "SELECTORS CLUB ACT",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "SELECTORS CLUB ACT",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "SELECTORS CLUB ACT",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "DOWN",
+          "genre": "",
+          "items": [
+            {
+              "name": "MARIE MONTEXIER",
+              "info": "Köln",
+              "link": ""
+            },
+            {
+              "name": "SELECTORS CLUB ACT",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "SELECTORS CLUB ACT",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "SELECTORS CLUB ACT",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "SELECTORS CLUB ACT",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

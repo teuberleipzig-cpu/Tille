@@ -1,0 +1,477 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2013-03-01-livelyrix-poetry-slam",
+      "date": "2013-03-01",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20130302032509id_/http://www.distillery.de:80/ex/dates/2013/03/01",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: fesselnde wortgefechte",
+          "items": [
+            {
+              "name": "PAULINE FüG",
+              "info": "Hannover",
+              "link": ""
+            },
+            {
+              "name": "JONATHAN BAUMGäRTNER",
+              "info": "Nürnberg",
+              "link": ""
+            },
+            {
+              "name": "KADDI CUTZ",
+              "info": "Dresden",
+              "link": ""
+            },
+            {
+              "name": "HENNING WENZEL",
+              "info": "Dresden",
+              "link": ""
+            },
+            {
+              "name": "JULIAN KALKS",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-03-02-mantasy-tour",
+      "date": "2013-03-02",
+      "title": "MANTASY TOUR",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20130401015758id_/http://www.distillery.de:80/ex/dates/2013/03/02",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: mantasy tour",
+          "items": [
+            {
+              "name": "MICHAEL MAYER",
+              "info": "Kompakt, Köln",
+              "link": ""
+            },
+            {
+              "name": "PHILIPP MATALLA",
+              "info": "Distillery, Internasjonal, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: immer dieser techno",
+          "items": [
+            {
+              "name": "SUBʞUTAN",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-03-07-germaica-pres-wayne-marshall",
+      "date": "2013-03-07",
+      "title": "GERMAICA PRES. WAYNE MARSHALL",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20130331003814id_/http://www.distillery.de:80/ex/dates/2013/03/07",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: dancehall, reggae",
+          "items": [
+            {
+              "name": "WAYNE MARSHALL",
+              "info": "Ghetto Youths Int'l, Kingston, Jamaica",
+              "link": ""
+            },
+            {
+              "name": "PIONEAR",
+              "info": "Germaica, Far East",
+              "link": ""
+            },
+            {
+              "name": "UPLIFTMENT INTERNATIONAL",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MR. DAGGA",
+              "info": "Caribbean Nice Up",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-03-08-style-wild-meets-overdubclub",
+      "date": "2013-03-08",
+      "title": "STYLE WILD MEETS OVERDUBCLUB",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20140617082348id_/http://www.distillery.de:80/ex/dates/2013/03/08",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: hip hop, beats, wonky, trap",
+          "items": [
+            {
+              "name": "MR. BEEF",
+              "info": "Resistant Mindz",
+              "link": ""
+            },
+            {
+              "name": "SKOR.72 AKA SKOR ROCKSWELL",
+              "info": "Champion Sound, Erfurt",
+              "link": ""
+            },
+            {
+              "name": "SHAPE",
+              "info": "Chopy Wood, Jena",
+              "link": ""
+            },
+            {
+              "name": "DUKTUS",
+              "info": "Resistant Mindz",
+              "link": ""
+            },
+            {
+              "name": "DYZE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-03-09-finest-selection-meets-syntax",
+      "date": "2013-03-09",
+      "title": "FINEST SELECTION MEETS SYNTAX",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20130401015654id_/http://www.distillery.de:80/ex/dates/2013/03/09",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: finest selection",
+          "items": [
+            {
+              "name": "DOUGLAS GREED – LIVE",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "FEAT. NAGLER & KUSS",
+              "info": "Freude am Tanzen, Jena",
+              "link": ""
+            },
+            {
+              "name": "MAC-KEE",
+              "info": "Dirtydrivesounds, Sparte 13",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-03-15-livelrix-buchmesse-slam-2013",
+      "date": "2013-03-15",
+      "title": "LIVELRIX BUCHMESSE SLAM 2013",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20130401015806id_/http://www.distillery.de:80/ex/dates/2013/03/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: workgefechte zum buchmessenslam",
+          "items": [
+            {
+              "name": "DALIBOR",
+              "info": "Frankfurt",
+              "link": ""
+            },
+            {
+              "name": "MARKUS FREISE",
+              "info": "Bielefeld",
+              "link": ""
+            },
+            {
+              "name": "SOUND FRIEND CISCO",
+              "info": "Leipzig, Hannover",
+              "link": ""
+            },
+            {
+              "name": "SEBASTIAN LEHMANN",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "THERESA HAHL",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-03-16-mindcookies-meets-token",
+      "date": "2013-03-16",
+      "title": "MINDCOOKIES MEETS TOKEN",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20130401015707id_/http://www.distillery.de:80/ex/dates/2013/03/16",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: mindcookies",
+          "items": [
+            {
+              "name": "JAN BLOMQVIST",
+              "info": "Stil vor Talent, Dantze, Hive-Audio, Motor, Berlin",
+              "link": ""
+            },
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "mindcookies, Distillery",
+              "link": ""
+            },
+            {
+              "name": "DILIVIUS LENNI",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: token",
+          "items": [
+            {
+              "name": "CTRLS",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-03-22-schema-f-the-yellow-rebel",
+      "date": "2013-03-22",
+      "title": "SCHEMA F - THE YELLOW REBEL",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20130401015812id_/http://www.distillery.de:80/ex/dates/2013/03/22",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: experimental abstract synth noise wave pop",
+          "items": [
+            {
+              "name": "FELIX KUBIN",
+              "info": "gagarin Records, Planet Rock, Hamburg",
+              "link": ""
+            },
+            {
+              "name": "ON+BRR",
+              "info": "Gagarin records, Apolkalypso, Hamburg]",
+              "link": ""
+            },
+            {
+              "name": "EINE MILLION",
+              "info": "exLEpaeng, fakeslepaengknabe, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "STUMMFILMVERTONUNG -",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "DJ D'DREAD",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-03-23-dreikommanull-meets-where-the-buffalo-roam",
+      "date": "2013-03-23",
+      "title": "DREIKOMMANULL MEETS WHERE THE BUFFALO ROAM",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20130401015713id_/http://www.distillery.de:80/ex/dates/2013/03/23",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: dreikommanull",
+          "items": [
+            {
+              "name": "DAPAYK",
+              "info": "Mo's Ferry, Stil for Talent, Berlin",
+              "link": ""
+            },
+            {
+              "name": "KLEINSCHMAGER AUDIO",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-03-29-zwischenwelten",
+      "date": "2013-03-29",
+      "title": "ZWISCHENWELTEN",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20130329203204id_/http://www.distillery.de:80/ex/dates/2013/03/29",
+      "imageUrl": "",
+      "description": "(...)",
+      "sections": [
+        {
+          "label": "up: lost moments floor",
+          "items": [
+            {
+              "name": "AODIOIBOA",
+              "info": "littlebigsensations.com",
+              "link": ""
+            },
+            {
+              "name": "MONGOOSE",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "MEEHAL",
+              "info": "Ovnimoon Records, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "JONATHOM",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "GAIA",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-03-30-15-years-tekknoplanet",
+      "date": "2013-03-30",
+      "title": "15 YEARS TEKKNOPLANET",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20130330004447id_/http://www.distillery.de:80/ex/dates/2013/03/30",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: 15 years tekknoplanet - die erste",
+          "items": [
+            {
+              "name": "GENE FARRIS",
+              "info": "Farris Wheel Recordings, Chicago",
+              "link": ""
+            },
+            {
+              "name": "EXIC",
+              "info": "Soton, Coburg",
+              "link": ""
+            },
+            {
+              "name": "MARKUS MASUHR",
+              "info": "Superbrecordings, Pragmat, Insectorama, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "RENé OTTO",
+              "info": "Mitamine Lab, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: 15 years tekknoplanet - die zweite",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-03-31-keinemusik",
+      "date": "2013-03-31",
+      "title": "KEINEMUSIK",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20130323052754id_/http://distillery.de:80/ex/dates/2013/03/31",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: keinemusik",
+          "items": [
+            {
+              "name": "ADAM PORT",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "&ME",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "RAMPA",
+              "info": "Souvenir",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

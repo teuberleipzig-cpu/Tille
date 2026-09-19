@@ -1,0 +1,495 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2017-11-03-livelyrix-poetry-slam",
+      "date": "2017-11-03",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20171019160723id_/http://www.distillery.de:80/ex/dates/2017/11/03",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: MODERATION:",
+          "items": [
+            {
+              "name": "LETICIA WAHL",
+              "info": "Marburg",
+              "link": ""
+            },
+            {
+              "name": "AIDIN HALIMI",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "MERAL ZIEGLER",
+              "info": "Wien",
+              "link": ""
+            },
+            {
+              "name": "FRIEDRICH HERRMANN",
+              "info": "Jena",
+              "link": ""
+            },
+            {
+              "name": "U.V.M.",
+              "info": "und wie immer viele mehr",
+              "link": ""
+            },
+            {
+              "name": "LEONIE WARNKE",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-11-04-ability-to-fuse",
+      "date": "2017-11-04",
+      "title": "ABILITY TO FUSE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20171019160728id_/http://www.distillery.de:80/ex/dates/2017/11/04",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ÂME – LIVE",
+              "info": "Innervisions, Germany",
+              "link": ""
+            },
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "mindcookies, Distillery",
+              "link": ""
+            },
+            {
+              "name": "MAURO CARACHO",
+              "info": "Distillery, Fäncy, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "MARCEL FENGLER",
+              "info": "IMF, Mote Evolver",
+              "link": ""
+            },
+            {
+              "name": "VINCENT NEUMANN",
+              "info": "Distillery, Unitas Multiplex, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-11-10-salute-the-veterans",
+      "date": "2017-11-10",
+      "title": "SALUTE THE VETERANS!",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20171019160733id_/http://www.distillery.de:80/ex/dates/2017/11/10",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: d&b, halfstep, jungle HOSTED BY:",
+          "items": [
+            {
+              "name": "ULAN BATOR CREW",
+              "info": "All Headz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LXC",
+              "info": "Alphacut, 45Seven, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MC MYSTIC DAN",
+              "info": "I-Spect Sound, Braunschweig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: bass, dub, dubstep",
+          "items": [
+            {
+              "name": "E.O.T.F",
+              "info": "Live Showcase, D.I.S & Jah Kuriooki, Chemnitz",
+              "link": ""
+            },
+            {
+              "name": "MALCOLM",
+              "info": "Downtownlyrics",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-11-11-indelible-impression",
+      "date": "2017-11-11",
+      "title": "INDELIBLE IMPRESSION",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20171019160739id_/http://www.distillery.de:80/ex/dates/2017/11/11",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "FABIO FLORIDO",
+              "info": "M_NUS, SCI+TEC, Berlin",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LENNY BROOKSTER",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "LUIS FLORES – LIVE",
+              "info": "CLR, Droid, Blank Code",
+              "link": ""
+            },
+            {
+              "name": "JANICE – LIVE",
+              "info": "JANICE",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-11-17-dirty-foxy-unicorn-7-uncut",
+      "date": "2017-11-17",
+      "title": "DIRTY FOXY UNICORN #7 - UNCUT",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20171019160817id_/http://www.distillery.de:80/ex/dates/2017/11/17",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: retro, disc, pop HOSTED BY:",
+          "items": [
+            {
+              "name": "JACKY-OH WEINHAUS",
+              "info": "SchwuZ, Cosy Copenhagen, Pag Tel Aviv",
+              "link": ""
+            },
+            {
+              "name": "GITTI REINHARDT",
+              "info": "SchwuZ Berlin, KKBB Leipzig",
+              "link": ""
+            },
+            {
+              "name": "XBRAYNE",
+              "info": "DFU Leipzig, Absolut.ely Chemnitz",
+              "link": ""
+            },
+            {
+              "name": "DEVIOUS DRAG MAIDS",
+              "info": "Carmen Camouflage, Holly Lehane, Marcus Herbst alias Natashá Plastiqué",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: techno",
+          "items": [
+            {
+              "name": "JANEF",
+              "info": "Artvolk",
+              "link": ""
+            },
+            {
+              "name": "FOX",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-11-18-regular-fixture",
+      "date": "2017-11-18",
+      "title": "REGULAR FIXTURE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20171019160744id_/http://www.distillery.de:80/ex/dates/2017/11/18",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MATHIAS KADEN",
+              "info": "Paracou",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "THOMAS STIELER",
+              "info": "Distillery, Paracou",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "GARY BECK",
+              "info": "Bek Audio, Soma, UK",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-11-21-pushing-conceptual-frontiers",
+      "date": "2017-11-21",
+      "title": "PUSHING CONCEPTUAL FRONTIERS",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20171219144438id_/http://www.distillery.de:80/ex/dates/2017/11/21",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "RICHIE HAWTIN",
+              "info": "M-nus, PLAYdifferently",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "VINCENT NEUMANN",
+              "info": "Distillery, Unitas Multiplex, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "DILIVIUS LENNI",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-11-21-tuesday-rave",
+      "date": "2017-11-21",
+      "title": "TUESDAY RAVE",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20171019160750id_/http://www.distillery.de:80/ex/dates/2017/11/21",
+      "imageUrl": "",
+      "description": "Start: 22:00",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MORE INFOS COMING SOON...",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "SIGN UP!",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "KALENDER-DOWNLOAD",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "DISTILLERY",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-11-24-5-years-of-through-my-speakers",
+      "date": "2017-11-24",
+      "title": "5 YEARS OF THROUGH MY SPEAKERS",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20171019160803id_/http://www.distillery.de:80/ex/dates/2017/11/24",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "JON1ST",
+              "info": "DMC World Champion, 20/20, UK",
+              "link": ""
+            },
+            {
+              "name": "THROUGH MY SPEAKERS CREW",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "BRKN1",
+              "info": "Dub Logic, Leipzig, Start: 23:00, add to Cal, Was als geheime Facebook-Gruppe begann, ist heute eins der Genre übergreifendsten Kollektive der Republik:, Through My Speakers, ist der Name, der synonym für International music, international subculture, one love“ steht. Ob mit eigenen Partys, als DJs oder Label, für die TMS-Crew sind musikalische Vielfalt und gute Vibes keine leeren Hashtags, sondern gelebtes Credo. Das haben sie auch in der Distillery schon des Öfteren unter Beweis gestellt. Umso größer ist die Freude, dass sie anlässlich ihres fünften Geburtstags hierher zurückkehren – mit frisch releaster Compilation im Gepäck und einem besonderen Gast., Jon1st, ist in allen Aspekten des Auflegens Klassenbester. Nicht nur vereint seine Selection ein breites musikalisches Spektrum, als DMC World Champion ist er auch technisch an den Turntables fit as fuck. Kein Wunder also, dass er neben seinen eigenen monatlichen Podcasts für Fly High Radio, auch schon Sendungen für Ninja Tunes Solid Steel“, Kutmahs Sketchbook Radio“ und Foreign Beggars Par Excellence Radio Show“ beigesteuert hat. Auch Ivy Lab, DIE momentane Supergroup in Sachen Drum and Bass und Halftime, haben nicht lang gefackelt und Jon1st zum Resident ihrer 20/20 Clubnacht in London erkoren. Und apropos Supergroup: In einer solchen mischt er als Producer auch noch mit. Gemeinsam mit Will LV (Brownswood/Hyperdub/Keysound) und EAN (Cosmic Bridge/Med School) schraubt er unter dem Namen GOALS an neuen Beats – wenn er das nicht grad schon solo tut.",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-11-25-we-need-to-talk",
+      "date": "2017-11-25",
+      "title": "WE NEED TO TALK",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20171019160825id_/http://www.distillery.de:80/ex/dates/2017/11/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ROBAG WRUHME",
+              "info": "Pampa, Hart & Tief, Kompakt, Weimar Innenstadt",
+              "link": ""
+            },
+            {
+              "name": "RUKEY",
+              "info": "Distillery, esoulate, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SHURAY & WALLE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "HENNING BAER",
+              "info": "Grounded Theory",
+              "link": ""
+            },
+            {
+              "name": "K209",
+              "info": "Sonic Groove",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-11-30-something-to-be-done",
+      "date": "2017-11-30",
+      "title": "SOMETHING TO BE DONE",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20171123072934id_/http://www.distillery.de:80/ex/dates/2017/11/30",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: FILMPREMIERE:",
+          "items": [
+            {
+              "name": "SOMETHING TO BE DONE - THE STORY OF MASTERPLAN INC.",
+              "info": "Doku",
+              "link": ""
+            },
+            {
+              "name": "CAROOL",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DRUNKENSTEIN",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "PABLO GUNZALES",
+              "info": "Mad Again!, Leipzig), Start: 12:00, add to Cal, In knapp einer halben Stunde Spielzeit reisen wir heute durch die Jahrzehnte. Reiseleiter ist die Chicagoer Soul-Band, Master Plan Inc.",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

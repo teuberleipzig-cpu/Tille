@@ -1,0 +1,413 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2019-09-06-livelyrix-poetry-slam",
+      "date": "2019-09-06",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190920042630id_/http://www.distillery.de/ex/dates/2019/09/06",
+      "imageUrl": "",
+      "description": "FR. 06.09.19 Hyperion",
+      "sections": [
+        {
+          "label": "up: MODERATION: MUSIC BY:",
+          "items": [
+            {
+              "name": "INKE SOMMERLANG",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "STEFANIE MENSCHNER",
+              "info": "Chemnitz",
+              "link": ""
+            },
+            {
+              "name": "LENNART HAMANN",
+              "info": "Hamburg",
+              "link": ""
+            },
+            {
+              "name": "MARKUS BECHERER",
+              "info": "Kaiserslautern",
+              "link": ""
+            },
+            {
+              "name": "RAINER HOLL",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BLANKK DISC",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-09-07-saturday-rave",
+      "date": "2019-09-07",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190820235531id_/http://www.distillery.de/ex/dates/2019/09/07",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "INNELLEA",
+              "info": "Afterlife",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MAURO CARACHO",
+              "info": "Distillery, Fäncy, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "AMOTIK – LIVE",
+              "info": "47, Amotik, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DANIEL SAILER",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-09-12-local-players-tour-2019",
+      "date": "2019-09-12",
+      "title": "LOCAL PLAYERS TOUR 2019",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20190920042534id_/http://www.distillery.de/ex/dates/2019/09/12",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: + SUPPORTED BY FAT BEMME RESIDENTS:",
+          "items": [
+            {
+              "name": "HOLY MODEE",
+              "info": "COSMO GANG",
+              "link": ""
+            },
+            {
+              "name": "MORTEN",
+              "info": "IMMER.READY",
+              "link": ""
+            },
+            {
+              "name": "RRARI PAAPI",
+              "info": "COSMO GANG",
+              "link": ""
+            },
+            {
+              "name": "ROBO",
+              "info": "Gang100, Start: 19:00, add to Cal, Holy Modee & morten gehen auf local players Tour!, praesentiert von IMMER.READY, Cosmo Gang, 16BARS.DE & JUICE Magazin",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-09-13-release-konzert",
+      "date": "2019-09-13",
+      "title": "RELEASE KONZERT",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190920042345id_/http://www.distillery.de/ex/dates/2019/09/13",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: AFTERSHOW DJS:",
+          "items": [
+            {
+              "name": "5RAUMFENSTER",
+              "info": "Borna",
+              "link": ""
+            },
+            {
+              "name": "BEATMASTER-M-ALLSTARS",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "FELIXDELUXE",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "O'DENZ",
+              "info": "Leipzig, Start: 19:30, add to Cal, Endlich ist es soweit, wir bringen unsere erste EP! Dazu haben wir viele Freunde eingeladen gemeinsam mit uns zu feiern. Wir wollen einen Freiraum fuer musikalischen Genuss und kulturelle Entfaltung erschaffen., ══════ ★ VORVERKAUF★ ══════► https://www.eventim-light.com/de/a/5d38b0aceee5660001425265/e/5d38b63286378f0001f59030/",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-09-14-saturday-rave",
+      "date": "2019-09-14",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190820235252id_/http://www.distillery.de/ex/dates/2019/09/14",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "THE EXALTICS – LIVE",
+              "info": "SolarOneMusic, Clone, Bunker Records",
+              "link": ""
+            },
+            {
+              "name": "LENSON",
+              "info": "Paling Trax, Rotterdam",
+              "link": ""
+            },
+            {
+              "name": "LYDIA EISENBLäTTER",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "LOCKED GROOVE",
+              "info": "LGR, Hotflush",
+              "link": ""
+            },
+            {
+              "name": "VINCENT NEUMANN",
+              "info": "Distillery, Unitas Multiplex, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-09-20-tobassgo-4",
+      "date": "2019-09-20",
+      "title": "TOBASSGO #4",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190920042757id_/http://www.distillery.de/ex/dates/2019/09/20",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "BLVCK CROWZ",
+              "info": "Bass Entity, Diverge Records",
+              "link": ""
+            },
+            {
+              "name": "JUDOKAY DNB",
+              "info": "Bassschweig, Nightfightclub",
+              "link": ""
+            },
+            {
+              "name": "SHAWNE",
+              "info": "hearthis.at",
+              "link": ""
+            },
+            {
+              "name": "DJ FORCE",
+              "info": "Basstroopers, DopeAmmo WorldWide, UTM-Family, Chemnitz",
+              "link": ""
+            },
+            {
+              "name": "REFRESH",
+              "info": "Basstroopers, DopeAmmo World Wide",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "GRILLWALKER",
+              "info": "NoName - 23 - Subliminal Cultures, KlorFest",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-09-21-saturday-rave",
+      "date": "2019-09-21",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190820235656id_/http://www.distillery.de/ex/dates/2019/09/21",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MARCUS MEINHARDT",
+              "info": "Heinz Music, Katermukke, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DONNA KNISPEL",
+              "info": "No Show, Deep Dive",
+              "link": ""
+            },
+            {
+              "name": "MIKE VAN GOETZE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "BEROSHIMA",
+              "info": "Dystopian Rec, Müller Rec., Berlin",
+              "link": ""
+            },
+            {
+              "name": "MARAL SALMASSI",
+              "info": "Konsequent Records",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-09-27-high-friday",
+      "date": "2019-09-27",
+      "title": "HIGH FRIDAY",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190920042315id_/http://www.distillery.de/ex/dates/2019/09/27",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "NBNP SOUNDSYSTEM",
+              "info": "LOREZ & DJ SWRK, Munich",
+              "link": ""
+            },
+            {
+              "name": "DJ BEATZEPS",
+              "info": "High Power Station, Leipzig, Start: 23:00, add to Cal",
+              "link": ""
+            },
+            {
+              "name": "OPENING EVENT??????",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "NEW SEASON, NEW PARTY!",
+              "info": "When we smoke it up, ur heart beats & the vybz tun ova - ur right here atDistillery's intl. urban club night - it's HIGH FRIDAY!",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-09-28-saturday-rave",
+      "date": "2019-09-28",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190820235226id_/http://www.distillery.de/ex/dates/2019/09/28",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "CARL CRAIG",
+              "info": "Planet E",
+              "link": ""
+            },
+            {
+              "name": "!K7",
+              "info": "Detroit",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DYNAMITE KADINSKI",
+              "info": "Distillery, Fäncy, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "NINETTE",
+              "info": "Distillery, LÄRM",
+              "link": ""
+            },
+            {
+              "name": "STEPHAN VON WOLFFERSDORFF",
+              "info": "Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

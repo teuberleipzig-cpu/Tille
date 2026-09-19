@@ -1,0 +1,270 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2011-09-03-syntax-meets-feenstaub",
+      "date": "2011-09-03",
+      "title": "SYNTAX MEETS FEENSTAUB",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20131201092047id_/http://www.distillery.de:80/ex/dates/2011/09/03",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: syntax",
+          "items": [
+            {
+              "name": "JEFF MILLS",
+              "info": "Axis Records, Detroit",
+              "link": ""
+            },
+            {
+              "name": "REKORDER",
+              "info": "Blackred, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "STEVE K",
+              "info": "Distillery, Syntax, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: feenstaub",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-09-10-hoerfunk-meets-ein-klang",
+      "date": "2011-09-10",
+      "title": "HOERFUNK MEETS EIN KLANG",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190721155442id_/http://www.distillery.de/ex/dates/2011/09/10",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: hoerfunk",
+          "items": [
+            {
+              "name": "RE.YOU",
+              "info": "Souvenir Music, Berlin",
+              "link": ""
+            },
+            {
+              "name": "CAMEA",
+              "info": "Clink Recordings, Berlin",
+              "link": ""
+            },
+            {
+              "name": "MARKUS WELBY",
+              "info": "hoerfunk, Distillery, Melt!-Festival, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: ein klang",
+          "items": [
+            {
+              "name": "DEREK PLASLAIKO",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-09-16-bass-plus-gets-mad-again",
+      "date": "2011-09-16",
+      "title": "BASS PLUS! GETS MAD AGAIN!",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20160502213042id_/http://www.distillery.de/ex/dates/2011/09/16",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: bass plus",
+          "items": [
+            {
+              "name": "SKITTLES",
+              "info": "Manchester, Uk",
+              "link": ""
+            },
+            {
+              "name": "SENCHA",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "PEAK PHINE",
+              "info": "Distillery, Bass Plus, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DERRICK",
+              "info": "Ulan Bator",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-09-17-dreikommanull-meets-where-the-buffalo-roam",
+      "date": "2011-09-17",
+      "title": "DREIKOMMANULL MEETS WHERE THE BUFFALO ROAM",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20160429035305id_/http://www.distillery.de/ex/dates/2011/09/17",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: dreikommanull",
+          "items": [
+            {
+              "name": "JICHAEL MACKSON",
+              "info": "Liebe*Detail, Compost, Hartchef Discos, Pastamusik, München",
+              "link": ""
+            },
+            {
+              "name": "KLEINSCHMAGER AUDIO",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-09-23-analog-sucht-digital",
+      "date": "2011-09-23",
+      "title": "ANALOG SUCHT DIGITAL",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20160430131903id_/http://www.distillery.de/ex/dates/2011/09/23",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: anaLog sucht digiTal",
+          "items": [
+            {
+              "name": "PRAEZISA RAPID 3000",
+              "info": "Leipzig/Hamburg",
+              "link": ""
+            },
+            {
+              "name": "KLINKE AUF CINCH",
+              "info": "Analogsoul, Erfurt/Jena",
+              "link": ""
+            },
+            {
+              "name": "ME AND OCEANS",
+              "info": "Analogsoul, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "RUKEY",
+              "info": "Distillery, esoulate, Leipzig, visual:",
+              "link": ""
+            },
+            {
+              "name": "DOELE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-09-24-finest-selection-meets-definition",
+      "date": "2011-09-24",
+      "title": "FINEST SELECTION MEETS DEFINITION",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20111110104818id_/http://distillery.de/ex/dates/2011/09/24",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: finest selection",
+          "items": [
+            {
+              "name": "JUNO6",
+              "info": "Oh!Yeah!, Freude am Tanzen, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2011-09-30-10-years-hotta-fire-german-dancehallqueen-contest",
+      "date": "2011-09-30",
+      "title": "10 YEARS HOTTA FIRE & GERMAN DANCEHALLQUEEN CONTEST",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190715230957id_/http://www.distillery.de/ex/dates/2011/09/30",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: 10 years hotta fire & german dancehallqueen contest HOSTED BY:",
+          "items": [
+            {
+              "name": "DANCEHALLQUEEN CONTEST/ VORENTSCHEID OST 2011",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "POW POW MOVEMENT",
+              "info": "Pow Pow Productions, Köln",
+              "link": ""
+            },
+            {
+              "name": "KID GRINGO",
+              "info": "Kugelblitz, Kampala / L",
+              "link": ""
+            },
+            {
+              "name": "MASTAH K",
+              "info": "Hotta Fire, Sonic Bang",
+              "link": ""
+            },
+            {
+              "name": "DJ SENSAY",
+              "info": "Rockstone Sound, ISwagga",
+              "link": ""
+            },
+            {
+              "name": "RANKING SMO",
+              "info": "HE, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

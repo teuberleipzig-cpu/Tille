@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2013-11-01-livelyrix-champions-slam-schluss-aus-ende",
+      "date": "2013-11-01",
+      "title": "LIVELYRIX CHAMPIONS-SLAM & SCHLUSS, AUS, ENDE",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20160430155942id_/http://www.distillery.de/ex/dates/2013/11/01",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: stürmische verbalattacken",
+          "items": [
+            {
+              "name": "VOLKER STRüBING",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "JULE WEBER",
+              "info": "Heppenheim",
+              "link": ""
+            },
+            {
+              "name": "MARVIN RUPPERT",
+              "info": "Marburg",
+              "link": ""
+            },
+            {
+              "name": "LASSE SAMSTROEM",
+              "info": "Bonn",
+              "link": ""
+            },
+            {
+              "name": "U.V.M.",
+              "info": "und wie immer viele mehr",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-11-14-pupkulies-rebecca-tibau-album-release",
+      "date": "2013-11-14",
+      "title": "PUPKULIES & REBECCA - TIBAU ALBUM RELEASE",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20131114010619id_/http://www.distillery.de:80/ex/dates/2013/11/14",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: tibau album release",
+          "items": [
+            {
+              "name": "PUPKULIES & REBECCA",
+              "info": "Normoton, Rotary Cocktail, Acker Rec., Wolf + Lamb, Dessous",
+              "link": ""
+            },
+            {
+              "name": "+ GUESTS",
+              "info": "Start: 20:00, add to Cal, zum, Vorverkauf, Pulsierende Pophymnen mit Einflüssen afrikanischer Musik gekleidet in den Rhythmus von House Grooves – das entsteht, wenn, Pupkulies & Rebecca, auf Tibau treffen. Die elektronische Klangästhetik zwischen Chanson, House und Pop von Pupkulies & Rebecca, die vielleicht der ein oder andere von der Fusion oder anderen Gigs kennt, vereinigt sich in diesem Moment mit den afrikanischen Kompositionen des aus Cabo Verde stammenden Musikers Tibau Tavares. Pupkulies & Rebecca, das dreiköpfige Musikerkollektiv, bestehend aus Janosch und Rebecca Blaul sowie Sepp Singwald zeigt mit dieser Kollaboration, dass musikalische Welten bestens mit- und ineinander harmonieren, Grenzen mühelos verschwinden und am Ende nur eins bleibt: zauberhafte Musik., http://www.pupkulies-rebecca.de, https://www.facebook.com/Pupkulies.Rebecca",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-11-29-the-last-ones-bus-it",
+      "date": "2013-11-29",
+      "title": "THE LAST ONES BUS IT",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20221007123329id_/https://www.distillery.de/ex/dates/2013/11/29",
+      "imageUrl": "",
+      "description": "AB 21:00 VIDEOGRASS MOVIE\nAB 23:00 UHR: GREMLINZ MOVIE",
+      "sections": [
+        {
+          "label": "up: hip hop, crunk, dirty south & movies",
+          "items": [
+            {
+              "name": "666 OPS",
+              "info": "Grandmaster Zett & SAZ",
+              "link": ""
+            },
+            {
+              "name": "+ GUESTS",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "special: AB 21: AB 23:00 UHR:",
+          "items": [
+            {
+              "name": "00 VIDEOGRASS MOVIE",
+              "info": "Snowboard Video",
+              "link": ""
+            },
+            {
+              "name": "GREMLINZ MOVIE",
+              "info": "Snowboard & Skate Movie, Start: 21:00, add to Cal, Auch in diesem Jahr macht die, Videograss World Tour, wieder einen Stop an der deutschen Ostküste. Wie im letzten Jahr findet das Screening in Leipzig zusammen mit dem aktuellen Film der Gremlinz Crew statt. Beide Movies zeigen das zur Zeit Beste, was im Snowboarden und Skateboarden abgeht: Spots aus der ganzen Welt und jede Menge krasse Action! Anschließend gibt es eine fette After Show Party mit der",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

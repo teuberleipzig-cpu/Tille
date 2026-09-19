@@ -1,0 +1,203 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2009-07-10-squeeze-box",
+      "date": "2009-07-10",
+      "title": "SQUEEZE BOX",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20090705003632id_/http://www.distillery.de:80/ex/dates/2009/07/10",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: gays, lesbians, trannys - this is rock'n'roll",
+          "items": [
+            {
+              "name": "SQUEEZEBOX – LIVE",
+              "info": "Gloria Viagra, Sherry Vine & Band",
+              "link": ""
+            },
+            {
+              "name": "DJANE CLAIRE",
+              "info": "M.T.S.B., Conne Island, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "PETER INVASION",
+              "info": "Riotvan, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-07-11-finest-selection-meets-syntax",
+      "date": "2009-07-11",
+      "title": "FINEST SELECTION MEETS SYNTAX",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20090519192712id_/http://www.distillery.de:80/ex/dates/2009/07/11",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: finest selection",
+          "items": [
+            {
+              "name": "SASCHA FUNKE",
+              "info": "BPitch Control, Berlin",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-07-17-kurt-reith-abend",
+      "date": "2009-07-17",
+      "title": "KURT REITH ABEND",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20090705034929id_/http://www.distillery.de:80/ex/dates/2009/07/17",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: all styles in the mix",
+          "items": [
+            {
+              "name": "SLOWHAND E",
+              "info": "Stars for Soul, Rhythm Club",
+              "link": ""
+            },
+            {
+              "name": "DJ GRAPE",
+              "info": "Conne Island, Leipzig-Connewitz",
+              "link": ""
+            },
+            {
+              "name": "DJ YORK",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-07-18-feenstaub-friends-meets-where-the-buffalo-roam",
+      "date": "2009-07-18",
+      "title": "FEENSTAUB & FRIENDS MEETS WHERE THE BUFFALO ROAM",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20090518142004id_/http://www.distillery.de:80/ex/dates/2009/07/18",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: feenstaub & friends",
+          "items": [
+            {
+              "name": "DJ BAKKE",
+              "info": "Spiraltrax, Stockholm",
+              "link": ""
+            },
+            {
+              "name": "FEENSTAUB",
+              "info": "Nu:Trance, Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: where the buffalo roam",
+          "items": [
+            {
+              "name": "BOULDERDASH - LIVE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-07-24-hotta-fire-reggaestation",
+      "date": "2009-07-24",
+      "title": "HOTTA FIRE REGGAESTATION",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20090705034946id_/http://www.distillery.de:80/ex/dates/2009/07/24",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: hot hot summer",
+          "items": [
+            {
+              "name": "WHITE BREAD SOUND",
+              "info": "Dresden",
+              "link": ""
+            },
+            {
+              "name": "RANKING SMO",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "KID GRINGO",
+              "info": "Rotzlöffel, Pinga Mafia",
+              "link": ""
+            },
+            {
+              "name": "J.R.",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-07-25-the-last-dance",
+      "date": "2009-07-25",
+      "title": "THE LAST DANCE!",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20090519192735id_/http://www.distillery.de:80/ex/dates/2009/07/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: olé olé!",
+          "items": [
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}
