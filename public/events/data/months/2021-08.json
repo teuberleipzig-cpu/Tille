@@ -1,0 +1,351 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2021-08-04-i-love-gardening",
+      "date": "2021-08-04",
+      "title": "I LOVE GARDENING",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20210920135636id_/https://www.distillery.de/ex/dates/2021/08/04",
+      "imageUrl": "",
+      "description": "Start: 18:00",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "HOUDAFK",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "JUSTAMICRODOSE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-08-05-ptk-trifft-tatortreiniger-thomas-kundt",
+      "date": "2021-08-05",
+      "title": "PTK TRIFFT TATORTREINIGER - THOMAS KUNDT",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20210920151751id_/https://www.distillery.de/ex/dates/2021/08/05",
+      "imageUrl": "",
+      "description": "Start: 18:00\nZwei Menschen, zwei Lebensrealitäten. Künstler*in XY trifft auf einen anderen Berufsstand.Bei allen Unterschieden, welche dabei zu Tage treten, heißt es dennoch Gemeinsamkeiten zu finden, die nachdem sich beide dem jeweils anderem ausführlich vorgestellt haben, es herauszukristallisieren gilt.Moderator, Edgar Einfühlsam lädt für sein neues YouTube-Format das erste Mal vor Livepuplikum in den Biergarten der Distillery Leipzig. In der ersten Ausgabe begrüßt er den Tatortreiniger und Desinfektor, Thomas Kundt.Seine Tatortreinigung bezieht sich nicht ausschließlich auf Delikte von Mordopfern. Er war in Sachsen auch viel in tristen Wohngegenden unterwegs, in denen der Tod einsamer Seelen oder von der Gesellschaft abgehängten Individuen erst sehr spät bemerkt wurde.Einige solcher Fälle wurden und werden in dieses soziale Milieu erst rein gentrifiziert. Genau unter anderem dieses Thema schreibt sich Gast Nr.2, der Kreuzberger Rapper PTK, auf seinen inhaltlichen Index. Wir schauen ob die Biographien beider Gäste im dargelegten sozialen Landschaftsbild Schnittmenge ergeben. Ein spannender Abend mit guter Unterhaltung ist garantiert.",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "THOMAS KUNDT",
+              "info": "Tatortreiniger",
+              "link": ""
+            },
+            {
+              "name": "PTK",
+              "info": "Kreuzberg & Gomorrha",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "SUPPORT:",
+          "items": [
+            {
+              "name": "CANA",
+              "info": "Beatmaker / Producer / DJ - Dresden",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-08-06-edizione-giardino-sintetico",
+      "date": "2021-08-06",
+      "title": "EDIZIONE GIARDINO SINTETICO",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20210920142615id_/https://www.distillery.de/ex/dates/2021/08/06",
+      "imageUrl": "",
+      "description": "Start: 18:00",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "RASCHELJACKE",
+              "info": "Wilde Sause",
+              "link": ""
+            },
+            {
+              "name": "I. MARCELLO",
+              "info": "Italo Fundamentalo",
+              "link": ""
+            },
+            {
+              "name": "MöBELNDER POP",
+              "info": "Italo Fundamentalo",
+              "link": ""
+            },
+            {
+              "name": "LUIGI ANDREA RAMAZOTTI",
+              "info": "Noobs on Decks",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-08-07-i-love-gardening-x-where-the-buffalo-roam",
+      "date": "2021-08-07",
+      "title": "I LOVE GARDENING X WHERE THE BUFFALO ROAM",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20210920133417id_/https://www.distillery.de/ex/dates/2021/08/07",
+      "imageUrl": "",
+      "description": "Start: 18:00",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "ALMA MARTER",
+              "info": "Rohling Records",
+              "link": ""
+            },
+            {
+              "name": "SUBTRAK",
+              "info": "Where the Buffalo Roam, Leipzig",
+              "link": ""
+            },
+            {
+              "name": ", Leipzig)",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "DANIEL SAILER",
+              "info": "Where the Buffalo Roam",
+              "link": ""
+            },
+            {
+              "name": "kompl3x",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": ", Leipzig)",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-08-11-i-love-gardening-x-afro-latin-what",
+      "date": "2021-08-11",
+      "title": "I LOVE GARDENING X AFRO LATIN WHAT?!",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20210920135101id_/https://www.distillery.de/ex/dates/2021/08/11",
+      "imageUrl": "",
+      "description": "Start: 18:00",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "SENCHA",
+              "info": "Afro Latin What?!",
+              "link": ""
+            },
+            {
+              "name": "STL_V",
+              "info": "Afro Latin What?! / Style Wild",
+              "link": ""
+            },
+            {
+              "name": "+ GUESTS",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-08-13-i-love-gardening",
+      "date": "2021-08-13",
+      "title": "I LOVE GARDENING",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20210920141954id_/https://www.distillery.de/ex/dates/2021/08/13",
+      "imageUrl": "",
+      "description": "Start: 18:00",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "RØDHÅD",
+              "info": "Dystopian",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-08-14-i-love-gardening-x-another-banger",
+      "date": "2021-08-14",
+      "title": "I LOVE GARDENING X ANOTHER. BANGER.",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20210920132857id_/https://www.distillery.de/ex/dates/2021/08/14",
+      "imageUrl": "",
+      "description": "Start: 18:00",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "KID GRINGO",
+              "info": "Kugelblitz, Kampala / L",
+              "link": ""
+            },
+            {
+              "name": "DJ HOTFINGER",
+              "info": "Bubbly & Wine",
+              "link": ""
+            },
+            {
+              "name": "DJ BEATZEPS",
+              "info": "High Power Station, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LIFTED ERIK",
+              "info": "Phonatics Hifi, Chemnitz",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-08-15-nakt",
+      "date": "2021-08-15",
+      "title": "NAKT",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20210920145011id_/https://www.distillery.de/ex/dates/2021/08/15",
+      "imageUrl": "",
+      "description": "Start: 14:00",
+      "sections": []
+    },
+    {
+      "id": "2021-08-20-i-love-gardening-x-boundless-beatz",
+      "date": "2021-08-20",
+      "title": "I LOVE GARDENING X BOUNDLESS BEATZ",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20210820095910id_/https://www.distillery.de/ex/dates/2021/08/20",
+      "imageUrl": "",
+      "description": "Start: 18:00",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "AUDITE",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DUBBALOT",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "KOBEE",
+              "info": "BASS UP?, Jena",
+              "link": ""
+            },
+            {
+              "name": "TKR",
+              "info": "BASS UP?, Jena",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-08-21-i-love-gardening-x-rab8ithole",
+      "date": "2021-08-21",
+      "title": "I LOVE GARDENING X RAB8ITHOLE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20210920132143id_/https://www.distillery.de/ex/dates/2021/08/21",
+      "imageUrl": "",
+      "description": "Start: 18:00",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "CHRISTOPH BRZENCZEK",
+              "info": "Rab8itHoLE",
+              "link": ""
+            },
+            {
+              "name": "MICHAEL BORN",
+              "info": "Rab8itHoLE, exLEpäng!",
+              "link": ""
+            },
+            {
+              "name": "RüDIGGER",
+              "info": "Rab8itHoLE",
+              "link": ""
+            },
+            {
+              "name": "W.A.N.T.",
+              "info": "Rab8itHoLE",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-08-24-i-love-gardening-x-anemonen",
+      "date": "2021-08-24",
+      "title": "I LOVE GARDENING X ANEMONEN",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20210920150739id_/https://www.distillery.de/ex/dates/2021/08/24",
+      "imageUrl": "",
+      "description": "Start: 18:00\nanemonen ist eine Leipziger Formatserie, die die Schnittstelle von Bildender Kunst und zeitgenössischer Literatur inszeniert. Angelegt als serielles Format, findet anemonen an wechselnden Orten in Leipzig statt. Die Architektur und Beschaffenheit einer Location dient dabei als Inspirationsquelle für die Kuration von Text und Kunst.",
+      "sections": [
+        {
+          "label": "outdoor: MIT TEXTEN VON:",
+          "items": [
+            {
+              "name": "DJ-SET VON ANTR",
+              "info": "G-Edit",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

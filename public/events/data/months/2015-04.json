@@ -1,0 +1,440 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2015-04-03-livelyrix-poetry-slam",
+      "date": "2015-04-03",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20150406020050id_/http://www.distillery.de:80/ex/dates/2015/04/03",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: wilde wordgefechte",
+          "items": [
+            {
+              "name": "MORITZ NEUMEIER",
+              "info": "Hamburg",
+              "link": ""
+            },
+            {
+              "name": "ALEX BURKHARD",
+              "info": "München",
+              "link": ""
+            },
+            {
+              "name": "JAN SCHMIDT",
+              "info": "Wuppertal",
+              "link": ""
+            },
+            {
+              "name": "MAX GEBHARD",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "HAZEL BRUGGER",
+              "info": "Zürich",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-04-04-ten-years-luna-city-express",
+      "date": "2015-04-04",
+      "title": "TEN YEARS - LUNA CITY EXPRESS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20150502150548id_/http://distillery.de:80/ex/dates/2015/04/04",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: all night long",
+          "items": [
+            {
+              "name": "LUNA CITY EXPRESS – AKA",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "MARCO RESMANN",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "& NORMAN WEBER",
+              "info": "Moon Harbour, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DAN DRASTIC",
+              "info": "Moon Harbour, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: lbbd",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-04-05-tanz-mich-an",
+      "date": "2015-04-05",
+      "title": "TANZ MICH AN",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20150502150552id_/http://distillery.de:80/ex/dates/2015/04/05",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "NICO STOJAN",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "URSL",
+              "info": "KaterMukke, Dantze, Berlin",
+              "link": ""
+            },
+            {
+              "name": "MADMOTORMIQUEL",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "URSL",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "DAVID DORAD",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "URSL",
+              "info": "KaterMukke",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-04-10-bridge-the-gap",
+      "date": "2015-04-10",
+      "title": "BRIDGE THE GAP",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20150502150557id_/http://distillery.de:80/ex/dates/2015/04/10",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: drum & bass, footwork, slowfast",
+          "items": [
+            {
+              "name": "SAM BINGA",
+              "info": "Critical, Exit, Bristol",
+              "link": ""
+            },
+            {
+              "name": "SHAPE",
+              "info": "Chopy Wood, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DUBBALOT",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MALCOLM",
+              "info": "Downtownlyrics, Radio Blau, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-04-11-needs-must",
+      "date": "2015-04-11",
+      "title": "NEEDS MUST",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20150531182634id_/http://www.distillery.de/ex/dates/2015/04/11",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DANA RUH",
+              "info": "Brouqade, Underground Quality, Cocoon, Work Them",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ROBERT WILLI",
+              "info": "Räucherkammer",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "JOEL MULL",
+              "info": "Drumcode, Parabel Music, Inside Records, Truesoul, Stockholm",
+              "link": ""
+            },
+            {
+              "name": "EZRA",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-04-17-10-jahre-bass-plus-3-jahre-submission",
+      "date": "2015-04-17",
+      "title": "10 JAHRE BASS PLUS & 3 JAHRE SUBMISSION",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20150502150602id_/http://distillery.de:80/ex/dates/2015/04/17",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "HATCHA",
+              "info": "Big Apple Records, London",
+              "link": ""
+            },
+            {
+              "name": "SENCHA B2B PEAK PHINE",
+              "info": "Bass Plus, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "PROXIMA",
+              "info": "Tempa, Eindhoven/London",
+              "link": ""
+            },
+            {
+              "name": "CUN B2B HISTEPPA",
+              "info": "Bassment Rockaz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "TEARZTAR B2B ASM",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-04-18-kaawee-16",
+      "date": "2015-04-18",
+      "title": "KAAWEE 16",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20150531182756id_/http://www.distillery.de/ex/dates/2015/04/18",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DAVE AJU",
+              "info": "Circus Company, US",
+              "link": ""
+            },
+            {
+              "name": "DAN DRASTIC",
+              "info": "Moon Harbour, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "mindcookies, Distillery",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-04-23-landi-in-the-house",
+      "date": "2015-04-23",
+      "title": "LANDI IN THE HOUSE",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20150424035236id_/http://www.distillery.de:80/ex/dates/2015/04/23",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "LANDGRAF",
+              "info": "Cäsar Music, Leipzig, Start: 20:00, add to Cal, Landgraf – das ist die Band des Leipziger Sängers, Gitarristen und Songwriters Enrico Landgraf. Das musikalische Fundament bilden die langjährigen Bandmitglieder Torsten Wolf (Art of Voices) am Schlagzeug, Felix Richter (Substanz) am Bass und der britische Gitarrist Michael Hull (Godflesh, The Mission). Unterstützt wird das Ganze durch Alexander Krause an den Tasten und Kristina Schmidt im Background. Zusammen bringen sie ein Potpourri aus starkem Sound, klassischen Rock-Arrangements und gefühlvollen aber auch druckvollen Songs auf die Bühne. Einflüsse US-amerikanischer Bands wie Counting Crows oder den Foo Fighters tauchen in ihrer Musik auf – aber Landgraf ist keine Kopie. Das neue Album nimmt uns mit auf eine Reise durch die Geschichte der Musiker und viele viele Jahre Bühnenpräsenz. Viele Richtungen, etliche Wege aber stets einen roten Faden vor Augen – Landgrafs Musik lebt., www.landgraf-band.de",
+              "link": ""
+            },
+            {
+              "name": "FENSTER ZUM HOF",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-04-24-caribbean-nice-up-crewlove-edition",
+      "date": "2015-04-24",
+      "title": "CARIBBEAN NICE UP - CREWLOVE EDITION",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20150501184342id_/http://distillery.de:80/ex/dates/2015/04/24",
+      "imageUrl": "",
+      "description": "AB 19:00 UHR: TANZWORKSHOP MIT WATCH MI STEP DANCE SCHOOL",
+      "sections": [
+        {
+          "label": "up: AB 19:00 UHR:",
+          "items": [
+            {
+              "name": "TANZWORKSHOP MIT WATCH MI STEP DANCE SCHOOL",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "DELAM INTL",
+              "info": "London, Madrid, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "HIGH POWER STATION",
+              "info": "Görlitz, Leipzig, Berlin, Start: 19:00, add to Cal, Das Wetter wird besser, die Tage länger, der Sommer rückt näher – aber damit auch die Sommerpause. Ganz unter dem Motto Crewlove is true love wird sich die, Caribbean Nice Up, Massive heute Abend in ihren wohlverdienten Sommer verabschieden, allerdings nicht ohne vorher noch einmal mit euch die Distillery auf Heftigste auseinanderzunehmen. Los gehts bereits um 19 Uhr mit der",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-04-25-si-sa-super-fli-fla-flu",
+      "date": "2015-04-25",
+      "title": "SI SA SUPER, FLI FLA FLU",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20150531182640id_/http://www.distillery.de/ex/dates/2015/04/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SUPER FLU",
+              "info": "Monaberry, Sunset Handjob",
+              "link": ""
+            },
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "mindcookies, Distillery",
+              "link": ""
+            },
+            {
+              "name": "LENNY BROOKSTER",
+              "info": "Music Is Not Fashion, HomeSweetHome Session, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "SUBTRAK",
+              "info": "Where the Buffalo Roam, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-04-30-ostgut-ton",
+      "date": "2015-04-30",
+      "title": "OSTGUT TON",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20150502150607id_/http://distillery.de:80/ex/dates/2015/04/30",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "NICK HöPPNER",
+              "info": "Panorama Bar / Berghain, Berlin",
+              "link": ""
+            },
+            {
+              "name": "RYAN ELLIOTT",
+              "info": "Ghostly, Spectral Sound",
+              "link": ""
+            },
+            {
+              "name": "PETER INVASION",
+              "info": "Riotvan, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

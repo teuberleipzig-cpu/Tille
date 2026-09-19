@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2010-09-04-mindcookies-meets-definition",
+      "date": "2010-09-04",
+      "title": "MINDCOOKIES MEETS DEFINITION",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20100821202637id_/http://www.distillery.de:80/ex/dates/2010/09/04",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: mindcookies",
+          "items": [
+            {
+              "name": "LEMOS",
+              "info": "Resopal, Cecille, be_chosen, Griechenland",
+              "link": ""
+            },
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "mindcookies, Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: definition",
+          "items": [
+            {
+              "name": "CARSTEN SCHORR",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-09-11-dreikommanull-meets-syntax",
+      "date": "2010-09-11",
+      "title": "DREIKOMMANULL MEETS SYNTAX",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20100822032511id_/http://www.distillery.de:80/ex/dates/2010/09/11",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: dreikommanull",
+          "items": [
+            {
+              "name": "TAMA SUMO",
+              "info": "OstGut Ton, Panorama Bar / Berghain, Berlin",
+              "link": ""
+            },
+            {
+              "name": "KLEINSCHMAGER AUDIO",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MENTELL",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-09-18-hoerfunk-meets-feenstaub-friends",
+      "date": "2010-09-18",
+      "title": "HOERFUNK MEETS FEENSTAUB & FRIENDS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20100822032516id_/http://www.distillery.de:80/ex/dates/2010/09/18",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: hoerfunk",
+          "items": [
+            {
+              "name": "NINA KRAVIZ",
+              "info": "Rekids, Underground Quality, BPitch Control, Russia",
+              "link": ""
+            },
+            {
+              "name": "MARKUS WELBY",
+              "info": "hoerfunk, Distillery, Melt!-Festival, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-09-25-chitlin-circuit-meets-darkstar",
+      "date": "2010-09-25",
+      "title": "CHITLIN' CIRCUIT MEETS DARKSTAR",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20100822032545id_/http://www.distillery.de:80/ex/dates/2010/09/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: chitlin' circuit",
+          "items": [
+            {
+              "name": "AFFKT – LIVE",
+              "info": "Barraca Music, Rekids, Sincopat, 3rd Floor, Spanien",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

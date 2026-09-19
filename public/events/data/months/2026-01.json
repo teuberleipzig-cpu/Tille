@@ -1,0 +1,351 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "ra-2276548",
+      "date": "2026-01-03",
+      "title": "DON'T STOP with Chris Liebing",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2276548",
+      "imageUrl": "",
+      "description": "Start: 21:00\nEnde: 10:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Chris Liebing",
+              "info": "clr.net, FFM",
+              "link": ""
+            },
+            {
+              "name": "Medha",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "beccslyn",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Carotin",
+              "info": "Dresden",
+              "link": ""
+            },
+            {
+              "name": "DJ Ferrari (2)",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Melanchromie",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Andreas Eckhardt",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Thomas Heinrich",
+              "info": "Stolen Money, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2313801",
+      "date": "2026-01-09",
+      "title": "toBASSgo #14",
+      "color": "olive",
+      "moreUrl": "https://ra.co/events/2313801",
+      "imageUrl": "",
+      "description": "Start: 22:00\nEnde: 06:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Wintermute",
+              "info": "Blackout / Boundless Beatz",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2324452",
+      "date": "2026-01-10",
+      "title": "SATURDAY RAVE with Chris Schwarzwälder, slin & Stojche",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2324452",
+      "imageUrl": "",
+      "description": "Start: 21:00\nEnde: 10:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Chris Schwarzwälder",
+              "info": "Katermukke, Laut & Luise, Heinz Music, URSL",
+              "link": ""
+            },
+            {
+              "name": "Elli Altenberger",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Kikimike",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "slin",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Stojche",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2334650",
+      "date": "2026-01-11",
+      "title": "Rillendisco",
+      "color": "yellow",
+      "moreUrl": "https://ra.co/events/2334650",
+      "imageUrl": "",
+      "description": "Start: 14:00\nEnde: 22:00",
+      "sections": []
+    },
+    {
+      "id": "ra-2324464",
+      "date": "2026-01-17",
+      "title": "SATURDAY RAVE with Amotik & Cinthie",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2324464",
+      "imageUrl": "",
+      "description": "Start: 21:00\nEnde: 10:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Carina Posse",
+              "info": "Muna, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Cinthie",
+              "info": "Beste Modus, Watergate, Berlin",
+              "link": ""
+            },
+            {
+              "name": "Ron Deacon",
+              "info": "Distillery",
+              "link": ""
+            },
+            {
+              "name": "Amotik",
+              "info": "47, Amotik, Berlin",
+              "link": ""
+            },
+            {
+              "name": "Marsch",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Medha",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2340572",
+      "date": "2026-01-23",
+      "title": "Rinse & Fridayclub pres. Neffa-T",
+      "color": "olive",
+      "moreUrl": "https://ra.co/events/2340572",
+      "imageUrl": "",
+      "description": "Start: 22:00\nEnde: 07:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Neffa-T",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "kaep",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2324472",
+      "date": "2026-01-24",
+      "title": "KRTM live & Mira",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2324472",
+      "imageUrl": "",
+      "description": "Start: 21:00\nEnde: 10:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Franz!",
+              "info": "Kalif Storch, Muna Musik, Paracou",
+              "link": ""
+            },
+            {
+              "name": "Mhan Solo",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Mira",
+              "info": "Kater Blau, URSL, Berlin",
+              "link": ""
+            },
+            {
+              "name": "BIGALKE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "KRTM",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Ninette",
+              "info": "Distillery, LÄRM",
+              "link": ""
+            },
+            {
+              "name": "SubkoØne",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Hardenberg",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2349538",
+      "date": "2026-01-30",
+      "title": "Wurzelfestival on Tour - a tribute to Danny",
+      "color": "olive",
+      "moreUrl": "https://ra.co/events/2349538",
+      "imageUrl": "",
+      "description": "Start: 22:00\nEnde: 06:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Anja Schneider",
+              "info": "Mobilee, Berlin",
+              "link": ""
+            },
+            {
+              "name": "Filburt",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Mac-Kee",
+              "info": "Dirtydrivesounds, Sparte 13",
+              "link": ""
+            },
+            {
+              "name": "Sven Tasnadi",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DJ Philou",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2324490",
+      "date": "2026-01-31",
+      "title": "Sarah Wild, Sept & Tommy Four Seven",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2324490",
+      "imageUrl": "",
+      "description": "Start: 21:00\nEnde: 10:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Sarah Wild",
+              "info": "Tal der Verwirrung, Gutzeit, Berlin",
+              "link": ""
+            },
+            {
+              "name": "Nadine Talakovics",
+              "info": "Distillery",
+              "link": ""
+            },
+            {
+              "name": "Sept",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "SLANY",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Tommy Four Seven",
+              "info": "47, Berlin",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

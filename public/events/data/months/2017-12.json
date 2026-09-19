@@ -1,0 +1,505 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2017-12-02-in-every-direction",
+      "date": "2017-12-02",
+      "title": "IN EVERY DIRECTION",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20171123072938id_/http://www.distillery.de:80/ex/dates/2017/12/02",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ADAM PORT",
+              "info": "keinemusik, Berlin",
+              "link": ""
+            },
+            {
+              "name": "TRIKK",
+              "info": "Innervisions, Optimo Music, Lossless",
+              "link": ""
+            },
+            {
+              "name": "PETER INVASION",
+              "info": "Riotvan, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "THOMAS HESSLER",
+              "info": "IMF, CLFT, Krill Music, Berlin",
+              "link": ""
+            },
+            {
+              "name": "VINCENT NEUMANN",
+              "info": "Distillery, Unitas Multiplex, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-12-08-10-jahre-boundless-beatz",
+      "date": "2017-12-08",
+      "title": "10 JAHRE BOUNDLESS BEATZ",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20171123073107id_/http://www.distillery.de:80/ex/dates/2017/12/08",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "TKR",
+              "info": "TKR ART, BASS UP?, Jena",
+              "link": ""
+            },
+            {
+              "name": "J.SN",
+              "info": "Break out!, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: HOSTED BY:",
+          "items": [
+            {
+              "name": "METASOUND",
+              "info": "Break the Surface, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "AUDITE",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DUBBALOT",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-12-09-heinz-music-label-nacht",
+      "date": "2017-12-09",
+      "title": "HEINZ MUSIC LABEL NACHT",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20171123073113id_/http://www.distillery.de:80/ex/dates/2017/12/09",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MARCUS MEINHARDT",
+              "info": "Heinz Music, Katermukke, Berlin",
+              "link": ""
+            },
+            {
+              "name": "JAN OBERLäNDER",
+              "info": "URSL, Katermukke",
+              "link": ""
+            },
+            {
+              "name": "DAVID DORAD",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "URSL",
+              "info": "KaterMukke, Berlin",
+              "link": ""
+            },
+            {
+              "name": "LENNY BROOKSTER",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-12-15-purple-tea-xiv",
+      "date": "2017-12-15",
+      "title": "PURPLE TEA XIV",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20171123073118id_/http://www.distillery.de:80/ex/dates/2017/12/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "KIT KUT",
+              "info": "Good Hood Music, Beyond07",
+              "link": ""
+            },
+            {
+              "name": "DRBYSTRR93",
+              "info": "Babashot Squad",
+              "link": ""
+            },
+            {
+              "name": "YAMI",
+              "info": "Weirdo Family, Traphouse",
+              "link": ""
+            },
+            {
+              "name": "AR-P",
+              "info": "Good Hood Music",
+              "link": ""
+            },
+            {
+              "name": "MIGHTY DUCK",
+              "info": "Bafög Amt Leipzig, Start: 23:00, add to Cal, HipHop 2.0 ✖ Grime ✖ Hustle-Trap ✖ UK ✖ Baltimore ✖ OG-Rap ✖ Breaks ✖ Ragga ✖ Moombahton ✖ Ghetto-Tech ✖ GlobalBa$$ ✖ B.I.G. ✖ Transforma-Scratch!",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-12-16-faency",
+      "date": "2017-12-16",
+      "title": "FÄNCY",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20171123073123id_/http://www.distillery.de:80/ex/dates/2017/12/16",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "PURPLE DISCO MASCHINE",
+              "info": "Sweat It Out, Defected Records",
+              "link": ""
+            },
+            {
+              "name": "DYNAMITE KADINSKI",
+              "info": "Fäncy, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BONBONS",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "HAMDI",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "MAURO CARACHO",
+              "info": "Distillery, Fäncy, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SMUTJE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-12-22-14-jahre-it-s-yours",
+      "date": "2017-12-22",
+      "title": "14 JAHRE IT'S YOURS",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20171123072943id_/http://www.distillery.de:80/ex/dates/2017/12/22",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "KKORPUS DELIKKTI",
+              "info": "Hamburg, Leipzig, Neubrandenburg, Dresden",
+              "link": ""
+            },
+            {
+              "name": "HARTMANN",
+              "info": "Dresden",
+              "link": ""
+            },
+            {
+              "name": "CALIGARI & MOONSHINERS CLIKK",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "HYBREED",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DJ LOOM",
+              "info": "Dark Dayz",
+              "link": ""
+            },
+            {
+              "name": "SYNTHIKAT",
+              "info": "OverDubClub",
+              "link": ""
+            },
+            {
+              "name": "MALCOLM",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-12-23-deathemberfezt-w-exlepaeng",
+      "date": "2017-12-23",
+      "title": "DEATHEMBERFEZT W/ EXLEPÄNG!",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20171123073128id_/http://www.distillery.de:80/ex/dates/2017/12/23",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MORE INFOS COMING SOON...",
+              "info": "Start: 23:30, add to Cal",
+              "link": ""
+            },
+            {
+              "name": "SIGN UP!",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "KALENDER-DOWNLOAD",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "DISTILLERY",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "KURT-EISNER-STR. 108 A",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "04275 LEIPZIG",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-12-25-24-h-wohnzimmer-christmas-edition",
+      "date": "2017-12-25",
+      "title": "24 H WOHNZIMMER - CHRISTMAS EDITION",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20190819110443id_/http://www.distillery.de/ex/dates/2017/12/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "NICO STOJAN",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "URSL",
+              "info": "KaterMukke, Dantze, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LEXER",
+              "info": "Wild Animals Records, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SVEN DOHSE",
+              "info": "Heinz Music, Katermukke, Berlin",
+              "link": ""
+            },
+            {
+              "name": "FILBURT",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-12-25-christmas-in-family",
+      "date": "2017-12-25",
+      "title": "CHRISTMAS IN FAMILY",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20171123073003id_/http://www.distillery.de:80/ex/dates/2017/12/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LEXER",
+              "info": "Wild Animals Records, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SVEN TASNADI",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "FILBURT",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "O*RS",
+              "info": "Permanent Vacation, Riotvan, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-12-29-dash-out-3",
+      "date": "2017-12-29",
+      "title": "DASH OUT #3",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190819110454id_/http://www.distillery.de/ex/dates/2017/12/29",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "BARNEY MILLAH",
+              "info": "Yaam, Berlin",
+              "link": ""
+            },
+            {
+              "name": "HIGH POWER STATION",
+              "info": "Dash Out, Teameastgermany, Leipzig / Köln, Start: 23:00, add to Cal, Es heißt noch ein letztes Mal, Dash Out!, für dieses Jahr und um dem Ruf des jamaikanischsten Dance gerecht zu bleiben, haben sich die Rude Boys von, High Power Station, eine absolute Ko­ry­phäe eingeladen:, Barney Millah, zählt zu den bekanntesten deutschen Reggae DJs und Radiomoderatoren und kann auf eine mehr als 20jährige Karriere zurückblicken. Er war maßgeblich daran beteiligt, Reggae und Dancehall in die ganze Republik zu tragen, betrieb mit \"Concrete Jungle\" eines der ersten Soundsystems Deutschlands, gilt als Pionier in Sachen Calypso und Soca und moderierte die allererste bundesweit im Kabel ausgestrahlte Reggae-Radiosendung. Geballte Power also, die da heute auf uns trifft… Rewind!",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-12-31-silvester-in-family",
+      "date": "2017-12-31",
+      "title": "SILVESTER IN FAMILY",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20171123073008id_/http://www.distillery.de:80/ex/dates/2017/12/31",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ANDRé GALLUZZI",
+              "info": "ARAS Records, Berghain Ostgut, Cocoon",
+              "link": ""
+            },
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "mindcookies, Distillery",
+              "link": ""
+            },
+            {
+              "name": "LENNY BROOKSTER",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DYNAMITE KADINSKI",
+              "info": "Fäncy, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SHURAY & WALLE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BONBONS",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

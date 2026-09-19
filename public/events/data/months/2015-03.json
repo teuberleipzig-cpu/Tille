@@ -1,0 +1,298 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2015-03-06-livelyrix-poetry-slam",
+      "date": "2015-03-06",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20150221142600id_/http://www.distillery.de:80/ex/dates/2015/03/06",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "TOM SCHILDHAUER",
+              "info": "Halle",
+              "link": ""
+            },
+            {
+              "name": "CHRISTIAN RITTER",
+              "info": "Bamberg",
+              "link": ""
+            },
+            {
+              "name": "ANDRé HERRMANN",
+              "info": "Lesebühne Schkeuditzer Kreuz, Team Totale Zerstörung",
+              "link": ""
+            },
+            {
+              "name": "FLORIAN CIESLIK",
+              "info": "Frankfurt",
+              "link": ""
+            },
+            {
+              "name": "KADDI CUTZ",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-03-07-anything-else",
+      "date": "2015-03-07",
+      "title": "ANYTHING ELSE?",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20150221142608id_/http://www.distillery.de:80/ex/dates/2015/03/07",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ADAM PORT",
+              "info": "keinemusik, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DAHMAR",
+              "info": "Electronic Resistance, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "PETER INVASION",
+              "info": "Riotvan, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: pragmat",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-03-12-livelyrix-poetry-slam-leipzig-liest-special-2",
+      "date": "2015-03-12",
+      "title": "LIVELYRIX POETRY SLAM – LEIPZIG LIEST SPECIAL",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20200808091925id_/http://www.distillery.de/ex/dates/2015/03/12",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: hauptsache nichts mit elchen",
+          "items": [
+            {
+              "name": "PAUL BOKOWSKI",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "SEBASTIAN LEHMANN",
+              "info": "Berlin, Start: 20:00, add to Cal, Paul Bokowski, und, Sebastian Lehmann, gehören mit ihren hinreißend lustigen Geschichten zur Speerspitze der Berliner Lesebühnenszene. Die beiden Gründungsmitglieder des Berliner Autorenkolletivs \"Fuchs & Söhne\" sind nicht nur in der Hauptstadt, sondern auch auf Poetry Slams im gesamten deutschsprachigen Raum aktiv. Heute Abend präsentieren die beiden Jungautoren bei uns die lustigsten Geschichten aus ihren Büchern \"Kein Elch. Nirgends.\" und \"Hauptsache nichts mit Menschen\". Ausserdem gibt Paul Bokowski einen breiten Vorgeschmack auf sein bald erscheinendes brandneues Buch \"Alleine ist man weniger zusammen\". Kommt in Scharen!, http://www.livelyrix.de, http://www.paulbokowski.de, http://www.sebastianlehmann.net",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-03-13-purple-tea",
+      "date": "2015-03-13",
+      "title": "PURPLE TEA",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20150221142610id_/http://www.distillery.de:80/ex/dates/2015/03/13",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "KITKUT",
+              "info": "Beyond07, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DJ DERBYSTARR",
+              "info": "Brooklyn Zoo, Leipzig, Start: 23:30, add to Cal, HipHop 2.0 x Grime x Hustle-Trap x UK x Baltimore x OG-Rap x Breaks x Ragga x Moombahton x Ghetto-Tech x Global Ba$$ x B.I.G. x Comshut x Transforma-Scratch + 4cl Turntables + 2cl Hustler + 7h Bakin' + 8.000W + 60Hz + 5g = Kitkut & Derbystarr!, www.facebook.com/kitkutsbassroom, www.derbystarr.com, https://soundcloud.com/derbystarr",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-03-14-saturday-rave",
+      "date": "2015-03-14",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20150221054809id_/http://www.distillery.de:80/ex/dates/2015/03/14",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MARTYN",
+              "info": "3024, Ninja Tune, Dolly, Hyperdub",
+              "link": ""
+            },
+            {
+              "name": "PEAK PHINE",
+              "info": "Distillery, Bass Plus, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "DEVELOPER",
+              "info": "Modularz, USA",
+              "link": ""
+            },
+            {
+              "name": "VINCENT NEUMANN",
+              "info": "Distillery, Unitas Multiplex, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-03-21-studio-barnhus-meets-exlepaeng-2",
+      "date": "2015-03-21",
+      "title": "STUDIO BARNHUS MEETS EXLEPÄNG!",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20150322232036id_/http://www.distillery.de:80/ex/dates/2015/03/21",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "STUDIO BARNHUS AKA",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "AXEL BOMAN",
+              "info": "Pampa Records, Studio Barnhus, Stockholm",
+              "link": ""
+            },
+            {
+              "name": "KORNéL KOVáCS",
+              "info": "Studio Barnhus",
+              "link": ""
+            },
+            {
+              "name": "PETTER NORDKVIST",
+              "info": "Studio Barnhus",
+              "link": ""
+            },
+            {
+              "name": "FILBURT",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-03-27-fire-in-da-hole-vol-1",
+      "date": "2015-03-27",
+      "title": "FIRE IN DA HOLE VOL. 1",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20150221142639id_/http://www.distillery.de:80/ex/dates/2015/03/27",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: hip hop",
+          "items": [
+            {
+              "name": "ECKE PRENZ",
+              "info": "alias V.Raeter & Breaque",
+              "link": ""
+            },
+            {
+              "name": "DJ D-FEKT",
+              "info": "Resistant Mindz, Leipzig, Start: 23:30, add to Cal, Hier wird gediegen \"gecornert\":, Ecke Prenz, – Das sind die, V.Raeter",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-03-28-paracou",
+      "date": "2015-03-28",
+      "title": "PARACOU",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20150221142652id_/http://www.distillery.de:80/ex/dates/2015/03/28",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: paracou",
+          "items": [
+            {
+              "name": "JAMY WING",
+              "info": "Polynom, Paracou, Jena",
+              "link": ""
+            },
+            {
+              "name": "FRANZ!",
+              "info": "Kalif Storch, Muna Musik, Paracou",
+              "link": ""
+            },
+            {
+              "name": "LYDIA EISENBLäTTER",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MAX NIPPERT",
+              "info": "Muna, Paracou, Gera",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "OLIVER DEUTSCHMANN",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

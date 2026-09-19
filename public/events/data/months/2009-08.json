@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2009-08-29-re-opening-after-summerbreak",
+      "date": "2009-08-29",
+      "title": "RE:OPENING AFTER SUMMERBREAK",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20090727070915id_/http://www.distillery.de:80/ex/dates/2009/08/29",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DAN DRASTIC",
+              "info": "Moon Harbour, Hairy Claw, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

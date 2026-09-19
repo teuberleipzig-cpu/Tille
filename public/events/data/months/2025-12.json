@@ -1,0 +1,407 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "ra-2276525",
+      "date": "2025-12-06",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2276525",
+      "imageUrl": "",
+      "description": "Start: 21:00\nEnde: 10:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Berny",
+              "info": "In Dark We Trust, geisha prive",
+              "link": ""
+            },
+            {
+              "name": "Bonnie Spacey",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Enzio Etchaberri",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Joyce Muniz",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "lena xx",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "OCD",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Rorganic",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "SVERRA",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2300817",
+      "date": "2025-12-12",
+      "title": "Safer Perreo",
+      "color": "olive",
+      "moreUrl": "https://ra.co/events/2300817",
+      "imageUrl": "",
+      "description": "Start: 23:00\nEnde: 06:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Linapary",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "BZZHOUND",
+              "info": "Madrid",
+              "link": ""
+            },
+            {
+              "name": "Fuega",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Cafgar",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "nea.cuajo",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2276533",
+      "date": "2025-12-13",
+      "title": "SATURDAY RAVE X SEELEN",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2276533",
+      "imageUrl": "",
+      "description": "Start: 21:00\nEnde: 10:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Perel",
+              "info": "O*RS, Berlin",
+              "link": ""
+            },
+            {
+              "name": "stinia3000",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "JANEIN",
+              "info": "SEELEN",
+              "link": ""
+            },
+            {
+              "name": "Mareena",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Peryl",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Stigmatique",
+              "info": "Distillery, SEELEN",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2313639",
+      "date": "2025-12-19",
+      "title": "LAST BASS MESS 2025",
+      "color": "olive",
+      "moreUrl": "https://ra.co/events/2313639",
+      "imageUrl": "",
+      "description": "Start: 22:00\nEnde: 06:00 (Folgetag)",
+      "sections": []
+    },
+    {
+      "id": "ra-2276535",
+      "date": "2025-12-20",
+      "title": "SATURDAY RAVE with Johannes Albert, Krackk, Robin Tasi & SHDW",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2276535",
+      "imageUrl": "",
+      "description": "Start: 21:00\nEnde: 10:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "50PHIE",
+              "info": "G-Edit, remoto rec.",
+              "link": ""
+            },
+            {
+              "name": "Krackk",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Robin Tasi",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "SHDW",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "vinyldependents",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Carina Posse",
+              "info": "Muna, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Johannes Albert",
+              "info": "Frank Music",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2276537",
+      "date": "2025-12-25",
+      "title": "36H WOHNZIMMER",
+      "color": "yellow",
+      "moreUrl": "https://ra.co/events/2276537",
+      "imageUrl": "",
+      "description": "Start: 22:00\nEnde: 10:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Grace Dahl",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "HOCK (DE)",
+              "info": "DE",
+              "link": ""
+            },
+            {
+              "name": "In Verruf",
+              "info": "R Label Group",
+              "link": ""
+            },
+            {
+              "name": "Obscure Shape",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Oliver Rosemann",
+              "info": "Recorded Things, Mindtrip, Mord",
+              "link": ""
+            },
+            {
+              "name": "Raev (2)",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "SubkoØne",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Valerie Ace",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Vy Tran",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Budino",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "Carlo Bonanza",
+              "info": "AROMA+, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Chris Manura",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Horkheimer",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "karete bu",
+              "info": "DRIVE, G-Edit",
+              "link": ""
+            },
+            {
+              "name": "nd_baumecker",
+              "info": "Ostgut Ton, Freeride Millenium",
+              "link": ""
+            },
+            {
+              "name": "Skoria",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Submod",
+              "info": "Distillery, vaertism, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Thomas Stieler",
+              "info": "Distillery, Paracou",
+              "link": ""
+            },
+            {
+              "name": "Harmon",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "pokka",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2276543",
+      "date": "2025-12-31",
+      "title": "GOODBYE X HELLO",
+      "color": "yellow",
+      "moreUrl": "https://ra.co/events/2276543",
+      "imageUrl": "",
+      "description": "Start: 22:00\nEnde: 16:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Dilivius Lenni",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Moto Moto",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Napoleon Dynamite",
+              "info": "Fäncy, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Shuray & Walle",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "0-Dimensional",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BIGALKE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Carlotta Jacobi",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "lena xx",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Ninette",
+              "info": "Distillery, LÄRM",
+              "link": ""
+            },
+            {
+              "name": "noxsonos",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "UVB",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Möbelnder Pop",
+              "info": "Italo Fundamentalo",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

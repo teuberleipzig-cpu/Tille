@@ -1,0 +1,351 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2012-10-02-ideas-from-the-pond",
+      "date": "2012-10-02",
+      "title": "IDEAS FROM THE POND",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20121001090757id_/http://www.distillery.de:80/ex/dates/2012/10/02",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: ideas from the pond",
+          "items": [
+            {
+              "name": "PETAR DUNDOV",
+              "info": "Music Man Records, Zagreb",
+              "link": ""
+            },
+            {
+              "name": "CLUB MALTE",
+              "info": "Aequalis, Institut fuer Zukunft, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "WILHELM",
+              "info": "HW Massive",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-10-05-livelyrix-poetry-slam",
+      "date": "2012-10-05",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20121001112623id_/http://www.distillery.de:80/ex/dates/2012/10/05",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: spoken word akrobatik",
+          "items": [
+            {
+              "name": "ROBIN MESAROSCH",
+              "info": "Stuttart",
+              "link": ""
+            },
+            {
+              "name": "HAZEL BRUGGER",
+              "info": "Zürich",
+              "link": ""
+            },
+            {
+              "name": "FABIAN NAVARRO",
+              "info": "Hamburg",
+              "link": ""
+            },
+            {
+              "name": "HENNING OLF",
+              "info": "Jena",
+              "link": ""
+            },
+            {
+              "name": "ANKE FUCHS",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-10-06-finest-selection-meets-bass-plus",
+      "date": "2012-10-06",
+      "title": "FINEST SELECTION MEETS BASS PLUS!",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20120930005827id_/http://www.distillery.de:80/ex/dates/2012/10/06",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: finest selection",
+          "items": [
+            {
+              "name": "MARBERT ROCEL – LIVE",
+              "info": "Compost Records, Erfurt",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-10-12-where-the-wild-horses",
+      "date": "2012-10-12",
+      "title": "WHERE THE WILD HORSES",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20121001090802id_/http://www.distillery.de:80/ex/dates/2012/10/12",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: uk bass, future bass",
+          "items": [
+            {
+              "name": "THROWING SNOW",
+              "info": "Sneaker Social Club, Local Action, London",
+              "link": ""
+            },
+            {
+              "name": "GIMMIX",
+              "info": "Stiff Little Spinners, Audiolith",
+              "link": ""
+            },
+            {
+              "name": "ZORRO",
+              "info": "Chemnitz, Start: 23:00, add to Cal, Es gibt ja allerhand Bilder, die man bei Begriffsaufzählungen, wie etwa wild, Pferd und Schnee im Kopf haben kann. Das Wildpferd in der verschneiten Landschaft etwa. Nun setzen wir dem Warmblüter aber noch einen Kopfhörer samt wallender Future Bass Music auf die Ohren. Wer diese Collage noch weiterdenken kann, ist heute genau richtig. Unser extra aus London eingeflogenes Zugpferd namens",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-10-19-20-years-old-pt-i",
+      "date": "2012-10-19",
+      "title": "20 YEARS OLD - PT.I",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20121001090812id_/http://www.distillery.de:80/ex/dates/2012/10/19",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: drum and bass, jungle",
+          "items": [
+            {
+              "name": "DJ MARKY",
+              "info": "Innerground Records, Sao Paulo",
+              "link": ""
+            },
+            {
+              "name": "STAMINA MC",
+              "info": "Digital Soundboy, London",
+              "link": ""
+            },
+            {
+              "name": "AUDITE",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DERRICK & BASE",
+              "info": "Ulan Bator",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-10-20-20-years-old-pt-ii",
+      "date": "2012-10-20",
+      "title": "20 YEARS OLD - PT.II",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20121001005814id_/http://www.distillery.de:80/ex/dates/2012/10/20",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: 20 years old",
+          "items": [
+            {
+              "name": "CARL CRAIG",
+              "info": "Planet E",
+              "link": ""
+            },
+            {
+              "name": "!K7",
+              "info": "Detroit",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "STEFFEN BENNEMANN",
+              "info": "Nachtdigital, Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-10-25-gema-gemain-podiumsdiskussion",
+      "date": "2012-10-25",
+      "title": "GEMA = GEMAIN? PODIUMSDISKUSSION",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20140411083612id_/http://www.distillery.de:80/ex/dates/2012/10/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: GEMA = Gemain? Podiumsdiskussion PODIUMSDISKUSSION MIT:",
+          "items": [
+            {
+              "name": "STEFFEN KACHE",
+              "info": "Betreiber Distillery",
+              "link": ""
+            },
+            {
+              "name": "UWE DORN",
+              "info": "GEMA Bezirksdirektion",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MARKUS RENNHACK",
+              "info": "Musiker und GEMA Mitglied",
+              "link": ""
+            },
+            {
+              "name": "MICHAEL FABER",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-10-26-nacht-flohmarkt-no-2",
+      "date": "2012-10-26",
+      "title": "(NACHT)FLOHMARKT NO.2",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20121001112628id_/http://www.distillery.de:80/ex/dates/2012/10/26",
+      "imageUrl": "",
+      "description": "(NACHT)FLOHMARKT",
+      "sections": [
+        {
+          "label": "up: alles kann, nichts muss, jeder darf MUSIC BY:",
+          "items": [
+            {
+              "name": "DJ RUKEY",
+              "info": "Distillery, esoulate, Leipzig, Start: 19:00, Eintritt frei, add to Cal, Anmeldung Stand (kostenlos): urban@distillery.de, Nachtflohmarkt die 2te",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-10-27-come-back-to-me-meets-where-the-buffalo-roam",
+      "date": "2012-10-27",
+      "title": "COME BACK TO ME MEETS WHERE THE BUFFALO ROAM",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20121001090829id_/http://www.distillery.de:80/ex/dates/2012/10/27",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: come back to me",
+          "items": [
+            {
+              "name": "KADEBOSTAN",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "LAOLU",
+              "info": "Freude am Tanzen, Jena",
+              "link": ""
+            },
+            {
+              "name": "DILIVIUS LENNI",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: where the buffalo roam",
+          "items": [
+            {
+              "name": "STEPHAN VON WOLFFERSDORFF",
+              "info": "Distillery, Where the Buffalo Roam",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-10-30-gabor-meets-chris",
+      "date": "2012-10-30",
+      "title": "GABOR MEETS CHRIS",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20121001090848id_/http://www.distillery.de:80/ex/dates/2012/10/30",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: gabor meets chris",
+          "items": [
+            {
+              "name": "ROBAG WRUHME",
+              "info": "Pampa, Hart & Tief, Kompakt, Weimar Innenstadt",
+              "link": ""
+            },
+            {
+              "name": "PHILIPP MATALLA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: chris meets gabor",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

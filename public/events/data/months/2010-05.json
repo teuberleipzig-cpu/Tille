@@ -1,0 +1,377 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2010-05-01-boundary-functions",
+      "date": "2010-05-01",
+      "title": "BOUNDARY FUNCTIONS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20100323060119id_/http://distillery.de:80/ex/dates/2010/05/01",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: musik",
+          "items": [
+            {
+              "name": "ROBAG WRUHME",
+              "info": "Pampa, Hart & Tief, Kompakt, Weimar Innenstadt",
+              "link": ""
+            },
+            {
+              "name": "JACOB KORN – LIVE",
+              "info": "Running Back, Dolly, Dresden",
+              "link": ""
+            },
+            {
+              "name": "STEFFEN BENNEMANN",
+              "info": "Nachtdigital",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-05-05-konbit4haiti-donation-benefiz-party-for-haiti",
+      "date": "2010-05-05",
+      "title": "KONBIT4HAITI - DONATION BENEFIZ PARTY FOR HAITI",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20100504220359id_/http://www.distillery.de:80/ex/dates/2010/05/05",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: reggae, dancehall und caribbean style",
+          "items": [
+            {
+              "name": "RIX RAX",
+              "info": "Jamaica",
+              "link": ""
+            },
+            {
+              "name": "ZIGGI ZOO",
+              "info": "Nigeria",
+              "link": ""
+            },
+            {
+              "name": "JACQUES GUERRIER",
+              "info": "Haiti",
+              "link": ""
+            },
+            {
+              "name": "SURPRISE GUESTS",
+              "info": "Start: 22:00, 5,- € alle Einnahmen werden für die Umsetzung der Hilfe verwendet, add to Cal, Konbit4Haiti – Haiti Bebefiz",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-05-07-livelyrix-poetry-slam",
+      "date": "2010-05-07",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20100413213232id_/http://www.distillery.de:80/ex/dates/2010/05/07",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: livelyrix poetry slam HOSTED BY:",
+          "items": [
+            {
+              "name": "CHRISTIAN RITTER",
+              "info": "Bamberg",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS WEBER",
+              "info": "Münster",
+              "link": ""
+            },
+            {
+              "name": "MAIK MARTSCHINKOWSKY",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "U.V.M.",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "DJ RUKEY",
+              "info": "Distillery, esoulate, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-05-08-dreikommanull-meets-where-the-buffalo-roam",
+      "date": "2010-05-08",
+      "title": "DREIKOMMANULL MEETS WHERE THE BUFFALO ROAM",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20100413213251id_/http://www.distillery.de:80/ex/dates/2010/05/08",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: dapayk \"decade one\" album tour",
+          "items": [
+            {
+              "name": "DAPAYK – LIVE",
+              "info": "Mo's Ferry, Stil for Talent, Berlin",
+              "link": ""
+            },
+            {
+              "name": "KLEINSCHMAGER AUDIO",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MENTELL",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-05-12-markus-welby-s-b-day",
+      "date": "2010-05-12",
+      "title": "MARKUS WELBY'S B-DAY",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20100413213256id_/http://www.distillery.de:80/ex/dates/2010/05/12",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: main",
+          "items": [
+            {
+              "name": "P.TOILE",
+              "info": "Channel Rec., Trenton, Ostwind, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-05-14-kurt-reith-gedaechtnisskatturnier-kurt-reith-night",
+      "date": "2010-05-14",
+      "title": "KURT REITH GEDÄCHTNISSKATTURNIER + KURT REITH NIGHT",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20100504220405id_/http://www.distillery.de:80/ex/dates/2010/05/14",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: 20uhr kurt reith gedächtnisskatsturnier - im anschluß kurt reith night",
+          "items": [
+            {
+              "name": "DJ YORK",
+              "info": "Könich Heinz, Leipzig-Connewitz",
+              "link": ""
+            },
+            {
+              "name": "DJ GRAPE",
+              "info": "Conne Island, Leipzig-Connewitz",
+              "link": ""
+            },
+            {
+              "name": "SLOWHAND E",
+              "info": "Stars for Soul, Rhythm Club, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "HANS DER JäGER",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-05-15-syntax-meets-bass-plus",
+      "date": "2010-05-15",
+      "title": "SYNTAX MEETS BASS PLUS!",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20100504220410id_/http://www.distillery.de:80/ex/dates/2010/05/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: movida night train",
+          "items": [
+            {
+              "name": "MICHAEL PETER",
+              "info": "Movida Rec., International Freakshow, Weave Music, FFM",
+              "link": ""
+            },
+            {
+              "name": "STEVE K",
+              "info": "Distillery, Syntax Recordshop",
+              "link": ""
+            },
+            {
+              "name": "GEORG BIGALKE",
+              "info": "Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-05-22-aux-88-presents-direct-beat-archive",
+      "date": "2010-05-22",
+      "title": "AUX 88 PRESENTS DIRECT BEAT ARCHIVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20100504220416id_/http://www.distillery.de:80/ex/dates/2010/05/22",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: darkstar",
+          "items": [
+            {
+              "name": "AUX 88 – LIVE",
+              "info": "Direct Beat Records, Puzzlebox, Detroit",
+              "link": ""
+            },
+            {
+              "name": "MAGNETIC",
+              "info": "Blackred, Darkstar, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "HEADNOAKS",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-05-23-all-the-bodies-wgt-special-event",
+      "date": "2010-05-23",
+      "title": "ALL THE BODIES - WGT-SPECIAL-EVENT",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20190721155843id_/http://www.distillery.de/ex/dates/2010/05/23",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: dark psychedelic trance",
+          "items": [
+            {
+              "name": "AUDIODIDAKT",
+              "info": "Alice-D, Wild Seven, München",
+              "link": ""
+            },
+            {
+              "name": "DESTRUCTION DERBY",
+              "info": "Alice-D, Active Meditation Music, Bionic Instinct, München",
+              "link": ""
+            },
+            {
+              "name": "DEWAIAS",
+              "info": "Catonium, 666, Cologne",
+              "link": ""
+            },
+            {
+              "name": "TEKAEH",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-05-28-heckert-empire-praesentiert-everybody-dance",
+      "date": "2010-05-28",
+      "title": "HECKERT EMPIRE PRÄSENTIERT EVERYBODY DANCE!",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20100413203751id_/http://www.distillery.de:80/ex/dates/2010/05/28",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: reggae, dancehall",
+          "items": [
+            {
+              "name": "SENTINEL SOUND",
+              "info": "Stuttgart",
+              "link": ""
+            },
+            {
+              "name": "RAYMOND WRIGHT",
+              "info": "Jamaika",
+              "link": ""
+            },
+            {
+              "name": "KID GRINGO",
+              "info": "Heckert Empire, Start: 22:30, add to Cal, \"Mehr Dubs im Magazin als Rosinen im Weihnachtsstolln - die D-D-Deutsche Luger dasist das was alle wolln.\"",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-05-29-finest-selection-meets-feenstaub-friends",
+      "date": "2010-05-29",
+      "title": "FINEST SELECTION MEETS FEENSTAUB & FRIENDS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20100413213326id_/http://www.distillery.de:80/ex/dates/2010/05/29",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: finest selection",
+          "items": [
+            {
+              "name": "MOTOR CITY DRUM ENSEMBLE",
+              "info": "Four Roses, 20:20 Vision, Stuttgart",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

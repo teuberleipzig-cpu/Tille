@@ -1,0 +1,509 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2019-03-01-hyperion",
+      "date": "2019-03-01",
+      "title": "HYPERION",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190819110547id_/http://www.distillery.de/ex/dates/2019/03/01",
+      "imageUrl": "",
+      "description": "FR. 01.03.19 Livelyrix Poetry Slam",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "BRAUNBECK",
+              "info": "Sol Eterno, O’rs, Watergate",
+              "link": ""
+            },
+            {
+              "name": "ZACHARIAS",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BLANKK DISC",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "GEORG BIGALKE",
+              "info": "45 Minutes of Techno, Distillery, Drec, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "PEN PERRY",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-03-02-the-founding-father-of-house",
+      "date": "2019-03-02",
+      "title": "THE FOUNDING FATHER OF HOUSE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190719195044id_/http://www.distillery.de/ex/dates/2019/03/02",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: THE FOUNDING FATHER OF HOUSE",
+          "items": [
+            {
+              "name": "LIL' LOUIS",
+              "info": "Founding Father of House, Chicago",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SHURAY & WALLE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: NEBULA",
+          "items": [
+            {
+              "name": "NøRTH",
+              "info": "Nebula",
+              "link": ""
+            },
+            {
+              "name": "NOVAлES",
+              "info": "Nebula",
+              "link": ""
+            },
+            {
+              "name": "VXLTAGE",
+              "info": "Nebula",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-03-07-the-tide-vol-1-tour-2019",
+      "date": "2019-03-07",
+      "title": "THE TIDE VOL. 1 - TOUR 2019",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20190819110304id_/http://www.distillery.de/ex/dates/2019/03/07",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: + SUPPORT:",
+          "items": [
+            {
+              "name": "SPACESLUG",
+              "info": "Oak Island Records",
+              "link": ""
+            },
+            {
+              "name": "MACROPHAGOS",
+              "info": "Leipzig, Start: 20:00, add to Cal, Spaceslug \"The Tide Vol. 1\" Tour 2019:, Intergalactic Supermassive Stoner Doom Space from Wrocław (Poland). The interstellar journey began in 2015 through the clouds of dust and memories of infinity., https://www.youtube.com/watch?v=DsCqlvkAGwY, Support: Macrophagos (Leipzig), https://www.youtube.com/watch?v=3f8uufHA5As, Tickets an der Abendkasse.",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-03-08-mc-eiht",
+      "date": "2019-03-08",
+      "title": "MC EIHT",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190819110826id_/http://www.distillery.de/ex/dates/2019/03/08",
+      "imageUrl": "",
+      "description": "(Compton, Menace II Society)",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "STYLUS",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DJ DERBYSTARR",
+              "info": "Brooklyn Zoo, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DJ RUDBOY",
+              "info": "Halle, Start: 20:00, add to Cal, Salty Soundz präsentiert:Die Compton-Legende MC Eiht live in Leipzig!Support: STYLUS & DJ dørbystarr aka Bob Karli aka DerbyDelay, DJ RUDboy, Einlass: 20:00 Uhr // Beginn: 21:00 UhrVVK: 21,00€ (lokal), 23,25€ (weitere VVK-Stellen)Karten im Freezone Leipzig & Backyard Cans & Clothing (Barzahlung erforderlich), an allen bekannten Vorverkaufsstellen oder online bei Eventim., Einlass unter 16 Jahren nur mit \"Muttizettel\" UND Begleitperson.http://www.saltysoundz.de/Muttizettel.pdf",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-03-09-saturday-rave",
+      "date": "2019-03-09",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190719195320id_/http://www.distillery.de/ex/dates/2019/03/09",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MELLA DEE",
+              "info": "Warehouse Music, Shall Not Fade",
+              "link": ""
+            },
+            {
+              "name": "SEVENSOL",
+              "info": "Long Vehicle, Kann",
+              "link": ""
+            },
+            {
+              "name": "LYDIA EISENBLäTTER",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "FAERBER",
+              "info": "Tilt, PAL, Hamburg",
+              "link": ""
+            },
+            {
+              "name": "VINCENT NEUMANN",
+              "info": "Distillery, Unitas Multiplex, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-03-13-the-lhj-ep-release-show",
+      "date": "2019-03-13",
+      "title": "THE LHJ - EP RELEASE SHOW",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20190819110153id_/http://www.distillery.de/ex/dates/2019/03/13",
+      "imageUrl": "",
+      "description": "KONZERT:THE LADIES HOME JOURNAL (FUNK/POP/HIPHOP) LPZSupport: TBA\nAFTERSHOW:DJ's: TBA\nTICKETS:KONZERT & AFTERSHOW: 5€ AKAFTERSHOW: ab 23 Uhr 3€ AK",
+      "sections": [
+        {
+          "label": "up: KONZERT:THE LADIES HOME JOURNAL (FUNK/POP/HIPHOP) LPZSupport: AFTERSHOW:DJ's: TICKETS:KONZERT & AFTERSHOW: 5€ AKAFTERSHOW:",
+          "items": [
+            {
+              "name": "THE LADIES HOME JOURNAL",
+              "info": "Leipzig, Start: 20:00, add to Cal, Auf Drama können wir eigentlich alle verzichten. Davon hat jeder im Alltag genug - Stress hier, Drama dort. DOCH NICHT MIT UNS!, Denn wir sind the Ladies Home Journal und wir präsentieren euch am Mittwoch, dem 13.03.19, unsere erste, eigene EP \"No Drama\"! Live und in Farbe gibt's Tracks von der Platte, alte Songs, neue Songs und sicherlich die ein oder andere Überraschung!Wir selbst können es kaum erwarten - bringt Tanzschuhe und eure gute Laune mit - wir wollen mit euch shaken, abfunken, dancen, absteppen, ein wenig twisten, abzappeln, einen trinken, weitermachen, umherwirbeln, das Leben/ den Dancefunk/ die Nacht zelebrieren und FEIERN - FEIERN - FEIERN!, Nach dem Konzert geht's weiter mit einer AFTERSHOW - klar, wenn man schon mal in der Tille ist..., Also ladet doch eure Freunde hier in die Veranstaltung ein. Damit macht ihr uns allen eine Freude!, Die EP & weiteren MERCH wird es vor Ort zu kaufen geben! (EP 5€",
+              "link": ""
+            },
+            {
+              "name": "TBA",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "ab 23 Uhr 3€ AK",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-03-16-saturday-rave",
+      "date": "2019-03-16",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190719195018id_/http://www.distillery.de/ex/dates/2019/03/16",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "PATRICE BäUMEL",
+              "info": "Traumschallplatten, Trapez",
+              "link": ""
+            },
+            {
+              "name": "MBF",
+              "info": "Manual, Amsterdam",
+              "link": ""
+            },
+            {
+              "name": "LARS CHRISTIAN MüLLER",
+              "info": "Distillery, mindcookies",
+              "link": ""
+            },
+            {
+              "name": "DILIVIUS LENNI",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ROWA",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-03-22-friday-and-the-fool-w-sinnlich-t",
+      "date": "2019-03-22",
+      "title": "FRIDAY AND THE FOOL W/ SINNLICH(T)",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190819110254id_/http://www.distillery.de/ex/dates/2019/03/22",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: + SUPPORT: AFTERSHOW DJS:",
+          "items": [
+            {
+              "name": "FRIDAY AND THE FOOL",
+              "info": "Bionicrecords",
+              "link": ""
+            },
+            {
+              "name": "5RAUMFENSTER",
+              "info": "Borna",
+              "link": ""
+            },
+            {
+              "name": "NHOMA",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BEN IVY B2B PIUS",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ANTIPASTI DJ TEAM",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DJ TEAM TOXIC BAKLAVA",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-03-23-buchmesse-spezial-electronic-germany",
+      "date": "2019-03-23",
+      "title": "BUCHMESSE SPEZIAL - ELECTRONIC GERMANY",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190721183758id_/http://www.distillery.de/ex/dates/2019/03/23",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: + SUPPORT:",
+          "items": [
+            {
+              "name": "CHRISTIAN ARNDT",
+              "info": "liest",
+              "link": ""
+            },
+            {
+              "name": "ELECTRONIC GERMANY",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "DJ EASTENDERS",
+              "info": "Start: 21:00, add to Cal, Elektronische Tanzmusik aus Deutschland hat seit über zwei Jahrzehntenden popkulturellen Puls Europas entscheidend mitgeprägt. In seinem Buch\"Electronic Germany\" dokumentiert Christian Arndt die Entwicklung vonden Anfängen in den Achtziger Jahren bis heute. Rund zehn Jahre lang recherchierteer für das Projekt. Das Resultat ist eine inhaltlich dichte Kombinationaus musikjournalistischer und kulturhistorischer Betrachtung, die mit vielenunterhaltsamen Trivia und noch mehr Zitaten angereichert ist. So ergibt sichein authentisches Bild dieser wohl einflussreichsten kulturellen Strömung derjüngeren Gegenwart und deren Verflechtung mit gesellschaftlichen Ereignissenund Entwicklungen.Ein eigenes Kapitel ist der parallelen Entwicklung der Berliner Loveparadeund der Street Parade in Zürich gewidmet. Mit der Rubrik „Politics ofDancing“ und einer kurzen Kulturgeschichte der Techno(Party)drogen gehtdas Buch auch auf die gesellschaftspolitischen Implikationen der Technokulturein. Den zweiten Teil bilden Porträts wichtiger Protagonisten der Szene,die auf unterschiedliche Weise dazu beigetragen haben, dass Techno zum erfolgreichstenExportartikel der jüngeren deutschen Musikgeschichte wurde:Von Dirty Doering (Bar25) über Jam & Spoon, Fritz und Paul Kalkbrenner,Kollektiv Turmstrasse, Monika Kruse, Chris Liebing, Pantha Du Princeund Sven Väth bis hin zu Westbam und Wolfgang Voigt (Kompakt).Christian Arndt beleuchtet die Rolle von Kraftwerk als „Godfathers ofTechno“ ebenso wie diejenige der Schweizer Sound-Pioniere von Yello undlässt DJs und Musiker wie Anthony Rother, Mijk van Dijk (Marmion), Talla2XLC, Paul van Dyk, Marusha, Dr. Motte und viele andere persönlich zuWort kommen. In Ernst Stratmanns dynamischen Live-Fotos wird die Atmosphäredurchfeierter Partynächte in den Neunziger Jahren wieder lebendig.Die Gestaltung von Alexander Branczyk alias czyk, der die Berliner Technoszenevom ersten Tag an kennt und den „Look and Feel“ des TechnomagazinsFrontpage entscheidend prägte, macht die Lektüre auch visuell zu einen besonderenErlebnis, und czyk kommt auch als Zeitzeuge zu Wort.\"Electronic Germany\" ist eine inspirierende Hommage an dieTechnokultur von den Wurzeln bis genau jetzt und ein Must-Have für langjährigegenauso wie für jüngere Fans elektronischer Tanzmusik.",
+              "link": ""
+            },
+            {
+              "name": "SA. 23.03.19 SATURDAY RAVE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SASCHA FUNKE",
+              "info": "Multi Culti, Endless Flight, Turbo, Kompakt",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-03-28-pan-pot-presents-destination-time-warp-leipzig",
+      "date": "2019-03-28",
+      "title": "PAN-POT PRESENTS - DESTINATION TIME WARP: LEIPZIG",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20190719195330id_/http://www.distillery.de/ex/dates/2019/03/28",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "PAN-POT",
+              "info": "Second State, Berlin",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MAURO CARACHO",
+              "info": "Distillery, Fäncy, Leipzig, Start: 22:00, add to Cal",
+              "link": ""
+            },
+            {
+              "name": "KALENDER-DOWNLOAD",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-03-29-gossenboss-mit-zett-die-grosse-gurkenwasser-tour-2019",
+      "date": "2019-03-29",
+      "title": "GOSSENBOSS MIT ZETT - DIE GROSSE GURKENWASSER TOUR 2019",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190721183509id_/http://www.distillery.de/ex/dates/2019/03/29",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: + SUPPORT:",
+          "items": [
+            {
+              "name": "GOSSENBOSS MIT ZETT",
+              "info": "Dresden",
+              "link": ""
+            },
+            {
+              "name": "HARTMANN",
+              "info": "Dresden",
+              "link": ""
+            },
+            {
+              "name": "DEINEMAFA",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MAREK NOTFALL",
+              "info": "Leipzig, Start: 20:00, add to Cal, In den vergangenen Jahren spielte Gossenboss mit Zett etliche Konzerte in Clubs und auf kleineren Festivals. Darunter eine eigene Tour mit Degenhardt, als Support auf „Anarchie und Alltag“ Tour der Antilopen Gang und im Vorprogramm von Neonschwarz., Bevor im Sommer 2019 das neue Album erscheint, gehts im Februar und März nochmal auf „große Gurkenwasser Tour“!",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-03-30-betriebsfeier-on-tour",
+      "date": "2019-03-30",
+      "title": "BETRIEBSFEIER ON TOUR",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190719195149id_/http://www.distillery.de/ex/dates/2019/03/30",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "EMPRO",
+              "info": "Heinz Music, Sisyphos, Berlin",
+              "link": ""
+            },
+            {
+              "name": "COCO",
+              "info": "Betriebsfeier Berlin",
+              "link": ""
+            },
+            {
+              "name": "PITRI PAN",
+              "info": "Kokolores, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MIKE VAN GOETZE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "THE REASON Y",
+              "info": "Second State Audio, Berlin",
+              "link": ""
+            },
+            {
+              "name": "TIMO KREISSL",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "ra-2455568",
+      "date": "2026-07-04",
+      "title": "BANANAS ARE BERRIES [OPEN AIR BY DAY & INDOOR AT NIGHT]",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2455568",
+      "imageUrl": "",
+      "description": "Start: 14:00\nEnde: 10:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "DJ Balduin",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "OLIV",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "pokka",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Uferkind",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Thomas Stieler",
+              "info": "Distillery, Paracou",
+              "link": ""
+            },
+            {
+              "name": "Elli Altenberger",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Commissar Lag",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "NACHTIGALL",
+              "info": "PX13",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2455574",
+      "date": "2026-07-11",
+      "title": "KOSMOS X LEIDER 9 [OPEN AIR BY DAY & INDOOR AT NIGHT]",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2455574",
+      "imageUrl": "",
+      "description": "Start: 14:00\nEnde: 10:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Aio",
+              "info": "Stil vor Talent",
+              "link": ""
+            },
+            {
+              "name": "knete",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Rodèk",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Adrija",
+              "info": "apostrophé, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Aender",
+              "info": "KOSMOS, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Langnikel",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "CAMPA",
+              "info": "Leider9, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Fennek",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Moto Moto",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "date": "2026-07-18",
+      "title": "DIE SACHE MIT DER VERNUNFT [OPEN AIR BY DAY & INDOOR AT NIGHT]",
+      "color": "orange",
+      "moreUrl": "#https://de.ra.co/events/2455593",
+      "sections": [
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "0-DIMENSIONAL",
+              "info": "Distillery, Leipzig",
+              "link": "https://soundcloud.com/0_dimensional"
+            },
+            {
+              "name": "BIGALKE",
+              "info": "Distillery, Leipzig",
+              "link": "https://soundcloud.com/bigalke"
+            },
+            {
+              "name": "MONA:MI B2B HANDGEMAENGE",
+              "info": "Leipzig",
+              "link": "https://soundcloud.com/monami1/eli-set-ff"
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "pavillon:",
+          "items": [
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": "https://soundcloud.com/thomas-heinrich/andreas-eckhardt-thomas-heinrich-echo-sanctum-festival-2025"
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "garden:",
+          "items": [
+            {
+              "name": "ROBAG WRUHME",
+              "info": "Pampa, Hart & Tief, Kompakt, Weimar Innenstadt",
+              "link": "https://soundcloud.com/robag_fm/robag-wruhme-dj-set-kater-berlin-1-dezember-2025"
+            },
+            {
+              "name": "ZISCHKO & ZACHARIAS",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ],
+      "id": "2026-07-18-die-sache-mit-der-vernunft-open-air-by-day-indoor-at-night",
+      "imageUrl": "public/events/media/shared/migrated-8bc896fff6ca7f84.jpg",
+      "description": "Please show a valid ID card at the entry.\nNo bags larger than 20x30x20cm allowed.\nNo liquids, no weapons, no pyros, no photos, no videos, no national flags. No -ISMS. Be nice!"
+    },
+    {
+      "id": "ra-2460442",
+      "date": "2026-07-25",
+      "title": "CLUB GRDN [OPEN AIR BY DAY & INDOOR AT NIGHT]",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2460442",
+      "imageUrl": "",
+      "description": "Start: 14:00\nEnde: 10:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Sevensol",
+              "info": "Long Vehicle, Kann",
+              "link": ""
+            },
+            {
+              "name": "Shuray & Walle",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Rosa Red",
+              "info": "Permanent Vacation",
+              "link": ""
+            },
+            {
+              "name": "Thomas Stieler",
+              "info": "Distillery, Paracou",
+              "link": ""
+            },
+            {
+              "name": "Submod",
+              "info": "Distillery, vaertism, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Medha",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Stomp",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "V:SONNTAG",
+              "info": "focus, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,412 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2023-01-01-livelyrix-sommerfestival-der-slamabend",
+      "date": "2023-01-01",
+      "title": "LIVELYRIX SOMMERFESTIVAL - DER SLAMABEND",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20230205041127id_/https://www.distillery.de/ex/dates/2010/07",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "JAN KOCH",
+              "info": "songs & stories, In Puncto, Berlin",
+              "link": ""
+            },
+            {
+              "name": "SPIDER",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "SURF POETEN",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "PEH",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "PAULINE FüG",
+              "info": "Hannover",
+              "link": ""
+            },
+            {
+              "name": "KHESRAU BEHROZ",
+              "info": "Kassel",
+              "link": ""
+            },
+            {
+              "name": "FRANK KLöTGEN",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-01-07-saturday-rave",
+      "date": "2023-01-07",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20230203103202id_/https://www.distillery.de/ex/dates/2023/01/07",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "PARAMIDA",
+              "info": "Love On The Rocks, Panorama Bar",
+              "link": ""
+            },
+            {
+              "name": "DYSCOTHEQUE",
+              "info": "nice4what, Drive",
+              "link": ""
+            },
+            {
+              "name": "SHURAY & WALLE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "RØDHÅD",
+              "info": "Dystopian",
+              "link": ""
+            },
+            {
+              "name": "ATALANTA",
+              "info": "Distillery",
+              "link": ""
+            },
+            {
+              "name": "TARIK WEISS",
+              "info": "Halle/Saale",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-01-13-morlockk-dilemma",
+      "date": "2023-01-13",
+      "title": "MORLOCKK DILEMMA",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20230203111005id_/https://www.distillery.de/ex/dates/2023/01/13",
+      "imageUrl": "",
+      "description": "(snuffpro, Leipzig)\nGefördert durch:",
+      "sections": [
+        {
+          "label": "up: SUPPORT:",
+          "items": [
+            {
+              "name": "BRIGHT BUG GANG",
+              "info": "Leipzig, Gera, Start: 19:00, add to Cal",
+              "link": ""
+            },
+            {
+              "name": "TICKETS",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-01-14-saturday-rave",
+      "date": "2023-01-14",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20230203102716id_/https://www.distillery.de/ex/dates/2023/01/14",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "LAURENT GARNIER",
+              "info": "COD3 QR",
+              "link": ""
+            },
+            {
+              "name": "VINCENT NEUMANN",
+              "info": "Distillery, Unitas Multiplex, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "HW RHAPSODY",
+              "info": "Blech, Bna",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "OSTBAM",
+              "info": "Institut für Zukunft / ProZecco",
+              "link": ""
+            },
+            {
+              "name": "DJ GABI AKA RZR",
+              "info": "g-edit, Berlin",
+              "link": ""
+            },
+            {
+              "name": "THE JAKOB SISTERZ",
+              "info": "Sachsentrance, Leipzig / Berlin",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-01-20-the-micronaut-friends",
+      "date": "2023-01-20",
+      "title": "THE MICRONAUT & FRIENDS",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20230203110356id_/https://www.distillery.de/ex/dates/2023/01/20",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "THE MICRONAUT",
+              "info": "Ki Records, 3000Grad, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "PøLAROIT",
+              "info": "Ki Records, Stil vor Talent, Hannover",
+              "link": ""
+            },
+            {
+              "name": "NATALIE LUENGO",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "METABOMAN",
+              "info": "Musik Krause, Start: 23:00, add to Cal",
+              "link": ""
+            },
+            {
+              "name": "TICKETS",
+              "info": "Kosmonaut, Astronaut, Taikonaut etc. fahren durch den Raum, also könnte man auch Raumfahrer sagen. Jaja, wir vermitteln wieder Basiswissen abseits einfach gestrickter Klublyrik., Das sollte jedoch niemanden davon abhalten, sich selbst ein wenig kundig zu machen, weil “Knowledge is power”.",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-01-21-saturday-rave",
+      "date": "2023-01-21",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20230203102124id_/https://www.distillery.de/ex/dates/2023/01/21",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "KRISTIN VELVET",
+              "info": "Arms & Legs Records",
+              "link": ""
+            },
+            {
+              "name": "DILIVIUS LENNI",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LARS CHRISTIAN MüLLER",
+              "info": "Distillery, mindcookies",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "DJ STINGRAY",
+              "info": "313",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-01-22-up-home-dort-wo-alles-begann",
+      "date": "2023-01-22",
+      "title": "UP HOME - DORT WO ALLES BEGANN",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20230203092526id_/https://www.distillery.de/ex/dates/2023/01/22",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "TUALMA",
+              "info": "Teilzeit",
+              "link": ""
+            },
+            {
+              "name": "FELIX MONZA",
+              "info": "Koh Mokk",
+              "link": ""
+            },
+            {
+              "name": "SUBTRAK",
+              "info": "Where the Buffalo Roam, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DANIEL SAILER",
+              "info": "Up Home, Distillery, Where the Buffalo Roam, Start: 15:00, add to Cal, Auf dem Weg zum M.Sc. “Fachpersonal” steht eine weitere Zwischenprüfung vor der Tür. Wer hier von gestern und morgen erzählt, hat schlechte Karten zu bestehen. Aus diesem Grunde bitten wir ausdrücklich darum, das Themen nicht zu umfangreich und Sätze so kurz wie möglich gehalten werden.",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-01-27-friday-club-history",
+      "date": "2023-01-27",
+      "title": "FRIDAY CLUB HISTORY",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20230203092856id_/https://www.distillery.de/ex/dates/2023/01/27",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DJ STORM",
+              "info": "Metalheadz, London",
+              "link": ""
+            },
+            {
+              "name": "AUDITE",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BASE",
+              "info": "Ulan Bator",
+              "link": ""
+            },
+            {
+              "name": "DERRICK",
+              "info": "Ulan Bator",
+              "link": ""
+            },
+            {
+              "name": "DUBBALOT",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "EINEMILLION",
+              "info": "exLEpäng!",
+              "link": ""
+            },
+            {
+              "name": "FULL CONTACT",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-01-28-saturday-rave",
+      "date": "2023-01-28",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20230203104325id_/https://www.distillery.de/ex/dates/2023/01/28",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ROBAG WRUHME",
+              "info": "Pampa, Hart & Tief, Kompakt, Weimar Innenstadt",
+              "link": ""
+            },
+            {
+              "name": "GOLDIE PALM",
+              "info": "Vacanza, RBL Berlin",
+              "link": ""
+            },
+            {
+              "name": "MAURO CARACHO",
+              "info": "Distillery, Speedboat, Fäncy",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "ELECTRIC INDIGO",
+              "info": "female:pressure, imbalance computer music, editions mego",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

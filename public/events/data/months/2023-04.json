@@ -1,0 +1,510 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2023-04-01-saturday-rave-x-where-the-buffalo-roam",
+      "date": "2023-04-01",
+      "title": "SATURDAY RAVE X WHERE THE BUFFALO ROAM",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20230326204835id_/https://www.distillery.de/ex/dates/2023/04/01",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MIRA",
+              "info": "Kater Blau, URSL, Berlin",
+              "link": ""
+            },
+            {
+              "name": "JUDITH VAN WATERKANT",
+              "info": "Feat.Fem",
+              "link": ""
+            },
+            {
+              "name": "MIKE VAN GOETZE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "CHRISTIAN EIMANN",
+              "info": "UD3",
+              "link": ""
+            },
+            {
+              "name": "SEBASTIAN SANDMANN",
+              "info": "WLEM",
+              "link": ""
+            },
+            {
+              "name": "KROETENTANZBEIN",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-04-07-fat-bemme",
+      "date": "2023-04-07",
+      "title": "FAT BEMME",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20230326220814id_/https://www.distillery.de/ex/dates/2023/04/07",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: DnB",
+          "items": [
+            {
+              "name": "THE CARACAL PROJECT",
+              "info": "DIVIDID / Blackout / NEU, FR",
+              "link": ""
+            },
+            {
+              "name": "CPTR",
+              "info": "2 Guys 1 Dub, Impact Soundsystem, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "CUEPRIC",
+              "info": "Bass Focu",
+              "link": ""
+            },
+            {
+              "name": "NOVALU",
+              "info": "Sound Museum, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "FB RESIDENTS",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: Dubstep",
+          "items": [
+            {
+              "name": "[TBATS]",
+              "info": "Dub Logic / Deepnezz Audio",
+              "link": ""
+            },
+            {
+              "name": "ACE",
+              "info": "Fat Bemme",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-04-08-24-h-wohnzimmer-easter-edition",
+      "date": "2023-04-08",
+      "title": "24 H WOHNZIMMER - EASTER EDITION",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20230326212735id_/https://www.distillery.de/ex/dates/2023/04/08",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ATA",
+              "info": "Live At Robert Johnson",
+              "link": ""
+            },
+            {
+              "name": "ND_BAUMECKER",
+              "info": "Ostgut Ton, Freeride Millenium",
+              "link": ""
+            },
+            {
+              "name": "AERA",
+              "info": "Applied Magic, Innervisions",
+              "link": ""
+            },
+            {
+              "name": "ADI",
+              "info": "AutoMagicAlley",
+              "link": ""
+            },
+            {
+              "name": "VICTOR",
+              "info": "Magic Power",
+              "link": ""
+            },
+            {
+              "name": "MILA STERN",
+              "info": "Station Endlos",
+              "link": ""
+            },
+            {
+              "name": "KATAYA",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-04-14-konzertabend-simila-x-glu-aftershow",
+      "date": "2023-04-14",
+      "title": "KONZERTABEND: SIMILA X GLU + AFTERSHOW",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20230326220119id_/https://www.distillery.de/ex/dates/2023/04/14",
+      "imageUrl": "",
+      "description": "Gefördert durch:",
+      "sections": [
+        {
+          "label": "up: SUPPORT:",
+          "items": [
+            {
+              "name": "SIMILA",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "GLU",
+              "info": "Start: 19:00, add to Cal, Einlass: 19:00, Beginn: 20:00",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-04-15-saturday-rave-x-up-home-10-jahre-spaeter-24-h-edition",
+      "date": "2023-04-15",
+      "title": "SATURDAY RAVE X UP HOME - 10 JAHRE SPÄTER - 24 H EDITION",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20230326212130id_/https://www.distillery.de/ex/dates/2023/04/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "JIMI JULES",
+              "info": "Innervisions, Watergate",
+              "link": ""
+            },
+            {
+              "name": "MAURO CARACHO",
+              "info": "Distillery, Speedboat, Fäncy",
+              "link": ""
+            },
+            {
+              "name": "SCHERBERT",
+              "info": "Petrola",
+              "link": ""
+            },
+            {
+              "name": "UP HOME - 10 JAHRE SPÄTER -",
+              "info": "Start 10:00 w/",
+              "link": ""
+            },
+            {
+              "name": "NASTIA REIGEL",
+              "info": "Token, Non Series Enemy Records",
+              "link": ""
+            },
+            {
+              "name": "ONE AGENT",
+              "info": "Tel Aviv/ Berlin",
+              "link": ""
+            },
+            {
+              "name": "QIU",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-04-20-get-your-gimmicks",
+      "date": "2023-04-20",
+      "title": "GET YOUR GIMMICKS",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20230608125238id_/https://www.distillery.de/ex/dates/2023/04/20",
+      "imageUrl": "",
+      "description": "Start: 17\nGefördert durch:\n2001-2023 Distillery\nmade with <3 °°",
+      "sections": []
+    },
+    {
+      "id": "2023-04-21-nakt",
+      "date": "2023-04-21",
+      "title": "NAKT",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20230326215710id_/https://www.distillery.de/ex/dates/2023/04/21",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SCHERING",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "YESNT",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "FLOOR FORCE ONE",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "MøDZE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "NIKOLINA",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "WARIND",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-04-22-saturday-rave",
+      "date": "2023-04-22",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20230326211010id_/https://www.distillery.de/ex/dates/2023/04/22",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MAAYAN NIDAM",
+              "info": "THE WAVES",
+              "link": ""
+            },
+            {
+              "name": "EDWARD",
+              "info": "Giegling",
+              "link": ""
+            },
+            {
+              "name": "PREMIO",
+              "info": "Neue Welle",
+              "link": ""
+            },
+            {
+              "name": "MP.ULLE",
+              "info": "METRO, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "KIERAN BEHAN",
+              "info": "Giegling",
+              "link": ""
+            },
+            {
+              "name": "YAMOUR",
+              "info": "Hardwax",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-04-27-lesen-trinken-tanzen-der-grosse-eichborn-abend-zur-leipziger-buchmesse-2023",
+      "date": "2023-04-27",
+      "title": "LESEN TRINKEN TANZEN - DER GROSSE EICHBORN-ABEND ZUR LEIPZIGER BUCHMESSE 2023",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20230419145042id_/https://www.distillery.de/ex/dates/2023/04/27",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DOMINIK EULBERG & MATTHIAS GARFF",
+              "info": "BUCHPREMIERE - Tönende Tiere – Multimediale Show mit Sounds und Skulpturen",
+              "link": ""
+            },
+            {
+              "name": "CAROLINE SCHMITT",
+              "info": "Plötzlich Autorin – wie fühlt es sich an, ein Debüt zu veröffentlichen?",
+              "link": ""
+            },
+            {
+              "name": "FELIX BORK & MAX KERSTING",
+              "info": "Menschen, Steine, Sensationen",
+              "link": ""
+            },
+            {
+              "name": "MASCHA VASSENA & LIOBA WERRELMANN",
+              "info": "Warum wird in Krimis immer so gern gegessen und getrunken?, Start: 20:00, add to Cal, Einlass: 19:30, Beginn: 20:00, Der Eintritt zu dieser Veranstaltung ist frei!",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-04-28-friday-rave-x-proyeckt-qrach",
+      "date": "2023-04-28",
+      "title": "FRIDAY RAVE X PROYECKT QRACH",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20230608123237id_/https://www.distillery.de/ex/dates/2023/04/28",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DOMINIK EULBERG",
+              "info": "k7!",
+              "link": ""
+            },
+            {
+              "name": "MADAME BLUEBERRY",
+              "info": "Escape, Frankfurt",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "JANEIN",
+              "info": "SEELEN",
+              "link": ""
+            },
+            {
+              "name": "SEELEN.",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "SIMETRA",
+              "info": "Dampfende Wildsau",
+              "link": ""
+            },
+            {
+              "name": "MIEZZZ",
+              "info": "S.O.S, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2023-04-29-24-h-wohnzimmer",
+      "date": "2023-04-29",
+      "title": "24 H WOHNZIMMER",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20230608113805id_/https://www.distillery.de/ex/dates/2023/04/29",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "TRIKK",
+              "info": "Innervisions, Optimo Music, Lossless",
+              "link": ""
+            },
+            {
+              "name": "ED DAVENPORT",
+              "info": "Counterchange Recordings",
+              "link": ""
+            },
+            {
+              "name": "MEGGY",
+              "info": "SUOL, Berlin",
+              "link": ""
+            },
+            {
+              "name": "PANTHERA KRAUSE",
+              "info": "Riotvan, O*RS",
+              "link": ""
+            },
+            {
+              "name": "PETER INVASION",
+              "info": "Riotvan, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "THOMAS STIELER",
+              "info": "Distillery, Paracou",
+              "link": ""
+            },
+            {
+              "name": "QNETE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,423 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2022-03-05-last-re-opening-twenty2morrow",
+      "date": "2022-03-05",
+      "title": "LAST RE:OPENING - TWENTY2MORROW",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20220705035309id_/https://www.distillery.de/ex/dates/2022/03/05",
+      "imageUrl": "",
+      "description": "I:W",
+      "sections": [
+        {
+          "label": "up: I:",
+          "items": [
+            {
+              "name": "CAMEA",
+              "info": "Neverwhere, Bpitch Control",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "W",
+              "info": "Workshop & Iman",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "SOMEWHEN",
+              "info": "R-Label Group, SANA",
+              "link": ""
+            },
+            {
+              "name": "VEGASMOM",
+              "info": "KoZ, FFM",
+              "link": ""
+            },
+            {
+              "name": "VINCENT NEUMANN",
+              "info": "Distillery, Unitas Multiplex, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-03-11-boundless-beatz",
+      "date": "2022-03-11",
+      "title": "BOUNDLESS BEATZ",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20220705043443id_/https://www.distillery.de/ex/dates/2022/03/11",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Drum & Bass",
+          "items": [
+            {
+              "name": "DUBBALOT",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "PLASCHUNIQUE",
+              "info": "Droplegs Bushfire, Magdeburg",
+              "link": ""
+            },
+            {
+              "name": "REMASURI",
+              "info": "Rolling Sounds",
+              "link": ""
+            },
+            {
+              "name": "STUMBLETON",
+              "info": "Droplegs Bushfire, Magdeburg",
+              "link": ""
+            },
+            {
+              "name": "VRUM",
+              "info": "Boundless Beatz",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: Dubstep",
+          "items": [
+            {
+              "name": "DERRICK",
+              "info": "Ulan Bator",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-03-12-o-rs-house-nation-ind55-record-release",
+      "date": "2022-03-12",
+      "title": "O*RS HOUSE NATION IND55 - RECORD RELEASE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20220705034854id_/https://www.distillery.de/ex/dates/2022/03/12",
+      "imageUrl": "",
+      "description": "WEH:MUT",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "LEA LISA",
+              "info": "Phonica, Karakul",
+              "link": ""
+            },
+            {
+              "name": "FILBURT",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "F.D.M",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "& TRAXX JR",
+              "info": "MyGrooves, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: WEH:",
+          "items": [
+            {
+              "name": "CHARLY SCHALLER",
+              "info": "He.She.They",
+              "link": ""
+            },
+            {
+              "name": "MUT",
+              "info": "Inferis, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DANIEL SAILER",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-03-18-4-years-seelen-part-1",
+      "date": "2022-03-18",
+      "title": "4 YEARS SEELEN. - PART 1",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20220705030015id_/https://www.distillery.de/ex/dates/2022/03/18",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "KARAPAPAK",
+              "info": "SEELEN.",
+              "link": ""
+            },
+            {
+              "name": "SUE LèWIG",
+              "info": "SEELEN.",
+              "link": ""
+            },
+            {
+              "name": "JANEIN",
+              "info": "SEELEN",
+              "link": ""
+            },
+            {
+              "name": "SEELEN.",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "NARCISS",
+              "info": "SEELEN., Lobster Theremin",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "SHALEEN",
+              "info": "SEELEN., BPitch",
+              "link": ""
+            },
+            {
+              "name": "STIGMATIQUE",
+              "info": "Distillery, SEELEN",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-03-19-saturday-rave",
+      "date": "2022-03-19",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20220705041118id_/https://www.distillery.de/ex/dates/2022/03/19",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "AERA",
+              "info": "Applied Magic, Innervisions",
+              "link": ""
+            },
+            {
+              "name": "SCHLEPP GEIST",
+              "info": "URSL",
+              "link": ""
+            },
+            {
+              "name": "MAURO CARACHO",
+              "info": "Distillery, Speedboat, Fäncy",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "AMOTIK",
+              "info": "47, Amotik, Berlin",
+              "link": ""
+            },
+            {
+              "name": "HOUDAFK",
+              "info": "Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-03-25-sachsentrance",
+      "date": "2022-03-25",
+      "title": "SACHSENTRANCE",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20220705025351id_/https://www.distillery.de/ex/dates/2022/03/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DJ CARPET CRAWLER 3000",
+              "info": "Amsterdam",
+              "link": ""
+            },
+            {
+              "name": "ITSADISASTA",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "THE JAKOB SISTERZ",
+              "info": "Sachsentrance, Leipzig / Berlin",
+              "link": ""
+            },
+            {
+              "name": "RAVERPIK",
+              "info": "Sachsentrance, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "N.AKIN",
+              "info": "IFZ",
+              "link": ""
+            },
+            {
+              "name": "MADDA CHANTAL",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-03-26-saturday-rave",
+      "date": "2022-03-26",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20220705040502id_/https://www.distillery.de/ex/dates/2022/03/26",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "RYAN ELLIOTT",
+              "info": "Ghostly, Spectral Sound",
+              "link": ""
+            },
+            {
+              "name": "MANAMANA",
+              "info": "Kann, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "SENTA JULIEN",
+              "info": "ELI-Family",
+              "link": ""
+            },
+            {
+              "name": "SAILENT SEIHMEN",
+              "info": "Distillery, Hyperion, Proyeckt Qrach",
+              "link": ""
+            },
+            {
+              "name": "PATRICK DRE",
+              "info": "Drec",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-03-30-kunstausstellung-spendenaktion-fuer-kriegsgeschaedigte",
+      "date": "2022-03-30",
+      "title": "KUNSTAUSSTELLUNG / SPENDENAKTION FÜR KRIEGSGESCHÄDIGTE",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20220705042333id_/https://www.distillery.de/ex/dates/2022/03/30",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "YUSSUF.MANES",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ROGUE.186",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DARINA ORLIUK",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MARTIN SCHINDLER",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MORE SOON..",
+              "info": "Start: 16, add to Cal, Soli-Ausstellung für Kriegsgeschädigte, Auf der ganzen Welt flüchten Menschen vor Krieg und Gewalt. Angesichts der aktuellen Weltlage möchten wir einen Beitrag leisten und Spenden für Kriegsgeschädigte sammeln.",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

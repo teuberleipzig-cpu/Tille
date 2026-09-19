@@ -1,0 +1,566 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2019-11-01-hyperion-fridays-for-future-disco-edit",
+      "date": "2019-11-01",
+      "title": "HYPERION - „FRIDAYS FOR FUTURE DISCO“ EDIT",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20191019005759id_/http://www.distillery.de/ex/dates/2019/11/01",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "PEN PERRY",
+              "info": "Parquet Rec., Inlab Rec.",
+              "link": ""
+            },
+            {
+              "name": "SAILENT SEIHMEN",
+              "info": "Hyperion",
+              "link": ""
+            },
+            {
+              "name": "BLANKK DISC",
+              "info": "Hyperion, Start: 23:00, add to Cal, Das Techno eine große Zukunft hat dürfte spätestens klar sein seit Sven Markquart vergangenen Sonntag das erste mal „Ja“ gesagt hat bei einem Gast mit weißem Shirt.Grund genug mal einen Ausblick in die Zukunft des House und Disco Sound zu werfen. Hier köchelt es ordentlich und was aus dem Topf über den Rand läuft kann sich durchaus hören lassen., Wir wollen diese Nacht die Probe aufs Exempel machen und nehmen euch mit auf eine Zeitreise durch den House Sound von damals bis,naja...Future Future Future ;), #fortheloveofhouse, #thefutureisnow",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-11-02-seelen-records",
+      "date": "2019-11-02",
+      "title": "SEELEN. RECORDS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20191019005441id_/http://www.distillery.de/ex/dates/2019/11/02",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "GLOWAL",
+              "info": "Innervisions, Siamese, Sapiens, Exit Strategy",
+              "link": ""
+            },
+            {
+              "name": "BENJAMIN FRöHLICH",
+              "info": "Permanent Vacation",
+              "link": ""
+            },
+            {
+              "name": "PETER INVASION",
+              "info": "Riotvan, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MAURO CARACHO",
+              "info": "Distillery, Fäncy, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "JANEIN",
+              "info": "SEELEN",
+              "link": ""
+            },
+            {
+              "name": "SEELEN.",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "NARCISS",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-11-03-up-home-so-wie-noch-nie",
+      "date": "2019-11-03",
+      "title": "UP HOME - SO WIE NOCH NIE",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20191118072613id_/http://www.distillery.de/ex/dates/2019/11/03",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "FR. JPLA",
+              "info": "Rillendisco, IfZ",
+              "link": ""
+            },
+            {
+              "name": "MOTRAM",
+              "info": "giroton, Rillendisco",
+              "link": ""
+            },
+            {
+              "name": "QIU",
+              "info": "connwax, IfZ",
+              "link": ""
+            },
+            {
+              "name": "SUBTRAK",
+              "info": "Where the Buffalo Roam, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DANIEL SAILER",
+              "info": "Distillery, Where the Buffalo Roam, kompl3x",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-11-08-livelyrix-poetry-slam",
+      "date": "2019-11-08",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20191019004815id_/http://www.distillery.de/ex/dates/2019/11/08",
+      "imageUrl": "",
+      "description": "FR. 08.11.19 Drum n Bass Bundesliga",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "FLORIAN STEIN",
+              "info": "Bochum",
+              "link": ""
+            },
+            {
+              "name": "MIEDYA MAHMOD",
+              "info": "Bochum",
+              "link": ""
+            },
+            {
+              "name": "MAX GOLENZ",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "LINA WEDEMEYER",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LINA KLOEPPER",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "EILEEN MäTZOLD",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "JOE STARKLOFF",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-11-09-saturday-rave",
+      "date": "2019-11-09",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20191019005852id_/http://www.distillery.de/ex/dates/2019/11/09",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "RENé BOURGEOIS",
+              "info": "3000Grad",
+              "link": ""
+            },
+            {
+              "name": "PENG PENG",
+              "info": "3000Grad",
+              "link": ""
+            },
+            {
+              "name": "MANUEL MEYER – LIVE",
+              "info": "3000Grad",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "CLAIRE MORGAN",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "LENNART WIEHE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-11-15-dopeschool",
+      "date": "2019-11-15",
+      "title": "DOPESCHOOL",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20191118072754id_/http://www.distillery.de/ex/dates/2019/11/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DEFEKTO",
+              "info": "Piklevel, LHiTP",
+              "link": ""
+            },
+            {
+              "name": "DJ ACCESS",
+              "info": "NewDEF, Dresden",
+              "link": ""
+            },
+            {
+              "name": "DJ DøRBYSTARR AKA BOB KARLI AKA DERBYDELAY",
+              "info": "soulutian, Team PurpleTea, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "YAMI",
+              "info": "Good Hood Music, Weirdo Family, Traphouse",
+              "link": ""
+            },
+            {
+              "name": "KIT KUT",
+              "info": "GoodHoodMusic, Beyond07, Team PurpleTea",
+              "link": ""
+            },
+            {
+              "name": "GVCCI MING",
+              "info": "GoodHoodMusic",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-11-16-we-like-bass-tour-2019",
+      "date": "2019-11-16",
+      "title": "WE LIKE BASS TOUR 2019",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20191019005424id_/http://www.distillery.de/ex/dates/2019/11/16",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: + SUPPORT:",
+          "items": [
+            {
+              "name": "LARI LUKE",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "KAROL TIP",
+              "info": "We are YZZY, Start: 20:00, add to Cal, wir präsentiert vom Der Bomber der Herzen & Goodies, Die Show ist restlos ausverkauft! Es wird keine Tickets an der Abendkasse geben!",
+              "link": ""
+            },
+            {
+              "name": "SA. 16.11.19 SATURDAY RAVE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "BARNT",
+              "info": "Magazine",
+              "link": ""
+            },
+            {
+              "name": "MDMK AKA",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-11-19-herzbube-welttournee",
+      "date": "2019-11-19",
+      "title": "HERZBUBE WELTTOURNEE",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20191019005755id_/http://www.distillery.de/ex/dates/2019/11/19",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: + SUPPORT:",
+          "items": [
+            {
+              "name": "MORLOCKK DILEMMA – LIVE",
+              "info": "Spoken View, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DJ ACCESS",
+              "info": "NewDEF, Dresden, Start: 19:00 (Einlass), 20:00 (Beginn), add to Cal, Meine Damen und Herren, Ladies and Gentlemen, er dankt der crowd auf Empfehlung des Managements...Ja, Sie haben richtig gelesen. Der selbst ernannte Herzbube, Lebemann und Frauenflüsterer Morlockk Dilemma geht auf große Welttournee. Zusammen mit DJ Access, seines Zeichens schönster Plattendreher Ostdeutschlands, beehren die beiden ausgewählte Metropolen und verzaubern ihr Publikum mit traumhaften Melodien und bewegender Lyrik. Das sollten Sie sich nicht entgehen lassen. Ein unterhaltsames Potpourri aus zeitlosen Klassikern und brandaktuellen Gassenhauern erwartet Sie auf der \"Herzbube Welttournee 2019/2020\". Tickets nur so lang der Vorrat reicht., Vorverkauf -> https://www.tixforgigs.com/Event/30569/morlockk-dilemma-i-leipzig-herzbube-welttournee-distillery-leipzig",
+              "link": ""
+            },
+            {
+              "name": "DI. 19.11.19 ROUND AND ROUND - THE WORLD TOUR",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MATTHIAS TANZMANN",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-11-22-16-it-s-yours-geburtstag",
+      "date": "2019-11-22",
+      "title": "16. IT'S YOURS GEBURTSTAG",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20191118072618id_/http://www.distillery.de/ex/dates/2019/11/22",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Konzert: Einlass 21:30 Uhr Eintritt: VVK 12,00 € / Abendkasse 13,00 € AFTERSHOW AB 00:30:",
+          "items": [
+            {
+              "name": "DEXTER – LIVE",
+              "info": "Melting Pot Music, Wortsport, Stuttgart",
+              "link": ""
+            },
+            {
+              "name": "CLEP – LIVE",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DEINEMAFA – LIVE",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "JOSI MILLER",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-11-23-803-crystal-grooves-meets-drec",
+      "date": "2019-11-23",
+      "title": "803 CRYSTAL GROOVES MEETS DREC",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20191019004708id_/http://www.distillery.de/ex/dates/2019/11/23",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "CINTHIE",
+              "info": "Beste Modus, Watergate, Berlin",
+              "link": ""
+            },
+            {
+              "name": "HDSN",
+              "info": "Nbast",
+              "link": ""
+            },
+            {
+              "name": "RIEDOX",
+              "info": "Budapest",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "PATRICK DRE",
+              "info": "Drec, Magdeburg",
+              "link": ""
+            },
+            {
+              "name": "RUKE LIDCHARD",
+              "info": "Drec, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "GEORG BIGALKE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-11-29-w-t-b-r-s-p-e-z-i-a-l",
+      "date": "2019-11-29",
+      "title": "W T B R - S P E Z I A L",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20191019005722id_/http://www.distillery.de/ex/dates/2019/11/29",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "T.RAUMSCHMIERE – LIVE",
+              "info": "Shitkatapult, Berlin",
+              "link": ""
+            },
+            {
+              "name": "RNGR – LIVE",
+              "info": "Micronium, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DANIEL SAILER",
+              "info": "Distillery, Where the Buffalo Roam, kompl3x, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SUBTRAK",
+              "info": "Where the Buffalo Roam, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-11-30-saturday-rave",
+      "date": "2019-11-30",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20191019005731id_/http://www.distillery.de/ex/dates/2019/11/30",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "JIMI JULES",
+              "info": "Innervisions, Watergate",
+              "link": ""
+            },
+            {
+              "name": "BRAUNBECK",
+              "info": "Sol Eterno, O’rs, Watergate",
+              "link": ""
+            },
+            {
+              "name": "LARS CHRISTIAN MüLLER",
+              "info": "Distillery, mindcookies",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "ALIGNMENT",
+              "info": "Voxnox, Involve",
+              "link": ""
+            },
+            {
+              "name": "ATALANTA",
+              "info": "Distillery, Inferis, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ALMA MARTER",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

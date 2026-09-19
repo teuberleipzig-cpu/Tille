@@ -1,0 +1,440 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2016-05-04-subversive-electronics",
+      "date": "2016-05-04",
+      "title": "SUBVERSIVE ELECTRONICS",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20160517213845id_/http://www.distillery.de:80/ex/dates/2016/05/04",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SPEEDY J",
+              "info": "Electric Deluxe, Rotterdam",
+              "link": ""
+            },
+            {
+              "name": "JANEIN",
+              "info": "SEELEN",
+              "link": ""
+            },
+            {
+              "name": "VINCENT NEUMANN",
+              "info": "Distillery, Unitas Multiplex, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-05-05-kugelblitzdonnerstag-gets-mad-again",
+      "date": "2016-05-05",
+      "title": "KUGELBLITZDONNERSTAG GETS MAD AGAIN!",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20160517213747id_/http://www.distillery.de:80/ex/dates/2016/05/05",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "PHONATICS HIFI",
+              "info": "Dutty Wine C",
+              "link": ""
+            },
+            {
+              "name": "GRINGO",
+              "info": "aka The Superselector, Teambirnenpfeffi",
+              "link": ""
+            },
+            {
+              "name": "HIGH POWER STATION",
+              "info": "#Teameastgermany",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "CHIEF BOIMA",
+              "info": "Dutty Artz, Africa Is A Radio",
+              "link": ""
+            },
+            {
+              "name": "PABLO GUNZALES",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-05-06-livelyrix-poetry-slam",
+      "date": "2016-05-06",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20160517213851id_/http://www.distillery.de:80/ex/dates/2016/05/06",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MARVIN RUPPERT",
+              "info": "Marburg",
+              "link": ""
+            },
+            {
+              "name": "LETICIA WAHL",
+              "info": "Marburg",
+              "link": ""
+            },
+            {
+              "name": "BJöRN GöGGE",
+              "info": "Essen",
+              "link": ""
+            },
+            {
+              "name": "JULE ECKERT",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "DAVID KLEIN",
+              "info": "Dresden",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-05-07-conscious-minds",
+      "date": "2016-05-07",
+      "title": "CONSCIOUS MINDS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20160517213855id_/http://www.distillery.de:80/ex/dates/2016/05/07",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SUPERNOVA",
+              "info": "Lapsus Music, Defected, Noir Music",
+              "link": ""
+            },
+            {
+              "name": "DYNAMITE KADINSKI",
+              "info": "Fäncy, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MAURO CARACHO",
+              "info": "Fäncy, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "TOMMY FOUR SEVEN",
+              "info": "47, Berlin",
+              "link": ""
+            },
+            {
+              "name": "STEPHAN VON WOLFFERSDORFF",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-05-13-bridge-the-gap-w-moresounds",
+      "date": "2016-05-13",
+      "title": "BRIDGE THE GAP W/ MORESOUNDS",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20160419071506id_/http://www.distillery.de:80/ex/dates/2016/05/13",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MORESOUNDS - LIVE",
+              "info": "Astrophonica/Cosmic Bridge/31 Recordings",
+              "link": ""
+            },
+            {
+              "name": "LXC",
+              "info": "Alphacut, 45Seven, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DUBBALOT B2B SELECTAH EL P",
+              "info": "Boundless Beatz, Vibes Ambassadors, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "FRAN",
+              "info": "Berlin, Start: 23:30",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-05-14-24-h-wohnzimmer-plus-x",
+      "date": "2016-05-14",
+      "title": "24 H WOHNZIMMER - PLUS X",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20160516012743id_/http://www.distillery.de:80/ex/dates/2016/05/14",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ÂME",
+              "info": "Innervisions, Germany",
+              "link": ""
+            },
+            {
+              "name": "MARCUS WORGULL",
+              "info": "Innervisions, Koeln",
+              "link": ""
+            },
+            {
+              "name": "PILOCKA KRACH",
+              "info": "Save To Disc Records, E-Minor, Bar25",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-05-19-kugelblitzdonnerstag-75",
+      "date": "2016-05-19",
+      "title": "KUGELBLITZDONNERSTAG #75",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20160517213900id_/http://www.distillery.de:80/ex/dates/2016/05/19",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "GRINGO",
+              "info": "aka The Superselector, Teambirnenpfeffi",
+              "link": ""
+            },
+            {
+              "name": "DJ BEATZEPS",
+              "info": "High Power Station, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DJ SENSAY",
+              "info": "Rockstone Sound, ISwagga",
+              "link": ""
+            },
+            {
+              "name": "LIFTED ERIK",
+              "info": "Phonatics Hifi, Chemnitz, Start: 23:00, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-05-21-dirt-crew-label-night",
+      "date": "2016-05-21",
+      "title": "DIRT CREW LABEL NIGHT",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20160517213757id_/http://www.distillery.de:80/ex/dates/2016/05/21",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "TILL VON SEIN",
+              "info": "Dirt Crew",
+              "link": ""
+            },
+            {
+              "name": "SUOL",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "DIRT CREW",
+              "info": "Break 3000, Berlin",
+              "link": ""
+            },
+            {
+              "name": "GOOD GUY MIKESH",
+              "info": "Riotvan, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "PETER INVASION",
+              "info": "Riotvan, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-05-26-samiyam-animals-have-feelings-tour",
+      "date": "2016-05-26",
+      "title": "SAMIYAM - ANIMALS HAVE FEELINGS TOUR",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20160517213906id_/http://www.distillery.de:80/ex/dates/2016/05/26",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SAMIYAM - LIVE",
+              "info": "Stones Throw/Brainfeeder, LA",
+              "link": ""
+            },
+            {
+              "name": "JON PHONICS",
+              "info": "Astral Black/First Word, Glasgow",
+              "link": ""
+            },
+            {
+              "name": "SKOR ROKSWELL",
+              "info": "VARY, Champion Sound, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "CAROOL",
+              "info": "Leipzig, Start: 21:00, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-05-27-purple-tea-vol-vii",
+      "date": "2016-05-27",
+      "title": "PURPLE TEA VOL. VII",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20160517213939id_/http://www.distillery.de:80/ex/dates/2016/05/27",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "JENNY SHARP",
+              "info": "Sharp Radio, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "KITKUT",
+              "info": "Beyond07, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DRBYSTRR93",
+              "info": "raputation[.de], Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BUZZ",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "ANTR",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-05-28-acid-phase",
+      "date": "2016-05-28",
+      "title": "ACID PHASE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20160517213802id_/http://www.distillery.de:80/ex/dates/2016/05/28",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "EMMANUEL TOP",
+              "info": "Attack Records",
+              "link": ""
+            },
+            {
+              "name": "FRED HUSH",
+              "info": "Relief Records",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

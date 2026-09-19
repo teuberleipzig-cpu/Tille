@@ -1,0 +1,367 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2015-02-05-kugelblitz-47-spezial-meets-bombee",
+      "date": "2015-02-05",
+      "title": "KUGELBLITZ #47 - SPEZIAL MEETS BOMBEE",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20150223172131id_/http://www.distillery.de:80/ex/dates/2015/02/05",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "BOMBEE",
+              "info": "Bombee, Chemnitz",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "special:",
+          "items": [
+            {
+              "name": "ELEPHANT MAN",
+              "info": "Dancehall Energy God, Jamaica",
+              "link": ""
+            },
+            {
+              "name": "LIFTED ERIK",
+              "info": "Phonatics Hifi, Chemnitz",
+              "link": ""
+            },
+            {
+              "name": "KID GRINGO",
+              "info": "Heckert Empire",
+              "link": ""
+            },
+            {
+              "name": "DJ BEATZEPS",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-02-06-livelyrix-poetry-slam",
+      "date": "2015-02-06",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20150114184113id_/http://distillery.de:80/ex/dates/2015/02/06",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: MODERATION:",
+          "items": [
+            {
+              "name": "ANDY STRAUSS",
+              "info": "Münster",
+              "link": ""
+            },
+            {
+              "name": "STEFAN DöRSING",
+              "info": "Wetzlar",
+              "link": ""
+            },
+            {
+              "name": "THOMAS SPITZER",
+              "info": "Regensburg",
+              "link": ""
+            },
+            {
+              "name": "JACINTA NANDI",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "CHRISTIAN MEYER",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-02-07-musik-fuers-herz",
+      "date": "2015-02-07",
+      "title": "MUSIK FÜRS HERZ",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20150215235937id_/http://distillery.de:80/ex/dates/2015/02/07",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ADA",
+              "info": "Pampa, Areal Records",
+              "link": ""
+            },
+            {
+              "name": "IRR",
+              "info": "Kompakt, Köln",
+              "link": ""
+            },
+            {
+              "name": "DüRERSTUBEN",
+              "info": "Pampa",
+              "link": ""
+            },
+            {
+              "name": "URSL",
+              "info": "Laut & Luise",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-02-13-rap-box-vol-1-feat-like-ham-in-the-pan",
+      "date": "2015-02-13",
+      "title": "RAP BOX VOL.1 FEAT. LIKE HAM IN THE PAN",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20150211063841id_/http://www.distillery.de:80/ex/dates/2015/02/13",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DJ YO-C",
+              "info": "Bounce 87, Thre3style",
+              "link": ""
+            },
+            {
+              "name": "DJ ROCKING B AKA KING BENSON",
+              "info": "Stars For Soul, Karamel",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "DJ D-FEKT",
+              "info": "Resistant Mindz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DJ SAIBZ",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-02-14-walk-right-in-so-you-can-look-out",
+      "date": "2015-02-14",
+      "title": "WALK RIGHT IN SO YOU CAN LOOK OUT",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20150216010827id_/http://distillery.de:80/ex/dates/2015/02/14",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "BODDIKA",
+              "info": "Nonplus, Sunklo, Swamp81, London",
+              "link": ""
+            },
+            {
+              "name": "MONKEY MAFFIA",
+              "info": "Freude am Tanzen, Jena",
+              "link": ""
+            },
+            {
+              "name": "PAUL ORMANNS",
+              "info": "Fatplastics Jena, Row Records",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "BLACK NAKHUR",
+              "info": "Pneuma Dor, Nowhere, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-02-20-caribbean-nice-up-w-the-heatwave",
+      "date": "2015-02-20",
+      "title": "CARIBBEAN NICE UP W/ THE HEATWAVE",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20150215234652id_/http://distillery.de:80/ex/dates/2015/02/20",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "THE HEATWAVE",
+              "info": "Hot Wuk, London",
+              "link": ""
+            },
+            {
+              "name": "HIGH POWER STATION",
+              "info": "Görlitz, Leipzig, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DJ SENSAY",
+              "info": "Rockstone Sound, ISwagga",
+              "link": ""
+            },
+            {
+              "name": "DE LA M",
+              "info": "London, Madrid, Leipzig, Start: 23:30, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-02-21-innervisions",
+      "date": "2015-02-21",
+      "title": "INNERVISIONS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20150215093852id_/http://distillery.de:80/ex/dates/2015/02/21",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MARCUS WORGULL",
+              "info": "Koeln",
+              "link": ""
+            },
+            {
+              "name": "KONSTANTIN SIBOLD",
+              "info": "Innervisions, Caramelo, Mule Musiq",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "PAUL PANZER",
+              "info": "Digital Luxuries",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-02-27-high-live-low-sounds",
+      "date": "2015-02-27",
+      "title": "HIGH LIVE & LOW SOUNDS",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20150217061150id_/http://www.distillery.de:80/ex/dates/2015/02/27",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "NIGHTWAVE",
+              "info": "Heka Trax, Glasgow",
+              "link": ""
+            },
+            {
+              "name": "BASS EN MASS",
+              "info": "Magdeburg",
+              "link": ""
+            },
+            {
+              "name": "DJ SICSTYLE",
+              "info": "Spitainment",
+              "link": ""
+            },
+            {
+              "name": "NONAEON",
+              "info": "Hidden Structures, Start: 23:30, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2015-02-28-kaawee-09",
+      "date": "2015-02-28",
+      "title": "KAAWEE 09",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20150216010746id_/http://distillery.de:80/ex/dates/2015/02/28",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DOUGLAS GREED",
+              "info": "Freude am Tanzen, Jena",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "RUKEY",
+              "info": "Distillery, esoulate, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

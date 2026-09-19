@@ -1,0 +1,382 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2017-04-01-expect-to-hear-more",
+      "date": "2017-04-01",
+      "title": "EXPECT TO HEAR MORE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20170425052301id_/http://www.distillery.de:80/ex/dates/2017/04/01",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "CARLO RUETZ",
+              "info": "M_nus, Supdub, Berlin",
+              "link": ""
+            },
+            {
+              "name": "LENA BART",
+              "info": "Pardon Palais, München",
+              "link": ""
+            },
+            {
+              "name": "STAN STARRY",
+              "info": "Betriebsfeier, Berlin",
+              "link": ""
+            },
+            {
+              "name": "LENNY BROOKSTER",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "mindcookies",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-04-06-kugelblitzdonnerstag-93",
+      "date": "2017-04-06",
+      "title": "KUGELBLITZDONNERSTAG #93",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20170422155321id_/http://www.distillery.de:80/ex/dates/2017/04/06",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "TEAMBIRNENPFEFFI",
+              "info": "aka DJ Beatzeps, Gringo, DJ Sensay, Lifted Erik, Start: 23:00, add to Cal, 2wöchentlich, immer am ersten und dritten (1. und 3.) Donnerstag im Monat, für 3 Euronen – mit den Residents vom Teambirnenpfeffi, Beatzeps, Gringo, Sensay, und, Lifted Erik",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-04-07-livelyrix-poetry-slam",
+      "date": "2017-04-07",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20170425052110id_/http://www.distillery.de:80/ex/dates/2017/04/07",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "KALEB ERDMANN",
+              "info": "Frankfurt",
+              "link": ""
+            },
+            {
+              "name": "ALEX BURKHARD",
+              "info": "München",
+              "link": ""
+            },
+            {
+              "name": "ANNE LENA OBERMOSER",
+              "info": "Graz",
+              "link": ""
+            },
+            {
+              "name": "HENRIKE KLEHR",
+              "info": "Düsseldorf",
+              "link": ""
+            },
+            {
+              "name": "U.V.M.",
+              "info": "und wie immer viele mehr",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-04-08-unique-ability",
+      "date": "2017-04-08",
+      "title": "UNIQUE ABILITY",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20170420100309id_/http://www.distillery.de:80/ex/dates/2017/04/08",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MONKEY SAFARI",
+              "info": "Hommage",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SHURAY & WALLE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "NIHAD TULE",
+              "info": "SLOBODA, Random Island, Drumcode, Stockholm",
+              "link": ""
+            },
+            {
+              "name": "VINCENT NEUMANN",
+              "info": "Distillery, Unitas Multiplex, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-04-13-4d-dengue-dengue-dengue-live-diskosativa",
+      "date": "2017-04-13",
+      "title": "4D: DENGUE DENGUE DENGUE (LIVE) & DISKOSATIVA",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20170425052115id_/http://www.distillery.de:80/ex/dates/2017/04/13",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: tropical bass",
+          "items": [
+            {
+              "name": "DENGUE DENGUE DENGUE",
+              "info": "Enchufada, Peru",
+              "link": ""
+            },
+            {
+              "name": "IMPFBASS",
+              "info": "Gazelle Horn & Michael Nagler",
+              "link": ""
+            },
+            {
+              "name": "PABLO GUNZALES",
+              "info": "Mad Again!, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: funk, disco, beats",
+          "items": [
+            {
+              "name": "DISKOSATIVA",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-04-15-24-h-wohnzimmer-easter-edition",
+      "date": "2017-04-15",
+      "title": "24 H WOHNZIMMER - EASTER EDITION",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20170423110007id_/http://www.distillery.de:80/ex/dates/2017/04/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "TINI",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "tINI",
+              "info": "and the gang",
+              "link": ""
+            },
+            {
+              "name": "WHOMADEWHO – DJ SET",
+              "info": "Kompakt, Get Physical, Ellum",
+              "link": ""
+            },
+            {
+              "name": "MIRA",
+              "info": "Kater Blau, URSL, Berlin",
+              "link": ""
+            },
+            {
+              "name": "GUNJAH",
+              "info": "Showboxx, Funkwelt, Dresden",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-04-20-kugelblitzdonnerstag-94",
+      "date": "2017-04-20",
+      "title": "KUGELBLITZDONNERSTAG #94",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20170425052306id_/http://www.distillery.de:80/ex/dates/2017/04/20",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "TEAMBIRNENPFEFFI",
+              "info": "aka DJ Beatzeps, Gringo, DJ Sensay, Lifted Erik, Start: 23:00, add to Cal, 2wöchentlich, immer am ersten und dritten (1. und 3.) Donnerstag im Monat, für 3 Euronen – mit den Residents vom Teambirnenpfeffi, Beatzeps, Gringo, Sensay, und, Lifted Erik",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-04-21-mixery-plattenkoffer-by-detektor-fm",
+      "date": "2017-04-21",
+      "title": "MIXERY-PLATTENKOFFER BY DETEKTOR.FM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20170423110030id_/http://www.distillery.de:80/ex/dates/2017/04/21",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SCHLACHTHOFBRONX",
+              "info": "München",
+              "link": ""
+            },
+            {
+              "name": "ZEBSTA",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "MURDOCK",
+              "info": "Welcome to Bmore",
+              "link": ""
+            },
+            {
+              "name": "DJ SICSTYLE",
+              "info": "Spitainment, Start: 22:00, add to Cal, Während andere aus dem Club nicht rauskommen, kommt der",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-04-22-authentic-melodies",
+      "date": "2017-04-22",
+      "title": "AUTHENTIC MELODIES",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20170425052311id_/http://www.distillery.de:80/ex/dates/2017/04/22",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "&ME",
+              "info": "keinemusik, Berlin",
+              "link": ""
+            },
+            {
+              "name": "ADAM PORT",
+              "info": "keinemusik, Berlin",
+              "link": ""
+            },
+            {
+              "name": "FILBURT",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "O*RS",
+              "info": "Permanent Vacation",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2017-04-29-24-h-wohnzimmer-viva-la-revolucion",
+      "date": "2017-04-29",
+      "title": "24 H WOHNZIMMER - VIVA LA REVOLUCION!",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20170622015103id_/http://www.distillery.de:80/ex/dates/2017/04/29",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ANSWER CODE REQUEST - SPECIAL HOUSE SET",
+              "info": "Ostgut Ton",
+              "link": ""
+            },
+            {
+              "name": "MDR",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "BORROWED IDENTITY",
+              "info": "Homesick, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "NITAM",
+              "info": "Unterton, Berlin",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

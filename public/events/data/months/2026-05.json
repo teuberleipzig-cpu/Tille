@@ -1,0 +1,441 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "ra-2395157",
+      "date": "2026-05-01",
+      "title": "Proper Rave",
+      "color": "olive",
+      "moreUrl": "https://ra.co/events/2395157",
+      "imageUrl": "",
+      "description": "Start: 23:00\nEnde: 07:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "BRAVA",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "DJ Fairytail",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "snackbites",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "DJ IBON",
+              "info": "Copenhagen",
+              "link": ""
+            },
+            {
+              "name": "nea.cuajo",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2418069",
+      "date": "2026-05-02",
+      "title": "GRDN OPENING [OPEN AIR BY DAY & INDOOR AT NIGHT]",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2418069",
+      "imageUrl": "",
+      "description": "Start: 14:00\nEnde: 16:00",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Barbara Preisinger",
+              "info": "Slice of Life, Berlin",
+              "link": ""
+            },
+            {
+              "name": "LIA",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "MAY/O",
+              "info": "Ostend, MorningStretch, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Shuray & Walle",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Submod",
+              "info": "Distillery, vaertism, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Thomas Stieler",
+              "info": "Distillery, Paracou",
+              "link": ""
+            },
+            {
+              "name": "Adriana Lopez",
+              "info": "Grey Report, Modularz, Semantica, Pole Group, Barcelona",
+              "link": ""
+            },
+            {
+              "name": "Carlotta Jacobi",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Mila Stern",
+              "info": "Station Endlos",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2428966",
+      "date": "2026-05-08",
+      "title": "toBASSgo - The Final Chapter",
+      "color": "olive",
+      "moreUrl": "https://ra.co/events/2428966",
+      "imageUrl": "",
+      "description": "Start: 20:00\nEnde: 06:30 (Folgetag)",
+      "sections": []
+    },
+    {
+      "id": "ra-2418083",
+      "date": "2026-05-09",
+      "title": "PARANOID & SLEEPLESS",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2418083",
+      "imageUrl": "",
+      "description": "Start: 22:00\nEnde: 10:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Afem Syko",
+              "info": "R Label Group",
+              "link": ""
+            },
+            {
+              "name": "Alexa Fluor",
+              "info": "Another Records",
+              "link": ""
+            },
+            {
+              "name": "DJ STIMULA",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Millie Forsberg",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "noxsonos",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Oliver Rosemann",
+              "info": "Recorded Things, Mindtrip, Mord",
+              "link": ""
+            },
+            {
+              "name": "Svreca",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2429268",
+      "date": "2026-05-16",
+      "title": "METRO M6 SPRING EDITION [OPEN AIR BY DAY & INDOOR AT NIGHT]",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2429268",
+      "imageUrl": "",
+      "description": "Start: 14:00\nEnde: 10:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "2D1G",
+              "info": "Metro, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Bennet (DE)",
+              "info": "DE",
+              "link": ""
+            },
+            {
+              "name": "eves120",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "SAM (9)",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "mp.ulle",
+              "info": "METRO, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Cyan85",
+              "info": "Curtis Electronix",
+              "link": ""
+            },
+            {
+              "name": "DJ G1NA R.",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Claudio PRC",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "Isabel Soto",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Medha",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Vanta (DE)",
+              "info": "DE",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2390574",
+      "date": "2026-05-23",
+      "title": "GLITTER+TRAUMA – Queer Wave Party",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2390574",
+      "imageUrl": "",
+      "description": "Start: 21:00\nEnde: 08:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Maze DK",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Kikimike",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "ILOVDADDYZ",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Jamie K",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2418096",
+      "date": "2026-05-24",
+      "title": "KEINSONNTAG [OPEN AIR BY DAY & INDOOR AT NIGHT]",
+      "color": "yellow",
+      "moreUrl": "https://ra.co/events/2418096",
+      "imageUrl": "",
+      "description": "Start: 14:00\nEnde: 06:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Butschi",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Mira Vána",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "DJ Skonti",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Timstagram",
+              "info": "Keinkollektiv, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2431900",
+      "date": "2026-05-29",
+      "title": "apostrophé x Distillery",
+      "color": "olive",
+      "moreUrl": "https://ra.co/events/2431900",
+      "imageUrl": "",
+      "description": "Start: 22:00\nEnde: 08:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Annie O",
+              "info": "KitKatClub, Berlin",
+              "link": ""
+            },
+            {
+              "name": "apøllo",
+              "info": "apostrophé, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Ben Derris",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "Carlo Bonanza",
+              "info": "AROMA+, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DJ Schnellena",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "lisa luka",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "LUNA.le",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Sony2k",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Takt & Taumel",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2418103",
+      "date": "2026-05-30",
+      "title": "DATE TIME with SEELEN. X SILIKON [OPEN AIR BY DAY & INDOOR AT NIGHT]",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2418103",
+      "imageUrl": "",
+      "description": "Start: 14:00\nEnde: 10:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Delirante",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Gianni",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "s-ray",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Vivienna",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Submod",
+              "info": "Distillery, vaertism, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Chami",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "JANEIN",
+              "info": "SEELEN",
+              "link": ""
+            },
+            {
+              "name": "Medha",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Stigmatique",
+              "info": "Distillery, SEELEN",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

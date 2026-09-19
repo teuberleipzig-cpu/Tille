@@ -1,0 +1,330 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2010-03-05-livelyrix-poetry-slam",
+      "date": "2010-03-05",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20100129112759id_/http://www.distillery.de:80/ex/dates/2010/03/05",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: livelyrix poetry slam HOSTED BY:",
+          "items": [
+            {
+              "name": "LARS RUPPEL",
+              "info": "Marburg",
+              "link": ""
+            },
+            {
+              "name": "ALEXANDER WILLRICH",
+              "info": "Stuttgart",
+              "link": ""
+            },
+            {
+              "name": "HANZ",
+              "info": "Ludwigsburg",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-03-06-hoerfunk-meets-syntax",
+      "date": "2010-03-06",
+      "title": "HOERFUNK MEETS SYNTAX",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20100121121305id_/http://www.distillery.de:80/ex/dates/2010/03/06",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: hoerfunk",
+          "items": [
+            {
+              "name": "ARIL BRIKHA – LIVE",
+              "info": "Peacefrog, Kompakt, Transmat, Music Man, Stockholm",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-03-12-kurt-reith-abend",
+      "date": "2010-03-12",
+      "title": "KURT REITH ABEND",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20100307052818id_/http://distillery.de:80/ex/dates/2010/03/12",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: funk meets punk",
+          "items": [
+            {
+              "name": "HANS DER JäGER",
+              "info": "Connewitz Grill Mafia, Leipzig-Connewitz",
+              "link": ""
+            },
+            {
+              "name": "DJ GRAPE",
+              "info": "Conne Island, Leipzig-Connewitz",
+              "link": ""
+            },
+            {
+              "name": "DJ YORK",
+              "info": "Könich Heinz, Leipzig-Connewitz",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-03-13-6-years-finest-selection-meets-bass-plus",
+      "date": "2010-03-13",
+      "title": "6 YEARS FINEST SELECTION MEETS BASS PLUS!",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20100307052823id_/http://distillery.de:80/ex/dates/2010/03/13",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: finest selection",
+          "items": [
+            {
+              "name": "KADEBOSTAN – LIVE",
+              "info": "Freude am Tanzen, Mo's Ferry, Fenou, Genf",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-03-18-livelyrix-pres-buchmessenspecial-2010-pt-i",
+      "date": "2010-03-18",
+      "title": "LIVELYRIX PRES. BUCHMESSENSPECIAL 2010 - PT.I",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20100307052828id_/http://distillery.de:80/ex/dates/2010/03/18",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: buchmessespecial lesebühne HOSTED BY:",
+          "items": [
+            {
+              "name": "LETTERMEN",
+              "info": "Stefan Seyfarth, Moritz7, Thomas Jurisch, Konstantin Turra",
+              "link": ""
+            },
+            {
+              "name": "MARCO PFENNIG",
+              "info": "Dresden",
+              "link": ""
+            },
+            {
+              "name": "DJ RUKEY",
+              "info": "Distillery, esoulate, Leipzig, Start: 20:00 (Einlass), Beginn: 21:00, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-03-19-livelyrix-pres-buchmessenspecial-2010-pt-ii",
+      "date": "2010-03-19",
+      "title": "LIVELYRIX PRES. BUCHMESSENSPECIAL 2010 - PT.II",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20100307052833id_/http://distillery.de:80/ex/dates/2010/03/19",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: buchmessespecial poetry slam",
+          "items": [
+            {
+              "name": "GROßRAUMDICHTEN - LIVE",
+              "info": "Live Elektro Spoken-Word-Performance",
+              "link": ""
+            },
+            {
+              "name": "PHILIPP SCHARRENBERG",
+              "info": "Stuttgart",
+              "link": ""
+            },
+            {
+              "name": "LARS RUPPEL",
+              "info": "Marburg",
+              "link": ""
+            },
+            {
+              "name": "RENATO KAISER",
+              "info": "Fribourg, Schweiz",
+              "link": ""
+            },
+            {
+              "name": "ANDRé HERRMANN",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-03-20-boundary-functions-meets-where-the-buffalo-roam",
+      "date": "2010-03-20",
+      "title": "BOUNDARY FUNCTIONS MEETS WHERE THE BUFFALO ROAM",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20100307052839id_/http://distillery.de:80/ex/dates/2010/03/20",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: boundary functions",
+          "items": [
+            {
+              "name": "RICK WADE",
+              "info": "Harmonie Park, Bass Force, Detroit",
+              "link": ""
+            },
+            {
+              "name": "CLICK JOE",
+              "info": "Magion, Sklenick, Brno",
+              "link": ""
+            },
+            {
+              "name": "STEFFEN BENNEMANN",
+              "info": "Nachtdigital",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-03-25-teenage-mutant-horror-tour",
+      "date": "2010-03-25",
+      "title": "TEENAGE MUTANT HORROR - TOUR",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20100307052843id_/http://distillery.de:80/ex/dates/2010/03/25",
+      "imageUrl": "",
+      "description": "VVK: 12,-€\nAK: 15,-€",
+      "sections": [
+        {
+          "label": "up: teenage mutant horror VVK: AK:",
+          "items": [
+            {
+              "name": "PRINZ PI – LIVE",
+              "info": "Keine Liebe, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DJ SICSTYLE",
+              "info": "Spitainment, Start: 21:00 (Einlass), 22:30 (Beginn",
+              "link": ""
+            },
+            {
+              "name": "12,-€",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "15,-€",
+              "info": "add to Cal, Achtung: Einlass ab 16 Jahren, Ausweiskontrolle!!, Prinz Pi – Smart Rap",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-03-26-mad-again-heckert-empire-pres-everybody-dance",
+      "date": "2010-03-26",
+      "title": "MAD AGAIN! & HECKERT EMPIRE PRES. EVERYBODY DANCE!",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20100307052848id_/http://distillery.de:80/ex/dates/2010/03/26",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SOUTH RAKKAS CREW",
+              "info": "Mad Decent, Los Angeles",
+              "link": ""
+            },
+            {
+              "name": "LOCALOREZ",
+              "info": "Chemnitz",
+              "link": ""
+            },
+            {
+              "name": "PABLO GUNZALES",
+              "info": "Mad Again!, Hakuna Matataa, Meißen",
+              "link": ""
+            },
+            {
+              "name": "SENCHA",
+              "info": "Distillery, nuskoolbreaks, Black Belt Boogie",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2010-03-27-chitlin-circuit-meets-feenstaub-friends",
+      "date": "2010-03-27",
+      "title": "CHITLIN' CIRCUIT MEETS FEENSTAUB & FRIENDS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20100307052911id_/http://distillery.de:80/ex/dates/2010/03/27",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: chitlin' circuit",
+          "items": [
+            {
+              "name": "MONKEY MAFFIA",
+              "info": "Freude am Tanzen, Jena",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: feenstaub & friends",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

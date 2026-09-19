@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2013-07-06-komm-schon",
+      "date": "2013-07-06",
+      "title": "KOMM SCHON!",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20130909025625id_/http://distillery.de/ex/dates/2013/07/06",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: komm schon",
+          "items": [
+            {
+              "name": "KADEBOSTAN",
+              "info": "Freude am Tanzen, Mo's Ferry, Fenou, Genf",
+              "link": ""
+            },
+            {
+              "name": "HERR FUCHS & FRAU ELSTER",
+              "info": "FABELhaft, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DJ RUKEY",
+              "info": "Distillery, esoulate, Leipzig, Start: 23:00",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

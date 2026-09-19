@@ -1,0 +1,523 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2022-04-01-can-tour-2022",
+      "date": "2022-04-01",
+      "title": "CANÊ TOUR 2022",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20220524114437id_/https://www.distillery.de/ex/dates/2022/04/01",
+      "imageUrl": "",
+      "description": "Gefördert durch:",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "EBOW",
+              "info": "Start: 19:00, add to Cal, Einlass: 19:00 · Beginn: 20:00 · Preis: 17,36 € zzgl. Geb., Alle bereits erworbenen Tickets behalten ihre Gültigkeit und sind weiterhin unter www.landstreicher-konzerte.de/Tickets-Ebow-L sowie an allen bekannten VVK-Stellen erhältlich., Präsentiert von: DIFFUS, Juice, ByteFM & ASK HELMUT",
+              "link": ""
+            },
+            {
+              "name": "DISTILLERY",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "KURT-EISNER-STR. 91",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "04275 LEIPZIG",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-04-02-saturday-rave",
+      "date": "2022-04-02",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20220524125731id_/https://www.distillery.de/ex/dates/2022/04/02",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "CUTHEAD",
+              "info": "Uncanny Valley",
+              "link": ""
+            },
+            {
+              "name": "ANNA MALYSZ",
+              "info": "Nice 4 What, G-Edit",
+              "link": ""
+            },
+            {
+              "name": "ALBRECHT WASSERSLEBEN",
+              "info": "Uncanny Valley, Dresden",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: TENSIØN",
+          "items": [
+            {
+              "name": "TØSCHE",
+              "info": "TENSIØN",
+              "link": ""
+            },
+            {
+              "name": "LEá OCCHI",
+              "info": "Spectrum, Underrated",
+              "link": ""
+            },
+            {
+              "name": "MØZ",
+              "info": "TENSIØN",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-04-08-boundless-beatz-x-fat-bemme",
+      "date": "2022-04-08",
+      "title": "BOUNDLESS BEATZ X FAT BEMME",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20220524120958id_/https://www.distillery.de/ex/dates/2022/04/08",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Boundless Beatz (Liquid Funk / Deep)",
+          "items": [
+            {
+              "name": "ZERO T",
+              "info": "Dispatch, Metalheadz, UK",
+              "link": ""
+            },
+            {
+              "name": "POLLY MAIL",
+              "info": "Push Gang",
+              "link": ""
+            },
+            {
+              "name": "ALOO",
+              "info": "Fat Bemme",
+              "link": ""
+            },
+            {
+              "name": "AUDITE",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DUBBALOT",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: Fat Bemme (Neurofunk / Dark)",
+          "items": [
+            {
+              "name": "TOM FINSTER",
+              "info": "DIVIDID, NËU",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-04-09-saturday-rave",
+      "date": "2022-04-09",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20220524111824id_/https://www.distillery.de/ex/dates/2022/04/09",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ADA",
+              "info": "Pampa, Kompakt",
+              "link": ""
+            },
+            {
+              "name": "SHURAY & WALLE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LARS CHRISTIAN MüLLER",
+              "info": "Distillery, mindcookies",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: EXIL",
+          "items": [
+            {
+              "name": "C4LLIN",
+              "info": "EXIL",
+              "link": ""
+            },
+            {
+              "name": "WASN’T BORN",
+              "info": "EXIL",
+              "link": ""
+            },
+            {
+              "name": "KRAHNER",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-04-15-20-years-selectah-spinback",
+      "date": "2022-04-15",
+      "title": "20 YEARS SELECTAH SPINBACK",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20220524120616id_/https://www.distillery.de/ex/dates/2022/04/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Reggae, Dancehall, Dubplates",
+          "items": [
+            {
+              "name": "STILL SMOKE HIFI",
+              "info": "Erfurt, Heidelberg",
+              "link": ""
+            },
+            {
+              "name": "HOTSTEPPER SOUND",
+              "info": "Halle",
+              "link": ""
+            },
+            {
+              "name": "FIRESOUND",
+              "info": "Dresden",
+              "link": ""
+            },
+            {
+              "name": "SELECTAH SPINBACK",
+              "info": "Da Switch, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: Socatino, Latino Funk, Soca, Tropical Bass, Afrobeats",
+          "items": [
+            {
+              "name": "MASTAH K",
+              "info": "Hotta Fire Reggaestation, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LINHA AZUL",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "MARCELA",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-04-16-24h-wohnzimmer-easter-edition",
+      "date": "2022-04-16",
+      "title": "24H WOHNZIMMER - EASTER EDITION",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20220524110555id_/https://www.distillery.de/ex/dates/2022/04/16",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SAN PROPER",
+              "info": "Netherlands",
+              "link": ""
+            },
+            {
+              "name": "TRIKK",
+              "info": "Innervisions, Optimo Music, Lossless",
+              "link": ""
+            },
+            {
+              "name": "FRITZ WINDISH",
+              "info": "URSL",
+              "link": ""
+            },
+            {
+              "name": "NEW HOOK DJ-SET",
+              "info": "Riotvan",
+              "link": ""
+            },
+            {
+              "name": "MANIQUE",
+              "info": "DJ Set Vocals, MARIA Die RUHE, RTTR, 3000 Grad",
+              "link": ""
+            },
+            {
+              "name": "ANNA MALYSZ",
+              "info": "Nice 4 What, G-Edit",
+              "link": ""
+            },
+            {
+              "name": "MIAMI MüLLER B2B DJ RIJKAARD",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-04-22-faency",
+      "date": "2022-04-22",
+      "title": "FÄNCY",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20220524120234id_/https://www.distillery.de/ex/dates/2022/04/22",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "CORMAC",
+              "info": "Polari/Ostgut Ton/Correspondant",
+              "link": ""
+            },
+            {
+              "name": "KATAYA",
+              "info": "Ketoga, Badbassbitch",
+              "link": ""
+            },
+            {
+              "name": "HMDI",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "NAPOLEON DYNAMITE",
+              "info": "Fäncy, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "REECE WALKER",
+              "info": "Carmel",
+              "link": ""
+            },
+            {
+              "name": "NAITWA",
+              "info": "nice4what",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-04-23-r-label-group-night",
+      "date": "2022-04-23",
+      "title": "R LABEL GROUP NIGHT",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20220524131514id_/https://www.distillery.de/ex/dates/2022/04/23",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "KOBOSIL",
+              "info": "R Label Group",
+              "link": ""
+            },
+            {
+              "name": "RIKHTER",
+              "info": "R Label Group",
+              "link": ""
+            },
+            {
+              "name": "VINCENT NEUMANN",
+              "info": "Distillery, Unitas Multiplex, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "IN VERRUF",
+              "info": "R Label Group",
+              "link": ""
+            },
+            {
+              "name": "AFEM SYKO",
+              "info": "R Label Group",
+              "link": ""
+            },
+            {
+              "name": "KANUCIA",
+              "info": "Berlin",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-04-29-tobassgo",
+      "date": "2022-04-29",
+      "title": "TOBASSGO",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20220524122325id_/https://www.distillery.de/ex/dates/2022/04/29",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "JON VOID",
+              "info": "Liquicity, Play!Music",
+              "link": ""
+            },
+            {
+              "name": "BOOTLEG",
+              "info": "SMS, toBASSgo, 842",
+              "link": ""
+            },
+            {
+              "name": "BLACKSHARK",
+              "info": "Grim Panda Sessions",
+              "link": ""
+            },
+            {
+              "name": "JUDOKAY",
+              "info": "toBASSgo Allstars, Ambiguity Audio",
+              "link": ""
+            },
+            {
+              "name": "NUKEM",
+              "info": "Brainclub, toBASSgo",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "JONNY KAGE",
+              "info": "Grim Panda Sessions, Bass Raiderz Rostock",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2022-04-30-saturday-rave-x-two-years-of-inferis",
+      "date": "2022-04-30",
+      "title": "SATURDAY RAVE X TWO YEARS OF INFERIS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20220524130817id_/https://www.distillery.de/ex/dates/2022/04/30",
+      "imageUrl": "",
+      "description": "I:W",
+      "sections": [
+        {
+          "label": "up: I:",
+          "items": [
+            {
+              "name": "MILA STERN",
+              "info": "Station Endlos",
+              "link": ""
+            },
+            {
+              "name": "MIKE VAN GOETZE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "W",
+              "info": "Workshop & Iman",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: two years of INFERIS",
+          "items": [
+            {
+              "name": "PHILIPP STROBEL",
+              "info": "aufnahme+wiedergabe",
+              "link": ""
+            },
+            {
+              "name": "ANDI",
+              "info": "SYNTHICIDE, aufnahme + wiedergabe, Brooklyn",
+              "link": ""
+            },
+            {
+              "name": "ATALANTA",
+              "info": "Distillery, Inferis",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

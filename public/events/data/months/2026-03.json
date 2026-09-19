@@ -1,0 +1,371 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "ra-2384107",
+      "date": "2026-03-06",
+      "title": "NEXT LEVEL: 6. DIMENSION",
+      "color": "olive",
+      "moreUrl": "https://ra.co/events/2384107",
+      "imageUrl": "",
+      "description": "Start: 19:00\nEnde: 06:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Emeveka",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Kalitos",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2344968",
+      "date": "2026-03-07",
+      "title": "Akua, Rosa Red & SALIMATA",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2344968",
+      "imageUrl": "",
+      "description": "Start: 21:00\nEnde: 10:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Jepe",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Rosa Red",
+              "info": "Permanent Vacation",
+              "link": ""
+            },
+            {
+              "name": "SALIMATA",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Akua",
+              "info": "Brooklyn / Berlin",
+              "link": ""
+            },
+            {
+              "name": "illousion",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "shroederin",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Aivee",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2375429",
+      "date": "2026-03-13",
+      "title": "Fridayclub pres. Crews United",
+      "color": "olive",
+      "moreUrl": "https://ra.co/events/2375429",
+      "imageUrl": "",
+      "description": "Start: 22:00\nEnde: 06:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Bunny Tsukino",
+              "info": "Hotshot, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "audite",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "nohlim",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2352326",
+      "date": "2026-03-14",
+      "title": "Efdemin & Parallx",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2352326",
+      "imageUrl": "",
+      "description": "Start: 21:00\nEnde: 10:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Axoon",
+              "info": "quartal, Sektor Evolution",
+              "link": ""
+            },
+            {
+              "name": "Efdemin",
+              "info": "Dial, Records, Ostgut, Berlin",
+              "link": ""
+            },
+            {
+              "name": "Vincent Neumann",
+              "info": "Distillery, Unitas Multiplex, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Laviena",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Oliver Rosemann",
+              "info": "Recorded Things, Mindtrip, Mord",
+              "link": ""
+            },
+            {
+              "name": "Parallx",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "grandmalheur",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2352332",
+      "date": "2026-03-20",
+      "title": "LAYR ONE with CAIVA live, Rødhad & ZAN",
+      "color": "olive",
+      "moreUrl": "https://ra.co/events/2352332",
+      "imageUrl": "",
+      "description": "Start: 22:00\nEnde: 08:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Malena (2)",
+              "info": "Konnektivmusik, Dresden",
+              "link": ""
+            },
+            {
+              "name": "Rødhåd",
+              "info": "Dystopian",
+              "link": ""
+            },
+            {
+              "name": "SVERRA",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "CAIVA",
+              "info": "Femme Frequency",
+              "link": ""
+            },
+            {
+              "name": "DJ STIMULA",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "LUZI (2)",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Stenella",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2371550",
+      "date": "2026-03-21",
+      "title": "CRÈME HOURS",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2371550",
+      "imageUrl": "",
+      "description": "Start: 07:00\nEnde: 23:00",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "A.B.U.",
+              "info": "Hamburg",
+              "link": ""
+            },
+            {
+              "name": "Boris & Davy",
+              "info": "Creme Club, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Cynthia Matisse",
+              "info": "Weimar",
+              "link": ""
+            },
+            {
+              "name": "Lulu & Nell",
+              "info": "Creme Club, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Manon (3)",
+              "info": "Robert Johnson, Offenbach",
+              "link": ""
+            },
+            {
+              "name": "OLIV",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Submod",
+              "info": "Distillery, vaertism, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2352338",
+      "date": "2026-03-21",
+      "title": "LAYR TWO with Fadi Mohem, Phunkadelica & Ruede Hagelstein",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2352338",
+      "imageUrl": "",
+      "description": "Start: 21:00\nEnde: 10:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Daniel Stefanik",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Phunkadelica",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Ruede Hagelstein",
+              "info": "Upon You, Watergate, Berlin",
+              "link": ""
+            },
+            {
+              "name": "Carlotta Jacobi",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Fadi Mohem",
+              "info": "Werk-Music",
+              "link": ""
+            },
+            {
+              "name": "Juri Heidemann",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "ra-2352342",
+      "date": "2026-03-28",
+      "title": "Dominik Eulberg & Matrixxman",
+      "color": "orange",
+      "moreUrl": "https://ra.co/events/2352342",
+      "imageUrl": "",
+      "description": "Start: 21:00\nEnde: 10:00 (Folgetag)",
+      "sections": [
+        {
+          "label": "line-up:",
+          "items": [
+            {
+              "name": "Dominik Eulberg",
+              "info": "k7!",
+              "link": ""
+            },
+            {
+              "name": "Filburt",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "mp.ulle",
+              "info": "METRO, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Lea Jessen",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Matrixxman",
+              "info": "Dekmantel, Ghostly International",
+              "link": ""
+            },
+            {
+              "name": "Templeton",
+              "info": "Hypress, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Dorsch",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,292 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2013-01-04-livelyrix-poetry-slam",
+      "date": "2013-01-04",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20130106113512id_/http://www.distillery.de:80/ex/dates/2013/01/04",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: spannende wortgefechte",
+          "items": [
+            {
+              "name": "MICHA EBELING",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "TOBIAS KUNZE",
+              "info": "Hannover",
+              "link": ""
+            },
+            {
+              "name": "BLEU BROODE",
+              "info": "Marburg",
+              "link": ""
+            },
+            {
+              "name": "VORWIEGENDINMOLL",
+              "info": "Bremen",
+              "link": ""
+            },
+            {
+              "name": "FELIX KADEN",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-01-05-dystopian",
+      "date": "2013-01-05",
+      "title": "DYSTOPIAN",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20130106113517id_/http://www.distillery.de:80/ex/dates/2013/01/05",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: dystopian",
+          "items": [
+            {
+              "name": "RØDHÅD",
+              "info": "Dystopian",
+              "link": ""
+            },
+            {
+              "name": "ALEX.DO",
+              "info": "Dystopian, Berlin",
+              "link": ""
+            },
+            {
+              "name": "SUBʞUTAN",
+              "info": "Vertigo, Aequalmusic, Institut fuer Zukunft",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-01-11-uk-czech-connection",
+      "date": "2013-01-11",
+      "title": "UK-CZECH-CONNECTION",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20130106113522id_/http://www.distillery.de:80/ex/dates/2013/01/11",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: swing, dancehall, reggae, mash up",
+          "items": [
+            {
+              "name": "PEENIE WALLI",
+              "info": "Prag, CZ",
+              "link": ""
+            },
+            {
+              "name": "RATZ BADDZ",
+              "info": "Vibes Ambassadors, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "CONJAHS FIYAH SOUND",
+              "info": "Köln/Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: jungle, d&b",
+          "items": [
+            {
+              "name": "BLADERUNNER",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-01-12-berghain-06",
+      "date": "2013-01-12",
+      "title": "BERGHAIN 06",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20130106113527id_/http://www.distillery.de:80/ex/dates/2013/01/12",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "GUNJAH",
+              "info": "Showboxx, Funkwelt, Dresden",
+              "link": ""
+            },
+            {
+              "name": "SEVENSOL",
+              "info": "Long Vehicle, Kann",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-01-18-style-wild-meets-overdubclub",
+      "date": "2013-01-18",
+      "title": "STYLE WILD MEETS OVERDUBCLUB",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20130106113532id_/http://www.distillery.de:80/ex/dates/2013/01/18",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: hip hop, beats, wonky, trap",
+          "items": [
+            {
+              "name": "DéBRUIT",
+              "info": "Musique Large, Civil Music, Brüssel/London",
+              "link": ""
+            },
+            {
+              "name": "DJ D-FEKT",
+              "info": "Resistant Mindz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DJ SICSTYLE",
+              "info": "Spitainment",
+              "link": ""
+            },
+            {
+              "name": "DJ TARGET",
+              "info": "Spitainment",
+              "link": ""
+            },
+            {
+              "name": "GM194",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-01-19-ja-noe-meets-bass-plus",
+      "date": "2013-01-19",
+      "title": "JA/NOE MEETS BASS PLUS!",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20130106113540id_/http://www.distillery.de:80/ex/dates/2013/01/19",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: ja/noe album release",
+          "items": [
+            {
+              "name": "METABOMAN & LARGE M - LIVE",
+              "info": "Musik Krause, Jena",
+              "link": ""
+            },
+            {
+              "name": "KRAUSE DUO",
+              "info": "Musik Krause, Jena",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-01-25-digithall",
+      "date": "2013-01-25",
+      "title": "DIGITHALL",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20130106113547id_/http://www.distillery.de:80/ex/dates/2013/01/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: digital reggae, steppers, dub, dubstep",
+          "items": [
+            {
+              "name": "STAND HIGH PATROL FEAT. PUPA JIM - LIVE",
+              "info": "Brest, France",
+              "link": ""
+            },
+            {
+              "name": "JAHTARI – LIVE",
+              "info": "Disrupt, aDUBtion",
+              "link": ""
+            },
+            {
+              "name": "SENOR SERENO",
+              "info": "Palm Beats, Jena",
+              "link": ""
+            },
+            {
+              "name": "DRESSLA",
+              "info": "Jahtari",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2013-01-26-dreikommanull-meets-feenstaub",
+      "date": "2013-01-26",
+      "title": "DREIKOMMANULL MEETS FEENSTAUB",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20130106113552id_/http://www.distillery.de:80/ex/dates/2013/01/26",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: dreikommanull",
+          "items": [
+            {
+              "name": "SONJA MOONEAR",
+              "info": "Perlon, Karat, Ruta5, Kalk Pets, Genf",
+              "link": ""
+            },
+            {
+              "name": "KLEINSCHMAGER AUDIO",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

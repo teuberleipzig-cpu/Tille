@@ -1,0 +1,322 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2021-10-01-20-years-hotta-fire-reggae-station",
+      "date": "2021-10-01",
+      "title": "20 YEARS HOTTA FIRE REGGAE STATION",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20211021123536id_/https://www.distillery.de/ex/dates/2021/10/01",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: Reggae, Dancehall & Soca",
+          "items": [
+            {
+              "name": "MASTAH K",
+              "info": "Hotta Fire Reggaestation, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SELECTA SPINBACK",
+              "info": "Da Switch, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DJ SEAGEL SILVER",
+              "info": "Seagel Twins",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: Jungle & Drum'n'Bass",
+          "items": [
+            {
+              "name": "DERRICK & BASE",
+              "info": "Ulan Bator",
+              "link": ""
+            },
+            {
+              "name": "BOTROP BOY",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "FRANK PATITZ",
+              "info": "Retro Velo Sound",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-10-02-klub-nacht",
+      "date": "2021-10-02",
+      "title": "KLUB NACHT",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20211021113135id_/https://www.distillery.de/ex/dates/2021/10/02",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "KRISTIN VELVET",
+              "info": "Arms & Legs Records",
+              "link": ""
+            },
+            {
+              "name": "SCHLEPP GEIST",
+              "info": "URSL",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "PROJEKT GESTALTEN",
+              "info": "VRAAA Records, Pornceptual",
+              "link": ""
+            },
+            {
+              "name": "STEPHAN VON WOLFFERSDORFF",
+              "info": "Distillery, Where the Buffalo Roam, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-10-09-sachsentrance-leipziger-allerlei",
+      "date": "2021-10-09",
+      "title": "SACHSENTRANCE - LEIPZIGER ALLERLEI",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20211021120807id_/https://www.distillery.de/ex/dates/2021/10/09",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SABU!",
+              "info": "Sachsentrance, Berlin",
+              "link": ""
+            },
+            {
+              "name": "TRASHABELLE",
+              "info": "polyphon, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "THE JAKOB SISTERZ",
+              "info": "Sachsentrance, Leipzig / Berlin",
+              "link": ""
+            },
+            {
+              "name": "TEK WANNA DO",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "ATREO B2B HKKPTR",
+              "info": "Sachsentrance, Leipzig / Berlin",
+              "link": ""
+            },
+            {
+              "name": "AKRIBISCH RAPID",
+              "info": "Sachsentrance, Leipzig / Plauen",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-10-16-saturday-rave",
+      "date": "2021-10-16",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20211021115956id_/https://www.distillery.de/ex/dates/2021/10/16",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "LEVON VINCENT",
+              "info": "Novel Sound, Deconstruct, Underground Quality, Ostgut Ton, USA",
+              "link": ""
+            },
+            {
+              "name": "LYDIA EISENBLäTTER",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SEVENSOL",
+              "info": "Long Vehicle, Kann",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "MADWOMAN",
+              "info": "Ismus, Brvtalist, Gegen Berlin",
+              "link": ""
+            },
+            {
+              "name": "NINETTE",
+              "info": "Distillery, LÄRM",
+              "link": ""
+            },
+            {
+              "name": "HOUDAFK",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-10-22-tobassgo",
+      "date": "2021-10-22",
+      "title": "TOBASSGO",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20211021124356id_/https://www.distillery.de/ex/dates/2021/10/22",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "NUKEM",
+              "info": "Brainclub, toBASSgo",
+              "link": ""
+            },
+            {
+              "name": "JUDOKAI",
+              "info": "Ambiguity Audio, toBASSgo",
+              "link": ""
+            },
+            {
+              "name": "JON VOID",
+              "info": "Liquicity, Play!Musik",
+              "link": ""
+            },
+            {
+              "name": "BOOTLEG",
+              "info": "SMS, toBASSgo, 842",
+              "link": ""
+            },
+            {
+              "name": "EL_TRONIC",
+              "info": "Gunstarsoundz, toBASSgo",
+              "link": ""
+            },
+            {
+              "name": "KEON",
+              "info": "Gunstarsoundz, toBASSgo",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-10-23-kleine-klinke-present-s",
+      "date": "2021-10-23",
+      "title": "KLEINE KLINKE PRESENT(S)",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20211021115220id_/https://www.distillery.de/ex/dates/2021/10/23",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "LAUER",
+              "info": "Permanent Vacation, Running Back, Robert Johnson",
+              "link": ""
+            },
+            {
+              "name": "KARETE BU",
+              "info": "DRIVE, G-Edit",
+              "link": ""
+            },
+            {
+              "name": "INNERE TUEREN B2B MAP.ACHE",
+              "info": "Kann, Giegling",
+              "link": ""
+            },
+            {
+              "name": "KLEINE KLINKE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "RZR AKA DJ GABI",
+              "info": "G-Edit",
+              "link": ""
+            },
+            {
+              "name": "ANTR",
+              "info": "G-Edit",
+              "link": ""
+            },
+            {
+              "name": "M.ONO",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

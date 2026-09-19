@@ -1,0 +1,509 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2014-10-02-robag-is-inside",
+      "date": "2014-10-02",
+      "title": "ROBAG IS INSIDE",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20141101050247id_/http://www.distillery.de:80/ex/dates/2014/10/02",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ROBAG WRUHME",
+              "info": "Pampa, Hart & Tief, Kompakt, Weimar Innenstadt",
+              "link": ""
+            },
+            {
+              "name": "CLEMENS RUH",
+              "info": "Sonoptix, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "MOERBECK",
+              "info": "Code is Law, Grounded Theory, Vault Series, Perc Trax, Berlin",
+              "link": ""
+            },
+            {
+              "name": "TEMPLETON",
+              "info": "Hypress, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2014-10-02-style-wild-meets-overdubclub",
+      "date": "2014-10-02",
+      "title": "STYLE WILD MEETS OVERDUBCLUB",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20141101050318id_/http://www.distillery.de:80/ex/dates/2014/10/17",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: hip hop, beats, trap, soul",
+          "items": [
+            {
+              "name": "FREE THE ROBOTS",
+              "info": "Equinox Records, Low End Theory, Los Angeles",
+              "link": ""
+            },
+            {
+              "name": "HANNAH FAITH",
+              "info": "Soulection, London",
+              "link": ""
+            },
+            {
+              "name": "KUTMAH",
+              "info": "Izwid, Dublab, London/Los Angeles",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: overdubclub",
+          "items": [
+            {
+              "name": "OVERDUBCLUB",
+              "info": "Beatmaking Jam Session - join if you like to, Start: 23:30",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2014-10-03-livelyrix-poetry-slam",
+      "date": "2014-10-03",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20141101050252id_/http://www.distillery.de:80/ex/dates/2014/10/03",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: verbale wortgewitter",
+          "items": [
+            {
+              "name": "JAN-PHILIPP ZYMNY",
+              "info": "Dortmund",
+              "link": ""
+            },
+            {
+              "name": "QUICHOTTE",
+              "info": "Bonn",
+              "link": ""
+            },
+            {
+              "name": "NIKITA GORBUNOV",
+              "info": "Stuttgart",
+              "link": ""
+            },
+            {
+              "name": "SVEN KEMMLER",
+              "info": "München",
+              "link": ""
+            },
+            {
+              "name": "THOMAS SPITZER",
+              "info": "Wien",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2014-10-04-ostgut-ton",
+      "date": "2014-10-04",
+      "title": "OSTGUT TON",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20141101050257id_/http://www.distillery.de:80/ex/dates/2014/10/04",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "NICK HöPPNER",
+              "info": "Panorama Bar / Berghain, Berlin",
+              "link": ""
+            },
+            {
+              "name": "RYAN ELLIOTT",
+              "info": "Ghostly, Spectral Sound",
+              "link": ""
+            },
+            {
+              "name": "RON DEACON",
+              "info": "Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2014-10-10-caribbean-nice-up-gets-mad-again",
+      "date": "2014-10-10",
+      "title": "CARIBBEAN NICE UP GETS MAD AGAIN!",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20141101050302id_/http://www.distillery.de:80/ex/dates/2014/10/10",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: dancehall, reggae",
+          "items": [
+            {
+              "name": "MANGO TREE",
+              "info": "Nuernberg",
+              "link": ""
+            },
+            {
+              "name": "HIGH POWER STATION",
+              "info": "Basta, Görlitz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MR. DAGGA",
+              "info": "Caribbean Nice Up",
+              "link": ""
+            },
+            {
+              "name": "DJ SENSAY",
+              "info": "Rockstone Sound, ISwagga",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: global bass, latin & african rhythms, cumbia",
+          "items": [
+            {
+              "name": "UMOJA",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2014-10-11-hello-freude-am-tanzen",
+      "date": "2014-10-11",
+      "title": "HELLO FREUDE AM TANZEN!",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20141101050308id_/http://www.distillery.de:80/ex/dates/2014/10/11",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DOUGLAS GREED – LIVE",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "FEAT. NAGLER & KUSS",
+              "info": "Freude am Tanzen, Jena",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2014-10-14-evilive-iii-pres-by-lonesome-riders",
+      "date": "2014-10-14",
+      "title": "EVILIVE III PRES. BY LONESOME RIDERS",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20141101050313id_/http://www.distillery.de:80/ex/dates/2014/10/14",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SANDRA KOLSTAD",
+              "info": "Mer Music, Oslo,Berlin",
+              "link": ""
+            },
+            {
+              "name": "SPRUTBASS",
+              "info": "Dødpop Records, Oslo, BJøRKåS, Oslo",
+              "link": ""
+            },
+            {
+              "name": "DJ FREEKEE",
+              "info": "Impfbass, Start: 20:30, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2014-10-17-style-wild-meets-overdubclub",
+      "date": "2014-10-17",
+      "title": "STYLE WILD MEETS OVERDUBCLUB",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20141101050318id_/http://www.distillery.de:80/ex/dates/2014/10/17",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: hip hop, beats, trap, soul",
+          "items": [
+            {
+              "name": "FREE THE ROBOTS",
+              "info": "Equinox Records, Low End Theory, Los Angeles",
+              "link": ""
+            },
+            {
+              "name": "HANNAH FAITH",
+              "info": "Soulection, London",
+              "link": ""
+            },
+            {
+              "name": "KUTMAH",
+              "info": "Izwid, Dublab, London/Los Angeles",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: overdubclub",
+          "items": [
+            {
+              "name": "OVERDUBCLUB",
+              "info": "Beatmaking Jam Session - join if you like to, Start: 23:30",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2014-10-18-22-years-old",
+      "date": "2014-10-18",
+      "title": "22 YEARS OLD",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20141021081919id_/http://www.distillery.de:80/ex/dates/2014/10/18",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MANO LE TOUGH",
+              "info": "Permanent Vacation, Internasjonal, Mirau",
+              "link": ""
+            },
+            {
+              "name": "THE DRIFTER",
+              "info": "Maeve, Permanent Vacation, Berlin",
+              "link": ""
+            },
+            {
+              "name": "PETER INVASION",
+              "info": "Riotvan, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2014-10-25-bpitch-control",
+      "date": "2014-10-25",
+      "title": "BPITCH CONTROL",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20141028014906id_/http://www.distillery.de:80/ex/dates/2014/10/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ELLEN ALLIEN",
+              "info": "BPitch, Berlin",
+              "link": ""
+            },
+            {
+              "name": "KIKI",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "GIMMIX",
+              "info": "Stiff Little Spinners, Audiolith",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "SVEN VON THüLEN",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2014-10-28-tanz-der-moleku-le-semesterauftakt",
+      "date": "2014-10-28",
+      "title": "TANZ DER MOLEKÜLE - SEMESTERAUFTAKT",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20141101050432id_/http://www.distillery.de:80/ex/dates/2014/10/28",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: querbeet",
+          "items": [
+            {
+              "name": "DJ BEATZEPS",
+              "info": "High Power Station, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "+ GUESTS",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: swing, balkan",
+          "items": [
+            {
+              "name": "RATZ BADDZ",
+              "info": "Vibes Ambassadors, Leipzig), Start: 22:00, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2014-10-30-clr-chris-liebing",
+      "date": "2014-10-30",
+      "title": "CLR - CHRIS LIEBING",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20141101050437id_/http://www.distillery.de:80/ex/dates/2014/10/30",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "CHRIS LIEBING",
+              "info": "clr.net, FFM",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "DANIEL SAILER",
+              "info": "Distillery, Where the Buffalo Roam, kompl3x",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2014-10-31-yo-ue30-rap-s",
+      "date": "2014-10-31",
+      "title": "YO! Ü30 RAP'S",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20161206122557id_/http://distillery.de/ex/dates/2014/10/31/",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: funk, soul, hip hop, rap, rnb",
+          "items": [
+            {
+              "name": "DJ ROCKING B AKA KING BENSON",
+              "info": "Stars For Soul, Karamel",
+              "link": ""
+            },
+            {
+              "name": "MAGIC MAYER",
+              "info": "Harzfein Studio, Dessau",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "GRIZZLY ADAMS AKA DJ TERROR",
+              "info": "Audio Krush, Cassiopeia, Berlin, Start: 23:00",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

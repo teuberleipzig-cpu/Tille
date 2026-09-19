@@ -1,0 +1,443 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2021-07-02-i-love-gardening-x-tobassgo",
+      "date": "2021-07-02",
+      "title": "I LOVE GARDENING X TOBASSGO",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20210802235916id_/https://www.distillery.de/ex/dates/2021/07/02",
+      "imageUrl": "",
+      "description": "Start: 18:00",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "NUKEM",
+              "info": "toBASSgo",
+              "link": ""
+            },
+            {
+              "name": "NANO42",
+              "info": "FVZ / N*Dorphin / UTM-Family / Sector 8, Chemnitz",
+              "link": ""
+            },
+            {
+              "name": "BOOTLEG",
+              "info": "SMS, Sector842",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-07-07-i-love-gardening-x-inferis",
+      "date": "2021-07-07",
+      "title": "I LOVE GARDENING X INFERIS",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20210803000239id_/https://www.distillery.de/ex/dates/2021/07/07",
+      "imageUrl": "",
+      "description": "Start: 18:00",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "CEDRIC KUSCHNICK",
+              "info": "Inferis, Leipzg",
+              "link": ""
+            },
+            {
+              "name": "ATALANTA",
+              "info": "Distillery, Inferis",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "WEH:",
+          "items": [
+            {
+              "name": "MUT",
+              "info": "Inferis, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-07-09-i-love-gardening-x-hw-rhapsody",
+      "date": "2021-07-09",
+      "title": "I LOVE GARDENING X HW RHAPSODY",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20210803004127id_/https://www.distillery.de/ex/dates/2021/07/09",
+      "imageUrl": "",
+      "description": "Start: 18:00",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "HW RHAPSODY",
+              "info": "Onetake, Liebkos, Miami Müller, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-07-10-i-love-gardening-x-style-wild",
+      "date": "2021-07-10",
+      "title": "I LOVE GARDENING X STYLE WILD",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20210803013007id_/https://www.distillery.de/ex/dates/2021/07/10",
+      "imageUrl": "",
+      "description": "SA. 10.07.21 Öpening\nMUSIC OF COLOR DJS\n(Leipzig)\nRILLE\n(Style Wild, Leipzig)\nSTL_V\n(Afro Latin What?! / Style Wild)\nStart: 18:00\nStyle Wild - just jammin editionViel zu lange gab es keine Party, kein Battle, keine Jam, kein Austausch. In diesen können heute zum ersten Mal seit langer Zeit wieder alle TänzerInnen im Rahmen von Style Wild treten. Wir werden die Tanzplatten im Garten der Distillery verteilen. Musikalisch liegt der Fokus wie immer auf Hip Hop, House und Funk in möglichst großer Vielfalt. Und ziemlich sichers wird aus diesem inner circle auch mal ausgebrochen.\nSA. 10.07.21 ÖPENING",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MAP.ACHE",
+              "info": "Kann, Giegling",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-07-14-i-love-gardening-x-hyperion",
+      "date": "2021-07-14",
+      "title": "I LOVE GARDENING X HYPERION",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20210802235700id_/https://www.distillery.de/ex/dates/2021/07/14",
+      "imageUrl": "",
+      "description": "Start: 18:00",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "AURUM",
+              "info": "Hyperion",
+              "link": ""
+            },
+            {
+              "name": "SAILENT SEIHMEN",
+              "info": "Distillery, Hyperion, Proyeckt Qrach",
+              "link": ""
+            },
+            {
+              "name": "SVEN TASNADI",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "Poker Flat",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-07-16-i-love-gardening-x-boundless-beatz",
+      "date": "2021-07-16",
+      "title": "I LOVE GARDENING X BOUNDLESS BEATZ",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20210803003151id_/https://www.distillery.de/ex/dates/2021/07/16",
+      "imageUrl": "",
+      "description": "Start: 18:00",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "AUDITE",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DUBBALOT",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "VRUM",
+              "info": "Boundless Beatz",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-07-17-indoor-opening",
+      "date": "2021-07-17",
+      "title": "INDOOR:OPENING",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20210803020144id_/https://www.distillery.de/ex/dates/2021/07/17",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MELOCOTON",
+              "info": "Halle/Saale",
+              "link": ""
+            },
+            {
+              "name": "LENA BART",
+              "info": "Palais, München",
+              "link": ""
+            },
+            {
+              "name": "BLANKK DISC",
+              "info": "Hyperion",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "VINCENT NEUMANN",
+              "info": "Distillery, Unitas Multiplex, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "JANEIN",
+              "info": "SEELEN",
+              "link": ""
+            },
+            {
+              "name": "SEELEN.",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "STIGMATIQUE",
+              "info": "Distillery, SEELEN",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-07-21-i-love-gardening-x-hw-rhapsody",
+      "date": "2021-07-21",
+      "title": "I LOVE GARDENING X HW RHAPSODY",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20210802235343id_/https://www.distillery.de/ex/dates/2021/07/21",
+      "imageUrl": "",
+      "description": "Start: 18:00",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "HW RHAPSODY",
+              "info": "Onetake, Liebkos, Miami Müller, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-07-23-i-love-gardening",
+      "date": "2021-07-23",
+      "title": "I LOVE GARDENING",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20210803002201id_/https://www.distillery.de/ex/dates/2021/07/23",
+      "imageUrl": "",
+      "description": "Start: 18:00",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "JUDITH VAN WATERKANT",
+              "info": "Feat.Fem",
+              "link": ""
+            },
+            {
+              "name": "FRIDA DARKO",
+              "info": "(&&, Rebellion der Träumer*",
+              "link": ""
+            },
+            {
+              "name": "Tausend Plateaus)",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-07-24-i-love-gardening-x-hotta-fire",
+      "date": "2021-07-24",
+      "title": "I LOVE GARDENING X HOTTA FIRE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20210803015457id_/https://www.distillery.de/ex/dates/2021/07/24",
+      "imageUrl": "",
+      "description": "SA. 24.07.21 under ten\nSELECTA SPINBACK\n(Da Switch, Leipzig)\nKING CHE\n(Gambia)\nRIX RAX\n(Jamaica)\nMASTAH K\n(Hotta Fire Reggaestation, Leipzig)\nStart: 18:00\nLiming, in der Karibik ist dies auf vielen Inseln die Beschreibung für zuckersüßes Nichtstun. Fast immer geht dies einher mit guter Musik für Herz, Seele und Verstand, ein paar Leckereien für den Bauch und dem ein oder anderen leckeren Tropfen für die etwas lockeren Vibes. Dabei plaudert und flachst, man mit Kollegen, die man täglich sieht, Freunden, die man länger nicht gesehen hat, Fremden, denen man noch nie begegnet ist und der Familie.In der Distillery seid ihr an diesem Samstag Abend nach langer Zeit endlich wieder herzlichst zum Limen eingeladen. Für Herz und Seele sorgen gleich einige DJ's, die seit Jahrzehnten für afrokaribische Vibes und Kultur in unserer Stadt sorgen. Mit Reggae, Dancehall, Afrobeats und Soca erwartet euch ein Musikspektrum über die Grenzen der Karibik hinaus.Des Weiteren nutzen wir die Gelegenheit Euch ein Hilfsprojekt der besonderen Art vorzustellen. Seit Jahren unterstützt der Kairaba e.V. die Menschen der Stadt Farato in Gambia. Der erste riesen Meilenstein war der Bau einer Schule für 90 Kinder. Im letzten Jahr folgte ein weitere großer Schritt. Ziel war es diese Schule mit nachhaltiger Energie zu versorgen, und zudem Möglichkeiten für kleine Handwerksbetriebe zu schaffen. Kommt vorbei, dann Ihr könnt erfahren, wie die Solar Module 2020 nach Gambia kamen, welche weiteren Schritte geplant sind und wie Ihr selber helfen könnt.Für die lockeren Vibes sorgt wie gewohnt das Barteam der Distillery und man munkelt bereits, dass auch die Leckereien vom Grill einen karibischen Touch haben sollen. Also lasst uns diesen Sommer nach so langer Zeit wieder vergnüglich limen, Spass haben und fröhlich sein. Wir freuen uns an diesem Abend auf jeden Kollegen, jeden Freund, jeden Fremden und die Familie. Denn kommt ihr vorbei, gehört ihr zur Familie.\nSA. 24.07.21 UNDER TEN",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-07-28-i-love-gardening",
+      "date": "2021-07-28",
+      "title": "I LOVE GARDENING",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20210920134312id_/https://www.distillery.de/ex/dates/2021/07/28",
+      "imageUrl": "",
+      "description": "Start: 18:00",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "MAURO CARACHO",
+              "info": "Distillery, Fäncy, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "WILHELM",
+              "info": "HW Massive, Doumen Records, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-07-30-i-love-gardening-x-exlepaeng",
+      "date": "2021-07-30",
+      "title": "I LOVE GARDENING X EXLEPÄNG",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20210720191518id_/https://www.distillery.de/ex/dates/2021/07/30",
+      "imageUrl": "",
+      "description": "Start: 18:00",
+      "sections": [
+        {
+          "label": "outdoor:",
+          "items": [
+            {
+              "name": "AEHM",
+              "info": "exLEpäng!",
+              "link": ""
+            },
+            {
+              "name": "KATYES",
+              "info": "exLEpäng!",
+              "link": ""
+            },
+            {
+              "name": "DAS ZIRKUSKIND",
+              "info": "3 Kilo Holz und Farben, exLEpäng!",
+              "link": ""
+            },
+            {
+              "name": "MURAKS",
+              "info": "exLEpäng!",
+              "link": ""
+            },
+            {
+              "name": "TILO ROTH",
+              "info": "exLEpäng!",
+              "link": ""
+            },
+            {
+              "name": "FIRLE",
+              "info": "TWSS, exLEpäng!",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2021-07-31-5-2",
+      "date": "2021-07-31",
+      "title": "5 + 2",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20210920145850id_/https://www.distillery.de/ex/dates/2021/07/31",
+      "imageUrl": "",
+      "description": "WEH:MUT",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MATTHIAS TANZMANN",
+              "info": "Moon Harbour, Circoloco",
+              "link": ""
+            },
+            {
+              "name": "DILIVIUS LENNI",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "PREMIO",
+              "info": "Ulle, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: WEH:",
+          "items": [
+            {
+              "name": "ATALANTA",
+              "info": "Distillery, Inferis",
+              "link": ""
+            },
+            {
+              "name": "MUT",
+              "info": "Inferis, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MADDA CHANTAL",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,437 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2020-02-01-saturday-rave",
+      "date": "2020-02-01",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20221001211412id_/https://www.distillery.de/ex/dates/2020/02/01",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MICHAL ZIETARA",
+              "info": "osba, pets rec, wilde renate",
+              "link": ""
+            },
+            {
+              "name": "DIE MADE UND DAS DIRN",
+              "info": "Puffy, Mooquai Marbles",
+              "link": ""
+            },
+            {
+              "name": "PRELLER",
+              "info": "Tet Musik, Vice, detektor.fm",
+              "link": ""
+            },
+            {
+              "name": "MIKE VAN GOETZE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "IRAKLI",
+              "info": "Dial, Staub",
+              "link": ""
+            },
+            {
+              "name": "NADINE TALAKOVICS",
+              "info": "Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2020-02-05-spaceslug-macrophagos",
+      "date": "2020-02-05",
+      "title": "SPACESLUG & MACROPHAGOS",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20221001195707id_/https://www.distillery.de/ex/dates/2020/02/05",
+      "imageUrl": "",
+      "description": "Start: 20:00\nSpaceslug haben vor kurzem ihr viertes Studioalbum \"Reign of the Orion\" veröffentlicht. Auf der Platte testet die Band aus Polen abermals die Grenzen des Stonergenre und arbeitet Elemente aus Doom und Atmospheric in ihren massiven Sound ein. Im Rahmen einer kleinen Europatour kommen Spaceslug für ein Konzert in die Distillery.\nFacebook\nYoutube\nSupport: Macrophagos\nMacrophagos entstammen einem instrumentalen Stonerprojekt. Jetzt mit Sänger ausgestattet, schlägt die Leipziger Band auch härtere Töne an. Die Gruppe steht kurz vor der Veröffentlichung ihrer ersten Studioproduktion.\nFacebook\nBandcamp\nGefördert durch:",
+      "sections": []
+    },
+    {
+      "id": "2020-02-07-livelyrix-poetry-slam",
+      "date": "2020-02-07",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20221001203026id_/https://www.distillery.de/ex/dates/2020/02/07",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: MODERATION: MUSIC BY:",
+          "items": [
+            {
+              "name": "JAN CöNIG",
+              "info": "Frankfurt",
+              "link": ""
+            },
+            {
+              "name": "LENNY FELLING",
+              "info": "Mainz",
+              "link": ""
+            },
+            {
+              "name": "TABEA FARNBACHER",
+              "info": "Bochum",
+              "link": ""
+            },
+            {
+              "name": "ANNA TEUFEL",
+              "info": "Karlsruhe",
+              "link": ""
+            },
+            {
+              "name": "RAINER HOLL",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BLANKK DISC",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2020-02-08-saturday-rave",
+      "date": "2020-02-08",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20221001214603id_/https://www.distillery.de/ex/dates/2020/02/08",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SCHLEPP GEIST",
+              "info": "URSL",
+              "link": ""
+            },
+            {
+              "name": "KRINK",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DILIVIUS LENNI",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "INTROVERSION",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "JANEIN",
+              "info": "SEELEN",
+              "link": ""
+            },
+            {
+              "name": "SEELEN.",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "REZYSTOR",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2020-02-14-boundless-beatz",
+      "date": "2020-02-14",
+      "title": "BOUNDLESS BEATZ",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20221001202342id_/https://www.distillery.de/ex/dates/2020/02/14",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "down: HOSTED BY:",
+          "items": [
+            {
+              "name": "QZB",
+              "info": "Critical Music, Flexout Audio",
+              "link": ""
+            },
+            {
+              "name": "WINTERMUTE",
+              "info": "Blackout / Boundless Beatz",
+              "link": ""
+            },
+            {
+              "name": "DøRTE & JIVEE",
+              "info": "vib:ez",
+              "link": ""
+            },
+            {
+              "name": "AUDITE",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DUBBALOT",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MC RESC",
+              "info": "Random / Counterpoint, Freiburg",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2020-02-15-saturday-rave",
+      "date": "2020-02-15",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20201206012551id_/http://www.distillery.de/ex/dates/2020/02/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "JACKMASTER",
+              "info": "D2S, Numbers, Glasgow",
+              "link": ""
+            },
+            {
+              "name": "LYDIA EISENBLäTTER",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SHURAY & WALLE",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "BLACK MERLIN",
+              "info": "Island of the Gods, Berceuse Heroique",
+              "link": ""
+            },
+            {
+              "name": "GEORG BIGALKE",
+              "info": "45 MOT, Distillery, Drec",
+              "link": ""
+            },
+            {
+              "name": "DANIEL SAILER",
+              "info": "Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2020-02-21-boiler-room-leipzig-hard-dance-final-fantasy",
+      "date": "2020-02-21",
+      "title": "BOILER ROOM LEIPZIG - HARD DANCE: FINAL FANTASY",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20221001201754id_/https://www.distillery.de/ex/dates/2020/02/21",
+      "imageUrl": "",
+      "description": "Start: 23:30\nGefördert durch:\n2001-2022 Distillery\nmade with <3 °°",
+      "sections": []
+    },
+    {
+      "id": "2020-02-22-o-rs-meets-saturday-rave",
+      "date": "2020-02-22",
+      "title": "O*RS MEETS SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20221001213350id_/https://www.distillery.de/ex/dates/2020/02/22",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "HAMMER",
+              "info": "Feel my Bicep",
+              "link": ""
+            },
+            {
+              "name": "FILBURT",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "PANDARO",
+              "info": "O*RS",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "NATASCHA KANN",
+              "info": "://about blank",
+              "link": ""
+            },
+            {
+              "name": "BLIND OBSERVATORY",
+              "info": "I/Y, Smoke Machine",
+              "link": ""
+            },
+            {
+              "name": "VINCENT NEUMANN",
+              "info": "Distillery, Unitas Multiplex, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2020-02-28-purple-green-the-last-dance",
+      "date": "2020-02-28",
+      "title": "PURPLE GREEN - THE LAST DANCE",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20221001204605id_/https://www.distillery.de/ex/dates/2020/02/28",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: GREEN DANCERS:",
+          "items": [
+            {
+              "name": "NUFFLOVE CREW / FULLJOY DANZAS / NIZZY",
+              "info": "Nürnberg, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MANGOTREE SOUND",
+              "info": "Nürnberg",
+              "link": ""
+            },
+            {
+              "name": "HIGH POWER STATION",
+              "info": "Basta, Görlitz, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: PURPLE",
+          "items": [
+            {
+              "name": "JOSI MILLER",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DJ SICSTYLE",
+              "info": "Good Hood Music",
+              "link": ""
+            },
+            {
+              "name": "TRIX",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2020-02-29-saturday-rave",
+      "date": "2020-02-29",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20210306150620id_/https://www.distillery.de/ex/dates/2020/02/29",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DOMINIK EULBERG",
+              "info": "k7!",
+              "link": ""
+            },
+            {
+              "name": "LARS CHRISTIAN MüLLER",
+              "info": "Distillery, mindcookies",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "STEPHAN VON WOLFFERSDORFF",
+              "info": "Distillery, Where the Buffalo Roam, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

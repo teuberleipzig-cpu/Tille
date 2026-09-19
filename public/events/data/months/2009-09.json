@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2009-09-05-finest-selection-meets-where-the-buffalo-roam",
+      "date": "2009-09-05",
+      "title": "FINEST SELECTION MEETS WHERE THE BUFFALO ROAM",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20090727071001id_/http://www.distillery.de:80/ex/dates/2009/09/05",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: finest selection",
+          "items": [
+            {
+              "name": "FAIRMONT AKA JAKE FAIRLEY – LIVE",
+              "info": "Border Community, Toronto/Kanada",
+              "link": ""
+            },
+            {
+              "name": "LARS-CHRISTIAN MüLLER",
+              "info": "Finest Selection, Distillery",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-09-11-fridayclub-re-opening-after-summerbreak-kurt-reith-abend-spezial",
+      "date": "2009-09-11",
+      "title": "FRIDAYCLUB RE:OPENING AFTER SUMMERBREAK: KURT REITH ABEND SPEZIAL",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20090903165222id_/http://www.distillery.de:80/ex/dates/2009/09/11",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: die drei von der \"punk\"stelle treffen die 2 von der \"funk\"stelle",
+          "items": [
+            {
+              "name": "DONIS",
+              "info": "Disco09, Ilses Erika, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "SLOWHAND E",
+              "info": "Stars for Soul, Rhythm Club, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DJ YORK",
+              "info": "Könich Heinz",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-09-12-boundary-functions-meets-bass-plus",
+      "date": "2009-09-12",
+      "title": "BOUNDARY FUNCTIONS MEETS BASS PLUS!",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20090728064823id_/http://www.distillery.de:80/ex/dates/2009/09/12",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: boundary functions",
+          "items": [
+            {
+              "name": "CHATEAU FLIGHT – LIVE",
+              "info": "GilbR & I:cube, Versatile Records, Paris",
+              "link": ""
+            },
+            {
+              "name": "SEBASTIAN DUBIEL",
+              "info": "Ortloff",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-09-18-cos-cup-vs-heizhaus-eroeffnung-aftershow",
+      "date": "2009-09-18",
+      "title": "COS CUP VS. HEIZHAUS ERÖFFNUNG AFTERSHOW",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20091023214608id_/http://www.distillery.de:80/ex/dates/2009/09/18",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: from funk over rap to crunk",
+          "items": [
+            {
+              "name": "FU HANDS SOUNDSYSTEM",
+              "info": "DJ Saibz & DJ D-Fekt, snuffpro, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ZASDA 213",
+              "info": "Freezone Rec",
+              "link": ""
+            },
+            {
+              "name": "DJ ANDRESEN",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-09-19-hoerfunk-meets-9-jahre-syntax-recordshop",
+      "date": "2009-09-19",
+      "title": "HOERFUNK MEETS 9 JAHRE SYNTAX RECORDSHOP",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20090728064828id_/http://www.distillery.de:80/ex/dates/2009/09/19",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: hoerfunk",
+          "items": [
+            {
+              "name": "MARKUS WELBY",
+              "info": "hoerfunk, Distillery, Melt!-Festival, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: syntax",
+          "items": [
+            {
+              "name": "NOISEBUILDER",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-09-25-hotta-fire-reggaestation-b-day",
+      "date": "2009-09-25",
+      "title": "HOTTA FIRE REGGAESTATION B-DAY",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20090903165226id_/http://www.distillery.de:80/ex/dates/2009/09/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: hotta fire b-day",
+          "items": [
+            {
+              "name": "RONNY TRETTMANN – LIVE",
+              "info": "Heckert Empire",
+              "link": ""
+            },
+            {
+              "name": "RANKING SMO",
+              "info": "HE, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BARNEY MILLAH",
+              "info": "Berlins Finest, Berlin",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2009-09-26-chitlin-circuit-meets-feenstaub-friends",
+      "date": "2009-09-26",
+      "title": "CHITLIN' CIRCUIT MEETS FEENSTAUB & FRIENDS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20090728064844id_/http://www.distillery.de:80/ex/dates/2009/09/26",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: chitlin' circuit",
+          "items": [
+            {
+              "name": "ROBERT DIETZ",
+              "info": "Cécille Rec., be_chosen, FFM",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

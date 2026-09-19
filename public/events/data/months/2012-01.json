@@ -1,0 +1,302 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2012-01-06-livelyrix-poetry-slam",
+      "date": "2012-01-06",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20120111165346id_/http://www.distillery.de:80/ex/dates/2012/01/06",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: livelyrix poetry slam MUSIC BY:",
+          "items": [
+            {
+              "name": "SVENJA GRäFEN",
+              "info": "Köln",
+              "link": ""
+            },
+            {
+              "name": "WOLF HOGEKAMP",
+              "info": "spoken word, Berlin",
+              "link": ""
+            },
+            {
+              "name": "ALEX BURKHARD",
+              "info": "München",
+              "link": ""
+            },
+            {
+              "name": "SILVESTER KLEMENT",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "U.V.M.",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-01-07-jackoff-meets-definition",
+      "date": "2012-01-07",
+      "title": "JACKOFF MEETS DEFINITION",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20120110005154id_/http://www.distillery.de:80/ex/dates/2012/01/07",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: jack off",
+          "items": [
+            {
+              "name": "IRON CURTIS",
+              "info": "JackOff, Mirau, Retreat, Morris/Audio, Mule Electronic, Hudd Traxx, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DEEP N RUTH",
+              "info": "HW Rhapsody",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-01-13-ana-wird-vier",
+      "date": "2012-01-13",
+      "title": "ANA WIRD VIER",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20120111165256id_/http://www.distillery.de:80/ex/dates/2012/01/13",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: analogsoul label geburtstag",
+          "items": [
+            {
+              "name": "DELHIA DE FRANCE",
+              "info": "pentatones, Freude am Tanzen",
+              "link": ""
+            },
+            {
+              "name": "MICRONAUT",
+              "info": "Leipzig, Rostock",
+              "link": ""
+            },
+            {
+              "name": "BASSKANTE",
+              "info": "Klinke auf Cinch, Jena",
+              "link": ""
+            },
+            {
+              "name": "LAKE PEOPLE",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DJ RUKEY",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-01-14-dreikommanull-meets-syntax",
+      "date": "2012-01-14",
+      "title": "DREIKOMMANULL MEETS SYNTAX",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20120111165313id_/http://www.distillery.de:80/ex/dates/2012/01/14",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: dreikommanull",
+          "items": [
+            {
+              "name": "H.O.S.H.",
+              "info": "Diynamic, Hamburg",
+              "link": ""
+            },
+            {
+              "name": "KLEINSCHMAGER AUDIO",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MENTELL",
+              "info": "Dreikommanull",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-01-20-ulan-bator-meets-vibes-ambassadors",
+      "date": "2012-01-20",
+      "title": "ULAN BATOR MEETS VIBES AMBASSADORS",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20120111165351id_/http://www.distillery.de:80/ex/dates/2012/01/20",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: big in the jungle - jungle, dnb, dubstep",
+          "items": [
+            {
+              "name": "MISTER POP & MC ELSTA",
+              "info": "Chamonix, France",
+              "link": ""
+            },
+            {
+              "name": "MC MYSTIC DAN",
+              "info": "I-Spect, Braunschweig",
+              "link": ""
+            },
+            {
+              "name": "BASE",
+              "info": "Ulan Bator Massive",
+              "link": ""
+            },
+            {
+              "name": "DERRICK",
+              "info": "Ulan Bator",
+              "link": ""
+            },
+            {
+              "name": "EL_P",
+              "info": "Vibes Ambassadors",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-01-21-uncanny-valley-rallye",
+      "date": "2012-01-21",
+      "title": "UNCANNY VALLEY RALLYE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20120111165408id_/http://www.distillery.de:80/ex/dates/2012/01/21",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: uncanny valley",
+          "items": [
+            {
+              "name": "JACOB KORN – LIVE",
+              "info": "Running Back, Uncanny Valley, Dresden",
+              "link": ""
+            },
+            {
+              "name": "THE MORODERS",
+              "info": "Uncanny Valley, Dresden",
+              "link": ""
+            },
+            {
+              "name": "ALBRECHT WASSERSLEBEN",
+              "info": "Uncanny Valley",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-01-27-bass-plus",
+      "date": "2012-01-27",
+      "title": "BASS PLUS!",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20120111165320id_/http://www.distillery.de:80/ex/dates/2012/01/27",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: bass",
+          "items": [
+            {
+              "name": "CHILL OUT",
+              "info": "mit Filmen, Spielkonsolen und mehr",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: plus",
+          "items": [
+            {
+              "name": "EL-B",
+              "info": "Ghostrecordings, London",
+              "link": ""
+            },
+            {
+              "name": "SENCHA",
+              "info": "Distillery, Black Belt Boogie, Mad Again!",
+              "link": ""
+            },
+            {
+              "name": "PEAK PHINE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2012-01-28-finest-selection-meets-where-the-buffalo-roam",
+      "date": "2012-01-28",
+      "title": "FINEST SELECTION MEETS WHERE THE BUFFALO ROAM",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20120111165414id_/http://www.distillery.de:80/ex/dates/2012/01/28",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: finest selection",
+          "items": [
+            {
+              "name": "OSUNLADE",
+              "info": "Yoruba Records, Greece",
+              "link": ""
+            },
+            {
+              "name": "KALI AVAAZ",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "HGN",
+              "info": "banq.dj, BroileRoom",
+              "link": ""
+            },
+            {
+              "name": "CHRIS MANURA",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

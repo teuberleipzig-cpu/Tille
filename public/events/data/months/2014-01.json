@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2014-01-03-livelyrix-poetry-slam",
+      "date": "2014-01-03",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20140129085726id_/http://www.distillery.de:80/ex/dates/2014/01/03",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: winterliches wortgestöber MODERATION:",
+          "items": [
+            {
+              "name": "JAN PHILIPP ZYMNY",
+              "info": "Dortmund",
+              "link": ""
+            },
+            {
+              "name": "DOMINIK BARTELS",
+              "info": "Helmstedt",
+              "link": ""
+            },
+            {
+              "name": "JULIA ENGELMANN",
+              "info": "Bremen",
+              "link": ""
+            },
+            {
+              "name": "U.V.M.",
+              "info": "und wie immer viele mehr",
+              "link": ""
+            },
+            {
+              "name": "CHRISTIAN MEYER",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2014-01-17-mad-again-feat-urban-jungle",
+      "date": "2014-01-17",
+      "title": "MAD AGAIN! FEAT. URBAN JUNGLE",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20230925203310id_/https://www.distillery.de/ex/dates/2014/01/17",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: tropical bass, moombathon, african rhythms",
+          "items": [
+            {
+              "name": "UPROOT ANDY",
+              "info": "ZZK, Bersa Disco, Dutty Artz, New York",
+              "link": ""
+            },
+            {
+              "name": "DJ FREEKEE",
+              "info": "Impfbass",
+              "link": ""
+            },
+            {
+              "name": "SENCHA",
+              "info": "Bass Plus",
+              "link": ""
+            },
+            {
+              "name": "PABLO GUNZALES",
+              "info": "Style Wild/Afro Latin What?!",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: jungle",
+          "items": [
+            {
+              "name": "J.FIN",
+              "info": "York, Uk",
+              "link": ""
+            },
+            {
+              "name": "MC MYSTIC DAN",
+              "info": "I-Spect Sound, Braunschweig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2014-01-24-style-wild-dancers-eition-feat-overdubclub",
+      "date": "2014-01-24",
+      "title": "STYLE WILD DANCERS EITION FEAT. OVERDUBCLUB",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190916110620id_/http://www.distillery.de/ex/dates/2014/01/24",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: hip hop, trap, beats",
+          "items": [
+            {
+              "name": "DJ D-FEKT",
+              "info": "Resistant Mindz, Sounds Like Ham In The Pan",
+              "link": ""
+            },
+            {
+              "name": "RILLE",
+              "info": "Style Wild, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DJ SICSTYLE",
+              "info": "Bass En Mass, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: overdubclub",
+          "items": [
+            {
+              "name": "OVERDUBCLUB",
+              "info": "Beatmaking Jam Session - join if you like to",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "special:",
+          "items": [
+            {
+              "name": "WORKSHOPS",
+              "info": "Hip Hop (Daniel) Dancehall (Isi) Locking (Annett) for free (19 - 21 Uhr, bitte vorher unter urban@distillery.de a",
+              "link": ""
+            },
+            {
+              "name": "OPEN CIRCLE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2014-01-25-paskal-urban-absolutes-album-tour",
+      "date": "2014-01-25",
+      "title": "PASKAL & URBAN ABSOLUTES - ALBUM TOUR",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20191017165707id_/http://www.distillery.de/ex/dates/2014/01/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up: sonar kollektiv",
+          "items": [
+            {
+              "name": "PASKAL & URBAN ABSOLUTES",
+              "info": "Sonar Kollektiv, Berlin",
+              "link": ""
+            },
+            {
+              "name": "INGO SAENGER",
+              "info": "Farside Records",
+              "link": ""
+            },
+            {
+              "name": "SEVENSOL",
+              "info": "Long Vehicle, Kann",
+              "link": ""
+            },
+            {
+              "name": "& BENDER",
+              "info": "Kann, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: acr",
+          "items": [
+            {
+              "name": "ANSWER CODE REQUEST",
+              "info": "Ostgut Ton",
+              "link": ""
+            },
+            {
+              "name": "MDR",
+              "info": "Berlin",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2014-01-31-nacht-flohmarkt",
+      "date": "2014-01-31",
+      "title": "(NACHT)FLOHMARKT",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20221204222056id_/https://www.distillery.de/ex/dates/2014/01/31",
+      "imageUrl": "",
+      "description": "tauschen, gaubeln, trödeln",
+      "sections": [
+        {
+          "label": "special: up, down & maybe outdoor MUSIC BY:",
+          "items": [
+            {
+              "name": "RUKEY",
+              "info": "Distillery, esoulate, Leipzig, Start: 19:00, add to Cal, Anmeldung Stand (kostenlos): urban@distillery.de, die 3te – Ab 19 Uhr kann Musik, Kunst, Trödel, Klamotten, Altes, Neues, Selbstgestaltetes und noch viel mehr erworben oder getauscht werden. Es liegt an euch, ob ihr eure ungeliebten Weihnachtsgeschenke los werden wollt oder umgekehrt das ungeliebte Etwas zu eurem ganz eigenen Schatz machen möchtet. Wer mit einem Stand vertreten sein möchte, meldet sich bitte unter urban@distillery.de an.",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

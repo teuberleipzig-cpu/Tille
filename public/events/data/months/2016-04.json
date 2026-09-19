@@ -1,0 +1,467 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2016-04-01-livelyrix-poetry-slam",
+      "date": "2016-04-01",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20160405221141id_/http://www.distillery.de:80/ex/dates/2016/04/01",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "VOLKER SURMANN",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "YASMIN HAFEDH AKA YASMO",
+              "info": "Wien",
+              "link": ""
+            },
+            {
+              "name": "NIK SALSFLAUSEN",
+              "info": "Heidenheim",
+              "link": ""
+            },
+            {
+              "name": "DANIEL WAGNER",
+              "info": "Heidelberg",
+              "link": ""
+            },
+            {
+              "name": "BENJAMIN BAUMANN",
+              "info": "Jena",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-04-02-ostgut-ton",
+      "date": "2016-04-02",
+      "title": "OSTGUT TON",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20160314102010id_/http://distillery.de/ex/dates/2016/04/02",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "TAMA SUMO",
+              "info": "Panorama Bar / Berghain, Berlin",
+              "link": ""
+            },
+            {
+              "name": "MASSIMILIANO PAGLIARA",
+              "info": "LARJ, Ostgut Ton",
+              "link": ""
+            },
+            {
+              "name": "CLEMENS RUH",
+              "info": "Distillery, Frission Radio, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "ETAPP KYLE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-04-07-kugeblitz-donnerstag",
+      "date": "2016-04-07",
+      "title": "KUGEBLITZ DONNERSTAG",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20160405221146id_/http://www.distillery.de:80/ex/dates/2016/04/07",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "GRINGO",
+              "info": "aka The Superselector, Teambirnenpfeffi",
+              "link": ""
+            },
+            {
+              "name": "DJ BEATZEPS",
+              "info": "High Power Station, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DJ SENSAY",
+              "info": "Rockstone Sound, ISwagga",
+              "link": ""
+            },
+            {
+              "name": "LIFTED ERIK",
+              "info": "Phonatics Hifi, Chemnitz, Start: 23:00, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-04-08-wolfenbuetteler-festspiele-breaks-beats-n-brasses-vol-ii-2",
+      "date": "2016-04-08",
+      "title": "WOLFENBÜTTELER FESTSPIELE – BREAKS, BEATS 'N' BRASSES – VOL. II",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20211128142023id_/https://www.distillery.de/ex/dates/2016/04/08",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DJ HELL",
+              "info": "International Deejay Gigolos",
+              "link": ""
+            },
+            {
+              "name": "DJ SEPALOT",
+              "info": "Blumentopf, Muenchen",
+              "link": ""
+            },
+            {
+              "name": "STRöME",
+              "info": "Labrassbanda, Muenchen",
+              "link": ""
+            },
+            {
+              "name": "DYNAMITE KADINSKI",
+              "info": "Distillery, Fäncy, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "TEREZA",
+              "info": "Phlatline",
+              "link": ""
+            },
+            {
+              "name": "DJ YO-C",
+              "info": "Bounce 87, Thre3style",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-04-09-crossing-borders",
+      "date": "2016-04-09",
+      "title": "CROSSING BORDERS",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20160405221157id_/http://www.distillery.de:80/ex/dates/2016/04/09",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ADAM PORT",
+              "info": "keinemusik, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DAVID MAYER",
+              "info": "keinemusik, Berlin",
+              "link": ""
+            },
+            {
+              "name": "PETER INVASION",
+              "info": "Riotvan, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-04-15-caribbean-nice-up-get-there-edition",
+      "date": "2016-04-15",
+      "title": "CARIBBEAN NICE UP! GET THERE EDITION",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20160405221202id_/http://www.distillery.de:80/ex/dates/2016/04/15",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "SOUND SALUTE HIFI",
+              "info": "Augsburg",
+              "link": ""
+            },
+            {
+              "name": "CLARKS SOUND",
+              "info": "London",
+              "link": ""
+            },
+            {
+              "name": "DELAM INTL",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "HIGH POWER STATION",
+              "info": "#Teameastgermany, Start: 23:00, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-04-16-paracou",
+      "date": "2016-04-16",
+      "title": "PARACOU",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20160405221207id_/http://www.distillery.de:80/ex/dates/2016/04/16",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "VIVIAN KOCH",
+              "info": "Polynom, Weimar",
+              "link": ""
+            },
+            {
+              "name": "LYDIA EISENBLäTTER",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "FRANZ!",
+              "info": "Kalif Storch, Muna Musik, Paracou",
+              "link": ""
+            },
+            {
+              "name": "JAMY WING",
+              "info": "Polynom, Paracou, Jena",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "MODVS",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-04-21-kugeblitz-donnerstag",
+      "date": "2016-04-21",
+      "title": "KUGEBLITZ DONNERSTAG",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20160405221213id_/http://www.distillery.de:80/ex/dates/2016/04/21",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "LIFTED ERIK",
+              "info": "Phonatics Hifi, Chemnitz",
+              "link": ""
+            },
+            {
+              "name": "DJ SENSAY",
+              "info": "Rockstone Sound, ISwagga",
+              "link": ""
+            },
+            {
+              "name": "GRINGO",
+              "info": "aka The Superselector, Teambirnenpfeffi",
+              "link": ""
+            },
+            {
+              "name": "DJ BEATZEPS",
+              "info": "High Power Station, Leipzig, Start: 23:00, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-04-22-jirafa-waves-tour-2016-kid-simius",
+      "date": "2016-04-22",
+      "title": "JIRAFA WAVES TOUR 2016 - KID SIMIUS",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20160405221218id_/http://www.distillery.de:80/ex/dates/2016/04/22",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "KID SIMIUS",
+              "info": "Granada/Berlin, Start: 20:00, add to Cal, >> zum Vorverkauf, Der Legende nach flog Marteria, Kid Simius, aus Spanien ein, weil er unbedingt mit ihm arbeiten wollte. Tatsächlich kam Jose nach Berlin, weil er in der Spree-Metropole seinen Traum, Musiker zu werden, verwirklichen wollte. Als Teil der Marsimoto Crew hat der Mann aus Granada mittlerweile mehrere Tourneen und Festivals hinter sich gebracht. Neben Auftragsarbeiten für Marsimoto veröffentlichte er 2010 und 2012 zudem zwei Solo-EPs – \"Who The Fuck Is Kid Simius\" und \"El Classico\". Beide sind längst vergriffen. Und das aus gutem Grund. Kid Simius ist die Antwort auf die Frage, wie man aus Trends einen eigenen Stil destilliert und damit die Grundlage für eine langfristige Karriere legt. Gekonnt vermengt er Dubstep und Bassmusik-Elemente mit Live-Musikeinlagen. Auf der Bühne überzeugt die One-Man-Band und beeindruckt dank seiner Multitasking-Fähigkeiten. Bei seinen Shows findet er die beste Mischung zwischen einem überaus tanzbaren DJ-Set und einem energetischen Konzerterlebnis., www.kidsimius.com, https://soundcloud.com/kidsimius",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-04-23-heinz-music",
+      "date": "2016-04-23",
+      "title": "HEINZ MUSIC",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20160405221223id_/http://www.distillery.de:80/ex/dates/2016/04/23",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MARCUS MEINHARDT",
+              "info": "Katermukke, Berlin",
+              "link": ""
+            },
+            {
+              "name": "SASCHA CAWA",
+              "info": "Katermukke, Berlin",
+              "link": ""
+            },
+            {
+              "name": "DIMO KYRMANIDIS",
+              "info": "Heinz Music, Abrakadabra, Hamburg",
+              "link": ""
+            },
+            {
+              "name": "DIRRTYDISHES",
+              "info": "Heinz Music, KASSETTE Records, WellDone! Music",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-04-29-bestedeutschrap",
+      "date": "2016-04-29",
+      "title": "BESTEDEUTSCHRAP",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20160405221228id_/http://www.distillery.de:80/ex/dates/2016/04/29",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "VISA VIE",
+              "info": "Berlin",
+              "link": ""
+            },
+            {
+              "name": "JIM TONIC",
+              "info": "MoTrip",
+              "link": ""
+            },
+            {
+              "name": "DJ ACCESS",
+              "info": "NewDEF, Dresden",
+              "link": ""
+            },
+            {
+              "name": "CRATZMEISTER CALLE",
+              "info": "BESTE, Start: 23:00, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2016-04-30-the-subtle-charm-of-ruminative-headspace",
+      "date": "2016-04-30",
+      "title": "THE SUBTLE CHARM OF RUMINATIVE HEADSPACE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20160405221233id_/http://www.distillery.de:80/ex/dates/2016/04/30",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ANDREY PUSHKAREV",
+              "info": "Circus Company, Russia",
+              "link": ""
+            },
+            {
+              "name": "DANIEL STEFANIK",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "THOMAS STIELER",
+              "info": "Distillery, Paracou",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "138 - LIVE",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}

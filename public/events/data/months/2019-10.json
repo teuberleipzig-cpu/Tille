@@ -1,0 +1,450 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "2019-10-02-rave",
+      "date": "2019-10-02",
+      "title": "RAVE",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20190820235244id_/http://www.distillery.de/ex/dates/2019/10/02",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ÂME – LIVE",
+              "info": "Innervisions, Germany",
+              "link": ""
+            },
+            {
+              "name": "MORE SOON...",
+              "info": "Start: 23:30, add to Cal",
+              "link": ""
+            },
+            {
+              "name": "KALENDER-DOWNLOAD",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "DISTILLERY",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-10-04-livelyrix-poetry-slam",
+      "date": "2019-10-04",
+      "title": "LIVELYRIX POETRY SLAM",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190920042556id_/http://www.distillery.de/ex/dates/2019/10/04",
+      "imageUrl": "",
+      "description": "FR. 04.10.19 QUALITY TIME T9UR",
+      "sections": [
+        {
+          "label": "up: MODERATION: MUSIC BY:",
+          "items": [
+            {
+              "name": "LUCA SWIETER",
+              "info": "Aachen",
+              "link": ""
+            },
+            {
+              "name": "LENA MENCKENSTOCK",
+              "info": "Dortmund",
+              "link": ""
+            },
+            {
+              "name": "MARTEN DE WALL",
+              "info": "Hamburg",
+              "link": ""
+            },
+            {
+              "name": "RAINER HOLL",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BLANKK DISC",
+              "info": "Hyperion, Start: 19:30 (Einlass), 20:30 (Beginn",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-10-05-24-wohnzimmer-waldbrand-edition",
+      "date": "2019-10-05",
+      "title": "24 WOHNZIMMER - WALDBRAND EDITION",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190820235438id_/http://www.distillery.de/ex/dates/2019/10/05",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "CASA VOYAGER",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "OCB",
+              "info": "b2b, Kosh",
+              "link": ""
+            },
+            {
+              "name": "NATHAN MICAY",
+              "info": "Aus Music, LuckyMe",
+              "link": ""
+            },
+            {
+              "name": "LAURINE",
+              "info": "Slow Life",
+              "link": ""
+            },
+            {
+              "name": "SEVENSOL",
+              "info": "Long Vehicle, Kann",
+              "link": ""
+            },
+            {
+              "name": "NEELE",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-10-11-fat-bemme-x-boundless-beatz",
+      "date": "2019-10-11",
+      "title": "FAT BEMME X BOUNDLESS BEATZ",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190920042237id_/http://www.distillery.de/ex/dates/2019/10/11",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "REDEYES",
+              "info": "The North Quarter, 31 Rec., Spearhead Records, FR",
+              "link": ""
+            },
+            {
+              "name": "SUBMORPHICS",
+              "info": "The North Quarter, Shogun Audio, NL/US",
+              "link": ""
+            },
+            {
+              "name": "CBRA",
+              "info": "Broken Science Crew, Jena",
+              "link": ""
+            },
+            {
+              "name": "AUDITE",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DUBBALOT",
+              "info": "Boundless Beatz, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "NEONLIGHT",
+              "info": "Lifted Music, BSE, Trust in Music, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-10-12-saturday-rave",
+      "date": "2019-10-12",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190920042808id_/http://www.distillery.de/ex/dates/2019/10/12",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "KEVIN DE VRIES",
+              "info": "Afterlife, Cocoon, Drumcode",
+              "link": ""
+            },
+            {
+              "name": "MONA MOORE",
+              "info": "Kater Blau, Bordel des Arts",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "TIM WUTTKE",
+              "info": "Brotfabrik, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "ELIZA FELIZ",
+              "info": "EUAM, Leipzig, Start: 23:30, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-10-18-27-years-old-purple-green",
+      "date": "2019-10-18",
+      "title": "27 YEARS OLD - PURPLE GREEN",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190920042508id_/http://www.distillery.de/ex/dates/2019/10/18",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "MORE SOON...",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down: DANCERS:",
+          "items": [
+            {
+              "name": "IRONSHIRT SOUND",
+              "info": "Innsbruck",
+              "link": ""
+            },
+            {
+              "name": "HIGH POWER STATION",
+              "info": "Dash Out, Teameastgermany, Leipzig / Köln",
+              "link": ""
+            },
+            {
+              "name": "DWEETAZ FAMILY",
+              "info": "Innsbruck",
+              "link": ""
+            },
+            {
+              "name": "NIZZY",
+              "info": "Leipzig/ Jamaica, Start: 23:00, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-10-19-27-years-old-24-h-wohnzimmer",
+      "date": "2019-10-19",
+      "title": "27 YEARS OLD - 24 H WOHNZIMMER",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190820235403id_/http://www.distillery.de/ex/dates/2019/10/19",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ACID PAULI",
+              "info": "Console, Notwist, Smaul Records, Berlin",
+              "link": ""
+            },
+            {
+              "name": "BUTCH",
+              "info": "Otherside, Rekids, Desolat",
+              "link": ""
+            },
+            {
+              "name": "BORIS DLUGOSCH",
+              "info": "Running Back, Hamburg",
+              "link": ""
+            },
+            {
+              "name": "FILBURT",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "MORE SOON...",
+              "info": "Start: 23:30",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-10-25-style-wild",
+      "date": "2019-10-25",
+      "title": "STYLE WILD",
+      "color": "olive",
+      "moreUrl": "https://web.archive.org/web/20190920042210id_/http://www.distillery.de/ex/dates/2019/10/25",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "DJ Y",
+              "info": "04Lkarwa Reppin', Berlin",
+              "link": ""
+            },
+            {
+              "name": "PABLO GUNZALES",
+              "info": "Style Wild/Afro Latin What?!",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "BJ PIGGO",
+              "info": "Universal Playground, Bratislava",
+              "link": ""
+            },
+            {
+              "name": "JENNY SHARP",
+              "info": "Good Hood Music, Sharp Radio",
+              "link": ""
+            },
+            {
+              "name": "FREE KEE",
+              "info": "Gazelle Horn, Start: 19:00 Einlass, add to Cal",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-10-26-saturday-rave",
+      "date": "2019-10-26",
+      "title": "SATURDAY RAVE",
+      "color": "orange",
+      "moreUrl": "https://web.archive.org/web/20190820235832id_/http://www.distillery.de/ex/dates/2019/10/26",
+      "imageUrl": "",
+      "description": "Start: 23:30",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "ROBAG WRUHME",
+              "info": "Pampa, Hart & Tief, Kompakt, Weimar Innenstadt",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        },
+        {
+          "label": "down:",
+          "items": [
+            {
+              "name": "KALENDER-DOWNLOAD",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    },
+    {
+      "id": "2019-10-30-rave",
+      "date": "2019-10-30",
+      "title": "RAVE",
+      "color": "yellow",
+      "moreUrl": "https://web.archive.org/web/20190820235352id_/http://www.distillery.de/ex/dates/2019/10/30",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "up:",
+          "items": [
+            {
+              "name": "CHRIS LIEBING",
+              "info": "clr.net, FFM",
+              "link": ""
+            },
+            {
+              "name": "MORE SOON...",
+              "info": "Start: 23:30, add to Cal",
+              "link": ""
+            },
+            {
+              "name": "KALENDER-DOWNLOAD",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "DISTILLERY",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "KURT-EISNER-STR. 108 A",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "04275 LEIPZIG",
+              "info": "",
+              "link": ""
+            }
+          ],
+          "genre": ""
+        }
+      ]
+    }
+  ]
+}
