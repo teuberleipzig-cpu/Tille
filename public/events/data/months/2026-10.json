@@ -198,7 +198,12 @@
           ]
         },
         {
-          "label": "UNTEN",
+          "label": "UP",
+          "genre": "",
+          "items": []
+        },
+        {
+          "label": "DOWN",
           "genre": "",
           "items": [
             {
@@ -237,6 +242,11 @@
               "link": ""
             },
             {
+              "name": "MOTO MOTO",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
               "name": "CARLOTTA JACOBI",
               "info": "Connwax",
               "link": ""
@@ -244,32 +254,6 @@
             {
               "name": "BIGALKE",
               "info": "DON'T BE AFRAID OF YOURSELF, HTXSTHSTX",
-              "link": ""
-            }
-          ]
-        },
-        {
-          "label": "OBEN",
-          "genre": "",
-          "items": [
-            {
-              "name": "offen - Steffens Oldschool Classics",
-              "info": "",
-              "link": ""
-            },
-            {
-              "name": "offen - Steffens Oldschool Classics",
-              "info": "",
-              "link": ""
-            },
-            {
-              "name": "offen - Steffens Oldschool Classics",
-              "info": "",
-              "link": ""
-            },
-            {
-              "name": "MOTO MOTO",
-              "info": "Leipzig",
               "link": ""
             }
           ]
