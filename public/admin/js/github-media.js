@@ -21,14 +21,19 @@
     el.textContent=msg;
     el.className='media-upload-status '+(type||'warn');
   }
-  function settings(){
-    const owner=$('ghOwner')?.value?.trim();
-    const repo=$('ghRepo')?.value?.trim();
-    const branch=$('ghBranch')?.value?.trim();
-    const token=$('ghToken')?.value?.trim();
-    if(!owner||!repo||!branch)throw new Error('GitHub Owner/Repo/Branch fehlen in Einstellungen.');
-    if(!token)throw new Error('GitHub Token fehlt. Bitte in Einstellungen eintragen.');
-    return{owner,repo,branch,token};
+  function mediaClient(repoPath) {
+    let scope, folder;
+    if (repoPath.startsWith('public/residents/media/')) {
+      const resident = state.view === 'releases' ? residents().residents[state.releaseResidentIndex || 0] : currentResident();
+      if (!resident?.id) throw new Error('Resident-ID fehlt.');
+      scope = 'resident-media'; folder = slugText(resident.id);
+      if (!repoPath.startsWith('public/residents/media/' + folder + '/')) throw new Error('Fremder Resident-Medienpfad.');
+    } else {
+      const event = currentEvent(); if (!event?.id) throw new Error('Event-ID fehlt.');
+      scope = 'event-media'; folder = slugText((event.date || 'event') + '-' + (event.title || event.id || 'event'));
+      if (!repoPath.startsWith('public/events/media/' + folder + '/')) throw new Error('Fremder Event-Medienpfad.');
+    }
+    return window.AdminStaging.client(scope, folder);
   }
   function rememberPreview(path,blobUrl){
     if(!path||!blobUrl)return;
@@ -50,7 +55,6 @@
     return btoa(bin);
   }
   function blobToBase64(blob){return blob.arrayBuffer().then(arrayBufferToBase64)}
-  function headers(){return {...ghHeaders(),'Content-Type':'application/json'}}
   function publicPathFromRepoPath(path){return path}
   function uniqueName(prefix,ext){return slugText(prefix)+'-'+Date.now()+'.'+(ext||'jpg')}
   function fileExt(file,fallback){
@@ -83,23 +87,19 @@
       img.src=url;
     });
   }
-  async function uploadBlobToGithub(blob,repoPath,message){
-    const cfg=settings();
-    const content=await blobToBase64(blob);
-    const apiPath=repoPath.split('/').map(encodeURIComponent).join('/');
-    const url='https://api.github.com/repos/'+encodeURIComponent(cfg.owner)+'/'+encodeURIComponent(cfg.repo)+'/contents/'+apiPath;
-    const body={message:message||('Upload media '+repoPath),content,branch:cfg.branch};
-    const res=await fetch(url,{method:'PUT',headers:headers(),body:JSON.stringify(body)});
-    const out=await res.json().catch(()=>({}));
-    if(!res.ok)throw new Error(out.message||('Upload fehlgeschlagen '+res.status));
-    return publicPathFromRepoPath(repoPath);
+  async function uploadBlobToGithub(blob,repoPath,message,client=mediaClient(repoPath)){
+    await client.bind();
+    await client.putBase64File(repoPath,await blobToBase64(blob),'',message||'Upload admin media');
+    await client.finish();
+    return repoPath;
   }
   async function uploadImage(file,repoPath,ratio,w,h){
+    const client=mediaClient(repoPath); await client.bind();
     const blob=await prepareImage(file,ratio,w,h);
-    return uploadBlobToGithub(blob,repoPath,'Upload admin image '+repoPath);
+    return uploadBlobToGithub(blob,repoPath,'Upload admin image',client);
   }
   async function uploadRawFile(file,repoPath){
-    return uploadBlobToGithub(file,repoPath,'Upload admin file '+repoPath);
+    return uploadBlobToGithub(file,repoPath,'Upload admin file');
   }
   function makeDropzone(id,title,subtitle,onFile,accept){
     let zone=$(id);

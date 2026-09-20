@@ -1,4 +1,3 @@
-import { createGitHubClient } from '../../core/github-client.js';
 import { moveSitePage, normalizeSiteNavigation } from '../../../../site/js/site-navigation-model.js';
 
 const PATH = 'public/site/data/site-navigation.json';
@@ -32,13 +31,7 @@ function setStatus(message, type = 'ok') {
   status.className = 'status ' + type;
 }
 
-function client() {
-  const branch = document.getElementById('ghBranch').value.trim();
-  const token = document.getElementById('ghToken').value.trim();
-  if (!branch) throw new Error('Bitte GitHub-Branch angeben.');
-  if (!token) throw new Error('GitHub Token fehlt.');
-  return createGitHubClient({ owner: document.getElementById('ghOwner').value, repo: document.getElementById('ghRepo').value, branch, token });
-}
+function client() { return window.AdminStaging.client('navigation'); }
 
 function render() {
   if (!config) { list.innerHTML = '<p class="muted">Navigation noch nicht geladen.</p>'; return; }
@@ -88,7 +81,8 @@ async function saveNavigation() {
     loadedSha = result.content?.sha || '';
     config = next;
     render();
-    setStatus('Navigation gespeichert.', 'ok');
+    const outcome = await github.finish();
+    setStatus(outcome.message, outcome.status === 'deploy-failed' ? 'warn' : 'ok');
   } catch (error) { setStatus(error.message || 'Navigation konnte nicht gespeichert werden.', 'err'); }
 }
 
@@ -100,3 +94,4 @@ document.getElementById('topLoadBtn')?.addEventListener('click', event => { if (
 document.getElementById('topSaveBtn')?.addEventListener('click', event => { if (!root.classList.contains('hidden')) { event.stopImmediatePropagation(); saveNavigation(); } }, true);
 addSidebarEntry();
 render();
+document.addEventListener('admin-staging-source-change', () => { config = null; loadedSha = ''; setStatus('Umgebung geändert. Navigation bitte neu laden.', 'warn'); });

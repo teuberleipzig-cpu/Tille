@@ -1,4 +1,3 @@
-import { createGitHubClient } from '../../core/github-client.js';
 import { createPlaylistId, gallerySlug, moveGalleryItem, normalizeGallery } from '../../../../gallery/js/gallery-model.js';
 import { saveGalleryData, stageGalleryImageDelete } from './gallery-save.js';
 
@@ -15,13 +14,7 @@ const pendingMediaDeletes = new Set();
 
 function setStatus(message, type = 'ok') { status.textContent = message; status.className = `status ${type}`; }
 function current() { return gallery?.playlists.find(item => item.id === selectedId) || null; }
-function github() {
-  const branch = document.getElementById('ghBranch').value.trim();
-  const token = document.getElementById('ghToken').value.trim();
-  if (!branch) throw new Error('Bitte GitHub-Branch angeben.');
-  if (!token) throw new Error('GitHub Token fehlt.');
-  return createGitHubClient({ owner: document.getElementById('ghOwner').value, repo: document.getElementById('ghRepo').value, branch, token });
-}
+function github() { return window.AdminStaging.client('gallery'); }
 function openView() {
   document.querySelectorAll('.nav-btn').forEach(button => button.classList.toggle('active', button.dataset.view === 'gallery'));
   document.querySelectorAll('main>section').forEach(section => section.classList.add('hidden'));
@@ -58,6 +51,7 @@ function renderList() {
   });
 }
 function renderEditor() {
+  if (editor.contains(document.activeElement) && document.activeElement.matches('input,textarea,select,[contenteditable]')) return;
   const playlist = current();
   if (!playlist) { editor.innerHTML = '<div class="notice">Playlist auswählen oder neu anlegen.</div>'; return; }
   editor.innerHTML = `<div class="form-grid"><div class="field"><label class="label">Titel</label><input class="input" data-gallery-title value="${escapeHtml(playlist.title)}"></div><div class="field"><label class="label">Jahr</label><input class="input" data-gallery-year value="${escapeHtml(playlist.year)}"></div><div class="field full"><label class="label">Beschreibung</label><textarea class="textarea" data-gallery-description>${escapeHtml(playlist.description)}</textarea></div><label class="checkline field full"><input type="checkbox" data-gallery-enabled ${playlist.enabled ? 'checked' : ''}> Aktiv / veröffentlicht</label></div><label class="gallery-upload">Bilder hochladen<input type="file" multiple accept="image/*" data-gallery-upload></label><div class="gallery-image-list">${playlist.images.map((image, index) => `<div class="gallery-image-row" data-image-id="${image.id}"><img src="${escapeHtml(previews.get(image.id) || image.url)}" alt=""><div class="gallery-image-fields"><input class="input" data-image-alt placeholder="Alt-Text" value="${escapeHtml(image.alt)}"><input class="input" data-image-caption placeholder="Caption" value="${escapeHtml(image.caption)}"></div><div class="tools"><button class="tool" type="button" data-image-up ${index === 0 ? 'disabled' : ''}>↑</button><button class="tool" type="button" data-image-down ${index === playlist.images.length - 1 ? 'disabled' : ''}>↓</button><button class="tool" type="button" data-image-cover ${playlist.coverImage === image.url ? 'disabled' : ''}>Cover</button><button class="tool danger" type="button" data-image-remove>Entfernen</button></div></div>`).join('')}</div><div class="tools" style="margin-top:16px"><button class="btn danger" type="button" data-gallery-delete-playlist>Playlist löschen</button></div>`;
@@ -84,7 +78,7 @@ async function uploadFiles(files) {
   if (files.some(file => !file.type.startsWith('image/'))) return setStatus('Nur Bilddateien können hochgeladen werden.', 'err');
   setStatus(`Lade ${files.length} Bild(er) hoch...`, 'warn');
   try {
-    const client = github();
+    const client = github(); await client.bind();
     for (const file of files) {
       const path = `public/gallery/media/${gallerySlug(playlist.id)}/${safeFileName(file.name)}`;
       await client.putBase64File(path, await fileBase64(file), '', `Upload gallery image for ${playlist.id}`);
@@ -92,7 +86,8 @@ async function uploadFiles(files) {
       previews.set(image.id, URL.createObjectURL(file)); playlist.images.push(image);
       if (!playlist.coverImage) playlist.coverImage = path;
     }
-    markChanged(); render();
+    const outcome = await client.finish();
+    render(); setStatus('Medien gespeichert; Gallery-Entwurf noch speichern. ' + outcome.message, 'warn');
   } catch (error) { setStatus(error.message || 'Bilder konnten nicht hochgeladen werden.', 'err'); }
 }
 function removeImage(image) {
@@ -101,8 +96,8 @@ function removeImage(image) {
 }
 function addPlaylist() { if (!gallery) return setStatus('Gallery zuerst laden.', 'err'); readFields(); const id = createPlaylistId(); gallery.playlists.push({ id, title: 'Neue Playlist', year: '', description: '', enabled: false, order: gallery.playlists.length + 1, coverImage: '', images: [] }); selectedId = id; markChanged(); render(); }
 function deletePlaylist() { const playlist = current(); if (!playlist || !confirm('Playlist wirklich löschen? Medien werden nicht rekursiv gelöscht.')) return; gallery.playlists = gallery.playlists.filter(item => item.id !== playlist.id).map((item, order) => ({ ...item, order: order + 1 })); selectedId = gallery.playlists[0]?.id || ''; markChanged(); render(); }
-async function loadGallery() { setStatus('Lade Gallery...', 'warn'); try { const file = await github().getTextFile(DATA_PATH); gallery = normalizeGallery(JSON.parse(file.text)); loadedSha = file.sha; pendingMediaDeletes.clear(); selectedId = gallery.playlists[0]?.id || ''; render(); setStatus('Gallery geladen.', 'ok'); } catch (error) { setStatus(error.message || 'Gallery konnte nicht geladen werden.', 'err'); } }
-async function saveGallery() { setStatus('Speichere Gallery...', 'warn'); try { readFields(); const next = normalizeGallery(gallery); const result = await saveGalleryData({ client: github(), dataPath: DATA_PATH, next, loadedSha, pendingMediaDeletes }); loadedSha = result.loadedSha; gallery = next; render(); setStatus(result.cleanupFailures.length ? `Gallery gespeichert. ${result.cleanupFailures.length} Mediendatei(en) konnten nicht bereinigt werden.` : 'Gallery gespeichert.', result.cleanupFailures.length ? 'warn' : 'ok'); } catch (error) { setStatus(error.message || 'Gallery konnte nicht gespeichert werden.', 'err'); } }
+async function loadGallery() { setStatus('Lade Gallery...', 'warn'); try { const file = await github().getTextFile(DATA_PATH); gallery = normalizeGallery(JSON.parse(file.text)); loadedSha = file.sha; window.AdminStaging.resetPending('gallery'); pendingMediaDeletes.clear(); selectedId = gallery.playlists[0]?.id || ''; render(); setStatus('Gallery geladen.', 'ok'); } catch (error) { setStatus(error.message || 'Gallery konnte nicht geladen werden.', 'err'); } }
+async function saveGallery() { setStatus('Speichere Gallery...', 'warn'); try { readFields(); const next = normalizeGallery(gallery); const client = github(); await client.requireMediaParent(); const result = await saveGalleryData({ client, dataPath: DATA_PATH, next, loadedSha, pendingMediaDeletes }); loadedSha = result.loadedSha; gallery = next; render(); const outcome = await client.finish(); if (!result.cleanupFailures.length) window.AdminStaging.resetPending('gallery'); setStatus(result.cleanupFailures.length ? `Gallery gespeichert. ${result.cleanupFailures.length} Mediendatei(en) konnten nicht bereinigt werden.` : outcome.message, result.cleanupFailures.length || outcome.status === 'deploy-failed' ? 'warn' : 'ok'); } catch (error) { setStatus(error.message || 'Gallery konnte nicht gespeichert werden.', 'err'); } }
 
 root?.querySelector('[data-gallery-load]')?.addEventListener('click', loadGallery);
 root?.querySelector('[data-gallery-save]')?.addEventListener('click', saveGallery);
@@ -110,3 +105,4 @@ root?.querySelector('[data-gallery-new]')?.addEventListener('click', addPlaylist
 document.getElementById('topLoadBtn')?.addEventListener('click', event => { if (!root.classList.contains('hidden')) { event.stopImmediatePropagation(); loadGallery(); } }, true);
 document.getElementById('topSaveBtn')?.addEventListener('click', event => { if (!root.classList.contains('hidden')) { event.stopImmediatePropagation(); saveGallery(); } }, true);
 addSidebarEntry(); render();
+document.addEventListener('admin-staging-source-change', () => { gallery = null; loadedSha = ''; selectedId = ''; pendingMediaDeletes.clear(); previews.clear(); setStatus('Umgebung geändert. Gallery bitte neu laden.', 'warn'); });
