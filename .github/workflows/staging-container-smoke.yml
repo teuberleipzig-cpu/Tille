@@ -6,6 +6,8 @@ on:
       - main
     paths:
       - 'docker/**'
+      - 'scripts/content/**'
+      - 'tests/content-*.test.mjs'
       - 'robots.txt'
       - 'robots.staging.txt'
       - '.github/workflows/docker-publish.yml'
@@ -21,14 +23,39 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Test composition contracts on Linux
+        run: node --test tests/content-bootstrap.test.mjs tests/content-foundation.test.mjs tests/content-composition.test.mjs tests/content-composition-workflow.test.mjs tests/event-contract-v2.test.mjs tests/event-contract-v2-timetable.test.mjs
+
+      - name: Bind staging content and compose isolated context
+        env:
+          CODE_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          git fetch --no-tags origin refs/heads/content/staging:refs/remotes/origin/content/staging
+          content_sha="$(git rev-parse refs/remotes/origin/content/staging)"
+          node scripts/content/compose-site.mjs \
+            --environment staging \
+            --code-sha "$CODE_SHA" \
+            --content-ref content/staging \
+            --content-sha "$content_sha" \
+            --output "$RUNNER_TEMP/composed-site" > "$RUNNER_TEMP/composition-report.json"
+          node -e 'const r = require(process.env.RUNNER_TEMP + "/composition-report.json"); console.log(JSON.stringify({environment:r.environment,codeSha:r.codeSha,contentSha:r.contentSha,contentTreeSha:r.contentTreeSha,artifactId:r.artifactId,contentFileCount:r.contentFileCount,valid:r.valid}));'
 
       - name: Build STAGING image
         run: |
           set -euo pipefail
           docker build \
             --build-arg DEPLOY_TARGET=staging \
-            -f docker/Dockerfile \
-            -t tille-staging-smoke .
+            -f "$RUNNER_TEMP/composed-site/docker/Dockerfile" \
+            -t tille-staging-smoke "$RUNNER_TEMP/composed-site"
 
       - name: Start and validate STAGING container
         run: |
@@ -131,7 +158,7 @@ jobs:
           ! grep -Eqi '^Allow:' "$body" || fail "$endpoint" 'must not contain Allow'
           ! grep -Fqi 'www.distillery.de/sitemap.xml' "$body" || fail "$endpoint" 'must not contain the LIVE sitemap URL'
 
-          for endpoint in /sitemap.xml /__staging-smoke-does-not-exist__; do
+          for endpoint in /sitemap.xml /__staging-smoke-does-not-exist__ /public/residents/data/residents-backup-before-restore.json /public/residents/data/recovery-note.txt; do
             assert_status "$endpoint" 404
             assert_header_contains "$endpoint" X-Robots-Tag 'noindex, nofollow, noarchive'
             grep -Fqi 'Seite nicht gefunden' "$body" || fail "$endpoint" 'custom 404 body was not served'
@@ -152,11 +179,13 @@ jobs:
         run: docker rm -f tille-staging-smoke 2>/dev/null || true
 
       - name: Build DEFAULT / LIVE-safety image
+        # Same controlled STAGING content; only tests Dockerfile default policy.
+        # Never fetch content/live or claim this is a live-ready artifact.
         run: |
           set -euo pipefail
           docker build \
-            -f docker/Dockerfile \
-            -t tille-default-smoke .
+            -f "$RUNNER_TEMP/composed-site/docker/Dockerfile" \
+            -t tille-default-smoke "$RUNNER_TEMP/composed-site"
 
       - name: Start and validate DEFAULT container
         run: |
