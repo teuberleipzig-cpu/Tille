@@ -2,7 +2,7 @@ import { execFileSync } from 'node:child_process';
 import { assertGitSha } from './revision.mjs';
 
 // Read-only plumbing, without inherited Git redirection, replace refs or lazy fetch.
-function readGit(repoRoot, args, input) {
+export function readGit(repoRoot, args, input) {
   const env = Object.fromEntries(Object.entries(process.env).filter(([key]) => !key.toUpperCase().startsWith('GIT_')));
   Object.assign(env, { GIT_NO_REPLACE_OBJECTS: '1', GIT_NO_LAZY_FETCH: '1', GIT_OPTIONAL_LOCKS: '0', GIT_TERMINAL_PROMPT: '0' });
   try {
