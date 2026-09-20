@@ -1,7 +1,8 @@
 import { $, escapeHtml, setStatus } from '../core/dom.js';
 import { markDirty, requireResident, state } from '../core/state.js';
 import { imageToJpeg } from '../core/image-processing.js';
-import { slug, uploadBlob } from '../core/upload.js?v=branch-reload-2';
+import { withEditorOperation } from '../core/editor-operation.js?v=staging-writer-1';
+import { slug, uploadBlob } from '../core/upload.js?v=staging-writer-1';
 
 function assetUrl(value) {
   const url = String(value || '');
@@ -16,7 +17,6 @@ function assetUrl(value) {
 function releases() {
   const resident = requireResident();
   if (!Array.isArray(resident.releases)) resident.releases = [];
-  resident.releases.forEach(normalizeRelease);
   return resident.releases;
 }
 
@@ -34,7 +34,7 @@ function normalizeRelease(release) {
   release.artists = Array.isArray(release.artists) ? release.artists : splitLines(release.artists);
   release.coverUrl = release.coverUrl || release.coverImage || release.cover || release.imageUrl || '';
   release.coverImage = release.coverUrl;
-  release.tracks = Array.isArray(release.tracks) ? release.tracks.map(track => typeof track === 'string' ? track : (track.title || track.name || '')).filter(Boolean) : splitLines(release.tracks);
+  release.tracks = Array.isArray(release.tracks) ? release.tracks : splitLines(release.tracks);
   return release;
 }
 
@@ -73,12 +73,14 @@ function renderList() {
 
 function renderDetail() {
   const box = $('portalReleaseDetail');
-  if (!box) return;
+  if (!box) return false;
+  if (box.contains(document.activeElement) && document.activeElement.matches('input, textarea, select, [contenteditable]')) return false;
   const resident = requireResident();
-  const release = selectedRelease();
+  const selected = selectedRelease();
+  const release = selected && normalizeRelease({ ...selected });
   if (!release) {
     box.innerHTML = '<div class="notice">Links ein Release wählen oder neu anlegen.</div>';
-    return;
+    return true;
   }
 
   box.innerHTML = `
@@ -107,32 +109,42 @@ function renderDetail() {
     <section class="release-detail-section"><h3>Tracks</h3>${area('releaseTracks', 'Tracks, eine Zeile pro Track', joinLines(release.tracks), 'full')}</section>
     <section class="release-detail-section"><h3>Links</h3><div class="form-grid">${area('releaseDiscogs', 'Discogs URL', release.discogsUrl || '')}${area('releaseBeatport', 'Beatport URL', release.beatportUrl || '')}${area('releaseBandcamp', 'Bandcamp URL', release.bandcampUrl || '')}${area('releaseLabelUrl', 'Label URL', release.labelUrl || '')}</div></section>
     <section class="release-detail-section"><h3>Texte</h3>${area('releaseAutoNewsText', 'Auto News Text', release.autoNewsText || '', 'full')}${area('releaseDescription', 'Release Description', release.description || '', 'full')}</section>`;
+  return true;
 }
 
 function readDetail() {
   const release = selectedRelease();
   if (!release || !$('releaseTitle')) return;
-  release.published = !!$('releasePublished').checked;
-  release.autoNews = !!$('releaseAutoNews').checked;
-  release.featured = !!$('releaseFeatured').checked;
-  release.releaseDate = $('releaseDate').value || '';
-  release.date = release.releaseDate;
-  release.year = $('releaseYear').value || '';
-  release.title = $('releaseTitle').value || '';
-  release.label = $('releaseLabel').value || '';
-  release.releaseType = $('releaseType').value || '';
-  release.format = $('releaseFormat').value || '';
-  release.country = $('releaseCountry').value || '';
-  release.artists = splitLines($('releaseArtists').value);
-  release.coverUrl = $('releaseCover').value || '';
-  release.coverImage = release.coverUrl;
-  release.tracks = splitLines($('releaseTracks').value);
-  release.discogsUrl = $('releaseDiscogs').value.trim();
-  release.beatportUrl = $('releaseBeatport').value.trim();
-  release.bandcampUrl = $('releaseBandcamp').value.trim();
-  release.labelUrl = $('releaseLabelUrl').value.trim();
-  release.autoNewsText = $('releaseAutoNewsText').value;
-  release.description = $('releaseDescription').value;
+  const view = normalizeRelease({ ...release });
+  const mappings = {
+    releaseDate: 'releaseDate', releaseYear: 'year', releaseTitle: 'title',
+    releaseLabel: 'label', releaseType: 'releaseType', releaseFormat: 'format',
+    releaseCountry: 'country', releaseCover: 'coverUrl', releaseDiscogs: 'discogsUrl',
+    releaseBeatport: 'beatportUrl', releaseBandcamp: 'bandcampUrl', releaseLabelUrl: 'labelUrl',
+    releaseAutoNewsText: 'autoNewsText', releaseDescription: 'description'
+  };
+  for (const [id, field] of Object.entries(mappings)) {
+    const value = $(id).value;
+    if (String(view[field] || '') !== value) {
+      release[field] = field.endsWith('Url') ? value.trim() : value;
+      if (field === 'releaseDate') release.date = value;
+      if (field === 'coverUrl') release.coverImage = value;
+    }
+  }
+  for (const field of ['published', 'autoNews', 'featured']) {
+    const value = $('release' + field[0].toUpperCase() + field.slice(1)).checked;
+    if (view[field] !== value) release[field] = value;
+  }
+  for (const field of ['artists', 'tracks']) {
+    const value = $('release' + field[0].toUpperCase() + field.slice(1)).value;
+    if (joinLines(view[field]) !== value) {
+      const remaining = Array.isArray(release[field]) ? [...release[field]] : [];
+      release[field] = splitLines(value).map(text => {
+        const index = remaining.findIndex(item => joinLines([item]) === text);
+        return index >= 0 ? remaining.splice(index, 1)[0] : text;
+      });
+    }
+  }
 }
 
 async function uploadCover(file, statusEl) {
@@ -153,8 +165,11 @@ async function uploadCover(file, statusEl) {
 
 function bindDetail() {
   const box = $('portalReleaseDetail');
-  box.addEventListener('input', () => { readDetail(); markDirty(); });
-  box.addEventListener('change', () => { readDetail(); markDirty(); renderList(); });
+  if (!box.dataset.detailBound) {
+    box.dataset.detailBound = '1';
+    box.addEventListener('input', () => { readDetail(); markDirty(); });
+    box.addEventListener('change', () => { readDetail(); markDirty(); renderList(); });
+  }
   $('releaseDuplicateBtn')?.addEventListener('click', () => {
     readDetail();
     const copy = JSON.parse(JSON.stringify(selectedRelease() || {}));
@@ -184,13 +199,13 @@ function bindDetail() {
     event.preventDefault();
     const file = event.dataTransfer.files?.[0];
     if (!file) return;
-    try { await uploadCover(file, drop.querySelector('.media-upload-status')); }
+    try { await withEditorOperation(() => uploadCover(file, drop.querySelector('.media-upload-status'))); }
     catch (error) { drop.querySelector('.media-upload-status').textContent = error.message; }
   });
   fileInput.addEventListener('change', async event => {
     const file = event.target.files?.[0];
     if (!file) return;
-    try { await uploadCover(file, drop.querySelector('.media-upload-status')); }
+    try { await withEditorOperation(() => uploadCover(file, drop.querySelector('.media-upload-status'))); }
     catch (error) { drop.querySelector('.media-upload-status').textContent = error.message; }
     event.target.value = '';
   });
@@ -198,8 +213,7 @@ function bindDetail() {
 
 export function render() {
   renderList();
-  renderDetail();
-  bindDetail();
+  if (renderDetail()) bindDetail();
 }
 
 export function read() {

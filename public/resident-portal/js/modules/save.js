@@ -1,52 +1,43 @@
 import { setStatus } from '../core/dom.js';
-import { CONFIG } from '../core/config.js?v=branch-reload-2';
 import { state, requireResident } from '../core/state.js';
-import { saveResident, validateSaveBranch } from '../core/github.js?v=branch-reload-2';
+import { saveResident, portalSession } from '../core/github.js?v=staging-writer-1';
+import { draftKey } from '../core/resident-patch.js?v=staging-writer-1';
+import { withEditorOperation } from '../core/editor-operation.js?v=staging-writer-1';
 import * as profile from './profile.js';
 import * as links from './links.js';
-import * as news from './news.js?v=news-top-save-2';
-import * as media from './media.js?v=branch-reload-2';
-import * as releases from './releases.js?v=branch-reload-2';
-
-export function readAll() {
+import * as news from './news.js?v=staging-writer-1';
+import * as media from './media.js?v=staging-writer-1';
+import * as releases from './releases.js?v=staging-writer-1';
+export function readAll(sort = false) {
   profile.read();
   links.read();
-  news.readSorted();
+  if (sort) news.readSorted(); else news.read();
   media.read();
   releases.read();
   return requireResident();
 }
-
 export function initSave() {
   document.getElementById('saveBtn')?.addEventListener('click', async () => {
     try {
-      validateSaveBranch();
-    } catch (error) {
-      setStatus(error.message, 'danger');
-      return;
-    }
-    if (!state.token) {
-      setStatus('GitHub Token fehlt. Bitte neu einloggen.', 'warn');
-      return;
-    }
-    try {
-      setStatus(`Speichere Resident nach GitHub-Branch ${CONFIG.branch} ...`, 'warn');
-      const resident = readAll();
-      await saveResident(state.token, resident);
-      news.render();
-      setStatus('Gespeichert. News wurden nach Datum sortiert.', 'ok');
-    } catch (error) {
-      setStatus(error.message || 'Speichern fehlgeschlagen.', 'danger');
-    }
+      await withEditorOperation(async () => {
+        portalSession();
+        setStatus('Speichere Resident nach Staging ...', 'warn');
+        const resident = readAll(true);
+        news.render();
+        const result = await saveResident(state.token, resident);
+        setStatus(result.message, result.deployment || !result.changed ? 'ok' : 'warn');
+      });
+    } catch (error) { setStatus(error.message || 'Speichern fehlgeschlagen.', 'danger'); }
   });
-
   document.getElementById('draftBtn')?.addEventListener('click', () => {
-    const resident = readAll();
-    localStorage.setItem('residentPortalDraft:' + (resident.id || 'resident'), JSON.stringify({
-      timestamp: new Date().toISOString(),
-      resident
-    }));
-    news.render();
-    setStatus('Entwurf lokal gespeichert. News wurden nach Datum sortiert.', 'ok');
+    try {
+      const session = portalSession();
+      const resident = readAll(true);
+      localStorage.setItem(draftKey(session.context, resident.id), JSON.stringify({
+        timestamp: new Date().toISOString(), resident
+      }));
+      news.render();
+      setStatus('Staging-Entwurf lokal gespeichert. News wurden nach Datum sortiert.', 'ok');
+    } catch (error) { setStatus(error.message, 'danger'); }
   });
 }
