@@ -125,14 +125,14 @@ test('symlink/gitlink and executable content blocked; code executable modes pres
   }
 });
 
-test('disk symlink injection and output symlink rejected', { skip: process.platform === 'win32' }, async t => {
+test('disk symlink injection and output symlink rejected', async t => {
   const f = await fixture(t);
   composeSite(f.options);
-  symlinkSync(f.root, path.join(f.output, 'injected'));
+  symlinkSync(f.root, path.join(f.output, 'injected'), 'junction');
   assert.throws(() => validateComposedSite({ ...f.options, contentTreeSha: f.content.tree }), /Symlink/);
   const link = f.output + '-link';
   t.after(() => rmSync(link, { force: true }));
-  symlinkSync(f.output, link);
+  symlinkSync(f.output, link, 'junction');
   assert.throws(() => composeSite({ ...f.options, output: link }), /Symlink/);
 });
 

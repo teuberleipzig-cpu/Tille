@@ -9,7 +9,8 @@ function diskFiles(root, relative = '') {
   for (const name of readdirSync(path.join(root, relative))) {
     const file = relative ? `${relative}/${name}` : name;
     const stat = lstatSync(path.join(root, file));
-    if (stat.isSymbolicLink() || (!stat.isFile() && !stat.isDirectory())) throw new Error('Unerlaubter Dateityp im Buildcontext.');
+    if (stat.isSymbolicLink()) throw new Error('Symlink im Buildcontext.');
+    if (!stat.isFile() && !stat.isDirectory()) throw new Error('Unerlaubter Dateityp im Buildcontext.');
     if (stat.isDirectory()) {
       const nested = diskFiles(root, file);
       if (!nested.length) throw new Error('Unerwartetes leeres Verzeichnis im Buildcontext.');
