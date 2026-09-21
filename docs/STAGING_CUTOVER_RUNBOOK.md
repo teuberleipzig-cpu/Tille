@@ -64,43 +64,45 @@ documentation-only task. The exact remaining names are:
 - `validate job has read-only contents permission`
 - `write job has only required write permissions`
 
-## 2. Human gates — all unapproved
+## 2. Human gates and confirmed decisions
 
 Record approver, timestamp and evidence for each applicable gate. This document
 does not grant approval and does not represent the full suite as green.
 
 | Gate | Status / evidence needed |
 | --- | --- |
-| BASELINE_FAILURE_ACCEPTED | **NO** — explicit acceptance of the six named failures |
-| STEFFEN_FILEMAKER_ENVIRONMENT_READY | **NO** — real MBS request prepared with explicit environment=staging |
-| PHILLIP_SERVER_DEPLOY_CONFIRMED | **NO** — all eight server questions below answered |
+| BASELINE_FAILURE_ACCEPTED | **YES, conditional** — the six named baseline failures are accepted only while no new failure is present at cutover |
+| STEFFEN_FILEMAKER_ENVIRONMENT_READY | **YES** — Steffen confirmed explicit environment=staging is implemented |
+| PHILLIP_SERVER_DEPLOY_CONFIRMED | **YES** — confirmed service, latest-image pull/up wrapper and Git-revert rollback |
 | ADMIN_TOKEN_PERMISSIONS_VERIFIED | **NO** — Contents Read/Write + Actions Write confirmed without exposing token |
-| PORTAL_ACTIONS_WRITE_APPROVED | **NO** — only needed if Option A is explicitly chosen |
-| PORTAL_TOKEN_MODEL_CONFIRMED | **NO** — explicit A/B decision and operational responsibilities |
+| PORTAL_ACTIONS_WRITE_APPROVED | **NO** — deliberate least-privilege decision |
+| PORTAL_TOKEN_MODEL_CONFIRMED | **YES** — Option B selected; external authorized deployment after save |
 | AUTOMATIC_PUSH_DEPLOY_READY | **NO** — automatic main-push run and frozen content binding operationally prepared |
 | CUTOVER_EXECUTION_APPROVED | **NO** — named operator, window, approved candidate head/CI and rollback evidence |
 
 ### Steffen
 
-Confirm the actual FileMaker/MBS workflow_dispatch request to
-`filemaker-event-intake.yml` sends `mode`, `operation`, **`environment=staging`**,
-and `event_json`. Do not infer FileMaker layout/field names. No request now.
+Steffen confirmed the FileMaker/MBS workflow_dispatch request implements explicit
+`environment=staging` for `filemaker-event-intake.yml`, alongside `mode`,
+`operation` and `event_json`. This confirmation does not authorize a request and
+does not permit assumptions about FileMaker layout/field names.
 
-### Phillip — unanswered external questions
+### Phillip — confirmed www-test deployment mechanism
 
-1. What is the actual content/behavior of `/usr/local/sbin/deploy-www-test-distillery.sh`?
-2. Which image is pulled: `latest`, `sha-<code>`, `staging-code-<code>-content-<content>`,
-   immutable digest, or another selector?
-3. Is `docker pull` explicitly executed before reload?
-4. How is the exact image/digest selected and bound to this deployment?
-5. How is the last known working image restored?
-6. Which container/Compose service serves www-test.distillery.de?
-7. Can a staging reload affect any live service?
-8. How is the previous state reliably restored after deployment failure?
+www-test uses Compose service `www-test-distillery-web` and image
+`ghcr.io/teuberleipzig-cpu/tille:latest`. The confirmed forced wrapper performs:
 
-The repository records intended artifact/digest but invokes the fixed external
-script without passing that digest. Recording a digest is **not proof** that the
-server selected it. No assumptions about this implementation or rollback commands.
+```text
+docker compose pull www-test-distillery-web
+docker compose up -d www-test-distillery-web
+```
+
+The first cutover does not require server-side digest or alternate-tag pinning.
+The workflow publishes `latest`; the wrapper pulls it and recreates that service.
+The recorded artifact ID and registry digest remain evidence for the build, but
+the server selection contract is the confirmed `latest` tag. Rollback is a normal
+Git revert of the PR #109 merge followed by the automatic main-push rebuild and
+redeploy described below, not selection of a guessed historic image tag.
 
 ### Portal and Admin permissions
 
@@ -113,8 +115,8 @@ denied; Option B is not an implemented “skip dispatch” switch. Do not repeat
 to repair a dispatch failure. Record saved content SHA and hand off deployment.
 If zero dispatch attempts are required, that needs a separately scoped code change.
 
-Under approved Option B, PORTAL_ACTIONS_WRITE_APPROVED remains NO/not applicable;
-PORTAL_TOKEN_MODEL_CONFIRMED must be YES. Do not silently approve A or grant scopes.
+Under selected Option B, PORTAL_ACTIONS_WRITE_APPROVED remains NO/not applicable
+and PORTAL_TOKEN_MODEL_CONFIRMED is YES. Do not grant Actions Write.
 Admin's intended auto-deploy requires Contents Read/Write and Actions Write.
 No token/secret values in logs, evidence or this runbook.
 
@@ -154,12 +156,12 @@ can complete during the window. Also coordinate code-main writers/merges.
 Do not assume a UI banner is a lock. No technical disabling is authorized here.
 
 Record: operator/window, acknowledgments, approved PR head/base/CI, all three refs,
-reconciliation inventory/tree, gate approvals, previous server image/digest and
-recovery instructions, merge SHA, push-run start time/run ID, artifact ID/digest,
+reconciliation inventory/tree, gate approvals, current server state and confirmed
+revert procedure, merge SHA, push-run start time/run ID, artifact ID/digest,
 code/content probe hashes, server identity, QA results and final refs.
 
-END: only Phase F approval releases the freeze. Failure keeps it active pending
-operator decision; no automatic timeout or retry. Separately authorized Phase E
+END: only Phase G1 approval releases the freeze. Failure keeps it active pending
+operator decision; no automatic timeout or retry. Separately authorized Phase G1
 tests are named, serialized exceptions: record each expected new content SHA,
 finish its deploy/verification, then re-establish freeze before the next test.
 Unexpected movement is always an abort, never an accepted new baseline.
@@ -169,9 +171,12 @@ Unexpected movement is always an abort, never an accepted new baseline.
 The following is an operator checklist, **not executed by this documentation task**.
 Do not run mutating steps while any applicable gate is NO.
 
-### Phase A — Freeze and exact readiness
+### Phase A — Writer freeze
 
 1. Confirm START acknowledgments and automatic push-deploy readiness above.
+
+### Phase B — Fresh reconciliation and final tests
+
 2. Fetch, then record main/content-staging/content-live and candidate head:
 
    ```powershell
@@ -205,10 +210,11 @@ Do not run mutating steps while any applicable gate is NO.
 
    Compare full rule distribution, 1821/243/1578 totals and exact tree above.
    Check command exit codes. Refs must still equal the approved snapshot.
-5. Verify successful container CI on the exact approved candidate, no new test
-   failures, accepted baseline, all applicable human gates YES. No rebase/catch-up.
+5. Verify successful container CI on the exact approved candidate and repeat the
+   final tests. The six accepted baseline failures may remain, but no new failure
+   is allowed. Require all applicable human gates YES. No rebase/catch-up.
 
-### Phase B — Merge and automatic deployment start
+### Phase C — Exact-SHA merge
 
 6. Separately authorized operator marks #109 Ready, then reloads PR data.
 7. Recheck exact head/base and MERGEABLE; fetch/check main immediately before merge.
@@ -224,6 +230,9 @@ Do not run mutating steps while any applicable gate is NO.
    resulting refs. Any race stops the next phase; never automatically revert.
 9. Record merge SHA from GitHub; verify PR CLOSED + merged, fetch origin and require
    main exactly equals that SHA. Record unchanged content/staging and content/live.
+
+### Phase D — Automatic main-push deployment start
+
 10. Identify the `docker-publish.yml` run automatically created by the main push.
     Require `event=push`, head SHA and bound code SHA equal the exact merge SHA, and
     bound content SHA equals the freshly verified frozen content/staging head.
@@ -232,12 +241,12 @@ Do not run mutating steps while any applicable gate is NO.
     absent, failed, or binds either wrong SHA, stop and analyze the cause. Never use
     workflow_dispatch as an automatic fallback or blindly retry the merge deploy.
 
-### Phase C — Observe the automatic first deployment
+### Phase E — Build, publish, wrapper reload
 
 12. Require build success, expected `staging-code-<code>-content-<content>` artifact
     ID, registry digest `sha256:...`, SSH reload success and integrated E2E success.
-    Capture intended and Phillip-verified actual server image/digest separately.
-    Compatibility tags latest/sha-code are not immutable evidence of selection.
+    Confirm the wrapper pulled `ghcr.io/teuberleipzig-cpu/tille:latest` and recreated
+    `www-test-distillery-web`; capture the workflow artifact/digest as build evidence.
     The verifier's existing bounded retries do not authorize an operator rerun.
 
 ### Later content-only staging deployments
@@ -254,7 +263,7 @@ verified content/staging SHA. This applies to FileMaker, Admin, Resident Portal 
 human-reviewed WordPress content changes; it is not a fallback for a failed first
 push deployment.
 
-### Phase D — Remote www-test QA (no writes)
+### Phase F — Remote www-test E2E (no writes)
 
 13. Check `https://www-test.distillery.de/` and compare byte hashes with the exact
     composition report: code probe `index.html`, content probe
@@ -268,7 +277,7 @@ push deployment.
 15. Admin and Portal load normally without saving. Capture QA evidence; any failed
     hash/safety/status check blocks unfreeze even if Actions reported success.
 
-### Phase E — Separately authorized writer E2E
+### Phase G1 — PASS: separately authorized writer E2E and controlled unfreeze
 
 16. Keep general freeze; authorize each controlled exception explicitly:
 
@@ -284,18 +293,23 @@ push deployment.
     save must not cause repeat content writes. Restore a known state by an approved
     forward correction only if necessary; content movement is recorded, not hidden.
 
-### Phase F — Unfreeze
-
 18. Release writers only after www-test E2E and all agreed writer E2Es pass, both
     deployment SHAs and current refs are understood, rollback is unnecessary, and
     the operator explicitly approves END. If E2Es are pending, keep the gate open.
 
+### Phase G2 — FAIL: keep freeze and assess controlled Git revert
+
+If Phase D, E or F fails, do not dispatch a manual fallback and do not automatically
+revert. Keep the freeze, determine whether the server changed, and follow section 6.
+If the new version is served and return is required, an operator may approve the
+controlled merge-revert → automatic main-push rebuild/redeploy → full rollback-E2E.
+
 ## 5. Immediate abort conditions
 
 STOP on unexpected main/content-staging/content-live movement, PR head/base drift,
-non-mergeable PR, new test failure or non-green candidate CI, reconciliation diff,
-unapproved baseline, Steffen not ready, unanswered Phillip gate, missing required
-token capability, unprepared automatic push deployment, unknown
+non-mergeable PR, any failure beyond the accepted six or non-green candidate CI,
+reconciliation diff, revoked Steffen/Phillip confirmation, missing required token
+capability, unprepared automatic push deployment, unknown
 writer during freeze, Docker build/registry push/SSH failure, code/content hash
 mismatch, noindex failure, accessible recovery/config file or any failed QA gate.
 Expected merge and individually approved writer commits are the only exceptions
@@ -303,24 +317,45 @@ and must match their recorded outcomes exactly. Preserve evidence; keep freeze;
 report impact and required decision. No alternate strategy, force push or retry
 loop. A concurrent base race is an abort even if GitHub accepted the head guard.
 
-## 6. Rollback boundaries — server procedure not yet executable
+## 6. Controlled Git-revert rollback for the first cutover
 
-Phillip must confirm actual server rollback and last-known-good immutable image
-before cutover. Do not invent Docker/Compose commands. Never automatically revert
-PR #109, reset a content branch, force-push or revert content to fix deployment.
+The first-cutover rollback restores code through Git, not through a main reset,
+force-push, content/staging reset, assumed old digest or guessed image tag. A failed
+cutover does **not** automatically trigger a revert. Keep the writer freeze active
+and first establish whether the build failed before server change, SSH/reload failed,
+the new version is actually served, or only an E2E check failed.
 
-- **A: image built, server unchanged.** Confirm server really unchanged, preserve
-  working image and failed-run evidence; keep freeze. Operator decides whether a
-  separately authorized corrected deployment is safe. A published tag is not proof
-  the server changed; an SSH failure may still have partial effects and needs proof.
-- **B: server reloaded, E2E failed.** Keep freeze, record actual container/digest,
-  hashes and failure. Only Phillip's verified procedure and explicit operator
-  approval may restore the last-known-good server artifact, followed by full QA.
-  Main/content history remains intact; resolve code/artifact mismatch explicitly.
-- **C: writers already wrote afterward.** Freeze again; capture all new content
-  SHAs/operations. Operator assesses compatibility of old image with new content
-  and whether an approved forward repair is safer. Do not discard saved content or
-  replay stale payloads; no automatic fallback to an older content SHA.
+- **Server unchanged:** preserve evidence and do not create an unnecessary revert.
+  The operator diagnoses the failure and separately decides the next action.
+- **New version served and return required:** capture and inspect the actual PR #109
+  merge commit, then create an operator-controlled normal revert, conceptually:
+
+  ```powershell
+  git revert -m 1 <PR109_MERGE_SHA>
+  ```
+
+  `<PR109_MERGE_SHA>` is captured only during the real cutover; it is not known or
+  hard-coded in advance. Verify the commit before reverting. Bring the revert to
+  main as a normal new commit under operator control. Its main push automatically
+  runs `docker-publish.yml`, rebuilds `ghcr.io/teuberleipzig-cpu/tille:latest`, and
+  the confirmed wrapper pulls latest and recreates `www-test-distillery-web`.
+  Run the complete www-test E2E again. No automatic revert or manual deployment
+  dispatch fallback is permitted.
+
+This contract is safe for the **first cutover** because the writer freeze keeps
+content/staging unchanged throughout cutover and rollback:
+
+```text
+before:   old code      + Content A
+cutover:  new code      + Content A
+rollback: reverted code + Content A
+```
+
+If any later legitimate FileMaker, Admin, Resident Portal or WordPress write has
+moved content/staging, a code revert alone is not automatically a complete website
+rollback. Freeze again and evaluate code state plus content state separately. Do
+not invent a content-branch rollback, discard content, replay stale payloads or
+force-push. A separate operator decision and plan are required.
 
 ## 7. Post-success cleanup and Resident Access
 

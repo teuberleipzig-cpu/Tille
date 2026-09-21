@@ -242,10 +242,10 @@ This CI build did not publish or deploy an image.
 6. Accept the single existing WordPress published REST source and human Draft-review
    flow. Later merge exact reviewed head, verify staging merge SHA and current main,
    then separately dispatch expected_sha + expected_content_sha; never single-SHA.
-7. Phillip must confirm the actual forced-command implementation. Repo path:
-   `/usr/local/sbin/deploy-www-test-distillery.sh`. Actual script contents, selected
-   tag/digest, exact digest binding and rollback procedure remain **unknown** and are
-   external blockers. No SSH or inference about server implementation was performed.
+7. Phillip subsequently confirmed www-test service `www-test-distillery-web` pulls
+   `ghcr.io/teuberleipzig-cpu/tille:latest` and is recreated by the forced wrapper.
+   The first-cutover rollback contract is a controlled Git revert plus automatic
+   main-push rebuild/redeploy; see `STAGING_CUTOVER_RUNBOOK.md`. No SSH was performed.
 8. Obtain passing integrated container CI and a coordinated cutover window, rollback
    plan and operator acceptance. No live publication is activated by this package.
 
