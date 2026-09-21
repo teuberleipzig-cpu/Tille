@@ -34,6 +34,11 @@ jobs:
       - name: Test composition contracts on Linux
         run: node --test tests/content-bootstrap.test.mjs tests/content-foundation.test.mjs tests/content-composition.test.mjs tests/content-composition-workflow.test.mjs tests/event-contract-v2.test.mjs tests/event-contract-v2-timetable.test.mjs
 
+      - name: Test prepared deployment contracts without deployment
+        run: |
+          node --test tests/content-deployment.test.mjs tests/content-deployment-e2e.test.mjs tests/content-deployment-workflow.test.mjs tests/content-deployment-cli.test.mjs
+          node --test --test-name-pattern='prepared cutover|expected SHA gate|normal docker.*trigger' tests/filemaker-event-intake.test.mjs
+
       - name: Bind staging content and compose isolated context
         env:
           CODE_SHA: ${{ github.event.pull_request.head.sha }}

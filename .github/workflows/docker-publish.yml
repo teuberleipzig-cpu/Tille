@@ -3,20 +3,21 @@ name: Build and publish container image
 on:
   push:
     branches: [main]
-    paths-ignore:
-      - '**.md'
-      - 'docs/**'
-      - 'reports/**'
   workflow_dispatch:
     inputs:
       expected_sha:
-        description: Exact main SHA approved for this staging deployment
-        required: false
+        description: Exact main CODE SHA approved for this staging deployment
+        required: true
+        type: string
+      expected_content_sha:
+        description: Exact content/staging commit SHA approved for this deployment
+        required: true
         type: string
 
 concurrency:
   group: docker-publish
-  cancel-in-progress: true
+  # Serialize build+publish+SSH+verification; never cancel an in-flight reload.
+  cancel-in-progress: false
 
 env:
   IMAGE: ghcr.io/teuberleipzig-cpu/tille
@@ -24,20 +25,54 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
+    outputs:
+      code_sha: ${{ steps.bind.outputs.code_sha }}
+      content_sha: ${{ steps.bind.outputs.content_sha }}
+      artifact_id: ${{ steps.composition.outputs.artifact_id }}
+      digest: ${{ steps.image.outputs.digest }}
+      code_probe_sha256: ${{ steps.composition.outputs.code_probe_sha256 }}
+      content_probe_sha256: ${{ steps.composition.outputs.content_probe_sha256 }}
     permissions:
       contents: read
       packages: write
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
 
       - name: Verify expected deployment SHA
-        if: github.event_name == 'workflow_dispatch' && inputs.expected_sha != ''
+        id: bind
         env:
-          EXPECTED_SHA: ${{ inputs.expected_sha }}
+          CODE_SHA: ${{ github.sha }}
         run: |
-          actual_sha="$(git rev-parse HEAD)"
-          test "$actual_sha" = "$EXPECTED_SHA" || (echo "Checked out SHA $actual_sha does not match expected deployment SHA $EXPECTED_SHA." >&2 && exit 1)
+          set -euo pipefail
+          export ACTUAL_CODE_SHA="$(git rev-parse HEAD)"
+          git fetch --no-tags origin refs/heads/content/staging:refs/remotes/origin/content/staging
+          export CONTENT_SHA="$(git rev-parse refs/remotes/origin/content/staging)"
+          node scripts/content/prepare-staging-deployment.mjs
+
+      - name: Compose and verify staging context
+        id: composition
+        env:
+          CODE_SHA: ${{ steps.bind.outputs.code_sha }}
+          CONTENT_SHA: ${{ steps.bind.outputs.content_sha }}
+          COMPOSED_SITE: ${{ runner.temp }}/composed-site
+          COMPOSITION_REPORT: ${{ runner.temp }}/composition-report.json
+        run: |
+          set -euo pipefail
+          node scripts/content/compose-site.mjs \
+            --environment staging --code-sha "$CODE_SHA" \
+            --content-ref content/staging --content-sha "$CONTENT_SHA" \
+            --output "$COMPOSED_SITE" > "$COMPOSITION_REPORT"
+          node scripts/content/prepare-deployment-report.mjs
 
       - uses: docker/setup-qemu-action@v3
 
@@ -50,33 +85,69 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Derive tags
-        id: meta
-        uses: docker/metadata-action@v5
-        with:
-          images: ${{ env.IMAGE }}
-          tags: |
-            type=raw,value=latest
-            type=sha,format=long
-
       - name: Build and push
+        id: image
         uses: docker/build-push-action@v6
         with:
-          context: .
-          file: docker/Dockerfile
+          context: ${{ runner.temp }}/composed-site
+          file: ${{ runner.temp }}/composed-site/docker/Dockerfile
           build-args: |
             DEPLOY_TARGET=staging
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          # latest and sha-* are legacy STAGING compatibility aliases, not Live tags.
+          tags: |
+            ${{ env.IMAGE }}:${{ steps.composition.outputs.artifact_id }}
+            ${{ env.IMAGE }}:latest
+            ${{ env.IMAGE }}:sha-${{ steps.bind.outputs.code_sha }}
+          labels: |
+            org.opencontainers.image.revision=${{ steps.bind.outputs.code_sha }}
+            de.distillery.environment=staging
+            de.distillery.content-sha=${{ steps.bind.outputs.content_sha }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+
+      - name: Record registry digest and revision
+        env:
+          DIGEST: ${{ steps.image.outputs.digest }}
+          CODE_SHA: ${{ steps.bind.outputs.code_sha }}
+          CONTENT_SHA: ${{ steps.bind.outputs.content_sha }}
+          ARTIFACT_ID: ${{ steps.composition.outputs.artifact_id }}
+        run: |
+          set -euo pipefail
+          [[ "$DIGEST" =~ ^sha256:[a-f0-9]{64}$ ]] || { echo 'Missing or invalid registry digest' >&2; exit 1; }
+          printf 'Environment: staging\nCode: %s\nContent: %s\nArtifact: %s\nRegistry digest: %s\n' \
+            "$CODE_SHA" "$CONTENT_SHA" "$ARTIFACT_ID" "$DIGEST" >> "$GITHUB_STEP_SUMMARY"
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
     steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.build.outputs.code_sha }}
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Record intended staging image
+        env:
+          DIGEST: ${{ needs.build.outputs.digest }}
+          CODE_SHA: ${{ needs.build.outputs.code_sha }}
+          CONTENT_SHA: ${{ needs.build.outputs.content_sha }}
+          ARTIFACT_ID: ${{ needs.build.outputs.artifact_id }}
+        run: |
+          set -euo pipefail
+          [[ "$DIGEST" =~ ^sha256:[a-f0-9]{64}$ ]] || exit 1
+          printf 'Environment: staging\nCode: %s\nContent: %s\nArtifact: %s\nIntended registry digest: %s\n' \
+            "$CODE_SHA" "$CONTENT_SHA" "$ARTIFACT_ID" "$DIGEST" >> "$GITHUB_STEP_SUMMARY"
+          echo 'External forced-command digest binding is unknown; HTTP verification is mandatory.' >> "$GITHUB_STEP_SUMMARY"
+
       - name: Reload container on vps03
         uses: appleboy/ssh-action@v1.0.3
         with:
@@ -87,3 +158,9 @@ jobs:
           # any command sent here, so this "script" value is cosmetic —
           # but keep it accurate for readability.
           script: /usr/local/sbin/deploy-www-test-distillery.sh
+
+      - name: Verify deployed code content and staging security
+        env:
+          CODE_PROBE_SHA256: ${{ needs.build.outputs.code_probe_sha256 }}
+          CONTENT_PROBE_SHA256: ${{ needs.build.outputs.content_probe_sha256 }}
+        run: node scripts/content/verify-staging-deployment.mjs
