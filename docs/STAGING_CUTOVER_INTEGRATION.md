@@ -217,8 +217,12 @@ The existing Staging container smoke workflow runs on the integration PR's exact
 head, not an individual source branch. It tests composition/deployment/cross-writer
 contracts, composes content/staging, builds staging and DEFAULT safety images locally,
 runs nginx -t, HTTP/noindex/robots/sitemap404/recovery404 checks. Contents read only;
-no registry login/publish or SSH. CI result is pending at Draft creation and must be
-recorded from the actual PR run before calling this gate passed.
+no registry login/publish or SSH. **PASS:** integration PR #109, run
+[35583709219](https://github.com/teuberleipzig-cpu/Tille/actions/runs/35583709219)
+on `04a1eedf6f521cde5c19a4d657802d74fa59cb22` completed successfully: all
+composition/deployment/integration tests, composition, both local Docker builds,
+nginx validation and both HTTP matrices. The subsequent report-only commit changes
+no code or test behavior. This CI build did not publish or deploy an image.
 
 ## External blockers and exact cutover preconditions
 
@@ -248,7 +252,7 @@ NO DEPLOYMENT PERFORMED. Stop after this integration review deliverable.
 
 ## Changed-file inventory versus main
 
-+- `.github/workflows/docker-publish.yml`
+- `.github/workflows/docker-publish.yml`
 - `.github/workflows/filemaker-event-intake.yml`
 - `.github/workflows/staging-container-smoke.yml`
 - `.github/workflows/wordpress-news-sync.yml`
