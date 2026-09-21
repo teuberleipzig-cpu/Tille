@@ -1,7 +1,8 @@
 import { $, escapeHtml, setStatus } from '../core/dom.js';
 import { markDirty, requireResident, state } from '../core/state.js';
 import { imageToJpeg } from '../core/image-processing.js';
-import { slug, uploadBlob, deleteRepoFile } from '../core/upload.js?v=branch-reload-2';
+import { withEditorOperation } from '../core/editor-operation.js?v=staging-writer-1';
+import { slug, uploadBlob, deleteRepoFile } from '../core/upload.js?v=staging-writer-1';
 
 const localPhotoPreviews = new Map();
 
@@ -133,7 +134,7 @@ function handleFileDrop(zone, uploadFn) {
   input.addEventListener('change', async event => {
     const file = event.target.files?.[0];
     if (!file) return;
-    try { await uploadFn(file, zone.querySelector('.media-upload-status')); }
+    try { await withEditorOperation(() => uploadFn(file, zone.querySelector('.media-upload-status'))); }
     catch (error) { zone.querySelector('.media-upload-status').textContent = error.message; }
     event.target.value = '';
   });
@@ -142,7 +143,7 @@ function handleFileDrop(zone, uploadFn) {
     event.preventDefault();
     const file = event.dataTransfer.files?.[0];
     if (!file) return;
-    try { await uploadFn(file, zone.querySelector('.media-upload-status')); }
+    try { await withEditorOperation(() => uploadFn(file, zone.querySelector('.media-upload-status'))); }
     catch (error) { zone.querySelector('.media-upload-status').textContent = error.message; }
   });
 }
@@ -202,7 +203,7 @@ export function init() {
     }
     if (event.target.matches('[data-photo-delete]')) {
       if (!confirm('Foto wirklich aus GitHub löschen?')) return;
-      try { await deletePhotoAt(index); }
+      try { await withEditorOperation(() => deletePhotoAt(index)); }
       catch (error) { setStatus(error.message || 'Foto konnte nicht gelöscht werden.', 'danger'); }
     }
   });
