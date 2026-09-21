@@ -77,7 +77,7 @@ does not grant approval and does not represent the full suite as green.
 | ADMIN_TOKEN_PERMISSIONS_VERIFIED | **NO** — Contents Read/Write + Actions Write confirmed without exposing token |
 | PORTAL_ACTIONS_WRITE_APPROVED | **NO** — only needed if Option A is explicitly chosen |
 | PORTAL_TOKEN_MODEL_CONFIRMED | **NO** — explicit A/B decision and operational responsibilities |
-| MERGE_PUSH_DEPLOY_CONTROL_CONFIRMED | **NO** — automatic main-push deployment addressed before merge |
+| AUTOMATIC_PUSH_DEPLOY_READY | **NO** — automatic main-push run and frozen content binding operationally prepared |
 | CUTOVER_EXECUTION_APPROVED | **NO** — named operator, window, approved candidate head/CI and rollback evidence |
 
 ### Steffen
@@ -118,18 +118,24 @@ PORTAL_TOKEN_MODEL_CONFIRMED must be YES. Do not silently approve A or grant sco
 Admin's intended auto-deploy requires Contents Read/Write and Actions Write.
 No token/secret values in logs, evidence or this runbook.
 
-### Critical merge-trigger sequencing gate
+### Automatic first deployment and later dual-SHA dispatches
 
 Prepared `.github/workflows/docker-publish.yml` triggers on **push to main** as
-well as workflow_dispatch. Merging #109 therefore can immediately publish and SSH
-deploy; it does not wait for Phase C. Concurrency serializes runs but does not
-prevent a second deployment. Do not proceed with the sequence below until an
-explicit, independently authorized control prevents the merge-triggered deploy
-and allows exactly one later dispatch. The operator must specify/verify that
-control, its restoration and absence of queued/running automatic deployments.
-Nothing is disabled in this task. If instead automatic push deployment is desired,
-STOP and obtain a separately approved revised sequence; do not silently substitute
-it for the requested dual-SHA manual first deployment.
+well as workflow_dispatch. Merging #109 therefore starts the first real staging
+deployment automatically. The writer freeze must remain active from the final
+content reconciliation through this push-triggered run, so its freshly resolved
+content/staging SHA is exactly the approved frozen SHA.
+
+Identify and verify this run by `event=push` and the exact PR #109 merge SHA. Do
+**not** issue an additional manual workflow_dispatch for the first cutover: that
+would be redundant and could cause a second deployment. If the automatic run does
+not start, fails, or binds an unexpected SHA, stop and investigate; manual dispatch
+is not a fallback.
+
+workflow_dispatch remains required for later content-only changes from FileMaker,
+Admin, Resident Portal, or an approved WordPress content PR. Those deployments
+remain bound to `expected_sha=<current main SHA>` and
+`expected_content_sha=<verified content/staging SHA>`.
 
 ### WordPress contract
 
@@ -149,7 +155,7 @@ Do not assume a UI banner is a lock. No technical disabling is authorized here.
 
 Record: operator/window, acknowledgments, approved PR head/base/CI, all three refs,
 reconciliation inventory/tree, gate approvals, previous server image/digest and
-recovery instructions, merge SHA, dispatch time/run ID, artifact ID/digest,
+recovery instructions, merge SHA, push-run start time/run ID, artifact ID/digest,
 code/content probe hashes, server identity, QA results and final refs.
 
 END: only Phase F approval releases the freeze. Failure keeps it active pending
@@ -165,7 +171,7 @@ Do not run mutating steps while any applicable gate is NO.
 
 ### Phase A — Freeze and exact readiness
 
-1. Confirm START acknowledgments and merge-trigger control above.
+1. Confirm START acknowledgments and automatic push-deploy readiness above.
 2. Fetch, then record main/content-staging/content-live and candidate head:
 
    ```powershell
@@ -202,7 +208,7 @@ Do not run mutating steps while any applicable gate is NO.
 5. Verify successful container CI on the exact approved candidate, no new test
    failures, accepted baseline, all applicable human gates YES. No rebase/catch-up.
 
-### Phase B — Only PR #109
+### Phase B — Merge and automatic deployment start
 
 6. Separately authorized operator marks #109 Ready, then reloads PR data.
 7. Recheck exact head/base and MERGEABLE; fetch/check main immediately before merge.
@@ -218,45 +224,53 @@ Do not run mutating steps while any applicable gate is NO.
    resulting refs. Any race stops the next phase; never automatically revert.
 9. Record merge SHA from GitHub; verify PR CLOSED + merged, fetch origin and require
    main exactly equals that SHA. Record unchanged content/staging and content/live.
+10. Identify the `docker-publish.yml` run automatically created by the main push.
+    Require `event=push`, head SHA and bound code SHA equal the exact merge SHA, and
+    bound content SHA equals the freshly verified frozen content/staging head.
+    Disambiguate by run metadata and binding summary; do not take an unrelated run.
+11. Do **not** manually dispatch a second first-cutover run. If the push run is
+    absent, failed, or binds either wrong SHA, stop and analyze the cause. Never use
+    workflow_dispatch as an automatic fallback or blindly retry the merge deploy.
 
-### Phase C — First composed staging deployment
+### Phase C — Observe the automatic first deployment
 
-10. Confirm merge-trigger suppression/control and no duplicate queued/running run.
-    Restore dispatch availability only as explicitly approved. Fetch staging head:
-    it must remain the frozen SHA. Recheck main equals recorded merge SHA.
-11. Perform exactly one authorized dispatch, bound to both full SHAs:
-
-    ```powershell
-    gh workflow run docker-publish.yml --repo teuberleipzig-cpu/Tille --ref main -f expected_sha=$mergeSha -f expected_content_sha=$frozenContentSha
-    ```
-
-12. Record workflow **run ID** (not just workflow definition ID), dispatch timestamp,
-    workflow_dispatch event, exact code head and bound content SHA. Disambiguate by
-    run metadata and binding summary; do not take an unrelated latest run. Unknown
-    dispatch outcome: inspect read-only, never dispatch a duplicate blindly.
-13. Require build success, expected `staging-code-<code>-content-<content>` artifact
+12. Require build success, expected `staging-code-<code>-content-<content>` artifact
     ID, registry digest `sha256:...`, SSH reload success and integrated E2E success.
     Capture intended and Phillip-verified actual server image/digest separately.
     Compatibility tags latest/sha-code are not immutable evidence of selection.
     The verifier's existing bounded retries do not authorize an operator rerun.
 
+### Later content-only staging deployments
+
+After the first cutover, a separately authorized content-only change does not push
+main. Fetch and verify both refs, then perform one dual-SHA dispatch:
+
+```powershell
+gh workflow run docker-publish.yml --repo teuberleipzig-cpu/Tille --ref main -f expected_sha=$currentMainSha -f expected_content_sha=$verifiedContentSha
+```
+
+Record the workflow run ID, workflow_dispatch event, exact current main SHA and
+verified content/staging SHA. This applies to FileMaker, Admin, Resident Portal and
+human-reviewed WordPress content changes; it is not a fallback for a failed first
+push deployment.
+
 ### Phase D — Remote www-test QA (no writes)
 
-14. Check `https://www-test.distillery.de/` and compare byte hashes with the exact
+13. Check `https://www-test.distillery.de/` and compare byte hashes with the exact
     composition report: code probe `index.html`, content probe
     `public/events/data/manifest.json`. They must match the bound artifact.
-15. Verify healthz 200; X-Robots-Tag noindex,nofollow,noarchive; robots.txt
+14. Verify healthz 200; X-Robots-Tag noindex,nofollow,noarchive; robots.txt
     `User-agent: *` + `Disallow: /` (no Allow); sitemap.xml 404; content JSON
     Cache-Control no-store. Require 404 for:
     `public/residents/data/residents-backup-before-restore.json`,
     `public/residents/data/recovery-note.txt`, `docker/nginx.conf`,
     `robots.staging.txt`. Do not print sensitive unexpected response bodies.
-16. Admin and Portal load normally without saving. Capture QA evidence; any failed
+15. Admin and Portal load normally without saving. Capture QA evidence; any failed
     hash/safety/status check blocks unfreeze even if Actions reported success.
 
 ### Phase E — Separately authorized writer E2E
 
-17. Keep general freeze; authorize each controlled exception explicitly:
+16. Keep general freeze; authorize each controlled exception explicitly:
 
     - FileMaker: validate-only, controlled upsert, remove/approved cleanup case.
     - Admin: minimal controlled save, reload, conflict test; no stale overwrite.
@@ -264,7 +278,7 @@ Do not run mutating steps while any applicable gate is NO.
     - WordPress: validate-only against real source; sync-pr separately approved,
       then human Draft review/merge/separate deploy, never automatic activation.
 
-18. Record intended change, before/after SHA, partial-success status, deployment and
+17. Record intended change, before/after SHA, partial-success status, deployment and
     reload proof. No synthetic production data or ad hoc rollback. Access stays
     locked; tests do not authorize invite/code changes. Permission failure after
     save must not cause repeat content writes. Restore a known state by an approved
@@ -272,7 +286,7 @@ Do not run mutating steps while any applicable gate is NO.
 
 ### Phase F — Unfreeze
 
-19. Release writers only after www-test E2E and all agreed writer E2Es pass, both
+18. Release writers only after www-test E2E and all agreed writer E2Es pass, both
     deployment SHAs and current refs are understood, rollback is unnecessary, and
     the operator explicitly approves END. If E2Es are pending, keep the gate open.
 
@@ -281,7 +295,7 @@ Do not run mutating steps while any applicable gate is NO.
 STOP on unexpected main/content-staging/content-live movement, PR head/base drift,
 non-mergeable PR, new test failure or non-green candidate CI, reconciliation diff,
 unapproved baseline, Steffen not ready, unanswered Phillip gate, missing required
-token capability, unchosen Portal model, unresolved merge-push trigger, unknown
+token capability, unprepared automatic push deployment, unknown
 writer during freeze, Docker build/registry push/SSH failure, code/content hash
 mismatch, noindex failure, accessible recovery/config file or any failed QA gate.
 Expected merge and individually approved writer commits are the only exceptions
