@@ -16,7 +16,7 @@ const [html, app, textareas, meta, autoLoad, ui, csv] = await Promise.all([
 ]);
 
 test('Admin loads cache-busted image-only Event modules', () => {
-  for (const file of ['admin-app.js', 'events-meta.js', 'auto-github-load.js', 'events-csv-import.js']) assert.match(html, new RegExp(`${file.replaceAll('.', '\\.')}\\?v=event-image-only-1`));
+  for (const file of ['admin-app.js', 'events-meta.js', 'auto-github-load.js']) assert.match(html, new RegExp(`${file.replaceAll('.', '\\.')}\\?v=admin-staging-1`));
   assert.match(meta, /event-image-only-ui\.js\?v=event-image-only-ui-1/);
 });
 
@@ -67,8 +67,8 @@ test('Event CSV import is disabled in UI and programmatic draft import fails clo
 test('full Event document save is absent from active Event save path', () => {
   const savePath = autoLoad.slice(autoLoad.indexOf('async function saveEventsStay()'), autoLoad.indexOf('async function saveResidentsStay()'));
   assert.match(savePath, /saveEventImageOnly/);
-  assert.match(savePath, /loadMonthlyEvents\(\{strict:true,includeSitemap:true\}\)/);
-  assert.match(savePath, /eventImageTargetId\(selected\)/);
+  assert.match(savePath, /loadMonthlyEvents\(client\)/);
+  assert.match(savePath, /eventImageTargetId\(target\)/);
   assert.doesNotMatch(savePath, /safeReadEvents|saveMonthlyEventDocument|eventsJson\(\)|readArtistForm/);
 });
 

@@ -43,19 +43,15 @@
   }
   async function deleteMediaFileFromGithub(publicUrl){
     const path=repoPathFromPublicUrl(publicUrl);
-    if(!path||!path.startsWith('public/residents/media/'))return{skipped:true,path};
-    const owner=$('ghOwner')?.value?.trim(),repo=$('ghRepo')?.value?.trim(),branch=$('ghBranch')?.value?.trim();
-    if(!owner||!repo||!branch)throw new Error('GitHub Owner/Repo/Branch fehlen in Einstellungen.');
-    const apiPath=path.split('/').map(encodeURIComponent).join('/');
-    const base='https://api.github.com/repos/'+encodeURIComponent(owner)+'/'+encodeURIComponent(repo)+'/contents/'+apiPath;
-    const metaRes=await fetch(base+'?ref='+encodeURIComponent(branch)+'&t='+Date.now(),{headers:ghHeaders(),cache:'no-store'});
-    if(metaRes.status===404)return{missing:true,path};
-    const meta=await metaRes.json().catch(()=>({}));
-    if(!metaRes.ok)throw new Error(meta.message||'GitHub-Datei konnte nicht geprüft werden.');
-    const delRes=await fetch(base,{method:'DELETE',headers:{...ghHeaders(),'Content-Type':'application/json'},body:JSON.stringify({message:'Delete resident media '+path,sha:meta.sha,branch})});
-    const out=await delRes.json().catch(()=>({}));
-    if(delRes.status===404)return{missing:true,path};
-    if(!delRes.ok)throw new Error(out.message||'GitHub-Datei konnte nicht gelöscht werden.');
+    const resident=currentResident();
+    if(!resident?.id)throw new Error('Resident-ID fehlt.');
+    const folder=residentFolder(resident);
+    if(!path.startsWith('public/residents/media/'+folder+'/'))throw new Error('Fremder oder ungültiger Resident-Medienpfad.');
+    const client=window.AdminStaging.client('resident-media',folder);
+    let file;
+    try{file=await client.getFile(path)}catch(error){if(error.status===404)return{missing:true,path};throw error}
+    await client.deleteFile(path,file.sha,'Delete resident media');
+    await client.finish();
     return{deleted:true,path};
   }
   function normalizePhotos(r){
@@ -64,7 +60,7 @@
       if(Array.isArray(r.photos)) r.photoList=r.photos;
       else r.photoList=[];
     }
-    r.photoList=r.photoList.map(p=>typeof p==='string'?{url:p}:{url:p.url||p.src||p.imageUrl||''});
+    r.photoList=r.photoList.map(p=>typeof p==='string'?{url:p}:{...p,url:p.url||p.src||p.imageUrl||''});
     return r.photoList;
   }
   function getEmbeds(r){
@@ -117,8 +113,8 @@
           const ext=helper.fileExt(file,'zip');
           const path='public/residents/media/'+residentFolder(r)+'/presskit/'+helper.uniqueName('presskit',ext);
           const url=await helper.uploadRawFile(file,path);
-          helper.setFieldValue('resPresskit',url);
-          readResidentForm();
+          r.presskitUrl=url;
+          if(currentResident()===r)helper.setFieldValue('resPresskit',url);
           markDirty();
           helper.status(st,'Hochgeladen: '+url,'ok');
         }catch(err){helper.status(st,err.message,'err')}

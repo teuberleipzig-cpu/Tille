@@ -1,18 +1,36 @@
-(function(){
-  const chars='ABCDEFGHJKLMNPQRSTUVWXYZ23456789',ichars='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-  const $=id=>document.getElementById(id);
-  const rnd=(n,c)=>{const b=new Uint8Array(n);crypto.getRandomValues(b);return Array.from(b,x=>c[x%c.length]).join('')};
-  const code=()=>{const x=rnd(15,chars);return x.slice(0,5)+'-'+x.slice(5,10)+'-'+x.slice(10)};
-  const invite=()=>rnd(20,ichars);
-  function p(r){if(!r.portal||typeof r.portal!=='object')r.portal={};r.portal.enabled=r.portal.enabled===true;r.portal.inviteId=String(r.portal.inviteId||'');r.portal.code=String(r.portal.code||'');r.portal.version=r.portal.version||'resident-access-v1';return r.portal}
-  function url(r){const u=new URL('../resident-portal/index.html',location.href);u.searchParams.set('resident',r.id||'');u.searchParams.set('invite',p(r).inviteId||'');u.searchParams.set('v','portal-2');return u.toString()}
-  function create(r){const x=p(r);x.enabled=true;x.inviteId=x.inviteId||invite();x.code=x.code||code();x.updatedAt=new Date().toISOString()}
-  function mark(msg){if(typeof markDirty==='function')markDirty();render();if(typeof setStatus==='function')setStatus('residentStatus',msg,'ok')}
-  function autoSaveResidents(){const btn=$('saveResidentsGitBtn');if(btn){if(typeof setStatus==='function')setStatus('residentStatus','Resident-Zugang erstellt. Klicke automatisch Residents-Speichern...','warn');btn.click();return}if(typeof window.saveResidentsToGithub==='function'){if(typeof setStatus==='function')setStatus('residentStatus','Resident-Zugang erstellt. Speichere Residents...','warn');window.saveResidentsToGithub();return}if(typeof saveResidentsToGithub==='function'){if(typeof setStatus==='function')setStatus('residentStatus','Resident-Zugang erstellt. Speichere Residents...','warn');saveResidentsToGithub();return}if(typeof setStatus==='function')setStatus('residentStatus','Resident-Zugang erstellt. Residents bitte manuell speichern.','warn')}
-  function cp(v,msg){if(!v)return;(navigator.clipboard?.writeText(v)||Promise.reject()).then(()=>setStatus&&setStatus('residentStatus',msg,'ok')).catch(()=>prompt(msg,v))}
-  function inject(){const panel=$('resident-tab-profile')||$('resident-tab-links');if(!panel||$('residentAccessBlock'))return;const el=document.createElement('div');el.id='residentAccessBlock';el.className='resident-access-card section-card';el.innerHTML='<div class="section-body"><div class="resident-access-head"><div><b>Resident-Zugang</b><div class="muted">Portal-Link und Code für diesen Resident.</div></div><label class="resident-access-toggle"><input type="checkbox" id="residentPortalEnabled"> Zugang aktiv</label></div><div class="form-grid resident-access-grid"><div class="field full"><label class="label">Portal-Link</label><div class="copy-row"><input class="input" id="residentPortalLink" readonly><button class="tool" id="copyResidentPortalLink" type="button">Link kopieren</button></div></div><div class="field"><label class="label">15-Zeichen-Code</label><div class="copy-row"><input class="input" id="residentPortalCode" readonly><button class="tool" id="copyResidentPortalCode" type="button">Code kopieren</button></div></div><div class="field"><label class="label">Invite-ID</label><input class="input" id="residentPortalInvite" readonly></div></div><div class="tools resident-access-tools"><button class="tool" id="createResidentPortalAccess" type="button">Zugang erstellen</button><button class="tool" id="regenResidentPortalCode" type="button">Code neu generieren</button><button class="tool" id="regenResidentPortalInvite" type="button">Link neu generieren</button></div><p class="muted resident-access-note">MVP: Die Oberfläche beschränkt auf diesen Resident; der Repo-Zugriff hängt vom verwendeten Token ab.</p></div>';panel.appendChild(el)}
-  function render(){inject();const r=typeof currentResident==='function'?currentResident():null;if(!r||!$('residentAccessBlock'))return;const x=p(r);$('residentPortalEnabled').checked=!!x.enabled;$('residentPortalLink').value=x.inviteId?url(r):'';$('residentPortalCode').value=x.code||'';$('residentPortalInvite').value=x.inviteId||'';wire()}
-  function wire(){const r=typeof currentResident==='function'?currentResident():null;if(!r)return;if(!$('residentPortalEnabled').dataset.b){$('residentPortalEnabled').dataset.b=1;$('residentPortalEnabled').onchange=()=>{p(currentResident()).enabled=$('residentPortalEnabled').checked;p(currentResident()).updatedAt=new Date().toISOString();mark('Resident-Zugang geändert. Noch nicht veröffentlicht.')}}if(!$('createResidentPortalAccess').dataset.b){$('createResidentPortalAccess').dataset.b=1;$('createResidentPortalAccess').onclick=()=>{create(currentResident());mark('Resident-Zugang erstellt. Speichern startet...');setTimeout(autoSaveResidents,100)}}if(!$('regenResidentPortalCode').dataset.b){$('regenResidentPortalCode').dataset.b=1;$('regenResidentPortalCode').onclick=()=>{const x=p(currentResident());x.enabled=true;x.code=code();x.updatedAt=new Date().toISOString();mark('Code neu generiert. Noch nicht veröffentlicht.')}}if(!$('regenResidentPortalInvite').dataset.b){$('regenResidentPortalInvite').dataset.b=1;$('regenResidentPortalInvite').onclick=()=>{const x=p(currentResident());x.enabled=true;x.inviteId=invite();x.updatedAt=new Date().toISOString();mark('Link neu generiert. Noch nicht veröffentlicht.')}}if(!$('copyResidentPortalLink').dataset.b){$('copyResidentPortalLink').dataset.b=1;$('copyResidentPortalLink').onclick=()=>cp($('residentPortalLink').value,'Portal-Link kopiert.')}if(!$('copyResidentPortalCode').dataset.b){$('copyResidentPortalCode').dataset.b=1;$('copyResidentPortalCode').onclick=()=>cp($('residentPortalCode').value,'Resident-Code kopiert.')}}
-  function install(){const oe=window.ensureResidents;if(typeof oe==='function'&&!oe.residentAccess){const w=function(){oe();(residents().residents||[]).forEach(p)};w.residentAccess=1;window.ensureResidents=ensureResidents=w}const or=window.renderResidentForm;if(typeof or==='function'&&!or.residentAccess){const w=function(){or();render()};w.residentAccess=1;window.renderResidentForm=renderResidentForm=w}const ord=window.readResidentForm;if(typeof ord==='function'&&!ord.residentAccess){const w=function(){ord();const r=currentResident();if(r)p(r)};w.residentAccess=1;window.readResidentForm=readResidentForm=w}if(typeof ensureResidents==='function')ensureResidents();render()}
-  document.readyState==='loading'?document.addEventListener('DOMContentLoaded',()=>{install();setTimeout(install,700)}):(()=>{install();setTimeout(install,700)})()
+/* Temporary cutover gate. Reads only; never normalizes or mutates resident.portal. */
+(function () {
+  const MESSAGE = 'Resident-Zugangsverwaltung ist während der Staging-Migration vorübergehend deaktiviert. Bestehende Zugangsdaten bleiben erhalten. Die Funktion wird nach Migration des Resident-Portals wieder aktiviert.';
+  function install() {
+    const panel = document.getElementById('resident-tab-profile');
+    if (!panel || document.getElementById('residentAccessBlock')) return;
+    const block = document.createElement('section');
+    block.id = 'residentAccessBlock'; block.className = 'resident-access-card section-card';
+    const note = document.createElement('p'); note.textContent = MESSAGE; note.setAttribute('role', 'status'); block.append(note);
+    for (const [id, label] of [['residentPortalEnabled','Zugang aktivieren/deaktivieren'], ['createResidentPortalAccess','Zugang erstellen'],
+      ['regenResidentPortalCode','Code neu generieren'], ['regenResidentPortalInvite','Invite neu generieren'],
+      ['copyResidentPortalLink','Portal-Link erzeugen/kopieren'], ['copyResidentPortalCode','Code kopieren']]) {
+      const button = document.createElement('button'); button.id = id; button.type = 'button'; button.disabled = true; button.textContent = label; block.append(button);
+    }
+    const summary = document.createElement('p'); summary.id = 'residentAccessReadOnly'; block.append(summary);
+    panel.append(block);
+  }
+  function render() {
+    install();
+    const resident = typeof currentResident === 'function' ? currentResident() : null;
+    const target = document.getElementById('residentAccessReadOnly'); if (!target) return;
+    const portal = resident?.portal;
+    target.textContent = !portal ? 'Keine gespeicherten Zugangsdaten vorhanden.'
+      : 'Gespeicherter Zugang: ' + (portal.enabled === true ? 'aktiv' : 'inaktiv') + ' · Invite vorhanden: ' + (portal.inviteId ? 'ja' : 'nein') + ' · Code vorhanden: ' + (portal.code ? 'ja' : 'nein');
+  }
+  function ready() {
+    // The existing renderer owns the resident panel. Only append/update our scoped notice.
+    if (!window.__residentAccessReadOnly && typeof window.renderResidentForm === 'function') {
+      const previous = window.renderResidentForm;
+      window.renderResidentForm = function () { const result = previous.apply(this, arguments); render(); return result; };
+      window.__residentAccessReadOnly = true;
+    }
+    render();
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', ready); else ready();
 })();

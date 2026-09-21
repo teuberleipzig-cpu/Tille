@@ -190,16 +190,16 @@
   function loadControlledAdminModules(){
     loadExtraExtension(null,'./js/event-image-only-ui.js?v=event-image-only-ui-1');
     loadExtraExtension(null,'./js/save-status-ux.js?v=status-ux-render-bound-1');
-    loadExtraExtension('./css/github-media.css','./js/github-media.js?v=github-media-generic-guard-1');
-    loadExtraExtension('./css/residents-news.css?v=resident-news-csv-1','./js/residents-news.js?v=resident-news-csv-1');
-    loadExtraExtension('./css/residents-media.css','./js/residents-media.js?v=resident-media-guard-1');
+    loadExtraExtension('./css/github-media.css','./js/github-media.js?v=admin-staging-1');
+    loadExtraExtension('./css/residents-news.css?v=resident-news-csv-1','./js/residents-news.js?v=admin-staging-1');
+    loadExtraExtension('./css/residents-media.css','./js/residents-media.js?v=admin-staging-1');
     loadExtraExtension('./css/textareas.css','./js/textareas.js?v=textareas-no-interval-1');
     loadExtraExtension('./css/releases-admin.css','./js/releases-core.js?v=releases-core-guard-1');
     loadExtraExtension(null,'./js/releases-extra.js');
-    loadExtraExtension(null,'./js/auto-github-load.js?v=monthly-event-storage-1');
+    loadExtraExtension(null,'./js/auto-github-load.js?v=admin-staging-1');
     loadExtraExtension('./css/residents-order.css','./js/residents-order.js?v=residents-order-guard-1');
     loadExtraExtension('./css/releases-workflow.css','./js/releases-workflow.js?v=releases-workflow-shell-guard-1');
-    loadExtraExtension('./css/resident-access.css','./extensions/resident-access.js?v=resident-access-2');
+    loadExtraExtension('./css/resident-access.css','./extensions/resident-access.js?v=admin-staging-1');
   }
 
   function installEventImageUpload(){
@@ -222,8 +222,8 @@
         const path='public/events/media/'+folder+'/'+helper.uniqueName('event');
         const url=await helper.uploadImage(file,path,16/9,1600,900);
         helper.rememberPreview(url,local);
-        helper.setFieldValue('evImageUrl',url);
-        readEventForm();
+        e.imageUrl=url;
+        if(currentEvent()===e)helper.setFieldValue('evImageUrl',url);
         markDirty();
         renderPreview();
         if($('eventImagePreview'))$('eventImagePreview').src=local;

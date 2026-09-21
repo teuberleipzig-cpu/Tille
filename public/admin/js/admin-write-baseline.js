@@ -6,7 +6,7 @@
     return;
   }
   window.__adminWriteBaselineLoaded=true;
-  const STORAGE_KEY='adminV2WriteBaseline';
+  const storageKey=()=>window.AdminStaging.draftKey('write-baseline');
   let baseline=readStoredBaseline();
 
   function appState(){try{return typeof state!=='undefined'?state:null}catch(e){return null}}
@@ -18,13 +18,13 @@
   function jsonText(fn){return typeof fn==='function'?fn():''}
   function safeParse(text){try{return JSON.parse(text)}catch(e){return null}}
   function readStoredBaseline(){
-    try{return safeParse(sessionStorage.getItem(STORAGE_KEY)||'')}
+    try{return safeParse(sessionStorage.getItem(storageKey())||'')}
     catch(e){return null}
   }
   function writeStoredBaseline(value){
     baseline=value;
-    if(value)sessionStorage.setItem(STORAGE_KEY,JSON.stringify(value));
-    else sessionStorage.removeItem(STORAGE_KEY);
+    if(value)sessionStorage.setItem(storageKey(),JSON.stringify(value));
+    else sessionStorage.removeItem(storageKey());
   }
   function capture(label){
     const s=appState();
@@ -105,5 +105,6 @@
     return result;
   }
   function reset(){writeStoredBaseline(null);console.info('[AdminWriteBaseline] reset');return{ok:true,persisted:false}}
+  document.addEventListener('admin-staging-source-change',()=>{baseline=readStoredBaseline()});
   window.AdminV2WriteBaseline={begin,status,verifyAfterReload,reset};
 })();
