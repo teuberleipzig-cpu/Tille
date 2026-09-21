@@ -218,11 +218,12 @@ head, not an individual source branch. It tests composition/deployment/cross-wri
 contracts, composes content/staging, builds staging and DEFAULT safety images locally,
 runs nginx -t, HTTP/noindex/robots/sitemap404/recovery404 checks. Contents read only;
 no registry login/publish or SSH. **PASS:** integration PR #109, run
-[35583709219](https://github.com/teuberleipzig-cpu/Tille/actions/runs/35583709219)
-on `04a1eedf6f521cde5c19a4d657802d74fa59cb22` completed successfully: all
+[35583800625](https://github.com/teuberleipzig-cpu/Tille/actions/runs/35583800625)
+on final integration head `8621d730bc127ec31d5123683523aac3e4cfb033` completed successfully: all
 composition/deployment/integration tests, composition, both local Docker builds,
-nginx validation and both HTTP matrices. The subsequent report-only commit changes
-no code or test behavior. This CI build did not publish or deploy an image.
+nginx validation and both HTTP matrices. This is the verified integration baseline;
+later documentation-only heads require their own CI check before cutover.
+This CI build did not publish or deploy an image.
 
 ## External blockers and exact cutover preconditions
 
