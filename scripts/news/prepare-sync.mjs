@@ -6,7 +6,7 @@ import { generateNewsSite, loadNewsSource } from './generate-news.mjs';
 import { applyNewsOutput, assertNewsOutputContentSafe, diffNewsOutput, readNewsOutput, validateWordPressBaseUrl } from './news-sync.mjs';
 import { updateNewsSitemap } from './news-seo.mjs';
 
-export async function prepareNewsSync({ mode, workspaceRoot, wordpressBaseUrl, fetchImpl = globalThis.fetch }) {
+export async function prepareNewsSync({ mode, workspaceRoot, wordpressBaseUrl, fetchImpl = globalThis.fetch, returnFiles = false }) {
   if (!['validate-only', 'sync-pr'].includes(mode)) throw new Error(`Unsupported sync mode: ${mode}`);
   const sourceOrigin = validateWordPressBaseUrl(wordpressBaseUrl);
   const temporaryRoot = await mkdtemp(path.join(os.tmpdir(), 'tille-news-sync-'));
@@ -21,6 +21,7 @@ export async function prepareNewsSync({ mode, workspaceRoot, wordpressBaseUrl, f
     if (mode === 'sync-pr' && diff.hasChanges) await applyNewsOutput(workspaceRoot, generatedFiles);
     return {
       ...diff,
+      ...(returnFiles ? { generatedFiles } : {}),
       receivedPosts: source.rawPosts.length,
       normalizedPosts: result.posts.length,
       articleCount: result.posts.length,

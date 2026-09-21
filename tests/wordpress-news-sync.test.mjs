@@ -10,6 +10,10 @@ import {
 import { prepareNewsSync } from '../scripts/news/prepare-sync.mjs';
 
 const workflow = await readFile(new URL('../.github/workflows/wordpress-news-sync.yml', import.meta.url), 'utf8');
+const publisher = await readFile(new URL('../scripts/news/staging-publish.mjs', import.meta.url), 'utf8');
+const prAdapter = await readFile(new URL('../scripts/news/staging-pr.mjs', import.meta.url), 'utf8');
+const runner = await readFile(new URL('../scripts/news/staging-sync.mjs', import.meta.url), 'utf8');
+const commitAdapter = await readFile(new URL('../scripts/news/staging-content.mjs', import.meta.url), 'utf8');
 const fixtures = JSON.parse(await readFile(new URL('./fixtures/wordpress-posts.json', import.meta.url), 'utf8'));
 const sitemap = await readFile(new URL('../sitemap.xml', import.meta.url), 'utf8');
 const output = (articles = {}, sitemapValue = sitemap) => new Map([
@@ -37,7 +41,7 @@ test('write job has only required write permissions', () => assert.match(workflo
 test('WordPress URL comes from repository variable', () => assert.match(workflow, /vars\.WORDPRESS_BASE_URL/));
 test('validate-only job contains no commit or PR command', () => { const block = workflow.split('\n  sync-pr:')[0]; assert.doesNotMatch(block, /git (?:commit|push)|gh pr/); });
 test('sync-pr is the only write variant', () => { assert.match(workflow, /if: inputs\.mode == 'sync-pr'/); assert.equal((workflow.match(/contents: write/g) || []).length, 1); });
-test('created PR is draft', () => assert.match(workflow, /gh pr create --draft/));
+test('created PR is draft', () => assert.match(publisher, /draft: true/));
 test('workflow has no auto merge', () => assert.doesNotMatch(workflow, /gh pr merge|enable-auto-merge/));
 test('workflow has no deployment step', () => assert.doesNotMatch(workflow, /deploy|docker (?:build|push)|kubectl/i));
 
@@ -86,33 +90,27 @@ test('validate-only does not mutate an existing PR', () => assert.deepEqual(plan
 test('changes target automation branch', () => assert.equal(planNewsSync({ mode: 'sync-pr', diff: { hasChanges: true } }).branch, AUTOMATION_BRANCH));
 test('existing automation PR selects update path', () => assert.equal(planNewsSync({ mode: 'sync-pr', diff: { hasChanges: true }, existingPrNumber: 42 }).action, 'update-pr'));
 test('new automation PR selects one create path', () => assert.equal(planNewsSync({ mode: 'sync-pr', diff: { hasChanges: true } }).action, 'create-pr'));
-test('sync PR always targets main', () => assert.equal(planNewsSync({ mode: 'sync-pr', diff: { hasChanges: true } }).base, 'main'));
+test('sync PR always targets content/staging', () => assert.equal(planNewsSync({ mode: 'sync-pr', diff: { hasChanges: true } }).base, 'content/staging'));
 test('sync PR always remains draft', () => assert.equal(planNewsSync({ mode: 'sync-pr', diff: { hasChanges: true } }).draft, true));
-test('workflow updates an existing open automation PR', () => assert.match(workflow, /gh pr list --state open --base main --head/));
-test('automation push uses force-with-lease only', () => { assert.match(workflow, /git push --force-with-lease/); assert.doesNotMatch(workflow, /git push --force(?:\s|$)/); });
-test('stale close targets only automation branch into main', () => {
-  const block = workflow.split('- name: Report no changes and close stale sync PR')[1];
-  assert.match(block, /gh pr list --state open --base main --head "\$AUTOMATION_BRANCH"/);
-  assert.match(workflow, /AUTOMATION_BRANCH: automation\/wordpress-news-sync/);
+test('workflow updates an existing open automation PR', () => { assert.match(prAdapter, /state=open&base=content%2Fstaging/); assert.match(publisher, /existing[\s\S]*'PATCH', payload/); });
+test('automation push uses force-with-lease only', () => { assert.match(runner, /--force-with-lease=refs\/heads\//); assert.doesNotMatch(runner, /['"]--force['"]/); });
+const staleClose = publisher.slice(publisher.indexOf('if (!summary.hasChanges)'), publisher.indexOf('const remote ='));
+test('stale close targets only automation branch into staging', () => {
+  assert.match(staleClose, /verifyPr/); assert.match(prAdapter, /pr.base\?\.ref !== 'content\/staging'/);
+  assert.equal(AUTOMATION_BRANCH, 'automation/wordpress-news/staging');
 });
-test('stale close uses PR close and never merge', () => {
-  const block = workflow.split('- name: Report no changes and close stale sync PR')[1];
-  assert.match(block, /gh pr close/); assert.doesNotMatch(block, /gh pr merge/);
+test('stale close closes and never merges', () => { assert.match(staleClose, /state: 'closed'/); assert.doesNotMatch(staleClose, /merge/); });
+test('stale close precedes any optional comment', () => { assert.match(staleClose, /state: 'closed'/); assert.doesNotMatch(staleClose, /comment/); });
+test('comment failure cannot prevent stale close', () => assert.doesNotMatch(staleClose, /comment/));
+test('stale close performs no git commit', () => assert.doesNotMatch(staleClose, /createCommit|git commit/));
+test('stale close performs no git push', () => assert.doesNotMatch(staleClose, /push\(/));
+test('stale close does not delete a branch', () => assert.doesNotMatch(staleClose, /DELETE|--delete/));
+test('workflow still contains no auto merge', () => assert.doesNotMatch(workflow + publisher, /gh pr merge|enable-auto-merge/));
+test('workflow still contains no deploy', () => assert.doesNotMatch(workflow + publisher, /deploy|docker (?:build|push)|kubectl/i));
+test('workflow commits only doubly allowlisted news output', () => {
+  assert.match(commitAdapter, /assertNewsScope\(summary.changedFiles\)/);
+  assert.match(commitAdapter, /validateContentCommit/); assert.doesNotMatch(workflow, /git add/);
 });
-test('stale close occurs before the optional comment', () => {
-  const block = workflow.split('- name: Report no changes and close stale sync PR')[1];
-  assert.ok(block.indexOf('gh pr close') < block.indexOf('gh pr comment'));
-});
-test('comment failure cannot prevent stale close', () => {
-  const block = workflow.split('- name: Report no changes and close stale sync PR')[1];
-  assert.match(block, /gh pr comment[^\n]+\|\| true/);
-});
-test('stale close performs no git commit', () => assert.doesNotMatch(workflow.split('- name: Report no changes and close stale sync PR')[1], /git commit/));
-test('stale close performs no git push', () => assert.doesNotMatch(workflow.split('- name: Report no changes and close stale sync PR')[1], /git push/));
-test('stale close does not delete a branch', () => assert.doesNotMatch(workflow.split('- name: Report no changes and close stale sync PR')[1], /git branch|gh api.*refs|--delete/));
-test('workflow still contains no auto merge', () => assert.doesNotMatch(workflow, /gh pr merge|enable-auto-merge/));
-test('workflow still contains no deploy', () => assert.doesNotMatch(workflow, /deploy|docker (?:build|push)|kubectl/i));
-test('workflow stages and allowlists sitemap exactly', () => { assert.match(workflow, /git add -A -- news\.html news sitemap\.xml/); assert.equal(workflow.includes("^(news\\.html|news/([^/]+/)?index\\.html|sitemap\\.xml)$"), true); assert.doesNotMatch(workflow, /\*\.xml/); });
 
 test('apply removes orphaned article output', async () => {
   const root = await mkdtemp(path.join(os.tmpdir(), 'tille-sync-apply-'));

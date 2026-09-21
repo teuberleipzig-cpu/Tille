@@ -1,8 +1,8 @@
 import { mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
-export const AUTOMATION_BRANCH = 'automation/wordpress-news-sync';
-export const SYNC_PR_BASE = 'main';
+export const AUTOMATION_BRANCH = 'automation/wordpress-news/staging';
+export const SYNC_PR_BASE = 'content/staging';
 
 export function validateWordPressBaseUrl(value) {
   const raw = String(value || '').trim();
