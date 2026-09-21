@@ -3,13 +3,16 @@ name: Controlled WordPress news sync
 on:
   workflow_dispatch:
     inputs:
+      environment:
+        description: Repository target (live is not activated)
+        required: true
+        type: choice
+        options: [staging, live]
       mode:
         description: Validate WordPress or update the controlled Draft PR
         required: true
         type: choice
-        options:
-          - validate-only
-          - sync-pr
+        options: [validate-only, sync-pr]
 
 concurrency:
   group: wordpress-news-sync
@@ -23,19 +26,24 @@ jobs:
       contents: read
     env:
       WORDPRESS_BASE_URL: ${{ vars.WORDPRESS_BASE_URL }}
+      SYNC_ENVIRONMENT: ${{ inputs.environment }}
+      SYNC_MODE: validate-only
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ github.sha }}
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Validate repository variable
-        run: test -n "$WORDPRESS_BASE_URL" || (echo "WORDPRESS_BASE_URL is not configured." && exit 1)
+      - name: Validate target before reading source
+        run: node --input-type=module -e 'import { stagingEnvironment } from "./scripts/news/staging-contract.mjs"; stagingEnvironment(process.env.SYNC_ENVIRONMENT);'
+      - name: Fetch immutable snapshot candidates
+        run: git fetch --no-tags origin refs/heads/main:refs/remotes/origin/main refs/heads/content/staging:refs/remotes/origin/content/staging
       - name: Run tests
         run: node --test tests/*.test.mjs
-      - name: Validate WordPress news
-        run: node scripts/news/prepare-sync.mjs --mode validate-only --workspace "$GITHUB_WORKSPACE"
+      - name: Validate composed staging news
+        run: node scripts/news/staging-sync.mjs
 
   sync-pr:
     if: inputs.mode == 'sync-pr'
@@ -45,76 +53,22 @@ jobs:
       pull-requests: write
     env:
       WORDPRESS_BASE_URL: ${{ vars.WORDPRESS_BASE_URL }}
-      AUTOMATION_BRANCH: automation/wordpress-news-sync
+      SYNC_ENVIRONMENT: ${{ inputs.environment }}
+      SYNC_MODE: sync-pr
       GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ github.sha }}
           fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Validate repository variable
-        run: test -n "$WORDPRESS_BASE_URL" || (echo "WORDPRESS_BASE_URL is not configured." && exit 1)
+      - name: Validate target before reading source
+        run: node --input-type=module -e 'import { stagingEnvironment } from "./scripts/news/staging-contract.mjs"; stagingEnvironment(process.env.SYNC_ENVIRONMENT);'
+      - name: Fetch immutable snapshot candidates
+        run: git fetch --no-tags origin refs/heads/main:refs/remotes/origin/main refs/heads/content/staging:refs/remotes/origin/content/staging
       - name: Run tests
         run: node --test tests/*.test.mjs
-      - name: Generate and validate WordPress news
-        id: sync
-        run: node scripts/news/prepare-sync.mjs --mode sync-pr --workspace "$GITHUB_WORKSPACE"
-      - name: Commit controlled output
-        if: steps.sync.outputs.has_changes == 'true'
-        run: |
-          git fetch origin "+refs/heads/$AUTOMATION_BRANCH:refs/remotes/origin/$AUTOMATION_BRANCH" || true
-          git switch -C "$AUTOMATION_BRANCH"
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A -- news.html news sitemap.xml
-          unexpected="$(git diff --cached --name-only | grep -Ev '^(news\.html|news/([^/]+/)?index\.html|sitemap\.xml)$' || true)"
-          test -z "$unexpected" || (echo "Unexpected staged paths:" && echo "$unexpected" && exit 1)
-          git commit -m "chore: sync wordpress news"
-          git push --force-with-lease origin "HEAD:$AUTOMATION_BRANCH"
-      - name: Create or update Draft PR
-        if: steps.sync.outputs.has_changes == 'true'
-        env:
-          RECEIVED_POSTS: ${{ steps.sync.outputs.received_posts }}
-          ARTICLE_COUNT: ${{ steps.sync.outputs.article_count }}
-          ADDED: ${{ steps.sync.outputs.added }}
-          UPDATED: ${{ steps.sync.outputs.updated }}
-          REMOVED: ${{ steps.sync.outputs.removed }}
-          SOURCE_ORIGIN: ${{ steps.sync.outputs.source_origin }}
-          SITEMAP_CHANGED: ${{ steps.sync.outputs.sitemap_changed }}
-        run: |
-          body_file="$RUNNER_TEMP/wordpress-news-pr.md"
-          {
-            echo "## WordPress news sync"
-            echo
-            echo "- Source: WordPress REST"
-            echo "- Posts received: $RECEIVED_POSTS"
-            echo "- Generated articles: $ARTICLE_COUNT"
-            echo "- Added: ${ADDED:-none}"
-            echo "- Updated: ${UPDATED:-none}"
-            echo "- Removed: ${REMOVED:-none}"
-            echo "- Sitemap updated: $SITEMAP_CHANGED"
-            echo "- Trigger time: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
-            echo "- Source origin: $SOURCE_ORIGIN"
-            echo "- Validation: PASS"
-            echo "- Auto-merge: disabled"
-          } > "$body_file"
-          pr_number="$(gh pr list --state open --base main --head "$AUTOMATION_BRANCH" --json number --jq '.[0].number // empty')"
-          if test -n "$pr_number"; then
-            gh pr edit "$pr_number" --title "Sync WordPress news" --body-file "$body_file"
-            pr_is_draft="$(gh pr view "$pr_number" --json isDraft --jq '.isDraft')"
-            test "$pr_is_draft" = "true" || gh pr ready "$pr_number" --undo
-          else
-            gh pr create --draft --base main --head "$AUTOMATION_BRANCH" --title "Sync WordPress news" --body-file "$body_file"
-          fi
-      - name: Report no changes and close stale sync PR
-        if: steps.sync.outputs.has_changes != 'true'
-        run: |
-          echo "No WordPress news changes detected."
-          pr_number="$(gh pr list --state open --base main --head "$AUTOMATION_BRANCH" --json number --jq '.[0].number // empty')"
-          if test -n "$pr_number"; then
-            gh pr close "$pr_number"
-            gh pr comment "$pr_number" --body "Closing stale WordPress news sync PR because the current WordPress publish state produces no changes against main." || true
-          fi
+      - name: Generate controlled staging Draft PR
+        run: node scripts/news/staging-sync.mjs
