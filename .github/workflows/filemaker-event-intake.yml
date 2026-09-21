@@ -11,6 +11,10 @@ on:
         required: true
         type: choice
         options: [upsert, remove]
+      environment:
+        required: true
+        type: choice
+        options: [staging, live]
       event_json:
         required: true
         type: string
@@ -26,18 +30,22 @@ jobs:
     permissions:
       contents: read
     env:
+      FILEMAKER_MODE: ${{ inputs.mode }}
+      FILEMAKER_OPERATION: ${{ inputs.operation }}
+      FILEMAKER_ENVIRONMENT: ${{ inputs.environment }}
       FILEMAKER_EVENT_JSON: ${{ inputs.event_json }}
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ github.sha }}
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 22
       - name: Run FileMaker-scoped tests
-        run: node --test tests/filemaker-event-intake.test.mjs tests/monthly-event-storage.test.mjs tests/event-seo.test.mjs
-      - name: Validate FileMaker event
-        run: node scripts/filemaker/prepare-filemaker-event.mjs --mode validate-only --operation "${{ inputs.operation }}" --workspace "$GITHUB_WORKSPACE"
+        run: node --test tests/filemaker-event-intake.test.mjs tests/monthly-event-storage.test.mjs tests/event-seo.test.mjs tests/filemaker-staging*.test.mjs
+      - name: Validate composed staging snapshot (no writes)
+        run: node scripts/filemaker/run-staging-writer.mjs
 
   sync-pr:
     if: inputs.mode == 'sync-pr'
@@ -47,203 +55,22 @@ jobs:
       pull-requests: write
       actions: write
     env:
+      FILEMAKER_MODE: ${{ inputs.mode }}
+      FILEMAKER_OPERATION: ${{ inputs.operation }}
+      FILEMAKER_ENVIRONMENT: ${{ inputs.environment }}
       FILEMAKER_EVENT_JSON: ${{ inputs.event_json }}
       GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ github.sha }}
           fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Capture base SHA
-        id: base
-        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
       - name: Run FileMaker-scoped tests
-        run: node --test tests/filemaker-event-intake.test.mjs tests/monthly-event-storage.test.mjs tests/event-seo.test.mjs
-      - name: Prepare FileMaker event storage and SEO
-        id: intake
-        run: node scripts/filemaker/prepare-filemaker-event.mjs --mode sync-pr --operation "${{ inputs.operation }}" --workspace "$GITHUB_WORKSPACE"
-      - name: Enforce single FileMaker PR
-        id: pull
-        env:
-          EVENT_BRANCH: ${{ steps.intake.outputs.branch }}
-        run: |
-          pulls="$(gh pr list --state open --base main --limit 100 --json number,headRefName)"
-          count="$(jq '[.[] | select(.headRefName | startswith("automation/filemaker-event/"))] | length' <<<"$pulls")"
-          test "$count" -le 1 || (echo "More than one FileMaker event intake PR is open. Close duplicates before rerunning." >&2 && exit 1)
-          other="$(jq -r --arg branch "$EVENT_BRANCH" '[.[] | select(.headRefName | startswith("automation/filemaker-event/")) | select(.headRefName != $branch)][0] | if . == null then empty else @base64 end' <<<"$pulls")"
-          if test -n "$other"; then
-            number="$(base64 -d <<<"$other" | jq -r .number)"
-            head="$(base64 -d <<<"$other" | jq -r .headRefName)"
-            echo "Another FileMaker event intake PR is already open: PR #$number for ${head#automation/filemaker-event/}. Merge or close it before sending another FileMaker event." >&2
-            exit 1
-          fi
-          number="$(jq -r --arg branch "$EVENT_BRANCH" '[.[] | select(.headRefName == $branch)][0].number // empty' <<<"$pulls")"
-          echo "number=$number" >> "$GITHUB_OUTPUT"
-      - name: Verify main has not moved
-        env:
-          BASE_SHA: ${{ steps.base.outputs.sha }}
-        run: |
-          git fetch origin main
-          test "$BASE_SHA" = "$(git rev-parse origin/main)" || (echo "main moved during FileMaker intake; rerun required." >&2 && exit 1)
-      - name: Commit controlled event storage and SEO
-        if: steps.intake.outputs.has_changes == 'true'
-        id: commit
-        env:
-          EVENT_BRANCH: ${{ steps.intake.outputs.branch }}
-          EVENT_PAGE: ${{ steps.intake.outputs.event_page }}
-        run: |
-          git fetch origin "+refs/heads/$EVENT_BRANCH:refs/remotes/origin/$EVENT_BRANCH" || true
-          git switch -C "$EVENT_BRANCH"
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          test -n "$EVENT_PAGE" || (echo "Generated FileMaker Event page path is missing." >&2 && exit 1)
-          git add -A -- public/events/data sitemap.xml
-          if test -e "$EVENT_PAGE" || git ls-files --error-unmatch -- "$EVENT_PAGE" >/dev/null 2>&1; then
-            git add -A -- "$EVENT_PAGE"
-          fi
-          unexpected="$(git diff --cached --name-only | while IFS= read -r file; do
-            case "$file" in
-              sitemap.xml|"$EVENT_PAGE") ;;
-              public/events/data/manifest.json|public/events/data/meta.json|public/events/data/event-index.json|public/events/data/search-index.json) ;;
-              public/events/data/months/*.json)
-                [[ "$file" =~ ^public/events/data/months/[0-9]{4}-(0[1-9]|1[0-2])\.json$ ]] || printf '%s\n' "$file"
-                ;;
-              *) printf '%s\n' "$file" ;;
-            esac
-          done)"
-          test -z "$unexpected" || (echo "Unexpected staged paths:" >&2 && echo "$unexpected" >&2 && exit 1)
-          git commit -m "chore: apply filemaker event intake"
-          git push --force-with-lease origin "HEAD:$EVENT_BRANCH"
-          echo "head_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
-      - name: Create or update Draft PR
-        if: steps.intake.outputs.has_changes == 'true'
-        id: pr
-        env:
-          PR_NUMBER: ${{ steps.pull.outputs.number }}
-          EVENT_BRANCH: ${{ steps.intake.outputs.branch }}
-          EVENT_ID: ${{ steps.intake.outputs.event_id }}
-          EVENT_DATE: ${{ steps.intake.outputs.date }}
-          EVENT_TITLE: ${{ steps.intake.outputs.title }}
-          OPERATION: ${{ steps.intake.outputs.operation }}
-          BASE_SHA: ${{ steps.base.outputs.sha }}
-          BEFORE_MONTH: ${{ steps.intake.outputs.before_month }}
-          AFTER_MONTH: ${{ steps.intake.outputs.after_month }}
-          CHANGED_FILES: ${{ steps.intake.outputs.changed_files }}
-          EVENT_PAGE: ${{ steps.intake.outputs.event_page }}
-          EVENT_PAGE_CHANGED: ${{ steps.intake.outputs.event_page_changed }}
-          SITEMAP_CHANGED: ${{ steps.intake.outputs.sitemap_changed }}
-        run: |
-          body="$RUNNER_TEMP/filemaker-event-pr.md"
-          {
-            echo "## Source"; echo "FileMaker Event Intake V1"
-            echo; echo "## Operation"; echo "$OPERATION"
-            echo; echo "## Event"; echo "- ID: $EVENT_ID"; echo "- Date: ${EVENT_DATE:-n/a}"; echo "- Title: ${EVENT_TITLE:-n/a}"
-            echo; echo "## Base"; echo "$BASE_SHA"
-            echo; echo "## Storage"; echo "- Previous month: ${BEFORE_MONTH:-none}"; echo "- Result month: ${AFTER_MONTH:-none}"
-            echo; echo "## Event SEO"; echo "- Event page: $EVENT_PAGE (${EVENT_PAGE_CHANGED})"; echo "- Event sitemap changed: $SITEMAP_CHANGED"; echo "- Changed artifacts: $CHANGED_FILES"
-            echo; echo "## Validation"; echo "PASS"
-            echo; echo "## Safety"; echo "- FileMaker-controlled fm-* ID"; echo "- Auto-merge restricted to this exact FileMaker PR and head SHA"; echo "- SHA-gated staging deployment after verified merge"
-          } > "$body"
-          title="FileMaker event: $OPERATION ${EVENT_DATE:-n/a} ${EVENT_TITLE:-$EVENT_ID}"
-          if test -n "$PR_NUMBER"; then
-            gh pr edit "$PR_NUMBER" --title "$title" --body-file "$body"
-            test "$(gh pr view "$PR_NUMBER" --json isDraft --jq .isDraft)" = true || gh pr ready "$PR_NUMBER" --undo
-          else
-            gh pr create --draft --base main --head "$EVENT_BRANCH" --title "$title" --body-file "$body"
-          fi
-          pulls="$(gh pr list --state open --base main --head "$EVENT_BRANCH" --limit 2 --json number,baseRefName,headRefName)"
-          test "$(jq 'length' <<<"$pulls")" = 1 || (echo "Expected exactly one open PR for $EVENT_BRANCH." >&2 && exit 1)
-          number="$(jq -r '.[0].number' <<<"$pulls")"
-          test -n "$number" || (echo "FileMaker PR number could not be determined." >&2 && exit 1)
-          echo "number=$number" >> "$GITHUB_OUTPUT"
-      - name: Verify FileMaker PR and changed files before Ready
-        if: steps.intake.outputs.has_changes == 'true'
-        env:
-          PR_NUMBER: ${{ steps.pr.outputs.number }}
-          EVENT_BRANCH: ${{ steps.intake.outputs.branch }}
-          EVENT_HEAD_SHA: ${{ steps.commit.outputs.head_sha }}
-          BASE_SHA: ${{ steps.base.outputs.sha }}
-          EVENT_PAGE: ${{ steps.intake.outputs.event_page }}
-        run: |
-          test -n "$PR_NUMBER" && test -n "$EVENT_HEAD_SHA" || (echo "FileMaker PR identity is incomplete." >&2 && exit 1)
-          case "$EVENT_BRANCH" in automation/filemaker-event/*) ;; *) echo "Unexpected FileMaker event branch: $EVENT_BRANCH" >&2; exit 1 ;; esac
-          pull="$(gh api "repos/$GITHUB_REPOSITORY/pulls/$PR_NUMBER")"
-          test "$(jq -r .number <<<"$pull")" = "$PR_NUMBER" || (echo "FileMaker PR number mismatch." >&2 && exit 1)
-          test "$(jq -r .state <<<"$pull")" = open || (echo "FileMaker PR is not open." >&2 && exit 1)
-          test "$(jq -r .base.ref <<<"$pull")" = main || (echo "FileMaker PR base is not main." >&2 && exit 1)
-          test "$(jq -r .head.ref <<<"$pull")" = "$EVENT_BRANCH" || (echo "FileMaker PR head branch mismatch." >&2 && exit 1)
-          test "$(jq -r .head.sha <<<"$pull")" = "$EVENT_HEAD_SHA" || (echo "FileMaker PR head SHA mismatch." >&2 && exit 1)
-          files="$(gh api --paginate "repos/$GITHUB_REPOSITORY/pulls/$PR_NUMBER/files?per_page=100" --jq '.[].filename')"
-          test -n "$files" || (echo "FileMaker PR contains no changed files." >&2 && exit 1)
-          unexpected="$(printf '%s\n' "$files" | while IFS= read -r file; do
-            case "$file" in
-              sitemap.xml|"$EVENT_PAGE") ;;
-              public/events/data/manifest.json|public/events/data/meta.json|public/events/data/event-index.json|public/events/data/search-index.json) ;;
-              public/events/data/months/*.json)
-                [[ "$file" =~ ^public/events/data/months/[0-9]{4}-(0[1-9]|1[0-2])\.json$ ]] || printf '%s\n' "$file"
-                ;;
-              *) printf '%s\n' "$file" ;;
-            esac
-          done)"
-          test -z "$unexpected" || (echo "Unexpected FileMaker PR paths:" >&2 && printf '%s\n' "$unexpected" >&2 && exit 1)
-          git fetch origin main
-          test "$BASE_SHA" = "$(git rev-parse origin/main)" || (echo "main moved before FileMaker PR approval; rerun required." >&2 && exit 1)
-      - name: Mark verified FileMaker PR Ready for Review
-        if: steps.intake.outputs.has_changes == 'true'
-        env:
-          PR_NUMBER: ${{ steps.pr.outputs.number }}
-        run: |
-          draft="$(gh api "repos/$GITHUB_REPOSITORY/pulls/$PR_NUMBER" --jq .draft)"
-          if test "$draft" = true; then
-            gh pr ready "$PR_NUMBER"
-          elif test "$draft" != false; then
-            echo "FileMaker PR draft state is invalid." >&2
-            exit 1
-          fi
-      - name: Reverify and merge exact FileMaker PR
-        if: steps.intake.outputs.has_changes == 'true'
-        id: merge
-        env:
-          PR_NUMBER: ${{ steps.pr.outputs.number }}
-          EVENT_BRANCH: ${{ steps.intake.outputs.branch }}
-          EVENT_HEAD_SHA: ${{ steps.commit.outputs.head_sha }}
-          BASE_SHA: ${{ steps.base.outputs.sha }}
-        run: |
-          pull="$(gh api "repos/$GITHUB_REPOSITORY/pulls/$PR_NUMBER")"
-          test "$(jq -r .number <<<"$pull")" = "$PR_NUMBER" || (echo "FileMaker PR number changed after Ready." >&2 && exit 1)
-          test "$(jq -r .state <<<"$pull")" = open || (echo "FileMaker PR is not open after Ready." >&2 && exit 1)
-          test "$(jq -r .base.ref <<<"$pull")" = main || (echo "FileMaker PR base changed after Ready." >&2 && exit 1)
-          test "$(jq -r .head.ref <<<"$pull")" = "$EVENT_BRANCH" || (echo "FileMaker PR head changed after Ready." >&2 && exit 1)
-          test "$(jq -r .head.sha <<<"$pull")" = "$EVENT_HEAD_SHA" || (echo "FileMaker PR head SHA changed after Ready." >&2 && exit 1)
-          git fetch origin main
-          test "$BASE_SHA" = "$(git rev-parse origin/main)" || (echo "main moved immediately before FileMaker merge; rerun required." >&2 && exit 1)
-          response="$(gh api --method PUT "repos/$GITHUB_REPOSITORY/pulls/$PR_NUMBER/merge" -f merge_method=merge -f sha="$EVENT_HEAD_SHA")"
-          test "$(jq -r '.merged // false' <<<"$response")" = true || (echo "GitHub did not merge the FileMaker PR." >&2 && exit 1)
-          merge_sha="$(jq -r '.sha // empty' <<<"$response")"
-          [[ "$merge_sha" =~ ^[0-9a-f]{40}$ ]] || (echo "GitHub returned no valid FileMaker merge SHA." >&2 && exit 1)
-          echo "merge_sha=$merge_sha" >> "$GITHUB_OUTPUT"
-      - name: Verify merged FileMaker SHA on main
-        if: steps.intake.outputs.has_changes == 'true'
-        env:
-          MERGE_SHA: ${{ steps.merge.outputs.merge_sha }}
-        run: |
-          git fetch origin main
-          test "$MERGE_SHA" = "$(git rev-parse origin/main)" || (echo "origin/main does not match the verified FileMaker merge SHA." >&2 && exit 1)
-      - name: Dispatch SHA-gated staging deployment
-        if: steps.intake.outputs.has_changes == 'true'
-        env:
-          MERGE_SHA: ${{ steps.merge.outputs.merge_sha }}
-        run: gh workflow run docker-publish.yml --ref main -f expected_sha="$MERGE_SHA"
-      - name: Close stale same-event PR
-        if: steps.intake.outputs.has_changes != 'true' && steps.pull.outputs.number != ''
-        env:
-          PR_NUMBER: ${{ steps.pull.outputs.number }}
-        run: |
-          gh pr close "$PR_NUMBER"
-          gh pr comment "$PR_NUMBER" --body "Closing stale FileMaker event intake PR because the requested operation produces no changes against main." || true
-      - name: Report no changes
-        if: steps.intake.outputs.has_changes != 'true'
-        run: echo "No FileMaker event changes detected."
+        run: node --test tests/filemaker-event-intake.test.mjs tests/monthly-event-storage.test.mjs tests/event-seo.test.mjs tests/filemaker-staging*.test.mjs
+      - name: Apply staging content through verified SHA-gated PR
+        # Code stays on its workflow SHA; composition lives in RUNNER_TEMP.
+        # Future dispatch requires coordinated activation with PR #104.
+        run: node scripts/filemaker/run-staging-writer.mjs

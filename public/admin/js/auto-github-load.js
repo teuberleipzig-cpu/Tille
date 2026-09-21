@@ -1,302 +1,117 @@
-/* Auto-loads Events and Residents without forcing the Settings view.
-   Public JSON loading works without a GitHub token. Saving still needs a token.
-   Debug logs use [AdminSaveDebug] and never print the token value. */
-(function(){
-  const DBG='[AdminSaveDebug]';
-  const eventStorageModules=Promise.all([
+/* Staging-only load/save adapters for the classic Admin UI; no public/main fallback. */
+(function () {
+  const modules = Promise.all([
     import('./core/event-storage-admin.js?v=event-storage-admin-1'),
-    import('./core/github-atomic-commit.js?v=github-atomic-commit-1'),
-    import('./core/event-image-only-save.js?v=event-image-only-save-1')
+    import('./core/event-image-only-save.js?v=event-image-only-save-1'),
+    import('./core/resident-fresh-patch.js?v=admin-staging-1')
   ]);
-  function log(step,data){try{console.log(DBG,step,data??'')}catch(e){}}
-  function warn(step,data){try{console.warn(DBG,step,data??'')}catch(e){}}
-  function err(step,data){try{console.error(DBG,step,data??'')}catch(e){}}
-  function artistSnapshot(){const a=currentArtist?.();return a?{index:state.selectedArtist,name:a.name||'',info:a.info||'',link:a.link||''}:null}
-  function eventSnapshot(){const d=events?.();return{eventsCount:d?.events?.length||0,artistsCount:artists?.().length||0,selectedArtist:state.selectedArtist,selectedEvent:state.selectedEvent,artist:artistSnapshot(),artistNames:(artists?.()||[]).map(a=>a.name)}}
-  function onReady(fn){document.readyState==='loading'?document.addEventListener('DOMContentLoaded',fn):fn()}
-  function val(id){return $(id)?.value?.trim()||''}
-  function apiPath(path){return String(path||'').split('/').map(encodeURIComponent).join('/')}
-  function rawPath(path){return String(path||'').split('/').map(encodeURIComponent).join('/')}
-  function repoApiBase(){return 'https://api.github.com/repos/'+encodeURIComponent(val('ghOwner'))+'/'+encodeURIComponent(val('ghRepo'))}
-  function apiUrl(path,branch=val('ghBranch')){return repoApiBase()+'/contents/'+apiPath(path)+'?ref='+encodeURIComponent(branch)+'&t='+Date.now()}
-  function apiPutUrl(path){return repoApiBase()+'/contents/'+apiPath(path)}
-  function blobUrl(sha){return repoApiBase()+'/git/blobs/'+encodeURIComponent(sha)+'?t='+Date.now()}
-  function rawUrl(path){return 'https://raw.githubusercontent.com/'+encodeURIComponent(val('ghOwner'))+'/'+encodeURIComponent(val('ghRepo'))+'/'+encodeURIComponent(val('ghBranch'))+'/'+rawPath(path)+'?t='+Date.now()}
-  function localUrl(path){return '../../'+String(path||'').replace(/^public\//,'')+'?t='+Date.now()}
-  function publicHeaders(){const h={Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'};const token=val('ghToken');if(token){h.Authorization='Bearer '+token}return h}
-  function writeHeaders(){return {...publicHeaders(),'Content-Type':'application/json'}}
-  function b64DecodeUtf8(str){const bin=atob(String(str||'').replace(/\n/g,''));return new TextDecoder().decode(Uint8Array.from(bin,ch=>ch.charCodeAt(0)))}
-  function b64EncodeUtf8(str){const bytes=new TextEncoder().encode(str);let bin='';for(let i=0;i<bytes.length;i+=32768)bin+=String.fromCharCode.apply(null,bytes.subarray(i,i+32768));return btoa(bin)}
-  async function fetchJsonUrl(url){log('fetchJsonUrl:start',{url:url.replace(/\?.*$/,'?...')});const res=await fetch(url,{cache:'no-store'});const text=await res.text();log('fetchJsonUrl:response',{status:res.status,ok:res.ok,textLength:text.length});if(!res.ok)throw new Error('Download fehlgeschlagen: '+res.status);if(!text.trim())throw new Error('JSON-Datei ist leer.');return JSON.parse(text)}
-  async function fetchBlobJson(sha,path){
-    log('fetchBlobJson:start',{path,sha,tokenPresent:!!val('ghToken')});
-    const res=await fetch(blobUrl(sha),{headers:publicHeaders(),cache:'no-store'});
-    const blob=await res.json().catch(()=>({}));
-    log('fetchBlobJson:response',{path,status:res.status,ok:res.ok,sha,encoding:blob.encoding||'',size:blob.size||0,message:blob.message||''});
-    if(!res.ok) throw new Error(blob.message||('Git blob laden fehlgeschlagen '+res.status));
-    if(blob.encoding!=='base64'||!blob.content) throw new Error('Git blob enthält keinen base64-Inhalt.');
-    return JSON.parse(b64DecodeUtf8(blob.content));
+  const RESIDENTS = 'public/residents/data/residents.json';
+  const MANIFEST = 'public/events/data/manifest.json';
+  let baseline = null, rawBaseline = null;
+  const clone = value => structuredClone(value);
+  function loadedResidents(raw) {
+    state.residentsData = clone(raw); ensureResidents();
+    state.loadedResidentCount = raw.residents.length;
+    rawBaseline = clone(raw); baseline = clone(residents());
   }
-  async function fetchBlobText(sha,path){
-    const res=await fetch(blobUrl(sha),{headers:publicHeaders(),cache:'no-store'});
-    const blob=await res.json().catch(()=>({}));
-    if(!res.ok)throw new Error(blob.message||('Git blob laden fehlgeschlagen '+res.status));
-    if(blob.encoding!=='base64'||!blob.content)throw new Error('Git blob enthält keinen base64-Inhalt.');
-    return b64DecodeUtf8(blob.content);
+  async function loadMonthlyEvents(client) {
+    const [{ loadMonthlyEventDocument }] = await modules;
+    const context = await client.bind(), cache = new Map();
+    const read = file => {
+      if (!cache.has(file)) cache.set(file, client.getTextFile(file).then(result => JSON.parse(result.text)));
+      return cache.get(file);
+    };
+    const json = await loadMonthlyEventDocument(read, MANIFEST);
+    const sitemap = (await client.getTextFile('sitemap.xml')).text;
+    await client.assertFresh();
+    return { json, manifest: await read(MANIFEST), sitemap, head: context.contentSha };
   }
-  async function fetchMeta(path,branch=val('ghBranch')){log('fetchMeta:start',{path,owner:val('ghOwner'),repo:val('ghRepo'),branch,tokenPresent:!!val('ghToken')});const res=await fetch(apiUrl(path,branch),{headers:publicHeaders(),cache:'no-store'});const meta=await res.json().catch(()=>({}));log('fetchMeta:response',{path,status:res.status,ok:res.ok,sha:meta.sha||'',message:meta.message||'',contentLength:meta.content?meta.content.length:0});if(!res.ok)throw new Error(meta.message||('GitHub Fehler '+res.status));return meta}
-  async function loadFile(path){
-    try{
-      log('loadFile:api:start',{path});
-      const meta=await fetchMeta(path);
-      let json;
-      if(meta.content&&meta.content.trim()){
-        log('loadFile:api:contentInline',{path,sha:meta.sha||'',contentLength:meta.content.length});
-        json=JSON.parse(b64DecodeUtf8(meta.content));
-      }else if(meta.sha){
-        log('loadFile:api:contentEmptyUseBlob',{path,sha:meta.sha||''});
-        json=await fetchBlobJson(meta.sha,path);
-      }else{
-        warn('loadFile:api:noShaUseDownloadUrl',{path});
-        json=await fetchJsonUrl(meta.download_url||rawUrl(path));
-      }
-      log('loadFile:api:success',{path,sha:meta.sha||'',keys:Object.keys(json||{}),eventsCount:json?.events?.length,residentsCount:json?.residents?.length,artistsCount:json?.meta?.artists?.length});
-      return{json,sha:meta.sha||''};
-    }catch(e){warn('loadFile:api:failed',{path,message:e.message})}
-    try{log('loadFile:raw:start',{path});return{json:await fetchJsonUrl(rawUrl(path)),sha:''};}catch(e){warn('loadFile:raw:failed',{path,message:e.message})}
-    log('loadFile:local:start',{path});
-    return{json:await fetchJsonUrl(localUrl(path)),sha:''};
+  function finishLoad(residentLoaded = false) {
+    state.syncState = 'loaded'; state.dirty = false;
+    renderAll(); updateSaveStatus();
+    // Capture the view after the existing render-time normalizers.
+    if (residentLoaded && rawBaseline) baseline = clone(residents());
   }
-  async function loadTextFileStrict(path){
-    const meta=await fetchMeta(path);
-    if(meta.content&&meta.content.trim())return b64DecodeUtf8(meta.content);
-    if(meta.sha)return fetchBlobText(meta.sha,path);
-    throw new Error('GitHub-Datei enthält keinen lesbaren Inhalt: '+path);
+  async function loadEventsPublic() {
+    try {
+      setStatus('eventEditStatus', 'Lade Events aus Staging…', 'warn');
+      const client = window.AdminStaging.client('event', 'load');
+      const fresh = await loadMonthlyEvents(client);
+      state.eventsData = fresh.json; state.eventsManifest = fresh.manifest;
+      state.eventsHead = state.eventsSha = fresh.head; state.loadedEventCount = fresh.json.events.length;
+      ensureEvents(); state.selectedEvent = fresh.json.events.length ? 0 : -1;
+      window.AdminStaging.resetPending('event'); finishLoad();
+      setStatus('eventEditStatus', 'Events aus content/staging geladen.', 'ok');
+    } catch (error) { setStatus('eventEditStatus', error.message, 'err'); }
   }
-  async function loadFileStrict(path){
-    const text=await loadTextFileStrict(path);
-    if(!text.trim())throw new Error('GitHub-Datei ist leer: '+path);
-    return{json:JSON.parse(text)};
+  async function loadResidentsPublic() {
+    try {
+      setStatus('residentStatus', 'Lade Residents aus Staging…', 'warn');
+      const client = window.AdminStaging.client('resident');
+      const fresh = await client.getTextFile(RESIDENTS); await client.assertFresh();
+      const document = JSON.parse(fresh.text);
+      if (!Array.isArray(document.residents) || !document.residents.length) throw new Error('Residents-Datensatz ist leer oder ungültig.');
+      loadedResidents(document); state.residentsSha = fresh.sha;
+      state.selectedResident = document.residents.length ? 0 : -1;
+      window.AdminStaging.resetPending('resident'); finishLoad(true);
+      setStatus('residentStatus', 'Residents aus content/staging geladen.', 'ok');
+    } catch (error) { setStatus('residentStatus', error.message, 'err'); }
   }
-  function eventWriter(createAtomicGitHubCommit){return createAtomicGitHubCommit({owner:val('ghOwner'),repo:val('ghRepo'),branch:val('ghBranch'),token:val('ghToken')})}
-  async function loadMonthlyEvents({strict=false,includeSitemap=false}={}){
-    const[{loadMonthlyEventDocument}, {createAtomicGitHubCommit}]=await eventStorageModules;
-    const writer=eventWriter(createAtomicGitHubCommit),headBefore=await writer.readHead(),cache=new Map();
-    const readJson=async path=>{if(!cache.has(path))cache.set(path,(strict?loadFileStrict(path):loadFile(path)).then(file=>file.json));return cache.get(path)};
-    const json=await loadMonthlyEventDocument(readJson,val('eventsPath'));
-    const sitemap=includeSitemap?await loadTextFileStrict('sitemap.xml'):undefined;
-    const headAfter=await writer.readHead();
-    if(headAfter!==headBefore)throw new Error('Events-Konflikt: Branch änderte sich während des Ladens. Bitte neu laden.');
-    return{json,head:headAfter,manifest:await readJson(val('eventsPath')),sitemap};
+  async function all() { await loadEventsPublic(); await loadResidentsPublic(); }
+  async function saveEventsStay() {
+    try {
+      const selected = currentEvent();
+      if (!selected) throw new Error('Bitte zuerst ein Event auswählen.');
+      const target = clone(selected), requestedImageUrl = $('evImageUrl').value.trim();
+      const config = window.AdminStaging.capture();
+      const [, { saveEventImageOnly, eventImageTargetId }] = await modules;
+      const targetEventId = eventImageTargetId(target);
+      if (!targetEventId) throw new Error('Stabile Event-ID fehlt.');
+      const client = window.AdminStaging.client('event', targetEventId, config);
+      setStatus('eventEditStatus', 'Speichere Eventbild nach content/staging…', 'warn');
+      await client.requireMediaParent();
+      const saved = await saveEventImageOnly({ targetEventId, requestedImageUrl, writer: client,
+        loadFresh: async () => {
+          const fresh = await loadMonthlyEvents(client);
+          return { document: fresh.json, manifest: fresh.manifest, sitemap: fresh.sitemap, head: fresh.head };
+        } });
+      state.eventsData = saved.document; state.eventsManifest = saved.manifest;
+      state.eventsHead = state.eventsSha = saved.commit; state.selectedEvent = saved.eventIndex;
+      state.dirty = false; state.syncState = 'loaded'; renderAll();
+      const result = await client.finish();
+      setStatus('eventEditStatus', result.message, result.status === 'deploy-failed' ? 'warn' : 'ok');
+    } catch (error) { state.syncState = 'conflict'; updateSaveStatus(); setStatus('eventEditStatus', window.AdminStaging.failureMessage('event', error), 'err'); }
   }
-  async function putJsonFile(path,jsonText,message,branch=val('ghBranch')){
-    log('putJsonFile:start',{path,message,jsonLength:jsonText.length,jsonHasMetaArtists:jsonText.includes('"artists"'),jsonPreview:jsonText.slice(0,180)});
-    async function attempt(sha,label){
-      log('putJsonFile:attempt:start',{label,path,sha,branch,contentLength:jsonText.length});
-      const body={message,content:b64EncodeUtf8(jsonText),sha,branch};
-      const res=await fetch(apiPutUrl(path),{method:'PUT',headers:writeHeaders(),body:JSON.stringify(body)});
-      const out=await res.json().catch(()=>({}));
-      log('putJsonFile:attempt:response',{label,status:res.status,ok:res.ok,responseMessage:out.message||'',newSha:out.content?.sha||'',documentation_url:out.documentation_url||''});
-      return{res,out};
-    }
-    let meta=await fetchMeta(path,branch);
-    log('putJsonFile:freshMetaBeforeFirstPut',{path,sha:meta.sha});
-    let first=await attempt(meta.sha,'first');
-    if(first.res.ok) return{out:first.out,sha:first.out.content?.sha||meta.sha,retried:false};
-    if(first.res.status===409){
-      warn('putJsonFile:409:firstAttempt',{path,oldSha:meta.sha,githubMessage:first.out.message||''});
-      meta=await fetchMeta(path,branch);
-      log('putJsonFile:freshMetaBeforeRetry',{path,sha:meta.sha});
-      const second=await attempt(meta.sha,'retry-after-409');
-      if(second.res.ok) return{out:second.out,sha:second.out.content?.sha||meta.sha,retried:true};
-      err('putJsonFile:retryFailed',{path,status:second.res.status,message:second.out.message||''});
-      throw new Error(second.out.message||('Speichern nach SHA-Retry fehlgeschlagen '+second.res.status));
-    }
-    err('putJsonFile:firstFailedNon409',{path,status:first.res.status,message:first.out.message||''});
-    throw new Error(first.out.message||('Speichern fehlgeschlagen '+first.res.status));
+  async function saveResidentsStay() {
+    try {
+      if (!baseline || !rawBaseline) throw new Error('Residents zuerst aus Staging laden.');
+      readResidentForm(); ensureResidents();
+      const draft = clone(residents()), original = clone(baseline), raw = clone(rawBaseline);
+      const allowLoss = $('allowResidentLoss')?.checked === true;
+      const client = window.AdminStaging.client('resident');
+      setStatus('residentStatus', 'Speichere Residents nach content/staging…', 'warn');
+      await client.requireMediaParent();
+      const [, , { patchResidentDocument }] = await modules;
+      const fresh = await client.getTextFile(RESIDENTS);
+      const next = patchResidentDocument({ baseline: original, rawBaseline: raw, draft, fresh: JSON.parse(fresh.text), allowLoss });
+      const result = await client.putTextFile(RESIDENTS, JSON.stringify(next, null, 2) + '\n', fresh.sha, 'Update residents data from staging admin');
+      state.residentsSha = result.content.sha;
+      loadedResidents(next); state.dirty = false; state.syncState = 'loaded'; renderAll(); baseline = clone(residents());
+      const deployment = await client.finish();
+      setStatus('residentStatus', deployment.message, deployment.status === 'deploy-failed' ? 'warn' : 'ok');
+    } catch (error) { state.syncState = 'conflict'; updateSaveStatus(); setStatus('residentStatus', window.AdminStaging.failureMessage('resident', error), 'err'); }
   }
-  function afterLoad(currentView){
-    log('afterLoad:start',{currentView,eventsCount:events().events.length,artistsCount:artists().length,residentsCount:residents().residents.length});
-    state.syncState='loaded';
-    state.dirty=false;
-    ensureEvents();
-    ensureResidents();
-    state.selectedEvent=events().events.length?0:-1;
-    state.selectedArtist=artists().length?0:-1;
-    state.selectedResident=residents().residents.length?0:-1;
-    renderAll();
-    setView(currentView||state.view||'events');
-    const top=$('topLoadBtn');if(top)top.textContent='Neu laden';
-    updateSaveStatus();
-    log('afterLoad:done',eventSnapshot());
-  }
-  async function loadEventsPublic(){
-    const currentView=state.view;
-    try{
-      log('loadEventsPublic:start',{currentView});
-      setStatus('eventEditStatus','Lade Events automatisch...','warn');
-      const ev=await loadMonthlyEvents();
-      state.eventsData=ev.json;
-      state.eventsSha=ev.head;
-      state.eventsHead=ev.head;
-      state.eventsManifest=ev.manifest;
-      state.loadedEventCount=(ev.json.events||[]).length;
-      ensureEvents();
-      state.selectedEvent=events().events.length?0:-1;
-      state.selectedArtist=artists().length?0:-1;
-      state.syncState='loaded';
-      state.dirty=false;
-      renderAll();
-      setView(currentView||'events');
-      const top=$('topLoadBtn');if(top)top.textContent='Neu laden';
-      setStatus('eventEditStatus','Events geladen.','ok');
-      updateSaveStatus();
-      log('loadEventsPublic:done',eventSnapshot());
-    }catch(e){err('loadEventsPublic:error',{message:e.message});setStatus('eventEditStatus','Events konnten nicht geladen werden: '+e.message,'err')}
-  }
-  async function loadResidentsPublic(){
-    const currentView=state.view;
-    try{
-      log('loadResidentsPublic:start',{currentView});
-      setStatus('residentStatus','Lade Residents automatisch...','warn');
-      const res=await loadFile(val('residentsPath'));
-      state.residentsData=res.json;
-      state.residentsSha=res.sha||state.residentsSha||'';
-      state.loadedResidentCount=(res.json.residents||[]).length;
-      ensureResidents();
-      state.selectedResident=residents().residents.length?0:-1;
-      state.syncState='loaded';
-      state.dirty=false;
-      renderAll();
-      setView(currentView||'residents');
-      const top=$('topLoadBtn');if(top)top.textContent='Neu laden';
-      setStatus('residentStatus','Residents geladen.','ok');
-      updateSaveStatus();
-      log('loadResidentsPublic:done',{residentsCount:residents().residents.length,sha:state.residentsSha});
-    }catch(e){err('loadResidentsPublic:error',{message:e.message});setStatus('residentStatus','Residents konnten nicht geladen werden: '+e.message,'err')}
-  }
-  async function autoLoadGithubData(){
-    if(!val('ghOwner')||!val('ghRepo')||!val('ghBranch')||!val('eventsPath')||!val('residentsPath')){warn('autoLoadGithubData:missingConfig',{owner:!!val('ghOwner'),repo:!!val('ghRepo'),branch:!!val('ghBranch'),eventsPath:!!val('eventsPath'),residentsPath:!!val('residentsPath')});return;}
-    try{
-      const currentView=state.view;
-      log('autoLoadGithubData:start',{currentView,tokenPresent:!!val('ghToken')});
-      setStatus('syncStatus','Lade Daten automatisch...','warn');
-      const [ev,res]=await Promise.all([loadMonthlyEvents(),loadFile(val('residentsPath'))]);
-      state.eventsData=ev.json;
-      state.eventsSha=ev.head;
-      state.eventsHead=ev.head;
-      state.eventsManifest=ev.manifest;
-      state.loadedEventCount=(ev.json.events||[]).length;
-      state.residentsData=res.json;
-      state.residentsSha=res.sha||'';
-      state.loadedResidentCount=(res.json.residents||[]).length;
-      afterLoad(currentView);
-      setStatus('syncStatus','Daten automatisch geladen.','ok');
-      log('autoLoadGithubData:done',{eventsSha:state.eventsSha,residentsSha:state.residentsSha});
-    }catch(e){
-      err('autoLoadGithubData:error',{message:e.message});
-      const top=$('topLoadBtn');if(top)top.textContent='Neu laden';
-      setStatus('syncStatus','Automatisches Laden fehlgeschlagen: '+e.message,'err');
-    }
-  }
-  function warnSaveNeedsToken(area){
-    const statusId=area==='residents'?'residentStatus':'eventEditStatus';
-    const ok=!!val('ghToken');
-    log('warnSaveNeedsToken:check',{area,tokenPresent:ok});
-    if(!ok){setStatus(statusId,'Speichern braucht einen GitHub Token. Laden/Bearbeiten geht ohne Token.','err');return true}
-    return false;
-  }
-  function safeReadEvents(){
-    log('safeReadEvents:before',eventSnapshot());
-    try{readEventForm();log('safeReadEvents:readEventForm:ok')}catch(e){warn('safeReadEvents:readEventForm:error',{message:e.message})}
-    try{readArtistForm();log('safeReadEvents:readArtistForm:ok',artistSnapshot())}catch(e){warn('safeReadEvents:readArtistForm:error',{message:e.message})}
-    ensureEvents();
-    log('safeReadEvents:after',eventSnapshot());
-  }
-  function safeReadResidents(){
-    try{readResidentForm();log('safeReadResidents:readResidentForm:ok')}catch(e){warn('safeReadResidents:readResidentForm:error',{message:e.message})}
-    ensureResidents();
-  }
-  async function saveEventsStay(){
-    const currentView=state.view;
-    log('saveEventsStay:clicked',{currentView,button:'event-image-save',config:{owner:val('ghOwner'),repo:val('ghRepo'),branch:val('ghBranch'),path:val('eventsPath'),tokenPresent:!!val('ghToken')}});
-    if(warnSaveNeedsToken('events')){warn('saveEventsStay:aborted:noToken');return;}
-    try{
-      const selected=currentEvent();
-      if(!selected)throw new Error('Bitte zuerst ein Event auswählen.');
-      const requestedImageUrl=val('evImageUrl');
-      const[,{createAtomicGitHubCommit},{saveEventImageOnly,eventImageTargetId}]=await eventStorageModules;
-      const targetEventId=eventImageTargetId(selected);
-      if(!targetEventId)throw new Error('Event-ID fehlt. Bitte Event neu laden.');
-      setStatus('eventEditStatus','Speichere Eventbild auf Basis des frischen GitHub-Stands...','warn');
-      const saved=await saveEventImageOnly({
-        targetEventId,
-        requestedImageUrl,
-        writer:eventWriter(createAtomicGitHubCommit),
-        loadFresh:async()=>{
-          const fresh=await loadMonthlyEvents({strict:true,includeSitemap:true});
-          return{document:fresh.json,manifest:fresh.manifest,sitemap:fresh.sitemap,head:fresh.head};
-        }
-      });
-      state.eventsSha=saved.commit;
-      state.eventsHead=saved.commit;
-      state.eventsManifest=saved.manifest;
-      state.eventsData=saved.document;
-      state.selectedEvent=saved.eventIndex;
-      state.loadedEventCount=saved.document.events.length;
-      state.dirty=false;
-      state.syncState='loaded';
-      updateSaveStatus();
-      setView(currentView||'events');
-      renderAll();
-      setStatus('eventEditStatus',saved.changed?'Eventbild atomar gespeichert.':'Eventbild war bereits unverändert.','ok');
-      log('saveEventsStay:success',{commit:state.eventsHead,view:state.view,eventId:targetEventId,eventPage:saved.eventPage,sitemapChanged:saved.sitemapChanged});
-    }catch(e){err('saveEventsStay:error',{message:e.message,stack:e.stack});state.syncState='conflict';updateSaveStatus();setView(currentView||'events');setStatus('eventEditStatus',e.message,'err')}
-  }
-  async function saveResidentsStay(){
-    const currentView=state.view;
-    const branch=val('ghBranch');
-    log('saveResidentsStay:clicked',{currentView,config:{owner:val('ghOwner'),repo:val('ghRepo'),branch,path:val('residentsPath'),tokenPresent:!!val('ghToken')}});
-    if(!branch){setStatus('residentStatus','Bitte GitHub-Branch angeben, bevor Residents gespeichert werden.','err');return}
-    if(branch==='main'){setStatus('residentStatus','Resident-Save auf main ist für Tests gesperrt. Bitte Testbranch verwenden.','err');return}
-    if(warnSaveNeedsToken('residents')) return;
-    try{
-      setStatus('residentStatus','Speichere Residents nach GitHub-Branch '+branch+'...','warn');
-      safeReadResidents();
-      if(!residents().residents?.length) throw new Error('Residents: residents[] ist leer. Speichern abgebrochen.');
-      const saved=await putJsonFile(val('residentsPath'),residentsJson(),'Update residents data from admin v2',branch);
-      state.residentsSha=saved.sha;
-      state.loadedResidentCount=residents().residents.length;
-      state.dirty=false;
-      state.syncState='loaded';
-      updateSaveStatus();
-      setView(currentView||'residents');
-      renderAll();
-      setStatus('residentStatus',(saved.retried?'Residents nach SHA-Retry':'Residents')+' auf Branch '+branch+' gespeichert.','ok');
-      log('saveResidentsStay:success',{sha:state.residentsSha,retried:saved.retried,residentsCount:residents().residents.length});
-    }catch(e){err('saveResidentsStay:error',{message:e.message,stack:e.stack});state.syncState='conflict';updateSaveStatus();setView(currentView||'residents');setStatus('residentStatus',e.message,'err')}
-  }
-  function rebindButtons(){
-    window.loadEventsFromGithub=loadEventsPublic;
-    window.loadResidentsFromGithub=loadResidentsPublic;
-    window.saveEventsToGithub=saveEventsStay;
-    window.saveResidentsToGithub=saveResidentsStay;
-    const topLoad=$('topLoadBtn');if(topLoad)topLoad.onclick=()=>state.view==='residents'||state.view==='releases'?loadResidentsPublic():loadEventsPublic();
-    const loadEv=$('loadEventsGitBtn');if(loadEv)loadEv.onclick=loadEventsPublic;
-    const loadRes=$('loadResidentsGitBtn');if(loadRes)loadRes.onclick=loadResidentsPublic;
-    const evSave=$('eventSaveBtn');if(evSave)evSave.onclick=saveEventsStay;
-    const artistSave=$('saveArtistsGitBtn');if(artistSave)artistSave.onclick=()=>setStatus('artistStatus','Artist-Daten werden über FileMaker gepflegt.','warn');
-    const topSave=$('topSaveBtn');if(topSave)topSave.onclick=()=>state.view==='residents'||state.view==='releases'?saveResidentsStay():state.view==='events'?saveEventsStay():undefined;
-    const evSettingsSave=$('saveEventsGitBtn');if(evSettingsSave)evSettingsSave.onclick=()=>setStatus('syncStatus','Event-Save ist hier deaktiviert. Bitte im Event unter „Bild“ speichern.','warn');
-    const resSettingsSave=$('saveResidentsGitBtn2');if(resSettingsSave)resSettingsSave.onclick=saveResidentsStay;
-    const resSave=$('saveResidentsGitBtn');if(resSave)resSave.onclick=saveResidentsStay;
-    window.applyEventImageOnlyUi?.();
-    log('rebindButtons:done',{topLoad:!!topLoad,eventSave:!!evSave,artistSave:!!artistSave,topSave:!!topSave,saveEventsFn:window.saveEventsToGithub?.name||'anonymous'});
-  }
-  onReady(()=>{
-    log('autoGithubLoad:init',{script:'auto-github-load.js',debugVersion:'debug-save-2-blob-load',href:location.href});
-    rebindButtons();
-    setTimeout(()=>{rebindButtons();autoLoadGithubData()},500);
-    setTimeout(rebindButtons,1500);
-  });
+  window.AdminStagingActions = Object.freeze({ loadEvents: loadEventsPublic, loadResidents: loadResidentsPublic, saveEvent: saveEventsStay, saveResidents: saveResidentsStay });
+  window.AdminStagingLoads = Object.freeze({ all, adoptResidents: document => { loadedResidents(document); baseline = clone(residents()); } });
+  window.loadEventsFromGithub = loadEventsPublic; window.loadResidentsFromGithub = loadResidentsPublic;
+  window.saveEventsToGithub = saveEventsStay; window.saveResidentsToGithub = saveResidentsStay;
+  for (const id of ['eventSaveBtn']) if ($(id)) $(id).onclick = saveEventsStay;
+  for (const id of ['saveResidentsGitBtn', 'saveResidentsGitBtn2']) if ($(id)) $(id).onclick = saveResidentsStay;
+  if ($('loadEventsGitBtn')) $('loadEventsGitBtn').onclick = loadEventsPublic;
+  if ($('loadResidentsGitBtn')) $('loadResidentsGitBtn').onclick = loadResidentsPublic;
+  if ($('topLoadBtn')) $('topLoadBtn').onclick = () => state.view === 'residents' || state.view === 'releases' ? loadResidentsPublic() : loadEventsPublic();
+  if ($('topSaveBtn')) $('topSaveBtn').onclick = () => state.view==='residents'||state.view==='releases'?saveResidentsStay():state.view==='events'?saveEventsStay():undefined;
+  if ($('saveEventsGitBtn')) $('saveEventsGitBtn').onclick = () => setStatus('syncStatus', 'Bitte Eventbild im Event-Editor speichern.', 'warn');
+  document.addEventListener('admin-staging-source-change', () => { baseline = rawBaseline = null; state.eventsSha = state.eventsHead = state.residentsSha = ''; });
+  window.applyEventImageOnlyUi?.();
 })();

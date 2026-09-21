@@ -22,7 +22,7 @@
     return '';
   }
   function storedBaseline(){
-    try{return JSON.parse(sessionStorage.getItem('adminV2WriteBaseline')||'null')}
+    try{return JSON.parse(sessionStorage.getItem(window.AdminStaging.draftKey('write-baseline'))||'null')}
     catch(e){return null}
   }
   function run(target){

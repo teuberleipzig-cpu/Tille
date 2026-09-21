@@ -8,9 +8,9 @@ import { promisify } from 'node:util';
 import { buildEventStorage, reconstructEventDocument, storageArtifacts } from '../public/site/js/event-storage-model.js';
 import { eventOutputPath, eventPublicUrl, eventSeoArtifacts } from '../scripts/events/event-seo.mjs';
 import { applyFileMakerOperation, MAX_PAYLOAD_BYTES, normalizeFileMakerId, parseFileMakerEventJson } from '../scripts/filemaker/filemaker-event-model.mjs';
-import { FILEMAKER_BRANCH_PREFIX, applyEventStorage, assertAllowedEventOutputPaths, assertAllowedFileMakerOutputPaths, diffEventStorage, fileMakerBranch, isAllowedEventOutputPath, isAllowedFileMakerOutputPath, loadEventDocumentFromWorkspace, planFileMakerPullRequest, prepareFileMakerEvent } from '../scripts/filemaker/filemaker-event-intake.mjs';
+import { applyEventStorage, assertAllowedEventOutputPaths, assertAllowedFileMakerOutputPaths, diffEventStorage, isAllowedEventOutputPath, isAllowedFileMakerOutputPath, loadEventDocumentFromWorkspace, prepareFileMakerEvent } from '../scripts/filemaker/filemaker-event-intake.mjs';
 
-const workflow = await readFile(new URL('../.github/workflows/filemaker-event-intake.yml', import.meta.url), 'utf8');
+const workflow = (await readFile(new URL('../.github/workflows/filemaker-event-intake.yml', import.meta.url), 'utf8')).replaceAll('\r\n', '\n');
 const deployWorkflow = await readFile(new URL('../.github/workflows/docker-publish.yml', import.meta.url), 'utf8');
 const meetingDocs = await readFile(new URL('../docs/FILEMAKER_EVENT_INTAKE.md', import.meta.url), 'utf8');
 const scriptTemplate = await readFile(new URL('../docs/filemaker/FILEMAKER_EVENT_SCRIPT_TEMPLATE.md', import.meta.url), 'utf8');
@@ -166,45 +166,20 @@ test('event json not interpolated into shell', () => assert.doesNotMatch(workflo
 test('token is never echoed', () => assert.doesNotMatch(workflow, /echo.*GH_TOKEN/));
 test('no additional FileMaker credential or secret is introduced', () => assert.doesNotMatch(workflow, /\$\{\{\s*secrets\.|\bPAT\b|id-token:|administration:|packages:|issues:/i));
 
-test('branch derived from validated ID', () => assert.equal(fileMakerBranch(ID), `${FILEMAKER_BRANCH_PREFIX}${ID}`));
-test('zero open FileMaker PR creates', () => assert.equal(planFileMakerPullRequest({ mode: 'sync-pr', hasChanges: true, eventId: ID }).action, 'create-pr'));
-test('same event open PR updates', () => assert.equal(planFileMakerPullRequest({ mode: 'sync-pr', hasChanges: true, eventId: ID, openPullRequests: [{ number: 1, base: 'main', head: fileMakerBranch(ID) }] }).action, 'update-pr'));
-test('different event open PR hard fails', () => assert.throws(() => planFileMakerPullRequest({ mode: 'sync-pr', hasChanges: true, eventId: ID, openPullRequests: [{ number: 2, base: 'main', head: fileMakerBranch(ID2) }] }), /Another FileMaker/));
-test('duplicate same-event PRs hard fail', () => assert.throws(() => planFileMakerPullRequest({ mode: 'sync-pr', hasChanges: true, eventId: ID, openPullRequests: [{ number: 1, base: 'main', head: fileMakerBranch(ID) }, { number: 2, base: 'main', head: fileMakerBranch(ID) }] }), /More than one/));
-test('different-base PR ignored', () => assert.equal(planFileMakerPullRequest({ mode: 'sync-pr', hasChanges: true, eventId: ID, openPullRequests: [{ number: 2, base: 'dev', head: fileMakerBranch(ID2) }] }).action, 'create-pr'));
-test('PR base is main', () => assert.equal(planFileMakerPullRequest({ mode: 'sync-pr', hasChanges: true, eventId: ID }).base, 'main'));
-test('new PR remains draft', () => assert.equal(planFileMakerPullRequest({ mode: 'sync-pr', hasChanges: true, eventId: ID }).draft, true));
-test('existing same event has one update intention', () => assert.equal(planFileMakerPullRequest({ mode: 'sync-pr', hasChanges: true, eventId: ID, openPullRequests: [{ number: 1, base: 'main', head: fileMakerBranch(ID) }] }).prNumber, 1));
-test('main moved hard fails', () => assert.throws(() => planFileMakerPullRequest({ mode: 'sync-pr', hasChanges: true, eventId: ID, baseMoved: true }), /main moved/));
-test('force with lease only', () => { assert.match(workflow, /git push --force-with-lease/); assert.doesNotMatch(workflow, /git push --force(?:\s|$)/); });
-test('no force push to main', () => assert.doesNotMatch(workflow, /git push[^\n]*main/));
-test('no change no PR means no mutation', () => assert.deepEqual(planFileMakerPullRequest({ mode: 'sync-pr', hasChanges: false, eventId: ID }), { action: 'none', write: false }));
-test('no change same event PR closes', () => assert.equal(planFileMakerPullRequest({ mode: 'sync-pr', hasChanges: false, eventId: ID, openPullRequests: [{ number: 1, base: 'main', head: fileMakerBranch(ID) }] }).action, 'close-pr'));
-test('stale close occurs before optional comment', () => { const block = workflow.split('- name: Close stale same-event PR')[1].split('- name: Report no changes')[0]; assert.ok(block.indexOf('gh pr close') < block.indexOf('gh pr comment')); });
-test('comment failure cannot block close', () => assert.match(workflow.split('- name: Close stale same-event PR')[1], /gh pr comment[^\n]+\|\| true/));
-test('no branch delete', () => assert.doesNotMatch(workflow, /git branch.*-[dD]|--delete-branch/));
-test('no merge command', () => assert.doesNotMatch(workflow, /gh pr merge/));
-test('validate-only plan remains read-only', () => assert.deepEqual(planFileMakerPullRequest({ mode: 'validate-only', hasChanges: true, eventId: ID, openPullRequests: [{ number: 1, base: 'main', head: fileMakerBranch(ID) }] }), { action: 'none', write: false }));
-test('main moved gate precedes commit step', () => assert.ok(workflow.indexOf('Verify main has not moved') < workflow.indexOf('Commit controlled event storage and SEO')));
-test('different PR gate precedes commit step', () => assert.ok(workflow.indexOf('Enforce single FileMaker PR') < workflow.indexOf('Commit controlled event storage and SEO')));
-test('existing PR forced back to Draft', () => assert.match(workflow, /gh pr ready "\$PR_NUMBER" --undo/));
-test('auto merge branch is restricted to exact FileMaker event branch', () => assert.match(workflow, /case "\$EVENT_BRANCH" in automation\/filemaker-event\/\*\)/));
-test('created or updated PR number is determined uniquely', () => { assert.match(workflow, /gh pr list --state open --base main --head "\$EVENT_BRANCH" --limit 2/); assert.match(workflow, /Expected exactly one open PR/); assert.match(workflow, /echo "number=\$number" >> "\$GITHUB_OUTPUT"/); });
-test('fresh PR gate requires open state and main base', () => { assert.match(workflow, /gh api "repos\/\$GITHUB_REPOSITORY\/pulls\/\$PR_NUMBER"/); assert.match(workflow, /jq -r \.state[\s\S]*?= open/); assert.match(workflow, /jq -r \.base\.ref[\s\S]*?= main/); });
-test('fresh PR gate requires exact event branch and generated head SHA', () => { assert.match(workflow, /jq -r \.head\.ref[\s\S]*?"\$EVENT_BRANCH"/); assert.match(workflow, /jq -r \.head\.sha[\s\S]*?"\$EVENT_HEAD_SHA"/); assert.match(workflow, /head_sha=\$\(git rev-parse HEAD\)/); });
-test('fresh changed files are fetched from GitHub immediately before Ready', () => assert.match(workflow, /gh api --paginate "repos\/\$GITHUB_REPOSITORY\/pulls\/\$PR_NUMBER\/files\?per_page=100" --jq '\.\[\]\.filename'/));
-test('fresh changed files retain the strict storage Event-page and sitemap allowlist', () => { assert.match(workflow, /sitemap\.xml\|"\$EVENT_PAGE"/); assert.match(workflow, /public\/events\/data\/months\/\*\.json/); assert.match(workflow, /\^public\/events\/data\/months\/\[0-9\]\{4\}-\(0\[1-9\]\|1\[0-2\]\)\\\.json\$/); });
-test('workflow stages storage and sitemap before conditionally staging exact Event page', () => { const commit = workflow.split('- name: Commit controlled event storage and SEO')[1].split('- name: Create or update Draft PR')[0]; assert.match(commit, /git add -A -- public\/events\/data sitemap\.xml/); assert.match(commit, /test -e "\$EVENT_PAGE" \|\| git ls-files --error-unmatch -- "\$EVENT_PAGE"/); assert.match(commit, /git add -A -- "\$EVENT_PAGE"/); assert.doesNotMatch(commit, /git add -A -- events(?:\s|$)/m); assert.doesNotMatch(commit, /git add -A \.(?:\s|$)/m); });
-test('main is fetched and checked immediately before Ready and merge', () => { const checks = workflow.match(/git fetch origin main[\s\S]*?git rev-parse origin\/main/g) || []; assert.ok(checks.length >= 3); assert.match(workflow, /main moved immediately before FileMaker merge/); });
-test('Draft becomes Ready only after all first-pass gates', () => assert.ok(workflow.indexOf('Verify FileMaker PR and changed files before Ready') < workflow.indexOf('Mark verified FileMaker PR Ready for Review')));
-test('PR is freshly reverified after Ready', () => { assert.ok(workflow.indexOf('Mark verified FileMaker PR Ready for Review') < workflow.indexOf('Reverify and merge exact FileMaker PR')); const block = workflow.split('- name: Reverify and merge exact FileMaker PR')[1]; for (const field of ['.number','.state','.base.ref','.head.ref','.head.sha']) assert.match(block, new RegExp(field.replaceAll('.', '\\\.'))); });
-test('merge REST request includes exact expected head SHA', () => assert.match(workflow, /gh api --method PUT "repos\/\$GITHUB_REPOSITORY\/pulls\/\$PR_NUMBER\/merge" -f merge_method=merge -f sha="\$EVENT_HEAD_SHA"/));
-test('merge response must be merged and yield a SHA output', () => { assert.match(workflow, /jq -r '\.merged \/\/ false'[\s\S]*?= true/); assert.match(workflow, /merge_sha="\$\(jq -r '\.sha \/\/ empty'/); assert.match(workflow, /echo "merge_sha=\$merge_sha" >> "\$GITHUB_OUTPUT"/); });
-test('origin main must equal merge SHA before deploy dispatch', () => { const verify = workflow.indexOf('Verify merged FileMaker SHA on main'), dispatch = workflow.indexOf('Dispatch SHA-gated staging deployment'); assert.ok(verify >= 0 && verify < dispatch); assert.match(workflow.slice(verify, dispatch), /"\$MERGE_SHA" = "\$\(git rev-parse origin\/main\)"/); });
-test('docker publish is explicitly dispatched on main with merge SHA', () => assert.match(workflow, /gh workflow run docker-publish\.yml --ref main -f expected_sha="\$MERGE_SHA"/));
-test('all merge and deploy steps require real changes', () => { for (const name of ['Verify FileMaker PR and changed files before Ready','Mark verified FileMaker PR Ready for Review','Reverify and merge exact FileMaker PR','Verify merged FileMaker SHA on main','Dispatch SHA-gated staging deployment']) { const block = workflow.split(`- name: ${name}`)[1]; assert.match(block, /if: steps\.intake\.outputs\.has_changes == 'true'/); } });
-test('docker workflow has optional expected SHA dispatch input', () => assert.match(deployWorkflow, /workflow_dispatch:\n    inputs:\n      expected_sha:\n[\s\S]*?required: false\n        type: string/));
-test('expected SHA gate occurs before build login push and deploy', () => { const gate = deployWorkflow.indexOf('Verify expected deployment SHA'); assert.ok(gate > deployWorkflow.indexOf('actions/checkout@v4')); for (const later of ['docker/setup-qemu-action','Log in to GHCR','Build and push','deploy:']) assert.ok(gate < deployWorkflow.indexOf(later)); assert.match(deployWorkflow, /git rev-parse HEAD[\s\S]*?"\$EXPECTED_SHA"/); });
+// Remote routing/gates are exercised behaviorally in filemaker-staging-writer.test.mjs.
+test('workflow uses only the composed staging writer entrypoint', () => {
+  assert.equal(workflow.split('node scripts/filemaker/run-staging-writer.mjs').length - 1, 2);
+  assert.doesNotMatch(workflow, /prepare-filemaker-event\.mjs|git switch|git checkout|gh pr merge/);
+});
+test('workflow binds checkout to exact workflow code SHA', () => {
+  assert.equal(workflow.split('ref: ${{ github.sha }}').length - 1, 2);
+});
+
+test('prepared cutover requires both code and content SHA dispatch inputs', () => {
+  const normalized = deployWorkflow.replace(/\r\n/g, '\n');
+  for (const input of ['expected_sha', 'expected_content_sha']) assert.match(normalized, new RegExp(`${input}:\\n[^]*?required: true\\n        type: string`));
+});
+test('expected SHA gate occurs before build login push and deploy', () => { const gate = deployWorkflow.indexOf('Verify expected deployment SHA'); assert.ok(gate > deployWorkflow.indexOf('actions/checkout@v4')); for (const later of ['docker/setup-qemu-action','Log in to GHCR','Build and push','deploy:']) assert.ok(gate < deployWorkflow.indexOf(later)); assert.match(deployWorkflow, /git rev-parse HEAD[\s\S]*?node scripts\/content\/prepare-staging-deployment.mjs/); });
 test('normal docker push trigger on main remains present', () => assert.match(deployWorkflow, /  push:\r?\n    branches: \[main\]/));
 
 for (const file of ['manifest.json', 'meta.json', 'event-index.json', 'search-index.json']) test(`${file} allowed`, () => assert.equal(isAllowedEventOutputPath(`public/events/data/${file}`), true));

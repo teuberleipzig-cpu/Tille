@@ -48,11 +48,11 @@
   function loadWalkthroughTest(){loadScriptOnce('./js/admin-walkthrough-test.js?v=admin-walkthrough-test-1')}
   function loadWriteReadiness(){loadScriptOnce('./js/admin-write-readiness.js?v=admin-write-readiness-quiet-1')}
   function loadSnapshotReport(){loadScriptOnce('./js/admin-snapshot-report.js?v=admin-snapshot-report-1')}
-  function loadWriteBaseline(){loadScriptOnce('./js/admin-write-baseline.js?v=admin-write-baseline-dirty-guard-1')}
-  function loadSavePreflight(){loadScriptOnce('./js/admin-save-preflight.js?v=admin-save-preflight-target-1')}
+  function loadWriteBaseline(){loadScriptOnce('./js/admin-write-baseline.js?v=admin-staging-1')}
+  function loadSavePreflight(){loadScriptOnce('./js/admin-save-preflight.js?v=admin-staging-1')}
   function loadPostReloadCheck(){loadScriptOnce('./js/admin-post-reload-check.js?v=admin-post-reload-check-1')}
   function loadMediaPathCheck(){loadScriptOnce('./js/admin-media-path-check.js?v=admin-media-path-check-1')}
-  function loadDraftGuard(){loadScriptOnce('./js/admin-draft-guard.js?v=admin-draft-guard-1')}
+  function loadDraftGuard(){loadScriptOnce('./js/admin-draft-guard.js?v=admin-staging-1')}
   function runHealthCheck(){
     const scripts=Array.from(document.querySelectorAll('script[src]'));
     const styles=Array.from(document.querySelectorAll('link[rel="stylesheet"]'));

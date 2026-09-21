@@ -6,7 +6,8 @@ function utf8Base64(text) {
 }
 
 async function gitBlobSha(text) {
-  const content = new TextEncoder().encode(text);
+  const content = typeof text === 'object' && typeof text?.base64 === 'string'
+    ? Uint8Array.from(atob(text.base64), c => c.charCodeAt(0)) : new TextEncoder().encode(text);
   const header = new TextEncoder().encode(`blob ${content.length}\0`);
   const bytes = new Uint8Array(header.length + content.length);
   bytes.set(header);
@@ -30,7 +31,7 @@ export function createAtomicGitHubCommit(config) {
     const response = await requestFetch(base + path, { cache: 'no-store', ...options, headers: { ...headers, ...(options.headers || {}) } });
     const payload = await response.json().catch(() => ({}));
     if (!response.ok) {
-      const error = new Error(payload.message || `GitHub request failed (${response.status})`);
+      const error = new Error(`GitHub request failed (${response.status})`);
       error.status = response.status;
       throw error;
     }
@@ -47,18 +48,21 @@ export function createAtomicGitHubCommit(config) {
     if (expectedHead && head !== expectedHead) throw new Error('Events-Konflikt: Branch wurde seit dem Laden verändert. Bitte neu laden.');
     const parent = await request(`/git/commits/${encodeURIComponent(head)}`);
     const tree = await request(`/git/trees/${encodeURIComponent(parent.tree.sha)}?recursive=1`);
+    if (tree.truncated || !Array.isArray(tree.tree)) throw new Error('GitHub-Contentbaum ist unvollständig. Speichern abgebrochen.');
     const current = new Map((tree.tree || []).filter(item => item.type === 'blob').map(item => [item.path, item.sha]));
     const entries = [];
     for (const [path, content] of files) {
       const expectedSha = await gitBlobSha(content);
       if (current.get(path) === expectedSha) continue;
-      const blob = await request('/git/blobs', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ content: utf8Base64(content), encoding: 'base64' }) });
+      const encoded = typeof content === 'object' ? content.base64 : utf8Base64(content);
+      const blob = await request('/git/blobs', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ content: encoded, encoding: 'base64' }) });
       entries.push({ path, mode: '100644', type: 'blob', sha: blob.sha });
     }
     for (const path of previousPaths) if (!files.has(path) && current.has(path)) entries.push({ path, mode: '100644', type: 'blob', sha: null });
     if (!entries.length) return { head, commit: head, changed: false };
     const nextTree = await request('/git/trees', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ base_tree: parent.tree.sha, tree: entries }) });
     const commit = await request('/git/commits', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ message, tree: nextTree.sha, parents: [head] }) });
+    if ((config.requireParent && !Array.isArray(commit.parents)) || (commit.parents && (commit.parents.length !== 1 || commit.parents[0].sha !== head))) throw new Error('Unerwarteter Commit-Parent. Speichern abgebrochen.');
     if (await readHead() !== head) throw new Error('Events-Konflikt: Branch änderte sich während des Speicherns. Bitte neu laden.');
     await request(refsPath, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ sha: commit.sha, force: false }) });
     return { head, commit: commit.sha, changed: true };

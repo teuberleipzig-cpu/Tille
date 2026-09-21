@@ -17,13 +17,16 @@
     }
   }
   function guardedSaveDraft(){
+    let eventKey,residentKey;
+    try{eventKey=window.AdminStaging.draftKey('events');residentKey=window.AdminStaging.draftKey('residents')}
+    catch(error){setStatus('residentStatus',error.message,'err');return{ok:false,message:error.message}}
     try{if(typeof readEventForm==='function')readEventForm()}catch(e){}
     try{if(typeof readArtistForm==='function')readArtistForm()}catch(e){}
     try{if(typeof readResidentForm==='function')readResidentForm()}catch(e){}
     const eventsText=typeof eventsJson==='function'?eventsJson():'';
     const residentsText=typeof residentsJson==='function'?residentsJson():'';
-    const ev=safeSetDraft('distillery-admin-v2-events-draft',eventsText);
-    const res=safeSetDraft('distillery-admin-v2-residents-draft',residentsText);
+    const ev=safeSetDraft(eventKey,eventsText);
+    const res=safeSetDraft(residentKey,residentsText);
     const result={events:ev,residents:res};
     console.info('[AdminDraftGuard]',result);
     if(ev.ok&&res.ok){
@@ -39,4 +42,6 @@
     try{saveDraft=guardedSaveDraft}catch(e){}
   }
   window.AdminV2DraftGuard={saveDraft:guardedSaveDraft,safeSetDraft};
+  const draftButton=document.getElementById('saveResidentDraftBtn');
+  if(draftButton)draftButton.onclick=guardedSaveDraft;
 })();

@@ -1,6 +1,5 @@
 import { buildResidentNewsPreview, isResidentNewsImportSessionCurrent, parseResidentNewsCsv, suggestResidentNewsMapping } from './residents-news-csv-model.js?v=resident-news-csv-1';
 import { saveResidentNewsImport } from './residents-news-csv-save.js?v=resident-news-csv-1';
-import { createGitHubClient } from '../../core/github-client.js';
 
 let session = null;
 
@@ -111,18 +110,14 @@ async function confirmImport() {
   if (!resident || !isResidentNewsImportSessionCurrent(session, resident.id)) return resetImport('Resident wurde gewechselt. Bitte CSV erneut auswählen.');
   const state = globalValue('state');
   if (state?.dirty) return status('Bitte andere Entwurfsänderungen zuerst speichern oder neu laden.', 'err');
-  const branch = configValue('ghBranch');
-  if (!branch) return status('Bitte GitHub-Branch angeben, bevor News importiert werden.', 'err');
-  if (branch === 'main') return status('Resident-Save auf main ist für Tests gesperrt. Bitte Testbranch verwenden.', 'err');
-  const token = configValue('ghToken');
-  if (!token) return status('GitHub Token fehlt.', 'err');
   const expectedId = session.residentId;
   try {
-    status(`Lade residents.json frisch von GitHub-Branch ${branch} ...`, 'warn');
-    const client = createGitHubClient({ owner: configValue('ghOwner'), repo: configValue('ghRepo'), branch, token });
-    const result = await saveResidentNewsImport({ client, path: configValue('residentsPath'), residentId: expectedId, previewRows: session.preview, confirmed: true });
+    status('Lade residents.json frisch aus content/staging …', 'warn');
+    const client = window.AdminStaging.client('resident');
+    await client.requireMediaParent();
+    const result = await saveResidentNewsImport({ client, path: 'public/residents/data/residents.json', residentId: expectedId, previewRows: session.preview, confirmed: true });
     if (selectedResident()?.id !== expectedId) throw new Error('Resident wurde während des Speicherns gewechselt. Bitte neu laden.');
-    state.residentsData = result.document;
+    window.AdminStagingLoads.adoptResidents(result.document);
     state.residentsSha = result.sha;
     state.loadedResidentCount = result.document.residents.length;
     state.dirty = false;
@@ -133,7 +128,8 @@ async function confirmImport() {
     globalValue('setResidentTab')?.('news');
     session = null;
     document.querySelector('[data-resident-news-csv-workflow]').hidden = true;
-    status(`${result.imported} News erfolgreich auf GitHub-Branch ${branch} importiert.`, 'ok');
+    const outcome = await client.finish();
+    status(`${result.imported} News importiert. ${outcome.message}`, outcome.status === 'deploy-failed' ? 'warn' : 'ok');
   } catch (error) { status(error.message, 'err'); }
 }
 
@@ -163,3 +159,4 @@ document.addEventListener('click', event => {
     if (selectedResident()?.id !== session?.residentId) resetImport('Resident wurde gewechselt. Bitte CSV erneut auswählen.');
   });
 }, true);
+document.addEventListener('admin-staging-source-change', () => { session = null; });

@@ -1,14 +1,14 @@
-import { CONFIG, PORTAL_VERSION } from './core/config.js?v=branch-reload-2';
+import { CONFIG, PORTAL_VERSION } from './core/config.js?v=staging-writer-1';
 import { bindTabs, setStatus, showScreen } from './core/dom.js';
-import { loadResidentForLogin, initAuth } from './modules/auth.js?v=branch-reload-2';
+import { loadResidentForLogin, initAuth } from './modules/auth.js?v=staging-writer-1';
 import * as profile from './modules/profile.js';
 import * as links from './modules/links.js';
-import * as news from './modules/news.js?v=news-top-save-2';
-import * as media from './modules/media.js?v=branch-reload-2';
-import * as releases from './modules/releases.js?v=branch-reload-2';
-import { initSave } from './modules/save.js?v=branch-reload-2';
+import * as news from './modules/news.js?v=staging-writer-1';
+import * as media from './modules/media.js?v=staging-writer-1';
+import * as releases from './modules/releases.js?v=staging-writer-1';
+import { initSave, readAll } from './modules/save.js?v=staging-writer-1';
 
-const BUILD_LABEL = `${PORTAL_VERSION} branch-reload-2`;
+const BUILD_LABEL = PORTAL_VERSION;
 
 function showBuildBadge() {
   let badge = document.getElementById('portalBuildBadge');
@@ -48,14 +48,14 @@ function initModules() {
   media.init();
   releases.init();
   initSave();
-  initAuth(renderAll);
+  initAuth(renderAll, () => readAll(false));
 }
 
 async function boot() {
   console.info('[ResidentPortal]', BUILD_LABEL);
   showBuildBadge();
   const branchStatus = document.getElementById('portalBranchStatus');
-  if (branchStatus) branchStatus.textContent = `GitHub-Branch: ${CONFIG.branch || '(nicht angegeben)'}`;
+  if (branchStatus) branchStatus.textContent = `Umgebung: ${CONFIG.environment === 'staging' ? 'Staging' : CONFIG.environment === 'live' ? 'Live – Schreiben noch nicht aktiviert' : 'nicht freigegeben'}`;
   initModules();
   try {
     await loadResidentForLogin();

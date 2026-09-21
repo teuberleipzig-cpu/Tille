@@ -7,6 +7,7 @@ function items() {
     resident.newsItems = Array.isArray(resident.news) ? resident.news : [];
   }
   resident.newsItems = resident.newsItems.map(item => typeof item === 'string' ? { date: '', text: item } : {
+    ...item,
     date: item.date || '',
     text: item.text || ''
   });
@@ -35,6 +36,7 @@ function card(item, index) {
 export function render() {
   const box = $('newsList');
   if (!box) return;
+  if (box.contains(document.activeElement) && document.activeElement.matches('input, textarea, select, [contenteditable]')) return;
   const list = items();
   box.innerHTML = list.length ? list.map(card).join('') : '<p class="muted">Noch keine News.</p>';
 }

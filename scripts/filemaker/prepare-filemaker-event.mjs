@@ -18,7 +18,7 @@ async function writeOutput(summary) {
   if (!process.env.GITHUB_OUTPUT) return;
   const values = {
     has_changes: summary.hasChanges, event_id: summary.eventId, operation: summary.operation,
-    branch: summary.branch, action: summary.action, existed: summary.exists,
+    action: summary.action, existed: summary.exists,
     before_month: summary.beforeMonth, after_month: summary.afterMonth,
     event_page: summary.eventPage, event_page_changed: summary.eventPageChanged,
     sitemap_changed: summary.sitemapChanged,
