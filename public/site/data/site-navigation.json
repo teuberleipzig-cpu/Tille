@@ -55,7 +55,7 @@
       "label": "Feedback",
       "href": "feedback.html",
       "available": true,
-      "enabled": false,
+      "enabled": true,
       "order": 7
     },
     {
