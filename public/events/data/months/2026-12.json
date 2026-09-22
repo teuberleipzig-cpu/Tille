@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "fm-9a7b6c5d-4e3f-4210-8abc-1234567890de",
+      "date": "2026-12-31",
+      "title": "STAGING E2E TEST - REMOVE ME",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "Controlled post-cutover FileMaker staging E2E. Temporary.",
+      "sections": []
+    }
+  ]
+}
