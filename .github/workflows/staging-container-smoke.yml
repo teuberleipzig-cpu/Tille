@@ -9,6 +9,8 @@ on:
       - 'scripts/content/**'
       - 'tests/content-*.test.mjs'
       - 'tests/staging-cutover-integration.test.mjs'
+      - 'tests/staging-acceptance.test.mjs'
+      - 'tests/helpers/staging-acceptance-fixture.mjs'
       - 'robots.txt'
       - 'robots.staging.txt'
       - '.github/workflows/docker-publish.yml'
@@ -40,6 +42,7 @@ jobs:
           node --test tests/content-deployment.test.mjs tests/content-deployment-e2e.test.mjs tests/content-deployment-workflow.test.mjs tests/content-deployment-cli.test.mjs
           node --test --test-name-pattern='prepared cutover|expected SHA gate|normal docker.*trigger' tests/filemaker-event-intake.test.mjs
           node --test tests/staging-cutover-integration.test.mjs
+          node --test tests/staging-acceptance.test.mjs
 
       - name: Bind staging content and compose isolated context
         env:

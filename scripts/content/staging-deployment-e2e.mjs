@@ -1,4 +1,6 @@
 import { DEPLOYMENT_PROBES, sha256 } from './deployment-report.mjs';
+import { verifyStagingAcceptance } from './staging-acceptance.mjs';
+import { acceptanceFailureMessage } from './staging-acceptance-http.mjs';
 
 const ORIGIN = 'https://www-test.distillery.de';
 const ABSENT = ['/sitemap.xml', '/public/residents/data/residents-backup-before-restore.json',
@@ -20,13 +22,16 @@ async function probe(fetchImpl, endpoint, query, expectedStatus) {
 }
 
 async function verifyAttempt({ fetchImpl, codeHash, contentHash, query }) {
+  let manifestText;
   for (const [kind, expected] of [['code', codeHash], ['content', contentHash]]) {
     const endpoint = '/' + DEPLOYMENT_PROBES[kind];
     const response = await probe(fetchImpl, endpoint, query, 200);
     if (kind === 'content' && !/(?:^|,)\s*no-store\s*(?:,|$)/i.test(response.headers.get('cache-control') || '')) {
       throw new Error('Staging content probe: missing no-store.');
     }
-    if (sha256(Buffer.from(await response.arrayBuffer())) !== expected) throw new Error(`Staging ${kind} probe hash mismatch.`);
+    const bytes = Buffer.from(await response.arrayBuffer());
+    if (sha256(bytes) !== expected) throw new Error(`Staging ${kind} probe hash mismatch.`);
+    if (kind === 'content') manifestText = bytes.toString('utf8');
   }
   const health = await probe(fetchImpl, '/healthz', query, 200);
   await health.body?.cancel();
@@ -39,6 +44,7 @@ async function verifyAttempt({ fetchImpl, codeHash, contentHash, query }) {
     const response = await probe(fetchImpl, endpoint, query, 404);
     await response.body?.cancel(); // Never log or inspect possible recovery bodies.
   }
+  await verifyStagingAcceptance({ fetchImpl, query, manifestText });
 }
 
 export async function verifyStagingDeployment({ codeHash, contentHash, runId,
@@ -51,9 +57,10 @@ export async function verifyStagingDeployment({ codeHash, contentHash, runId,
     try {
       await verifyAttempt({ fetchImpl, codeHash, contentHash, query: `${runId}-${attempt}` });
       return { valid: true, environment: 'staging', attempts: attempt, codeHash, contentHash };
-    } catch {
+    } catch (error) {
       // Do not echo transport errors: they may include response bodies or credentials.
-      if (attempt === attempts) throw new Error('Staging E2E failed: code/content hashes or security probes did not pass within the retry budget.');
+      if (attempt === attempts) throw new Error('Staging E2E failed: ' + (acceptanceFailureMessage(error)
+        || 'code/content hashes or security probes did not pass within the retry budget.'));
       await sleep(10000);
     }
   }
