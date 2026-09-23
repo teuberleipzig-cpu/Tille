@@ -9,12 +9,28 @@ export function effectiveEventId(event) {
 }
 
 export function eventMonthKey(date) {
-  const value = String(date || '');
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return '';
-  const [year, month, day] = value.split('-').map(Number);
-  const parsed = new Date(Date.UTC(year, month - 1, day));
-  if (parsed.getUTCFullYear() !== year || parsed.getUTCMonth() + 1 !== month || parsed.getUTCDate() !== day) return '';
+  const value = date;
+  if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value) || value.startsWith('0000')) return '';
+  const parsed = new Date(`${value}T00:00:00Z`);
+  if (!Number.isFinite(parsed.getTime()) || parsed.toISOString().slice(0, 10) !== value) return '';
   return value.slice(0, 7);
+}
+
+// Persisted data is already normalized. Never repair an inconsistent stored list.
+export function eventDates(event) {
+  const dates = Object.hasOwn(event, 'dates') ? event.dates : [event.date];
+  if (!Array.isArray(dates) || !dates.length || dates.length > 31) throw new Error('Ungültige Event-dates: 1 bis 31 Tage erforderlich.');
+  for (let i = 0; i < dates.length; i++) {
+    if (!eventMonthKey(dates[i]) || (i > 0 && dates[i - 1] >= dates[i])) {
+      throw new Error('Ungültige Event-dates: reale, eindeutige, chronologische Tage erforderlich.');
+    }
+  }
+  if (event.date !== dates[0]) throw new Error('Event-date muss dem ersten dates-Wert entsprechen.');
+  return [...dates];
+}
+
+export function eventMonthKeys(event) {
+  return [...new Set(eventDates(event).map(eventMonthKey))];
 }
 
 export function normalizeEventSearchText(value) {
@@ -53,13 +69,14 @@ export function buildEventStorage(document) {
   const searchIndex = [];
 
   document.events.forEach((event, order) => {
-    const month = eventMonthKey(event.date);
-    if (!month) throw new Error(`Event ohne gültigen Monat: ${effectiveEventId(event)}`);
+    const monthKeys = eventMonthKeys(event), month = monthKeys[0];
     const id = effectiveEventId(event);
     if (idMap.has(id)) throw new Error(`Kollision der wirksamen Event-ID: ${id}`);
     idMap.set(id, event);
-    if (!monthMap.has(month)) monthMap.set(month, []);
-    monthMap.get(month).push(event);
+    for (const key of monthKeys) {
+      if (!monthMap.has(key)) monthMap.set(key, []);
+      monthMap.get(key).push(event);
+    }
     eventIndex.push({ id, month, order });
     searchIndex.push({ id, month, date: event.date, title: event.title, status: event.status, haystack: eventSearchHaystack(event) });
   });
@@ -73,6 +90,7 @@ export function buildEventStorage(document) {
   const manifest = {
     schemaVersion: EVENT_STORAGE_SCHEMA_VERSION,
     totalEvents: document.events.length,
+    totalMonthPlacements: months.reduce((total, month) => total + month.count, 0),
     topLevelKeys: Object.keys(document),
     metaPath: `${EVENT_DATA_ROOT}/meta.json`,
     eventIndexPath: `${EVENT_DATA_ROOT}/event-index.json`,
@@ -88,17 +106,47 @@ export function buildEventStorage(document) {
   };
 }
 
-export function reconstructEventDocument(storage) {
+function sameContent(a, b) {
+  if (a === b) return true;
+  if (!a || !b || typeof a !== 'object' || typeof b !== 'object' || Array.isArray(a) !== Array.isArray(b)) return false;
+  const keys = Object.keys(a);
+  return keys.length === Object.keys(b).length && keys.every(key => Object.hasOwn(b, key) && sameContent(a[key], b[key]));
+}
+
+function collectStoredEvents(storage) {
   const byId = new Map();
-  for (const month of storage.months.values()) {
-    for (const event of month.events || []) byId.set(effectiveEventId(event), event);
+  const placements = new Map();
+  for (const [key, month] of storage.months) {
+    if (!Array.isArray(month.events)) throw new Error('Monats-events fehlen.');
+    const ids = new Set();
+    for (const event of month.events) {
+      const id = effectiveEventId(event);
+      if (ids.has(id) || !eventMonthKeys(event).includes(key)) throw new Error('Ungültige Event-Monatszuordnung.');
+      ids.add(id);
+      if (byId.has(id) && !sameContent(byId.get(id), event)) throw new Error(`Widersprüchliche Event-Kopien: ${id}`);
+      if (!byId.has(id)) byId.set(id, event);
+      if (!placements.has(id)) placements.set(id, new Set());
+      placements.get(id).add(key);
+    }
   }
-  const orderedEvents = [...storage.eventIndex.events].sort((a, b) => a.order - b.order).map(entry => {
+  for (const [id, event] of byId) {
+    if (placements.get(id).size !== eventMonthKeys(event).length) throw new Error(`Event-Monatskopie fehlt: ${id}`);
+  }
+  return byId;
+}
+
+export function reconstructEventDocument(storage) {
+  const byId = collectStoredEvents(storage), ids = new Set();
+  const orderedEvents = [...storage.eventIndex.events].sort((a, b) => a.order - b.order).map((entry, order) => {
+    if (ids.has(entry.id)) throw new Error('Doppelte Event-ID im Eventindex.');
+    ids.add(entry.id);
+    if (entry.order !== order) throw new Error('Ungültige globale Event-Reihenfolge.');
     const event = byId.get(entry.id);
     if (!event) throw new Error(`Event fehlt bei Rekonstruktion: ${entry.id}`);
+    if (entry.month !== eventMonthKey(event.date)) throw new Error('Eventindex hat falschen Primärmonat.');
     return event;
   });
-  if (orderedEvents.length !== storage.manifest.totalEvents) throw new Error('Eventanzahl stimmt bei Rekonstruktion nicht.');
+  if (orderedEvents.length !== byId.size || byId.size !== storage.manifest.totalEvents) throw new Error('Eventanzahl stimmt bei Rekonstruktion nicht.');
   const values = { ...storage.metadata, events: orderedEvents };
   return Object.fromEntries(storage.manifest.topLevelKeys.map(key => [key, values[key]]));
 }

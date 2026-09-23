@@ -13,7 +13,7 @@ import { applyEventStorage, assertAllowedEventOutputPaths, assertAllowedFileMake
 const workflow = (await readFile(new URL('../.github/workflows/filemaker-event-intake.yml', import.meta.url), 'utf8')).replaceAll('\r\n', '\n');
 const deployWorkflow = await readFile(new URL('../.github/workflows/docker-publish.yml', import.meta.url), 'utf8');
 const meetingDocs = await readFile(new URL('../docs/FILEMAKER_EVENT_INTAKE.md', import.meta.url), 'utf8');
-const scriptTemplate = await readFile(new URL('../docs/filemaker/FILEMAKER_EVENT_SCRIPT_TEMPLATE.md', import.meta.url), 'utf8');
+const scriptTemplate = (await readFile(new URL('../docs/filemaker/FILEMAKER_EVENT_SCRIPT_TEMPLATE.md', import.meta.url), 'utf8')).replaceAll('\r\n', '\n');
 const fixture = JSON.parse(await readFile(new URL('./fixtures/filemaker-event.json', import.meta.url), 'utf8'));
 const ID = fixture.id, ID2 = 'fm-11111111-2222-3333-4444-555555555555';
 const SITEMAP = `<?xml version="1.0" encoding="UTF-8"?>
@@ -70,8 +70,8 @@ test('malformed fm id rejected', () => assert.throws(() => parse({ ...fixture, i
 test('ra id rejected', () => assert.throws(() => parse({ ...fixture, id: 'ra-123' }), /fm-<uuid>/));
 test('historical slug id rejected', () => assert.throws(() => parse({ ...fixture, id: 'old-event' }), /fm-<uuid>/));
 test('missing date on new upsert rejected', () => assert.throws(() => apply('upsert', { id: ID2, title: 'X' }), /date und title/));
-test('invalid date rejected', () => assert.throws(() => parse({ ...fixture, date: '12.09.2026' }), /Format/));
-test('impossible date rejected', () => assert.throws(() => parse({ ...fixture, date: '2026-02-30' }), /real existierendes/));
+test('invalid date rejected', () => assert.throws(() => parse({ ...fixture, date: '12.09.2026' }), /YYYY-MM-DD/));
+test('impossible date rejected', () => assert.throws(() => parse({ ...fixture, date: '2026-02-30' }), /Kalendertag existiert nicht/));
 test('empty title rejected', () => assert.throws(() => parse({ ...fixture, title: ' ' }), /nicht leer/));
 test('oversized payload rejected', () => assert.throws(() => parseFileMakerEventJson(JSON.stringify({ ...fixture, description: 'x'.repeat(MAX_PAYLOAD_BYTES) })), /40 KB/));
 test('data URL rejected', () => assert.throws(() => parse({ ...fixture, imageUrl: 'data:image/png,x' }), /verbotenen/));

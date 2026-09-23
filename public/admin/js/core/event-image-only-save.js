@@ -1,5 +1,5 @@
-import { effectiveEventId, storageArtifacts } from '../../../site/js/event-storage-model.js';
-import { eventOutputPath, renderEventHtml, updateEventSitemap } from '../../../../scripts/events/event-seo.mjs';
+import { effectiveEventId, storageArtifacts } from '../../../site/js/event-storage-model.js?v=event-storage-model-2';
+import { eventOutputPath, renderEventHtml, updateEventSitemap } from '../../../../scripts/events/event-seo.mjs?v=event-seo-storage-2';
 
 const DATA_ROOT = 'public/events/data/';
 const SITEMAP_PATH = 'sitemap.xml';

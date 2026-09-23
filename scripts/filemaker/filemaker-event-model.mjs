@@ -1,11 +1,12 @@
-import { effectiveEventId, eventMonthKey } from '../../public/site/js/event-storage-model.js';
+import { effectiveEventId, eventDates, eventMonthKey } from '../../public/site/js/event-storage-model.js';
+import { normalizeDatePatch } from './contracts-v2/dates.mjs';
 
 export const FILEMAKER_ID_PATTERN = /^fm-[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 export const MAX_PAYLOAD_BYTES = 40 * 1024;
 const FIELD_LIMITS = { title: 180, color: 40, moreUrl: 2000, imageUrl: 2000, description: 10000, status: 80 };
 const ITEM_LIMITS = { name: 300, info: 1000, link: 2000 };
 const SECTION_LIMITS = { label: 300, genre: 300 };
-const SUPPORTED_FIELDS = new Set(['id', 'date', ...Object.keys(FIELD_LIMITS), 'sections']);
+const SUPPORTED_FIELDS = new Set(['id', 'date', 'dates', ...Object.keys(FIELD_LIMITS), 'sections']);
 const FORBIDDEN_TEXT = /<(?:script|iframe|form)\b|(?:javascript|data|blob):|;base64,/i;
 const SECRET_PATTERN = /\b(?:github_pat_[A-Za-z0-9_]{20,}|gh[pousr]_[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16})\b/;
 const CONTROL_GARBAGE = /[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/;
@@ -83,10 +84,7 @@ export function parseFileMakerEventJson(raw, operation = 'upsert') {
   for (const key of Object.keys(input)) if (!SUPPORTED_FIELDS.has(key)) throw new Error(`Nicht unterstütztes Event-Feld: ${key}`);
   const output = { id: normalizeFileMakerId(input.id) };
   if (operation === 'remove') return output;
-  if ('date' in input) {
-    output.date = text(input.date, 'Event-Datum', 10, { required: true });
-    if (!eventMonthKey(output.date)) throw new Error('Event-Datum muss ein real existierendes Datum im Format YYYY-MM-DD sein.');
-  }
+  Object.assign(output, normalizeDatePatch(input));
   if ('title' in input) output.title = text(input.title, 'Event-Titel', FIELD_LIMITS.title, { required: true });
   for (const field of ['color', 'description', 'status']) if (field in input) output[field] = text(input[field], `Event ${field}`, FIELD_LIMITS[field]);
   if ('moreUrl' in input) output.moreUrl = safeUrl(input.moreUrl, 'Event moreUrl', { hash: true });
@@ -116,10 +114,16 @@ export function applyFileMakerOperation(document, operation, input) {
     return { document: { ...structuredClone(document), events }, action: existing ? 'removed' : 'no-op', exists: !!existing, beforeMonth, afterMonth: '' };
   }
   if (!existing && (!input.date || !input.title)) throw new Error('Neue FileMaker-Events benötigen date und title.');
+  if (existing) eventDates(existing);
+  if (existing && Object.hasOwn(existing, 'dates') && !Object.hasOwn(input, 'dates')
+    && Object.hasOwn(input, 'date') && input.date !== existing.date) {
+    throw new Error('Zum Ändern des Primärdatums muss die vollständige dates-Liste geliefert werden.');
+  }
   const event = existing ? { ...existing, ...input, id: input.id } : {
     id: input.id, date: input.date, title: input.title, color: 'orange', moreUrl: '', imageUrl: '', description: '', sections: [], ...input
   };
   const afterMonth = eventMonthKey(event.date);
+  eventDates(event);
   if (!afterMonth) throw new Error('Event-Datum muss gültig sein.');
   if (!String(event.title || '').trim()) throw new Error('Event-Titel darf nicht leer sein.');
   if (existing && event.date === existing.date) events[index] = event;

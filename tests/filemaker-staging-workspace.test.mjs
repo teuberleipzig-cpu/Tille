@@ -6,7 +6,7 @@ import path from 'node:path';
 import { fixtureRepo, fixtureBlob, fixtureCommit, fixtureGit } from './helpers/content-bootstrap-fixture.mjs';
 import { storageArtifacts } from '../public/site/js/event-storage-model.js';
 import { eventSeoArtifacts, eventOutputPath } from '../scripts/events/event-seo.mjs';
-import { loadEventDocumentFromWorkspace } from '../scripts/filemaker/filemaker-event-intake.mjs';
+import { loadEventDocumentFromWorkspace, prepareFileMakerEvent } from '../scripts/filemaker/filemaker-event-intake.mjs';
 import { bindWriter } from '../scripts/filemaker/staging-contract.mjs';
 import { prepareStagingWorkspace } from '../scripts/filemaker/staging-workspace.mjs';
 import { createContentHead, verifyContentHead } from '../scripts/filemaker/staging-commit.mjs';
@@ -107,4 +107,30 @@ test('content commit rejects changed CODE/foreign outputs', async t => {
   const f = await setup(t);
   await assert.rejects(createContentHead({ repoRoot: f.repoRoot, binding: f.binding,
     prepared: { hasChanges: true, changedFiles: ['scripts/x.mjs'], workspace: f.output } }), /CODE/);
+});
+
+test('multi-month update and remove produce complete atomic storage/SEO diffs in fixture only', async t => {
+  const f = await setup(t);
+  const prepared = await run(f, 'upsert', { id: ID, dates: ['2026-10-31', '2026-11-02'] });
+  for (const month of ['2026-09', '2026-10', '2026-11']) {
+    assert.ok(prepared.changedFiles.includes(`public/events/data/months/${month}.json`));
+  }
+  assert.deepEqual(prepared.changedFiles.filter(p => p.startsWith('events/')), [eventOutputPath(ID)]);
+  const updated = await loadEventDocumentFromWorkspace(f.output);
+  assert.equal(updated.events.length, 2);
+  assert.deepEqual(updated.events.find(e => e.id === ID).dates, ['2026-10-31', '2026-11-02']);
+  const head = await createContentHead({ repoRoot: f.repoRoot, binding: f.binding, prepared });
+  verifyContentHead(f.repoRoot, f.binding, head, prepared.changedFiles);
+  assertRefs(f);
+  const removed = await prepareFileMakerEvent({ workspaceRoot: f.output, mode: 'sync-pr', operation: 'remove',
+    eventJson: JSON.stringify({ id: ID, dates: ['2026-12-31'] }) });
+  for (const file of ['public/events/data/months/2026-10.json', 'public/events/data/months/2026-11.json',
+    'public/events/data/event-index.json', 'public/events/data/search-index.json', eventOutputPath(ID), 'sitemap.xml']) {
+    assert.ok(removed.changedFiles.includes(file), file);
+  }
+  await assert.rejects(readFile(path.join(f.output, eventOutputPath(ID))), { code: 'ENOENT' });
+  await assert.rejects(readFile(path.join(f.output, 'public/events/data/months/2026-11.json')), { code: 'ENOENT' });
+  assert.deepEqual((await loadEventDocumentFromWorkspace(f.output)).events, document().events.slice(1));
+  assert.doesNotMatch(await readFile(path.join(f.output, 'sitemap.xml'), 'utf8'), new RegExp(ID));
+  assertRefs(f);
 });

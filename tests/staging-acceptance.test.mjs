@@ -12,6 +12,18 @@ const run = (fixture, overrides = {}, calls = []) => verifyStagingAcceptance({
   fetchImpl: acceptanceFetch(fixture, overrides, calls), query: '123-1-1'
 });
 
+for (const explicit of [false, true]) test(`multi-month placements accepted; explicit count=${explicit}`, async () => {
+  const f = acceptanceFixture(), manifest = f.documents[MANIFEST];
+  manifest.totalEvents = 4; // Five placements; first event also appears in the last month.
+  f.documents['/public/events/data/months/2026-05.json'].events = structuredClone(f.documents[MONTH].events);
+  if (explicit) manifest.totalMonthPlacements = 5;
+  assert.deepEqual(await run(f), { valid: true });
+});
+for (const count of [null, -1, 1.5, '5', 4, 6]) test(`invalid totalMonthPlacements ${count} fails`, async () => {
+  const f = acceptanceFixture(); f.documents[MANIFEST].totalMonthPlacements = count;
+  await assert.rejects(run(f), /totalMonthPlacements/);
+});
+
 test('all pages, JSON invariants, apps and main assets pass with staging headers and GET only', async () => {
   const calls = [];
   assert.deepEqual(await run(acceptanceFixture(), {}, calls), { valid: true });
