@@ -1,4 +1,5 @@
-import { effectiveEventId, eventMonthKey } from '../../public/site/js/event-storage-model.js?v=event-storage-model-2';
+import { effectiveEventId } from '../../public/site/js/event-storage-model.js?v=event-storage-model-3';
+import { eventCategory, eventDateLabel } from '../../public/site/js/event-presentation.js?v=event-presentation-1';
 
 export const EVENT_SITE_URL = 'https://www.distillery.de';
 export const EVENT_OUTPUT_ROOT = 'events';
@@ -60,19 +61,12 @@ function eventLineup(event) {
     .filter(Boolean);
 }
 
-function formatEventDate(date) {
-  const value = String(date || '');
-  if (!eventMonthKey(value)) throw new Error(`Ungültiges Event-Datum: ${value}`);
-  const [year, month, day] = value.split('-');
-  return `${day}.${month}.${year}`;
-}
-
 export function eventMetaDescription(event) {
   const description = normalizeWhitespace(event.description);
   if (description) return truncateDescription(description);
   const title = normalizeWhitespace(event.title);
   const lineup = eventLineup(event).join(', ');
-  const fallback = `${title} am ${formatEventDate(event.date)} in der Distillery Leipzig.${lineup ? ` ${lineup}` : ''}`;
+  const fallback = `${title} am ${eventDateLabel(event)} in der Distillery Leipzig.${lineup ? ` ${lineup}` : ''}`;
   return truncateDescription(fallback);
 }
 
@@ -126,11 +120,6 @@ export function eventJsonLd(event) {
   };
 }
 
-function normalizeColor(value) {
-  const color = value === 'blue' ? 'olive' : value;
-  return ['orange', 'olive', 'yellow'].includes(color) ? color : 'olive';
-}
-
 function safeArtistLink(value) {
   const link = String(value || '').trim();
   if (!link || /^(?:data|blob|javascript):/i.test(link)) return '';
@@ -168,8 +157,8 @@ export function renderEventHtml(event) {
   const metaDescription = eventMetaDescription(event);
   const image = safeEventImage(event.imageUrl);
   const socialImage = image?.absolute || EVENT_SOCIAL_IMAGE;
-  const displayDate = formatEventDate(event.date);
-  const color = normalizeColor(event.color);
+  const displayDate = eventDateLabel(event);
+  const category = eventCategory(event);
   const sections = renderSections(event);
   const description = String(event.description || '').trim();
   const pageTitle = `${title} – Distillery Leipzig`;
@@ -206,6 +195,7 @@ export function renderEventHtml(event) {
 </style>
 <link rel="stylesheet" href="assets/mobile-navigation.css?v=mobile-navigation-7">
 <link rel="stylesheet" href="assets/mobile-foundation.css?v=mobile-foundation-4">
+<link rel="stylesheet" href="assets/event-categories.css?v=event-categories-1">
 </head>
 <body data-site-page="dates">
 <div class="page">
@@ -214,7 +204,7 @@ export function renderEventHtml(event) {
 <nav class="nav" aria-label="Hauptnavigation"><a class="active" href="index.html">Dates</a><a href="news.html">News</a><a href="residents.html">Residents</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="history.html">History</a><a href="feedback.html">Feedback</a><a href="gallery.html">Gallery</a></nav>
 <a class="back-link" href="index.html?month=${escapeHtml(String(event.date).slice(0, 7))}">back to dates</a>
 ${hero}<article class="event">
-<h1 class="event-title ${color}"><span class="event-date">${escapeHtml(displayDate)}</span> <span class="event-name">${escapeHtml(title)}</span></h1>
+<h1 class="event-title" data-category="${category.key}" style="--event-color:${category.color}"><span class="event-date">${escapeHtml(displayDate)}</span> <span class="event-name">${escapeHtml(title)}</span></h1>
 ${sections}${descriptionHtml}
 </article>
 <footer class="footer">DISTILLERY LEIPZIG | EGGEBRECHTSTRAẞE 2 | 04103 LEIPZIG | <a href="mailto:club@distillery.de">club@distillery.de</a> | <a href="tel:+4934135597400">0341 35597400</a><small><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></small></footer>

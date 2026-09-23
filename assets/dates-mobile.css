@@ -34,11 +34,7 @@
   .calendar td{color:#707070}
   .calendar td.event-day{color:#000}
   .calendar td a{display:flex;width:100%;height:auto;min-height:33px;align-items:center;justify-content:center;line-height:1}
-  .calendar .day-orange,.calendar .day-olive,.calendar .day-yellow{background:transparent;color:#000}
-  .calendar .day-orange a{background:linear-gradient(var(--orange),var(--orange)) center/22px 22px no-repeat}
-  .calendar .day-olive a{background:linear-gradient(var(--olive),var(--olive)) center/22px 22px no-repeat}
-  .calendar .day-yellow a{background:linear-gradient(var(--yellow),var(--yellow)) center/22px 22px no-repeat}
-  #category-filters{display:grid;grid-template-columns:minmax(0,1.11fr) minmax(0,1fr) minmax(0,.89fr);gap:4px;width:100%;margin-bottom:0}
+  #category-filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;width:100%;margin-bottom:0}
   .side-filter{display:inline-flex;width:100%;min-width:0;min-height:34px;max-width:none;align-items:center;justify-content:center;margin:0;padding:2px;font-size:10px;line-height:1.1;text-align:center;white-space:nowrap}
   .resident-slideshow{display:none!important}
   #events{min-width:0}
@@ -47,9 +43,6 @@
   .event-title a{display:block}
   .event-date{display:block;margin-bottom:4px;font-size:13px;font-weight:900;line-height:1.15}
   .event-name{display:inline;padding:1px 4px;font-size:20px;font-weight:900;line-height:1.06;box-decoration-break:clone;-webkit-box-decoration-break:clone}
-  .event-title.olive .event-name{background:var(--olive)}
-  .event-title.orange .event-name{background:var(--orange)}
-  .event-title.yellow .event-name{background:var(--yellow)}
   .label{margin-top:9px;font-size:13px;font-weight:900;text-transform:uppercase}
   .line{font-size:14px;line-height:1.4}
   .line strong{font-size:17px;line-height:1.25}

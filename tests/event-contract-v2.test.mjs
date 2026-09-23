@@ -21,9 +21,9 @@ test('date-only old/new event contract remains valid', () => {
   assert.equal(created.events[0].date, input.date);
   assert.deepEqual(normalizeEventV2Patch({ date: input.date }), { date: input.date });
 });
-test('dates trim deduplicate sort and preserve gaps; derive primary date', () => {
-  assert.deepEqual(normalizeEventV2Patch({ dates: ['2026-10-18', ' 2026-10-16 ', '2026-10-18'] }), {
-    date: '2026-10-16', dates: ['2026-10-16', '2026-10-18']
+test('dates trim deduplicate sort and validate consecutive days; derive primary date', () => {
+  assert.deepEqual(normalizeEventV2Patch({ dates: ['2026-10-17', ' 2026-10-16 ', '2026-10-17'] }), {
+    date: '2026-10-16', dates: ['2026-10-16', '2026-10-17']
   });
 });
 test('explicit primary date conflict fails', () => assert.throws(() => normalizeEventV2Patch({ date: '2026-10-17', dates: ['2026-10-16'] }), /ersten/));

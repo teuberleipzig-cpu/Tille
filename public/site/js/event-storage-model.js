@@ -1,3 +1,5 @@
+import { calendarDayNumber, assertConsecutiveDays } from './event-date-rules.js?v=event-date-rules-1';
+
 export const EVENT_STORAGE_SCHEMA_VERSION = 1;
 export const EVENT_DATA_ROOT = 'public/events/data';
 
@@ -9,11 +11,7 @@ export function effectiveEventId(event) {
 }
 
 export function eventMonthKey(date) {
-  const value = date;
-  if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value) || value.startsWith('0000')) return '';
-  const parsed = new Date(`${value}T00:00:00Z`);
-  if (!Number.isFinite(parsed.getTime()) || parsed.toISOString().slice(0, 10) !== value) return '';
-  return value.slice(0, 7);
+  return Number.isFinite(calendarDayNumber(date)) ? date.slice(0, 7) : '';
 }
 
 // Persisted data is already normalized. Never repair an inconsistent stored list.
@@ -26,6 +24,7 @@ export function eventDates(event) {
     }
   }
   if (event.date !== dates[0]) throw new Error('Event-date muss dem ersten dates-Wert entsprechen.');
+  assertConsecutiveDays(dates);
   return [...dates];
 }
 

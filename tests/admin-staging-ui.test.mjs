@@ -10,7 +10,7 @@ const read = path => readFile(new URL('../public/admin/' + path, import.meta.url
 test('changed active entry points and secondary loaders carry staging cache versions', async () => {
   const html = await read('index.html'), meta = await read('js/events-meta.js'), fixes = await read('js/admin-v2-current-fixes.js');
   for (const name of ['staging-admin', 'admin-app', 'github-media', 'admin-v2-current-fixes']) assert.ok(html.includes(name + '.js?v=admin-staging-1'));
-  for (const name of ['events-meta', 'auto-github-load']) assert.ok(html.includes(name + '.js?v=admin-multidate-storage-1'));
+  for (const name of ['events-meta', 'auto-github-load']) assert.ok(html.includes(name + '.js?v=admin-weekday-categories-1'));
   for (const name of ['site-navigation', 'gallery']) assert.ok(html.includes(name + '.js?v=admin-staging-1'));
   for (const name of ['residents-media', 'residents-news', 'resident-access']) assert.ok(meta.includes(name + '.js?v=admin-staging-1'));
   for (const name of ['admin-draft-guard', 'admin-save-preflight', 'admin-write-baseline']) assert.ok(fixes.includes(name + '.js?v=admin-staging-1'));
