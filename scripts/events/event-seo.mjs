@@ -1,4 +1,4 @@
-import { effectiveEventId, eventMonthKey } from '../../public/site/js/event-storage-model.js';
+import { effectiveEventId, eventMonthKey } from '../../public/site/js/event-storage-model.js?v=event-storage-model-2';
 
 export const EVENT_SITE_URL = 'https://www.distillery.de';
 export const EVENT_OUTPUT_ROOT = 'events';

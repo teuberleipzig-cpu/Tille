@@ -69,7 +69,7 @@ test('40 KB raw UTF-8 budget applies independently to full future payload', () =
   assert.throws(() => normalizeEventV2Patch({ tags: ['x'.repeat(40961)] }), /40 KB/);
 });
 test('environment cannot be part of the event field patch', () => assert.throws(() => normalizeEventV2Patch({ environment: 'live' }), /unbekanntes Feld/));
-for (const [key, value] of Object.entries({ dates: ['2026-10-16'], tags: [], timetable: null, environment: 'staging' })) {
+for (const [key, value] of Object.entries({ tags: [], timetable: null, environment: 'staging' })) {
   test(`production V1 still rejects ${key} for upsert and remove`, () => {
     for (const op of ['upsert', 'remove']) assert.throws(() => parseFileMakerEventJson(JSON.stringify({ id: fixture.event.id, [key]: value }), op), /Nicht unterstütztes Event-Feld/);
   });

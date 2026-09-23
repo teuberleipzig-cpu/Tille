@@ -67,7 +67,11 @@ function manifestMonths(manifest) {
     requireStructure(integer(month.count), MANIFEST, 'invalid month count');
     total += month.count;
   }
-  requireStructure(total === manifest.totalEvents, MANIFEST, 'totalEvents count mismatch');
+  requireStructure(Number.isSafeInteger(total) && total >= manifest.totalEvents, MANIFEST, 'totalEvents count mismatch');
+  if (Object.hasOwn(manifest, 'totalMonthPlacements')) {
+    requireStructure(integer(manifest.totalMonthPlacements) && manifest.totalMonthPlacements === total
+      && manifest.totalMonthPlacements >= manifest.totalEvents, MANIFEST, 'totalMonthPlacements count mismatch');
+  }
   return [...manifest.months].sort((a, b) => a.key.localeCompare(b.key));
 }
 

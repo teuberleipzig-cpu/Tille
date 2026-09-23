@@ -1,23 +1,24 @@
 # Event Contract V2 — Foundation, Paket A
 
-Status: Entwurf für spätere Integration, **nicht produktiv aktiviert**.
+Status: **C1 aktiviert ausschließlich date/dates im produktiven Parser und Storage.**
+Tags und Timetable bleiben Foundation-Verträge, nicht produktiv aktiviert.
 Version: 2. Basis: b2b4af6182f38dcbcd6a7f508ff6ead99e03b8ed.
 
 ## Heute und später
 
-Heute bleibt V1 unverändert: mode, operation und event_json sind Workflow-Inputs.
-event_json akzeptiert id, date, title, color, moreUrl, imageUrl, description,
+Der bestehende Workflow-/Staging-Vertrag bleibt unverändert.
+event_json akzeptiert id, date, dates, title, color, moreUrl, imageUrl, description,
 status und sections (label, genre, items mit name, info, link).
-Neue Events benötigen date und title; fm-ID bleibt stabil. Ausgelassene Felder
+Neue Events benötigen date oder dates sowie title; fm-ID bleibt stabil. Ausgelassene Felder
 bleiben bei Updates erhalten, einschließlich imageUrl und unbekannter Bestandsfelder.
 Gelieferte sections ersetzen die bisherige Liste vollständig.
-Der produktive Parser lehnt dates, tags, timetable und environment weiterhin ab.
+Der produktive Parser lehnt tags, timetable und environment weiterhin ab.
 
-V2 ergänzt später dates, tags und timetable. environment gehört ausdrücklich
-NICHT in event_json. Keine dieser Erweiterungen darf vor Storage-, Renderer-
-und Workflow-Integration produktiv gesendet werden.
+Dates ist über die vorhandene Datumsnormalisierung integriert. Tags und Timetable
+benötigen weiterhin ein eigenes Integrationspaket. environment gehört ausdrücklich
+NICHT in event_json. C1 enthält keine sichtbare Mehrtage-UI und keinen Remote-Run.
 
-## Umgebung: separater Workflow-Input
+## Umgebung: ursprünglicher Foundation-Vertrag (Routing separat umgesetzt)
 
 Spätere Inputs: mode, operation, environment, event_json.
 environment muss exakt `staging` oder `live` sein. Fehlend, leer, Leerzeichen,
@@ -40,19 +41,22 @@ Aktivierung mit Steffen festgelegt. Fehlende Ziele dürfen nie Live bedeuten.
 - date ist der erste Tag. Werden beide Felder geliefert, muss date passen;
   ein Widerspruch wird abgelehnt, niemals still korrigiert.
 - Nur dates geliefert: der reine Patch-Helfer leitet date vom ersten Tag ab.
-- dates fehlt: später vorhandene dates erhalten; keine Liste automatisch anlegen.
-- dates geliefert: später vollständig ersetzen. [] ist ungültig.
+- dates fehlt: vorhandene dates erhalten; keine Liste automatisch anlegen.
+- dates geliefert: vollständig ersetzen. [] ist ungültig.
 - Rückkehr zu eintägig: dates mit genau einem Tag senden.
 - Ein date-only Update eines mehrtägigen Bestands darf dessen dates nicht
-  löschen. Widerspricht date der erhaltenen Liste, muss der spätere Apply-Layer
+  löschen. Widerspricht date der erhaltenen Liste, muss der produktive Apply-Layer
   abbrechen und die vollständige neue dates-Liste anfordern.
 - Fachlicher Veranstaltungstag ist unabhängig vom Timetable: eine Freitagnacht
   bis Samstagmorgen bleibt eintägig, wenn nur Freitag ausdrücklich angegeben ist.
 
 Der Patch-Helfer hat absichtlich keinen Bestandszugriff. Resultierende
-Bestandskonsistenz, Pflichtfelder neuer Events und Monate prüft später C1.
+Bestandskonsistenz, Pflichtfelder neuer Events und Monate prüft jetzt C1.
+Der Browser-Storage akzeptiert nur bereits normalisierte, konsistente Listen;
+kaputte persistierte Daten werden nicht still repariert. Details:
+[Mehrtage-Storage](../EVENT_MULTIDATE_STORAGE.md).
 
-## Freie Tags
+## Freie Tags (weiterhin nicht produktiv aktiviert)
 
 Array mit maximal 20 Strings (Limit vor Deduplizierung), keine Kategorien-Enum.
 Jeder Tag: trimmen, Unicode NFC, höchstens 60 Unicode-Codepoints.
@@ -72,7 +76,7 @@ Fehlend: bei Update erhalten; bei neuem Event fachlich keine Tags.
 Geliefert: vollständig ersetzen. []: alle Tags entfernen.
 Tags immer als Text ausgeben, niemals ungeprüfte CSS-Klassen oder DOM-IDs.
 
-## Timetable
+## Timetable (weiterhin nicht produktiv aktiviert)
 
 Fehlend: erhalten. null: ausdrücklich entfernen. Objekt: vollständig ersetzen.
 {} und {"slots":[]} sind ungültig; es gibt keinen zweiten Löschmechanismus.
@@ -120,10 +124,10 @@ scripts/filemaker/contracts-v2/ enthält ausschließlich nebenwirkungsfreie Helf
   normalizeTimetable/berlinTimestamp: unabhängige Feldverantwortungen.
 
 normalizeEventV2Patch ist KEIN vollständiger Eventparser. Übergabe von id, title
-oder environment ist dort ein Fehler. Der spätere Integrationsparser muss zuerst
-die komplette rohe Payloadgröße prüfen und dann V1/V2-Felder kontrolliert verbinden.
+oder environment ist dort ein Fehler. Der produktive Parser prüft zuerst
+die komplette rohe Payloadgröße und bindet ausschließlich normalizeDatePatch ein.
 Die Helfer importieren keine IO-/Netzwerkfunktionen und verändern keine Eingaben.
-Sie werden nur von Tests importiert; keine produktiven Imports ergänzen.
+Nur die Datumshilfe wird durch C1 produktiv importiert; Tags/Timetable bleiben isoliert.
 V1-Sicherheitsmuster sind im separaten Texthelper gespiegelt und für einzeilige
 Felder verschärft; V1 wird dafür nicht refaktoriert.
 
@@ -141,15 +145,17 @@ und event. Im späteren Dispatch wird ausschließlich event als JSON serialisier
 }
 ```
 
-Remove später: operation=remove, Umgebung als eigener Input, event_json nur mit
-der künstlichen/stabilen fm-ID. Remove betrifft genau diese ID in dieser Umgebung;
-alle zugehörigen Monatszuordnungen, Indizes, Seite und Sitemap werden später atomar
-entfernt. Andere IDs und Umgebungen bleiben erhalten. Hier kein Apply/Write.
+Remove: operation=remove, Umgebung als eigener Input, event_json nur mit
+der stabilen fm-ID. Gelieferte dates werden beim Remove ignoriert, nicht angewendet.
+Remove betrifft genau diese ID; die bestehende atomare Generation entfernt alle
+Monatszuordnungen sowie den einzelnen Indexeintrag, die Seite und Sitemap-URL.
+Andere IDs und Umgebungen bleiben erhalten. C1 führt keinen Remote-Write aus.
 
 ## Nachfolgende Freigaben
 
 B1: Routing, Content-Architektur, Rechte, Übergang, revisionsgebundener Deploy.
-C1: Bestandsvalidierung, Mehrmonats-Storage, Rekonstruktion und Kalenderintegration.
+C1: Datums-Apply, Bestandsvalidierung, Mehrmonats-Storage und Rekonstruktion integriert;
+keine Kalender-/Filter-UI-Integration.
 C2: Apply für Tags/Timetable, etablierte Schreibweisen, Index/Renderer/Sicherheitsgates.
-Jedes Paket benötigt einen eigenen Auftrag. Kein Cache-Busting erforderlich:
-keine geladene Browserdatei wurde geändert und diese Helfer sind nicht verdrahtet.
+Jedes weitere Paket benötigt einen eigenen Auftrag. C1 hebt aktive Browser-Imports
+auf event-storage-model-2 und die betroffenen Importketten auf neue Versionen.
