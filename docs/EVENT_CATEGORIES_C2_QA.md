@@ -116,3 +116,51 @@ siehe `EVENT_MULTIDATE_STORAGE.md`. Dafür braucht es eine explizite Contentbran
 Schreib- und Staging-Deploy-Freigabe, für Live eine weitere Freigabe.
 Auch der reale FileMaker-Versand von dates[] bleibt offen. Keine automatische
 Fortsetzung, kein Remote-Run, Merge, Auto-Merge oder Deployment durch C2.
+
+## C2-R1: PR-CI-Abdeckung (24.09.2026)
+
+Ausgangs-HEAD: `006b627dcae6472f2af96d0b82edb76ec534bbbe`, Draft-PR #114.
+Die ursprünglichen PR-Pfadfilter erfassten keine der 30 C2-Änderungen.
+Die zuvor lokal bestandenen 446 Tests waren daher kein GitHub-CI-Nachweis;
+fehlende Runs sind keine fehlgeschlagenen Tests.
+
+Der bestehende Smoke-Workflow erfasst zusätzlich die öffentlichen Einstiege,
+`public/site/js/event-*.js`, die beiden C2-Styles, `scripts/events/**`, die
+betroffenen Datums-/FileMaker-Modelle und Admin-Importketten sowie alle gezielten
+Suites und deren relevante Fixtures/Helper. Alte Pfadfilter bleiben bestehen.
+Reine Dokumentations-, Content- oder generierte Eventseitenänderungen lösen
+dadurch keine zusätzliche Event-CI aus. Trigger bleibt ausschließlich
+`pull_request` gegen `main`.
+
+Alle 13 oben genannten C2-Suites laufen vollständig und jeweils einmal.
+Die bisher gefilterte FileMaker-Intake-Ausführung wird durch ihre vollständige
+Suite ersetzt. Composition-, Deployment-Contract-, Timetable-, Container- und
+HTTP-Sicherheitsprüfungen bleiben erhalten. Rechte, exakter PR-Head-Checkout,
+einmalige Staging-SHA-Bindung und isolierter Buildcontext sind unverändert.
+Der DEFAULT-/LIVE-safety-Container ist weiterhin nur ein lokaler CI-Test mit
+Staging-Content, kein Live-Deployment.
+
+Tatsächlich lokal wiederholt mit Node `v22.22.3` und `node --test`:
+
+- Workflow-Contract-Baseline: **4/4 PASS**.
+- Erweiterter Composition-Workflow-Contract: **8/8 PASS**.
+- Deployment-Workflow-Contract: **5/5 PASS**.
+- Alle 13 gezielten C2-Suites: **446/446 PASS**, Einzelzahlen wie oben Final.
+- Zusätzlich Timetable: **46/46 PASS**.
+- Final insgesamt **505/505 PASS**, alle Exitcodes 0, keine Skips/Abbrüche.
+
+Ein anfänglicher neuer Contracttest erkannte wegen zeilenübergreifendem `\s`
+fälschlich verschachtelte Permissions. Auf horizontale Einrückung begrenzt;
+danach bestanden. Kein Runtime-Fix erforderlich. Die neuen Tests prüfen den
+tatsächlichen Triggerblock, vollständige ausführbare Testbefehle und isolierte
+Negativbeispiele für die ursprüngliche Abdeckungslücke und Teil-Suite-Ausführung.
+
+Keine erneute Browser-QA, keine lokale Docker-Abnahme und keine Full-Repo-Suite.
+Der reguläre GitHub-Run wird erst nach Feature-Push am neuen Head geprüft und
+separat berichtet; lokale PASS-Ergebnisse ersetzen diesen Nachweis nicht.
+
+Nur Workflow, Workflow-Contracttest und dieser Bericht wurden in R1 geändert.
+Runtime, Composer, andere Workflows, Daten und Bestandsseiten bleiben unberührt.
+Unverändert offen: Bestandsseiten-Refresh samt konsistenter Code-/Content-
+Veröffentlichung, separate Merge-/Staging-Deploy-Freigabe, realer FileMaker-
+dates[]-Versand und das oben dokumentierte Desktop→Mobile-Fokusfinding.

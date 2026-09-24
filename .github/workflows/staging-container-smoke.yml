@@ -11,6 +11,39 @@ on:
       - 'tests/staging-cutover-integration.test.mjs'
       - 'tests/staging-acceptance.test.mjs'
       - 'tests/helpers/staging-acceptance-fixture.mjs'
+      - 'index.html'
+      - 'event.html'
+      - 'public/site/js/event-*.js'
+      - 'assets/dates-mobile.css'
+      - 'assets/event-categories.css'
+      - 'scripts/events/**'
+      - 'scripts/filemaker/contracts-v2/dates.mjs'
+      - 'scripts/filemaker/contracts-v2/event-contract.mjs'
+      - 'scripts/filemaker/filemaker-event-model.mjs'
+      - 'public/admin/index.html'
+      - 'public/admin/js/auto-github-load.js'
+      - 'public/admin/js/events-meta.js'
+      - 'public/admin/js/core/event-storage-admin.js'
+      - 'public/admin/js/core/event-image-only-save.js'
+      - 'tests/event-contract-v2.test.mjs'
+      - 'tests/event-contract-v2-timetable.test.mjs'
+      - 'tests/monthly-event-storage.test.mjs'
+      - 'tests/event-multidate-storage.test.mjs'
+      - 'tests/filemaker-event-intake.test.mjs'
+      - 'tests/filemaker-staging-workspace.test.mjs'
+      - 'tests/event-seo.test.mjs'
+      - 'tests/dates-mobile.test.mjs'
+      - 'tests/admin-event-image-only.test.mjs'
+      - 'tests/admin-event-image-only-ui.test.mjs'
+      - 'tests/admin-staging-ui.test.mjs'
+      - 'tests/event-categories.test.mjs'
+      - 'tests/fixtures/event-contract-v2.json'
+      - 'tests/fixtures/filemaker-event.json'
+      - 'tests/helpers/event-categories-fixture.mjs'
+      - 'tests/helpers/serve-event-categories-fixture.mjs'
+      - 'tests/helpers/content-bootstrap-fixture.mjs'
+      - 'tests/helpers/admin-staging-github.mjs'
+      - 'tests/helpers/portal-github-fixture.mjs'
       - 'robots.txt'
       - 'robots.staging.txt'
       - '.github/workflows/docker-publish.yml'
@@ -40,9 +73,13 @@ jobs:
       - name: Test prepared deployment contracts without deployment
         run: |
           node --test tests/content-deployment.test.mjs tests/content-deployment-e2e.test.mjs tests/content-deployment-workflow.test.mjs tests/content-deployment-cli.test.mjs
-          node --test --test-name-pattern='prepared cutover|expected SHA gate|normal docker.*trigger' tests/filemaker-event-intake.test.mjs
           node --test tests/staging-cutover-integration.test.mjs
           node --test tests/staging-acceptance.test.mjs
+
+      - name: Test full event regressions
+        run: |
+          node --test tests/monthly-event-storage.test.mjs tests/event-multidate-storage.test.mjs tests/filemaker-event-intake.test.mjs tests/filemaker-staging-workspace.test.mjs tests/event-seo.test.mjs
+          node --test tests/dates-mobile.test.mjs tests/admin-event-image-only.test.mjs tests/admin-event-image-only-ui.test.mjs tests/admin-staging-ui.test.mjs tests/event-categories.test.mjs
 
       - name: Bind staging content and compose isolated context
         env:
