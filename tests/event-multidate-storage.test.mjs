@@ -9,7 +9,7 @@ import { eventSeoArtifacts, eventOutputPath, eventJsonLd } from '../scripts/even
 
 const ID = 'fm-11111111-2222-3333-4444-555555555555';
 const parse = (input, op = 'upsert') => parseFileMakerEventJson(JSON.stringify({ id: ID, ...input }), op);
-const event = (dates = ['2026-10-31', '2026-11-02']) => ({
+const event = (dates = ['2026-10-31', '2026-11-01']) => ({
   id: ID, date: dates[0], dates, title: 'Fixture Festival', sections: [], future: { nested: [null, '', { keep: true }] }
 });
 const document = e => ({ unknown: { keep: true }, events: [e] });
@@ -22,9 +22,9 @@ test('legacy date-only stays date-only; date projection does not mutate', () => 
   assert.deepEqual(e, before); assert.equal(Object.hasOwn(e, 'dates'), false);
 });
 
-test('productive parser trims, sorts, dedupes and preserves gaps; dates-only create derives date', () => {
-  const parsed = parse({ title: 'New', dates: ['2026-10-18', ' 2026-10-16 ', '2026-10-18'] });
-  assert.deepEqual(parsed.dates, ['2026-10-16', '2026-10-18']);
+test('productive parser trims, sorts, dedupes and checks consecutive days; dates-only create derives date', () => {
+  const parsed = parse({ title: 'New', dates: ['2026-10-17', ' 2026-10-16 ', '2026-10-17'] });
+  assert.deepEqual(parsed.dates, ['2026-10-16', '2026-10-17']);
   const created = applyFileMakerOperation({ events: [] }, 'upsert', parsed).document.events[0];
   assert.equal(created.date, '2026-10-16'); assert.deepEqual(eventDates(created), parsed.dates);
   assert.equal(created.id, ID);
@@ -39,8 +39,8 @@ test('productive dates limits and explicit contradictory primary fail closed', (
 });
 
 test('same-month placement is unique and does not invent intermediate days', () => {
-  const e = event(['2026-10-16', '2026-10-18']), s = buildEventStorage(document(e));
-  assert.deepEqual(eventDates(e), ['2026-10-16', '2026-10-18']);
+  const e = event(['2026-10-16', '2026-10-17']), s = buildEventStorage(document(e));
+  assert.deepEqual(eventDates(e), ['2026-10-16', '2026-10-17']);
   assert.deepEqual(eventMonthKeys(e), ['2026-10']);
   assert.equal(s.months.get('2026-10').events.length, 1);
   assert.equal(s.manifest.totalEvents, 1); assert.equal(s.manifest.totalMonthPlacements, 1);
@@ -56,14 +56,14 @@ test('cross-month placements retain one canonical global index and primary month
   assert.equal(s.searchIndex.events.length, 1); assert.equal(s.searchIndex.events[0].month, '2026-10');
 });
 
-for (const dates of [[], null, ['2026-10-31', '2026-10-31'], ['2026-11-02', '2026-10-31'],
+for (const dates of [[], null, ['2026-10-31', '2026-10-31'], ['2026-11-01', '2026-10-31'],
   [' 2026-10-31'], ['2026-02-30'], ['0000-01-01'], Array(32).fill('2026-10-31')]) {
   test(`persisted dates fail closed without repair: ${JSON.stringify(dates).slice(0, 70)}`, () => {
     assert.throws(() => buildEventStorage(document({ ...event(), dates })));
   });
 }
 test('stored primary mismatch fails; projection returns a copy', () => {
-  assert.throws(() => eventDates({ ...event(), date: '2026-11-02' }), /ersten/);
+  assert.throws(() => eventDates({ ...event(), date: '2026-11-01' }), /ersten/);
   const e = event(); eventDates(e).push('2026-12-01'); assert.equal(e.dates.length, 2);
   assert.deepEqual(eventDates(event(['0099-01-01'])), ['0099-01-01']);
 });
@@ -102,10 +102,10 @@ test('updates preserve omitted dates and unknown fields, including matching date
     const saved = apply(original, input).events[0];
     assert.deepEqual(saved.dates, original.dates); assert.deepEqual(saved.future, original.future);
   }
-  assert.throws(() => apply(original, { date: '2026-11-02' }), /vollständige dates-Liste/);
+  assert.throws(() => apply(original, { date: '2026-11-01' }), /vollständige dates-Liste/);
 });
 test('explicit replacement removes old placements and supports return to one day', () => {
-  const replaced = apply(event(), { dates: ['2027-02-01', '2027-03-03'] });
+  const replaced = apply(event(), { dates: ['2027-02-28', '2027-03-01'] });
   assert.deepEqual([...buildEventStorage(replaced).months.keys()], ['2027-02', '2027-03']);
   const single = apply(replaced.events[0], { dates: ['2027-04-01'] });
   assert.deepEqual(single.events[0].dates, ['2027-04-01']);
@@ -147,11 +147,11 @@ test('active browser storage import chains are cache-busted including shared SEO
   const read = file => readFile(new URL('../' + file, import.meta.url), 'utf8');
   for (const file of ['public/site/js/event-store.js', 'public/admin/js/core/event-storage-admin.js',
     'public/admin/js/core/event-image-only-save.js', 'scripts/events/event-seo.mjs']) {
-    assert.match(await read(file), /event-storage-model\.js\?v=event-storage-model-2/);
+    assert.match(await read(file), /event-storage-model\.js\?v=event-storage-model-3/);
   }
-  for (const file of ['index.html', 'event.html']) assert.match(await read(file), /event-store\.js\?v=event-store-2/);
-  assert.match(await read('public/admin/js/core/event-image-only-save.js'), /event-seo\.mjs\?v=event-seo-storage-2/);
+  for (const file of ['index.html', 'event.html']) assert.match(await read(file), /event-store\.js\?v=event-store-3/);
+  assert.match(await read('public/admin/js/core/event-image-only-save.js'), /event-seo\.mjs\?v=event-seo-categories-1/);
   const loader = await read('public/admin/js/auto-github-load.js');
-  assert.match(loader, /event-storage-admin\.js\?v=event-storage-admin-2/);
-  assert.match(loader, /event-image-only-save\.js\?v=event-image-only-save-2/);
+  assert.match(loader, /event-storage-admin\.js\?v=event-storage-admin-3/);
+  assert.match(loader, /event-image-only-save\.js\?v=event-image-only-save-3/);
 });

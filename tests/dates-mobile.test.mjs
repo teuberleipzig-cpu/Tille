@@ -3,10 +3,13 @@ import test from 'node:test';
 import { readFile } from 'node:fs/promises';
 import { initialiseDatesMobileLayout } from '../public/site/js/dates-mobile-layout.js';
 import { initialiseDatesMobileFilters } from '../public/site/js/dates-mobile-filters.js';
+import { renderCategoryFilters } from '../public/site/js/event-category-filters.js';
+import { EVENT_CATEGORIES } from '../public/site/js/event-presentation.js';
 
 const root = new URL('../', import.meta.url);
 const html = await readFile(new URL('index.html', root), 'utf8');
 const css = await readFile(new URL('assets/dates-mobile.css', root), 'utf8');
+const categoryCss = await readFile(new URL('assets/event-categories.css', root), 'utf8');
 const layout = await readFile(new URL('public/site/js/dates-mobile-layout.js', root), 'utf8');
 const filters = await readFile(new URL('public/site/js/dates-mobile-filters.js', root), 'utf8');
 
@@ -126,7 +129,7 @@ test('desktop event detail keeps controls in the Sidebar', () => {
 });
 
 test('Dates mobile stylesheet and cache references are scoped', () => {
-  assert.match(html, /dates-mobile\.css\?v=dates-mobile-7/);
+  assert.match(html, /dates-mobile\.css\?v=dates-mobile-8/);
   assert.match(html, /dates-mobile-filters\.js\?v=dates-mobile-filters-2/);
   assert.match(html, /dates-mobile-layout\.js\?v=dates-mobile-layout-2/);
   assert.match(css, /@media\(max-width:820px\)/);
@@ -169,12 +172,8 @@ test('calendar and filters meet mobile layout contracts', () => {
   assert.match(css, /calendar td\{color:#707070/);
   assert.match(css, /calendar td\.event-day\{color:#000/);
   assert.match(css, /calendar td a\{[^}]*display:flex;[^}]*min-height:33px/);
-  assert.match(css, /calendar \.day-orange a\{background:linear-gradient\(var\(--orange\),var\(--orange\)\) center\/22px 22px no-repeat/);
-  assert.match(css, /calendar \.day-olive a\{background:linear-gradient\(var\(--olive\),var\(--olive\)\) center\/22px 22px no-repeat/);
-  assert.match(css, /calendar \.day-yellow a\{background:linear-gradient\(var\(--yellow\),var\(--yellow\)\) center\/22px 22px no-repeat/);
-  const categoryColumns = css.match(/category-filters\{display:grid;grid-template-columns:minmax\(0,([\d.]+)fr\) minmax\(0,([\d.]+)fr\) minmax\(0,([\d.]+)fr\);gap:4px;width:100%/);
-  assert.ok(categoryColumns);
-  assert.ok(Number(categoryColumns[1]) > Number(categoryColumns[3]));
+  assert.match(categoryCss, /calendar td\.event-day\[data-category\] a\{background:linear-gradient\(var\(--event-color\),var\(--event-color\)\) center\/22px 22px no-repeat/);
+  assert.match(css, /category-filters\{display:grid;grid-template-columns:repeat\(3,minmax\(0,1fr\)\);gap:4px;width:100%/);
   assert.match(css, /side-filter\{[^}]*width:100%;[^}]*min-height:34px;[^}]*padding:2px;font-size:10px;[^}]*white-space:nowrap/);
   assert.doesNotMatch(css, /#category-filters\{[^}]*flex-wrap/);
 });
@@ -214,4 +213,48 @@ test('Dates V3B introduces no unsafe primitives', () => {
   assert.doesNotMatch(additions, /MutationObserver|setInterval|cloneNode/);
   assert.doesNotMatch(additions, /(?:data|blob):/i);
   assert.doesNotMatch(html, /tabindex="[1-9]/);
+});
+
+test('C2 category rendering keeps button identity and limits all DOM writes to its own scope', () => {
+  const children = [];
+  const root = {
+    children,
+    ownerDocument: { createElement: () => {
+      const attributes = {}, styles = {}, classes = new Set();
+      const button = { dataset: {}, attributes, style: { setProperty: (k, v) => { styles[k] = v; } },
+        classList: { toggle: (k, on) => on ? classes.add(k) : classes.delete(k) },
+        setAttribute: (k, v) => { attributes[k] = v; },
+        remove: () => children.splice(children.indexOf(button), 1) };
+      return button;
+    } },
+    querySelectorAll: () => [...children],
+    querySelector: selector => children.find(b => selector === `[data-filter="${b.dataset.filter}"]`),
+    insertBefore: (button, anchor) => children.splice(anchor ? children.indexOf(anchor) : children.length, 0, button)
+  };
+  renderCategoryFilters(root, EVENT_CATEGORIES, null);
+  const original = [...children];
+  renderCategoryFilters(root, EVENT_CATEGORIES, 'friday');
+  assert.deepEqual(children, original);
+  assert.equal(children.length, 8);
+  assert.equal(children[4].attributes['aria-pressed'], 'true');
+  assert.equal(children.filter(b => b.attributes['aria-pressed'] === 'true').length, 1);
+  renderCategoryFilters(root, EVENT_CATEGORIES, null);
+  assert.ok(children.every(b => b.attributes['aria-pressed'] === 'false'));
+  renderCategoryFilters(root, EVENT_CATEGORIES.slice(6), null);
+  assert.deepEqual(children.map(b => b.dataset.filter), ['sunday', 'extended']);
+  assert.equal(children[0], original[6]);
+  renderCategoryFilters(root, EVENT_CATEGORIES, null);
+  assert.deepEqual(children.map(b => b.dataset.filter), EVENT_CATEGORIES.map(c => c.key));
+  assert.equal(children[6], original[6]);
+  renderCategoryFilters(root, [], null);
+  assert.equal(children.length, 0);
+});
+
+test('C2 owner derives available filters before selection and keeps the existing search interaction', () => {
+  assert.ok(html.indexOf('availableCategories=monthCategories(monthEvents)') < html.indexOf('const visible=filteredEventsForMonth()'));
+  assert.match(html, /if\(!availableCategories\.some\(c=>c\.key===activeFilter\)\)activeFilter=null/);
+  assert.match(html, /function setSearchQuery[^\n]+activeFilter=null/);
+  assert.match(html, /category-filters'\)\.onclick[^\n]+searchQuery='';i\.value=''/);
+  assert.match(html, /activeFilter=activeFilter===b\.dataset\.filter\?null:b\.dataset\.filter/);
+  assert.match(html, /event-categories\.css\?v=event-categories-1/);
 });
