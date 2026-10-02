@@ -1,0 +1,15 @@
+.event-title[data-category]{background:var(--event-color)}
+.event-title[data-category] .event-date,.event-title[data-category] .event-name{background:var(--event-color)}
+.calendar td.event-day[data-category]{background:var(--event-color);color:#000}
+#category-filters{display:flex;flex-direction:column;align-items:flex-start}
+#category-filters .side-filter{background:var(--event-color)}
+#category-filters .side-filter:hover,#category-filters .side-filter.active{background:#000;color:#fff;outline:1px solid #fff}
+#category-filters .side-filter:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+@media(max-width:820px){
+  #category-filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;gap:4px}
+  .event-title[data-category]{background:transparent}
+  .event-title[data-category] .event-date{background:transparent}
+  .event-title[data-category] .event-name{background:var(--event-color)}
+  .calendar td.event-day[data-category]{background:transparent}
+  .calendar td.event-day[data-category] a{background:linear-gradient(var(--event-color),var(--event-color)) center/22px 22px no-repeat}
+}

@@ -1,11 +1,12 @@
+import { calendarDayNumber, assertConsecutiveDays } from '../../../public/site/js/event-date-rules.js';
+
 export function normalizeDate(value) {
   if (typeof value !== 'string') throw new Error('Datum: Text erforderlich.');
   const result = value.trim();
   if (!/^\d{4}-\d{2}-\d{2}$/.test(result) || result.startsWith('0000')) {
     throw new Error('Datum: YYYY-MM-DD erforderlich (Jahr 0001–9999).');
   }
-  const parsed = new Date(`${result}T00:00:00Z`);
-  if (!Number.isFinite(parsed.getTime()) || parsed.toISOString().slice(0, 10) !== result) {
+  if (!Number.isFinite(calendarDayNumber(result))) {
     throw new Error('Datum: Kalendertag existiert nicht.');
   }
   return result;
@@ -15,7 +16,9 @@ export function normalizeDates(value) {
   if (!Array.isArray(value) || !value.length || value.length > 31) {
     throw new Error('dates: 1 bis 31 Einträge erforderlich.');
   }
-  return [...new Set(value.map(normalizeDate))].sort();
+  const dates = [...new Set(value.map(normalizeDate))].sort();
+  assertConsecutiveDays(dates);
+  return dates;
 }
 
 export function normalizeDatePatch(input) {

@@ -17,7 +17,7 @@ const [html, app, textareas, meta, autoLoad, ui, csv] = await Promise.all([
 
 test('Admin loads cache-busted image-only Event modules', () => {
   assert.match(html, /admin-app\.js\?v=admin-staging-1/);
-  for (const file of ['events-meta.js', 'auto-github-load.js']) assert.match(html, new RegExp(`${file.replaceAll('.', '\\.')}\\?v=admin-multidate-storage-1`));
+  for (const file of ['events-meta.js', 'auto-github-load.js']) assert.match(html, new RegExp(`${file.replaceAll('.', '\\.')}\\?v=admin-weekday-categories-1`));
   assert.match(meta, /event-image-only-ui\.js\?v=event-image-only-ui-1/);
 });
 

@@ -37,7 +37,9 @@ Aktivierung mit Steffen festgelegt. Fehlende Ziele dürfen nie Live bedeuten.
 - Limit gilt vor Deduplizierung; damit bleibt auch die Eingabe begrenzt.
 - Außenleerzeichen entfernen, reale Kalendertage YYYY-MM-DD (0001–9999)
   prüfen, Duplikate entfernen, chronologisch sortieren.
-- Lücken sind erlaubt: 16. und 18. Oktober ergänzen NICHT den 17. Oktober.
+- Nach Normalisierung sind nur aufeinanderfolgende Tage erlaubt (C2).
+  16. und 18. Oktober ohne den 17. werden zurückgewiesen, NICHT aufgefüllt.
+  dates ist die vollständige Liste, keine Start-/Ende-Kurzschreibweise.
 - date ist der erste Tag. Werden beide Felder geliefert, muss date passen;
   ein Widerspruch wird abgelehnt, niemals still korrigiert.
 - Nur dates geliefert: der reine Patch-Helfer leitet date vom ersten Tag ab.
@@ -141,7 +143,7 @@ und event. Im späteren Dispatch wird ausschließlich event als JSON serialisier
   "mode": "sync-pr",
   "operation": "upsert",
   "environment": "staging",
-  "event_json": "{\"id\":\"fm-11111111-1111-4111-8111-111111111111\",\"date\":\"2026-10-16\",\"title\":\"Fixture Festival\",\"dates\":[\"2026-10-16\",\"2026-10-18\"],\"tags\":[\"Clubnacht\"]}"
+  "event_json": "{\"id\":\"fm-11111111-1111-4111-8111-111111111111\",\"date\":\"2026-10-16\",\"title\":\"Fixture Festival\",\"dates\":[\"2026-10-16\",\"2026-10-17\"],\"tags\":[\"Clubnacht\"]}"
 }
 ```
 
@@ -156,6 +158,9 @@ Andere IDs und Umgebungen bleiben erhalten. C1 führt keinen Remote-Write aus.
 B1: Routing, Content-Architektur, Rechte, Übergang, revisionsgebundener Deploy.
 C1: Datums-Apply, Bestandsvalidierung, Mehrmonats-Storage und Rekonstruktion integriert;
 keine Kalender-/Filter-UI-Integration.
-C2: Apply für Tags/Timetable, etablierte Schreibweisen, Index/Renderer/Sicherheitsgates.
-Jedes weitere Paket benötigt einen eigenen Auftrag. C1 hebt aktive Browser-Imports
-auf event-storage-model-2 und die betroffenen Importketten auf neue Versionen.
+C2: aufeinanderfolgende Tage, automatische Wochentagskategorien und vollständige
+Mehrtagesanzeige in Browser und neuer SEO-Ausgabe. Das Bestandsseiten-Gate bleibt
+offen; Details in [Mehrtage-Storage](../EVENT_MULTIDATE_STORAGE.md).
+Tags/Timetable-Apply benötigt ein separates Paket und bleibt gesperrt.
+Jedes weitere Paket benötigt einen eigenen Auftrag. C2 hebt aktive Browser-Imports
+auf event-storage-model-3 und die betroffenen Importketten auf neue Versionen.

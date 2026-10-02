@@ -1,4 +1,4 @@
-import { effectiveEventId, searchEventIndex } from './event-storage-model.js?v=event-storage-model-2';
+import { effectiveEventId, searchEventIndex } from './event-storage-model.js?v=event-storage-model-3';
 
 const MANIFEST_URL = 'public/events/data/manifest.json';
 

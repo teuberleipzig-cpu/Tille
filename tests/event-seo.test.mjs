@@ -171,7 +171,7 @@ test('empty and unsafe images use social preview fallback', () => {
 
 test('primary event content is static without an event fetch', () => {
   const html = renderEventHtml(fixture({ description: 'Static description' }));
-  assert.match(html, /<h1 class="event-title orange">/);
+  assert.match(html, /<h1 class="event-title" data-category="saturday" style="--event-color:#E49A78">/);
   assert.match(html, /12\.09\.2026/);
   assert.match(html, /Test Artist/);
   assert.match(html, /Second Artist/);

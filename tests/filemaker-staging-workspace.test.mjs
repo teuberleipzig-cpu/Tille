@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { mkdtemp, readFile, rm } from 'node:fs/promises';
+import { mkdtemp, readFile, readdir, rm } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 import { fixtureRepo, fixtureBlob, fixtureCommit, fixtureGit } from './helpers/content-bootstrap-fixture.mjs';
@@ -109,16 +109,29 @@ test('content commit rejects changed CODE/foreign outputs', async t => {
     prepared: { hasChanges: true, changedFiles: ['scripts/x.mjs'], workspace: f.output } }), /CODE/);
 });
 
+test('gapped upsert fails before changing any isolated workspace output or ref', async t => {
+  const f = await setup(t, 'validate-only');
+  await run(f, 'remove', { id: ID });
+  const paths = await readdir(f.output, { recursive: true });
+  const before = await Promise.all([...f.files.keys()].map(file => readFile(path.join(f.output, file))));
+  await assert.rejects(prepareFileMakerEvent({ workspaceRoot: f.output, mode: 'sync-pr', operation: 'upsert',
+    eventJson: JSON.stringify({ id: ID, dates: ['2026-10-31', '2026-11-02'] }) }), /aufeinanderfolgenden/);
+  assert.deepEqual(await readdir(f.output, { recursive: true }), paths);
+  const after = await Promise.all([...f.files.keys()].map(file => readFile(path.join(f.output, file))));
+  assert.deepEqual(after, before);
+  assertRefs(f);
+});
+
 test('multi-month update and remove produce complete atomic storage/SEO diffs in fixture only', async t => {
   const f = await setup(t);
-  const prepared = await run(f, 'upsert', { id: ID, dates: ['2026-10-31', '2026-11-02'] });
+  const prepared = await run(f, 'upsert', { id: ID, dates: ['2026-10-31', '2026-11-01'] });
   for (const month of ['2026-09', '2026-10', '2026-11']) {
     assert.ok(prepared.changedFiles.includes(`public/events/data/months/${month}.json`));
   }
   assert.deepEqual(prepared.changedFiles.filter(p => p.startsWith('events/')), [eventOutputPath(ID)]);
   const updated = await loadEventDocumentFromWorkspace(f.output);
   assert.equal(updated.events.length, 2);
-  assert.deepEqual(updated.events.find(e => e.id === ID).dates, ['2026-10-31', '2026-11-02']);
+  assert.deepEqual(updated.events.find(e => e.id === ID).dates, ['2026-10-31', '2026-11-01']);
   const head = await createContentHead({ repoRoot: f.repoRoot, binding: f.binding, prepared });
   verifyContentHead(f.repoRoot, f.binding, head, prepared.changedFiles);
   assertRefs(f);
