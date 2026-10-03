@@ -151,7 +151,7 @@ jobs:
       - name: Reload container on vps03
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: vps03.itlej.de
+          host: containerhost01.distillery.de
           username: deploy-www-test-distillery
           key: ${{ secrets.VPS03_DEPLOY_SSH_KEY }}
           # The account's authorized_keys forces the pull+reload script for
