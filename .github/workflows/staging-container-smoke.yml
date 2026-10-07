@@ -17,6 +17,10 @@ on:
       - 'assets/dates-mobile.css'
       - 'assets/event-categories.css'
       - 'assets/event-tags.css'
+      - 'assets/event-timetable.css'
+      - 'scripts/filemaker/contracts-v2/timetable.mjs'
+      - 'tests/event-timetable.test.mjs'
+      - 'tests/helpers/event-timetable-fixture.mjs'
       - 'scripts/filemaker/contracts-v2/tags.mjs'
       - 'scripts/filemaker/contracts-v2/text.mjs'
       - 'tests/event-tags.test.mjs'
@@ -84,6 +88,7 @@ jobs:
       - name: Test full event regressions
         run: |
           node --test tests/event-tags.test.mjs
+          node --test tests/event-timetable.test.mjs
           node --test tests/monthly-event-storage.test.mjs tests/event-multidate-storage.test.mjs tests/filemaker-event-intake.test.mjs tests/filemaker-staging-workspace.test.mjs tests/event-seo.test.mjs
           node --test tests/dates-mobile.test.mjs tests/admin-event-image-only.test.mjs tests/admin-event-image-only-ui.test.mjs tests/admin-staging-ui.test.mjs tests/event-categories.test.mjs
 

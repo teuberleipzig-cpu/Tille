@@ -43,7 +43,7 @@ test('CI runs Linux composition tests with read-only permissions and no publishi
   assert.match(workflow, /'scripts\/content\/\*\*'/);
 });
 
-const eventSuites = ['event-tags', 'event-contract-v2', 'monthly-event-storage', 'event-multidate-storage',
+const eventSuites = ['event-timetable', 'event-tags', 'event-contract-v2', 'monthly-event-storage', 'event-multidate-storage',
   'filemaker-event-intake', 'filemaker-staging-workspace', 'event-seo', 'staging-acceptance',
   'staging-cutover-integration', 'dates-mobile', 'admin-event-image-only',
   'admin-event-image-only-ui', 'admin-staging-ui', 'event-categories'].map(name => `tests/${name}.test.mjs`);
@@ -52,6 +52,9 @@ const originalPaths = ['docker/**', 'scripts/content/**', 'tests/content-*.test.
   'tests/helpers/staging-acceptance-fixture.mjs', 'robots.txt', 'robots.staging.txt',
   '.github/workflows/docker-publish.yml', '.github/workflows/staging-container-smoke.yml'];
 const eventPaths = ['index.html', 'event.html', 'public/site/js/event-date-rules.js',
+  'public/site/js/event-timetable.js', 'assets/event-timetable.css',
+  'public/site/js/event-timetable-contract.js', 'public/site/js/event-contract-text.js',
+  'scripts/filemaker/contracts-v2/timetable.mjs', 'tests/helpers/event-timetable-fixture.mjs',
   'public/site/js/event-tags.js', 'public/site/js/event-tag-filters.js', 'assets/event-tags.css',
   'scripts/filemaker/contracts-v2/tags.mjs', 'scripts/filemaker/contracts-v2/text.mjs', 'tests/helpers/event-tags-fixture.mjs',
   'public/site/js/event-presentation.js', 'public/site/js/event-category-filters.js',

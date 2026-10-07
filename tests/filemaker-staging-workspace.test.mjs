@@ -11,6 +11,7 @@ import { bindWriter } from '../scripts/filemaker/staging-contract.mjs';
 import { prepareStagingWorkspace } from '../scripts/filemaker/staging-workspace.mjs';
 import { createContentHead, verifyContentHead } from '../scripts/filemaker/staging-commit.mjs';
 import { validateContentCommit } from '../scripts/content/bootstrap-plan.mjs';
+import { slot } from './helpers/event-timetable-fixture.mjs';
 
 const ID = 'fm-11111111-2222-3333-4444-555555555555';
 const document = () => ({ meta: { unknown: 'keep' }, events: [
@@ -103,6 +104,28 @@ test('tags update changes only own month, search and HTML; absent preserves, cle
   await patch({ tags: [] });
   assert.deepEqual((await loadEventDocumentFromWorkspace(f.output)).events.find(e => e.id === ID).tags, []);
   assert.doesNotMatch(await readFile(path.join(f.output, eventOutputPath(ID)), 'utf8'), /class="event-tags"/);
+  assertRefs(f);
+});
+
+test('timetable writer changes own month/search/HTML only and preserves omitted/clear semantics', async t => {
+  const f = await setup(t);
+  const prepared = await run(f, 'upsert', { id: ID, timetable: { slots: [slot()] } });
+  assert.deepEqual([...prepared.changedFiles].sort(), [eventOutputPath(ID), 'public/events/data/months/2026-09.json', 'public/events/data/search-index.json'].sort());
+  for (const [file, original] of f.files) if (!prepared.changedFiles.includes(file)) {
+    assert.equal((await readFile(path.join(f.output, file), 'utf8')).replace(/\r\n/g, '\n'), original.replace(/\r\n/g, '\n'), file);
+  }
+  const patch = fields => prepareFileMakerEvent({ workspaceRoot: f.output, mode: 'sync-pr', operation: 'upsert', eventJson: JSON.stringify({ id: ID, ...fields }) });
+  const current = async () => (await loadEventDocumentFromWorkspace(f.output)).events.find(e => e.id === ID);
+  const first = await current();
+  await patch({ tags: ['HOUSE'] });
+  assert.deepEqual((await current()).timetable, first.timetable);
+  await patch({ timetable: { slots: [slot(undefined, undefined, { floor: 'Other' })] } });
+  assert.equal((await current()).timetable.slots[0].floor, 'Other');
+  await patch({ timetable: null });
+  const cleared = await current();
+  assert.equal(Object.hasOwn(cleared, 'timetable'), false);
+  assert.deepEqual(cleared.tags, ['HOUSE']); assert.equal(cleared.date, first.date); assert.deepEqual(cleared.future, first.future);
+  assert.doesNotMatch(await readFile(path.join(f.output, eventOutputPath(ID)), 'utf8'), /class="event-timetable"/);
   assertRefs(f);
 });
 
