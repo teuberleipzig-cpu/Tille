@@ -1,7 +1,8 @@
 import { contractText } from './text.mjs';
+import { tagKey as normalizedTagKey } from '../../../public/site/js/event-tags.js';
 
 export function tagKey(value) {
-  return contractText(value, 'Tag', 60, true).toLowerCase().normalize('NFC');
+  return normalizedTagKey(contractText(value, 'Tag', 60, true));
 }
 
 export function normalizeTags(value) {

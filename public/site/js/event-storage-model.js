@@ -1,4 +1,5 @@
 import { calendarDayNumber, assertConsecutiveDays } from './event-date-rules.js?v=event-date-rules-1';
+import { eventTags } from './event-tags.js?v=event-tags-1';
 
 export const EVENT_STORAGE_SCHEMA_VERSION = 1;
 export const EVENT_DATA_ROOT = 'public/events/data';
@@ -41,6 +42,7 @@ export function eventSearchHaystack(event) {
     event.title,
     event.description,
     event.moreUrl,
+    ...eventTags(event),
     ...(event.sections || []).flatMap(section => [
       section.label,
       ...(section.items || []).flatMap(item => [item.name, item.info, item.link])
@@ -119,6 +121,7 @@ function collectStoredEvents(storage) {
     if (!Array.isArray(month.events)) throw new Error('Monats-events fehlen.');
     const ids = new Set();
     for (const event of month.events) {
+      eventTags(event);
       const id = effectiveEventId(event);
       if (ids.has(id) || !eventMonthKeys(event).includes(key)) throw new Error('Ungültige Event-Monatszuordnung.');
       ids.add(id);

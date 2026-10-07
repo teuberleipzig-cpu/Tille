@@ -1,4 +1,4 @@
-// Foundation only: no production imports. Security patterns mirror the V1 parser.
+// Shared contract input validation; tags use this in production from C3 onward.
 const SECRET = /\b(?:github_pat_[A-Za-z0-9_]{20,}|gh[pousr]_[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16})\b/;
 const ACTIVE = /[<>]|(?:javascript|data|blob):|;base64,/i;
 

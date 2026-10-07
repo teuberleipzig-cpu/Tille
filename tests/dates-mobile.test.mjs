@@ -142,7 +142,9 @@ test('collapsed mobile Dates filters keep a compact 20px event gap', () => {
 
 test('filter toggle is accessible and summary uses the existing app state', () => {
   assert.match(html, /id="dates-filter-toggle"[^>]+aria-expanded="false"[^>]+aria-controls="dates-filter-panel"/);
-  assert.match(html, /function updateDatesFilterSummary\(count=0\)[\s\S]*?searchQuery\.trim\(\)\?`EVENTS FILTERN · \$\{count\} TREFFER`:[\s\S]*?activeFilter\?'EVENTS FILTERN · 1 AKTIV':'EVENTS FILTERN'/);
+  assert.match(html, /searchQuery\.trim\(\)\?`EVENTS FILTERN · \$\{count\} TREFFER`/);
+  assert.match(html, /Number\(!!activeCategory\)\+activeTagKeys\.size/);
+  assert.match(html, /AKTIV`:'EVENTS FILTERN'/);
   assert.doesNotMatch(filters, /localStorage|sessionStorage|pushState|replaceState|MutationObserver|setInterval/);
   assert.match(css, /dates-filter-toggle\{display:flex;[^}]*min-height:42px;[^}]*background:linear-gradient\(var\(--grey\),var\(--grey\)\) center\/100% 26px no-repeat;color:#000;[^}]*font-size:12px/);
   assert.match(css, /dates-filter-toggle-icon\{[^}]*font-size:10px/);
@@ -252,9 +254,9 @@ test('C2 category rendering keeps button identity and limits all DOM writes to i
 
 test('C2 owner derives available filters before selection and keeps the existing search interaction', () => {
   assert.ok(html.indexOf('availableCategories=monthCategories(monthEvents)') < html.indexOf('const visible=filteredEventsForMonth()'));
-  assert.match(html, /if\(!availableCategories\.some\(c=>c\.key===activeFilter\)\)activeFilter=null/);
-  assert.match(html, /function setSearchQuery[^\n]+activeFilter=null/);
+  assert.match(html, /if\(!availableCategories\.some\(c=>c\.key===activeCategory\)\)activeCategory=null/);
+  assert.match(html, /function setSearchQuery[^\n]+activeCategory=null/);
   assert.match(html, /category-filters'\)\.onclick[^\n]+searchQuery='';i\.value=''/);
-  assert.match(html, /activeFilter=activeFilter===b\.dataset\.filter\?null:b\.dataset\.filter/);
+  assert.match(html, /activeCategory=activeCategory===b\.dataset\.filter\?null:b\.dataset\.filter/);
   assert.match(html, /event-categories\.css\?v=event-categories-1/);
 });

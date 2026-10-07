@@ -1,4 +1,9 @@
-import { effectiveEventId, eventDates, eventMonthKeys } from './event-storage-model.js?v=event-storage-model-3';
+import { effectiveEventId, eventDates, eventMonthKeys } from './event-storage-model.js?v=event-storage-model-4';
+import { matchesEventTags } from './event-tags.js?v=event-tags-1';
+
+export function filterMonthEvents(events, category, tagKeys) {
+  return events.filter(event => (!category || eventCategory(event).key === category) && matchesEventTags(event, tagKeys));
+}
 
 export const EVENT_CATEGORIES = Object.freeze([
   ['monday', 'MONTAG', '#9EB99B'], ['tuesday', 'DIENSTAG', '#ADA0C6'],

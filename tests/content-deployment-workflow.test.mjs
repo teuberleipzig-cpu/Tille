@@ -46,9 +46,9 @@ test('composed context, composer artifact tag, staging aliases and digest output
   assert.match(step('Record intended staging image'), /needs.build.outputs.digest/);
 });
 
-test('staging SSH target unchanged; E2E uses both pre-build probe hashes after reload', () => {
+test('staging SSH uses the current container host; E2E uses both pre-build probe hashes after reload', () => {
   const ssh = step('Reload container on vps03');
-  for (const value of ['host: vps03.itlej.de', 'username: deploy-www-test-distillery', 'script: /usr/local/sbin/deploy-www-test-distillery.sh']) assert.ok(ssh.includes(value));
+  for (const value of ['host: containerhost01.distillery.de', 'username: deploy-www-test-distillery', 'script: /usr/local/sbin/deploy-www-test-distillery.sh']) assert.ok(ssh.includes(value));
   const e2e = step('Verify deployed code content and staging security');
   assert.match(e2e, /needs.build.outputs.code_probe_sha256/);
   assert.match(e2e, /needs.build.outputs.content_probe_sha256/);

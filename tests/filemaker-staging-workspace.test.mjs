@@ -88,6 +88,24 @@ test('remove deletes exact staging page and storage event, preserves other conte
   assert.equal(await readFile(path.join(f.output, 'public/residents/data/residents.json'), 'utf8'), f.files.get('public/residents/data/residents.json'));
   assertRefs(f);
 });
+test('tags update changes only own month, search and HTML; absent preserves, clear removes', async t => {
+  const f = await setup(t);
+  const prepared = await run(f, 'upsert', { id: ID, tags: [' Konzert ', 'Open Air'] });
+  assert.deepEqual([...prepared.changedFiles].sort(), [eventOutputPath(ID), 'public/events/data/months/2026-09.json', 'public/events/data/search-index.json'].sort());
+  for (const [file, original] of f.files) {
+    if (!prepared.changedFiles.includes(file)) assert.equal((await readFile(path.join(f.output, file), 'utf8')).replace(/\r\n/g, '\n'), original.replace(/\r\n/g, '\n'), file);
+  }
+  const patch = fields => prepareFileMakerEvent({ workspaceRoot: f.output, mode: 'sync-pr', operation: 'upsert', eventJson: JSON.stringify({ id: ID, ...fields }) });
+  await patch({ title: 'Changed' });
+  assert.deepEqual((await loadEventDocumentFromWorkspace(f.output)).events.find(e => e.id === ID).tags, ['Konzert', 'Open Air']);
+  await patch({ tags: ['konzert'] });
+  assert.deepEqual((await loadEventDocumentFromWorkspace(f.output)).events.find(e => e.id === ID).tags, ['Konzert']);
+  await patch({ tags: [] });
+  assert.deepEqual((await loadEventDocumentFromWorkspace(f.output)).events.find(e => e.id === ID).tags, []);
+  assert.doesNotMatch(await readFile(path.join(f.output, eventOutputPath(ID)), 'utf8'), /class="event-tags"/);
+  assertRefs(f);
+});
+
 test('no-change does not permit an empty content commit', async t => {
   const f = await setup(t);
   const prepared = await run(f, 'upsert', { id: ID, title: 'STAGING title' });

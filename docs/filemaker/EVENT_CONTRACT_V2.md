@@ -1,22 +1,26 @@
 # Event Contract V2 — Foundation, Paket A
 
-Status: **C1 aktiviert ausschließlich date/dates im produktiven Parser und Storage.**
-Tags und Timetable bleiben Foundation-Verträge, nicht produktiv aktiviert.
+Status: **date/dates (C1/C2) und tags (C3) sind im produktiven Parser und Storage aktiviert.**
+Timetable bleibt ein nicht produktiv aktivierter Foundation-Vertrag.
 Version: 2. Basis: b2b4af6182f38dcbcd6a7f508ff6ead99e03b8ed.
 
 ## Heute und später
 
 Der bestehende Workflow-/Staging-Vertrag bleibt unverändert.
 event_json akzeptiert id, date, dates, title, color, moreUrl, imageUrl, description,
-status und sections (label, genre, items mit name, info, link).
+status, tags und sections (label, genre, items mit name, info, link).
 Neue Events benötigen date oder dates sowie title; fm-ID bleibt stabil. Ausgelassene Felder
 bleiben bei Updates erhalten, einschließlich imageUrl und unbekannter Bestandsfelder.
 Gelieferte sections ersetzen die bisherige Liste vollständig.
-Der produktive Parser lehnt tags, timetable und environment weiterhin ab.
+Der produktive Parser lehnt timetable und environment weiterhin ab.
 
-Dates ist über die vorhandene Datumsnormalisierung integriert. Tags und Timetable
-benötigen weiterhin ein eigenes Integrationspaket. environment gehört ausdrücklich
-NICHT in event_json. C1 enthält keine sichtbare Mehrtage-UI und keinen Remote-Run.
+Dates ist über die vorhandene Datumsnormalisierung integriert. C3 aktiviert die
+bestehende normalizeTags-Foundation für Upserts. Fehlende tags erhalten den Bestand,
+gelieferte tags ersetzen vollständig, [] löscht alle Tags. Bei gleichem Key bleibt
+die etablierte Display-Schreibweise desselben Events erhalten; die Payload-Reihenfolge
+bestimmt die Ausgabe. Persistierte Tags werden fail-closed validiert, nicht repariert.
+Timetable benötigt weiterhin ein eigenes Integrationspaket. environment gehört
+NICHT in event_json. C1 enthielt keine sichtbare Mehrtage-UI und keinen Remote-Run.
 
 ## Umgebung: ursprünglicher Foundation-Vertrag (Routing separat umgesetzt)
 

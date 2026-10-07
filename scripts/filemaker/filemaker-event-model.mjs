@@ -1,12 +1,14 @@
 import { effectiveEventId, eventDates, eventMonthKey } from '../../public/site/js/event-storage-model.js';
 import { normalizeDatePatch } from './contracts-v2/dates.mjs';
+import { normalizeTags, tagKey } from './contracts-v2/tags.mjs';
+import { eventTags } from '../../public/site/js/event-tags.js';
 
 export const FILEMAKER_ID_PATTERN = /^fm-[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 export const MAX_PAYLOAD_BYTES = 40 * 1024;
 const FIELD_LIMITS = { title: 180, color: 40, moreUrl: 2000, imageUrl: 2000, description: 10000, status: 80 };
 const ITEM_LIMITS = { name: 300, info: 1000, link: 2000 };
 const SECTION_LIMITS = { label: 300, genre: 300 };
-const SUPPORTED_FIELDS = new Set(['id', 'date', 'dates', ...Object.keys(FIELD_LIMITS), 'sections']);
+const SUPPORTED_FIELDS = new Set(['id', 'date', 'dates', ...Object.keys(FIELD_LIMITS), 'sections', 'tags']);
 const FORBIDDEN_TEXT = /<(?:script|iframe|form)\b|(?:javascript|data|blob):|;base64,/i;
 const SECRET_PATTERN = /\b(?:github_pat_[A-Za-z0-9_]{20,}|gh[pousr]_[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16})\b/;
 const CONTROL_GARBAGE = /[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/;
@@ -90,6 +92,7 @@ export function parseFileMakerEventJson(raw, operation = 'upsert') {
   if ('moreUrl' in input) output.moreUrl = safeUrl(input.moreUrl, 'Event moreUrl', { hash: true });
   if ('imageUrl' in input) output.imageUrl = safeUrl(input.imageUrl, 'Event imageUrl', { localImage: true });
   if ('sections' in input) output.sections = normalizeSections(input.sections);
+  if ('tags' in input) output.tags = normalizeTags(input.tags);
   return output;
 }
 
@@ -123,6 +126,12 @@ export function applyFileMakerOperation(document, operation, input) {
     id: input.id, date: input.date, title: input.title, color: 'orange', moreUrl: '', imageUrl: '', description: '', sections: [], ...input
   };
   const afterMonth = eventMonthKey(event.date);
+  if (existing) eventTags(existing);
+  if (Object.hasOwn(input, 'tags')) {
+    const established = new Map((existing ? eventTags(existing) : []).map(tag => [tagKey(tag), tag]));
+    event.tags = normalizeTags(input.tags).map(tag => established.get(tagKey(tag)) ?? tag);
+  }
+  eventTags(event);
   eventDates(event);
   if (!afterMonth) throw new Error('Event-Datum muss gültig sein.');
   if (!String(event.title || '').trim()) throw new Error('Event-Titel darf nicht leer sein.');

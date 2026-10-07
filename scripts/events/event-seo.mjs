@@ -1,5 +1,6 @@
-import { effectiveEventId } from '../../public/site/js/event-storage-model.js?v=event-storage-model-3';
-import { eventCategory, eventDateLabel } from '../../public/site/js/event-presentation.js?v=event-presentation-1';
+import { effectiveEventId } from '../../public/site/js/event-storage-model.js?v=event-storage-model-4';
+import { eventCategory, eventDateLabel } from '../../public/site/js/event-presentation.js?v=event-presentation-2';
+import { renderEventTags } from '../../public/site/js/event-tags.js?v=event-tags-1';
 
 export const EVENT_SITE_URL = 'https://www.distillery.de';
 export const EVENT_OUTPUT_ROOT = 'events';
@@ -160,6 +161,7 @@ export function renderEventHtml(event) {
   const displayDate = eventDateLabel(event);
   const category = eventCategory(event);
   const sections = renderSections(event);
+  const tagsHtml = renderEventTags(event);
   const description = String(event.description || '').trim();
   const pageTitle = `${title} – Distillery Leipzig`;
   const imageAlt = image ? `Eventbild: ${title}` : 'Distillery Leipzig – Dates, Residents, Club';
@@ -196,7 +198,7 @@ export function renderEventHtml(event) {
 <link rel="stylesheet" href="assets/mobile-navigation.css?v=mobile-navigation-7">
 <link rel="stylesheet" href="assets/mobile-foundation.css?v=mobile-foundation-4">
 <link rel="stylesheet" href="assets/event-categories.css?v=event-categories-1">
-</head>
+${tagsHtml ? '<link rel="stylesheet" href="assets/event-tags.css?v=event-tags-1">\n' : ''}</head>
 <body data-site-page="dates">
 <div class="page">
 <main class="main">
@@ -205,7 +207,7 @@ export function renderEventHtml(event) {
 <a class="back-link" href="index.html?month=${escapeHtml(String(event.date).slice(0, 7))}">back to dates</a>
 ${hero}<article class="event">
 <h1 class="event-title" data-category="${category.key}" style="--event-color:${category.color}"><span class="event-date">${escapeHtml(displayDate)}</span> <span class="event-name">${escapeHtml(title)}</span></h1>
-${sections}${descriptionHtml}
+${tagsHtml}${sections}${descriptionHtml}
 </article>
 <footer class="footer">DISTILLERY LEIPZIG | EGGEBRECHTSTRAẞE 2 | 04103 LEIPZIG | <a href="mailto:club@distillery.de">club@distillery.de</a> | <a href="tel:+4934135597400">0341 35597400</a><small><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></small></footer>
 </main>

@@ -1,4 +1,5 @@
-import { effectiveEventId, searchEventIndex } from './event-storage-model.js?v=event-storage-model-3';
+import { effectiveEventId, searchEventIndex } from './event-storage-model.js?v=event-storage-model-4';
+import { eventTags } from './event-tags.js?v=event-tags-1';
 
 const MANIFEST_URL = 'public/events/data/manifest.json';
 
@@ -23,7 +24,11 @@ export function createPublicEventStore() {
 
   async function loadMonth(key) {
     if (monthPromises.has(key)) return monthPromises.get(key);
-    const promise = monthEntry(key).then(entry => entry ? fetchJson(entry.path).then(data => data.events || []) : []);
+    const promise = monthEntry(key).then(entry => entry ? fetchJson(entry.path).then(data => {
+      const events = data.events || [];
+      events.forEach(eventTags);
+      return events;
+    }) : []);
     monthPromises.set(key, promise);
     return promise;
   }
