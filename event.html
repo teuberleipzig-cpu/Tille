@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="assets/mobile-navigation.css?v=mobile-navigation-7">
 <link rel="stylesheet" href="assets/mobile-foundation.css?v=mobile-foundation-4">
 <link rel="stylesheet" href="assets/event-categories.css?v=event-categories-1">
+<link rel="stylesheet" href="assets/event-tags.css?v=event-tags-1">
 </head>
 <body>
   <div class="page">
@@ -24,12 +25,13 @@
     <aside class="sidebar"><div class="sidebar-spacer"></div><span class="side-title">Saturday Rave</span><a class="side-link" href="#">Fenster zum Hof</a><a class="side-link" href="#">Specials</a></aside>
   </div>
 <script type="module">
-import { createPublicEventStore } from './public/site/js/event-store.js?v=event-store-3';
-import { eventCategory, eventDateLabel } from './public/site/js/event-presentation.js?v=event-presentation-1';
+import { renderEventTags } from './public/site/js/event-tags.js?v=event-tags-1';
+import { createPublicEventStore } from './public/site/js/event-store.js?v=event-store-4';
+import { eventCategory, eventDateLabel } from './public/site/js/event-presentation.js?v=event-presentation-2';
 const eventStore=createPublicEventStore();
 function esc(v){return String(v??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
 function renderItem(i){return `<span class="line"><strong>${esc(i.name)}</strong>${i.info?' ('+esc(i.info)+')':''}</span>`;}
-function renderEvent(e){const img=e.imageUrl?`<img class="hero" src="${esc(e.imageUrl)}" alt="${esc(e.title)}">`:'';const sections=(e.sections||[]).map(s=>`<div class="label">${esc(s.label||'')}</div><div class="line">${(s.items||[]).map(renderItem).join(' ')}</div>`).join('');const desc=e.description?`<div class="desc">${esc(e.description)}</div>`:'';document.title=`Distillery – ${e.title}`;return `${img}<h1 class="event-title" data-category="${eventCategory(e).key}" style="--event-color:${eventCategory(e).color}"><span class="event-date">${eventDateLabel(e)}</span> <span class="event-name">${esc(e.title)}</span></h1>${sections}${desc}`;}
+function renderEvent(e){const img=e.imageUrl?`<img class="hero" src="${esc(e.imageUrl)}" alt="${esc(e.title)}">`:'';const sections=(e.sections||[]).map(s=>`<div class="label">${esc(s.label||'')}</div><div class="line">${(s.items||[]).map(renderItem).join(' ')}</div>`).join('');const desc=e.description?`<div class="desc">${esc(e.description)}</div>`:'';document.title=`Distillery – ${e.title}`;return `${img}<h1 class="event-title" data-category="${eventCategory(e).key}" style="--event-color:${eventCategory(e).color}"><span class="event-date">${eventDateLabel(e)}</span> <span class="event-name">${esc(e.title)}</span></h1>${renderEventTags(e)}${sections}${desc}`;}
 async function boot(){try{const id=new URLSearchParams(location.search).get('id');const e=await eventStore.resolveEvent(id);document.getElementById('event').innerHTML=e?renderEvent(e):'<p class="error">Veranstaltung nicht gefunden.</p>';}catch(err){document.getElementById('event').innerHTML=`<p class="error">${esc(err.message)}</p>`;}}
 boot();
 </script>

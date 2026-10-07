@@ -7,11 +7,13 @@ import { execFileSync } from 'node:child_process';
 import { storageArtifacts } from '../../public/site/js/event-storage-model.js';
 import { eventSeoArtifacts } from '../../scripts/events/event-seo.mjs';
 import { categoryFixture } from './event-categories-fixture.mjs';
+import { tagFixture } from './event-tags-fixture.mjs';
 
 const root = fileURLToPath(new URL('../../', import.meta.url));
 const baseline = process.argv.includes('--baseline') ? 'c58ad4c60a55b132d10296390c6ab8cdd84b470e' : null;
 const sitemap = '<urlset><url><loc>https://www.distillery.de/</loc></url></urlset>';
-const files = new Map([...storageArtifacts(categoryFixture).files, ...eventSeoArtifacts(categoryFixture, sitemap).files]);
+const fixture = process.argv.includes('--tags') ? tagFixture : categoryFixture;
+const files = new Map([...storageArtifacts(fixture).files, ...eventSeoArtifacts(fixture, sitemap).files]);
 files.set('public/residents/data/residents.json', JSON.stringify({ residents: [] }));
 const ids = ['dates', 'news', 'residents', 'about', 'contact', 'history', 'feedback', 'gallery', 'team', 'podcast', 'merch'];
 files.set('public/site/data/site-navigation.json', JSON.stringify({ schemaVersion: 1, homePage: 'dates',

@@ -118,8 +118,8 @@ test('remove remains ID-only, supplied dates are not applied', () => {
   assert.equal(s.manifest.totalMonthPlacements, 0);
   assert.deepEqual(s.eventIndex.events, []); assert.deepEqual(s.searchIndex.events, []);
 });
-test('tags and timetable remain blocked for upsert and remove', () => {
-  for (const op of ['upsert', 'remove']) for (const extra of [{ tags: [] }, { timetable: null }]) {
+test('timetable remains blocked for upsert and remove', () => {
+  for (const op of ['upsert', 'remove']) for (const extra of [{ timetable: null }]) {
     assert.throws(() => parse({ dates: ['2026-10-16'], ...extra }, op), /Nicht unterstütztes/);
   }
 });
@@ -147,11 +147,11 @@ test('active browser storage import chains are cache-busted including shared SEO
   const read = file => readFile(new URL('../' + file, import.meta.url), 'utf8');
   for (const file of ['public/site/js/event-store.js', 'public/admin/js/core/event-storage-admin.js',
     'public/admin/js/core/event-image-only-save.js', 'scripts/events/event-seo.mjs']) {
-    assert.match(await read(file), /event-storage-model\.js\?v=event-storage-model-3/);
+    assert.match(await read(file), /event-storage-model\.js\?v=event-storage-model-4/);
   }
-  for (const file of ['index.html', 'event.html']) assert.match(await read(file), /event-store\.js\?v=event-store-3/);
-  assert.match(await read('public/admin/js/core/event-image-only-save.js'), /event-seo\.mjs\?v=event-seo-categories-1/);
+  for (const file of ['index.html', 'event.html']) assert.match(await read(file), /event-store\.js\?v=event-store-4/);
+  assert.match(await read('public/admin/js/core/event-image-only-save.js'), /event-seo\.mjs\?v=event-seo-tags-1/);
   const loader = await read('public/admin/js/auto-github-load.js');
-  assert.match(loader, /event-storage-admin\.js\?v=event-storage-admin-3/);
-  assert.match(loader, /event-image-only-save\.js\?v=event-image-only-save-3/);
+  assert.match(loader, /event-storage-admin\.js\?v=event-storage-admin-4/);
+  assert.match(loader, /event-image-only-save\.js\?v=event-image-only-save-4/);
 });
