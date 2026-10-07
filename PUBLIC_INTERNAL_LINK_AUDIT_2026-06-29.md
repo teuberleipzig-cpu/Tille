@@ -65,8 +65,8 @@ Hinweis: `datenschutz.html` wurde im geprüften Bereich bis zum Datenschutz-Inha
 ## Externe Links / Sonderfälle
 
 - `contact.html` enthält einen externen Google-Maps-Link mit `target="_blank"` und `rel="noopener noreferrer"`.
-- `feedback.html` enthält als Formularziel aktuell `https://formsubmit.co/teuber1995@gmail.com`.
-- `feedback.html` enthält als `_next` aktuell noch GitHub Pages: `https://teuberleipzig-cpu.github.io/Tille/feedback-thanks.html`.
+- `feedback.html` enthält als Formularziel aktuell `https://formsubmit.co/distillery.feedback@gmail.com`.
+- P1-Abgleich 2026-10-07: `_next` wird unmittelbar vor Submit auf `window.location.origin + '/feedback-thanks.html'` gesetzt; kein fester GitHub-Pages-/Staging-Host.
 
 Diese Sonderfälle sind keine kaputten internen Links, bleiben aber vor LIVE fachlich/datenschutzseitig zu entscheiden.
 
@@ -75,7 +75,7 @@ Diese Sonderfälle sind keine kaputten internen Links, bleiben aber vor LIVE fac
 - Kein echter Browser-Klicktest in diesem Audit.
 - Kein LIVE-Test.
 - `index.html` enthält weiterhin den sichtbaren Test-Badge und bleibt in `MANUAL_TOMORROW_QUEUE.md` offen.
-- `feedback.html` LIVE-Weiterleitung und Zieladresse bleiben offen.
+- Feedback-Zieladresse und same-origin-Weiterleitung sind technisch festgelegt; externe E2E-Submission und rechtliche Freigabe bleiben offen.
 - Externe Dienste, insbesondere Google Maps und FormSubmit, bleiben Datenschutz-Prüfpunkte.
 
 ## Ergebnis

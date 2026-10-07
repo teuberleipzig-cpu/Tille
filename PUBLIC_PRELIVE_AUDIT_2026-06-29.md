@@ -60,6 +60,10 @@ Status: Repo-Prüfung nach Public-Meta-Patches, Root-/Utility-Dateiprüfung, Lin
 
 ## Noch vor LIVE im Browser zu prüfen
 
+Historische Prüfliste vom 2026-06-29: Die folgenden GitHub-Pages-URLs sind
+keine aktuelle Feedback-Redirect-Konfiguration. P1 verwendet dafür ausschließlich
+die jeweilige Origin plus `/feedback-thanks.html`.
+
 - `https://teuberleipzig-cpu.github.io/Tille/`
 - `https://teuberleipzig-cpu.github.io/Tille/residents.html`
 - `https://teuberleipzig-cpu.github.io/Tille/resident-releases.html`
@@ -85,7 +89,7 @@ Dabei prüfen:
 - manueller Patch: Test-Badge aus `index.html` entfernen
 - Browser-Klicktest nach dem letzten Deploy
 - finale rechtliche Prüfung von Impressum und Datenschutz
-- Feedback-Formular-Dienst, Zieladresse und Weiterleitung final entscheiden
+- P1-Faktenabgleich 2026-10-07: FormSubmit → distillery.feedback@gmail.com → Google Apps Script → Trello; Rückleitung same-origin. Rechtliche/organisatorische Freigabe bleibt offen.
 - STAGING/LIVE-Serverdaten und Zielpfade
 - HTTPS und Redirect-Strategie
 - LIVE-Smoke-Test nach echtem Deployment

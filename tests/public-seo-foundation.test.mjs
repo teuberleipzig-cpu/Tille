@@ -85,7 +85,7 @@ test('Feedback is absent from sitemap', () => {
 });
 
 test('Feedback form contract remains present', () => {
-  assert.match(feedback, /<form class="feedback-form" action="https:\/\/formsubmit\.co\/teuber1995@gmail\.com" method="POST">/);
+  assert.match(feedback, /<form class="feedback-form" action="https:\/\/formsubmit\.co\/distillery\.feedback@gmail\.com" method="POST">/);
   assert.match(feedback, /id="feedback-message"[^>]*required/);
   assert.match(feedback, /type="submit">Send feedback<\/button>/);
 });

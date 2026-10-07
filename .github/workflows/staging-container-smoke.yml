@@ -13,6 +13,12 @@ on:
       - 'tests/helpers/staging-acceptance-fixture.mjs'
       - 'index.html'
       - 'event.html'
+      - 'feedback.html'
+      - 'datenschutz.html'
+      - 'tests/feedback-privacy.test.mjs'
+      - 'tests/public-seo-foundation.test.mjs'
+      - 'tests/public-headings.test.mjs'
+      - 'LEGAL_PRIVACY_REVIEW_INFO_NEEDED.md'
       - 'public/site/js/event-*.js'
       - 'assets/dates-mobile.css'
       - 'assets/event-categories.css'
@@ -91,6 +97,9 @@ jobs:
           node --test tests/event-timetable.test.mjs
           node --test tests/monthly-event-storage.test.mjs tests/event-multidate-storage.test.mjs tests/filemaker-event-intake.test.mjs tests/filemaker-staging-workspace.test.mjs tests/event-seo.test.mjs
           node --test tests/dates-mobile.test.mjs tests/admin-event-image-only.test.mjs tests/admin-event-image-only-ui.test.mjs tests/admin-staging-ui.test.mjs tests/event-categories.test.mjs
+
+      - name: Test feedback and privacy facts without external submission
+        run: node --test tests/feedback-privacy.test.mjs tests/public-headings.test.mjs tests/public-seo-foundation.test.mjs
 
       - name: Bind staging content and compose isolated context
         env:

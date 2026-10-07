@@ -18,9 +18,9 @@ Status: Repo-basierter Audit. Kein Browser-Test, kein LIVE-Test, keine Rechtsber
 - [x] Formular enthält ein Honeypot-Feld.
 - [x] Formular fragt optional eine Reply-Mail-Adresse ab.
 - [x] Formular-Datenschutzhinweis nennt externen Formular-Dienst und Go-Live-Prüfstatus.
-- [ ] Nutzung des externen Formular-Dienstes vor LIVE final entscheiden.
-- [ ] Zieladresse vor LIVE final entscheiden.
-- [ ] Weiterleitung nach Absenden vor LIVE auf LIVE-Domain ändern, falls das Formular live bleibt.
+- P1-Faktenabgleich 2026-10-07: FormSubmit bleibt aktuell; Ziel distillery.feedback@gmail.com; danach Google Apps Script → Trello.
+- `_next` verwendet unmittelbar vor Submit die jeweilige Origin plus /feedback-thanks.html.
+- [ ] Rechtliche Prüfung von FormSubmit, Gmail/Google, Apps Script und Trello abschließen (technische Festlegung ist keine Freigabe).
 - [ ] Spam-Schutz/Captcha-Verhalten final prüfen.
 - [ ] Aufbewahrung und interner Umgang mit Feedback-Mails final klären.
 
@@ -48,19 +48,17 @@ Status: Repo-basierter Audit. Kein Browser-Test, kein LIVE-Test, keine Rechtsber
 - [x] `datenschutz.html` ist ausdrücklich als Arbeitsstand markiert.
 - [x] Serverlogs werden als serverabhängig offen markiert.
 - [x] Feedback-Formular wird als externer Formular-Dienst beschrieben.
-- [x] Tracking wird als geplant, aber vor Aktivierung entscheidungspflichtig beschrieben.
+- [x] Tracking-Code ist eingebunden, technisch deaktiviert und versendet darüber keine Trackingevents; Aktivierung bleibt prüfpflichtig.
 - [x] Externe Dienste werden als Go-Live-Prüfpunkt beschrieben.
 - [ ] Datenschutzseite final fachlich/rechtlich prüfen.
 
 ## Offene P0/P1-Entscheidungen
 
-- Externen Formular-Dienst behalten, ersetzen oder selbst hosten.
-- Formular-Zieladresse final entscheiden.
-- Formular-Weiterleitung auf LIVE-Domain ändern, falls Formular live bleibt.
+- Festgelegten Feedback-Datenfluss rechtlich/organisatorisch prüfen; Löschprozess und interne Zuständigkeit klären.
 - Serverlogs und Hoster-Daten klären.
-- Tracking vorerst deaktiviert lassen oder final dokumentieren.
+- Tracking bleibt deaktiviert; vor Aktivierung erneute technische/datenschutzrechtliche Prüfung.
 - Kartenlinks, Social-Links, externe Medien, Fonts und sonstige Drittanbieter final prüfen.
 
 ## Fazit
 
-Repo-basiert sind die externen Dienste identifiziert und dokumentiert. Der größte offene Public-Privacy-Punkt ist das Feedback-Formular mit externem Dienst, aktueller Zieladresse und noch nicht finaler LIVE-Weiterleitung. Vor LIVE sind Entscheidung und finale Datenschutzprüfung nötig.
+Repo-basiert sind die externen Dienste identifiziert und dokumentiert. Der Feedback-Datenfluss und die same-origin-Weiterleitung sind technisch festgelegt. Vor LIVE bleiben rechtliche/organisatorische Prüfung und ein separat freigegebener E2E-Nachweis nötig.
