@@ -42,8 +42,8 @@ test('productive parser accepts tags, absent stays absent, explicit clear stays 
   assert.deepEqual(parse({tags:[' House ','HOUSE']}).tags,['House']);
   assert.equal(Object.hasOwn(parse({}), 'tags'),false); assert.deepEqual(parse({tags:[]}).tags,[]);
 });
-test('timetable/environment and payload budget remain blocked', () => {
-  for(const fields of [{timetable:null},{environment:'staging'}]) assert.throws(()=>parse(fields),/Nicht unterstütztes/);
+test('environment and payload budget remain blocked', () => {
+  assert.throws(()=>parse({environment:'staging'}),/Nicht unterstütztes/);
   assert.throws(()=>parse({tags:['x'.repeat(40961)]}),/40 KB/);
 });
 test('apply missing tags preserves existing tags and unknown fields', () => {
@@ -111,6 +111,6 @@ test('integration keeps independent owners, clears combined filters on search an
   assert.doesNotMatch(dom,/innerHTML|outerHTML|setInterval|MutationObserver|category-filters|event-search|calendar/);
   for(const p of ['index.html','event.html']) {
     assert.match(read(p),/renderEventTags\(e\)/); assert.match(read(p),/event-tags.css\?v=event-tags-1/);
-    assert.match(read(p),/event-presentation.js\?v=event-presentation-2/);
+    assert.match(read(p),/event-presentation.js\?v=event-presentation-3/);
   }
 });

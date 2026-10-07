@@ -1,4 +1,4 @@
-import { effectiveEventId, eventDates, eventMonthKeys } from './event-storage-model.js?v=event-storage-model-4';
+import { effectiveEventId, eventDates, eventMonthKeys } from './event-storage-model.js?v=event-storage-model-5';
 import { matchesEventTags } from './event-tags.js?v=event-tags-1';
 
 export function filterMonthEvents(events, category, tagKeys) {

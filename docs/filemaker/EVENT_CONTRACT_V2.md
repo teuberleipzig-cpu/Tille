@@ -1,25 +1,24 @@
 # Event Contract V2 — Foundation, Paket A
 
-Status: **date/dates (C1/C2) und tags (C3) sind im produktiven Parser und Storage aktiviert.**
-Timetable bleibt ein nicht produktiv aktivierter Foundation-Vertrag.
+Status: **date/dates (C1/C2), tags (C3) und timetable (C4) sind produktiv integriert.**
 Version: 2. Basis: b2b4af6182f38dcbcd6a7f508ff6ead99e03b8ed.
 
 ## Heute und später
 
 Der bestehende Workflow-/Staging-Vertrag bleibt unverändert.
 event_json akzeptiert id, date, dates, title, color, moreUrl, imageUrl, description,
-status, tags und sections (label, genre, items mit name, info, link).
+status, tags, timetable und sections (label, genre, items mit name, info, link).
 Neue Events benötigen date oder dates sowie title; fm-ID bleibt stabil. Ausgelassene Felder
 bleiben bei Updates erhalten, einschließlich imageUrl und unbekannter Bestandsfelder.
 Gelieferte sections ersetzen die bisherige Liste vollständig.
-Der produktive Parser lehnt timetable und environment weiterhin ab.
+Der produktive Parser lehnt environment weiterhin ab; Routing bleibt ein separater Input.
 
 Dates ist über die vorhandene Datumsnormalisierung integriert. C3 aktiviert die
 bestehende normalizeTags-Foundation für Upserts. Fehlende tags erhalten den Bestand,
 gelieferte tags ersetzen vollständig, [] löscht alle Tags. Bei gleichem Key bleibt
 die etablierte Display-Schreibweise desselben Events erhalten; die Payload-Reihenfolge
 bestimmt die Ausgabe. Persistierte Tags werden fail-closed validiert, nicht repariert.
-Timetable benötigt weiterhin ein eigenes Integrationspaket. environment gehört
+C4 aktiviert normalizeTimetable für Upserts. environment gehört
 NICHT in event_json. C1 enthielt keine sichtbare Mehrtage-UI und keinen Remote-Run.
 
 ## Umgebung: ursprünglicher Foundation-Vertrag (Routing separat umgesetzt)
@@ -62,7 +61,7 @@ Der Browser-Storage akzeptiert nur bereits normalisierte, konsistente Listen;
 kaputte persistierte Daten werden nicht still repariert. Details:
 [Mehrtage-Storage](../EVENT_MULTIDATE_STORAGE.md).
 
-## Freie Tags (weiterhin nicht produktiv aktiviert)
+## Freie Tags (C3 produktiv)
 
 Array mit maximal 20 Strings (Limit vor Deduplizierung), keine Kategorien-Enum.
 Jeder Tag: trimmen, Unicode NFC, höchstens 60 Unicode-Codepoints.
@@ -75,14 +74,13 @@ Sortieren, keine Synonyme, kein Entfernen innerer Leerzeichen oder Umlaute.
 `Konzert`, `konzert`, ` Konzert ` sind ein Begriff; die erste Schreibweise im
 Payload gewinnt. `PoetrySlam` und `Poetry Slam` bleiben getrennt.
 Der Schlüssel ist keine umfassende Unicode-Casefold-/Synonym-Erkennung.
-Der spätere Apply-Layer soll für identische Schlüssel etablierte Anzeigenamen
-bewahren. Cross-Event-Anzeigenamen sind noch kein Teil dieser reinen Normalisierung.
+Der produktive Apply-Layer bewahrt für identische Schlüssel etablierte Anzeigenamen. Cross-Event-Anzeigenamen sind noch kein Teil dieser reinen Normalisierung.
 
 Fehlend: bei Update erhalten; bei neuem Event fachlich keine Tags.
 Geliefert: vollständig ersetzen. []: alle Tags entfernen.
 Tags immer als Text ausgeben, niemals ungeprüfte CSS-Klassen oder DOM-IDs.
 
-## Timetable (weiterhin nicht produktiv aktiviert)
+## Timetable (C4 produktiv)
 
 Fehlend: erhalten. null: ausdrücklich entfernen. Objekt: vollständig ersetzen.
 {} und {"slots":[]} sind ungültig; es gibt keinen zweiten Löschmechanismus.
@@ -98,7 +96,7 @@ Ein Objekt besitzt ausschließlich slots; 1–40 Slots, je Slot:
 - floor: optional. Ein fehlendes Feld wird intern deterministisch zu `""`
   normalisiert. Wenn vorhanden, muss es ein sicherer, nichtleerer Text mit
   maximal 300 Codepoints sein; `floor: ""` und reine Whitespace-Werte sind
-  ungültig. Mehrere Slots dürfen ohne Floor existieren. Eine spätere UI braucht
+  ungültig. Mehrere Slots dürfen ohne Floor existieren. Die Detailanzeige rendert
   Floor-Zwischenüberschriften nur bei tatsächlich vorhandenen Informationen.
 - artists: 1–10 Artists, jeweils name erforderlich (300), info optional (1000),
   link optional (2000). Fehlendes info/link wird leer normalisiert.
@@ -109,8 +107,22 @@ Slots werden nach Startzeitpunkt stabil sortiert; Gleichzeitigkeit erhält die
 Eingabereihenfolge. Überlappungen, auch auf demselben Floor, bleiben zulässig.
 Sie können später redaktionelle Warnungen erzeugen; Paket A enthält keine Warn-UI.
 Artists stehen selbstständig im Slot, keine fragile Arraypositions-Verknüpfung
-zum normalen Line-up. Dates verwendet später weiterhin sections; Details können
-alternativ timetable rendern. Kein automatisches Ableiten weiterer Eventtage.
+zum normalen Line-up. Die Dates-Übersicht verwendet weiterhin sections; alle drei
+Detailwege (Query, event.html, statisches SEO) zeigen bei vorhandenem Timetable
+statt sections die Slots. Kein automatisches Ableiten weiterer Eventtage.
+
+Persistiert sind alle normalisierten Felder erforderlich, einschließlich floor: ""
+bei ausgelassenem Eingabefeld und info/link: "". Persistiertes null ist ungültig:
+Clear entfernt die Eventeigenschaft vollständig. Browser/Storage prüfen fail-closed,
+ohne Defaults nachzutragen oder Reihenfolgen zu korrigieren. Die browserneutrale
+.js-Implementierung ist über die bisherigen Foundation-Exports wiederverwendbar;
+keine .mjs-Auslieferung oder Serveränderung nötig.
+
+Gruppierung: lokale start-Datumsprefixe, darin Floors nach erstem Auftreten.
+Slots ohne Floor erhalten keine erfundene Überschrift. Zeiten bleiben lokale
+HH:MM–HH:MM; ein Slot über Mitternacht gehört zum Starttag. Suche enthält Floor,
+Artistname, Info und Link; Eventtage und Monatszuordnung bleiben unabhängig.
+Fehlender Timetable erhält sections als Detail-Fallback. Tags/Beschreibung bleiben.
 
 40 Slots begrenzen Aufwand konservativ und erlauben etwa zwei Floors mit je
 20 Slots. Das garantiert NICHT, dass maximal gefüllte Texte in 40 KB passen.
@@ -131,9 +143,11 @@ scripts/filemaker/contracts-v2/ enthält ausschließlich nebenwirkungsfreie Helf
 
 normalizeEventV2Patch ist KEIN vollständiger Eventparser. Übergabe von id, title
 oder environment ist dort ein Fehler. Der produktive Parser prüft zuerst
-die komplette rohe Payloadgröße und bindet ausschließlich normalizeDatePatch ein.
+die komplette rohe Payloadgröße und bindet normalizeDatePatch, normalizeTags und
+normalizeTimetable ein.
 Die Helfer importieren keine IO-/Netzwerkfunktionen und verändern keine Eingaben.
-Nur die Datumshilfe wird durch C1 produktiv importiert; Tags/Timetable bleiben isoliert.
+Die produktiven Apply-Regeln für dates, tags und timetable erhalten ausgelassene
+Felder und unbekannte Eventfelder; Admin bleibt ausschließlich Image-only.
 V1-Sicherheitsmuster sind im separaten Texthelper gespiegelt und für einzeilige
 Felder verschärft; V1 wird dafür nicht refaktoriert.
 
@@ -165,6 +179,7 @@ keine Kalender-/Filter-UI-Integration.
 C2: aufeinanderfolgende Tage, automatische Wochentagskategorien und vollständige
 Mehrtagesanzeige in Browser und neuer SEO-Ausgabe. Das Bestandsseiten-Gate bleibt
 offen; Details in [Mehrtage-Storage](../EVENT_MULTIDATE_STORAGE.md).
-Tags/Timetable-Apply benötigt ein separates Paket und bleibt gesperrt.
+C3 integriert Tags und kombinierte Filter. C4 integriert Timetable, Suche und Details.
+Reale FileMaker-E2E-Nachweise bleiben separate Freigabeschritte.
 Jedes weitere Paket benötigt einen eigenen Auftrag. C2 hebt aktive Browser-Imports
 auf event-storage-model-3 und die betroffenen Importketten auf neue Versionen.

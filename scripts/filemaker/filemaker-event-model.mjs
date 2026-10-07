@@ -2,13 +2,15 @@ import { effectiveEventId, eventDates, eventMonthKey } from '../../public/site/j
 import { normalizeDatePatch } from './contracts-v2/dates.mjs';
 import { normalizeTags, tagKey } from './contracts-v2/tags.mjs';
 import { eventTags } from '../../public/site/js/event-tags.js';
+import { normalizeTimetable } from './contracts-v2/timetable.mjs';
+import { eventTimetable } from '../../public/site/js/event-timetable.js';
 
 export const FILEMAKER_ID_PATTERN = /^fm-[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 export const MAX_PAYLOAD_BYTES = 40 * 1024;
 const FIELD_LIMITS = { title: 180, color: 40, moreUrl: 2000, imageUrl: 2000, description: 10000, status: 80 };
 const ITEM_LIMITS = { name: 300, info: 1000, link: 2000 };
 const SECTION_LIMITS = { label: 300, genre: 300 };
-const SUPPORTED_FIELDS = new Set(['id', 'date', 'dates', ...Object.keys(FIELD_LIMITS), 'sections', 'tags']);
+const SUPPORTED_FIELDS = new Set(['id', 'date', 'dates', ...Object.keys(FIELD_LIMITS), 'sections', 'tags', 'timetable']);
 const FORBIDDEN_TEXT = /<(?:script|iframe|form)\b|(?:javascript|data|blob):|;base64,/i;
 const SECRET_PATTERN = /\b(?:github_pat_[A-Za-z0-9_]{20,}|gh[pousr]_[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16})\b/;
 const CONTROL_GARBAGE = /[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/;
@@ -93,6 +95,7 @@ export function parseFileMakerEventJson(raw, operation = 'upsert') {
   if ('imageUrl' in input) output.imageUrl = safeUrl(input.imageUrl, 'Event imageUrl', { localImage: true });
   if ('sections' in input) output.sections = normalizeSections(input.sections);
   if ('tags' in input) output.tags = normalizeTags(input.tags);
+  if ('timetable' in input) output.timetable = normalizeTimetable(input.timetable);
   return output;
 }
 
@@ -132,6 +135,9 @@ export function applyFileMakerOperation(document, operation, input) {
     event.tags = normalizeTags(input.tags).map(tag => established.get(tagKey(tag)) ?? tag);
   }
   eventTags(event);
+  if (existing) eventTimetable(existing);
+  if (input.timetable === null) delete event.timetable;
+  eventTimetable(event);
   eventDates(event);
   if (!afterMonth) throw new Error('Event-Datum muss gültig sein.');
   if (!String(event.title || '').trim()) throw new Error('Event-Titel darf nicht leer sein.');

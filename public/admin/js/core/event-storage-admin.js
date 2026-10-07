@@ -1,4 +1,4 @@
-import { reconstructEventDocument, storageArtifacts } from '../../../site/js/event-storage-model.js?v=event-storage-model-4';
+import { reconstructEventDocument, storageArtifacts } from '../../../site/js/event-storage-model.js?v=event-storage-model-5';
 
 export const EVENT_MANIFEST_PATH = 'public/events/data/manifest.json';
 

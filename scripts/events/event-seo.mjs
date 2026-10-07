@@ -1,5 +1,6 @@
-import { effectiveEventId } from '../../public/site/js/event-storage-model.js?v=event-storage-model-4';
-import { eventCategory, eventDateLabel } from '../../public/site/js/event-presentation.js?v=event-presentation-2';
+import { effectiveEventId } from '../../public/site/js/event-storage-model.js?v=event-storage-model-5';
+import { eventCategory, eventDateLabel } from '../../public/site/js/event-presentation.js?v=event-presentation-3';
+import { renderEventTimetable } from '../../public/site/js/event-timetable.js?v=event-timetable-1';
 import { renderEventTags } from '../../public/site/js/event-tags.js?v=event-tags-1';
 
 export const EVENT_SITE_URL = 'https://www.distillery.de';
@@ -160,7 +161,8 @@ export function renderEventHtml(event) {
   const socialImage = image?.absolute || EVENT_SOCIAL_IMAGE;
   const displayDate = eventDateLabel(event);
   const category = eventCategory(event);
-  const sections = renderSections(event);
+  const timetableHtml = renderEventTimetable(event);
+  const sections = timetableHtml || renderSections(event);
   const tagsHtml = renderEventTags(event);
   const description = String(event.description || '').trim();
   const pageTitle = `${title} – Distillery Leipzig`;
@@ -198,7 +200,7 @@ export function renderEventHtml(event) {
 <link rel="stylesheet" href="assets/mobile-navigation.css?v=mobile-navigation-7">
 <link rel="stylesheet" href="assets/mobile-foundation.css?v=mobile-foundation-4">
 <link rel="stylesheet" href="assets/event-categories.css?v=event-categories-1">
-${tagsHtml ? '<link rel="stylesheet" href="assets/event-tags.css?v=event-tags-1">\n' : ''}</head>
+${tagsHtml ? '<link rel="stylesheet" href="assets/event-tags.css?v=event-tags-1">\n' : ''}${timetableHtml ? '<link rel="stylesheet" href="assets/event-timetable.css?v=event-timetable-1">\n' : ''}</head>
 <body data-site-page="dates">
 <div class="page">
 <main class="main">

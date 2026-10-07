@@ -1,5 +1,6 @@
-import { effectiveEventId, searchEventIndex } from './event-storage-model.js?v=event-storage-model-4';
+import { effectiveEventId, searchEventIndex } from './event-storage-model.js?v=event-storage-model-5';
 import { eventTags } from './event-tags.js?v=event-tags-1';
+import { eventTimetable } from './event-timetable.js?v=event-timetable-1';
 
 const MANIFEST_URL = 'public/events/data/manifest.json';
 
@@ -27,6 +28,7 @@ export function createPublicEventStore() {
     const promise = monthEntry(key).then(entry => entry ? fetchJson(entry.path).then(data => {
       const events = data.events || [];
       events.forEach(eventTags);
+      events.forEach(eventTimetable);
       return events;
     }) : []);
     monthPromises.set(key, promise);
