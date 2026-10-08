@@ -31,8 +31,8 @@ Aktueller Stand in `datenschutz.html`:
 - Seite ist ausdrücklich als Arbeitsstand markiert.
 - Verantwortliche Stelle ist `Distillery Leipzig, Eggebrechtstraße 2, 04103 Leipzig, club@distillery.de`.
 - Serverlogs sind allgemein beschrieben, aber serverabhängig noch nicht final.
-- Feedback-Formular ist allgemein als externer Formular-Dienst beschrieben.
-- Tracking ist als geplant, aber noch nicht aktiviert/final definiert beschrieben.
+- Bekannter Feedback-Datenfluss: Website → FormSubmit → distillery.feedback@gmail.com → Google Apps Script → Trello.
+- Tracking-Code ist eingebunden, aber technisch deaktiviert (TRACKING_ENABLED = false); darüber werden keine Trackingevents versendet.
 - Externe Dienste sind allgemein genannt, aber noch nicht einzeln final geprüft.
 
 Vor LIVE zu bestätigen:
@@ -56,19 +56,29 @@ Vor LIVE zu bestätigen:
 
 Aktueller Stand in `feedback.html`:
 
-- Formularziel: `https://formsubmit.co/teuber1995@gmail.com`
+- Formularziel: `https://formsubmit.co/distillery.feedback@gmail.com`
 - Methode: `POST`
 - Externer Dienst: FormSubmit
-- Weiterleitung nach Absenden: `https://teuberleipzig-cpu.github.io/Tille/feedback-thanks.html`
+- Weiterleitung nach Absenden: unmittelbar vor Submit kontrolliert `window.location.origin + '/feedback-thanks.html'`; kein GitHub-Pages-Ziel.
 - Optionale Reply-Mail-Adresse wird abgefragt.
 - Datenschutz-Hinweis im Formular weist bereits auf externen Formular-Dienst und Go-Live-Prüfstatus hin.
 
 Vor LIVE zu entscheiden:
 
-- [ ] Soll FormSubmit weiter genutzt werden?
-- [ ] Soll die Zieladresse von `teuber1995@gmail.com` auf eine offizielle Distillery-Adresse geändert werden?
-- [ ] Soll `_next` von GitHub Pages auf die LIVE-Domain geändert werden?
-- [ ] Soll das Formular stattdessen selbst gehostet werden?
+Technisch geklärt (P1, 2026-10-07; keine rechtliche Freigabe):
+
+- FormSubmit bleibt aktuell der Formularservice.
+- Operatives Ziel ist distillery.feedback@gmail.com.
+- Danach verarbeitet Google Apps Script die Mails und überträgt benötigte Inhalte in Trello; accountseitige Übertragung laut Nutzer erfolgt.
+- `_next` verwendet dieselbe Origin, nicht GitHub Pages oder einen festen Staging-Host.
+
+Weiterhin offen:
+
+- [ ] Finale rechtliche Prüfung von FormSubmit.
+- [ ] Gmail-/Google-Verarbeitung prüfen.
+- [ ] Apps-Script-Verarbeitung prüfen.
+- [ ] Trello-Verarbeitung prüfen.
+- [ ] Löschprozess für Mails und nachgelagerte Inhalte klären.
 - [ ] Gibt es Spam-Schutz/Captcha und muss dieser in der Datenschutzseite beschrieben werden?
 - [ ] Wer bekommt Feedback-Mails intern?
 - [ ] Wie lange werden Feedback-Mails aufbewahrt?
@@ -80,7 +90,7 @@ Für einen sauberen Go-Live sollten mindestens diese Punkte final geklärt werde
 
 1. Anbieteradresse im Impressum final bestätigen.
 2. Server-/Hostingdaten klären.
-3. Feedback-Formular-Ziel und Dienst final entscheiden.
-4. `_next`-URL vor LIVE auf `https://www.distillery.de/feedback-thanks.html` setzen, falls das Formular live bleibt.
-5. Tracking bis zur finalen Datenschutzentscheidung deaktiviert lassen oder sehr klar dokumentieren.
+3. Den technisch festgelegten Feedback-Datenfluss rechtlich/organisatorisch prüfen.
+4. Same-origin-Weiterleitung im späteren freigegebenen E2E prüfen; in P1 keine externe Submission.
+5. Tracking deaktiviert lassen; vor jeder Aktivierung erneut technisch/datenschutzrechtlich prüfen.
 6. Datenschutzseite nach Server/Formular/Tracking-Entscheidung finalisieren lassen.
