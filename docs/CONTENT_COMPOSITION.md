@@ -74,7 +74,7 @@ and never reads content/live. Neither image is pushed or deployed.
 
 The existing HTTP matrices remain. Staging checks additionally require 404 for
 two real excluded resident recovery/backup paths, without logging their contents.
-The Dockerfile still removes the staging sitemap and hidden Docker configuration,
+The Dockerfile still removes the staging sitemap and keeps Docker configuration outside the webroot,
 uses Disallow / and supplies noindex/nofollow/noarchive plus JSON no-store.
 
 ## Verified baseline and separate existing public-safety finding
@@ -86,12 +86,25 @@ ec799d6d5eaec51d8633e99bf2e9d967e0f1279f: 1,821 content files (243 mutable,
 recovery/backup files under public/residents/data. 353 other files are retained.
 No code collision; the temporary baseline context was removed after validation.
 
-Existing Docker COPY . exposes repository files beyond site assets: scripts/,
+At that baseline Docker COPY . exposed repository files beyond site assets: scripts/,
 tests/, docs/, .github/, root Markdown reports and reports/ are retained, as is
 the root legacy events.json outside the replacement namespaces. The nginx
-configuration does not generally deny these paths. This is an existing hosting
-boundary issue, not fixed by deleting code or a broad webroot redesign here.
+configuration did not generally deny these paths. This was a real hosting
+boundary issue, separate from composition ownership.
 Git metadata and temporary/provenance files are not included by the composer.
+
+P2 fixes this second boundary with explicit positive Docker COPY sources. The
+composed context still retains internal build/code files; it is **not** the
+public document root. The final nginx root contains only public root HTML,
+robots/sitemap/manifest/favicon, security.txt, assets, generated event/news/resident
+pages and audited public application/content namespaces. Admin root Markdown and
+checkpoint files are not published. No composer validation or content ownership
+rule was weakened. See [P2 evidence and contract](PUBLIC_WEBROOT_P2_QA.md).
+
+Both smoke containers check exact filesystem inventory plus HTTP 404/custom-404
+responses for internal paths and byte-identical HTTP availability of all public
+files. Staging continues to substitute robots and exclude sitemap; DEFAULT uses
+the same staging content and only tests the live-like default policy.
 
 No production data, content branch, FileMaker/Admin/Portal/WordPress routing or
 deployment pipeline changes. B1c-2 remains a separate manually authorized task.
