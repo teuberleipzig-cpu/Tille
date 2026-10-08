@@ -39,7 +39,7 @@ export function referenceInventory(root, files) {
   const references = new Set();
   for (const file of files.filter(f => isPublic(f) && /\.(?:html|css|js|webmanifest|xml)$/.test(f))) {
     const text = readFileSync(path.join(root, file), 'utf8');
-    const values = [...text.matchAll(/(?:src|href|action)\s*=\s*["']([^"']+)["']|url\(\s*["']?([^\s"')]+)|["']((?:\.{0,2}\/)?[\w./-]+\.(?:js|css|json|html|svg|png|jpg|webp|woff2?)(?:\?[^"']*)?)["']|<loc>([^<]+)<\/loc>/g)];
+    const values = [...text.matchAll(/(?:src|href|action)\s*=\s*["']([^"']+)["']|url\(\s*["']?([^\s"')]+)|["']((?:\.{0,2}\/)?[\w./-]+\.(?:m?js|css|json|html|svg|png|jpg|webp|woff2?)(?:\?[^"']*)?)["']|<loc>([^<]+)<\/loc>/g)];
     for (const match of values) {
       // A Blob download filename is not a URL loaded from the webroot.
       if (match[3] && /\.download\s*=\s*$/.test(text.slice(Math.max(0, match.index - 40), match.index))) continue;

@@ -1,5 +1,9 @@
 # Public Audit Index – 2026-06-29
 
+> HISTORICAL / SUPERSEDED (2026-10-08): Dieser frühere Stand ist keine aktuelle
+> Freigabe- oder Aufgabenliste. Operative Quelle: [P3 Final Pre-Live Audit](docs/PRELIVE_P3_FINAL_AUDIT.md)
+> und [aktuelle Go-Live-Checkliste](GO_LIVE_REMAINING_CHECKLIST.md). Historische Aussagen bleiben unten unverändert.
+
 Status: Zentrale Übersicht über repo-basierte Audits und manuell verschobene Punkte. Diese Datei ändert keine Website-Funktion, keine Daten und kein Deployment.
 
 ## Zweck

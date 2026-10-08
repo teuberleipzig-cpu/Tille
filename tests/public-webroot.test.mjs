@@ -1,6 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
+import { mkdtempSync, mkdirSync, writeFileSync, rmSync } from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { directories, rootFiles, isPublic, inventory, referenceInventory, negativePaths } from './helpers/public-webroot.mjs';
 
@@ -8,6 +11,36 @@ const root = new URL('../', import.meta.url);
 const read = p => readFileSync(new URL(p, root), 'utf8');
 const docker = read('docker/Dockerfile');
 const workflow = read('.github/workflows/staging-container-smoke.yml');
+
+test('reference audit catches browser imports of unpublished mjs scripts', () => {
+  const temp = mkdtempSync(path.join(os.tmpdir(), 'public-import-test-'));
+  try {
+    mkdirSync(path.join(temp, 'public'), {recursive:true});
+    mkdirSync(path.join(temp, 'public/site'), {recursive:true});
+    mkdirSync(path.join(temp, 'scripts'), {recursive:true});
+    writeFileSync(path.join(temp, 'public/site/entry.js'), "import '../../scripts/private.mjs?v=1';");
+    writeFileSync(path.join(temp, 'scripts/private.mjs'), 'export const fixture = true;');
+    assert.deepEqual(referenceInventory(temp, inventory(temp)), ['scripts/private.mjs']);
+    assert.equal(isPublic('scripts/private.mjs'), false);
+  } finally { rmSync(temp, {recursive:true, force:true}); }
+});
+
+test('Admin renderer stays public with one shared implementation and fully busted loader chain', () => {
+  assert.match(read('public/admin/js/core/event-image-only-save.js'), /site\/js\/event-seo\.js\?v=event-seo-1/);
+  assert.doesNotMatch(read('public/admin/js/core/event-image-only-save.js'), /scripts\//);
+  assert.match(read('scripts/events/event-seo.mjs'), /export \* from '..\/..\/public\/site\/js\/event-seo.js/);
+  assert.match(read('public/admin/js/auto-github-load.js'), /event-image-only-save-6/);
+  assert.match(read('public/admin/js/events-meta.js'), /auto-github-load.js\?v=admin-public-renderer-1/);
+  for (const file of ['events-meta', 'auto-github-load']) assert.ok(read('public/admin/index.html').includes(file + '.js?v=admin-public-renderer-1'));
+});
+
+test('legacy event page retains noindex and functioning legal footer links', () => {
+  const html = read('event.html');
+  assert.match(html, /content="noindex,follow"/);
+  assert.match(html, /href="impressum.html"/);
+  assert.match(html, /href="datenschutz.html"/);
+  assert.doesNotMatch(html, /KURT-EISNER-STR|href="#">Impressum/);
+});
 
 test('Docker publishes exactly the positive sources, never the repository or blanket public directory', () => {
   const copies = [...docker.matchAll(/^COPY (.+) \/usr\/share\/nginx\/html(\S*)$/gm)];
