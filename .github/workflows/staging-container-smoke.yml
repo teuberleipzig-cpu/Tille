@@ -6,6 +6,8 @@ on:
       - main
     paths:
       - 'docker/**'
+      - 'tests/public-webroot.test.mjs'
+      - 'tests/helpers/public-webroot*.mjs'
       - 'scripts/content/**'
       - 'tests/content-*.test.mjs'
       - 'tests/staging-cutover-integration.test.mjs'
@@ -101,6 +103,9 @@ jobs:
       - name: Test feedback and privacy facts without external submission
         run: node --test tests/feedback-privacy.test.mjs tests/public-headings.test.mjs tests/public-seo-foundation.test.mjs
 
+      - name: Test positive public webroot contract
+        run: node --test tests/public-webroot.test.mjs
+
       - name: Bind staging content and compose isolated context
         env:
           CODE_SHA: ${{ github.event.pull_request.head.sha }}
@@ -147,6 +152,9 @@ jobs:
           fi
 
           docker exec tille-staging-smoke nginx -t
+
+      - name: Verify STAGING filesystem and public boundary HTTP matrix
+        run: node tests/helpers/public-webroot-smoke.mjs --context "$RUNNER_TEMP/composed-site" --container tille-staging-smoke --origin http://127.0.0.1:18081 --target staging
 
       - name: Test STAGING HTTP matrix
         shell: bash
@@ -277,6 +285,9 @@ jobs:
           fi
 
           docker exec tille-default-smoke nginx -t
+
+      - name: Verify DEFAULT filesystem and public boundary HTTP matrix
+        run: node tests/helpers/public-webroot-smoke.mjs --context "$RUNNER_TEMP/composed-site" --container tille-default-smoke --origin http://127.0.0.1:18082 --target default
 
       - name: Test DEFAULT / LIVE-safety HTTP matrix
         shell: bash
