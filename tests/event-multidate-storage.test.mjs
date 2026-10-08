@@ -146,12 +146,12 @@ test('SEO retains one page and sitemap URL, using the primary date only', () => 
 test('active browser storage import chains are cache-busted including shared SEO', async () => {
   const read = file => readFile(new URL('../' + file, import.meta.url), 'utf8');
   for (const file of ['public/site/js/event-store.js', 'public/admin/js/core/event-storage-admin.js',
-    'public/admin/js/core/event-image-only-save.js', 'scripts/events/event-seo.mjs']) {
+    'public/admin/js/core/event-image-only-save.js', 'public/site/js/event-seo.js']) {
     assert.match(await read(file), /event-storage-model\.js\?v=event-storage-model-5/);
   }
   for (const file of ['index.html', 'event.html']) assert.match(await read(file), /event-store\.js\?v=event-store-5/);
-  assert.match(await read('public/admin/js/core/event-image-only-save.js'), /event-seo\.mjs\?v=event-seo-timetable-1/);
+  assert.match(await read('public/admin/js/core/event-image-only-save.js'), /event-seo\.js\?v=event-seo-1/);
   const loader = await read('public/admin/js/auto-github-load.js');
   assert.match(loader, /event-storage-admin\.js\?v=event-storage-admin-5/);
-  assert.match(loader, /event-image-only-save\.js\?v=event-image-only-save-5/);
+  assert.match(loader, /event-image-only-save\.js\?v=event-image-only-save-6/);
 });

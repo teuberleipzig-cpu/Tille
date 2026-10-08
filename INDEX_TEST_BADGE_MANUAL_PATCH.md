@@ -1,5 +1,9 @@
 # index.html – Manual Test Badge Patch
 
+> HISTORICAL / SUPERSEDED (2026-10-08): Dieser frühere Stand ist keine aktuelle
+> Freigabe- oder Aufgabenliste. Operative Quelle: [P3 Final Pre-Live Audit](docs/PRELIVE_P3_FINAL_AUDIT.md)
+> und [aktuelle Go-Live-Checkliste](GO_LIVE_REMAINING_CHECKLIST.md). Historische Aussagen bleiben unten unverändert.
+
 Status: manueller Patch nötig.
 
 ## Befund

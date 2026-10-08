@@ -5,7 +5,7 @@ import { parseFileMakerEventJson, applyFileMakerOperation } from '../scripts/fil
 import { eventTimetable, timetableDays, renderEventTimetable } from '../public/site/js/event-timetable.js';
 import { storageArtifacts, reconstructEventDocument, eventMonthKeys, eventSearchHaystack } from '../public/site/js/event-storage-model.js';
 import { createPublicEventStore } from '../public/site/js/event-store.js';
-import { renderEventHtml, eventSeoArtifacts } from '../scripts/events/event-seo.mjs';
+import { renderEventHtml, eventSeoArtifacts } from '../public/site/js/event-seo.js';
 import { saveEventImageOnly } from '../public/admin/js/core/event-image-only-save.js';
 import { slot, timetable, timetableFixture } from './helpers/event-timetable-fixture.mjs';
 
@@ -93,9 +93,9 @@ test('overview retains sections; all details share renderer and active cache cha
   const read=p=>readFileSync(new URL('../'+p,import.meta.url),'utf8');const html=read('index.html');
   const list=html.split('function renderEvent(e)')[1].split('function renderEvents')[0];assert.doesNotMatch(list,/renderEventTimetable/);assert.match(list,/sections/);
   for(const file of ['index.html','event.html'])assert.match(read(file),/renderEventTimetable\(e\)\|\|sections/);
-  assert.match(read('scripts/events/event-seo.mjs'),/timetableHtml \|\| renderSections/);
+  assert.match(read('public/site/js/event-seo.js'),/timetableHtml \|\| renderSections/);
   for (const file of ['event-timetable.js','event-timetable-contract.js','event-contract-text.js']) {
     assert.doesNotMatch(read('public/site/js/'+file), /from\s+['"][^'"]*\.mjs/);
   }
-  for(const file of ['index.html','event.html','scripts/events/event-seo.mjs','public/site/js/event-storage-model.js','public/site/js/event-store.js'])assert.match(read(file),/event-timetable.js\?v=event-timetable-1/);
+  for(const file of ['index.html','event.html','public/site/js/event-seo.js','public/site/js/event-storage-model.js','public/site/js/event-store.js'])assert.match(read(file),/event-timetable.js\?v=event-timetable-1/);
 });

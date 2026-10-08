@@ -2,7 +2,7 @@
 (function () {
   const modules = Promise.all([
     import('./core/event-storage-admin.js?v=event-storage-admin-5'),
-    import('./core/event-image-only-save.js?v=event-image-only-save-5'),
+    import('./core/event-image-only-save.js?v=event-image-only-save-6'),
     import('./core/resident-fresh-patch.js?v=admin-staging-1')
   ]);
   const RESIDENTS = 'public/residents/data/residents.json';
