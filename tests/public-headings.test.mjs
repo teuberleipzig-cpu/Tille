@@ -24,13 +24,13 @@ test('Feedback has one labelled public H1 without changing its form contract', (
 });
 
 test('About uses the requested H1 and keeps Club below it as H2', () => {
-  assert.match(about, /<h1 id="about-title">About<\/h1>\s*<h2>Club<\/h2>/);
+  assert.match(about, /<h1 id="about-title">About<\/h1>\s*<!-- TILLE:WORDPRESS:ABOUT:START -->\s*<h2>Club<\/h2>/);
   assert.doesNotMatch(about, /<h1[^>]*>About Distillery<\/h1>/);
   assert.match(about, /\.about-content h1\{display:block;width:max-content;max-width:100%\}/);
 });
 
 test('History keeps Origins below its block-level H1', () => {
-  assert.match(history, /<h1 id="history-title">History<\/h1>\s*<h2>Origins<\/h2>/);
+  assert.match(history, /<h1 id="history-title">History<\/h1>\s*<!-- TILLE:WORDPRESS:HISTORY:START -->\s*<h2>Origins<\/h2>/);
   assert.match(history, /\.history-content h1\{display:block;width:max-content;max-width:100%\}/);
 });
 
