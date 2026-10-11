@@ -141,8 +141,9 @@ Images remain validated external HTTP(S) URLs. No local mirroring, media downloa
 base64, new upload mechanism or image archive. A content SHA reproduces generated
 HTML, **not necessarily external media bytes** served later at those URLs.
 
-About/History, WordPress Pages API/Page IDs, their images, DE/EN versions and a new
-WordPress preview/live editorial architecture are separate future product work.
+About/History now have a separate [P4 Pages writer](WORDPRESS_PAGES_STAGING_CONTENT_WRITER.md)
+using configured Page IDs and safe inline images; this News writer remains Posts-only.
+DE/EN versions and a new WordPress preview/live editorial architecture remain future work.
 
 ## Verification and CRLF
 

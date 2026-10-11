@@ -1,6 +1,7 @@
 // Single serializable B1a classification. Tree patterns match the WHOLE relative path.
 // Existing operation-specific production gates are intentionally not replaced.
 const rules = [
+  ...['about', 'history'].map(page => ({ id: `wordpress-${page}`, classification: 'GENERATED', exact: `${page}.html`, codeFallback: true, owners: ['scripts/wordpress-pages/page-render.mjs'] })),
   { id: 'event-months', classification: 'MUTABLE', tree: 'public/events/data/months/', pattern: '[0-9]{4}-(0[1-9]|1[0-2])\\.json', owners: ['public/site/js/event-storage-model.js', 'scripts/filemaker/filemaker-event-intake.mjs', 'public/admin/js/core/event-image-only-save.js'] },
   { id: 'event-meta', classification: 'MUTABLE', exact: 'public/events/data/meta.json', replacementTree: 'public/events/data/', owners: ['public/site/js/event-storage-model.js'] },
   { id: 'event-manifest', classification: 'GENERATED', exact: 'public/events/data/manifest.json', owners: ['public/site/js/event-storage-model.js'] },
@@ -22,7 +23,7 @@ const rules = [
   ...['scripts/', 'tests/', 'docs/', '.github/', 'docker/', 'assets/', 'public/admin/', 'public/resident-portal/', 'public/site/js/', 'public/gallery/js/'].map(tree => ({
     id: `code:${tree}`, classification: 'CODE', tree, owners: ['repository-code-review']
   })),
-  ...['index.html', 'event.html', 'residents.html', 'gallery.html', 'history.html', 'robots.txt', 'robots.staging.txt', 'robots.live.txt', 'sitemap.live.xml', 'package.json'].map(exact => ({
+  ...['index.html', 'event.html', 'residents.html', 'gallery.html', 'robots.txt', 'robots.staging.txt', 'robots.live.txt', 'sitemap.live.xml', 'package.json'].map(exact => ({
     id: `code:${exact}`, classification: 'CODE', exact, owners: ['repository-code-review']
   }))
 ];

@@ -34,6 +34,8 @@ test('central config and manifest cannot be mutated', () => {
 });
 
 const examples = {
+  'wordpress-about': 'about.html',
+  'wordpress-history': 'history.html',
   'event-months': 'public/events/data/months/2026-09.json',
   'event-meta': 'public/events/data/meta.json',
   'event-manifest': 'public/events/data/manifest.json',

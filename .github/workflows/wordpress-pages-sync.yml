@@ -1,0 +1,78 @@
+name: Controlled WordPress pages sync
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: Repository target (live is not activated)
+        required: true
+        type: choice
+        options: [staging, live]
+      mode:
+        description: Validate WordPress or update the controlled Draft PR
+        required: true
+        type: choice
+        options: [validate-only, sync-pr]
+
+concurrency:
+  group: wordpress-news-sync
+  cancel-in-progress: false
+
+jobs:
+  validate-only:
+    if: inputs.mode == 'validate-only'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      WORDPRESS_BASE_URL: ${{ vars.WORDPRESS_BASE_URL }}
+      WORDPRESS_ABOUT_PAGE_ID: ${{ vars.WORDPRESS_ABOUT_PAGE_ID }}
+      WORDPRESS_HISTORY_PAGE_ID: ${{ vars.WORDPRESS_HISTORY_PAGE_ID }}
+      SYNC_ENVIRONMENT: ${{ inputs.environment }}
+      SYNC_MODE: validate-only
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate target before reading source
+        run: node --input-type=module -e 'import { stagingEnvironment } from "./scripts/news/staging-contract.mjs"; stagingEnvironment(process.env.SYNC_ENVIRONMENT);'
+      - name: Fetch immutable snapshot candidates
+        run: git fetch --no-tags origin refs/heads/main:refs/remotes/origin/main refs/heads/content/staging:refs/remotes/origin/content/staging
+      - name: Run tests
+        run: node --test tests/*.test.mjs
+      - name: Validate composed staging pages
+        run: node scripts/wordpress-pages/staging-sync.mjs
+
+  sync-pr:
+    if: inputs.mode == 'sync-pr'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    env:
+      WORDPRESS_BASE_URL: ${{ vars.WORDPRESS_BASE_URL }}
+      WORDPRESS_ABOUT_PAGE_ID: ${{ vars.WORDPRESS_ABOUT_PAGE_ID }}
+      WORDPRESS_HISTORY_PAGE_ID: ${{ vars.WORDPRESS_HISTORY_PAGE_ID }}
+      SYNC_ENVIRONMENT: ${{ inputs.environment }}
+      SYNC_MODE: sync-pr
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate target before reading source
+        run: node --input-type=module -e 'import { stagingEnvironment } from "./scripts/news/staging-contract.mjs"; stagingEnvironment(process.env.SYNC_ENVIRONMENT);'
+      - name: Fetch immutable snapshot candidates
+        run: git fetch --no-tags origin refs/heads/main:refs/remotes/origin/main refs/heads/content/staging:refs/remotes/origin/content/staging
+      - name: Run tests
+        run: node --test tests/*.test.mjs
+      - name: Generate controlled staging Draft PR
+        run: node scripts/wordpress-pages/staging-sync.mjs

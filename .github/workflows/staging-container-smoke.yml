@@ -9,6 +9,12 @@ on:
       - 'tests/public-webroot.test.mjs'
       - 'tests/helpers/public-webroot*.mjs'
       - 'scripts/content/**'
+      - 'scripts/wordpress-pages/**'
+      - 'tests/wordpress-pages*.test.mjs'
+      - 'tests/helpers/wordpress-pages*.mjs'
+      - 'about.html'
+      - 'history.html'
+      - '.github/workflows/wordpress-pages-sync.yml'
       - 'tests/content-*.test.mjs'
       - 'tests/staging-cutover-integration.test.mjs'
       - 'tests/staging-acceptance.test.mjs'
@@ -92,6 +98,9 @@ jobs:
           node --test tests/content-deployment.test.mjs tests/content-deployment-e2e.test.mjs tests/content-deployment-workflow.test.mjs tests/content-deployment-cli.test.mjs
           node --test tests/staging-cutover-integration.test.mjs
           node --test tests/staging-acceptance.test.mjs
+
+      - name: Test WordPress Pages and unchanged News contracts with mocks only
+        run: node --test tests/wordpress-pages.test.mjs tests/wordpress-pages-content.test.mjs tests/wordpress-pages-pr.test.mjs tests/wordpress-pages-workflow.test.mjs tests/wordpress-news-sync.test.mjs tests/wordpress-staging-content.test.mjs tests/wordpress-staging-pr.test.mjs tests/headless-wordpress-news.test.mjs tests/news-seo.test.mjs
 
       - name: Test full event regressions
         run: |
