@@ -9,6 +9,7 @@ import { eventSeoArtifacts } from '../../scripts/events/event-seo.mjs';
 import { categoryFixture } from './event-categories-fixture.mjs';
 import { tagFixture } from './event-tags-fixture.mjs';
 import { timetableFixture } from './event-timetable-fixture.mjs';
+import { wordpressPagesFixture } from './wordpress-pages-browser.mjs';
 
 const root = fileURLToPath(new URL('../../', import.meta.url));
 const baseline = process.argv.includes('--baseline') ? 'c58ad4c60a55b132d10296390c6ab8cdd84b470e' : null;
@@ -43,5 +44,11 @@ const server = http.createServer(async (req, res) => {
     res.writeHead(404).end('Not part of the synthetic fixture');
   }
 });
-server.listen(0, '127.0.0.1', () => console.log(`C2 fixture: http://127.0.0.1:${server.address().port}/index.html?month=2026-10 (PID ${process.pid})`));
+server.listen(0, '127.0.0.1', async () => {
+  const origin = `http://127.0.0.1:${server.address().port}`;
+  if (process.argv.includes('--wordpress-pages')) {
+    for (const [file, html] of await wordpressPagesFixture(origin)) files.set(file, html);
+    console.log(`P4 fixtures: ${origin}/about.html and ${origin}/history.html (PID ${process.pid})`);
+  } else console.log(`C2 fixture: ${origin}/index.html?month=2026-10 (PID ${process.pid})`);
+});
 process.on('SIGINT', () => server.close(() => { console.log(JSON.stringify({ failed, mutations })); process.exit(0); }));

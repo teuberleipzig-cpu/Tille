@@ -16,6 +16,7 @@ Dies ist die Belegtabelle; ausführbare Pfadregeln existieren ausschließlich in
 | public/residents/media/&lt;slug&gt;/presskit/*.(pdf oder zip) | MUTABLE | Admin residents-media.js und Portal modules/media.js; Presskit-Upload |
 | residents/&lt;id&gt;/index.html | GENERATED | scripts/residents/resident-seo.mjs / prepare-resident-seo.mjs; öffentliche Feldprojektion, kein automatischer aktueller Browser-Save-Generator |
 | news.html, news/index.html, news/&lt;slug&gt;/index.html | GENERATED | scripts/news/generate-news.mjs und prepare-sync.mjs; Vorlagen sind news-render.mjs, nicht news.html |
+| about.html, history.html | GENERATED (P4) | scripts/wordpress-pages/page-render.mjs; ausschließlich redaktioneller Markerblock aus WordPress Pages, Shell aus gebundenem Code-Snapshot; Code-Fallback bis zur ersten Content-Ausgabe |
 | public/gallery/data/gallery.json | MUTABLE | features/gallery/gallery.js und gallery-save.js |
 | public/gallery/media/&lt;playlist&gt;/&lt;dateiname&gt; | MUTABLE | gallery.js uploadFiles; JSON-first Delete mit Pending Queue in gallery-save.js |
 | public/site/data/site-navigation.json | MUTABLE | features/site-navigation/site-navigation.js; redaktionelle Navigation, keine Codekonfiguration |
@@ -42,6 +43,15 @@ und werden nicht als Livecontent geseedet. Kein Inhalt dieser Dateien wurde ver�
 Generierte Seiten sind nur genau &lt;id&gt;/index.html; keine ganzen events/residents/news-Trees.
 
 ## Aktive Browser-Einstiegspunkte und B1b-Migration
+
+P4 ergänzt ausschließlich die beiden exakten Root-Pfade `about.html` und
+`history.html`. Ihre Code-Dateien bleiben Vorlagen und statischer Fallback;
+der Composer erhält diesen Fallback nur solange der jeweilige Content-Blob fehlt.
+Ein vorhandener Content-Blob überlagert die Vorlage. Beim nächsten Pages-Sync
+wird die Shell erneut aus dem aktuellen gebundenen Code gelesen, niemals aus
+diesem Overlay. Andere Root-Seiten und die bestehenden Namespace-Löschregeln
+bleiben unverändert. Der Pages-Writer darf weder Sitemap noch Navigation ändern.
+Details: [WordPress Pages](WORDPRESS_PAGES_STAGING_CONTENT_WRITER.md).
 
 Admin index.html lädt github-sync.js, admin-app.js, github-media.js, events-meta.js,
 auto-github-load.js und die Navigation/Gallery-Module. auto-github-load.js bindet die
