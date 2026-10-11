@@ -1,11 +1,13 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { rmSync, mkdirSync, writeFileSync } from 'node:fs';
+import { rmSync, mkdirSync, writeFileSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { fixtureRepo, fixtureBlob, fixtureCommit, fixtureGit } from './helpers/content-bootstrap-fixture.mjs';
 import { bindStagingDeployment, assertNoLegacyContentWrite } from '../scripts/content/deployment-binding.mjs';
 import { verifyCompositionReport, sha256 } from '../scripts/content/deployment-report.mjs';
 import { contentRevision } from '../scripts/content/revision.mjs';
+import { CONTENT_MANIFEST } from '../scripts/content/content-manifest.mjs';
+import { classifyContentPath } from '../scripts/content/content-scope.mjs';
 
 const codeSha = 'a'.repeat(40), contentSha = 'b'.repeat(40);
 const binding = { eventName: 'push', ref: 'refs/heads/main', codeSha, actualCodeSha: codeSha, contentSha };
@@ -46,17 +48,48 @@ test('push diff handles multi-commit range and merge commit, not only HEAD paren
 
 for (const name of ['public/events/data/months/2026-09.json', 'events/event/index.html', 'public/events/media/shared/x.jpg',
   'public/residents/data/residents.json', 'public/residents/media/x/photos/x.jpg', 'public/gallery/data/gallery.json',
-  'public/site/data/site-navigation.json', 'news/item/index.html', 'sitemap.xml', 'public/residents/data/recovery.txt']) {
-  test(`legacy content additions/deletions blocked: ${name}`, async t => {
+  'public/site/data/site-navigation.json', 'news/item/index.html', 'sitemap.xml', 'public/residents/data/recovery.txt',
+  'residents/fixture/index.html', 'news.html', 'news/index.html', 'public/gallery/media/fixture/image.jpg', 'unknown.json']) {
+  test(`legacy content additions/modifications/deletions blocked: ${name}`, async t => {
     const { root, entry } = await repo(t);
     const base = fixtureCommit(root, [entry('index.html')]);
     const added = fixtureCommit(root, [entry('index.html'), entry(name)], base.commit);
-    const deleted = fixtureCommit(root, [entry('index.html')], added.commit);
-    for (const [beforeSha, codeSha] of [[base.commit, added.commit], [added.commit, deleted.commit]]) {
+    const modified = fixtureCommit(root, [entry('index.html'), entry(name, 'changed')], added.commit);
+    const deleted = fixtureCommit(root, [entry('index.html')], modified.commit);
+    for (const [beforeSha, codeSha] of [[base.commit, added.commit], [added.commit, modified.commit], [modified.commit, deleted.commit]]) {
       assert.throws(() => assertNoLegacyContentWrite({ repoRoot: root, beforeSha, codeSha }), /Legacy content write/);
     }
   });
 }
+
+for (const name of ['about.html', 'history.html']) test(`explicit GENERATED code fallback may change on main: ${name}`, async t => {
+  const rule = classifyContentPath(name);
+  assert.equal(rule.classification, 'GENERATED'); assert.equal(rule.codeFallback, true);
+  const { root, entry } = await repo(t);
+  const base = fixtureCommit(root, [entry(name, 'old template')]);
+  const tip = fixtureCommit(root, [entry(name, 'new template')], base.commit);
+  assert.deepEqual(assertNoLegacyContentWrite({ repoRoot: root, beforeSha: base.commit, codeSha: tip.commit }), { changedFiles: 1, valid: true });
+});
+
+test('fallback exemption derives strictly from the manifest flag, not filenames or GENERATED alone', async t => {
+  const source = readFileSync(new URL('../scripts/content/deployment-binding.mjs', import.meta.url), 'utf8');
+  assert.doesNotMatch(source, /about\.html|history\.html/);
+  assert.match(source, /rule\.codeFallback !== true/);
+  assert.deepEqual(CONTENT_MANIFEST.rules.filter(rule => rule.codeFallback === true).map(rule => rule.exact).sort(), ['about.html', 'history.html']);
+  // Isolated module fixture changes only the classifier result, not the production manifest.
+  // The same real Git diff must be blocked without an exact boolean true flag.
+  const { root, entry } = await repo(t);
+  const base = fixtureCommit(root, [entry('about.html', 'old')]);
+  const tip = fixtureCommit(root, [entry('about.html', 'new')], base.commit);
+  const absoluteImports = source.replace(/from '(\.\/[^']+)'/g, (_, specifier) =>
+    `from '${new URL(specifier, new URL('../scripts/content/deployment-binding.mjs', import.meta.url)).href}'`);
+  for (const flag of [undefined, false, 'true']) {
+    const fixtureSource = absoluteImports.replace('const rule = classifyContentPath(path);',
+      `const rule = { ...classifyContentPath(path), codeFallback: ${JSON.stringify(flag) ?? 'undefined'} };`);
+    const isolated = await import('data:text/javascript;base64,' + Buffer.from(fixtureSource).toString('base64'));
+    assert.throws(() => isolated.assertNoLegacyContentWrite({ repoRoot: root, beforeSha: base.commit, codeSha: tip.commit }), /Legacy content write/);
+  }
+});
 
 test('renaming content to code cannot hide a legacy change; unreliable baselines fail closed', async t => {
   const { root, entry } = await repo(t);

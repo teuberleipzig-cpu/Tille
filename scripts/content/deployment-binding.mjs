@@ -30,7 +30,8 @@ export function assertNoLegacyContentWrite({ repoRoot = process.cwd(), beforeSha
   const owns = replacementScope();
   for (const path of records) {
     const rule = classifyContentPath(path); // Ambiguous/noncanonical paths fail closed.
-    if (owns(path) || (rule && rule.classification !== 'CODE')) {
+    // Only explicitly classified fallback templates may also be maintained on main.
+    if (!rule || ((owns(path) || rule.classification !== 'CODE') && rule.codeFallback !== true)) {
       throw new Error('Legacy content write on main detected; writer must use content/staging.');
     }
   }
