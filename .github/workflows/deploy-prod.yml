@@ -1,0 +1,41 @@
+name: Deploy prod container
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Explicit image tag to deploy to prod (e.g. sha-<40hex>)
+        required: true
+        type: string
+
+concurrency:
+  group: deploy-prod
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - name: Validate image tag
+        id: tag
+        env:
+          TAG: ${{ inputs.tag }}
+        run: |
+          set -euo pipefail
+          # The tag becomes part of the SSH command: allow only docker tag characters.
+          [[ "$TAG" =~ ^[A-Za-z0-9_][A-Za-z0-9_.-]{0,127}$ ]] || { echo 'Invalid image tag' >&2; exit 1; }
+          echo "value=$TAG" >> "$GITHUB_OUTPUT"
+          printf 'Environment: prod\nTag: %s\n' "$TAG" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Reload container on containerhost01 (prod)
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: containerhost01.distillery.de
+          username: deploy-www-prod-distillery
+          key: ${{ secrets.DEPLOY_SSH_KEY_WWW_PROD }}
+          # The account's authorized_keys forces the pull+reload script; the
+          # tag is handed over as its argument (read via SSH_ORIGINAL_COMMAND).
+          script: /usr/local/sbin/deploy-www-prod-distillery.sh ${{ steps.tag.outputs.value }}

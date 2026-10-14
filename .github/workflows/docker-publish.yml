@@ -148,12 +148,12 @@ jobs:
             "$CODE_SHA" "$CONTENT_SHA" "$ARTIFACT_ID" "$DIGEST" >> "$GITHUB_STEP_SUMMARY"
           echo 'External forced-command digest binding is unknown; HTTP verification is mandatory.' >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Reload container on vps03
+      - name: Reload container on containerhost01 (test)
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: containerhost01.distillery.de
           username: deploy-www-test-distillery
-          key: ${{ secrets.VPS03_DEPLOY_SSH_KEY }}
+          key: ${{ secrets.DEPLOY_SSH_KEY_WWW_TEST }}
           # The account's authorized_keys forces the pull+reload script for
           # any command sent here, so this "script" value is cosmetic —
           # but keep it accurate for readability.
