@@ -1,8 +1,8 @@
 # Public Pre-Live Audit – 2026-06-29
 
 > HISTORICAL / SUPERSEDED (2026-10-08): Dieser frühere Stand ist keine aktuelle
-> Freigabe- oder Aufgabenliste. Operative Quelle: [P3 Final Pre-Live Audit](docs/PRELIVE_P3_FINAL_AUDIT.md)
-> und [aktuelle Go-Live-Checkliste](GO_LIVE_REMAINING_CHECKLIST.md). Historische Aussagen bleiben unten unverändert.
+> Freigabe- oder Aufgabenliste. Quellenverweis aktualisiert am 2026-10-12: [aktuelle Go-Live-Checkliste](GO_LIVE_REMAINING_CHECKLIST.md)
+> und [Legal-/Privacy-Prüfliste](LEGAL_PRIVACY_REVIEW_INFO_NEEDED.md). Der [P3-Audit](docs/PRELIVE_P3_FINAL_AUDIT.md) ist ebenfalls ein historischer Nachweis. Historische Aussagen bleiben unten unverändert.
 
 Status: Repo-Prüfung nach Public-Meta-Patches, Root-/Utility-Dateiprüfung, Link-/Head-/Asset-/Noindex-/External-Services-/Deployment-Readiness-/Media-Rights-/Tracking-Audits, Audit-Index und manueller Warteschlange.
 

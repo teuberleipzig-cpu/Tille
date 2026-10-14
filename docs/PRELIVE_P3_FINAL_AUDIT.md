@@ -1,5 +1,7 @@
 # P3 Final Pre-Live Audit
 
+> Historischer Prüfstand (Hinweis vom 2026-10-12): Die folgenden SHAs, Testergebnisse und nicht ausgeführten E2Es dokumentieren P3 vom 2026-10-08, nicht den heutigen Veröffentlichungsstand. Aktueller Status und Feedbackweg: [Go-Live-Checkliste](../GO_LIVE_REMAINING_CHECKLIST.md) und [Legal-/Privacy-Prüfliste](../LEGAL_PRIVACY_REVIEW_INFO_NEEDED.md). Historische Trello-Aussagen bleiben als damaliger Nachweis erhalten.
+
 Auditdatum: 2026-10-08. Scope: Code-only, Remote GET/read-only und lokale Tests.
 Keine rechtliche Abnahme, kein Sicherheitszertifikat und keine Livefreigabe.
 Operativer Status: P3-Fixes lokal geprüft; Draft-PR/Exact-head-CI werden im PR nachgewiesen.

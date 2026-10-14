@@ -44,11 +44,11 @@ test('disabled tracking performs neither beacon nor fetch nor listener registrat
 });
 
 test('privacy remains a draft with factual pipeline and disabled tracking', () => {
-  for(const fact of ['Arbeitsstand','FormSubmit','distillery.feedback@gmail.com','Google Apps Script','Trello',
+  for(const fact of ['Arbeitsstand','FormSubmit','distillery.feedback@gmail.com','Google Apps Script','Nextcloud-Deck-Board','Nextcloud Deck samt Hosting und Betrieb bleibt offen',
     'technisch deaktiviert','keine Trackingevents versendet','rechtliche und organisatorische Prüfung']) assert.ok(privacy.includes(fact),fact);
-  assert.doesNotMatch(privacy,/nicht personenbezogenes Nutzungs-Tracking geplant/);
+  assert.doesNotMatch(privacy,/nicht personenbezogenes Nutzungs-Tracking geplant|Trello/i);
   const checklist=read('LEGAL_PRIVACY_REVIEW_INFO_NEEDED.md');
-  for(const open of ['Finale rechtliche Prüfung von FormSubmit','Gmail-/Google-Verarbeitung','Apps-Script-Verarbeitung','Trello-Verarbeitung','Löschprozess']) {
+  for(const open of ['Finale rechtliche Prüfung von FormSubmit','Gmail-/Google-Verarbeitung','Apps-Script-Verarbeitung','Nextcloud-Deck-Verarbeitung','Löschprozess','Berechtigte Personen']) {
     assert.match(checklist,new RegExp('\\[ \\] '+open));
   }
 });

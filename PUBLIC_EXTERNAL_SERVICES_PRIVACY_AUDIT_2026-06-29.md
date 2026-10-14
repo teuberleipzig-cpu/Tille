@@ -1,5 +1,7 @@
 # Public External Services / Privacy Audit – 2026-06-29
 
+> Historischer Prüfstand (Hinweis vom 2026-10-12): Dieser Audit einschließlich P1-Nachtrag vom 2026-10-07 ist keine aktuelle Freigabeliste. Der heutige Feedbackweg über Nextcloud Deck und die offenen Prüfungen stehen in der [Legal-/Privacy-Prüfliste](LEGAL_PRIVACY_REVIEW_INFO_NEEDED.md) und der [Go-Live-Checkliste](GO_LIVE_REMAINING_CHECKLIST.md). Die damaligen Trello-Aussagen bleiben unverändert.
+
 Status: Repo-basierter Audit. Kein Browser-Test, kein LIVE-Test, keine Rechtsberatung.
 
 ## Geprüfte Dateien

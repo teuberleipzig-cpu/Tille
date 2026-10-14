@@ -31,7 +31,7 @@ Aktueller Stand in `datenschutz.html`:
 - Seite ist ausdrücklich als Arbeitsstand markiert.
 - Verantwortliche Stelle ist `Distillery Leipzig, Eggebrechtstraße 2, 04103 Leipzig, club@distillery.de`.
 - Serverlogs sind allgemein beschrieben, aber serverabhängig noch nicht final.
-- Bekannter Feedback-Datenfluss: Website → FormSubmit → distillery.feedback@gmail.com → Google Apps Script → Trello.
+- Bekannter Feedback-Datenfluss (Nutzerbestätigung zum Abgleich am 2026-10-12): Website → FormSubmit → distillery.feedback@gmail.com → Google Apps Script → Nextcloud Deck.
 - Tracking-Code ist eingebunden, aber technisch deaktiviert (TRACKING_ENABLED = false); darüber werden keine Trackingevents versendet.
 - Externe Dienste sind allgemein genannt, aber noch nicht einzeln final geprüft.
 
@@ -65,11 +65,14 @@ Aktueller Stand in `feedback.html`:
 
 Vor LIVE zu entscheiden:
 
-Technisch geklärt (P1, 2026-10-07; keine rechtliche Freigabe):
+Technischer Faktenstand (aktualisiert am 2026-10-12; keine rechtliche Freigabe):
 
 - FormSubmit bleibt aktuell der Formularservice.
 - Operatives Ziel ist distillery.feedback@gmail.com.
-- Danach verarbeitet Google Apps Script die Mails und überträgt benötigte Inhalte in Trello; accountseitige Übertragung laut Nutzer erfolgt.
+- Danach verarbeitet Google Apps Script die Mails und überträgt benötigte Inhalte in Nextcloud Deck statt des früheren Trello-Ziels. Laut Nutzer funktionieren accountseitige Verarbeitung und reale Kartenerstellung samt Label-/Datumsverarbeitung.
+- Das externe Google Apps Script wird nicht in diesem Website-Repository implementiert. In diesem Abgleich wird keine neue externe Übertragung getestet; die Nutzerbestätigung ersetzt keinen vollständigen aktuellen Browser/FormSubmit/Mail/Deck-E2E.
+- Nextcloud-Basisadresse laut Projekt-Handoff: https://klaus.distillery.de. Daraus werden keine Betreiber-, Hosting- oder Vertragsdaten abgeleitet.
+- Die dokumentierte Kartenfälligkeit von 14 Tagen ist kein Nachweis einer Lösch- oder Aufbewahrungsfrist.
 - `_next` verwendet dieselbe Origin, nicht GitHub Pages oder einen festen Staging-Host.
 
 Weiterhin offen:
@@ -77,8 +80,9 @@ Weiterhin offen:
 - [ ] Finale rechtliche Prüfung von FormSubmit.
 - [ ] Gmail-/Google-Verarbeitung prüfen.
 - [ ] Apps-Script-Verarbeitung prüfen.
-- [ ] Trello-Verarbeitung prüfen.
-- [ ] Löschprozess für Mails und nachgelagerte Inhalte klären.
+- [ ] Nextcloud-Deck-Verarbeitung einschließlich tatsächlichem Betreiber/Hoster und Auftragsverarbeitung prüfen.
+- [ ] Löschprozess und Aufbewahrung für Mails in Gmail und Inhalte in Nextcloud klären.
+- [ ] Berechtigte Personen, Rollen und Zugriffe auf Gmail, Apps Script und Nextcloud klären.
 - [ ] Gibt es Spam-Schutz/Captcha und muss dieser in der Datenschutzseite beschrieben werden?
 - [ ] Wer bekommt Feedback-Mails intern?
 - [ ] Wie lange werden Feedback-Mails aufbewahrt?
