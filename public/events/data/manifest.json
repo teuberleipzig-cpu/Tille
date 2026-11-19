@@ -1,6 +1,7 @@
 {
   "schemaVersion": 1,
   "totalEvents": 1568,
+  "totalMonthPlacements": 1568,
   "topLevelKeys": [
     "meta",
     "events"
