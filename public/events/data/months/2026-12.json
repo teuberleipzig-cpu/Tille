@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "fm-3a838cfc-f9af-4b41-b9bd-9b156c61626b",
+      "date": "2026-12-26",
+      "title": "CINTHIE ALL-NIGHT-LONG + TEMPLETON invites",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "DAHMAR",
+              "info": "",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "UP",
+          "genre": "",
+          "items": [
+            {
+              "name": "CINTHIE",
+              "info": "803 Crystal Grooves",
+              "link": ""
+            },
+            {
+              "name": "THOMAS STIELER",
+              "info": "Paracou, Distillery, My King Is Light",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "DOWN",
+          "genre": "",
+          "items": [
+            {
+              "name": "CATJES",
+              "info": "Hypress, Jetset",
+              "link": ""
+            },
+            {
+              "name": "FRAGMENTIERT",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "LUTECIA H.",
+              "info": "YÖTÖN YÖ",
+              "link": ""
+            },
+            {
+              "name": "TEMPLETON",
+              "info": "Hypress, Jetset",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
