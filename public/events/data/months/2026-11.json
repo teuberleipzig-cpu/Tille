@@ -313,6 +313,27 @@
       ]
     },
     {
+      "id": "fm-a4def34e-42ae-2745-946f-7d511f03e023",
+      "date": "2026-11-20",
+      "title": "Schülerball",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": []
+        },
+        {
+          "label": "UP",
+          "genre": "",
+          "items": []
+        }
+      ]
+    },
+    {
       "id": "fm-0f337e5a-8a88-4845-ac19-1e8965816c2a",
       "date": "2026-11-21",
       "title": "ROMAN FLÜGEL + NEBULA",
