@@ -10976,6 +10976,13 @@
       "date": "2026-09-12",
       "title": "CSV Test Night",
       "haystack": "csv test night  https://example.com up: test artist live https://example.com/artist second artist dj set "
+    },
+    {
+      "id": "fm-6dddddff-a996-b447-837a-f66ce78b96e8",
+      "month": "2026-11",
+      "date": "2026-11-06",
+      "title": "Poetry Slam +Dream Rotation",
+      "haystack": "poetry slam +dream rotation   pvlln el:p ...  smooksy ...  lui   b2b   lova solaris  4loud ...  down screwtec   timmy tiefkuhl   ^foxic^   dj annita b2b ruby cube ... "
     }
   ]
 }
