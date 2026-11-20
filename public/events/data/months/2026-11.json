@@ -234,6 +234,80 @@
       ]
     },
     {
+      "id": "fm-0f337e5a-8a88-4845-ac19-1e8965816c2a",
+      "date": "2026-11-21",
+      "title": "ROMAN FLÜGEL + NEBULA",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "GABBAGE",
+              "info": "Smooth Operators, Kantine",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "UP",
+          "genre": "",
+          "items": [
+            {
+              "name": "ROMAN FLÜGEL",
+              "info": "Running Back",
+              "link": ""
+            },
+            {
+              "name": "CYNTHIA MATISSE",
+              "info": "Triebwerk, Weimar",
+              "link": ""
+            },
+            {
+              "name": "LEA JESSEN",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "DOWN",
+          "genre": "",
+          "items": [
+            {
+              "name": "A:TOK",
+              "info": "://about blank, no show",
+              "link": ""
+            },
+            {
+              "name": "MATS HEINRICH",
+              "info": "nebula",
+              "link": ""
+            },
+            {
+              "name": "NOXSONOS",
+              "info": "nebula",
+              "link": ""
+            },
+            {
+              "name": "MORAINE",
+              "info": "nebula",
+              "link": ""
+            },
+            {
+              "name": "MORPHIN",
+              "info": "115, fog.",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "fm-1c359311-79ac-4bea-ad63-b5d29e01558f",
       "date": "2026-11-28",
       "title": "ELOTRANCE + DANCE 'N FRIENDS",
