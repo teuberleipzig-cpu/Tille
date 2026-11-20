@@ -234,6 +234,85 @@
       ]
     },
     {
+      "id": "fm-f63c2180-e2b0-48d5-9e19-81a61ad3f866",
+      "date": "2026-11-17",
+      "title": "Only Us - Sleepless Tuesday",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "SKONTI",
+              "info": "KEINKOLLEKTIV",
+              "link": ""
+            },
+            {
+              "name": "DELIRANTE",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "UP",
+          "genre": "",
+          "items": [
+            {
+              "name": "SHALEEN",
+              "info": "Spellbound, Tresor",
+              "link": ""
+            },
+            {
+              "name": "TIMSTAGRAM",
+              "info": "KEINKOLLEKTIV",
+              "link": ""
+            },
+            {
+              "name": "INTERSTELLA",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "STRUMM.",
+              "info": "Leipzig",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "DOWN",
+          "genre": "",
+          "items": [
+            {
+              "name": "FETA FELICE",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "ITSADISASTA",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "DJ SCHNÜRSCHUH",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "ALBA ACAB",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "fm-0f337e5a-8a88-4845-ac19-1e8965816c2a",
       "date": "2026-11-21",
       "title": "ROMAN FLÜGEL + NEBULA",
