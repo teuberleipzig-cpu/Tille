@@ -95,6 +95,85 @@
       ]
     },
     {
+      "id": "fm-4aedc002-bd51-4f20-8281-694863c6a83d",
+      "date": "2026-12-12",
+      "title": "FJAAK // New Kids",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "DISTILLERY NEW KIDS",
+              "info": "",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "UP",
+          "genre": "",
+          "items": [
+            {
+              "name": "FJAAK",
+              "info": "Spandau20",
+              "link": ""
+            },
+            {
+              "name": "HYPNOSTA",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "MEDHA",
+              "info": "PVC, aequalis",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "DOWN",
+          "genre": "",
+          "items": [
+            {
+              "name": "LEA JESSEN",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "BAUTZ",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "MASCHINO",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "VINYLDEPENDENTS",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "MISS FINSTER",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "CC:NIELOS",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "fm-3a838cfc-f9af-4b41-b9bd-9b156c61626b",
       "date": "2026-12-26",
       "title": "CINTHIE ALL-NIGHT-LONG + TEMPLETON invites",
