@@ -408,6 +408,69 @@
       ]
     },
     {
+      "id": "fm-8ee700a4-102c-5a4b-b3d5-9b0f12998c3f",
+      "date": "2026-11-27",
+      "title": "Synergy 1",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "UP",
+          "genre": "",
+          "items": [
+            {
+              "name": "EXTRAVIOLETTE",
+              "info": "Bandset 1",
+              "link": ""
+            },
+            {
+              "name": "TRAXX.JR",
+              "info": "DJ Set 2",
+              "link": ""
+            },
+            {
+              "name": "EXTRAVIOLETTE",
+              "info": "Bandset 2",
+              "link": ""
+            },
+            {
+              "name": "TRAXX.JR",
+              "info": "DJ Set 3",
+              "link": ""
+            },
+            {
+              "name": "EXTRAVIOLETTE",
+              "info": "Bandset 3 (+ Zugaben",
+              "link": ""
+            },
+            {
+              "name": "FREUND DER NACHT",
+              "info": "Closing/ DJ Set (mit Jan bis max 07:00 besprochen, je nach Auslastung",
+              "link": ""
+            },
+            {
+              "name": "TRAXX.JR",
+              "info": "Intro/ DJ Set 1",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "DOWN",
+          "genre": "",
+          "items": [
+            {
+              "name": "PRACHT*EXIL",
+              "info": "3 DJ Sets (2h, 2h, 3h) Artists bleiben bis Veranstaltung ohne Ankündigung",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "fm-1c359311-79ac-4bea-ad63-b5d29e01558f",
       "date": "2026-11-28",
       "title": "ELOTRANCE + DANCE 'N FRIENDS",
