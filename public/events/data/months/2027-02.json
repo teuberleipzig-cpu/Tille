@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "fm-6500a8e8-a7b2-4c8a-9a07-a300f9ada8c9",
+      "date": "2027-02-20",
+      "title": "Webtest",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "A DREAMS A",
+              "info": "",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
