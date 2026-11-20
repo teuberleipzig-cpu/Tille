@@ -2,6 +2,99 @@
   "schemaVersion": 1,
   "events": [
     {
+      "id": "fm-23b2cb7e-456f-4980-b147-65b0ff2c8783",
+      "date": "2026-12-05",
+      "title": "Creme Club + Metro // Fragmented Landscapes Releaseparty",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "BORIS",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "OLLI RUBBER",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "ALMEDINA",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "LULU",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "CLEMI",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "POKKA",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "MP.ULLE",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "NELL",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "STAMINA",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "MARENGO",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "DAVY (CREME CLUB)",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "DOWN",
+          "genre": "",
+          "items": [
+            {
+              "name": "VINCENT NEUMANN",
+              "info": "Distillery, Unitas Multiplex",
+              "link": ""
+            },
+            {
+              "name": "CARLOTTA JACOBI",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "RED ROOMS",
+              "info": "",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "fm-3a838cfc-f9af-4b41-b9bd-9b156c61626b",
       "date": "2026-12-26",
       "title": "CINTHIE ALL-NIGHT-LONG + TEMPLETON invites",
