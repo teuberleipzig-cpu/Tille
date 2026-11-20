@@ -132,6 +132,85 @@
           ]
         }
       ]
+    },
+    {
+      "id": "fm-286f9c78-61b3-204c-830c-61c5f71fcbb6",
+      "date": "2027-01-30",
+      "title": "FOCUS invites... & Submod Releaseparty",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "Submod",
+              "info": "vaertism, Daydream Records, INAR",
+              "link": ""
+            },
+            {
+              "name": "TRAXX JR",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "F.D.M.",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Lucie",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "UP",
+          "genre": "",
+          "items": [
+            {
+              "name": "Super Flu",
+              "info": "",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "DOWN",
+          "genre": "",
+          "items": [
+            {
+              "name": "V:Sonntag",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Alba Acab",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "DJ Ritalino",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "GVMEDNA",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "MASCHA",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
