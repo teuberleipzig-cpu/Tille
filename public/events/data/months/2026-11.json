@@ -171,6 +171,100 @@
       ]
     },
     {
+      "id": "fm-1c359311-79ac-4bea-ad63-b5d29e01558f",
+      "date": "2026-11-28",
+      "title": "ELOTRANCE + DANCE 'N FRIENDS",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "50PHIE",
+              "info": "G-Edit, remoto rec.",
+              "link": ""
+            },
+            {
+              "name": "ANDREAS ECKHARDT",
+              "info": "Distillery, Leipzig",
+              "link": ""
+            },
+            {
+              "name": "THOMAS HEINRICH",
+              "info": "Stolen Money Posse, Leipzig",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "UP",
+          "genre": "",
+          "items": [
+            {
+              "name": "SONNENBRAND",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "FELIX SCHWARZENBERGER",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "VERSA",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "DJ ZUGZWANG",
+              "info": "Freiburg",
+              "link": ""
+            },
+            {
+              "name": "CARGO",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "DJ SEXEX",
+              "info": "",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "DOWN",
+          "genre": "",
+          "items": [
+            {
+              "name": "LUCIE LEH",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "I$A",
+              "info": "nice4what, G-edit",
+              "link": ""
+            },
+            {
+              "name": "HOFFSTER2000",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "POLAROIDBAER",
+              "info": "",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "fm-377133ab-df41-4599-8ad6-b557c3e97fe1",
       "date": "2026-11-29",
       "title": "Rillendisco",
