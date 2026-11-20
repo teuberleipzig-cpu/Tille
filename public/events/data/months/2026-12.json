@@ -236,6 +236,135 @@
           ]
         }
       ]
+    },
+    {
+      "id": "fm-eb746894-6318-4c45-8eb5-b3a4205071fc",
+      "date": "2026-12-31",
+      "title": "GOODBYE X HELLO",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "ITALO DISCO",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "ITALO DISCO",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "",
+              "info": "Atalanta, Bigalke, DJ HDGDL, Mike van Götze, Nadine Talakovics, Vincent Neumann",
+              "link": ""
+            },
+            {
+              "name": "",
+              "info": "Atalanta, Bigalke, DJ HDGDL, Mike van Götze, Nadine Talakovics, Vincent Neumann",
+              "link": ""
+            },
+            {
+              "name": "",
+              "info": "Atalanta, Bigalke, DJ HDGDL, Mike van Götze, Nadine Talakovics, Vincent Neumann",
+              "link": ""
+            },
+            {
+              "name": "",
+              "info": "Atalanta, Bigalke, DJ HDGDL, Mike van Götze, Nadine Talakovics, Vincent Neumann",
+              "link": ""
+            },
+            {
+              "name": "ITALO DISCO",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "UP",
+          "genre": "",
+          "items": [
+            {
+              "name": "DILIVIUS LENNI",
+              "info": "Distillery, Räucherkammer",
+              "link": ""
+            },
+            {
+              "name": "SUBMOD",
+              "info": "Distillery, vaertism, Daydream Records",
+              "link": ""
+            },
+            {
+              "name": "NAPOLEON DYNAMITE",
+              "info": "Distillery, Fäncy",
+              "link": ""
+            },
+            {
+              "name": "",
+              "info": "Atalanta, Bigalke, DJ HDGDL, Mike van Götze, Nadine Talakovics, Vincent Neumann",
+              "link": ""
+            },
+            {
+              "name": "F.D.M.",
+              "info": "",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "DOWN",
+          "genre": "",
+          "items": [
+            {
+              "name": "NINETTE",
+              "info": "Distillery, LÄRM",
+              "link": ""
+            },
+            {
+              "name": "SUBKOØNE",
+              "info": "LÄRM",
+              "link": ""
+            },
+            {
+              "name": "TIMSTAGRAM",
+              "info": "KEINKOLLEKTIV",
+              "link": ""
+            },
+            {
+              "name": "INTERSTELLA",
+              "info": "Leipzig",
+              "link": ""
+            },
+            {
+              "name": "BIGALKE",
+              "info": "DON'T BE AFRAID OF YOURSELF, HTXSTHSTX",
+              "link": ""
+            },
+            {
+              "name": "KREONE",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "NADINE TALAKOVICS",
+              "info": "Distillery",
+              "link": ""
+            },
+            {
+              "name": "VY TRAN",
+              "info": "Freiland, Sonntagsinstitut",
+              "link": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
