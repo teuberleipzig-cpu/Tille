@@ -74,6 +74,64 @@
           ]
         }
       ]
+    },
+    {
+      "id": "fm-702d0aea-4c8e-449d-86ba-7fd201a48e92",
+      "date": "2027-01-16",
+      "title": "Timstagram invites & Zischko invites",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "PVLLN",
+          "genre": "House",
+          "items": [
+            {
+              "name": "Zischko",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Zacharias",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "Pandora",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "Dr. Bling 3000",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "Gado Gado",
+              "info": "VAYA",
+              "link": ""
+            },
+            {
+              "name": "SOELA",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "DOWN",
+          "genre": "Techno",
+          "items": [
+            {
+              "name": "TIMSTAGRAM",
+              "info": "",
+              "link": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
