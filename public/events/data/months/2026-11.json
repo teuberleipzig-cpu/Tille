@@ -171,6 +171,130 @@
       ]
     },
     {
+      "id": "fm-2b0c9879-dfb3-4ef4-ac85-17f7bd01e0c6",
+      "date": "2026-11-13",
+      "title": "S.D.H.Q. presents: Sonic Dimensions #2",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "JIMMY CUTAKA",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "OUTWITHJANE",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "LABEX",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "AKSL",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "LARRY LOVE",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "JEN'NOIR",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "CARMA",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "UP",
+          "genre": "",
+          "items": [
+            {
+              "name": "EMEVEKA",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "MILOX",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "MONGOOSE B2B MEEHAL",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "CAROL SELIG",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "SAMANDTHESOUND",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "KALITOS",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "DOWN",
+          "genre": "",
+          "items": [
+            {
+              "name": "MARIA DIE RUHE",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "LØNNE",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "M.OSQUITO",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "M.CHI",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "COMANDER",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "K0B",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "fm-85b9bfb5-6a1a-4af4-96f3-ba5c6729ccbf",
       "date": "2026-11-14",
       "title": "CRÈME HOURS X RAND MUZIK + LOLSNAKE",
