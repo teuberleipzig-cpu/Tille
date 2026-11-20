@@ -171,6 +171,69 @@
       ]
     },
     {
+      "id": "fm-85b9bfb5-6a1a-4af4-96f3-ba5c6729ccbf",
+      "date": "2026-11-14",
+      "title": "CRÈME HOURS X RAND MUZIK + LOLSNAKE",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "SHURAY & WALLE",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "LULU & NELL",
+              "info": "Crème Club",
+              "link": ""
+            },
+            {
+              "name": "REECE WALKER",
+              "info": "Carmel",
+              "link": ""
+            },
+            {
+              "name": "FRANZISKA BERNS",
+              "info": "Robert Johnson",
+              "link": ""
+            },
+            {
+              "name": "STBR & DAVY",
+              "info": "",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "DOWN",
+          "genre": "",
+          "items": [
+            {
+              "name": "LOLSNAKE",
+              "info": "weeeirdos",
+              "link": ""
+            },
+            {
+              "name": "SLANY",
+              "info": "ZAN",
+              "link": ""
+            },
+            {
+              "name": "BEPHAL",
+              "info": "SAFT, Leipzig",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "fm-1c359311-79ac-4bea-ad63-b5d29e01558f",
       "date": "2026-11-28",
       "title": "ELOTRANCE + DANCE 'N FRIENDS",
