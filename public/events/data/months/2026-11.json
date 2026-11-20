@@ -43,6 +43,79 @@
           ]
         }
       ]
+    },
+    {
+      "id": "fm-6dddddff-a996-b447-837a-f66ce78b96e8",
+      "date": "2026-11-06",
+      "title": "Poetry Slam +Dream Rotation",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "PVLLN",
+          "genre": "Drum N Bass",
+          "items": [
+            {
+              "name": "EL:P",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "SMOOKSY",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "LUI",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "B2B",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "LOVA",
+              "info": "Solaris",
+              "link": ""
+            },
+            {
+              "name": "4LOUD",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "DOWN",
+          "genre": "Drum N Bass",
+          "items": [
+            {
+              "name": "SCREWTEC",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "TIMMY TIEFKÜHL",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "^FOXIC^",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "DJ ANNITA B2B RUBY CUBE",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
