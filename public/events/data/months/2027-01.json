@@ -134,6 +134,59 @@
       ]
     },
     {
+      "id": "fm-af48c461-4e18-ce47-b8f9-e8ba8f39af55",
+      "date": "2027-01-23",
+      "title": "Moto Moto invites... & Dahmar Extended",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "PVLLN",
+          "genre": "House",
+          "items": [
+            {
+              "name": "Dahmar",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "DISTILLERY NEW KIDS",
+              "info": "",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "DOWN",
+          "genre": "Progressive",
+          "items": [
+            {
+              "name": "KONFUSIA",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "Moto Moto",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "OLEA",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "NEPØ",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "fm-286f9c78-61b3-204c-830c-61c5f71fcbb6",
       "date": "2027-01-30",
       "title": "FOCUS invites... & Submod Releaseparty",
