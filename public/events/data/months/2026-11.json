@@ -116,6 +116,59 @@
           ]
         }
       ]
+    },
+    {
+      "id": "fm-24abd72a-13a2-495d-8410-49d783c08895",
+      "date": "2026-11-07",
+      "title": "ROBAG & LÄRM",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "PVLLN",
+          "genre": "",
+          "items": [
+            {
+              "name": "RAXON",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "SCHLEPP GEIST",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "NICI PALM",
+              "info": "DEVINITIV",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "DOWN",
+          "genre": "",
+          "items": [
+            {
+              "name": "NINETTE",
+              "info": "Distillery, LÄRM",
+              "link": ""
+            },
+            {
+              "name": "BELA BERTRAM",
+              "info": "LÄRM",
+              "link": ""
+            },
+            {
+              "name": "HOCK",
+              "info": "LÄRM",
+              "link": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
