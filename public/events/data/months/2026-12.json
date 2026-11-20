@@ -190,6 +190,89 @@
       ]
     },
     {
+      "id": "fm-9b0ded9b-6e96-4f47-ad1b-fc208a796548",
+      "date": "2026-12-18",
+      "title": "Last Bass Mess",
+      "color": "orange",
+      "moreUrl": "",
+      "imageUrl": "",
+      "description": "",
+      "sections": [
+        {
+          "label": "UP",
+          "genre": "",
+          "items": [
+            {
+              "name": "NEA.CUAJO",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "SOPHIISE",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "RUBY CUBE",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "MINELECT",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "DØRTE",
+              "info": "",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "label": "DOWN",
+          "genre": "",
+          "items": [
+            {
+              "name": "YOUDID",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "CUEPRIC",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "NEONLIGHT",
+              "info": "",
+              "link": ""
+            },
+            {
+              "name": "F4UCON",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "HARRIBOE",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "ACID JACK",
+              "info": "...",
+              "link": ""
+            },
+            {
+              "name": "DJ SCREWTEC",
+              "info": "...",
+              "link": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "fm-fe63fab2-9030-4379-b2a6-5ab64b80f2ad",
       "date": "2026-12-19",
       "title": "Leider 9 + Kosmos + Altinbas",
